@@ -1,0 +1,311 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ============================================================
+   BASE STYLES — inside @layer base (Tailwind's own layer)
+   ============================================================ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+  }
+
+  body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+
+  *, *::before, *::after {
+    border-color: var(--border-color);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ul, ol {
+    list-style: none;
+  }
+}
+
+/* ============================================================
+   CSS VARIABLES — OUTSIDE any layer = highest priority
+   ============================================================ */
+
+:root {
+  --bg-dark: #0B0F19;
+  --bg-card: rgba(255, 255, 255, 0.04);
+  --bg-card-hover: rgba(255, 255, 255, 0.08);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --border-hover: rgba(0, 242, 254, 0.5);
+
+  --primary-gradient: linear-gradient(135deg, #00F2FE 0%, #4FACFE 100%);
+  --heading-alt-gradient: linear-gradient(135deg, #7928CA 0%, #FF0080 100%);
+
+  --hero-glow: radial-gradient(circle at 50% 20%, rgba(0, 242, 254, 0.1) 0%, rgba(11, 15, 25, 0) 70%);
+  --whyus-glow: radial-gradient(circle at 10% 50%, rgba(121, 40, 202, 0.1) 0%, transparent 60%);
+  --card-edge-gradient: linear-gradient(135deg, rgba(0, 242, 254, 0.35), transparent, rgba(121, 40, 202, 0.35));
+  --cta-bg: linear-gradient(135deg, rgba(0, 242, 254, 0.15) 0%, rgba(121, 40, 202, 0.15) 100%);
+
+  --text-main: #F8FAFC;
+  --text-muted: #CBD5E1;
+  --text-dim: #94A3B8;
+  --chrome-text: #F8FAFC;
+  --chrome-text-muted: #CBD5E1;
+
+  --main-accent: #00F2FE;
+  --accent-rgb: 0, 242, 254;
+  --purple-accent: #7928CA;
+  --green-accent: #10B981;
+  --on-primary: #000000;
+
+  --tag-bg: rgba(0, 242, 254, 0.12);
+  --tag-border: rgba(0, 242, 254, 0.25);
+
+  --header-bg: #000000;
+  --hairline: rgba(255, 255, 255, 0.06);
+  --strip-bg: rgba(255, 255, 255, 0.02);
+  --inset-bg: rgba(0, 0, 0, 0.35);
+  --stat-box-bg: rgba(0, 0, 0, 0.45);
+  --chip-bg: rgba(255, 255, 255, 0.05);
+  --btn2-bg: rgba(255, 255, 255, 0.07);
+  --btn2-bg-hover: rgba(255, 255, 255, 0.14);
+  --chip-border: rgba(255, 255, 255, 0.35);
+  --soft-hover: rgba(255, 255, 255, 0.08);
+  --hover-line: rgba(255, 255, 255, 0.25);
+  --input-bg: rgba(255, 255, 255, 0.07);
+  --input-bg-focus: rgba(255, 255, 255, 0.12);
+  --panel-bg: #0F172A;
+  --modal-bg: #0F172A;
+  --overlay-bg: rgba(0, 0, 0, 0.8);
+  --footer-bg: #070A10;
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 25px 50px rgba(0, 0, 0, 0.8);
+  --shadow-menu: 0 20px 50px rgba(0, 0, 0, 0.6);
+
+  --container-max: 1240px;
+  --radius-lg: 16px;
+  --radius-md: 10px;
+  --radius-sm: 6px;
+}
+
+html[data-theme="red"] {
+  --border-hover: rgba(255, 0, 0, 0.5);
+  --primary-gradient: linear-gradient(135deg, #FF4D4D 0%, #E60000 100%);
+  --heading-alt-gradient: linear-gradient(135deg, #FF4D4D 0%, #E60000 100%);
+  --hero-glow: radial-gradient(circle at 50% 20%, rgba(255, 77, 77, 0.1) 0%, rgba(11, 15, 25, 0) 70%);
+  --whyus-glow: radial-gradient(circle at 10% 50%, rgba(230, 0, 0, 0.1) 0%, transparent 60%);
+  --card-edge-gradient: linear-gradient(135deg, rgba(255, 77, 77, 0.35), transparent, rgba(230, 0, 0, 0.35));
+  --cta-bg: linear-gradient(135deg, rgba(255, 77, 77, 0.15) 0%, rgba(230, 0, 0, 0.15) 100%);
+  --main-accent: #FF2D2D;
+  --accent-rgb: 255, 45, 45;
+  --on-primary: #FFFFFF;
+  --tag-bg: rgba(255, 45, 45, 0.12);
+  --tag-border: rgba(255, 45, 45, 0.25);
+}
+
+/* ============================================================
+   LIGHT MODE — STRONG contrast so text is always visible
+   ============================================================ */
+html[data-theme="cyan-light"],
+html[data-theme="red-light"] {
+  --bg-dark: #FFFFFF;
+  --bg-card: #F8FAFC;
+  --bg-card-hover: #F1F5F9;
+  --border-color: #E2E8F0;
+  --border-hover: rgba(2, 132, 199, 0.5);
+
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-dim: #64748B;
+  --chrome-text: #F8FAFC;
+  --chrome-text-muted: #CBD5E1;
+
+  --green-accent: #059669;
+
+  --strip-bg: #F8FAFC;
+  --inset-bg: #F1F5F9;
+  --stat-box-bg: #F1F5F9;
+  --chip-bg: #F1F5F9;
+  --btn2-bg: #F1F5F9;
+  --btn2-bg-hover: #E2E8F0;
+  --chip-border: #CBD5E1;
+  --soft-hover: #F1F5F9;
+  --hover-line: #CBD5E1;
+  --input-bg: #F8FAFC;
+  --input-bg-focus: #F1F5F9;
+  --panel-bg: #FFFFFF;
+  --modal-bg: #FFFFFF;
+  --overlay-bg: rgba(15, 23, 42, 0.5);
+  --hairline: rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 20px 50px rgba(15, 23, 42, 0.1);
+  --shadow-xl: 0 25px 50px rgba(15, 23, 42, 0.15);
+  --shadow-menu: 0 20px 50px rgba(15, 23, 42, 0.15);
+}
+
+html[data-theme="cyan-light"] {
+  --border-hover: rgba(2, 132, 199, 0.5);
+  --primary-gradient: linear-gradient(135deg, #00B4D8 0%, #3B82F6 100%);
+  --heading-alt-gradient: linear-gradient(135deg, #7C3AED 0%, #DB2777 100%);
+  --hero-glow: radial-gradient(circle at 50% 20%, rgba(0, 180, 216, 0.08) 0%, #FFFFFF 80%);
+  --whyus-glow: radial-gradient(circle at 10% 50%, rgba(124, 58, 237, 0.06) 0%, #FFFFFF 60%);
+  --card-edge-gradient: linear-gradient(135deg, rgba(0, 180, 216, 0.3), transparent, rgba(124, 58, 237, 0.3));
+  --cta-bg: linear-gradient(135deg, rgba(0, 180, 216, 0.08) 0%, rgba(124, 58, 237, 0.08) 100%);
+  --main-accent: #0284C7;
+  --accent-rgb: 2, 132, 199;
+  --on-primary: #FFFFFF;
+  --tag-bg: rgba(2, 132, 199, 0.1);
+  --tag-border: rgba(2, 132, 199, 0.25);
+}
+
+html[data-theme="red-light"] {
+  --border-hover: rgba(220, 38, 38, 0.5);
+  --primary-gradient: linear-gradient(135deg, #FF4D4D 0%, #E60000 100%);
+  --heading-alt-gradient: linear-gradient(135deg, #FF4D4D 0%, #E60000 100%);
+  --hero-glow: radial-gradient(circle at 50% 20%, rgba(255, 77, 77, 0.08) 0%, #FFFFFF 80%);
+  --whyus-glow: radial-gradient(circle at 10% 50%, rgba(230, 0, 0, 0.06) 0%, #FFFFFF 60%);
+  --card-edge-gradient: linear-gradient(135deg, rgba(255, 77, 77, 0.3), transparent, rgba(230, 0, 0, 0.3));
+  --cta-bg: linear-gradient(135deg, rgba(255, 77, 77, 0.08) 0%, rgba(230, 0, 0, 0.08) 100%);
+  --main-accent: #DC2626;
+  --accent-rgb: 220, 38, 38;
+  --on-primary: #FFFFFF;
+  --tag-bg: rgba(220, 38, 38, 0.1);
+  --tag-border: rgba(220, 38, 38, 0.25);
+}
+
+/* ============================================================
+   CUSTOM UTILITIES — Tailwind can't do these natively
+   ============================================================ */
+
+@utility gradient-text {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility purple-gradient-text {
+  background: var(--heading-alt-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility hero-card-glow {
+  position: relative;
+}
+.hero-card-glow::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: var(--radius-lg);
+  background: var(--card-edge-gradient);
+  z-index: -1;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 1px;
+  transition: background 0.4s ease;
+}
+
+@utility testimonial-quotes {
+  position: relative;
+}
+.testimonial-quotes::before {
+  content: '\201C';
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--main-accent);
+  opacity: 0.12;
+  line-height: 1;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+@utility animate-pulse-dot {
+  animation: pulse 1.5s infinite;
+}
+
+@utility faq-toggle-rotate {
+  transform: rotate(45deg);
+}
+
+/* Hero background animations */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-20px) translateX(10px); }
+}
+
+@keyframes float-medium {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-15px) translateX(-10px); }
+}
+
+@keyframes rotate-slow {
+  from { transform: rotate(45deg); }
+  to { transform: rotate(405deg); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { transform: scale(1); opacity: 0.3; }
+  50% { transform: scale(1.1); opacity: 0.5; }
+}
+
+@utility animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+@utility animate-float-medium {
+  animation: float-medium 6s ease-in-out infinite;
+}
+
+@utility animate-rotate-slow {
+  animation: rotate-slow 20s linear infinite;
+}
+
+@utility animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+/* Custom scrollbar for mega menu */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Scroll indicator line animation */
+@keyframes scroll-line {
+  0% { top: -25px; }
+  100% { top: 100%; }
+}
+
+@utility animate-scroll-line {
+  animation: scroll-line 1.8s ease-in-out infinite;
+}
