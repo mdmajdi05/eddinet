@@ -5,6 +5,18 @@ const industries = [
   { icon: "🏗️", name: "Real Estate" },
   { icon: "🎓", name: "EdTech" },
   { icon: "🚚", name: "Logistics" },
+  { icon: "💻", name: "SaaS & Technology" },
+  { icon: "🏨", name: "Hospitality & Travel" },
+  { icon: "🚗", name: "Automotive" },
+  { icon: "⚖️", name: "Legal & Law Firms" },
+  { icon: "🏭", name: "Manufacturing" },
+  { icon: "💪", name: "Fitness & Wellness" },
+  { icon: "🛒", name: "FMCG & Retail" },
+  { icon: "🎬", name: "Media & Entertainment" },
+  { icon: "📡", name: "Telecommunications" },
+  { icon: "🛡️", name: "Insurance" },
+  { icon: "🌾", name: "Agriculture & Food" },
+  { icon: "💼", name: "Professional Services" },
 ];
 
 export default function Industries() {
