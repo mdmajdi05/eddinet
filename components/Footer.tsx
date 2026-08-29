@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { footerServices } from "@/data/services";
 
 const svcs = footerServices;
@@ -16,8 +17,8 @@ export default function Footer() {
       <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
         <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr] gap-10 mb-[60px] max-[1024px]:grid-cols-2 max-[768px]:grid-cols-1">
           <div>
-            <Link href="/" className="flex items-center gap-2.5 text-[1.5rem] font-extrabold tracking-[-0.5px] text-[var(--chrome-text)] no-underline">
-              <span className="gradient-text">EDDINET</span>
+            <Link href="/" className="flex items-center">
+              <Image src="/eddinet-logo.png" alt="Eddinet" width={320} height={88} className="h-[88px] w-auto" />
             </Link>
             <p className="text-[var(--chrome-text-muted)] text-[0.95rem] my-4 max-w-[320px]">
               Delhi&apos;s premier ROI-focused digital marketing agency. Helping brands rank higher, convert better, and scale exponentially.

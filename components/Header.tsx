@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { useTheme } from "./ThemeProvider";
 import ConsultModal from "./ConsultModal";
 import MegaMenu from "./MegaMenu";
+import Image from "next/image";
 
 export default function Header() {
   const { accent, mode, setAccent, toggleMode } = useTheme();
@@ -41,8 +42,8 @@ export default function Header() {
       >
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
           <div className="flex items-center justify-between">
-            <a href="#home" className="flex items-center gap-2.5 text-[1.5rem] font-extrabold tracking-[-0.5px] text-[var(--chrome-text)]">
-              <span className="gradient-text">EDDINET</span>
+            <a href="#home" className="flex items-center">
+              <Image src="/eddinet-logo.png" alt="Eddinet" width={320} height={88} className="h-[88px] w-auto" priority />
             </a>
 
             <nav className="flex items-center gap-8 max-lg:hidden">
