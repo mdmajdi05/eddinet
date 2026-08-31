@@ -78,7 +78,7 @@ export default function Services() {
                     </div>
 
                     <div className="absolute bottom-4 left-5 right-5 flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[var(--main-accent)] to-[rgba(79,172,254,0.6)] flex items-center justify-center text-[1.4rem] shrink-0 shadow-[0_8px_25px_rgba(var(--accent-rgb),0.35)] transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_12px_35px_rgba(var(--accent-rgb),0.5)]">
+                      <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[var(--main-accent)] to-[rgba(var(--accent-rgb),0.6)] flex items-center justify-center text-[1.4rem] shrink-0 shadow-[0_8px_25px_rgba(var(--accent-rgb),0.35)] transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_12px_35px_rgba(var(--accent-rgb),0.5)]">
                         {s.icon}
                       </div>
                       <h3 className="text-[1.15rem] font-bold text-white leading-tight">{s.title}</h3>
@@ -151,12 +151,12 @@ export default function Services() {
                 ✕
               </button>
               <div className="absolute bottom-5 left-6 flex items-center gap-3">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[var(--main-accent)] to-[rgba(79,172,254,0.6)] flex items-center justify-center text-[1.6rem] shrink-0 shadow-[0_8px_25px_rgba(var(--accent-rgb),0.4)]">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[var(--main-accent)] to-[rgba(var(--accent-rgb),0.6)] flex items-center justify-center text-[1.6rem] shrink-0 shadow-[0_8px_25px_rgba(var(--accent-rgb),0.4)]">
                   {modal.icon}
                 </div>
                 <div>
-                  <h3 className="text-[1.5rem] font-bold text-white">{modal.title}</h3>
-                  <p className="text-white/60 text-[0.85rem]">{modal.allItems.length}+ Services Available</p>
+                  <h3 className="text-[1.5rem] font-bold text-[var(--text-main)]">{modal.title}</h3>
+                  <p className="text-[var(--text-muted)] text-[0.85rem]">{modal.allItems.length}+ Services Available</p>
                 </div>
               </div>
             </div>

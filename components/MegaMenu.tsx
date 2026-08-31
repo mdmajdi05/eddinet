@@ -1,8 +1,10 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
+import Link from "next/link";
 import { services } from "@/data/services";
 
 type MegaMenuCategory = {
+  slug: string;
   icon: string;
   title: string;
   groups: { label: string; items: string[] }[] | null;
@@ -11,6 +13,7 @@ type MegaMenuCategory = {
 };
 
 const categories: MegaMenuCategory[] = services.map((s) => ({
+  slug: s.slug,
   icon: s.icon,
   title: s.title.toUpperCase(),
   groups: s.groups ?? null,
@@ -91,12 +94,19 @@ export default function MegaMenu() {
             <div className="grid grid-cols-5 gap-x-[42px] gap-y-[35px] max-[1250px]:grid-cols-3 max-[1250px]:gap-x-6 max-[900px]:grid-cols-2 max-[900px]:gap-5 max-[600px]:grid-cols-1 max-[600px]:gap-6">
               {categories.map((cat, ci) => (
                 <div key={ci}>
-                  <h3
+<h3
                     className="text-[1.15rem] font-bold leading-[1.25] mb-4 flex items-start gap-2"
                     style={{ color: "var(--main-accent)" }}
                   >
-                    <span className="text-[17px] shrink-0">{cat.icon}</span>
-                    {cat.title}
+                    <Link
+                      href={`/services/${cat.slug}`}
+                      onClick={() => setOpen(false)}
+                      className="text-[1.15rem] font-bold leading-[1.25] flex items-start gap-2 no-underline transition-colors duration-150 hover:opacity-85"
+                      style={{ color: "var(--main-accent)" }}
+                    >
+                      <span className="text-[17px] shrink-0">{cat.icon}</span>
+                      {cat.title}
+                    </Link>
                   </h3>
 
                   {cat.groups ? (
@@ -112,8 +122,8 @@ export default function MegaMenu() {
                         <ul className="list-none p-0 m-0">
                           {grp.items.map((item, ii) => (
                             <li key={ii} className="mb-2.5 last:mb-0">
-                              <a
-                                href="#services"
+                              <Link
+                                href={`/services/${cat.slug}`}
                                 className="text-[0.85rem] leading-[1.35] flex items-start no-underline transition-all duration-150 hover:translate-x-[3px]"
                                 style={{ color: "var(--text-muted)" }}
                                 onMouseEnter={(e) => (e.currentTarget.style.color = "var(--main-accent)")}
@@ -122,7 +132,7 @@ export default function MegaMenu() {
                               >
                                 <span className="mr-2 mt-0.5 text-[12px] font-bold shrink-0" style={{ color: "var(--main-accent)" }}>✓</span>
                                 {item}
-                              </a>
+                              </Link>
                             </li>
                           ))}
                         </ul>
@@ -133,8 +143,8 @@ export default function MegaMenu() {
                       <ul className="list-none p-0 m-0">
                         {cat.items!.map((item, ii) => (
                           <li key={ii} className="mb-2.5 last:mb-0">
-                            <a
-                              href="#services"
+                            <Link
+                              href={`/services/${cat.slug}`}
                               className="text-[0.85rem] leading-[1.35] flex items-start no-underline transition-all duration-150 hover:translate-x-[3px]"
                               style={{ color: "var(--text-muted)" }}
                               onMouseEnter={(e) => (e.currentTarget.style.color = "var(--main-accent)")}
@@ -143,24 +153,24 @@ export default function MegaMenu() {
                             >
                               <span className="mr-2 mt-0.5 text-[12px] font-bold shrink-0" style={{ color: "var(--main-accent)" }}>✓</span>
                               {item}
-                            </a>
+                            </Link>
                           </li>
                         ))}
                       </ul>
                       {cat.extraHeading && (
                         <div className="mt-5">
-                          <h3
+                          <h4
                             className="text-[1.15rem] font-bold leading-[1.25] mb-4 flex items-start gap-2"
                             style={{ color: "var(--main-accent)" }}
                           >
                             <span className="text-[17px] shrink-0">{cat.extraHeading.icon}</span>
                             {cat.extraHeading.title}
-                          </h3>
+                          </h4>
                           <ul className="list-none p-0 m-0">
                             {cat.extraHeading.items.map((item, ii) => (
                               <li key={ii} className="mb-2.5 last:mb-0">
-                                <a
-                                  href="#services"
+                                <Link
+                                  href={`/services/${cat.slug}`}
                                   className="text-[0.85rem] leading-[1.35] flex items-start no-underline transition-all duration-150 hover:translate-x-[3px]"
                                   style={{ color: "var(--text-muted)" }}
                                   onMouseEnter={(e) => (e.currentTarget.style.color = "var(--main-accent)")}
@@ -169,13 +179,13 @@ export default function MegaMenu() {
                                 >
                                   <span className="mr-2 mt-0.5 text-[12px] font-bold shrink-0" style={{ color: "var(--main-accent)" }}>✓</span>
                                   {item}
-                                </a>
+                                </Link>
                               </li>
                             ))}
                           </ul>
                         </div>
                       )}
-                    </>
+</>
                   )}
                 </div>
               ))}
@@ -191,14 +201,14 @@ export default function MegaMenu() {
               <strong style={{ color: "var(--text-main)" }}>Looking for something specific?</strong>{" "}
               We can build a custom solution around your business.
             </div>
-            <a
-              href="#services"
+            <Link
+              href="/services"
               className="shrink-0 py-3 px-5 rounded-lg text-[0.8rem] font-bold no-underline text-white transition-all duration-300 hover:-translate-y-0.5"
               style={{ background: "var(--primary-gradient)" }}
               onClick={() => setOpen(false)}
             >
               VIEW ALL SERVICES →
-            </a>
+            </Link>
           </div>
         </div>
       </div>
