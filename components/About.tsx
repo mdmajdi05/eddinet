@@ -26,14 +26,14 @@ export default function About() {
   const [showMore, setShowMore] = useState(false);
 
   return (
-    <section id="about" className="py-[100px]">
+    <section id="about" className="py-[80px]">
       <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
-        <div className="grid grid-cols-[0.9fr_1.1fr] gap-[50px] items-center max-[1024px]:grid-cols-1 max-[1024px]:text-center">
+        <div className="grid grid-cols-[0.95fr_1.05fr] gap-[40px] items-center max-[1024px]:grid-cols-1 max-[1024px]:text-center">
 
           {/* =========================================================
               PREMIUM VISUAL / IMAGE SECTION
           ========================================================= */}
-          <div className="relative min-h-[560px] flex items-center justify-center max-[1024px]:min-h-[520px] max-[640px]:min-h-[470px]">
+          <div className="relative min-h-[560px] flex items-center justify-center -ml-2 max-[1024px]:min-h-[520px] max-[640px]:min-h-[460px] max-[1024px]:-ml-0">
 
             {/* Soft background glow */}
             <div className="absolute left-[20%] top-[15%] w-[280px] h-[280px] rounded-full bg-[var(--main-accent)]/10 blur-[100px]" />
@@ -66,7 +66,7 @@ export default function About() {
             {/* =====================================================
                 MAIN IMAGE COMPOSITION
             ===================================================== */}
-            <div className="relative z-10 w-[88%] max-w-[520px]">
+            <div className="relative z-10 w-[95%] max-w-[560px]">
 
               {/* Back rotated layer */}
               <div className="absolute inset-0 translate-x-[-16px] translate-y-[-14px] rounded-[32px] bg-[var(--main-accent)]/12 rotate-[-4deg]" />
@@ -84,12 +84,12 @@ export default function About() {
                   height={200}
                   className="
   w-full
-  h-[450px]
+  h-[480px]
   object-cover
-  max-[1024px]:h-[590px]
-  max-[768px]:h-[540px]
-  max-[640px]:h-[470px]
-  max-[480px]:h-[410px]
+  max-[1024px]:h-[540px]
+  max-[768px]:h-[500px]
+  max-[640px]:h-[440px]
+  max-[480px]:h-[390px]
 "
                   unoptimized
                 />
@@ -120,20 +120,20 @@ export default function About() {
             {/* =====================================================
                 TOP LEFT FLOATING STAT
             ===================================================== */}
-            <div className="absolute z-30 top-[62px] left-[-5px] bg-[var(--bg-card)]/95 backdrop-blur-xl border border-[var(--border-color)] rounded-2xl px-5 py-4 shadow-[var(--shadow-lg)] max-[640px]:top-[25px] max-[640px]:left-0">
+            <div className="absolute z-30 top-[55px] left-[-5px] bg-[var(--bg-card)]/95 backdrop-blur-xl border border-[var(--border-color)] rounded-2xl px-4 py-3 shadow-[var(--shadow-lg)] max-[640px]:top-[25px] max-[640px]:left-0">
 
               <div className="flex items-center gap-3">
 
-                <div className="w-10 h-10 rounded-xl bg-[var(--tag-bg)] flex items-center justify-center text-[var(--main-accent)] text-lg font-bold">
+                <div className="w-9 h-9 rounded-xl bg-[var(--tag-bg)] flex items-center justify-center text-[var(--main-accent)] text-base font-bold">
                   ✦
                 </div>
 
                 <div>
-                  <div className="text-[1.35rem] font-extrabold text-[var(--text-main)] leading-none">
+                  <div className="text-[1.2rem] font-extrabold text-[var(--text-main)] leading-none">
                     360°
                   </div>
 
-                  <div className="text-[0.72rem] text-[var(--text-muted)] mt-1">
+                  <div className="text-[0.68rem] text-[var(--text-muted)] mt-1">
                     Digital Growth
                   </div>
                 </div>
@@ -144,32 +144,32 @@ export default function About() {
             {/* =====================================================
                 RIGHT FLOATING GROWTH CARD
             ===================================================== */}
-            <div className="absolute z-30 right-[-8px] bottom-[70px] w-[195px] bg-[var(--bg-card)]/95 backdrop-blur-xl border border-[var(--border-color)] rounded-[22px] p-5 shadow-[var(--shadow-lg)] max-[1024px]:right-0 max-[640px]:bottom-[40px] max-[480px]:w-[175px]">
+            <div className="absolute z-30 right-[-24px] bottom-[60px] w-[175px] bg-[var(--bg-card)]/95 backdrop-blur-xl border border-[var(--border-color)] rounded-[20px] p-4 shadow-[var(--shadow-lg)] max-[1024px]:right-0 max-[640px]:bottom-[40px] max-[480px]:w-[160px]">
 
-              <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center justify-between mb-3">
 
-                <div className="w-10 h-10 rounded-xl bg-[var(--tag-bg)] flex items-center justify-center text-[var(--main-accent)] text-lg font-bold">
+                <div className="w-9 h-9 rounded-xl bg-[var(--tag-bg)] flex items-center justify-center text-[var(--main-accent)] text-base font-bold">
                   ↗
                 </div>
 
-                <span className="text-[0.62rem] font-bold tracking-[0.15em] text-[var(--main-accent)]">
+                <span className="text-[0.58rem] font-bold tracking-[0.15em] text-[var(--main-accent)]">
                   GROWTH
                 </span>
 
               </div>
 
-              <div className="text-[1rem] font-extrabold text-[var(--text-main)] leading-tight">
+              <div className="text-[0.9rem] font-extrabold text-[var(--text-main)] leading-tight">
                 Integrated
                 <br />
                 Growth System
               </div>
 
               {/* Progress line */}
-              <div className="relative mt-4 h-[3px] w-full bg-[var(--border-color)] rounded-full overflow-hidden">
+              <div className="relative mt-3 h-[3px] w-full bg-[var(--border-color)] rounded-full overflow-hidden">
                 <div className="absolute left-0 top-0 h-full w-[72%] bg-[var(--main-accent)] rounded-full" />
               </div>
 
-              <div className="mt-2 text-[0.68rem] text-[var(--text-muted)]">
+              <div className="mt-2 text-[0.62rem] text-[var(--text-muted)]">
                 Marketing + Technology
               </div>
 
@@ -178,7 +178,7 @@ export default function About() {
             {/* =====================================================
                 BOTTOM LEFT TEAM CARD
             ===================================================== */}
-            <div className="absolute z-30 bottom-[8px] left-[15px] bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl px-4 py-3 shadow-[var(--shadow-lg)] max-[640px]:left-0 max-[480px]:hidden">
+            <div className="absolute z-30 bottom-[8px] left-[15px] bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl px-3.5 py-2.5 shadow-[var(--shadow-lg)] max-[640px]:left-0 max-[480px]:hidden">
 
               <div className="flex items-center gap-3">
 
@@ -224,52 +224,59 @@ export default function About() {
           <div>
 
             {/* LABEL */}
-            <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[var(--tag-bg)] border border-[var(--tag-border)] rounded-3xl text-[var(--main-accent)] text-[0.85rem] font-semibold uppercase tracking-wider mb-4 transition-all duration-300">
+            <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[var(--tag-bg)] border border-[var(--tag-border)] rounded-3xl text-[var(--main-accent)] text-[0.8rem] font-semibold uppercase tracking-wider mb-3 transition-all duration-300">
               About Eddinet
             </div>
 
             {/* HEADING */}
-            <h2 className="text-[2.5rem] font-extrabold leading-[1.2] mb-5 text-[var(--text-main)] max-[768px]:text-[2rem]">
+            <h2 className="text-[2rem] font-extrabold leading-[1.2] mb-4 text-[var(--text-main)] max-[768px]:text-[1.7rem]">
               Marketing Built Like a{" "}
-              <span className="gradient-text">System</span>, Not a List
+              <span className="gradient-text">System</span>, Not a Service
+              List
             </h2>
 
             {/* PARAGRAPH 1 */}
-            <p className="text-[var(--text-muted)] text-[1.1rem] leading-relaxed mb-5">
+            <p className="text-[var(--text-muted)] text-[1rem] leading-relaxed mb-4">
               Eddinet is a{" "}
-                <strong className="font-bold text-[#ed2344]">
+              {/* <strong className="text-[var(--text-main)]"> */}
+                <strong className="font-bold text-[var(--main-accent)]">
                 Digital Marketing & Software Agency in Delhi NCR
               </strong>{" "}
-              helping businesses gain visibility, generate leads, and scale
-              with the right digital technology.
+              helping businesses build visibility, generate qualified leads,
+              improve conversions, and scale with the right digital
+              technology.
             </p>
 
             {/* PARAGRAPH 2 */}
-            <p className="text-[var(--text-muted)] text-[1.05rem] leading-relaxed mb-5">
+            <p className="text-[var(--text-muted)] text-[0.98rem] leading-relaxed mb-5">
               We bring{" "}
               <strong className="text-[var(--text-main)]">
-                marketing, web, software, automation, and Cloud & DevOps
+                SEO, AI SEO, digital marketing, creative, web development,
+                software, AI automation, and Cloud & DevOps
               </strong>{" "}
-              together as one connected growth system, aligned around a
-              single business objective.
+              together as one connected growth system. Instead of managing
+              every channel separately, we connect marketing, technology,
+              automation, and digital experiences around the same business
+              objective.
             </p>
 
             {/* SHOW MORE CONTENT */}
             {showMore && (
               <>
                 {/* PARAGRAPH 3 */}
-                <p className="text-[var(--text-muted)] text-[1.05rem] leading-relaxed mb-8">
+                <p className="text-[var(--text-muted)] text-[0.98rem] leading-relaxed mb-6">
                   Our approach is{" "}
                   <strong className="text-[var(--text-main)]">
                     outcome-led and data-driven
                   </strong>{" "}
-                  — identifying opportunities, building the right solutions,
-                  and improving as your business grows.
+                  understanding the business, identifying opportunities,
+                  building the right solutions, measuring performance, and
+                  continuously improving as the business grows.
                 </p>
 
                 {/* HIGHLIGHT */}
-                <div className="border-l-4 border-[var(--main-accent)] pl-5 mb-8 text-left">
-                  <p className="text-[var(--text-main)] text-[1.05rem] font-semibold leading-relaxed">
+                <div className="border-l-4 border-[var(--main-accent)] pl-4 mb-6 text-left">
+                  <p className="text-[var(--text-main)] text-[0.98rem] font-semibold leading-relaxed">
                     The goal is simple: connect marketing and technology to turn
                     digital activity into measurable business growth.
                   </p>
@@ -289,18 +296,18 @@ export default function About() {
             </div>
 
             {/* CAPABILITIES */}
-            <div className="grid grid-cols-2 gap-4 mb-2 max-[640px]:grid-cols-1">
+            <div className="grid grid-cols-2 gap-3 mb-2 max-[640px]:grid-cols-1">
 
               {capabilities.map((t, i) => (
                 <div
                   key={i}
-                  className="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-[var(--radius-md)] p-4 text-left transition-all duration-300 hover:border-[var(--border-hover)] hover:-translate-y-1 hover:shadow-[var(--shadow-md)]"
+                  className="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-[var(--radius-md)] p-3.5 text-left transition-all duration-300 hover:border-[var(--border-hover)] hover:-translate-y-1 hover:shadow-[var(--shadow-md)]"
                 >
-                  <div className="text-[0.9rem] font-bold text-[var(--text-main)] mb-1">
+                  <div className="text-[0.82rem] font-bold text-[var(--text-main)] mb-1">
                     {t.role}
                   </div>
 
-                  <div className="text-[0.8rem] text-[var(--text-muted)] leading-relaxed">
+                  <div className="text-[0.75rem] text-[var(--text-muted)] leading-relaxed">
                     {t.desc}
                   </div>
                 </div>

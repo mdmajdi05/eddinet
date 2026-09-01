@@ -69,7 +69,7 @@ export default function Services() {
                       src={s.image}
                       alt={s.title}
                       fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      className="object-fill transition-transform duration-700 group-hover:scale-110"
                       unoptimized
                     />
                     <div className="absolute inset-0 to-transparent" />
