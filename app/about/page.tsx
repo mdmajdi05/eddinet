@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { site, processSteps, whyFeatures } from "@/data/site";
 import { industries } from "@/data/industries";
-import { testimonials } from "@/data/testimonials";
 
 export const metadata: Metadata = {
   title: "About Eddinet - Digital Growth, Marketing & Technology Partner",
@@ -13,17 +12,17 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { value: "7+", label: "Years Experience" },
-  { value: "1,000+", label: "Projects Delivered" },
-  { value: "50+", label: "Team Members" },
-  { value: "98%", label: "Client Retention" },
+  { value: "13", label: "Core Capability Areas" },
+  { value: "18", label: "Industries Served" },
+  { value: "3", label: "Growth Layers — Marketing, Creative & Tech" },
+  { value: "6", label: "Outcome-Led Process Steps" },
 ];
 
 const team = [
-  { role: "SEO & AI Strategists", desc: "Google & Meta certified experts driving organic growth." },
-  { role: "Performance Marketers", desc: "Data-obsessed media buyers optimizing every ad rupee." },
-  { role: "Full-Stack Developers", desc: "React, Next.js & WordPress engineers building blazing-fast sites." },
-  { role: "Creative Designers", desc: "Visual storytellers crafting high-converting brand identities." },
+  { role: "SEO & AI Strategists", desc: "Build visibility across classic search and AI-generated answers." },
+  { role: "Performance Marketers", desc: "Plan paid acquisition around real conversion and budget efficiency." },
+  { role: "Full-Stack Developers", desc: "Engineer sites, apps and software that are fast, structured and maintainable." },
+  { role: "Creative Designers", desc: "Craft brand identity and creative that works across web, social and ads." },
 ];
 
 const organizationSchema = {
@@ -94,8 +93,8 @@ export default function AboutPage() {
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-[var(--bg-card)] border border-[var(--border-color)] rounded-[var(--radius-md)] p-5 shadow-[var(--shadow-lg)] backdrop-blur-xl max-[600px]:relative max-[600px]:-bottom-0 max-[600px]:-left-0 max-[600px]:mt-4">
-                <div className="text-[2rem] font-extrabold gradient-text">7+ Years</div>
-                <div className="text-[0.85rem] text-[var(--text-muted)]">Delivering Digital Excellence</div>
+                <div className="text-[1.5rem] font-extrabold gradient-text leading-tight">Okhla, New Delhi</div>
+                <div className="text-[0.85rem] text-[var(--text-muted)]">Integrated Digital Growth Partner</div>
               </div>
             </div>
           </div>
@@ -257,33 +256,28 @@ export default function AboutPage() {
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[var(--tag-bg)] border border-[var(--tag-border)] rounded-3xl text-[var(--main-accent)] text-[0.85rem] font-semibold uppercase tracking-wider mb-4">
-              What Clients Say
+              What We Stand For
             </div>
+            <h2 className="text-[2.4rem] font-extrabold leading-[1.2] mb-3 text-[var(--text-main)] max-[768px]:text-[1.9rem]">
+              Every Partnership Is Held to the <span className="gradient-text">Same Standards</span>
+            </h2>
           </div>
           <div className="grid grid-cols-2 gap-6 max-[768px]:grid-cols-1">
-            {testimonials.slice(0, 2).map((t, i) => (
+            {[
+              { icon: "🎯", title: "Outcome-Led", desc: "Work is planned and measured around the business outcome it must produce — not around impressions, clicks or vanity metrics." },
+              { icon: "🔗", title: "One System", desc: "Marketing, creative, web, apps, software, AI and cloud are planned as connected parts of a single growth system." },
+              { icon: "📊", title: "Transparent", desc: "Every decision, budget item and report is explained in business terms so you always know what you are paying for and why." },
+              { icon: "🛡️", title: "Honest Reporting", desc: "We publish only verifiable outcomes and never invent statistics or client stories. Trust is built on evidence, not promises." },
+            ].map((c, i) => (
               <div
                 key={i}
                 className="testimonial-quotes bg-[var(--bg-card)] border border-[var(--border-color)] rounded-[var(--radius-lg)] p-8 relative transition-all duration-300 hover:border-[var(--hover-line)] hover:-translate-y-1"
               >
-                <p className="text-[var(--text-muted)] text-[0.95rem] leading-[1.7] italic mb-6">
-                  &ldquo;{t.text}&rdquo;
-                </p>
-                <div className="bg-[var(--stat-box-bg)] border border-dashed border-[rgba(var(--accent-rgb),0.3)] rounded-[var(--radius-sm)] px-4 py-3 mb-5">
-                  <div className="text-[0.72rem] uppercase tracking-wider text-[var(--main-accent)] font-bold mb-0.5">
-                    {t.service}
-                  </div>
-                  <div className="text-[0.85rem] text-[var(--text-main)] font-semibold">{t.outcome}</div>
+                <div className="w-12 h-12 rounded-xl bg-[var(--tag-bg)] border border-[var(--tag-border)] flex items-center justify-center text-[1.4rem] mb-5">
+                  {c.icon}
                 </div>
-                <div className="flex items-center gap-3.5 pt-5 border-t border-[var(--border-color)]">
-                  <div className="w-[44px] h-[44px] rounded-full flex items-center justify-center font-extrabold text-[0.85rem] text-[var(--on-primary)] shrink-0" style={{ background: "var(--primary-gradient)" }}>
-                    {t.initials}
-                  </div>
-                  <div>
-                    <div className="text-[0.95rem] font-bold text-[var(--text-main)]">{t.name}</div>
-                    <div className="text-[0.8rem] text-[var(--text-dim)]">{t.role}, {t.company}</div>
-                  </div>
-                </div>
+                <h4 className="text-[1.1rem] font-bold text-[var(--text-main)] mb-3">{c.title}</h4>
+                <p className="text-[var(--text-muted)] text-[0.95rem] leading-[1.7]">{c.desc}</p>
               </div>
             ))}
           </div>

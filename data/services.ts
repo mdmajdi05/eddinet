@@ -31,7 +31,7 @@ export const services: Service[] = [
     icon: "🔍",
     title: "SEO & AI SEO",
     desc: "Search visibility built for how people actually search now - traditional Google results and AI-generated answers alike. Technical SEO, content relevance, search intent and AI-search readiness work together to build qualified, compounding organic traffic.",
-    image: "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=500&q=80",
+    image: "SEO_AI_SEO.webp",
     link: "SEO & AI SEO services",
     tabLabel: "SEO",
     footerLabel: "Search Engine Optimization",

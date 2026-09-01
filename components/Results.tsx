@@ -1,29 +1,24 @@
 import Image from "next/image";
+import Link from "next/link";
 
-const results = [
+const outcomes = [
+  {
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80",
+    tag: "Visibility",
+    title: "SEO & AI SEO",
+    desc: "We define measurable visibility goals — qualified organic traffic, rankings on the keywords that matter, and presence in AI-generated answers — then report against them in business terms, not vanity metrics.",
+  },
   {
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&q=80",
-    tag: "Google Ads Campaign",
-    client: "Bliss & Burn Brand",
-    metric: "250 Conversions",
-    label: "Generated in first 5 weeks of launch",
-    note: "Scaled ad spend while keeping CPA 38% below industry average.",
+    tag: "Acquisition",
+    title: "Paid Media & Content",
+    desc: "Campaigns are planned around cost per acquisition and qualified lead volume, with content and landing pages built to convert. Every number is tied to a real, verifiable business outcome.",
   },
   {
-    image: "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=500&q=80",
-    tag: "Google Ads Lead Gen",
-    client: "OK Tire Calgary",
-    metric: "650+ Monthly Leads",
-    label: "Scaled from 0 in under 4 months",
-    note: "Dominating local search results for automotive repair services.",
-  },
-  {
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80",
-    tag: "Organic SEO Campaign",
-    client: "TGC Institute",
-    metric: "7.96M Impressions",
-    label: "47.9K clicks via high-intent organic search",
-    note: "#1 ranking for primary competitive educational keywords.",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&q=80",
+    tag: "Technology",
+    title: "Web, Apps, Software & Cloud",
+    desc: "From high-converting websites and eCommerce to software, AI, cloud and DevOps, technology is measured by reliability, performance and the conversion it enables — and supported long after launch.",
   },
 ];
 
@@ -33,17 +28,17 @@ export default function Results() {
       <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
         <div className="text-center">
           <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[var(--tag-bg)] border border-[var(--tag-border)] rounded-3xl text-[var(--main-accent)] text-[0.85rem] font-semibold uppercase tracking-wider mb-4 transition-all duration-300">
-            Case Studies
+            How We Deliver Outcomes
           </div>
           <h2 className="text-[2.5rem] font-extrabold leading-[1.2] mb-4 text-[var(--text-main)] max-[768px]:text-[2rem]">
-            Real Clients. <span className="gradient-text">Verified Results.</span>
+            Measured by Business Results, <span className="gradient-text">Not Vanity Metrics</span>
           </h2>
-          <p className="text-[var(--text-muted)] text-[1.1rem] max-w-[650px] mx-auto mb-10">
-            Actual metrics achieved for our partners across Google Ads and SEO campaigns.
+          <p className="text-[var(--text-muted)] text-[1.1rem] max-w-[680px] mx-auto mb-10">
+            Every engagement defines the outcome it needs to produce up front. We report on the leads, transactions, retention, efficiency and brand growth that marketing and technology actually create — and we publish only verified results.
           </p>
         </div>
         <div className="grid grid-cols-3 gap-6 max-[1024px]:grid-cols-2 max-[768px]:grid-cols-1">
-          {results.map((r, i) => (
+          {outcomes.map((r, i) => (
             <div
               key={i}
               className="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-[var(--radius-lg)] relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[var(--border-hover)]"
@@ -51,7 +46,7 @@ export default function Results() {
               <div className="h-44 relative overflow-hidden">
                 <Image
                   src={r.image}
-                  alt={r.client}
+                  alt={r.title}
                   fill
                   className="object-cover transition-transform duration-500 hover:scale-105"
                   unoptimized
@@ -62,19 +57,24 @@ export default function Results() {
                     {r.tag}
                   </div>
                   <div className="text-[1.1rem] font-bold text-white">
-                    {r.client}
+                    {r.title}
                   </div>
                 </div>
               </div>
               <div className="p-[30px]">
-                <div className="bg-[var(--stat-box-bg)] border border-dashed border-[rgba(var(--accent-rgb),0.3)] p-4 rounded-[var(--radius-md)] mb-4 transition-all duration-300">
-                  <div className="text-[1.8rem] font-extrabold text-[var(--text-main)]">{r.metric}</div>
-                  <div className="text-[0.85rem] text-[var(--text-muted)]">{r.label}</div>
-                </div>
-                <p className="text-[0.85rem] text-[var(--text-muted)]">{r.note}</p>
+                <p className="text-[0.9rem] text-[var(--text-muted)] leading-relaxed">{r.desc}</p>
               </div>
             </div>
           ))}
+        </div>
+        <div className="text-center mt-10">
+          <Link
+            href="/case-studies"
+            className="inline-flex items-center justify-center gap-2.5 py-3.5 px-8 rounded-full font-bold text-[0.95rem] transition-all duration-300 text-[var(--on-primary)] hover:-translate-y-[3px] hover:shadow-[0_15px_30px_rgba(var(--accent-rgb),0.4)]"
+            style={{ background: "var(--primary-gradient)" }}
+          >
+            Explore How We Work →
+          </Link>
         </div>
       </div>
     </section>

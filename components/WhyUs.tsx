@@ -4,33 +4,44 @@ const features = [
   {
     num: "01",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80",
-    title: "Guaranteed ROI-Focused Approach",
-    desc: "We don't just track vanity metrics like impressions; we measure leads, sales conversions, and customer lifetime value.",
+    title: "Marketing + Technology Together",
+    desc: "Campaigns, websites, applications and infrastructure are planned as connected parts of one system — not handed to separate vendors with separate goals.",
   },
   {
     num: "02",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80",
-    title: "Dedicated Account Managers",
-    desc: "Every client gets a single point of contact and direct access to Google & Meta certified marketing strategists.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80",
+    title: "ROI as the Starting Point",
+    desc: "Services are selected according to the business outcome they need to support — leads, transactions, retention, efficiency or brand growth — rather than the other way around.",
   },
   {
     num: "03",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80",
-    title: "100% Transparent Weekly Reporting",
-    desc: "No hidden costs or mysterious reports. Get weekly breakdown dashboards on ad spend, leads, and ranking progress.",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80",
+    title: "Full-Funnel Thinking",
+    desc: "Organic, paid, content, creative, web and technology capabilities work together instead of operating as isolated activities with competing objectives.",
   },
   {
     num: "04",
     image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=400&q=80",
-    title: "7+ Years Industry Experience",
-    desc: "Having launched successful campaigns across Healthcare, Real Estate, E-Commerce, and Tech since 2019.",
+    title: "Data-Backed Decisions",
+    desc: "Performance, search behaviour, user behaviour and business signals guide optimisation — so choices are based on evidence, not assumptions.",
+  },
+  {
+    num: "05",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&q=80",
+    title: "Custom Strategy",
+    desc: "The approach is shaped around your business model, audience, competitive landscape and buying journey — not a generic template applied to every client.",
+  },
+  {
+    num: "06",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&q=80",
+    title: "Built for Long-Term Growth",
+    desc: "The objective is sustainable visibility, reliable technology and measurable business value — not short-term vanity metrics that fade.",
   },
 ];
 
 export default function WhyUs() {
   return (
     <section
-      id="about"
       className="py-[100px] transition-[background] duration-400 ease-in-out"
       style={{ background: "var(--whyus-glow)" }}
     >
@@ -40,10 +51,10 @@ export default function WhyUs() {
             Why Eddinet
           </div>
           <h2 className="text-[2.5rem] font-extrabold leading-[1.2] mb-4 text-[var(--text-main)] max-[768px]:text-[2rem]">
-            Why Leading Brands <span className="purple-gradient-text">Trust Us</span>
+            Growth Built as One <span className="purple-gradient-text">Connected System</span>
           </h2>
-          <p className="text-[var(--text-muted)] text-[1.1rem] max-w-[650px] mx-auto mb-10">
-            We combine creative excellence with algorithmic precision to deliver measurable business revenue.
+          <p className="text-[var(--text-muted)] text-[1.1rem] max-w-[680px] mx-auto mb-10">
+            Six principles guide how we plan, build and operate digital growth — so marketing and technology pull in the same direction.
           </p>
         </div>
         <div className="grid grid-cols-2 gap-[30px] mt-[50px] max-[1024px]:grid-cols-1">

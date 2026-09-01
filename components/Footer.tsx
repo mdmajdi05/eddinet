@@ -63,7 +63,7 @@ export default function Footer() {
           <div className="max-w-[480px] justify-self-end w-full max-[1024px]:justify-self-start">
             <NewsletterForm />
             <p className="text-[var(--chrome-text-muted)] text-[0.8rem] mt-3 flex items-center gap-2">
-              <span className="text-[var(--green-accent)]">✓</span> 1,000+ readers · Unsubscribe anytime
+              <span className="text-[var(--green-accent)]">✓</span> Practical, no fluff · Unsubscribe anytime
             </p>
           </div>
         </div>
@@ -79,9 +79,9 @@ export default function Footer() {
             </p>
 
             <div className="flex items-center gap-2 mt-6">
-              <span className="text-[#FACC15] text-[0.9rem] tracking-tight">★★★★★</span>
-              <span className="text-white/70 text-[0.85rem] font-semibold">5.0</span>
-              <span className="text-white/35 text-[0.8rem]">· Google Reviews</span>
+              <span className="text-[#FACC15] text-[0.9rem] tracking-tight">★</span>
+              <span className="text-white/70 text-[0.85rem] font-semibold">Outcome-led digital growth partner</span>
+              <span className="text-white/35 text-[0.8rem]">· Delhi NCR</span>
             </div>
 
             <div className="flex items-center gap-2.5 mt-6">
@@ -193,8 +193,8 @@ export default function Footer() {
               <span className="absolute inline-flex h-full w-full rounded-full bg-[#34D399] opacity-75 animate-ping" />
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#34D399]" />
             </span>
-            <span className="text-[0.85rem] font-bold text-white/80">All systems operational</span>
-            <span className="text-white/30 text-[0.8rem]">· 99.9% uptime</span>
+            <span className="text-[0.85rem] font-bold text-white/80">Digital growth partner</span>
+            <span className="text-white/30 text-[0.8rem]">· marketing · technology · infrastructure</span>
           </div>
           <div className="flex items-center gap-3 text-white/35 text-[0.8rem]">
             <span>New Delhi, IN</span>

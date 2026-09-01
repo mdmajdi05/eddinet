@@ -1,18 +1,12 @@
 "use client";
 import { useState } from "react";
-
-const faqs = [
-  { q: "What digital marketing services does Eddinet offer?", a: "We specialize in Search Engine Optimization (SEO), Pay-Per-Click Ads (Google & Meta Ads), Social Media Management, Custom Web Design & Development, and AI Automation workflows tailored for businesses in Delhi NCR and worldwide." },
-  { q: "How long does it take to see results from SEO vs PPC Ads?", a: "PPC ads deliver instant traffic and leads as soon as campaigns go live. SEO is a long-term compound strategy where visible ranking growth starts appearing within 3 to 4 months." },
-  { q: "Where is Eddinet located in Delhi?", a: "Our main headquarters is located in Okhla Phase I, New Delhi (Near ESI Hospital). We welcome client visits and strategy meetings at our office!" },
-  { q: "How do you handle reporting and transparency?", a: "We provide weekly and monthly performance reports detailing exact lead counts, conversion costs, traffic metrics, and keyword rankings through live transparent dashboards." },
-];
+import { homeFaqs } from "@/data/faqs";
 
 export default function FAQ() {
   const [active, setActive] = useState(0);
 
   return (
-    <section id="contact" className="py-[100px]">
+    <section id="faq" className="py-[100px]">
       <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
         <div className="text-center">
           <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[var(--tag-bg)] border border-[var(--tag-border)] rounded-3xl text-[var(--main-accent)] text-[0.85rem] font-semibold uppercase tracking-wider mb-4 transition-all duration-300">
@@ -26,7 +20,7 @@ export default function FAQ() {
           </p>
         </div>
         <div className="max-w-[800px] mx-auto flex flex-col gap-4">
-          {faqs.map((f, i) => (
+          {homeFaqs.map((f, i) => (
             <div
               key={i}
               className={`bg-[var(--bg-card)] border rounded-[var(--radius-md)] overflow-hidden transition-all duration-300 ${

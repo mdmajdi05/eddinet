@@ -25,7 +25,7 @@ export default function ConsultModal({ isOpen, onClose }: { isOpen: boolean; onC
           <div className="text-center py-[30px]">
             <div className="text-[2.5rem] mb-3">✅</div>
             <p className="font-bold text-[1.1rem] text-[var(--text-main)]">Dhanyawad! Request submit ho gayi hai.</p>
-            <p className="text-[0.9rem] text-[var(--text-muted)] mt-2">Lucid Web team jaldi hi contact karegi.</p>
+            <p className="text-[0.9rem] text-[var(--text-muted)] mt-2">Eddinet team jaldi hi aapko contact karegi.</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit}>
