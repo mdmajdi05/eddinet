@@ -35,7 +35,7 @@ export const services: Service[] = [
     link: "SEO & AI SEO services",
     tabLabel: "SEO",
     footerLabel: "Search Engine Optimization",
-    allItems: ["SEO", "AI SEO (Generative SEO)", "Lead Generation SEO", "Local SEO", "Enterprise SEO", "B2B SEO", "Technical SEO", "Link Building", "International SEO", "Programmatic SEO", "Amazon SEO", "eCommerce SEO", "Shopify SEO"],
+    allItems: ["SEO", "AI SEO (Generative SEO)", "Lead Generation SEO", "Local SEO", "Enterprise SEO", "B2B SEO", "Technical SEO", "International SEO", "Programmatic SEO", "Amazon SEO", "eCommerce SEO", "Shopify SEO"],
   },
   {
     cat: "social",
