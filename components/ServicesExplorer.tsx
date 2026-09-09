@@ -21,22 +21,37 @@ export default function ServicesExplorer() {
 
   return (
     <div>
-      <div className="flex flex-wrap justify-center gap-3 mb-12">
+      <div className="rounded-2xl border border-[var(--border-color)] bg-[var(--bg-main)]/70 p-2.5 flex flex-wrap justify-center gap-2.5 mb-8 shadow-[var(--shadow-sm)] backdrop-blur-sm">
         {pillars.map((p) => {
           const isActive = active === p.key;
+          const count = p.cats
+            ? servicePages.filter((s) => p.cats?.includes(s.cat)).length
+            : servicePages.length;
           return (
             <button
               key={p.key}
               onClick={() => setActive(p.key)}
-              className="inline-flex items-center gap-2 py-2.5 px-5 rounded-full font-bold text-[0.88rem] cursor-pointer transition-all duration-300 border"
+              className={`inline-flex items-center gap-2 py-2.5 px-4 rounded-xl font-bold text-[0.87rem] cursor-pointer transition-all duration-300 border ${
+                isActive
+                  ? "text-[var(--on-primary)] shadow-[0_8px_20px_-6px_rgba(var(--accent-rgb),0.5)] -translate-y-px"
+                  : "text-[var(--text-main)] border-[var(--border-color)] hover:bg-[var(--bg-card-hover)] hover:border-[var(--hover-line)] hover:-translate-y-px"
+              }`}
               style={{
-                background: isActive ? "var(--primary-gradient)" : "var(--chip-bg)",
+                background: isActive ? "var(--primary-gradient)" : "transparent",
                 borderColor: isActive ? "transparent" : "var(--border-color)",
-                color: isActive ? "var(--on-primary)" : "var(--text-main)",
               }}
             >
-              <span className="text-[1rem]">{p.icon}</span>
-              {p.label}
+              <span className={`text-[1rem] ${isActive ? "" : "opacity-80"}`}>{p.icon}</span>
+              <span className="whitespace-nowrap">{p.label}</span>
+              <span
+                className={`inline-flex items-center justify-center min-w-[1.6rem] h-6 px-1.5 rounded-lg text-[0.72rem] font-extrabold ${
+                  isActive
+                    ? "bg-white/20 text-white"
+                    : "bg-[var(--chip-bg)] border border-[var(--border-color)] text-[var(--text-dim)]"
+                }`}
+              >
+                {count}
+              </span>
             </button>
           );
         })}
@@ -46,8 +61,8 @@ export default function ServicesExplorer() {
         <h2 className="text-[1.6rem] font-extrabold text-[var(--text-main)] max-[768px]:text-[1.3rem]">
           {pillars.find((p) => p.key === active)?.label}
         </h2>
-        <span className="text-[0.85rem] text-[var(--text-dim)]">
-          {visible.length} capability {visible.length === 1 ? "area" : "areas"}
+        <span className="inline-flex items-center gap-1.5 py-1 px-3 rounded-full bg-[rgba(var(--accent-rgb),0.1)] border border-[rgba(var(--accent-rgb),0.15)] text-[0.78rem] font-bold text-[var(--main-accent)]">
+          {visible.length} {visible.length === 1 ? "capability area" : "capability areas"}
         </span>
       </div>
 
@@ -56,7 +71,7 @@ export default function ServicesExplorer() {
           <Link
             key={s.slug}
             href={`/services/${s.slug}`}
-            className="group relative flex flex-col bg-[var(--bg-card)] border border-[var(--border-color)] rounded-[var(--radius-lg)] p-7 overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-[rgba(var(--accent-rgb),0.35)] hover:shadow-[0_20px_50px_rgba(var(--accent-rgb),0.12)] no-underline"
+            className="group relative flex flex-col bg-[var(--bg-main)] border border-[var(--border-color)] rounded-[var(--radius-lg)] p-7 overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-[rgba(var(--accent-rgb),0.35)] hover:shadow-[0_20px_50px_rgba(var(--accent-rgb),0.12)] no-underline"
           >
             <div
               className="absolute inset-0 rounded-[var(--radius-lg)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"

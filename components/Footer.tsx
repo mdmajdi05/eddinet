@@ -187,49 +187,38 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-y border-white/[0.06] py-4 flex items-center justify-between gap-4 flex-wrap">
-          <div className="flex items-center gap-2.5">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="absolute inline-flex h-full w-full rounded-full bg-[#34D399] opacity-75 animate-ping" />
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#34D399]" />
-            </span>
-            <span className="text-[0.85rem] font-bold text-white/80">Digital growth partner</span>
-            <span className="text-white/30 text-[0.8rem]">· marketing · technology · infrastructure</span>
+        <div className="border-y border-white/[0.06] py-5 flex items-center justify-between gap-4 flex-wrap max-[768px]:flex-col max-[768px]:items-start">
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center gap-2.5">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="absolute inline-flex h-full w-full rounded-full bg-[#34D399] opacity-75 animate-ping" />
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#34D399]" />
+              </span>
+              <span className="text-[0.85rem] font-bold text-white/80">Digital growth partner</span>
+              <span className="text-white/30 text-[0.8rem]">· marketing · technology · infrastructure</span>
+            </div>
+            <div className="flex items-center gap-3 text-white/35 text-[0.8rem]">
+              <span>New Delhi, IN</span>
+              <span className="w-1 h-1 rounded-full bg-white/25" />
+              <span>Mon – Sat</span>
+              <span className="w-1 h-1 rounded-full bg-white/25" />
+              <span>10:00 – 19:00 IST</span>
+            </div>
           </div>
-          <div className="flex items-center gap-3 text-white/35 text-[0.8rem]">
-            <span>New Delhi, IN</span>
-            <span className="w-1 h-1 rounded-full bg-white/25" />
-            <span>Mon – Sat</span>
-            <span className="w-1 h-1 rounded-full bg-white/25" />
-            <span>10:00 – 19:00 IST</span>
-          </div>
-        </div>
-
-        <div aria-hidden className="relative select-none pointer-events-none text-center leading-none pt-[64px] overflow-hidden">
-          <div
-            className="text-[clamp(3.5rem,13vw,11rem)] font-extrabold tracking-tight"
-            style={{
-              WebkitTextStroke: "1px rgba(255,255,255,0.06)",
-              color: "transparent",
-            }}
-          >
-            EDDINET
-          </div>
-        </div>
-
-        <div className="mt-[30px] pt-5 flex items-center justify-between gap-4 flex-wrap text-white/35 text-[0.82rem]">
-          <div>© 2026 {site.name}. All rights reserved.</div>
-          <div className="flex items-center gap-5">
-            <Link href="/privacy-policy" className="no-underline text-white/35 hover:text-[var(--main-accent)] transition-colors duration-300">
-              Privacy
-            </Link>
-            <Link href="/terms" className="no-underline text-white/35 hover:text-[var(--main-accent)] transition-colors duration-300">
-              Terms
-            </Link>
-            <span className="flex items-center gap-1.5">
-              Made with <span className="text-[var(--main-accent)]">♥</span> in New Delhi
-            </span>
-            <BackToTop />
+          <div className="flex flex-col items-end gap-2 max-[768px]:items-start">
+            <div className="text-white/35 text-[0.82rem]">© 2026 {site.name}. All rights reserved.</div>
+            <div className="flex items-center gap-5 text-white/35 text-[0.82rem]">
+              <Link href="/privacy-policy" className="no-underline text-white/35 hover:text-[var(--main-accent)] transition-colors duration-300">
+                Privacy
+              </Link>
+              <Link href="/terms" className="no-underline text-white/35 hover:text-[var(--main-accent)] transition-colors duration-300">
+                Terms
+              </Link>
+              <span className="flex items-center gap-1.5">
+                Made with <span className="text-[var(--main-accent)]">♥</span> in New Delhi
+              </span>
+              <BackToTop />
+            </div>
           </div>
         </div>
       </div>

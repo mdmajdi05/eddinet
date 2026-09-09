@@ -42,6 +42,7 @@
 
 :root {
   --bg-dark: #0B0F19;
+  --bg-main: var(--bg-dark);
   --bg-card: rgba(255, 255, 255, 0.04);
   --bg-card-hover: rgba(255, 255, 255, 0.08);
   --border-color: rgba(255, 255, 255, 0.1);
@@ -118,6 +119,7 @@ html[data-theme="red"] {
 html[data-theme="cyan-light"],
 html[data-theme="red-light"] {
   --bg-dark: #FFFFFF;
+  --bg-main: #FFFFFF;
   --bg-card: #F8FAFC;
   --bg-card-hover: #F1F5F9;
   --border-color: #E2E8F0;

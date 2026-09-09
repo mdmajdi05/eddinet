@@ -7,9 +7,11 @@ import {
   getServiceBySlug,
   faqsByService,
   relatedServices,
+  itemDetails,
   type Service,
 } from "@/data/services";
 import { processSteps } from "@/data/site";
+import ContactForm from "@/components/ContactForm";
 
 export function generateStaticParams() {
   return servicePages.map((s) => ({ slug: s.slug }));
@@ -42,6 +44,8 @@ function slugify(text: string) {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
 }
+
+const cardPositions = ["center", "top", "center 35%", "center 60%", "bottom", "center 25%"];
 
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -107,9 +111,6 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
           <div className="grid grid-cols-[1.1fr_0.9fr] gap-[50px] items-center max-[1024px]:grid-cols-1">
             <div>
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[var(--main-accent)] to-[rgba(var(--accent-rgb),0.6)] flex items-center justify-center text-[2rem] mb-6 shadow-[0_8px_25px_rgba(var(--accent-rgb),0.35)]">
-                {s.icon}
-              </div>
               <h1 className="text-[3rem] font-extrabold leading-[1.1] mb-5 text-[var(--text-main)] max-[768px]:text-[2.2rem]">
                 {s.title} <span className="gradient-text">Services in Delhi NCR</span>
               </h1>
@@ -143,26 +144,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               </div>
             </div>
 
-            <div className="bg-[var(--panel-bg)] border border-[var(--border-color)] rounded-2xl p-8 relative overflow-hidden shadow-[var(--shadow-lg)]">
+            <div className="bg-[var(--panel-bg)] border border-[var(--border-color)] rounded-2xl p-6 relative overflow-hidden shadow-[var(--shadow-lg)]">
               <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--main-accent)]/20 rounded-full blur-2xl" />
               <div className="relative z-10">
-                <span className="inline-flex items-center gap-1.5 text-sm bg-[rgba(16,185,129,0.15)] text-[var(--green-accent)] py-1 px-3 rounded-2xl font-semibold mb-6">
-                  <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: "var(--green-accent)" }} />
-                  How it fits your growth system
-                </span>
-                <p className="text-[var(--text-muted)] text-[0.98rem] leading-relaxed mb-6">
-                  {s.title} is one part of a connected system. It performs best when planned alongside the marketing, technology and operations it needs to support - which is exactly how Eddinet approaches every engagement.
-                </p>
-                <div className="flex flex-col gap-3">
-                  {processSteps.slice(0, 4).map((p, i) => (
-                    <div key={i} className="flex items-center gap-3 bg-[var(--inset-bg)] border border-[var(--border-color)] rounded-xl px-4 py-3">
-                      <span className="w-8 h-8 rounded-lg bg-[rgba(var(--accent-rgb),0.15)] text-[var(--main-accent)] flex items-center justify-center text-[0.8rem] font-extrabold shrink-0">
-                        {p.num}
-                      </span>
-                      <span className="text-[var(--text-main)] text-[0.9rem] font-semibold">{p.title}</span>
-                    </div>
-                  ))}
-                </div>
+                <ContactForm compact />
               </div>
             </div>
           </div>
@@ -180,17 +165,41 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               Every engagement is scoped around your business outcome. These are the capabilities we bring to {s.title.toLowerCase()} projects.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-3 max-[600px]:grid-cols-1">
+          <div className="grid grid-cols-3 gap-6 max-[1024px]:grid-cols-2 max-[600px]:grid-cols-1">
             {s.allItems.map((item, j) => (
               <div
                 key={j}
                 id={slugify(item)}
-                className="flex items-center gap-3 py-3 px-4 rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)] transition-all duration-300 hover:border-[rgba(var(--accent-rgb),0.3)] hover:bg-[var(--bg-card-hover)] scroll-mt-28"
+                className="group relative flex flex-col bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[rgba(var(--accent-rgb),0.35)] hover:shadow-[0_20px_50px_rgba(var(--accent-rgb),0.12)] scroll-mt-28"
               >
-                <div className="w-8 h-8 rounded-lg bg-[rgba(var(--accent-rgb),0.1)] flex items-center justify-center shrink-0">
-                  <span className="text-[var(--main-accent)] font-bold text-[0.75rem]">✓</span>
+                <div className="relative h-40 overflow-hidden">
+                  <Image
+                    src={s.image}
+                    alt={item}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    style={{ objectPosition: cardPositions[j % cardPositions.length] }}
+                    unoptimized
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-card)] via-transparent to-transparent" />
+                  <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 py-1 px-3 rounded-full bg-black/45 backdrop-blur-md border border-white/10 text-white/90 text-[0.7rem] font-bold">
+                    ✓ Included
+                  </span>
                 </div>
-                <span className="text-[0.92rem] text-[var(--text-main)] font-medium">{item}</span>
+
+                <div className="p-5 flex flex-col flex-1">
+                  <h3 className="text-[1rem] text-[var(--text-main)] font-bold leading-snug mb-2">{item}</h3>
+                  <p className="text-[var(--text-muted)] text-[0.85rem] leading-relaxed mb-5">
+                    {itemDetails[item] ?? `End-to-end ${item.toLowerCase()} capability delivered as part of a connected growth system.`}
+                  </p>
+                  <Link
+                    href="/contact"
+                    className="mt-auto inline-flex items-center justify-center gap-2 py-3 px-5 rounded-full font-bold text-[0.85rem] no-underline text-[var(--main-accent)] border border-[rgba(var(--accent-rgb),0.3)] bg-[rgba(var(--accent-rgb),0.06)] transition-all duration-300 hover:text-[var(--on-primary)] hover:border-transparent hover:[background:var(--primary-gradient)] hover:shadow-[0_10px_25px_-5px_rgba(var(--accent-rgb),0.4)] hover:gap-3 group/btn"
+                  >
+                    Contact Us
+                    <span className="transition-transform duration-300 group-hover/btn:translate-x-1">→</span>
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
