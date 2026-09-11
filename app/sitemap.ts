@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { servicePages } from "@/data/services";
+import { seoChildServices } from "@/data/seo-child-services";
 import { industries } from "@/data/industries";
 import { insights } from "@/data/insights";
 import { caseStudies } from "@/data/caseStudies";
@@ -23,6 +24,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const serviceRoutes: MetadataRoute.Sitemap = servicePages.map((s) => ({
     url: `${base}/services/${s.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.9,
+  }));
+
+  const seoChildRoutes: MetadataRoute.Sitemap = seoChildServices.map((c) => ({
+    url: `${base}/services/seo/${c.slug}`,
     lastModified: now,
     changeFrequency: "monthly",
     priority: 0.9,
@@ -52,6 +60,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...staticRoutes,
     ...serviceRoutes,
+    ...seoChildRoutes,
     ...industryRoutes,
     ...blogRoutes,
     ...caseStudyRoutes,

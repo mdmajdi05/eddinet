@@ -8,8 +8,10 @@ import {
   faqsByService,
   relatedServices,
   itemDetails,
+  childServiceImages,
   type Service,
 } from "@/data/services";
+import { seoItemToSlug } from "@/data/seo-child-services";
 import { processSteps } from "@/data/site";
 import ContactForm from "@/components/ContactForm";
 
@@ -166,42 +168,70 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </p>
           </div>
           <div className="grid grid-cols-3 gap-6 max-[1024px]:grid-cols-2 max-[600px]:grid-cols-1">
-            {s.allItems.map((item, j) => (
-              <div
-                key={j}
-                id={slugify(item)}
-                className="group relative flex flex-col bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[rgba(var(--accent-rgb),0.35)] hover:shadow-[0_20px_50px_rgba(var(--accent-rgb),0.12)] scroll-mt-28"
-              >
-                <div className="relative h-40 overflow-hidden">
-                  <Image
-                    src={s.image}
-                    alt={item}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                    style={{ objectPosition: cardPositions[j % cardPositions.length] }}
-                    unoptimized
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-card)] via-transparent to-transparent" />
-                  <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 py-1 px-3 rounded-full bg-black/45 backdrop-blur-md border border-white/10 text-white/90 text-[0.7rem] font-bold">
-                    ✓ Included
-                  </span>
-                </div>
+            {s.allItems.map((item, j) => {
+              const childSlug = seoItemToSlug[item];
+              const cardHref = childSlug ? `/services/seo/${childSlug}` : null;
+              const cardContent = (
+                <>
+                  <div className="relative w-full h-56">
+                    <Image
+                      src={childServiceImages[s.slug]?.[item] ?? s.image}
+                      alt={item}
+                      fill
+                      className="object-fill"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      unoptimized
+                    />
+                    <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 py-1 px-3 rounded-full bg-black/45 backdrop-blur-md border border-white/10 text-white/90 text-[0.7rem] font-bold z-10">
+                      ✓ Included
+                    </span>
+                  </div>
 
-                <div className="p-5 flex flex-col flex-1">
-                  <h3 className="text-[1rem] text-[var(--text-main)] font-bold leading-snug mb-2">{item}</h3>
-                  <p className="text-[var(--text-muted)] text-[0.85rem] leading-relaxed mb-5">
-                    {itemDetails[item] ?? `End-to-end ${item.toLowerCase()} capability delivered as part of a connected growth system.`}
-                  </p>
-                  <Link
-                    href="/contact"
-                    className="mt-auto inline-flex items-center justify-center gap-2 py-3 px-5 rounded-full font-bold text-[0.85rem] no-underline text-[var(--main-accent)] border border-[rgba(var(--accent-rgb),0.3)] bg-[rgba(var(--accent-rgb),0.06)] transition-all duration-300 hover:text-[var(--on-primary)] hover:border-transparent hover:[background:var(--primary-gradient)] hover:shadow-[0_10px_25px_-5px_rgba(var(--accent-rgb),0.4)] hover:gap-3 group/btn"
-                  >
-                    Contact Us
-                    <span className="transition-transform duration-300 group-hover/btn:translate-x-1">→</span>
-                  </Link>
+                  <div className="p-5 flex flex-col flex-1">
+                    <h3 className="text-[1rem] text-[var(--text-main)] font-bold leading-snug mb-2">{item}</h3>
+                    <p className="text-[var(--text-muted)] text-[0.85rem] leading-relaxed mb-5">
+                      {itemDetails[item] ?? `End-to-end ${item.toLowerCase()} capability delivered as part of a connected growth system.`}
+                    </p>
+                    {cardHref ? (
+                      <Link
+                        href={cardHref}
+                        className="mt-auto inline-flex items-center justify-center gap-2 py-3 px-5 rounded-full font-bold text-[0.85rem] no-underline text-[var(--main-accent)] border border-[rgba(var(--accent-rgb),0.3)] bg-[rgba(var(--accent-rgb),0.06)] transition-all duration-300 hover:text-[var(--on-primary)] hover:border-transparent hover:[background:var(--primary-gradient)] hover:shadow-[0_10px_25px_-5px_rgba(var(--accent-rgb),0.4)] hover:gap-3 group/btn"
+                      >
+                        Learn More
+                        <span className="transition-transform duration-300 group-hover/btn:translate-x-1">→</span>
+                      </Link>
+                    ) : (
+                      <Link
+                        href="/contact"
+                        className="mt-auto inline-flex items-center justify-center gap-2 py-3 px-5 rounded-full font-bold text-[0.85rem] no-underline text-[var(--main-accent)] border border-[rgba(var(--accent-rgb),0.3)] bg-[rgba(var(--accent-rgb),0.06)] transition-all duration-300 hover:text-[var(--on-primary)] hover:border-transparent hover:[background:var(--primary-gradient)] hover:shadow-[0_10px_25px_-5px_rgba(var(--accent-rgb),0.4)] hover:gap-3 group/btn"
+                      >
+                        Contact Us
+                        <span className="transition-transform duration-300 group-hover/btn:translate-x-1">→</span>
+                      </Link>
+                    )}
+                  </div>
+                </>
+              );
+
+              return cardHref ? (
+                <Link
+                  key={j}
+                  href={cardHref}
+                  id={slugify(item)}
+                  className="group relative flex flex-col bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[rgba(var(--accent-rgb),0.35)] hover:shadow-[0_20px_50px_rgba(var(--accent-rgb),0.12)] scroll-mt-28 no-underline"
+                >
+                  {cardContent}
+                </Link>
+              ) : (
+                <div
+                  key={j}
+                  id={slugify(item)}
+                  className="group relative flex flex-col bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[rgba(var(--accent-rgb),0.35)] hover:shadow-[0_20px_50px_rgba(var(--accent-rgb),0.12)] scroll-mt-28"
+                >
+                  {cardContent}
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
