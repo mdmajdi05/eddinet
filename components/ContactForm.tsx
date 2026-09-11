@@ -24,29 +24,29 @@ export default function ContactForm({ compact = false }: { compact?: boolean }) 
   if (compact) {
     return (
       <form onSubmit={handleSubmit} className="flex flex-col">
-        <div className="flex items-center gap-3.5 mb-5">
-          <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[var(--main-accent)] to-[rgba(var(--accent-rgb),0.6)] flex items-center justify-center text-[1.3rem] shrink-0 shadow-[0_8px_20px_rgba(var(--accent-rgb),0.3)]">
+        <div className="flex items-center gap-3.5 mb-3.5">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[var(--main-accent)] to-[rgba(var(--accent-rgb),0.6)] flex items-center justify-center text-[1.15rem] shrink-0 shadow-[0_8px_20px_rgba(var(--accent-rgb),0.3)]">
             🚀
           </div>
           <div>
-            <h3 className="text-[1.15rem] font-extrabold leading-tight text-[var(--text-main)]">
+            <h3 className="text-[1.05rem] font-extrabold leading-tight text-[var(--text-main)]">
               Get Your Free Strategy Call
             </h3>
-            <p className="text-[var(--text-muted)] text-[0.78rem] leading-snug">
+            <p className="text-[var(--text-muted)] text-[0.7rem] leading-snug">
               We&apos;ll map the fastest path to growth.
             </p>
           </div>
         </div>
 
-        <div className="space-y-3.5">
-          <div className="grid grid-cols-2 gap-3.5 max-[600px]:grid-cols-1">
+        <div className="space-y-2.5">
+          <div className="grid grid-cols-2 gap-2.5 max-[600px]:grid-cols-1">
             <div>
               <label className="block text-[0.78rem] font-semibold mb-1.5 text-[var(--text-muted)]">Full Name *</label>
               <input
                 type="text"
                 required
                 placeholder="Rahul Sharma"
-                className="w-full py-2.5 px-4 bg-[var(--input-bg)] border border-[var(--border-color)] rounded-xl text-[var(--text-main)] font-[inherit] text-[0.92rem] outline-none transition-all duration-300 focus:border-[var(--main-accent)] focus:ring-2 focus:ring-[rgba(var(--accent-rgb),0.15)] focus:bg-[var(--input-bg-focus)]"
+                className="w-full py-2 px-4 bg-[var(--input-bg)] border border-[var(--border-color)] rounded-xl text-[var(--text-main)] font-[inherit] text-[0.92rem] outline-none transition-all duration-300 focus:border-[var(--main-accent)] focus:ring-2 focus:ring-[rgba(var(--accent-rgb),0.15)] focus:bg-[var(--input-bg-focus)]"
               />
             </div>
             <div>
@@ -55,7 +55,7 @@ export default function ContactForm({ compact = false }: { compact?: boolean }) 
                 type="tel"
                 required
                 placeholder="+91 98765 43210"
-                className="w-full py-2.5 px-4 bg-[var(--input-bg)] border border-[var(--border-color)] rounded-xl text-[var(--text-main)] font-[inherit] text-[0.92rem] outline-none transition-all duration-300 focus:border-[var(--main-accent)] focus:ring-2 focus:ring-[rgba(var(--accent-rgb),0.15)] focus:bg-[var(--input-bg-focus)]"
+                className="w-full py-2 px-4 bg-[var(--input-bg)] border border-[var(--border-color)] rounded-xl text-[var(--text-main)] font-[inherit] text-[0.92rem] outline-none transition-all duration-300 focus:border-[var(--main-accent)] focus:ring-2 focus:ring-[rgba(var(--accent-rgb),0.15)] focus:bg-[var(--input-bg-focus)]"
               />
             </div>
           </div>
@@ -66,13 +66,13 @@ export default function ContactForm({ compact = false }: { compact?: boolean }) 
               type="email"
               required
               placeholder="you@company.com"
-              className="w-full py-2.5 px-4 bg-[var(--input-bg)] border border-[var(--border-color)] rounded-xl text-[var(--text-main)] font-[inherit] text-[0.92rem] outline-none transition-all duration-300 focus:border-[var(--main-accent)] focus:ring-2 focus:ring-[rgba(var(--accent-rgb),0.15)] focus:bg-[var(--input-bg-focus)]"
+              className="w-full py-2 px-4 bg-[var(--input-bg)] border border-[var(--border-color)] rounded-xl text-[var(--text-main)] font-[inherit] text-[0.92rem] outline-none transition-all duration-300 focus:border-[var(--main-accent)] focus:ring-2 focus:ring-[rgba(var(--accent-rgb),0.15)] focus:bg-[var(--input-bg-focus)]"
             />
           </div>
 
           <div>
             <label className="block text-[0.78rem] font-semibold mb-1.5 text-[var(--text-muted)]">Service(s) Needed</label>
-            <select className="w-full py-2.5 px-4 bg-[var(--input-bg)] border border-[var(--border-color)] rounded-xl text-[var(--text-main)] font-[inherit] text-[0.92rem] outline-none transition-all duration-300 focus:border-[var(--main-accent)] focus:ring-2 focus:ring-[rgba(var(--accent-rgb),0.15)] focus:bg-[var(--input-bg-focus)]">
+            <select className="w-full py-2 px-4 bg-[var(--input-bg)] border border-[var(--border-color)] rounded-xl text-[var(--text-main)] font-[inherit] text-[0.92rem] outline-none transition-all duration-300 focus:border-[var(--main-accent)] focus:ring-2 focus:ring-[rgba(var(--accent-rgb),0.15)] focus:bg-[var(--input-bg-focus)]">
               <option>Full Digital Growth (Marketing + Technology)</option>
               <option>SEO &amp; AI SEO</option>
               <option>Google &amp; Meta Ads / PPC</option>
@@ -89,14 +89,14 @@ export default function ContactForm({ compact = false }: { compact?: boolean }) 
 
         <button
           type="submit"
-          className="mt-5 w-full inline-flex items-center justify-center gap-2.5 py-3.5 px-7 rounded-full font-bold text-[0.95rem] transition-all duration-300 border-none outline-none text-[var(--on-primary)] shadow-[0_10px_25px_-5px_rgba(var(--accent-rgb),0.45)] hover:-translate-y-[2px] hover:shadow-[0_15px_30px_-5px_rgba(var(--accent-rgb),0.6)]"
+          className="mt-3.5 w-full inline-flex items-center justify-center gap-2.5 py-3 px-7 rounded-full font-bold text-[0.95rem] transition-all duration-300 border-none outline-none text-[var(--on-primary)] shadow-[0_10px_25px_-5px_rgba(var(--accent-rgb),0.45)] hover:-translate-y-[2px] hover:shadow-[0_15px_30px_-5px_rgba(var(--accent-rgb),0.6)]"
           style={{ background: "var(--primary-gradient)" }}
         >
           Talk to a Growth Expert
           <span className="text-[1.1rem] leading-none">→</span>
         </button>
 
-        <div className="mt-4 pt-4 border-t border-[var(--border-color)] flex items-center justify-center gap-5 text-[0.72rem] text-[var(--text-dim)]">
+        <div className="mt-3 pt-3 border-t border-[var(--border-color)] flex items-center justify-center gap-5 text-[0.72rem] text-[var(--text-dim)]">
           <span className="inline-flex items-center gap-1.5">
             <span className="text-[var(--green-accent)]">✓</span> 2-hour response
           </span>
