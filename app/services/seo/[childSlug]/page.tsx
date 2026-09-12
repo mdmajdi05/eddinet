@@ -8,6 +8,7 @@ import {
 } from "@/data/seo-child-services";
 import ContactForm from "@/components/ContactForm";
 import Industries from "@/components/Industries";
+import { services } from "@/data/services";
 import { site } from "@/data/site";
 
 export function generateStaticParams() {
@@ -84,6 +85,8 @@ export default async function SeoChildPage({
 
   const serviceName = child.title.split("(")[0].trim();
   const introParas = child.detailedDescription.split("\n\n");
+  const crossImage = (slug: string) =>
+    services.find((s) => `/services/${s.slug}` === slug)?.image;
 
   return (
     <>
@@ -157,15 +160,19 @@ export default async function SeoChildPage({
             <div className="relative">
               <div className="relative rounded-3xl overflow-hidden border border-[var(--border-color)] bg-[var(--panel-bg)] shadow-[var(--shadow-xl)]">
                 {/* Image */}
-                <div className="relative h-[250px] overflow-hidden">
+                <div className="relative h-[300px] overflow-hidden">
                   <Image
                     src={child.image}
                     alt={child.title}
                     width={1200}
                     height={675}
-                    className="w-full h-[300px] object-fill"
+                    className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-[1.05]"
                     unoptimized
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[rgba(11,15,25,0.85)] via-[rgba(11,15,25,0.3)] to-transparent" />
+                  <div className="absolute bottom-4 left-5 inline-flex items-center gap-2 py-1.5 px-3.5 rounded-full bg-[rgba(11,15,25,0.6)] backdrop-blur-md border border-white/15 text-[0.72rem] font-bold text-white">
+                    ⚡ {serviceName} Delivery Team
+                  </div>
                 </div>
 
                 {/* Form body */}
@@ -200,7 +207,7 @@ export default async function SeoChildPage({
 
           <div className="grid grid-cols-3 gap-6 max-[1024px]:grid-cols-2 max-[640px]:grid-cols-1">
             {child.features.map((feature, i) => (
-              <div key={i} className="group relative rounded-2xl p-7 overflow-hidden transition-all duration-500 hover:-translate-y-2 bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-transparent hover:shadow-[0_20px_50px_rgba(var(--accent-rgb),0.15)]">
+              <div key={i} className="group relative rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-transparent hover:shadow-[0_20px_50px_rgba(var(--accent-rgb),0.15)]">
                 {/* Gradient edge on hover */}
                 <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{
                   background: "var(--card-edge-gradient)",
@@ -211,13 +218,25 @@ export default async function SeoChildPage({
                 }} />
                 <div className="absolute top-0 right-0 w-24 h-24 rounded-full bg-[var(--main-accent)]/0 blur-2xl group-hover:bg-[var(--main-accent)]/10 transition-all duration-500" />
                 <div className="absolute -top-4 -right-1 text-[3.6rem] font-extrabold leading-none opacity-[0.05] select-none">{String(i + 1).padStart(2, "0")}</div>
-                <div className="relative z-10">
-                  <div className="flex items-center justify-between mb-5">
-                    <div className="w-13 h-13 min-h-13 flex items-center justify-center text-[1.5rem] rounded-xl bg-gradient-to-br from-[var(--main-accent)] to-[rgba(var(--accent-rgb),0.5)] shadow-[0_8px_25px_rgba(var(--accent-rgb),0.35)] transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6">
+                {/* Image strip */}
+                <div className="relative h-[145px] overflow-hidden">
+                  <Image
+                    src={child.image}
+                    alt={feature.title}
+                    width={600}
+                    height={350}
+                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                    unoptimized
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-card)] via-[rgba(11,15,25,0.2)] to-transparent" />
+                  <div className="absolute bottom-3 left-4 flex items-center gap-2">
+                    <div className="w-10 h-10 flex items-center justify-center text-[1.15rem] rounded-xl bg-gradient-to-br from-[var(--main-accent)] to-[rgba(var(--accent-rgb),0.5)] shadow-[0_8px_25px_rgba(var(--accent-rgb),0.35)] transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6">
                       {["🕸️", "🗺️", "✍️", "🔗", "📊", "🛡️", "📱", "🧠", "⚡", "🌐"][i % 10]}
                     </div>
-                    <span className="text-[0.72rem] font-extrabold text-[var(--main-accent)]">{String(i + 1).padStart(2, "0")}</span>
+                    <span className="text-[0.7rem] font-extrabold text-[var(--main-accent)] bg-[rgba(11,15,25,0.55)] backdrop-blur-md border border-white/10 rounded-full px-2.5 py-1">{String(i + 1).padStart(2, "0")}</span>
                   </div>
+                </div>
+                <div className="relative z-10 p-7 pt-6">
                   <h3 className="text-[1.1rem] font-extrabold text-[var(--text-main)] mb-2.5">{feature.title}</h3>
                   <p className="text-[var(--text-muted)] text-[0.88rem] leading-relaxed">{feature.description}</p>
                 </div>
@@ -593,21 +612,35 @@ export default async function SeoChildPage({
 
           <div className="grid grid-cols-3 gap-6 max-[1024px]:grid-cols-2 max-[768px]:grid-cols-1">
             {child.crossLinks.map((link, i) => (
-              <Link key={i} href={link.slug} className="group relative rounded-[var(--radius-lg)] bg-[var(--bg-card)] border border-[var(--border-color)] overflow-hidden p-7 no-underline transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(var(--accent-rgb),0.15)]">
+              <Link key={i} href={link.slug} className="group relative rounded-[var(--radius-lg)] bg-[var(--bg-card)] border border-[var(--border-color)] overflow-hidden no-underline transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(var(--accent-rgb),0.15)]">
                 {/* Gradient top edge */}
-                <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[var(--main-accent)] via-transparent to-purple-500 opacity-40 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="w-12 h-12 rounded-xl bg-[rgba(var(--accent-rgb),0.08)] flex items-center justify-center text-[1.3rem] mb-5 transition-all duration-300 group-hover:scale-110 group-hover:bg-[rgba(var(--accent-rgb),0.15)]">
-                  {["🔗", "🤖", "🛍️", "💬", "📢", "⚙️"][i % 6]}
+                <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[var(--main-accent)] via-transparent to-purple-500 opacity-40 group-hover:opacity-100 transition-opacity duration-500 z-10" />
+                {/* Image strip */}
+                <div className="relative h-[145px] overflow-hidden">
+                  <Image
+                    src={crossImage(link.slug) ?? child.image}
+                    alt={link.title}
+                    width={600}
+                    height={350}
+                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                    unoptimized
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-card)] via-[rgba(11,15,25,0.25)] to-transparent" />
                 </div>
-                <h3 className="text-[1.12rem] font-extrabold text-[var(--text-main)] mb-2">{link.title}</h3>
-                <p className="text-[var(--text-muted)] text-[0.85rem] leading-relaxed mb-5">{link.description}</p>
-                <span className="inline-flex items-center gap-2 text-[var(--main-accent)] font-bold text-[0.85rem] no-underline">
-                  <span className="relative">
-                    Explore
-                    <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[var(--main-accent)] transition-all duration-300 group-hover:w-full" />
+                <div className="relative z-10 p-7 pt-6">
+                  <div className="w-10 h-10 rounded-xl bg-[rgba(var(--accent-rgb),0.08)] flex items-center justify-center text-[1.1rem] mb-4 transition-all duration-300 group-hover:scale-110 group-hover:bg-[rgba(var(--accent-rgb),0.15)]">
+                    {["🔗", "🤖", "🛍️", "💬", "📢", "⚙️"][i % 6]}
+                  </div>
+                  <h3 className="text-[1.12rem] font-extrabold text-[var(--text-main)] mb-2">{link.title}</h3>
+                  <p className="text-[var(--text-muted)] text-[0.85rem] leading-relaxed mb-5">{link.description}</p>
+                  <span className="inline-flex items-center gap-2 text-[var(--main-accent)] font-bold text-[0.85rem] no-underline">
+                    <span className="relative">
+                      Explore
+                      <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[var(--main-accent)] transition-all duration-300 group-hover:w-full" />
+                    </span>
+                    <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
                   </span>
-                  <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-                </span>
+                </div>
               </Link>
             ))}
           </div>
