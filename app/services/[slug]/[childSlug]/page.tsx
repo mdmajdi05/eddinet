@@ -380,7 +380,7 @@ export default async function ServiceChildPage({
                 </p>
 
                 {/* Metrics proof */}
-                <div className="grid grid-cols-2 gap-3 mb-7">
+                <div className="grid grid-cols-2 gap-3 mb-7 max-[480px]:grid-cols-1">
                   {child.metrics.map((m, i) => (
                     <div key={i} className="group relative rounded-2xl p-4 text-center overflow-hidden bg-[var(--panel-bg)] border border-[var(--border-color)] transition-all duration-500 hover:-translate-y-1 hover:border-[rgba(var(--accent-rgb),0.3)]">
                       <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[var(--main-accent)] via-transparent to-purple-500 opacity-40 group-hover:opacity-100 transition-opacity duration-500" />
@@ -624,7 +624,7 @@ export default async function ServiceChildPage({
       ========================================================= */}
       <section className="py-[90px]">
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
-          <div className="relative rounded-3xl py-[64px] px-10 text-center overflow-hidden border border-[rgba(var(--accent-rgb),0.3)] shadow-[var(--shadow-lg)]" style={{ background: "var(--cta-bg)" }}>
+          <div className="relative rounded-3xl py-[64px] px-10 text-center overflow-hidden border border-[rgba(var(--accent-rgb),0.3)] shadow-[var(--shadow-lg)] max-[640px]:px-6" style={{ background: "var(--cta-bg)" }}>
             <div className="absolute top-[-40%] left-1/2 -translate-x-1/2 w-[560px] h-[560px] rounded-full bg-[var(--main-accent)]/10 blur-3xl animate-drift-slow pointer-events-none" />
             <div className="absolute bottom-[-40%] right-[-10%] w-[380px] h-[380px] rounded-full bg-purple-500/10 blur-3xl animate-drift pointer-events-none" />
 

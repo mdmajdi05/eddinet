@@ -144,7 +144,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
 
       <section className="pb-[100px]">
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
-          <div className="border border-[rgba(var(--accent-rgb),0.3)] rounded-3xl py-[60px] px-10 text-center relative overflow-hidden" style={{ background: "var(--cta-bg)" }}>
+          <div className="border border-[rgba(var(--accent-rgb),0.3)] rounded-3xl py-[60px] px-10 text-center relative overflow-hidden max-[640px]:px-6" style={{ background: "var(--cta-bg)" }}>
             <h2 className="text-[2.6rem] font-extrabold mb-4 text-[var(--text-main)] max-[768px]:text-[1.9rem]">
               Let&apos;s Design Your {ind.short} Growth Strategy
             </h2>

@@ -62,7 +62,7 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
             {post.title}
           </h1>
           <p className="text-[var(--text-muted)] text-[1.1rem] leading-relaxed mb-6">{post.excerpt}</p>
-          <div className="flex items-center gap-4 text-[0.85rem] text-[var(--text-dim)] pb-8 border-b border-[var(--border-color)]">
+          <div className="flex flex-wrap items-center gap-4 text-[0.85rem] text-[var(--text-dim)] pb-8 border-b border-[var(--border-color)]">
             <span>{post.date}</span>
             <span>·</span>
             <span>{post.readTime}</span>

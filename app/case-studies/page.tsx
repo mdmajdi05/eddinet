@@ -30,7 +30,7 @@ export default function CaseStudiesPage() {
       <section className="pb-[100px]">
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
           {caseStudies.length === 0 ? (
-            <div className="max-w-[640px] mx-auto text-center rounded-2xl border border-[var(--border-color)] bg-[var(--bg-card)] p-12">
+            <div className="max-w-[640px] mx-auto text-center rounded-2xl border border-[var(--border-color)] bg-[var(--bg-card)] p-12 max-[640px]:p-6">
               <div className="w-14 h-14 rounded-2xl mx-auto flex items-center justify-center text-[1.6rem] mb-6" style={{ background: "var(--primary-gradient)" }}>
                 🛡️
               </div>

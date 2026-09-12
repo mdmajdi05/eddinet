@@ -3,7 +3,7 @@ export default function CTA() {
     <section className="py-[80px]">
       <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
         <div
-           className="border border-[rgba(var(--accent-rgb),0.3)] rounded-3xl py-[60px] px-10 text-center relative overflow-hidden transition-[background,border-color] duration-400 ease-in-out"
+           className="border border-[rgba(var(--accent-rgb),0.3)] rounded-3xl py-[60px] px-10 text-center relative overflow-hidden transition-[background,border-color] duration-400 ease-in-out max-[640px]:px-6"
            style={{ background: "var(--cta-bg)" }}
         >
           <h2 className="text-[2.8rem] font-extrabold mb-4 text-[var(--text-main)] max-[768px]:text-[2rem]">

@@ -9,7 +9,6 @@ const SHOW_COUNT = 5;
 
 export default function Services() {
   const [tab, setTab] = useState("all");
-  const [modal, setModal] = useState<typeof services[number] | null>(null);
   const [showAllFilters, setShowAllFilters] = useState(false);
   const stripRef = useRef<HTMLDivElement>(null);
 
@@ -445,7 +444,7 @@ export default function Services() {
                       {s.desc}
                     </p>
 
-                    <div className="grid grid-cols-2 gap-x-4 gap-y-2 mb-4">
+                    <div className="grid grid-cols-2 gap-x-4 gap-y-2 mb-4 max-[480px]:grid-cols-1">
 
                       {visible.map((item, j) => (
                         <div
@@ -479,8 +478,8 @@ export default function Services() {
                       ))}
 
                       {hiddenCount > 0 && (
-                        <button
-                          onClick={() => setModal(s)}
+                        <Link
+                          href={`/services/${s.slug}`}
                           className="
                             flex
                             items-center
@@ -495,6 +494,7 @@ export default function Services() {
                             bg-transparent
                             border-none
                             p-0
+                            no-underline
                           "
                         >
                           <span className="font-bold shrink-0 text-[0.75rem]">
@@ -504,7 +504,7 @@ export default function Services() {
                           <span className="leading-[1.3]">
                             +{hiddenCount} more View All →
                           </span>
-                        </button>
+                        </Link>
                       )}
                     </div>
 
@@ -571,227 +571,6 @@ export default function Services() {
           })}
         </div>
       </div>
-
-      {/* =========================================================
-          MODAL
-      ========================================================= */}
-      {modal && (
-        <div
-          className="
-            fixed
-            inset-0
-            z-[1000]
-            flex
-            items-center
-            justify-center
-            p-5
-          "
-          onClick={() => setModal(null)}
-        >
-          <div
-            className="
-              absolute
-              inset-0
-              bg-[rgba(0,0,0,0.8)]
-              backdrop-blur-sm
-            "
-          />
-
-          <div
-            className="
-              relative
-              w-full
-              max-w-[800px]
-              max-h-[85vh]
-              bg-[var(--modal-bg)]
-              border
-              border-[var(--border-color)]
-              rounded-2xl
-              overflow-hidden
-              shadow-[0_30px_80px_rgba(0,0,0,0.6)]
-              flex
-              flex-col
-              animate-[modalIn_0.3s_ease]
-            "
-            onClick={(e) =>
-              e.stopPropagation()
-            }
-          >
-
-            {/* MODAL IMAGE */}
-            <div className="relative h-[200px] overflow-hidden shrink-0">
-
-              <Image
-                src={modal.image}
-                alt={modal.title}
-                fill
-                className="object-cover"
-                unoptimized
-              />
-
-              <div
-                className="
-                  absolute
-                  inset-0
-                  bg-gradient-to-t
-                  from-[var(--modal-bg)]
-                  via-[rgba(11,15,25,0.5)]
-                  to-transparent
-                "
-              />
-
-              <button
-                onClick={() => setModal(null)}
-                className="
-                  absolute
-                  top-4
-                  right-4
-                  w-10
-                  h-10
-                  rounded-full
-                  bg-[rgba(0,0,0,0.5)]
-                  backdrop-blur-md
-                  border
-                  border-[rgba(255,255,255,0.15)]
-                  text-white
-                  text-[1.2rem]
-                  cursor-pointer
-                  flex
-                  items-center
-                  justify-center
-                  transition-all
-                  duration-300
-                  hover:bg-[rgba(255,255,255,0.15)]
-                  hover:scale-110
-                "
-              >
-                ✕
-              </button>
-
-              <div className="absolute bottom-5 left-6 flex items-center gap-3">
-
-                <div
-                  className="
-                    w-14
-                    h-14
-                    rounded-2xl
-                    bg-gradient-to-br
-                    from-[var(--main-accent)]
-                    to-[rgba(var(--accent-rgb),0.6)]
-                    flex
-                    items-center
-                    justify-center
-                    text-[1.6rem]
-                    shrink-0
-                    shadow-[0_8px_25px_rgba(var(--accent-rgb),0.4)]
-                  "
-                >
-                  {modal.icon}
-                </div>
-
-                <div>
-                  <h3 className="text-[1.5rem] font-bold text-[var(--text-main)]">
-                    {modal.title}
-                  </h3>
-
-                  <p className="text-[var(--text-muted)] text-[0.85rem]">
-                    {modal.allItems.length}+ Services Available
-                  </p>
-                </div>
-
-              </div>
-            </div>
-
-            {/* MODAL CONTENT */}
-            <div className="p-6 overflow-y-auto flex-1">
-
-              <p className="text-[var(--text-muted)] text-[0.95rem] mb-6 leading-relaxed">
-                {modal.desc}
-              </p>
-
-              <div className="grid grid-cols-2 gap-3 max-[600px]:grid-cols-1">
-
-                {modal.allItems.map(
-                  (item, j) => (
-                    <div
-                      key={j}
-                      className="
-                        flex
-                        items-center
-                        gap-3
-                        py-3
-                        px-4
-                        rounded-xl
-                        bg-[var(--bg-card)]
-                        border
-                        border-[var(--border-color)]
-                        transition-all
-                        duration-300
-                        hover:border-[rgba(var(--accent-rgb),0.3)]
-                        hover:bg-[var(--bg-card-hover)]
-                        group/item
-                      "
-                    >
-                      <div
-                        className="
-                          w-8
-                          h-8
-                          rounded-lg
-                          bg-[rgba(var(--accent-rgb),0.1)]
-                          flex
-                          items-center
-                          justify-center
-                          shrink-0
-                          transition-all
-                          duration-300
-                          group-hover/item:bg-[rgba(var(--accent-rgb),0.2)]
-                        "
-                      >
-                        <span className="text-[var(--main-accent)] font-bold text-[0.75rem]">
-                          ✓
-                        </span>
-                      </div>
-
-                      <span className="text-[0.85rem] text-[var(--text-main)] font-medium">
-                        {item}
-                      </span>
-                    </div>
-                  )
-                )}
-
-              </div>
-            </div>
-
-            {/* MODAL FOOTER */}
-            <div className="p-6 pt-0 shrink-0">
-              <button
-                onClick={() => setModal(null)}
-                className="
-                  w-full
-                  py-3.5
-                  rounded-xl
-                  font-bold
-                  text-[0.95rem]
-                  cursor-pointer
-                  transition-all
-                  duration-300
-                  border-none
-                  text-[var(--on-primary)]
-                  hover:-translate-y-0.5
-                  hover:shadow-[0_12px_30px_rgba(var(--accent-rgb),0.3)]
-                "
-                style={{
-                  background:
-                    "var(--primary-gradient)",
-                }}
-              >
-                Get Started with {modal.title} →
-              </button>
-            </div>
-
-          </div>
-        </div>
-      )}
 
       {/* =========================================================
           ANIMATION + SCROLLBAR

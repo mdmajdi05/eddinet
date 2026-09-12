@@ -948,7 +948,7 @@ export default function AboutPage() {
         <div className="max-w-[var(--container-max)] mx-auto px-5">
           <Reveal>
             <div
-              className="rounded-3xl border border-[rgba(var(--accent-rgb),0.3)] py-[56px] px-8 text-center relative overflow-hidden"
+              className="rounded-3xl border border-[rgba(var(--accent-rgb),0.3)] py-[56px] px-8 text-center relative overflow-hidden max-[640px]:px-6"
               style={{ background: "var(--cta-bg)" }}
             >
               <div className="absolute -top-20 -left-20 w-[300px] h-[300px] rounded-full bg-[var(--main-accent)]/10 blur-[100px]" />

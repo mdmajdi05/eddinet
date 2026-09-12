@@ -72,7 +72,7 @@ export default function Header() {
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center shrink-0" onClick={() => setMobileOpen(false)}>
-              <Image src="/eddinet-logo.png" alt="Eddinet" width={320} height={88} className="h-[88px] w-auto" priority />
+              <Image src="/eddinet-logo.png" alt="Eddinet" width={320} height={88} className="h-[88px] w-auto max-[560px]:h-[40px]" priority />
             </Link>
 
             <nav className="hidden lg:flex items-center gap-8">
@@ -98,7 +98,7 @@ export default function Header() {
               ))}
             </nav>
 
-            <div className="flex items-center gap-3.5">
+            <div className="flex items-center gap-3.5 max-[560px]:gap-2">
               <button
                 className="hidden lg:inline-flex items-center justify-center gap-2.5 py-3.5 px-7 rounded-full font-bold text-[0.95rem] cursor-pointer transition-all duration-300 border-none outline-none text-[var(--on-primary)] shadow-[0_10px_25px_-5px_rgba(var(--accent-rgb),0.4)] hover:-translate-y-[3px] hover:shadow-[0_15px_30px_-5px_rgba(var(--accent-rgb),0.6)]"
                 style={{ background: "var(--primary-gradient)" }}
@@ -109,13 +109,13 @@ export default function Header() {
 
               <div className="relative" ref={menuRef}>
                 <button
-                  className="w-[42px] h-[42px] rounded-full bg-white/[0.08] border border-white/[0.18] text-[var(--chrome-text)] text-[1.05rem] cursor-pointer flex items-center justify-center transition-all duration-300 hover:bg-white/[0.16] hover:border-[rgba(var(--accent-rgb),0.5)] hover:-translate-y-0.5"
+                  className="w-[42px] h-[42px] rounded-full bg-white/[0.08] border border-white/[0.18] text-[var(--chrome-text)] text-[1.05rem] cursor-pointer flex items-center justify-center transition-all duration-300 hover:bg-white/[0.16] hover:border-[rgba(var(--accent-rgb),0.5)] hover:-translate-y-0.5 max-[560px]:w-[36px] max-[560px]:h-[36px]"
                   onClick={(e) => { e.stopPropagation(); setThemeMenuOpen(!themeMenuOpen); }}
                   title="Change Theme Color"
                 >
                   🎨
                 </button>
-                <div className={`absolute top-[calc(100%+12px)] right-0 w-[190px] bg-[var(--panel-bg)] border border-[var(--border-color)] rounded-[14px] p-2 shadow-[var(--shadow-menu)] transition-all duration-300 z-[1100] ${
+                <div className={`absolute top-[calc(100%+12px)] right-0 w-[190px] bg-[var(--panel-bg)] border border-[var(--border-color)] rounded-[14px] p-2 shadow-[var(--shadow-menu)] transition-all duration-300 z-[1100] max-[560px]:fixed max-[560px]:top-[70px] max-[560px]:right-5 max-[560px]:z-[2100] ${
                   themeMenuOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"
                 }`}>
                   <div className="text-[0.7rem] font-bold uppercase tracking-wider text-[var(--text-muted)] px-2.5 pt-2 pb-1.5">Theme</div>
@@ -139,7 +139,7 @@ export default function Header() {
               </div>
 
               <button
-                className="w-[42px] h-[42px] rounded-full bg-white/[0.08] border border-white/[0.18] text-[var(--chrome-text)] text-[1.15rem] cursor-pointer flex items-center justify-center transition-all duration-300 hover:bg-white/[0.16] hover:border-[rgba(var(--accent-rgb),0.5)] hover:-translate-y-0.5 active:scale-[0.94]"
+                className="w-[42px] h-[42px] rounded-full bg-white/[0.08] border border-white/[0.18] text-[var(--chrome-text)] text-[1.15rem] cursor-pointer flex items-center justify-center transition-all duration-300 hover:bg-white/[0.16] hover:border-[rgba(var(--accent-rgb),0.5)] hover:-translate-y-0.5 active:scale-[0.94] max-[560px]:w-[36px] max-[560px]:h-[36px]"
                 onClick={toggleMode}
                 title="Dark / Light Mode"
               >
@@ -147,7 +147,7 @@ export default function Header() {
               </button>
 
               <button
-                className="lg:hidden w-[42px] h-[42px] rounded-full bg-white/[0.08] border border-white/[0.18] text-[var(--chrome-text)] text-[1.3rem] cursor-pointer flex items-center justify-center transition-all duration-300 hover:bg-white/[0.16]"
+                className="lg:hidden w-[42px] h-[42px] rounded-full bg-white/[0.08] border border-white/[0.18] text-[var(--chrome-text)] text-[1.3rem] cursor-pointer flex items-center justify-center transition-all duration-300 hover:bg-white/[0.16] max-[560px]:w-[36px] max-[560px]:h-[36px]"
                 onClick={() => setMobileOpen(!mobileOpen)}
                 aria-label="Toggle navigation menu"
                 aria-expanded={mobileOpen}

@@ -28,7 +28,7 @@ export default function Industries() {
             Every industry has its own buying journey. We align marketing, technology and conversion around the way each sector actually searches and buys.
           </p>
         </div>
-        <div className="grid grid-cols-5 gap-4 max-[1024px]:grid-cols-3 max-[600px]:grid-cols-2">
+        <div className="grid grid-cols-5 gap-4 max-[1024px]:grid-cols-3 max-[600px]:grid-cols-2 max-[400px]:grid-cols-1">
           {industries.map((ind, i) => (
             <Link
               key={i}

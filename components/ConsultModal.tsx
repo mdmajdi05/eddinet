@@ -12,12 +12,12 @@ export default function ConsultModal({ isOpen, onClose }: { isOpen: boolean; onC
 
   return (
     <div
-      className={`fixed inset-0 bg-[var(--overlay-bg)] backdrop-blur-sm z-[2000] flex items-center justify-center transition-all duration-300 ${
+      className={`fixed inset-0 bg-[var(--overlay-bg)] backdrop-blur-sm z-[2000] flex justify-center overflow-y-auto transition-all duration-300 ${
         isOpen ? "opacity-100 visible" : "opacity-0 invisible"
       }`}
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
-      <div className="bg-[var(--modal-bg)] border border-[var(--border-color)] rounded-[20px] w-[90%] max-w-[500px] p-9 relative shadow-[var(--shadow-xl)]">
+      <div className="bg-[var(--modal-bg)] border border-[var(--border-color)] rounded-[20px] w-[90%] max-w-[500px] p-9 relative shadow-[var(--shadow-xl)] my-6 max-h-[90vh] overflow-y-auto max-[480px]:p-6">
         <button className="absolute top-5 right-5 bg-transparent border-none text-[var(--text-muted)] text-[1.5rem] cursor-pointer" onClick={onClose}>✕</button>
         <h3 className="text-[1.5rem] font-extrabold mb-2 text-[var(--text-main)]">Book Your Free Strategy Call</h3>
         <p className="text-[var(--text-muted)] text-[0.85rem] mb-5">Fill out your details and our agency specialist will call you within 2 hours.</p>

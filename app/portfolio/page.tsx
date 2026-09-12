@@ -73,7 +73,7 @@ export default function PortfolioPage() {
 
       <section className="pb-[100px]">
         <div className="max-w-[var(--container-max)] mx-auto px-5">
-          <div className="rounded-3xl border border-[rgba(var(--accent-rgb),0.3)] py-[56px] px-8 text-center relative overflow-hidden" style={{ background: "var(--cta-bg)" }}>
+          <div className="rounded-3xl border border-[rgba(var(--accent-rgb),0.3)] py-[56px] px-8 text-center relative overflow-hidden max-[640px]:px-6" style={{ background: "var(--cta-bg)" }}>
             <h2 className="text-[2.2rem] font-extrabold mb-3 text-[var(--text-main)] max-[768px]:text-[1.7rem]">
               Want A Digital Product Built for Your Business?
             </h2>

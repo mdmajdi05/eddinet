@@ -49,7 +49,7 @@ export default function Hero() {
             </div>
 
             {/* Capability strip */}
-            <div className="flex items-center gap-8 pt-6 border-t border-white/10 max-[1024px]:justify-center">
+            <div className="flex flex-wrap items-center gap-x-8 gap-y-4 pt-6 border-t border-white/10 max-[1024px]:justify-center">
               <div className="flex items-center gap-3">
                 <div className="w-11 h-11 rounded-full bg-[rgba(var(--accent-rgb),0.15)] text-[var(--main-accent)] flex items-center justify-center text-xl font-bold">
                   🎯

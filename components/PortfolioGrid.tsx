@@ -4,6 +4,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { portfolioProjects, projectCategories, type PortfolioProject } from "@/data/projects";
 
+const BLOCKED_IFRAME_HOSTS = ["zentryo.in", "servchip.com", "aeroturbinespare.com"];
+
+function hostOf(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return "";
+  }
+}
+
 function ProjectCard({ p }: { p: PortfolioProject }) {
   const inner = (
     <>
@@ -15,21 +25,42 @@ function ProjectCard({ p }: { p: PortfolioProject }) {
           className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-110"
           unoptimized
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[rgba(11,15,25,0.94)] via-[rgba(11,15,25,0.35)] to-transparent" />
-        <div className="absolute inset-0 bg-[rgba(var(--accent-rgb),0.16)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        {p.url && (BLOCKED_IFRAME_HOSTS.includes(hostOf(p.url)) ? (
+          <img
+            src={`https://image.thum.io/get/width/1200/${p.url}`}
+            alt={p.title}
+            loading="lazy"
+            className="live-preview live-preview-img"
+          />
+        ) : (
+          <iframe
+            src={p.url}
+            title={p.title}
+            loading="lazy"
+            tabIndex={-1}
+            className="live-preview live-preview-frame"
+          />
+        ))}
+        <div className="absolute inset-0 bg-gradient-to-t from-[rgba(11,15,25,0.94)] via-[rgba(11,15,25,0.35)] to-transparent transition-opacity duration-300 group-hover:opacity-0" />
       </div>
 
-      <span className="absolute top-4 left-4 inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full bg-[rgba(11,15,25,0.65)] backdrop-blur-md border border-[rgba(255,255,255,0.15)] text-[0.68rem] font-bold text-white">
+      <span className="absolute top-4 left-4 inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full bg-[rgba(11,15,25,0.65)] backdrop-blur-md border border-[rgba(255,255,255,0.15)] text-[0.68rem] font-bold text-white transition-opacity duration-300 group-hover:opacity-0">
         ⚡ Built by Eddinet
       </span>
       {p.status && (
-        <span className="absolute top-4 right-4 inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full bg-[rgba(16,185,129,0.9)] text-[0.68rem] font-bold text-white">
+        <span className="absolute top-4 right-4 inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full bg-[rgba(16,185,129,0.9)] text-[0.68rem] font-bold text-white transition-opacity duration-300 group-hover:opacity-0">
           <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
           {p.status}
         </span>
       )}
+      {p.url && (
+        <span className="absolute top-4 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 py-1 px-3 rounded-full bg-[rgba(11,15,25,0.72)] backdrop-blur-md border border-white/25 text-[0.68rem] font-bold text-white opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#10b981] animate-pulse" />
+          Live preview
+        </span>
+      )}
 
-      <div className="absolute inset-x-0 bottom-0 p-5 md:p-6 z-10">
+      <div className="absolute inset-x-0 bottom-0 p-5 md:p-6 z-10 transition-opacity duration-300 group-hover:opacity-0">
         <div className="flex items-center gap-2 flex-wrap mb-2">
           <span className="py-1 px-2.5 rounded-lg bg-white/15 backdrop-blur-md border border-white/20 text-[0.68rem] font-bold text-white">
             {p.service}
