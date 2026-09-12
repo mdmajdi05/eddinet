@@ -4,16 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { portfolioProjects, projectCategories, type PortfolioProject } from "@/data/projects";
 
-const BLOCKED_IFRAME_HOSTS = ["zentryo.in", "servchip.com", "aeroturbinespare.com"];
-
-function hostOf(url: string): string {
-  try {
-    return new URL(url).hostname.replace(/^www\./, "");
-  } catch {
-    return "";
-  }
-}
-
 function ProjectCard({ p }: { p: PortfolioProject }) {
   const inner = (
     <>
@@ -25,14 +15,7 @@ function ProjectCard({ p }: { p: PortfolioProject }) {
           className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-110"
           unoptimized
         />
-        {p.url && (BLOCKED_IFRAME_HOSTS.includes(hostOf(p.url)) ? (
-          <img
-            src={`https://image.thum.io/get/width/1200/${p.url}`}
-            alt={p.title}
-            loading="lazy"
-            className="live-preview live-preview-img"
-          />
-        ) : (
+        {p.url && (
           <iframe
             src={p.url}
             title={p.title}
@@ -40,7 +23,7 @@ function ProjectCard({ p }: { p: PortfolioProject }) {
             tabIndex={-1}
             className="live-preview live-preview-frame"
           />
-        ))}
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-[rgba(11,15,25,0.94)] via-[rgba(11,15,25,0.35)] to-transparent transition-opacity duration-300 group-hover:opacity-0" />
       </div>
 

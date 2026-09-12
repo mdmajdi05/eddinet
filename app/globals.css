@@ -437,11 +437,6 @@ html[data-theme="red-light"] {
   pointer-events: none;
 }
 
-.live-preview-img {
-  height: auto;
-  min-height: 700px;
-}
-
 .group:hover .live-preview {
   animation: live-scroll 12s ease-in-out forwards;
 }
