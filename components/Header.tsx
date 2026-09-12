@@ -65,7 +65,7 @@ export default function Header() {
     <>
       <header
         className={`fixed top-0 left-0 w-full z-[1000] transition-all duration-300 ease-in-out border-b border-[var(--hairline)] ${
-          scrolled ? "py-3 bg-[var(--header-bg)]" : "py-5 bg-[var(--header-bg)]"
+          scrolled ? "py-0 bg-[var(--header-bg)]" : "py-0 bg-[var(--header-bg)]"
         }`}
         style={{ color: "var(--chrome-text)" }}
       >

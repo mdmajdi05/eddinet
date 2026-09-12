@@ -2,6 +2,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { services } from "@/data/services";
+import { getChildSlug } from "@/data/generated-child-services";
 
 type MegaMenuCategory = {
   slug: string;
@@ -20,6 +21,11 @@ const categories: MegaMenuCategory[] = services.map((s) => ({
   items: s.groups ? null : s.allItems,
   extraHeading: s.extraHeading,
 }));
+
+function itemHref(catSlug: string, item: string) {
+  const childSlug = getChildSlug(catSlug, item);
+  return childSlug ? `/services/${catSlug}/${childSlug}` : `/services/${catSlug}`;
+}
 
 export default function MegaMenu() {
   const [open, setOpen] = useState(false);
@@ -123,7 +129,7 @@ export default function MegaMenu() {
                           {grp.items.map((item, ii) => (
                             <li key={ii} className="mb-2.5 last:mb-0">
                               <Link
-                                href={`/services/${cat.slug}`}
+                                href={itemHref(cat.slug, item)}
                                 className="text-[0.85rem] leading-[1.35] flex items-start no-underline transition-all duration-150 hover:translate-x-[3px]"
                                 style={{ color: "var(--text-muted)" }}
                                 onMouseEnter={(e) => (e.currentTarget.style.color = "var(--main-accent)")}
@@ -144,7 +150,7 @@ export default function MegaMenu() {
                         {cat.items!.map((item, ii) => (
                           <li key={ii} className="mb-2.5 last:mb-0">
                             <Link
-                              href={`/services/${cat.slug}`}
+                              href={itemHref(cat.slug, item)}
                               className="text-[0.85rem] leading-[1.35] flex items-start no-underline transition-all duration-150 hover:translate-x-[3px]"
                               style={{ color: "var(--text-muted)" }}
                               onMouseEnter={(e) => (e.currentTarget.style.color = "var(--main-accent)")}
@@ -170,7 +176,7 @@ export default function MegaMenu() {
                             {cat.extraHeading.items.map((item, ii) => (
                               <li key={ii} className="mb-2.5 last:mb-0">
                                 <Link
-                                  href={`/services/${cat.slug}`}
+                                  href={itemHref(cat.slug, item)}
                                   className="text-[0.85rem] leading-[1.35] flex items-start no-underline transition-all duration-150 hover:translate-x-[3px]"
                                   style={{ color: "var(--text-muted)" }}
                                   onMouseEnter={(e) => (e.currentTarget.style.color = "var(--main-accent)")}

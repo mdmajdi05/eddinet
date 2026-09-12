@@ -34,6 +34,15 @@
   ul, ol {
     list-style: none;
   }
+
+  select {
+    color-scheme: dark;
+  }
+
+  select option {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+  }
 }
 
 /* ============================================================
@@ -154,6 +163,7 @@ html[data-theme="red-light"] {
 }
 
 html[data-theme="cyan-light"] {
+  color-scheme: light;
   --border-hover: rgba(2, 132, 199, 0.5);
   --primary-gradient: linear-gradient(135deg, #00B4D8 0%, #3B82F6 100%);
   --heading-alt-gradient: linear-gradient(135deg, #7C3AED 0%, #DB2777 100%);
@@ -169,6 +179,7 @@ html[data-theme="cyan-light"] {
 }
 
 html[data-theme="red-light"] {
+  color-scheme: light;
   --border-hover: rgba(220, 38, 38, 0.5);
   --primary-gradient: linear-gradient(135deg, #FF4D4D 0%, #E60000 100%);
   --heading-alt-gradient: linear-gradient(135deg, #FF4D4D 0%, #E60000 100%);

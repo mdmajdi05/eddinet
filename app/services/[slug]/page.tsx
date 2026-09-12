@@ -11,7 +11,7 @@ import {
   childServiceImages,
   type Service,
 } from "@/data/services";
-import { seoItemToSlug } from "@/data/seo-child-services";
+import { getChildSlug } from "@/data/generated-child-services";
 import { processSteps } from "@/data/site";
 import ContactForm from "@/components/ContactForm";
 
@@ -169,8 +169,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           </div>
           <div className="grid grid-cols-3 gap-6 max-[1024px]:grid-cols-2 max-[600px]:grid-cols-1">
             {s.allItems.map((item, j) => {
-              const childSlug = seoItemToSlug[item];
-              const cardHref = childSlug ? `/services/seo/${childSlug}` : null;
+              const childSlug = getChildSlug(s.slug, item);
+              const cardHref = childSlug ? `/services/${s.slug}/${childSlug}` : null;
               const cardContent = (
                 <>
                   <div className="relative w-full h-56">

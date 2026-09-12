@@ -334,96 +334,89 @@ export const seoChildServices: SeoChildService[] = [
       "Win visibility in AI-generated search answers. Eddinet's AI SEO optimises your content for Google SGE, ChatGPT search & AI overviews. Future-proof your organic strategy. Get a free audit.",
     heroHeading: "AI SEO (Generative SEO) Services in Delhi NCR",
     heroSubheading:
-      "Optimise your brand for the future of search — where AI-generated answers, conversational results and machine-readable structured data determine who gets cited, recommended and surfaced.",
+      "We offer advanced AI SEO (Generative SEO) service in Delhi to help businesses automate, scale, and future-proof their search engine optimization efforts. Our team leverages artificial intelligence and generative engine optimization (GEO) to create search-ready content, target high-intent semantic queries, and implement data-driven strategies for top rankings on search engines and AI platforms like ChatGPT, Gemini, and Google AI Overviews.",
     image: "/SEO-SERVICES-CHILD-IMAGES/AI SEO (Generative SEO).webp",
     problemStatement:
       "Search is evolving faster than most businesses can adapt. Google's AI Overviews, Bing Copilot, ChatGPT Search and Perplexity are changing how answers are generated and surfaced. Brands optimised only for traditional blue links are losing visibility to competitors who structure their content for AI consumption. Without AI SEO, your expertise stops getting cited where your customers are actually searching.",
     features: [
       {
-        title: "AI Overview Optimisation",
+        title: "AI SEO Audit & Strategy",
         description:
-          "Content structured and formatted so AI-powered search engines extract, cite and feature your brand in AI-generated overviews and conversational results.",
+          "We run deep technical and semantic audits to analyze your current search standing and evaluate how effectively AI platforms crawl and understand your brand.",
       },
       {
-        title: "Structured Data & Schema Engineering",
+        title: "Generative Engine Optimization (GEO)",
         description:
-          "Advanced schema markup, FAQ schema, how-to schema and entity-based structured data that help search engines and AI models understand, classify and surface your content.",
+          "We optimize and structure your web content so generative tools like ChatGPT, Gemini, and Perplexity pick up your brand as an authoritative source for user queries.",
       },
       {
-        title: "Entity SEO & Knowledge Graph",
+        title: "Intent-Based Keyword & Topic Research",
         description:
-          "Building and optimising your brand entity across Google's Knowledge Graph, Wikidata and authoritative sources so AI models recognise and cite your brand with authority.",
+          "Moving beyond basic keywords, we target deep user search intent, semantic query clusters, and natural language questions to capture high-value organic traffic.",
       },
       {
-        title: "Conversational Content Strategy",
+        title: "Content Optimization for AI & Search Engines",
         description:
-          "Content written and structured to answer natural language queries, long-tail questions and conversational search patterns that AI engines pull from.",
+          "Our team writes clear, high-depth content structured specifically for readability, context, and semantic value for both human visitors and search algorithms.",
       },
       {
-        title: "Citation & Mention Building",
+        title: "Structured Data & Technical SEO",
         description:
-          "Strategic presence across authoritative sources, directories, publications and knowledge bases that AI models reference when generating answers.",
+          "We implement schema markup, enhance crawlability, and eliminate technical barriers so AI engines can effortlessly interpret and index your business data.",
       },
       {
-        title: "AI Search Monitoring",
+        title: "Authority & Trust Building",
         description:
-          "Tracking your brand visibility across Google AI Overviews, ChatGPT, Perplexity and Bing Copilot to measure and improve AI-era search performance.",
-      },
-      {
-        title: "Content Freshness & Authority Signals",
-        description:
-          "Continuous content updates, expert citations and freshness signals that tell AI models your content is current, authoritative and worth surfacing.",
+          "We increase your digital footprint through authoritative citations, entity associations, and high-quality link strategies that establish strong domain trust.",
       },
     ],
     whyChooseUs: {
       heading: "Why Choose Eddinet for AI SEO",
       points: [
-        "One of the first agencies in Delhi NCR building dedicated AI SEO strategies",
-        "Dual optimisation — traditional rankings AND AI-generated answer visibility",
-        "Technical schema engineering that makes your content machine-readable",
-        "Content strategies designed for both human readers and AI extraction",
-        "Monitoring across multiple AI search platforms, not just Google",
-        "Future-proof approach that adapts as AI search evolves",
+        "Future-Ready Strategies: We adopt cutting-edge GEO and semantic optimization techniques well ahead of conventional digital marketing agencies.",
+        "Data-Driven Execution: Our decisions are rooted in deep analytics, semantic data tracking, and verified performance metrics.",
+        "Full Transparency: Clear reporting, dedicated account support, and continuous strategy updates keep you informed at every milestone.",
+        "Proven ROI Focus: Every optimization tactic, content piece, and technical fix is executed with a focus on growing your organic visibility, traffic, and bottom line.",
       ],
     },
     process: {
-      heading: "How We Execute AI SEO Projects",
+      heading: "Our AI SEO (Generative SEO) Execution Process",
       steps: [
         {
           num: "01",
-          title: "Understand the Business & Intent",
+          title: "AI SEO Audit & Opportunity Analysis",
           description:
-            "Map your brand's positioning, target queries and audience search behaviour across both traditional and AI-powered search platforms.",
+            "We assess your site's current organic performance, identify content gaps, and map out immediate opportunities for traditional and AI search visibility.",
         },
         {
           num: "02",
-          title: "Audit the Core Constraint",
+          title: "User Intent & Query Research",
           description:
-            "Assess current AI search visibility, structured data coverage, entity recognition and content extractability across Google, Bing and AI search engines.",
+            "We pinpoint real-world conversational queries and search behaviors to align your pages with exact user intent.",
         },
         {
           num: "03",
-          title: "Targeted Keyword Architecture",
+          title: "Content Strategy for AI Visibility",
           description:
-            "Identify queries triggering AI Overviews and conversational results, then map content opportunities around high-intent AI-search terms.",
+            "We build a structured content roadmap targeting informational, commercial, and transactional queries across all search touchpoints.",
         },
         {
           num: "04",
-          title: "System Asset Deployment",
+          title: "Content Optimization & Structuring",
           description:
-            "Deploy advanced schema markup, restructure content for AI extraction, build entity signals and optimise page architecture for machine readability.",
+            "We refine headings, semantic relationships, and formatting to maximize clarity for search engines and language models.",
         },
         {
           num: "05",
-          title: "Performance Auditing",
+          title: "Technical SEO & Structured Data Implementation",
           description:
-            "Track AI Overview appearances, brand mentions in AI answers, citation frequency and organic impact across traditional and AI search channels.",
+            "We deploy custom schema markups, speed optimizations, and site architecture enhancements for seamless AI rendering.",
         },
         {
           num: "06",
-          title: "Continuous Authority Compounding",
+          title: "Authority Building & Link Strategy",
           description:
-            "Expand content coverage, build citation authority, update structured data and adapt strategy as AI search platforms evolve their algorithms.",
+            "We build credible off-page references, citations, and quality backlinks to boost domain trust and gain citations in AI-generated answers.",
         },
       ],
     },
@@ -448,7 +441,7 @@ export const seoChildServices: SeoChildService[] = [
       },
     ],
     detailedDescription:
-      "AI SEO, also known as Generative SEO, is the practice of optimising your brand and content for AI-powered search engines that generate answers rather than simply listing links. At Eddinet, our AI SEO services in Delhi NCR prepare your business for the fundamental shift happening in search — where Google AI Overviews, ChatGPT Search, Perplexity and Bing Copilot are changing how answers are discovered and surfaced.\n\nTraditional blue-link rankings remain important, but the fastest-growing segment of search is now AI-generated answers that pull from structured data, authoritative sources and machine-readable content. Without AI SEO optimisation, your expertise stops getting cited in the very places your customers are searching. Our AI SEO strategy addresses this by engineering your content for extraction, citation and recommendation by AI models.\n\nWe build AI SEO through advanced schema engineering, entity optimisation and Knowledge Graph development that teaches AI models to recognise your brand as an authoritative source. Our content strategy goes beyond traditional keyword targeting to include conversational query patterns, natural language questions and long-tail searches that AI engines prioritise when generating answers.\n\nCitation and mention building across authoritative platforms ensures AI models reference your brand when constructing responses. Combined with ongoing AI search monitoring across multiple platforms, we track exactly where and how your brand appears in AI-generated results — giving you visibility into a channel most businesses do not even know exists.\n\nFor forward-thinking businesses in Delhi NCR, our AI SEO services future-proof your organic strategy by ensuring visibility across both traditional search results and the AI-powered answers reshaping how customers find information online.",
+      "Advanced AI SEO (Generative SEO) service in Delhi helps businesses automate, scale, and future-proof their search engine optimization efforts. Our team leverages artificial intelligence and generative engine optimization (GEO) to create search-ready content, target high-intent semantic queries, and implement data-driven strategies for top rankings on search engines and AI platforms like ChatGPT, Gemini, and Google AI Overviews.\n\nAs a premier AI SEO company in Delhi NCR, we bridge the gap between traditional search algorithms and next-generation artificial intelligence models. Traditional agencies focus solely on keyword rankings, but our team optimizes your online presence for machine readability, semantic relevance, and generative citations. Backed by years of experience and deep expertise in Natural Language Processing (NLP) and search technology, we build future-ready digital strategies that drive authority, qualified leads, and measurable growth.",
     whoNeedsThis: {
       heading: "Who Needs AI SEO?",
       description:
@@ -464,34 +457,24 @@ export const seoChildServices: SeoChildService[] = [
     },
     benefits: [
       {
-        title: "Future-Proof Search Visibility",
+        title: "Multi-Platform Visibility",
         description:
-          "Stay visible as search evolves from blue links to AI-generated answers, protecting your organic traffic from being disrupted by platform changes.",
+          "Appear prominently in standard search engine results as well as inside AI-generated summaries and answer engines.",
       },
       {
-        title: "Multi-Platform Brand Presence",
+        title: "Higher Conversion Rates",
         description:
-          "Get cited across Google AI Overviews, ChatGPT Search, Perplexity and Bing Copilot — reaching audiences wherever they search.",
+          "Target searchers asking direct, high-intent questions, driving visitors who are ready to engage or purchase.",
       },
       {
-        title: "Structured Data Advantage",
+        title: "Future-Proof Organic Traffic",
         description:
-          "Advanced schema and entity optimisation that makes your content machine-readable and extractable by AI models competitors cannot reach.",
+          "Safeguard your search presence against evolving algorithm updates and shifting user search behaviors.",
       },
       {
-        title: "Early Mover Market Position",
+        title: "Improved Brand Authority",
         description:
-          "Capture AI search visibility before competitors recognise the shift, establishing brand authority in a channel most businesses are ignoring.",
-      },
-      {
-        title: "Dual Channel Optimisation",
-        description:
-          "Maintain and improve traditional search rankings while simultaneously building visibility in AI-generated answers — no trade-offs required.",
-      },
-      {
-        title: "Measurable Citation Tracking",
-        description:
-          "Specialised monitoring across multiple AI search platforms to track brand mentions, citation frequency and AI-driven traffic attribution.",
+          "Earn recognition as a trusted market leader by appearing in cited sources across conversational search models.",
       },
     ],
     industries: [
@@ -576,96 +559,90 @@ export const seoChildServices: SeoChildService[] = [
       "Turn organic traffic into qualified leads. Eddinet's Lead Generation SEO combines high-intent keywords, conversion-focused landing pages & lead capture flows. Get a free strategy call.",
     heroHeading: "Lead Generation SEO Services in Delhi NCR",
     heroSubheading:
-      "SEO engineered around one outcome — turning search visibility into qualified enquiries, demo requests and sales conversations that directly impact your revenue pipeline.",
+      "Eddinet provides targeted lead generation SEO services in India designed to capture high-intent buyers, eliminate wasted ad spend, and convert organic search traffic into qualified business inquiries. High-intent search engine optimization, conversion rate optimization, and B2B & B2C revenue growth — traffic is optional, pipeline growth is non-negotiable.",
     image: "/SEO-SERVICES-CHILD-IMAGES/Lead Generation SEO.webp",
     problemStatement:
       "Ranking on Google means nothing if the traffic does not convert into paying customers. Many businesses invest heavily in SEO and see traffic growth, but their landing pages fail to capture intent, their conversion funnels leak and the traffic never translates into revenue. Without lead-focused SEO strategy, organic growth becomes a vanity metric that costs money but does not generate it.",
     features: [
       {
-        title: "High-Intent Keyword Targeting",
+        title: "Buyer Intent Keyword Targeting",
         description:
-          "Keyword research focused exclusively on search terms with commercial and transactional intent — queries made by people ready to buy, not just browse.",
+          "We move beyond high-volume informational keywords to identify and target commercial and transactional search queries used by decision-makers ready to buy.",
       },
       {
-        title: "Conversion-Focused Landing Pages",
+        title: "Conversion Rate Optimization (CRO)",
         description:
-          "Purpose-built landing pages optimised for a single action — form fills, demo bookings, quote requests or calls — with clear CTAs and zero distractions.",
+          "Getting traffic is only half the battle. We optimize your website's messaging, page layout, form structures, and call-to-action (CTA) placements to maximize visitor-to-lead conversion rates.",
       },
       {
-        title: "Lead Capture Flow Design",
+        title: "Landing Page Optimization",
         description:
-          "Strategic form placement, multi-step capture flows, exit-intent offers and progressive profiling that turn visitors into leads without friction.",
+          "We build and refine dedicated search-optimized landing pages that clearly communicate value propositions, address buyer pain points, and drive inquiries.",
       },
       {
-        title: "Content That Drives Action",
+        title: "Local Lead Generation SEO",
         description:
-          "Comparison pages, case studies, pricing pages and solution content designed to move searchers from awareness to decision within a single session.",
+          "For location-dependent businesses, we optimize Google Business Profiles and local citation networks to dominate regional searches and drive high-intent phone calls and store visits.",
       },
       {
-        title: "Conversion Rate Optimisation",
+        title: "Lead Capture Content Marketing",
         description:
-          "A/B testing, heatmap analysis, UX improvements and CTA optimisation that increase the percentage of organic visitors who become leads.",
+          "We develop targeted downloadable assets, case studies, comparison guides, and solution pages that nurture top-of-funnel traffic into actionable leads.",
       },
       {
-        title: "Lead Quality Tracking",
+        title: "Full Website Optimization",
         description:
-          "End-to-end tracking from organic search click to qualified lead, enabling precise measurement of which keywords and pages produce the highest-value leads.",
-      },
-      {
-        title: "CRM & Marketing Tool Integration",
-        description:
-          "Seamless connection between your SEO landing pages and CRM, email marketing and sales tools so leads flow directly into your pipeline.",
+          "We enhance your overall site architecture, speed performance, user experience (UX), and navigation hierarchy to eliminate bounce rates and ensure both visitors and search engines interact effortlessly with your core offerings.",
       },
     ],
     whyChooseUs: {
-      heading: "Why Choose Eddinet for Lead Generation SEO",
+      heading: "Why Choose Us for Lead Generation SEO",
       points: [
-        "Strategy built around revenue, not rankings — every keyword targets a conversion",
-        "Landing page design and CRO included, not outsourced to a separate team",
-        "Full-funnel tracking from organic click to qualified lead to closed deal",
-        "Proven across B2B, SaaS, professional services and high-consideration industries",
-        "Monthly reporting that shows cost-per-lead, lead quality and pipeline impact",
-        "Integration with your CRM and sales process for seamless lead handoff",
+        "Lead-First Growth Focus: We measure success by leads, phone calls, and revenue generated—not just keyword rankings or arbitrary pageviews.",
+        "Customized Execution: We craft bespoke SEO blueprints tailored to your business model, target market, and sales cycle rather than using generic templates.",
+        "Full Data Transparency: Receive straightforward, easy-to-read reports detailing organic ranking updates, form conversions, calls, and qualified lead metrics.",
+        "Integrated Conversion Expertise: We combine technical SEO expertise with behavioral copywriting and conversion rate optimization to ensure peak website performance.",
+        "Continuous Strategy Optimization: Digital search evolves rapidly. We actively monitor search engine algorithm updates, consumer trends, and performance metrics to keep your brand ahead of competitors.",
       ],
     },
     process: {
-      heading: "How We Execute Lead Generation SEO Projects",
+      heading: "Our Lead Generation SEO Process",
       steps: [
         {
           num: "01",
-          title: "Understand the Business & Intent",
+          title: "Business & Target Audience Analysis",
           description:
-            "Map your sales process, lead qualification criteria, customer objections and revenue targets to build SEO around actual business outcomes.",
+            "We analyze your industry, ideal customer profile (ICP), profit margins, and existing lead funnel to establish concrete performance benchmarks.",
         },
         {
           num: "02",
-          title: "Audit the Core Constraint",
+          title: "Competitor & Intent Search Audit",
           description:
-            "Analyse existing traffic quality, conversion rates, landing page performance and lead capture gaps to identify where organic potential is being wasted.",
+            "We map out your top market competitors, identify revenue-generating keyword gaps, and evaluate searcher intent across the buyer journey.",
         },
         {
           num: "03",
-          title: "Targeted Keyword Architecture",
+          title: "On-Page & CRO Implementation",
           description:
-            "Build keyword maps around commercial intent, comparison queries and bottom-funnel search terms that signal buying readiness.",
+            "We rewrite headings, optimize meta content, refine UX design, and insert compelling CTAs across key sales pages to turn existing traffic into qualified inquiries.",
         },
         {
           num: "04",
-          title: "System Asset Deployment",
+          title: "Technical Infrastructure & Speed Tuning",
           description:
-            "Create conversion-optimised landing pages, set up lead capture flows, implement tracking and connect everything to your CRM and analytics.",
+            "We eliminate site speed bottlenecks, mobile usability issues, and indexing errors to ensure seamless site performance for visitors and search crawlers.",
         },
         {
           num: "05",
-          title: "Performance Auditing",
+          title: "Authority & Trust Building",
           description:
-            "Track lead volume, quality, conversion rate by keyword and page, cost-per-lead and revenue attribution from organic search channels.",
+            "We secure high-authority backlinks, digital PR mentions, and industry citations to build search engine trust and elevate commercial page rankings.",
         },
         {
           num: "06",
-          title: "Continuous Authority Compounding",
+          title: "Lead Tracking & Continuous Refinement",
           description:
-            "Expand keyword coverage, optimise conversion paths, test new landing page approaches and scale the pages and keywords driving the highest-quality leads.",
+            "We set up end-to-end conversion tracking (form submissions, call tracking, live chat interactions) and refine our strategy based on real sales data.",
         },
       ],
     },
@@ -690,7 +667,7 @@ export const seoChildServices: SeoChildService[] = [
       },
     ],
     detailedDescription:
-      "Lead Generation SEO is a specialised approach to search engine optimisation engineered around one measurable outcome — turning organic visibility into qualified enquiries, demo requests and sales conversations. At Eddinet, our Lead Generation SEO services in Delhi NCR go beyond traditional traffic-focused SEO by aligning every keyword, landing page and content asset with your revenue pipeline.\n\nMost businesses face a common problem: their SEO generates traffic that looks impressive in reports but never translates into paying customers. Lead Generation SEO solves this by targeting exclusively high-intent search terms — queries made by people ready to buy, compare solutions or request a quote — and building conversion-optimised landing pages designed to capture that intent.\n\nOur approach combines commercial keyword targeting with purpose-built landing pages optimised for a single action. Whether the goal is form fills, demo bookings, quote requests or phone calls, every page is engineered with clear CTAs, strategic form placement and zero distractions. Multi-step capture flows, exit-intent offers and progressive profiling turn casual visitors into qualified leads without friction.\n\nConversion Rate Optimisation is embedded throughout our Lead Generation SEO process. A/B testing, heatmap analysis and UX improvements systematically increase the percentage of organic visitors who become leads. End-to-end tracking from organic search click to qualified lead enables precise measurement of which keywords and pages produce the highest-value prospects.\n\nFor businesses in Delhi NCR seeking to transform organic search into a predictable lead generation channel, our Lead Generation SEO services bridge the gap between search visibility and business revenue.",
+      "Traffic is optional, pipeline growth is non-negotiable.\n\nAt Eddinet, we operate as growth partners, not just another search agency. Most SEO strategies fail because they measure success by website visits rather than closed deals. We bridge that gap by mapping organic search directly to revenue.\n\nLeveraging proven performance frameworks across competitive markets, Eddinet combines technical precision, buyer psychology, and generative AI search strategies to establish your search dominance and scale a predictable inbound sales pipeline.",
     whoNeedsThis: {
       heading: "Who Needs Lead Generation SEO?",
       description:
@@ -818,96 +795,84 @@ export const seoChildServices: SeoChildService[] = [
       "Dominate local search and Google Maps. Eddinet's Local SEO optimises your Google Business Profile, citations & reviews to drive foot traffic and nearby customers. Free proposal.",
     heroHeading: "Local SEO Services in Delhi NCR",
     heroSubheading:
-      "Own the local search results, Google Maps pack and 'near me' queries — connecting your business with nearby customers at the exact moment they are ready to visit, call or buy.",
+      "Eddinet specializes in local SEO services in India that help businesses like yours get found by people who are searching nearby and ready to buy. We get your business seen on Google Search, Google Maps, and the local pack — the results that show up right when someone types \"near me\".",
     image: "/SEO-SERVICES-CHILD-IMAGES/Local SEO.webp",
     problemStatement:
       "If your business does not appear in the Google Maps 3-pack or local search results when customers search for services nearby, you are handing revenue to competitors who do. Many businesses have inconsistent listings, unoptimised Google Business Profiles, weak review strategies and zero local content strategy — making them invisible to the most valuable search traffic: local customers ready to buy right now.",
-    features: [
+features: [
       {
-        title: "Google Business Profile Optimisation",
+        title: "Google My Business SEO Services",
         description:
-          "Complete GBP setup, category optimisation, service area mapping, photo strategy, post scheduling and Q&A management to maximise your Maps visibility.",
+          "Your Google Business Profile is often the first thing a potential customer sees before your website, before your reviews, sometimes before they even know your brand name. We fully optimize your profile with the right categories, service areas, photos, posts, and keyword-rich descriptions so you have a real shot at appearing in the Google Map Pack.",
       },
       {
-        title: "Local Citation Building & Auditing",
+        title: "On-Page & Technical Local SEO",
         description:
-          "Consistent NAP (Name, Address, Phone) profiles across 50+ trusted directories, industry-specific platforms and local business listings that boost local authority.",
+          "We optimize your website's title tags, meta descriptions, headers, and content around the searches your local customers are actually typing. We also fix technical issues, slow loading speed, broken links, and mobile usability that quietly hold rankings back.",
       },
       {
-        title: "Review Generation & Management",
+        title: "Local Citation & NAP Building",
         description:
-          "Strategic review campaigns, response templates and reputation monitoring that build social proof, improve star ratings and influence local ranking signals.",
+          "We list your business consistently across relevant directories and platforms, making sure your Name, Address, and Phone number match everywhere. Inconsistent listings confuse Google and cost you trust — we clean that up and build it right.",
       },
       {
-        title: "Geo-Targeted Content Strategy",
+        title: "Review & Reputation Management",
         description:
-          "Location-specific landing pages, neighbourhood content and local landing experiences that capture geo-intent searches and establish local topical authority.",
+          "Reviews influence both rankings and buying decisions. We help you build a steady flow of genuine customer reviews and respond to them in a way that builds trust.",
+      },
+      {
+        title: "Local Keyword Research & Content",
+        description:
+          "We find out exactly how your customers search — by neighborhood, by service, by intent — and build content around those terms so your site speaks their language.",
       },
       {
         title: "Local Link Building",
         description:
-          "Strategic links from local newspapers, community sites, chambers of commerce, industry associations and neighbourhood directories that strengthen local relevance.",
-      },
-      {
-        title: "Map Pack Optimisation",
-        description:
-          "Distance, relevance and prominence signals optimised to push your business into the coveted Google Maps 3-pack where the majority of local clicks happen.",
-      },
-      {
-        title: "Local SEO Analytics & Reporting",
-        description:
-          "Tracking local rankings, Google Business Profile insights, direction requests, phone calls and map interactions to measure real-world local impact.",
+          "We earn backlinks from relevant, local, and industry-specific sources to strengthen your site's authority in your area.",
       },
     ],
     whyChooseUs: {
-      heading: "Why Choose Eddinet for Local SEO",
+      heading: "Why Choose Us – Your Local SEO Experts in India",
       points: [
-        "Deep expertise in Delhi NCR local search landscape and multi-location businesses",
-        "Full GBP management — not just setup but ongoing posting, Q&A and review strategy",
-        "NAP consistency across 50+ directories with audit and correction included",
-        "Review generation systems that build star ratings sustainably and ethically",
-        "Geo-targeted content that captures 'near me' and location-specific search intent",
-        "Monthly reporting showing local rankings, calls, directions and map engagement",
+        "We focus only on what moves your rankings. No filler tasks, no vanity metrics — every action ties back to visibility and leads.",
+        "We understand Indian local search behavior. From regional language nuances to how customers compare local options, our strategies are built for the market you're actually operating in.",
+        "We're transparent, always. You'll know exactly what we're doing, why we're doing it, and what results to expect realistically, not with inflated promises.",
+        "We treat your business like it's ours. As a local SEO company in India that works closely with each client, we care about your growth as much as you do, because your results are our reputation.",
+        "We adapt as search evolves. Google's algorithms change constantly, and our strategies are built to adjust with them, not break because of them.",
       ],
     },
     process: {
-      heading: "How We Execute Local SEO Projects",
+      heading: "Our Local SEO Process",
       steps: [
         {
           num: "01",
-          title: "Understand the Business & Intent",
+          title: "Audit & Discovery",
           description:
-            "Map your service area, target locations, customer search behaviour and local competitive landscape to build a locally-focused strategy.",
+            "We start by auditing your website, Google Business Profile, and current search rankings, along with a close look at your local competitors.",
         },
         {
           num: "02",
-          title: "Audit the Core Constraint",
+          title: "Strategy Building",
           description:
-            "Analyse Google Business Profile health, citation consistency, review profile, local rankings and competitor local presence to identify gaps.",
+            "Based on what we find, we build a custom local SEO roadmap — realistic, prioritized, and tied to your specific business goals.",
         },
         {
           num: "03",
-          title: "Targeted Keyword Architecture",
+          title: "Execution",
           description:
-            "Build location-specific keyword maps targeting 'near me' queries, neighbourhood names and service + location combinations.",
+            "Our team implements on-page fixes, GBP optimization, citation building, and content work, all in a logical sequence rather than everything at once.",
         },
         {
           num: "04",
-          title: "System Asset Deployment",
+          title: "Tracking & Reporting",
           description:
-          "Optimise GBP, fix citation inconsistencies, create geo-targeted landing pages, implement review systems and build local link profiles.",
+            "We monitor rankings, traffic, and calls/leads generated, and share clear, jargon-free reports so you always know what's happening and why.",
         },
         {
           num: "05",
-          title: "Performance Auditing",
+          title: "Ongoing Optimization",
           description:
-            "Track local rankings, Maps visibility, GBP insights, review velocity, direction requests and phone call volume.",
-        },
-        {
-          num: "06",
-          title: "Continuous Authority Compounding",
-          description:
-            "Expand local content, build more citations, grow review volume and strengthen local link profiles to compound Maps and local visibility over time.",
+            "Local search keeps evolving, and so do we. We continuously refine your strategy based on real performance data, not assumptions.",
         },
       ],
     },
@@ -932,7 +897,7 @@ export const seoChildServices: SeoChildService[] = [
       },
     ],
     detailedDescription:
-      "Local SEO is the practice of optimising your online presence to attract customers from geographically relevant searches — the 'near me' queries, Google Maps results and location-specific searches that connect businesses with nearby buyers at the exact moment they are ready to visit, call or purchase. At Eddinet, our Local SEO services in Delhi NCR help businesses dominate the Google Maps 3-pack and local search results where the majority of local clicks happen.\n\nEffective Local SEO starts with Google Business Profile optimisation — the single most important asset for local search visibility. We optimise every element of your GBP including categories, service areas, business hours, photos, posts and Q&A management to maximise your Maps visibility. Consistent NAP (Name, Address, Phone) citations across 50+ trusted directories, industry platforms and local business listings strengthen your local authority signals.\n\nReview generation and reputation management form a critical component of Local SEO. Strategic review campaigns, response templates and reputation monitoring build the social proof and star ratings that influence both local ranking algorithms and customer decision-making. Geo-targeted content strategy — including location-specific landing pages, neighbourhood content and local landing experiences — captures the geo-intent searches that drive foot traffic and phone calls.\n\nLocal link building from newspapers, community sites, chambers of commerce and neighbourhood directories further strengthens your local relevance. Combined with comprehensive local analytics tracking Maps visibility, direction requests, phone calls and map interactions, we provide complete visibility into your local search performance.\n\nFor businesses in Delhi NCR competing for nearby customers, our Local SEO services ensure you appear exactly where local buyers are searching — in the Maps pack, in local results and in 'near me' queries that drive real-world visits.",
+      "If someone in your city searches for what you sell right now, does your business show up? For most local businesses in India, the honest answer is \"not really\" — and that's costing them customers every single day. We get your business seen on Google Search, Google Maps, and the local pack — the three results that show up right when someone types \"near me\". Whether you run a clinic, a restaurant, a boutique, or a service business, ranking locally is what turns online searches into walk-ins, calls, and bookings.\n\nAt Eddinet, we focus on one thing: making sure local customers in your city find you at the exact moment they're ready to buy. Whether someone is searching on Google Maps or browsing local search results, we optimize your local online presence so you show up at the top.\n\nWe don't rely on generic global tactics. We map out how local buyers in your specific area search, optimize your Google Business Profile, fix local map signals, and turn local searches into direct calls and directions to your doorstep. You get clear, hands-on work from a team that knows local search inside out.",
     whoNeedsThis: {
       heading: "Who Needs Local SEO?",
       description:
@@ -948,34 +913,34 @@ export const seoChildServices: SeoChildService[] = [
     },
     benefits: [
       {
-        title: "Google Maps 3-Pack Visibility",
+        title: "More Visibility Where It Counts",
         description:
-          "Appear in the coveted top 3 Maps results where the majority of local clicks, calls and direction requests originate.",
+          "Show up in local searches and the Map Pack when customers are ready to act, instead of being invisible to the buyers searching for you right now.",
       },
       {
-        title: "Google Business Profile Mastery",
+        title: "Higher Quality Leads",
         description:
-          "Complete GBP management — optimisation, posts, Q&A, photos and review response — turning your profile into an active lead generation asset.",
+          "People finding you locally are usually closer to making a decision — local searchers have immediate intent to visit, call, or buy.",
       },
       {
-        title: "Consistent Local Citations",
+        title: "Better Return Than Paid Ads Alone",
         description:
-          "NAP consistency across 50+ directories and platforms that strengthens local authority and eliminates listing confusion.",
+          "SEO builds visibility that keeps working long after you stop actively promoting, unlike ads that stop the moment the budget ends.",
       },
       {
-        title: "Review-Driven Trust Building",
+        title: "Increased Trust",
         description:
-          "Systematic review generation and reputation management that builds star ratings and social proof to influence local buying decisions.",
+          "A well-optimized profile with strong reviews signals credibility instantly to local customers weighing their options.",
       },
       {
-        title: "Geo-Targeted Content",
+        title: "Stronger Footfall and Calls",
         description:
-          "Location-specific landing pages and neighbourhood content that capture 'near me' searches and establish local topical authority.",
+          "For brick-and-mortar and service businesses, local SEO directly drives real-world visits and enquiries.",
       },
       {
-        title: "Measurable Local Impact",
+        title: "Long-Term, Compounding Growth",
         description:
-          "Track local rankings, Maps impressions, direction requests, phone calls and foot traffic to measure real-world business impact.",
+          "Unlike ads, the rankings and authority you build stick around and keep growing month after month.",
       },
     ],
     industries: [
@@ -1018,20 +983,36 @@ export const seoChildServices: SeoChildService[] = [
     ],
     faqs: [
       {
-        q: "How long does local SEO take to show results?",
-        a: "Google Business Profile optimisation and citation fixes can show improvement within 2 to 4 weeks. Map pack rankings typically stabilise within 2 to 3 months. Review generation and local content strategies compound over 3 to 6 months for sustained local dominance.",
+        q: "What exactly do local SEO services in India include?",
+        a: "It covers Google Business Profile optimization, on-page and technical SEO, local citations, review management, local keyword targeting, and local link building — all aimed at getting your business found by nearby customers on Google Search and Maps.",
       },
       {
-        q: "Do you manage our Google Business Profile?",
-        a: "Yes. Full GBP management is included — profile optimisation, category selection, service area setup, regular Google Posts, Q&A monitoring, review response and photo strategy. Your GBP becomes an active, optimised asset, not a forgotten listing.",
+        q: "How is a local SEO agency in India different from a regular SEO agency?",
+        a: "A local SEO agency focuses specifically on location-based rankings — the Map Pack, \"near me\" searches, and city or neighborhood-level keywords — rather than broad, national keyword competition. The strategies, tools, and priorities are different from standard SEO.",
       },
       {
-        q: "What if we have multiple locations?",
-        a: "We build location-specific strategies for each branch or location, with individual Google Business Profile management, unique local landing pages, location-specific citations and review strategies tailored to each area.",
+        q: "Why is Google My Business SEO so important?",
+        a: "Your Google Business Profile often appears before your website in local search results. Optimizing it properly — categories, photos, posts, service areas, and reviews — directly affects whether you show up in the Map Pack for relevant searches.",
       },
       {
-        q: "Can local SEO help with 'near me' searches?",
-        a: "Absolutely. 'Near me' searches are driven by proximity signals, GBP optimisation, local content and citation consistency — all core components of our local SEO strategy. We optimise for these high-intent, high-conversion searches specifically.",
+        q: "How long does it take to see results?",
+        a: "Most businesses start noticing movement in rankings and visibility within 6 to 12 weeks, with stronger, more consistent results building over 4 to 6 months. Local SEO is a compounding effort — the earlier you start, the sooner you're ahead of competitors.",
+      },
+      {
+        q: "Do I need a website to benefit from local SEO?",
+        a: "A website helps significantly, but even businesses without one can improve visibility through a well-optimized Google Business Profile, citations, and reviews. That said, we usually recommend at least a basic website for long-term growth.",
+      },
+      {
+        q: "How do I choose the right local SEO experts in India for my business?",
+        a: "Look for a team that audits before recommending anything, explains their process clearly, shows past results, and customizes strategy to your industry and city rather than offering the same package to every client.",
+      },
+      {
+        q: "Can Eddinet help businesses with multiple locations?",
+        a: "Yes. As a local SEO company in India, we manage multi-location Google Business Profiles, location-specific landing pages, and citation consistency across all your branches so each location ranks in its own area.",
+      },
+      {
+        q: "What does it cost to work with a local SEO company in India?",
+        a: "Pricing depends on your industry, competition, number of locations, and current website condition. We assess this during the initial audit and share a clear, customized quote — no vague packages, no hidden costs.",
       },
     ],
     crossLinks: [
@@ -1060,96 +1041,84 @@ export const seoChildServices: SeoChildService[] = [
       "Scalable SEO for large, complex websites. Eddinet delivers enterprise-grade technical SEO, content architecture & reporting for multi-team organisations. Free strategy call.",
     heroHeading: "Enterprise SEO Services in Delhi NCR",
     heroSubheading:
-      "Scalable SEO infrastructure, technical governance and content architecture engineered for large websites, multi-team organisations and competitive markets where standard SEO approaches break down.",
+      "Enterprise SEO isn't small-business SEO scaled up — with hundreds of pages, multiple stakeholders, legacy tech, and a brand that can't afford experiments. Our enterprise SEO services are built for exactly this: complex, cross-functional work that moves the needle across your whole organization, not one landing page. If your SEO feels scattered across departments or rankings haven't moved despite real budget, that's an effort problem — it's a structure problem.",
     image: "/SEO-SERVICES-CHILD-IMAGES/Enterprise SEO.webp",
     problemStatement:
       "Enterprise websites face a fundamentally different set of SEO challenges — thousands of pages, complex site architectures, multiple stakeholders, legacy systems and aggressive competition. Standard SEO checklists do not scale. Without enterprise-grade technical governance, content architecture and reporting frameworks, large sites bleed organic potential across duplicate content, crawl waste, indexation issues and fragmented keyword strategies.",
     features: [
       {
-        title: "Technical SEO at Scale",
+        title: "Enterprise Technical SEO Audits",
         description:
-          "Crawl budget optimisation, log file analysis, large-scale indexation management, JavaScript rendering audit and Core Web Vitals optimisation across thousands of pages.",
+          "We conduct in-depth technical audits across your entire site architecture, identifying crawl budget issues, indexation problems, duplicate content, site speed bottlenecks, and structural issues that quietly limit rankings at scale.",
       },
       {
-        title: "Content Architecture & Topical Authority",
+        title: "Large-Scale Content Strategy & Optimization",
         description:
-          "Hub-and-spoke content models, topic clustering and information architecture designed to establish topical dominance across entire verticals.",
+          "For businesses with thousands of pages, we build scalable content frameworks, optimize existing content in batches, and create governance guidelines so every department producing content stays aligned with SEO best practices.",
       },
       {
-        title: "Multi-Team SEO Governance",
+        title: "Multi-Location & Multi-Domain SEO",
         description:
-          "SEO frameworks, documentation and workflows that integrate with product, engineering, content and marketing teams without creating bottlenecks.",
+          "If your business operates across cities, states, or countries, we manage location-specific optimization, hreflang implementation, and domain structure strategy so each market performs on its own merit without cannibalizing others.",
       },
       {
-        title: "Competitive Intelligence at Scale",
+        title: "Enterprise Link Building & Digital PR",
         description:
-          "Enterprise-grade competitor monitoring across keyword portfolios, content strategies, technical changes and SERP feature capture for large keyword sets.",
+          "We build authoritative backlinks through digital PR, strategic partnerships, and content-driven outreach — the kind of link profile that matches the authority a large brand should already have.",
       },
       {
-        title: "International & Multi-Region SEO",
+        title: "SEO Migration & Platform Support",
         description:
-          "Hreflang implementation, multi-language content strategy, regional URL structures and geo-targeting for businesses operating across countries and markets.",
+          "Replatforming, rebranding, or restructuring your site? We manage SEO through migrations to prevent the ranking and traffic drops that so often come with large-scale technical changes.",
       },
       {
-        title: "Enterprise Reporting & Dashboards",
+        title: "Corporate SEO Services & Reporting",
         description:
-          "Custom dashboards, automated reporting and executive-level summaries that translate SEO data into business language for stakeholders at every level.",
-      },
-      {
-        title: "Migration & Redesign SEO Support",
-        description:
-          "Full SEO oversight during website migrations, redesigns and platform changes to preserve rankings, traffic and equity throughout the transition.",
+          "We deliver reporting dashboards tailored to different stakeholders — technical detail for your dev team, performance summaries for marketing, and ROI-focused insights for leadership.",
       },
     ],
     whyChooseUs: {
-      heading: "Why Choose Eddinet for Enterprise SEO",
+      heading: "Why Choose Us – A Reliable Enterprise SEO Firm in India",
       points: [
-        "Experience managing SEO across 10,000+ page websites and multi-brand portfolios",
-        "Technical teams capable of working directly with engineering and product teams",
-        "Custom dashboards and executive reporting built for stakeholder communication",
-        "Proven migration and redesign support with zero traffic loss track record",
-        "Scalable processes that work across departments, regions and content teams",
-        "Dedicated enterprise SEO strategists, not junior account managers",
+        "We understand organizational complexity. From multiple stakeholders to legacy systems, we know enterprise SEO isn't just about strategy — it's about execution within a large, moving organization.",
+        "We build for scale from day one. Every recommendation we make is designed to work across hundreds or thousands of pages, not just a handful of test cases.",
+        "We communicate at every level. Whether it's a technical conversation with your dev team or a results conversation with leadership, we tailor communication so everyone stays informed and confident.",
+        "We protect what you've already built. Enterprise brands have existing rankings and traffic to lose. Our approach prioritizes stability alongside growth, especially during migrations and major changes.",
+        "We stay accountable with data. We report transparently on what's working, what isn't, and what we're doing about it — no vague promises, just clear numbers.",
       ],
     },
     process: {
-      heading: "How We Execute Enterprise SEO Projects",
+      heading: "Our Enterprise SEO Process",
       steps: [
         {
           num: "01",
-          title: "Understand the Business & Intent",
+          title: "Discovery & Stakeholder Alignment",
           description:
-            "Deep stakeholder interviews, business model analysis, competitive landscape mapping and goal alignment across marketing, product and engineering.",
+            "We start by understanding your business structure, internal teams, existing tools, and current SEO performance — and align with every stakeholder who touches the website.",
         },
         {
           num: "02",
-          title: "Audit the Core Constraint",
+          title: "Comprehensive Technical & Content Audit",
           description:
-            "Full technical audit across crawlability, indexation, JS rendering, log files, content inventory, keyword mapping and competitive gap analysis.",
+            "We map out technical issues, content gaps, and competitive positioning across your entire digital footprint, not just a sample of pages.",
         },
         {
           num: "03",
-          title: "Targeted Keyword Architecture",
+          title: "Strategic Roadmap Development",
           description:
-            "Enterprise-scale keyword portfolio mapped to site architecture, topic clusters and content hierarchy with prioritisation based on business impact.",
+            "We prioritize fixes and opportunities based on business impact, resourcing, and timeline — giving you a realistic, phased plan instead of an overwhelming task list.",
         },
         {
           num: "04",
-          title: "System Asset Deployment",
+          title: "Execution & Cross-Team Coordination",
           description:
-            "Technical fixes at scale, content deployment frameworks, governance documentation and team training for ongoing SEO sustainability.",
+            "We work directly with your internal teams — developers, content writers, and marketing leads — to implement changes without disrupting day-to-day operations.",
         },
         {
           num: "05",
-          title: "Performance Auditing",
+          title: "Monitoring, Reporting & Iteration",
           description:
-            "Automated monitoring, custom dashboards, weekly stakeholder reports and quarterly business reviews with actionable insights at every level.",
-        },
-        {
-          num: "06",
-          title: "Continuous Authority Compounding",
-          description:
-            "Ongoing technical maintenance, content expansion, competitive monitoring and strategic adaptation as market conditions and algorithms evolve.",
+            "We track rankings, organic traffic, and conversions at scale, adjusting strategy monthly based on real performance data across your full site.",
         },
       ],
     },
@@ -1174,7 +1143,7 @@ export const seoChildServices: SeoChildService[] = [
       },
     ],
     detailedDescription:
-      "Enterprise SEO is a specialised discipline for large, complex websites — typically 10,000 pages or more — operating across multiple regions, brands, teams and technical systems. At Eddinet, our Enterprise SEO services in Delhi NCR are engineered for the scale, complexity and governance requirements that make standard SEO approaches fail on enterprise platforms.\n\nEnterprise websites face unique challenges: crawl budget waste across thousands of URLs, duplicate content from faceted navigation, fragmented keyword strategies across departments, legacy technical systems and multi-stakeholder approval processes. Our Enterprise SEO framework addresses these with technical governance, scalable content architecture and cross-functional workflows that integrate with engineering, product, content and marketing teams.\n\nTechnical SEO at scale forms our foundation. We manage crawl budget optimisation, log file analysis, large-scale indexation control, JavaScript rendering audits and Core Web Vitals optimisation across your entire site estate. Content architecture uses hub-and-spoke models and topic clustering to establish topical dominance across entire verticals rather than isolated pages.\n\nMulti-team SEO governance is critical for enterprises. We provide frameworks, documentation and workflows that let your organisation execute SEO consistently across departments without creating bottlenecks. Custom dashboards and executive reporting translate SEO data into business language, ensuring stakeholder alignment from marketing teams to the C-suite.\n\nFor large organisations in Delhi NCR managing complex websites, our Enterprise SEO services deliver the governance, scale and strategic depth required to compete in markets where standard SEO approaches simply do not work.",
+      "Eddinet is a full-service SEO partner built for organizations that need more than basic optimization checklists. We've worked with businesses managing multi-location websites, large product catalogs, multi-language content, and international domains — the kind of SEO work that requires coordination between marketing, IT, content, and leadership teams all at once.\n\nWhat sets us apart is that we don't treat enterprise SEO as \"regular SEO but bigger.\" It's a different discipline altogether, one that requires careful technical architecture planning, governance over content at scale, and reporting that speaks to both marketing managers and CFOs.\n\nAs a growing enterprise SEO company in India, we've built our processes specifically around this complexity, so nothing falls through the cracks when a hundred people across three departments are involved in a single website.",
     whoNeedsThis: {
       heading: "Who Needs Enterprise SEO?",
       description:
@@ -1190,34 +1159,34 @@ export const seoChildServices: SeoChildService[] = [
     },
     benefits: [
       {
-        title: "SEO at True Enterprise Scale",
+        title: "Organization-Wide Visibility Gains",
         description:
-          "Technical governance, content architecture and reporting frameworks engineered to work across 10,000+ pages and multiple teams.",
+          "Improvements that compound across thousands of pages instead of a handful.",
       },
       {
-        title: "Multi-Team Accountability",
+        title: "Reduced Technical Risk",
         description:
-          "Frameworks and workflows that integrate SEO into product, engineering and marketing processes without creating friction or bottlenecks.",
+          "Fewer costly mistakes during migrations, replatforming, or major site changes.",
       },
       {
-        title: "Executive-Ready Reporting",
+        title: "Better Internal Alignment",
         description:
-          "Custom dashboards and business-language reporting that keep stakeholders aligned from marketing teams to the C-suite.",
+          "One clear SEO strategy that every department can work from, instead of conflicting efforts.",
       },
       {
-        title: "Migration & Redesign Protection",
+        title: "Stronger Domain Authority",
         description:
-          "Proven enterprise migration methodology with a zero traffic loss track record, preserving years of SEO equity during transitions.",
+          "Enterprise-grade link building and content strategy that builds lasting search equity.",
       },
       {
-        title: "Competitive Intelligence at Scale",
+        title: "Scalable Systems, Not One-Off Fixes",
         description:
-          "Enterprise-grade competitor monitoring across keyword portfolios, content strategies and SERP feature capture for large keyword sets.",
+          "Frameworks and governance that keep working even as your site grows.",
       },
       {
-        title: "Crawl Budget Optimisation",
+        title: "Clearer ROI Reporting",
         description:
-          "Log file analysis and indexation management that ensure Google spends crawl budget on pages that matter, not wasted URLs.",
+          "Insights that connect SEO performance directly to business outcomes leadership actually cares about.",
       },
     ],
     industries: [
@@ -1260,20 +1229,28 @@ export const seoChildServices: SeoChildService[] = [
     ],
     faqs: [
       {
-        q: "What makes enterprise SEO different from standard SEO?",
-        a: "Enterprise SEO operates at a fundamentally different scale — thousands of pages, multiple stakeholders, complex architectures and aggressive competition. It requires technical governance, scalable processes, custom reporting and the ability to coordinate across engineering, product, content and marketing teams. Standard SEO checklists do not address these complexities.",
+        q: "What makes enterprise SEO services in India different from regular SEO?",
+        a: "Enterprise SEO deals with much larger websites, multiple stakeholders, complex technical architecture, and often multi-location or multi-language requirements — all of which need specialized processes that standard SEO packages aren't built to handle.",
       },
       {
-        q: "How do you handle SEO during website migrations?",
-        a: "We provide full migration SEO support — URL mapping, 301 redirect strategy, technical QA, content preservation and post-migration monitoring. Our migration methodology has a proven track record of zero traffic loss, even for 10,000+ page websites.",
+        q: "How long does an enterprise SEO agency in India typically take to show results?",
+        a: "Given the scale involved, initial technical improvements can show impact within 2 to 3 months, while full organizational impact across content, authority, and rankings usually builds over 6 to 12 months.",
       },
       {
-        q: "Can you work with our in-house engineering team?",
-        a: "Absolutely. Our enterprise SEO strategists are experienced working directly with engineering and product teams. We provide technical specifications, implementation documentation and sprint-ready tickets that integrate seamlessly with your development workflow.",
+        q: "Can an enterprise SEO company in India manage SEO across multiple websites or domains?",
+        a: "Yes. Managing multi-domain and multi-location SEO is a core part of enterprise work, including hreflang setup, domain strategy, and avoiding keyword cannibalization between properties.",
       },
       {
-        q: "What reporting do you provide for enterprise clients?",
-        a: "Custom dashboards, automated weekly reports, monthly stakeholder summaries and quarterly business reviews. Every report translates SEO metrics into business language — traffic quality, revenue impact, competitive positioning and strategic recommendations.",
+        q: "Do you work with our internal marketing and development teams?",
+        a: "Absolutely. Enterprise SEO engagements are collaborative by nature and we coordinate directly with your developers, content teams, and marketing leadership throughout the project.",
+      },
+      {
+        q: "What happens to our SEO during a website migration or rebrand?",
+        a: "We manage the entire SEO side of migrations — redirects, technical mapping, and monitoring — to protect existing rankings and minimize traffic loss during the transition.",
+      },
+      {
+        q: "How is reporting handled for corporate SEO services in India?",
+        a: "We provide layered reporting — technical detail for your dev team, performance summaries for marketing, and business-impact metrics for leadership — so every stakeholder gets relevant, digestible information.",
       },
     ],
     crossLinks: [
@@ -1302,91 +1279,90 @@ export const seoChildServices: SeoChildService[] = [
       "Attract qualified B2B buyers through search. Eddinet's B2B SEO targets long buying cycles, authority content & lead-focused strategy for business-to-business companies. Free audit.",
     heroHeading: "B2B SEO Services in Delhi NCR",
     heroSubheading:
-      "Search strategy built for the reality of B2B buying — long evaluation cycles, multiple decision-makers, technical content requirements and the patience to build authority that compounds over months.",
+      "Getting traffic to your website is easy. Getting inquiries from CTOs, Founders, and Procurement Heads who have actual budgets is the hard part. If your website brings in clicks but zero sales calls, you don't have a traffic problem — you have an intent problem. Our B2B SEO services are built to put your business in front of real decision-makers right when they are ready to buy.",
     image: "/SEO-SERVICES-CHILD-IMAGES/b2b SEO.webp",
     problemStatement:
       "B2B search operates on a fundamentally different timeline than B2C. Decision-makers research for weeks or months, compare multiple vendors, involve technical evaluators and need substantial proof before engaging. Most SEO agencies apply consumer tactics to B2B — driving irrelevant traffic, targeting the wrong keywords and producing content that impresses nobody in the buying committee. Without B2B-specific SEO strategy, your organic presence fails to influence the complex buying process.",
     features: [
       {
-        title: "B2B Keyword Research & Mapping",
+        title: "Intent-Based Keyword Research",
         description:
-          "Keyword strategy targeting evaluation-stage, comparison and solution-aware queries that your actual buyers search during their research process.",
+          "We target the exact search terms decision-makers use when evaluating or buying solutions. By prioritizing commercial intent over generic traffic, we connect your brand with buyers actively seeking your services.",
       },
       {
-        title: "Authority Content Development",
+        title: "Website Optimization for B2B",
         description:
-          "Technical guides, whitepapers, comparison content and thought leadership that establishes your brand as the credible expert that buying committees trust.",
+          "We refine your site layout and messaging to meet enterprise standards. A clean, professional structure builds immediate credibility with executive decision-makers from their first click.",
       },
       {
-        title: "Account-Based SEO Alignment",
+        title: "Decision-Focused Content",
         description:
-          "SEO strategies aligned with ABM campaigns, target account lists and industry-specific search behaviour to attract the right companies, not just any traffic.",
+          "We craft clear, authoritative content that answers key buying questions and addresses stakeholder pain points, guiding prospects smoothly through complex B2B buying cycles.",
       },
       {
-        title: "Technical Content for Evaluator Audiences",
+        title: "Technical & On-Page SEO",
         description:
-          "Documentation, implementation guides, integration pages and technical content that influence the technical evaluators in the buying committee.",
+          "We optimize your site architecture, page speed, and backend setup for flawless search indexation and effortless user navigation across every page.",
       },
       {
-        title: "Lead Nurture Content Architecture",
+        title: "Lead-Focused Strategy",
         description:
-          "Content funnels designed around B2B buying stages — awareness, evaluation, decision — that move prospects from first search to sales conversation.",
+          "Our entire search strategy revolves around pipeline growth. We align organic visibility directly with your sales funnel to attract high-value, qualified business inquiries.",
       },
       {
-        title: "Industry-Specific SEO Strategy",
+        title: "Conversion Rate Optimization",
         description:
-          "Tailored approaches for manufacturing, SaaS, professional services, healthcare and other B2B verticals with unique search behaviour and competitive dynamics.",
+          "We strategically refine calls-to-action, form structures, and trust signals across your landing pages to turn casual visitors into booked consultation calls.",
       },
     ],
     whyChooseUs: {
-      heading: "Why Choose Eddinet for B2B SEO",
+      heading: "Why Choose Us for B2B SEO Services in India",
       points: [
-        "Deep understanding of long B2B buying cycles and multi-stakeholder decision processes",
-        "Content strategies that build authority with technical evaluators and C-suite buyers",
-        "ABM-aligned SEO that targets your ideal customer profile, not just search volume",
-        "Industry expertise across manufacturing, SaaS, professional services and healthcare",
-        "Reporting that connects organic visibility to pipeline and revenue impact",
-        "Integration with your sales team for feedback-driven keyword and content optimisation",
+        "We understand complex buyer journeys. Our strategies are built around how B2B decisions actually get made, not simplified for a single-search, single-decision model.",
+        "We prioritize pipeline over vanity metrics. Rankings and traffic matter, but we stay focused on what actually contributes to leads and revenue.",
+        "We work well with technical and niche industries. From SaaS to industrial manufacturing, we know how to make specialized offerings understandable and search-friendly.",
+        "We collaborate closely with your team. Whether it's your marketing team, sales leadership, or subject matter experts, we work with the people who understand your business best to build content that actually converts.",
+        "We stay transparent at every step. No inflated promises — just clear strategy, honest reporting, and steady, measurable progress.",
       ],
     },
     process: {
-      heading: "How We Execute B2B SEO Projects",
+      heading: "Our Process: The 6-Step B2B Search Framework",
       steps: [
         {
           num: "01",
-          title: "Understand the Business & Intent",
+          title: "Business Understanding",
           description:
-            "Map your sales cycle, buyer personas, decision-making unit and competitive positioning to build SEO around how B2B buyers actually research and decide.",
+            "We analyze your services, target client profiles, and sales cycles to align search targeting directly with your revenue goals from day one.",
         },
         {
           num: "02",
-          title: "Audit the Core Constraint",
+          title: "Market & Buyer Analysis",
           description:
-            "Analyse existing organic presence against B2B buyer journey stages, identifying gaps in awareness, evaluation and decision-stage content.",
+            "We study your industry landscape, direct competitors, and executive decision-makers to map out exactly how your ideal prospects evaluate vendors.",
         },
         {
           num: "03",
-          title: "Targeted Keyword Architecture",
+          title: "Strategy Planning",
           description:
-            "Build keyword maps around B2B research queries, comparison terms, vendor evaluation searches and industry-specific search behaviour.",
+            "We build a phased SEO strategy mapped to every stage of your buying funnel, ensuring every page serves a clear purpose in driving qualified prospects.",
         },
         {
           num: "04",
-          title: "System Asset Deployment",
+          title: "Website & SEO Setup",
           description:
-            "Create authority content, technical documentation, comparison pages and solution-focused landing assets mapped to each stage of the buying process.",
+            "We clean up site architecture, backend technical health, and on-page elements to ensure effortless search indexation and an executive-ready user experience.",
         },
         {
           num: "05",
-          title: "Performance Auditing",
+          title: "Content Development",
           description:
-            "Track ranking progression, content engagement, lead attribution and pipeline influence from organic search channels.",
+            "We produce authoritative content that addresses technical questions, compares solutions, and builds instant trust with buying committees.",
         },
         {
           num: "06",
-          title: "Continuous Authority Compounding",
+          title: "Lead Optimization",
           description:
-            "Expand content depth, build industry authority, grow backlink profiles and refine targeting based on sales feedback and pipeline data.",
+            "We refine user paths, strategic CTAs, and lead capture forms across your key pages to systematically turn search visitors into serious inquiries.",
         },
       ],
     },
@@ -1411,7 +1387,7 @@ export const seoChildServices: SeoChildService[] = [
       },
     ],
     detailedDescription:
-      "B2B SEO is search engine optimisation designed specifically for business-to-business companies, where buying cycles stretch over weeks or months, multiple stakeholders influence decisions and content must satisfy technical evaluators alongside executive decision-makers. At Eddinet, our B2B SEO services in Delhi NCR are built around the reality of complex B2B purchasing rather than consumer impulse buying.\n\nB2B search operates differently because B2B buyers research differently. They compare multiple vendors, involve technical evaluators, read deeply before engaging and need substantial proof of capability. Our B2B SEO strategy targets evaluation-stage queries — comparison terms, solution-aware searches and industry-specific research questions — rather than chasing impulse traffic that never converts into B2B pipeline.\n\nContent development for B2B SEO focuses on authority assets: technical guides, whitepapers, implementation documentation, case studies and comparison content that establish your brand as the credible expert buying committees trust. We align keyword targeting and content strategy with account-based marketing (ABM) so organic search attracts the specific companies and roles that match your ideal customer profile.\n\nLead nurture content architecture is central to B2B SEO. We build content funnels mapped to each buying stage — awareness, evaluation and decision — moving prospects from their first search query to a sales conversation. Industry-specific strategies for manufacturing, SaaS, professional services and healthcare ensure approaches are tailored to vertical search behaviour.\n\nFor B2B companies in Delhi NCR competing for high-value contracts and long-term relationships, our B2B SEO services directly connect organic search visibility to pipeline influence and revenue growth.",
+      "Eddinet is a performance-led digital growth agency dedicated to closing the gap between technical search visibility and measurable pipeline growth.\n\nWe do not measure success through arbitrary keyword rankings or traffic spikes. Instead, we track metrics that align with business growth: qualified inbound leads, scheduled consultations, reduced customer acquisition costs (CAC), and pipeline revenue.\n\nOur team combines deep expertise in B2B search intent, technical architecture, content marketing, and conversion rate optimization (CRO) to provide your business with a clear competitive advantage.",
     whoNeedsThis: {
       heading: "Who Needs B2B SEO?",
       description:
@@ -1425,36 +1401,31 @@ export const seoChildServices: SeoChildService[] = [
         "Any B2B company frustrated by consumer-style SEO producing irrelevant leads",
       ],
     },
-    benefits: [
+benefits: [
       {
-        title: "Buyer Journey Alignment",
+        title: "Shorter Sales Cycles",
         description:
-          "SEO strategies mapped to long B2B buying cycles, targeting stakeholders at each stage of research, evaluation and decision.",
+          "Well-informed leads arrive with a clear understanding of your value proposition, speeding up initial conversations.",
       },
       {
-        title: "Technical Evaluator Credibility",
+        title: "Higher Average Contract Value",
         description:
-          "Documentation, implementation guides and technical content that earns the trust of the technical evaluators in your buying committee.",
+          "Attract enterprise-level accounts that are actively seeking qualified, premium vendors.",
       },
       {
-        title: "ABM-Aligned Targeting",
+        title: "Lower Customer Acquisition Cost (CAC)",
         description:
-          "Keyword and content strategies aligned with account-based marketing, attracting companies that match your ideal customer profile.",
+          "Build a self-sustaining channel that reduces dependence on increasingly expensive paid ad channels.",
       },
       {
-        title: "Pipeline-Driven Measurement",
+        title: "Predictable Pipeline Growth",
         description:
-          "Reporting that connects organic visibility to marketing qualified leads, pipeline influence and revenue impact — not vanity traffic metrics.",
+          "Organic search assets continue generating high-intent leads long after they are published.",
       },
       {
-        title: "Authority Content Assets",
+        title: "Sales & Marketing Alignment",
         description:
-          "Whitepapers, case studies and thought leadership that position your brand as the credible expert buying committees rely on.",
-      },
-      {
-        title: "Sales Feedback Integration",
-        description:
-          "Sales team insights fed directly into keyword and content optimisation for continuous targeting refinement based on real conversations.",
+          "Attract leads that match your Ideal Customer Profile (ICP), ensuring your sales team focuses on high-value opportunities.",
       },
     ],
     industries: [
@@ -1498,19 +1469,27 @@ export const seoChildServices: SeoChildService[] = [
     faqs: [
       {
         q: "How is B2B SEO different from regular SEO?",
-        a: "B2B SEO targets longer buying cycles, multiple decision-makers and technical evaluation processes. Instead of optimising for impulse searches, we build content and keyword strategies around research queries, comparison terms and solution-aware searches that B2B buyers make during weeks or months of evaluation.",
+        a: "B2B SEO targets longer, multi-stakeholder buying journeys instead of quick, single-search decisions. It focuses on content and keywords that support research, comparison, and evaluation stages, not just immediate purchase intent.",
       },
       {
-        q: "What type of content works best for B2B SEO?",
-        a: "Technical guides, comparison pages, implementation documentation, case studies and industry analysis perform best for B2B audiences. We create content that establishes credibility with technical evaluators while building the narrative authority that executive decision-makers rely on.",
+        q: "How long does it take to see results?",
+        a: "Given longer B2B sales cycles, initial ranking improvements typically show within 3 to 4 months, with meaningful lead and pipeline impact building over 6 to 9 months.",
       },
       {
-        q: "How do you measure B2B SEO success?",
-        a: "We track ranking progression and traffic quality as leading indicators. The primary metrics are marketing qualified leads, pipeline influence, content engagement depth and the quality of organic traffic as measured by conversion to sales conversations.",
+        q: "Can SEO really generate qualified B2B leads, not just traffic?",
+        a: "Yes, when strategy is built around actual buyer intent — mapping content to each stage of the decision process rather than chasing high-volume but low-relevance keywords.",
       },
       {
-        q: "Can B2B SEO work alongside our ABM strategy?",
-        a: "Absolutely. We align keyword targeting, content strategy and landing page design with your account-based marketing approach — ensuring organic search attracts the specific companies and roles that match your ideal customer profile.",
+        q: "Do you work with niche or technical industries?",
+        a: "Yes. We regularly work with SaaS, IT services, manufacturing, and consulting businesses, where making complex offerings clear and search-friendly is central to the strategy.",
+      },
+      {
+        q: "Will we need to be involved in content creation?",
+        a: "Some input is usually valuable, especially from subject matter experts, but we handle strategy, planning, and optimization so the process stays light on your team's time.",
+      },
+      {
+        q: "How do you measure success beyond rankings?",
+        a: "We track organic traffic quality, form submissions, demo requests, and where possible, pipeline contribution — so you can see SEO's actual impact on revenue, not just search visibility.",
       },
     ],
     crossLinks: [
@@ -1539,96 +1518,78 @@ export const seoChildServices: SeoChildService[] = [
       "Fix the technical foundations killing your rankings. Eddinet's Technical SEO covers crawlability, Core Web Vitals, site architecture & structured data. Get a free technical audit.",
     heroHeading: "Technical SEO Services in Delhi NCR",
     heroSubheading:
-      "The invisible foundation that makes or breaks every other SEO effort — crawlability, indexation, site speed, Core Web Vitals and structured data, all engineered to Google's exacting standards.",
+      "Eddinet provides professional technical SEO services in India to take complete responsibility for your website's technical health, fixing backend bottlenecks so search engines can rank your pages effortlessly and drive qualified buyers directly to your business.",
     image: "/SEO-SERVICES-CHILD-IMAGES/Technical SEO.webp",
     problemStatement:
       "You can have the best content and the strongest backlink profile, but if Google cannot crawl your pages efficiently, render your JavaScript, or if your site takes 8 seconds to load, none of it matters. Technical SEO issues are invisible to most businesses — silently killing rankings, suppressing indexation and destroying user experience. Without a technically sound foundation, every other SEO investment underperforms.",
     features: [
       {
-        title: "Crawlability & Indexation Optimisation",
+        title: "In-Depth Technical Audits",
         description:
-          "XML sitemap management, robots.txt configuration, canonical implementation, crawl budget optimisation and indexation control to ensure Google discovers and indexes every important page.",
+          "We perform deep code audits to find crawl blocks, rendering errors, and indexing leaks, providing a clear, revenue-prioritized action plan instead of bloated automated reports.",
       },
       {
-        title: "Core Web Vitals Optimisation",
+        title: "Core Web Vitals & Speed Optimization",
         description:
-          "Largest Contentful Paint (LCP), Interaction to Next Paint (INP) and Cumulative Layout Shift (CLS) fixes that improve both rankings and real user experience.",
+          "We eliminate page speed delays by optimizing heavy scripts, server response times (TTFB), images, and mobile rendering paths to maximize user retention.",
       },
       {
-        title: "Site Architecture & Information Hierarchy",
+        title: "Site Architecture & Internal Linking",
         description:
-          "URL structure, internal linking, pagination, faceted navigation and site hierarchy designed to distribute authority efficiently and help users and bots navigate logically.",
+          "We re-engineer your site hierarchy and internal link flow so search engines can easily discover, crawl, and rank your highest-converting pages.",
       },
       {
-        title: "JavaScript SEO",
+        title: "Crawling, Indexing & Rendering Fixes",
         description:
-          "JavaScript rendering audit, dynamic rendering, hydration optimisation and client-side rendering fixes for websites built with React, Next.js, Vue and Angular.",
+          "Whether on JavaScript frameworks like React/Angular or custom platforms, we fix rendering bugs, robots.txt directives, XML sitemaps, and canonical errors.",
       },
       {
-        title: "Structured Data & Schema Markup",
+        title: "Seamless Website Migrations",
         description:
-          "Technical implementation of JSON-LD schema for articles, FAQs, products, organisation, breadcrumbs and rich result eligibility across your entire site.",
-      },
-      {
-        title: "Log File Analysis",
-        description:
-          "Server log analysis to understand exactly how Googlebot crawls your site, identify crawl waste, uncover orphan pages and optimise crawl budget allocation.",
-      },
-      {
-        title: "Site Speed & Performance",
-        description:
-          "Image optimisation, code minification, caching strategy, CDN configuration, server response time improvement and render-blocking resource elimination.",
+          "We manage complex CMS switches and URL restructuring with precise 301 redirection mapping to protect existing search authority and prevent traffic drops.",
       },
     ],
     whyChooseUs: {
-      heading: "Why Choose Eddinet for Technical SEO",
+      heading: "Why Choose Eddinet For Technical SEO",
       points: [
-        "Deep technical expertise across WordPress, Next.js, Shopify, custom CMS and enterprise platforms",
-        "Log file analysis and server-side diagnostics that most agencies cannot perform",
-        "Core Web Vitals optimisation with proven LCP, INP and CLS improvement track records",
-        "JavaScript SEO specialists for React, Next.js and single-page applications",
-        "Technical specifications that integrate directly with your development team's workflow",
-        "Post-fix monitoring and regression prevention, not just one-time audits",
+        "Engineering-First Approach: We treat SEO as a technical discipline, mastering DOM rendering, JavaScript pipelines, and server performance.",
+        "Zero Jargon: We translate complex server and rendering issues into clear business impact so you always understand the value.",
+        "Focus on Revenue: Rankings only matter when they drive growth. Every fix we deploy is tied directly to lead generation.",
+        "Custom Stack Execution: We tailor our technical roadmap specifically to your site's codebase, tech stack, and business goals.",
       ],
     },
     process: {
-      heading: "How We Execute Technical SEO Projects",
+      heading: "Our Process: Simple, Transparent, Results-Driven",
       steps: [
         {
           num: "01",
-          title: "Understand the Business & Intent",
+          title: "Log Analysis & Crawl Diagnostics",
           description:
-            "Review your technology stack, platform, hosting environment and development workflow to build technical recommendations that your team can actually implement.",
+            "We inspect real Googlebot server logs to fix broken links and eliminate wasted crawl budget.",
         },
         {
           num: "02",
-          title: "Audit the Core Constraint",
+          title: "Code & Security Audit",
           description:
-            "Comprehensive technical audit — crawl analysis, log file review, Core Web Vitals testing, JavaScript rendering check, schema validation and indexation health assessment.",
+            "We verify mobile-friendliness, HTTPS security, schema markup, and rendering efficiency.",
         },
         {
           num: "03",
-          title: "Targeted Keyword Architecture",
+          title: "Prioritized Action Roadmap",
           description:
-            "Map technical fixes to ranking impact — prioritising issues that affect highest-value pages and most impactful keywords first.",
+            "We map out fixes by impact versus effort, ensuring high-value quick wins are deployed first.",
         },
         {
           num: "04",
-          title: "System Asset Deployment",
+          title: "Hands-On Developer Support",
           description:
-            "Implement technical fixes, deploy schema markup, optimise site architecture and configure tracking. All delivered as developer-ready specifications.",
+            "Our team handles code changes directly or collaborates closely with your developers to push updates safely.",
         },
         {
           num: "05",
-          title: "Performance Auditing",
+          title: "Live Verification & Reporting",
           description:
-            "Monitor Core Web Vitals scores, crawl efficiency, indexation rates, render performance and schema validation across your entire site.",
-        },
-        {
-          num: "06",
-          title: "Continuous Authority Compounding",
-          description:
-            "Ongoing technical monitoring, new page optimisation, algorithm adaptation and regression prevention to keep your technical foundation performing at its best.",
+            "We re-crawl and validate all fixes in Google Search Console, delivering clear performance reports.",
         },
       ],
     },
@@ -1653,7 +1614,7 @@ export const seoChildServices: SeoChildService[] = [
       },
     ],
     detailedDescription:
-      "Technical SEO is the discipline of optimising the technical infrastructure of a website so search engines can crawl, index, render and understand it effectively. At Eddinet, our Technical SEO services in Delhi NCR address the invisible foundations that determine whether every other SEO investment performs — because no amount of content or link building can overcome a website Google cannot crawl efficiently.\n\nTechnical SEO begins with crawlability and indexation control. We manage XML sitemaps, robots.txt configuration, canonical implementation and indexation strategy to ensure Google discovers every important page while ignoring duplicates and low-value URLs. Log file analysis gives us a server-level view of exactly how Googlebot crawls your site, identifying crawl waste, orphan pages and budget allocation issues that most agencies never see.\n\nCore Web Vitals optimisation is a core Technical SEO service, addressing Largest Contentful Paint (LCP), Interaction to Next Paint (INP) and Cumulative Layout Shift (CLS). These metrics directly influence rankings and user experience, and we have a proven track record of dramatic improvements. Site speed work — image optimisation, code minification, caching strategy, CDN configuration and render-blocking resource elimination — complements the Core Web Vitals program.\n\nJavaScript SEO is increasingly critical as more websites are built on React, Next.js, Vue and Angular. We audit JavaScript rendering, dynamic rendering approaches and hydration optimisation to ensure client-side frameworks are fully searchable. Structured data and schema markup implementation completes the Technical SEO picture, qualifying pages for rich results and helping search engines understand content structure.\n\nFor businesses in Delhi NCR whose rankings are suppressed by technical problems, our Technical SEO services deliver the foundation essential for sustainable organic growth.",
+      "We aren't a traditional digital marketing agency that bombards you with generic automated reports or surface-level fixes. Eddinet functions as your dedicated technical SEO execution partner, bridging the gap between complex web development and real organic revenue growth.\n\nAs a results-oriented SEO company in India, we help you solve the exact structural, server-side, and indexing challenges holding your domain back. We look beyond vanity metrics like impressions and focus on what directly impacts your bottom line: crawl efficiency, site speed, clean indexation, and frictionless client conversions.",
     whoNeedsThis: {
       heading: "Who Needs Technical SEO?",
       description:
@@ -1669,34 +1630,24 @@ export const seoChildServices: SeoChildService[] = [
     },
     benefits: [
       {
-        title: "Complete Crawl & Indexation Control",
+        title: "Lower Bounce Rates",
         description:
-          "Ensure Google crawls and indexes every valuable page while ignoring duplicates, waste and low-value URLs that dilute rankings.",
+          "Fast-loading, responsive pages keep visitors engaged longer and prevent potential clients from jumping to competitors.",
       },
       {
-        title: "Core Web Vitals Excellence",
+        title: "Maximum Crawl Budget Efficiency",
         description:
-          "Proven LCP, INP and CLS improvements that lift both rankings and real-world user experience across every device.",
+          "Googlebot spends its crawling capacity indexing your high-converting money pages instead of getting trapped in low-value URLs.",
       },
       {
-        title: "Developer-Ready Implementation",
+        title: "Higher Conversion Rates",
         description:
-          "Technical specifications delivered in sprint-ready formats that integrate directly with your engineering team's workflow.",
+          "A smooth, bug-free website creates a seamless booking or buying path for real visitors.",
       },
       {
-        title: "JavaScript SEO Mastery",
+        title: "Algorithm-Proof Stability",
         description:
-          "Specialist optimisation for React, Next.js, Vue and Angular websites ensuring modern frameworks are fully searchable by Google.",
-      },
-      {
-        title: "Schema & Rich Result Eligibility",
-        description:
-          "JSON-LD structured data implementation that qualifies your site for rich results including FAQ snippets, products and reviews.",
-      },
-      {
-        title: "Competitive Technical Advantage",
-        description:
-          "Server-level diagnostics, log file analysis and technical monitoring that most agencies cannot offer — keeping you ahead of competitors.",
+          "A clean, technically optimized site protects your rankings against major Google core algorithm updates.",
       },
     ],
     industries: [
@@ -1739,20 +1690,24 @@ export const seoChildServices: SeoChildService[] = [
     ],
     faqs: [
       {
-        q: "How do I know if I have technical SEO issues?",
-        a: "Common signs include slow page load times, pages not appearing in Google search despite being published, sudden traffic drops after site changes, poor Core Web Vitals scores in Google Search Console and pages being crawled but not indexed. A professional technical audit reveals the full picture.",
+        q: "What are Technical SEO Services, and why do I need them?",
+        a: "Technical SEO fixes backend website errors like slow speed, broken links, and bad site structure. It ensures search engines can easily find, crawl, and rank your site so your content gets organic traffic.",
       },
       {
-        q: "Do you implement the fixes or just provide recommendations?",
-        a: "We provide developer-ready technical specifications for your team to implement, and we can also work directly with your developers to ensure correct implementation. For platforms we manage, we handle implementation directly.",
+        q: "How is Eddinet different from other SEO companies in India?",
+        a: "Most agencies send automated reports with superficial fixes. Eddinet fixes deep code, JavaScript rendering issues, and server bottlenecks directly, prioritizing fixes that increase conversions and sales.",
       },
       {
-        q: "How often should technical SEO be audited?",
-        a: "Full technical audits should be conducted quarterly for most websites. Enterprise and high-growth sites benefit from monthly monitoring. We also recommend immediate audits after any site migration, redesign or major feature launch.",
+        q: "How fast will I see results?",
+        a: "Technical fixes often show impact in 2 to 6 weeks. Fixing critical crawl blocks, indexing errors, or severe speed issues allows search bots to re-index and re-rank your pages quickly.",
       },
       {
-        q: "Will technical SEO fixes improve my rankings immediately?",
-        a: "Some fixes show rapid impact — Core Web Vitals improvements, crawl error corrections and indexation fixes can produce results within weeks. Others compound over time as the improved technical foundation amplifies the impact of content and authority work.",
+        q: "Do you need direct access to my website code?",
+        a: "No. We can either make the technical fixes directly on your CMS/codebase, or provide ready-to-use technical instructions for your internal development team to deploy.",
+      },
+      {
+        q: "Can you handle technical SEO for React, Next.js, or Angular websites?",
+        a: "Yes. We specialize in modern JavaScript frameworks, setting up Server-Side Rendering (SSR) and dynamic rendering so Googlebot reads and indexes your application correctly.",
       },
     ],
     crossLinks: [
@@ -1781,91 +1736,84 @@ export const seoChildServices: SeoChildService[] = [
       "Expand globally with the right SEO strategy. Eddinet's International SEO covers multi-language optimisation, hreflang & geo-targeting for global search visibility. Free proposal.",
     heroHeading: "International SEO Services in Delhi NCR",
     heroSubheading:
-      "Multi-language, multi-region search strategies that help your business rank in every target market — with localised content, correct hreflang implementation and geo-specific optimisation.",
+      "Eddinet helps businesses expand across countries and languages without losing the rankings they've already earned at home. International SEO isn't just translating — it's structure, and getting that structure wrong is what usually goes unnoticed until traffic starts dropping.",
     image: "/SEO-SERVICES-CHILD-IMAGES/International SEO.webp",
     problemStatement:
       "Expanding into international markets without proper SEO creates a mess — duplicate content across country versions, wrong language pages showing in wrong countries, hreflang errors that confuse Google and wasted crawl budget on content that should not rank in certain regions. Most businesses either ignore international SEO entirely or implement it incorrectly, leaving global search potential untapped and technical debt accumulating.",
     features: [
       {
-        title: "Multi-Language Content Strategy",
+        title: "Site Structure & Domain Strategy",
         description:
-          "Localised content that goes beyond translation — culturally adapted messaging, local keyword research and region-specific search behaviour analysis.",
+          "We help you choose the right international structure — subdirectories, subdomains, or ccTLDs — based on your resources, markets, and long-term expansion goals.",
       },
       {
         title: "Hreflang Implementation & Auditing",
         description:
-          "Correct hreflang tag implementation, cross-reference validation and error resolution that ensures the right language/region version shows in the right market.",
+          "We implement and audit hreflang tags so search engines show the correct language and regional version of your pages to the right users, every time.",
       },
       {
-        title: "Geo-Targeting & URL Architecture",
+        title: "Native Keyword Research by Market",
         description:
-          "Strategic URL structure decisions — ccTLDs, subdirectories or subdomains — based on your business goals, technical infrastructure and target markets.",
+          "We research keywords directly within each target language and region, since search behavior often looks nothing like a direct translation of your existing terms.",
       },
       {
-        title: "International Keyword Research",
+        title: "Localized Content Strategy",
         description:
-          "Market-specific keyword research that accounts for language nuances, local search behaviour, regional terminology and country-specific search patterns.",
+          "We guide content localization built around cultural context and local intent, not just translated copy, so your message actually connects in each market.",
       },
       {
-        title: "International Link Building",
+        title: "Geo-Targeting & Search Console Setup",
         description:
-          "Country-specific authority building through local publications, regional directories, market-relevant backlinks and in-language outreach.",
+          "We configure geo-targeting and international properties correctly, helping search engines understand exactly which regions each part of your site is meant to serve.",
       },
       {
-        title: "Multi-Region Reporting",
+        title: "Cross-Market Technical Audits",
         description:
-          "Country-by-country performance tracking, regional ranking reports and market-specific organic growth measurement across all target regions.",
+          "We audit for issues specific to global sites — duplicate content across regions, incorrect canonicals, and crawl inefficiencies across multiple site versions.",
       },
     ],
     whyChooseUs: {
-      heading: "Why Choose Eddinet for International SEO",
+      heading: "Why Businesses Pick Eddinet as Their SEO Company in India",
       points: [
-        "Experience with multi-language and multi-region SEO across 15+ countries",
-        "Hreflang implementation expertise that eliminates costly cross-region errors",
-        "In-language keyword research for major global markets and languages",
-        "URL architecture strategy that balances technical feasibility with SEO impact",
-        "Regional reporting that tracks performance by country, language and market",
-        "Integration with local teams for content localisation and market-specific strategy",
+        "We take structure seriously. Our international SEO services in India start with getting the technical foundation right, since that's where most global SEO mistakes actually happen.",
+        "We research natively, not by translation. Every market gets its own keyword research based on how people there actually search.",
+        "We protect what you've already built. New market strategies are designed to add growth without disrupting your existing rankings.",
+        "We coordinate across teams easily. International SEO touches development, content, and regional marketing, and we work smoothly across all of them.",
+        "We report market by market. You'll always know exactly which regions are performing and why, not just one blended number.",
       ],
     },
     process: {
-      heading: "How We Execute International SEO Projects",
+      heading: "How Eddinet Works, Step by Step",
       steps: [
         {
           num: "01",
-          title: "Understand the Business & Intent",
+          title: "Market & Structure Assessment",
           description:
-            "Map target markets, languages, business goals and existing international presence to build a strategy aligned with your global expansion plan.",
+            "We evaluate your target markets and current site setup to determine the right international approach for your business.",
         },
         {
           num: "02",
-          title: "Audit the Core Constraint",
+          title: "Architecture & Strategy Planning",
           description:
-            "Analyse current international setup — hreflang implementation, URL structure, content localisation, regional rankings and technical configuration.",
+            "We define the ideal structure, hreflang mapping, and content approach for each market you're entering.",
         },
         {
           num: "03",
-          title: "Targeted Keyword Architecture",
+          title: "Implementation",
           description:
-            "Build country and language-specific keyword maps with local search behaviour research for each target market.",
+            "We implement structural and technical changes, coordinating with your development team where needed.",
         },
         {
           num: "04",
-          title: "System Asset Deployment",
+          title: "Localized Rollout",
           description:
-            "Implement hreflang, configure URL architecture, create localised content frameworks and set up regional tracking across all target markets.",
+            "We guide the creation of market-specific content built on native keyword research, not translated assumptions.",
         },
         {
           num: "05",
-          title: "Performance Auditing",
+          title: "Market-by-Market Monitoring",
           description:
-            "Track rankings, traffic and conversions by country, language and region with dedicated dashboards for each market.",
-        },
-        {
-          num: "06",
-          title: "Continuous Authority Compounding",
-          description:
-            "Expand local content, build regional backlinks, optimise local search presence and adapt strategy as each market matures and competition evolves.",
+            "We track each region's performance individually, refining strategy based on how every market actually responds.",
         },
       ],
     },
@@ -1890,7 +1838,7 @@ export const seoChildServices: SeoChildService[] = [
       },
     ],
     detailedDescription:
-      "International SEO is the practice of optimising your website for multiple countries, languages and regions — ensuring the right content appears in the right market through correct technical implementation, localised content and market-specific keyword strategies. At Eddinet, our International SEO services in Delhi NCR help businesses expand globally with search visibility that actually performs.\n\nExpanding internationally without the right SEO approach creates significant problems: duplicate content across country versions, wrong language pages showing in wrong regions, hreflang errors that confuse Google and wasted crawl budget on pages that should not rank in certain markets. International SEO solves these issues systematically, starting with the correct technical architecture.\n\nHreflang implementation is the technical foundation of International SEO. We implement and validate bidirectional hreflang tags across your entire site, ensuring Google shows the French version in France, the German version in Germany and the right regional variants everywhere else. URL architecture decisions — ccTLDs, subdirectories or subdomains — are guided by your business goals, technical infrastructure and target market priorities.\n\nLocalisation goes far beyond translation. We research market-specific keywords that account for language nuances, regional terminology and country-specific search behaviour. Content is culturally adapted, not just word-for-word translated. Country-specific authority building through local publications, regional directories and market-relevant backlinks strengthens rankings in each target market.\n\nMulti-region reporting closes the loop, tracking rankings, traffic and conversions by country, language and region. For businesses in Delhi NCR expanding globally, our International SEO services provide the technical foundation and market-specific strategy needed to compete in every target market.",
+      "Expanding into new markets brings technical decisions most SEO strategies never touch — hreflang tags, domain structure, geo-targeting, duplicate content across language versions. As a SEO company in India working with businesses going global, Eddinet focuses on getting these foundations right first, because everything else in an international strategy depends on them.\n\nWe've guided businesses through decisions like choosing between subdirectories, subdomains, and country-code domains, and building content strategies that reflect real regional search behavior instead of direct translation. Our approach treats every new market as its own search environment, not a copy-paste extension of your existing site.",
     whoNeedsThis: {
       heading: "Who Needs International SEO?",
       description:
@@ -1906,34 +1854,34 @@ export const seoChildServices: SeoChildService[] = [
     },
     benefits: [
       {
-        title: "Correct Hreflang Implementation",
+        title: "Accurate Audience Targeting",
         description:
-          "Bidirectional, validated hreflang tags that ensure the right language and region version appears in the right search market.",
+          "The correct version of your site reaches the correct regional audience automatically.",
       },
       {
-        title: "Duplicate Content Elimination",
+        title: "No Internal Competition",
         description:
-          "Technical architecture that prevents cross-country duplicate content from diluting rankings across all your regional sites.",
+          "Proper hreflang and canonical setup stops your own pages from competing against each other.",
       },
       {
-        title: "True Localisation, Not Translation",
+        title: "Genuine Local Relevance",
         description:
-          "Culturally adapted content and market-specific keyword research that captures regional search behaviour competitors miss.",
+          "Market-specific research and content outperform generic translated pages.",
       },
       {
-        title: "Strategic URL Architecture",
+        title: "Room to Grow",
         description:
-          "ccTLD, subdirectory or subdomain decisions guided by business goals, technical feasibility and target market priority.",
+          "A solid structure supports adding new markets later without rebuilding from scratch.",
       },
       {
-        title: "Market-Specific Authority Building",
+        title: "Better User Trust",
         description:
-          "Country-specific backlinks from local publications and regional directories that strengthen rankings in each target market.",
+          "Visitors land on content that actually matches their language and region.",
       },
       {
-        title: "Regional Performance Visibility",
+        title: "Protected Home-Market Rankings",
         description:
-          "Country-by-country dashboards tracking rankings, traffic and conversions so every market's performance is transparent and actionable.",
+          "Expansion done right doesn't cost you the visibility you've already built.",
       },
     ],
     industries: [
@@ -1976,20 +1924,28 @@ export const seoChildServices: SeoChildService[] = [
     ],
     faqs: [
       {
-        q: "What is the best URL structure for international SEO?",
-        a: "The best structure depends on your resources and goals. ccTLDs (.co.uk, .de) provide strongest geo信号 but require separate domains. Subdirectories (/uk/, /de/) are the most practical for most businesses — single domain, shared authority and easier management. We recommend based on your specific situation.",
+        q: "What's the difference between international SEO and regular SEO?",
+        a: "International SEO involves technical elements like hreflang tags, geo-targeting, and site structure decisions specific to serving multiple countries or languages, which standard SEO doesn't cover.",
       },
       {
-        q: "Do I need separate content for each country?",
-        a: "Yes, for major markets. Simply translating content misses local search behaviour, cultural nuances and market-specific keywords. For smaller markets, translated content with localised elements can work. We help you decide the right level of localisation for each target market.",
+        q: "Should I use subdomains, subdirectories, or country-code domains?",
+        a: "It depends on your resources, target markets, and long-term goals — we assess your specific situation before recommending a structure.",
       },
       {
-        q: "How does hreflang implementation work?",
-        a: "Hreflang tags tell Google which language/region version of a page to show in which market. Implementation must be bidirectional and cover all versions. Errors in hreflang can cause wrong pages to show in wrong markets or indexing issues. We implement and validate hreflang across your entire site.",
+        q: "Is translated content enough for international SEO?",
+        a: "No, direct translation often misses local search behavior and cultural nuance. Localized keyword research and content strategy typically perform much better.",
       },
       {
-        q: "How long does international SEO take?",
-        a: "Technical setup and hreflang implementation show impact within 1 to 2 months. Content localisation and regional ranking growth typically take 3 to 6 months depending on market competition. Emerging markets rank faster than highly competitive ones like the US or UK.",
+        q: "Will expanding internationally affect my existing rankings?",
+        a: "Not if done correctly. Proper hreflang implementation and site structure prevent new market pages from competing with or diluting your existing rankings.",
+      },
+      {
+        q: "How long does international SEO take to show results?",
+        a: "Initial technical setup can be completed within weeks, but ranking growth in new markets typically takes 3 to 6 months depending on competition.",
+      },
+      {
+        q: "Can you help us target multiple countries with the same language?",
+        a: "Yes, we set up proper geo-targeting and hreflang configuration so each country version reaches the correct audience, even when the language is shared.",
       },
     ],
     crossLinks: [
@@ -2018,91 +1974,84 @@ export const seoChildServices: SeoChildService[] = [
       "Scale organic traffic with programmatic SEO. Eddinet builds data-driven template pages targeting thousands of long-tail keywords at scale. Free strategy call for your business.",
     heroHeading: "Programmatic SEO Services in Delhi NCR",
     heroSubheading:
-      "Data-driven, template-powered page creation at scale — capturing thousands of long-tail search queries with unique, valuable pages that compound organic traffic exponentially.",
+      "Eddinet provides specialized Programmatic SEO Services in India for businesses that need thousands of pages — city pages, product variations, comparison pages — without flooding their site with thin, repetitive content. Scale is easy to get wrong; done right, it's one of the fastest ways to capture search demand you're currently missing entirely.",
     image: "/SEO-SERVICES-CHILD-IMAGES/Programmatic SEO.webp",
     problemStatement:
       "Manually creating individual pages for every product, location, feature or use-case is impossible at scale. Businesses with large inventories, multiple locations or extensive service offerings leave thousands of long-tail search queries unanswered — queries that individually drive small traffic but collectively represent massive organic potential. Without programmatic SEO, you are ignoring the long tail where competition is low and conversion intent is high.",
     features: [
       {
-        title: "Programmatic Page Strategy",
+        title: "Opportunity Research",
         description:
-          "Identifying which long-tail queries can be captured at scale through template-driven pages, with analysis of search volume, competition and business value.",
+          "We identify where programmatic SEO genuinely makes sense for your business — locations, comparisons, product variations — based on real search volume and business relevance.",
       },
       {
-        title: "Data-Powered Template Design",
+        title: "Data Structuring & Template Design",
         description:
-          "Building flexible page templates that generate unique, valuable pages from structured data — product databases, service catalogues, location lists or feature matrices.",
+          "We structure the data behind your pages and design templates that pull unique, relevant information into each one, avoiding repetitive, generic content.",
       },
       {
-        title: "Content Uniqueness Engineering",
+        title: "On-Page Optimization at Scale",
         description:
-          "Ensuring every generated page has unique value — not just swapped keywords — through dynamic content blocks, unique data points and contextual variations.",
+          "We build titles, headers, internal linking, and schema directly into your templates, so every generated page follows SEO best practices from the start.",
       },
       {
-        title: "Quality Control & Indexation",
+        title: "Internal Linking Architecture",
         description:
-          "Automated quality checks, thin content prevention, canonical strategy and indexation management to ensure Google indexes valuable pages and ignores duplicates.",
+          "We design linking structures that help search engines discover and understand relationships between your programmatic pages efficiently.",
       },
       {
-        title: "Performance Monitoring at Scale",
+        title: "Quality Control & Enrichment",
         description:
-          "Tracking ranking distribution, indexation rates, traffic by page cluster and conversion performance across thousands of generated pages.",
+          "We build quality checks and enrichment strategies into the process, ensuring pages provide real value instead of feeling automated or thin.",
       },
       {
-        title: "Template Iteration & Optimisation",
+        title: "Performance Monitoring by Page Category",
         description:
-          "Continuous improvement of templates based on performance data — updating layouts, content blocks, internal linking and CTAs to improve aggregate results.",
+          "We track performance across entire page sets, not just individual URLs, spotting patterns that help refine templates over time.",
       },
     ],
     whyChooseUs: {
-      heading: "Why Choose Eddinet for Programmatic SEO",
+      heading: "Why Businesses Pick Eddinet as Their SEO Company in India",
       points: [
-        "Technical capability to build and manage programmatic page generation at scale",
-        "Content engineering that prevents thin content penalties while capturing long-tail demand",
-        "Quality control frameworks that maintain page value across thousands of generated pages",
-        "Experience across eCommerce, SaaS, travel, real estate and directory-style businesses",
-        "Performance monitoring built for aggregate page cluster analysis, not just individual URLs",
-        "Integration with data sources, CMS platforms and development workflows",
+        "Quality First, Scale Second — We prioritize real page value so your rankings remain sustainable long-term.",
+        "Intent-Focused Templates — Every template reflects actual user search queries rather than filler variations.",
+        "Technical Scale Management — We optimize internal linking, crawl efficiency, and indexation right from launch.",
+        "Data-Driven Collaboration — We structure your data carefully to power high-performing automated pages.",
+        "Pattern-Based Performance Tracking — We analyze entire page categories together to continuously refine your system.",
       ],
     },
     process: {
-      heading: "How We Execute Programmatic SEO Projects",
+      heading: "How Eddinet Works, Step by Step",
       steps: [
         {
           num: "01",
-          title: "Understand the Business & Intent",
+          title: "Opportunity Identification",
           description:
-            "Map your data assets, product/service catalogue, location coverage and content opportunities to identify programmatic page potential.",
+            "We analyze your data and search demand to identify where programmatic SEO can realistically drive results.",
         },
         {
           num: "02",
-          title: "Audit the Core Constraint",
+          title: "Template & Structure Planning",
           description:
-            "Analyse existing long-tail coverage, identify keyword clusters that can be captured at scale and assess current template performance if any exist.",
+            "We design the page structure, deciding what data points and SEO elements each page needs to include.",
         },
         {
           num: "03",
-          title: "Targeted Keyword Architecture",
-        description:
-            "Build keyword cluster maps organised by template type, with prioritisation based on search volume potential, competition and conversion intent.",
+          title: "Build & Implementation",
+          description:
+            "We work with your team or developers to implement templates and generate pages from structured data.",
         },
         {
           num: "04",
-          title: "System Asset Deployment",
+          title: "Quality Review",
           description:
-            "Design templates, build page generation systems, implement quality controls, deploy pages and configure indexation strategy.",
+            "We review pages for uniqueness and SEO compliance before and after launch, adjusting templates as needed.",
         },
         {
           num: "05",
-          title: "Performance Auditing",
+          title: "Monitoring & Iteration",
           description:
-            "Track aggregate metrics — total indexed pages, cluster ranking distribution, traffic growth by template type and conversion rates by page group.",
-        },
-        {
-          num: "06",
-          title: "Continuous Authority Compounding",
-          description:
-            "Expand template coverage, iterate on page designs, add new data sources and optimise existing templates based on performance insights.",
+            "We track performance by page category, refining the approach based on what's actually working.",
         },
       ],
     },
@@ -2127,7 +2076,7 @@ export const seoChildServices: SeoChildService[] = [
       },
     ],
     detailedDescription:
-      "Programmatic SEO is the practice of generating large numbers of unique, valuable web pages from structured data and templates, enabling businesses to capture thousands of long-tail search queries that would be impossible to target manually. At Eddinet, our Programmatic SEO services in Delhi NCR help businesses with large product catalogues, multiple locations or extensive service offerings scale organic traffic exponentially.\n\nManual page creation has hard limits. A business with 20,000 products, hundreds of locations or dozens of service categories cannot write individual pages for every combination of query terms users search. Programmatic SEO solves this by building flexible templates that generate unique pages from structured data — product databases, service catalogues, location lists or feature matrices.\n\nThe critical discipline in Programmatic SEO is content uniqueness. Pages that swap keywords without adding value get flagged as thin content. Our Programmatic SEO approach uses dynamic content blocks, unique data points, contextual information and structured data to ensure every generated page provides genuine, distinct value that serves both users and search engines.\n\nQuality control and indexation management complete the system. Automated quality checks prevent thin content at scale, canonical strategies protect against duplicate indexing and crawl budget management ensures Google indexes valuable pages efficiently. Performance monitoring tracks ranking distribution, indexation rates and traffic growth by page cluster — aggregate analysis that reveals what individual URL tracking cannot.\n\nFor businesses in Delhi NCR managing large datasets that map to searchable queries, our Programmatic SEO services unlock the long tail where competition is low and conversion intent is high.",
+      "Programmatic SEO gets misunderstood as simply generating pages in bulk. Done properly, it's a careful balance of real data, meaningful variation, and templates built around genuine search intent. As a SEO company in India that's built exactly this kind of system, Eddinet focuses on scale that actually holds up — pages that rank because they're useful, not just numerous.\n\nWe've helped businesses avoid the common trap of generic, duplicate-feeling pages by anchoring every template in real data and clear user value, so growth in page count doesn't come at the cost of quality or rankings.",
     whoNeedsThis: {
       heading: "Who Needs Programmatic SEO?",
       description:
@@ -2143,34 +2092,34 @@ export const seoChildServices: SeoChildService[] = [
     },
     benefits: [
       {
-        title: "Exponential Traffic Scaling",
+        title: "Massive Content Coverage",
         description:
-          "Capture thousands of long-tail queries simultaneously, compounding organic traffic far beyond manual page-building limits.",
+          "Reach thousands of relevant searches without a proportional jump in manual work.",
       },
       {
-        title: "Thin Content Prevention",
+        title: "Consistent Quality",
         description:
-          "Dynamic content blocks, unique data points and quality thresholds ensure every generated page has genuine, indexed-worthy value.",
+          "Every page follows the same optimized structure, avoiding inconsistent results.",
       },
       {
-        title: "Efficient Crawl Budget Use",
+        title: "Faster Market Coverage",
         description:
-          "Canonical strategies and indexation management that ensure Google indexes valuable pages while ignoring duplicates at scale.",
+          "Capture location or product-based opportunities far quicker than manual page creation.",
       },
       {
-        title: "High-Intent Long-Tail Capture",
+        title: "Better Use of Your Team's Time",
         description:
-          "Programmatic pages typically target specific, low-competition queries with high conversion intent — queries manual SEO ignores.",
+          "Your people focus on strategy while the system handles scale.",
       },
       {
-        title: "Template-Driven Agility",
+        title: "Long-Tail Search Capture",
         description:
-          "Continuously iterate, expand and optimise templates based on cluster performance data rather than rebuilding individual pages.",
+          "Reach highly specific queries that would be impractical to target one page at a time.",
       },
       {
-        title: "Data Asset Leverage",
+        title: "A Foundation That Grows With Your Data",
         description:
-          "Turn existing product, location, catalogue or feature data into ranked pages — unlocking search value from assets you already own.",
+          "As your business expands, your page footprint can expand right alongside it.",
       },
     ],
     industries: [
@@ -2211,22 +2160,30 @@ export const seoChildServices: SeoChildService[] = [
       { value: "10x", label: "Faster page production vs. manual creation" },
       { value: "85%", label: "Pages ranked in Google's first 3 result pages" },
     ],
-    faqs: [
+faqs: [
       {
-        q: "Is programmatic SEO considered spam by Google?",
-        a: "Not when done correctly. Google penalises thin, duplicate content generated purely for search engines. Programmatic pages that provide genuine unique value — real data, useful information and good user experience — are treated as legitimate content. The key is ensuring each page has unique value beyond just keyword substitution.",
+        q: "What is programmatic SEO, exactly?",
+        a: "It's a strategy for creating large numbers of optimized pages using data-driven templates, typically for location pages, product variations, or comparison pages, rather than building each page manually.",
       },
       {
-        q: "How many pages can programmatic SEO generate?",
-        a: "It depends on your data assets. Businesses with large product catalogues, multiple locations or extensive feature sets can generate thousands to tens of thousands of unique pages. We help identify the right scale based on search demand and business value.",
+        q: "Won't generating thousands of pages create duplicate content issues?",
+        a: "Not if done correctly. The key is designing templates that pull in genuinely unique, relevant data for each page rather than repeating the same content with small tweaks.",
       },
       {
-        q: "How do you prevent thin content issues?",
-        a: "Every template includes dynamic content blocks, unique data points, contextual information and structured data that give each page distinct value. We implement quality thresholds, automated audits and indexation controls to prevent thin content penalties.",
+        q: "What kind of businesses benefit most from programmatic SEO?",
+        a: "Businesses with location-based services, large product catalogs, or naturally scalable data — like real estate, marketplaces, or multi-location service providers typically benefit the most.",
       },
       {
-        q: "What industries benefit most from programmatic SEO?",
-        a: "eCommerce, marketplaces, travel, real estate, directories, SaaS (feature pages), job boards, education (course listings) and any business with large structured datasets that map to searchable queries.",
+        q: "How much data do we need to get started?",
+        a: "It varies by use case, but you'll generally need structured data covering the variables your pages will be built around, such as locations, products, or categories.",
+      },
+      {
+        q: "How long does it take to see results from programmatic SEO?",
+        a: "Initial indexing can happen within weeks, but meaningful ranking growth across page sets typically takes 3 to 6 months depending on competition and quality.",
+      },
+      {
+        q: "Can programmatic SEO work alongside our existing content strategy?",
+        a: "Yes, it typically complements existing content rather than replacing it, covering search opportunities that would be impractical to target manually.",
       },
     ],
     crossLinks: [
@@ -2255,91 +2212,84 @@ export const seoChildServices: SeoChildService[] = [
       "Rank higher on Amazon search. Eddinet's Amazon SEO covers listing optimisation, A9 algorithm strategy, backend keywords & A+ content. Grow your Amazon visibility. Free audit.",
     heroHeading: "Amazon SEO Services in Delhi NCR",
     heroSubheading:
-      "Amazon search operates on its own algorithm — A9 and A10 — with completely different ranking signals than Google. Optimising for Amazon means optimising for Amazon's buying-intent ecosystem.",
+      "Eddinet helps sellers stop losing sales to page-three listings. On Amazon, ranking has nothing to do with Google — it's about A9/A10 and what actually gets your product in front of a shopper who's ready to buy right now.",
     image: "/SEO-SERVICES-CHILD-IMAGES/seo_service_image.webp.webp",
     problemStatement:
       "Amazon is the first place consumers search when they want to buy. But ranking on Amazon requires a fundamentally different SEO approach than Google. Backend keywords, listing copy, image strategy, review velocity, conversion rate and fulfilment method all influence A9/A10 ranking. Most sellers either apply Google SEO thinking to Amazon or ignore optimisation entirely — losing visibility to competitors who understand Amazon's unique ranking ecosystem.",
     features: [
       {
-        title: "Keyword Research for Amazon",
+        title: "Amazon Keyword Research",
         description:
-          "Amazon-specific keyword research using search query performance, competitor ASIN analysis and A9 search term data to identify high-converting search terms.",
+          "We identify the exact terms your customers search for on Amazon, including high-intent, long-tail keywords competitors often miss entirely.",
       },
       {
-        title: "Listing Optimisation",
+        title: "Listing Optimization",
         description:
-          "Title, bullet points, description and A+ content crafted around high-intent keywords, buying triggers and conversion psychology specific to Amazon shoppers.",
+          "We rewrite titles, bullet points, descriptions, and backend search terms to satisfy both Amazon's algorithm and the shopper deciding whether to click \"Buy Now.\"",
       },
       {
-        title: "Backend Search Term Optimisation",
+        title: "A+ Content & Enhanced Brand Content",
         description:
-          "Strategic backend keyword placement — search terms, subject matter, intended use — that expand listing visibility without cluttering customer-facing copy.",
+          "We help design A+ Content that strengthens brand presentation and lifts conversion rates directly on your product pages.",
       },
       {
-        title: "A+ Content & Brand Story",
+        title: "Image & Visual Strategy Guidance",
         description:
-          "Enhanced Brand Content and A+ Content modules that improve conversion rates, reduce returns and differentiate your products from competitors in search results.",
+          "We advise on image sequencing and visual content, since click-through and conversion rate are direct ranking signals on Amazon.",
       },
       {
         title: "Review & Rating Strategy",
         description:
-          "Ethical review generation through Amazon Vine, follow-up email campaigns and product insert strategies that build social proof and improve conversion rates.",
+          "We guide approaches to build genuine reviews, since both volume and rating quality influence rankings and buyer trust simultaneously.",
       },
       {
-        title: "Amazon PPC & SEO Integration",
+        title: "Amazon Audits & Competitor Benchmarking",
         description:
-          "Coordinated advertising and organic strategy where PPC data informs keyword targeting and organic rankings reduce dependency on paid spend.",
+          "We audit your listings against top competitors, identifying specific gaps in keywords, content, and conversion elements.",
       },
     ],
     whyChooseUs: {
-      heading: "Why Choose Eddinet for Amazon SEO",
+      heading: "Why Businesses Pick Eddinet as Their SEO Company in India",
       points: [
-        "Dedicated Amazon SEO specialists, not generalist SEO practitioners",
-        "Data-driven keyword strategy using Amazon-specific search analytics",
-        "A+ Content design that improves both conversion and search visibility",
-        "PPC-organic integration that maximises total Amazon search visibility",
-        "Review generation systems that build ratings ethically and sustainably",
-        "Monthly reporting on rankings, search impression share, conversion rates and revenue",
+        "We speak Amazon's language, not just Google's. Our Amazon SEO services in India are built around A9/A10 specifically, not generic SEO applied incorrectly.",
+        "We optimize for the sale, not just the click. Every recommendation considers both visibility and what actually convinces someone to buy.",
+        "We look at the full listing, not one piece. Keywords, images, and reviews all get treated as part of the same system.",
+        "We benchmark against real competitors. Our strategies reflect what's genuinely working in your specific category.",
+        "We keep up as Amazon changes. Algorithm shifts and new best practices get folded into our approach continuously.",
       ],
     },
     process: {
-      heading: "How We Execute Amazon SEO Projects",
+      heading: "How Eddinet Works, Step by Step",
       steps: [
         {
           num: "01",
-          title: "Understand the Business & Intent",
+          title: "Account & Listing Audit",
           description:
-            "Analyse your product catalogue, competitive landscape, current Amazon performance and business goals to build a focused optimisation strategy.",
+            "We review your current listings and competitor positioning to find where the biggest opportunities exist.",
         },
         {
           num: "02",
-          title: "Audit the Core Constraint",
+          title: "Keyword & Strategy Planning",
           description:
-            "Full listing audit — keyword coverage, backend optimisation, image quality, content structure, review profile and conversion rate analysis.",
+            "We build a keyword strategy prioritizing terms with real buyer intent and realistic ranking potential.",
         },
         {
           num: "03",
-          title: "Targeted Keyword Architecture",
+          title: "Listing Optimization",
           description:
-            "Map high-converting keywords to specific ASINs, prioritising terms with strong purchase intent and manageable competition.",
+            "We rewrite and optimize titles, bullet points, and backend keywords across your catalog.",
         },
         {
           num: "04",
-          title: "System Asset Deployment",
+          title: "Content & Visual Enhancement",
           description:
-            "Optimise listings, implement backend keywords, create A+ Content, set up review campaigns and configure tracking dashboards.",
+            "We guide A+ Content and image strategy improvements to strengthen conversion alongside visibility.",
         },
         {
           num: "05",
-          title: "Performance Auditing",
+          title: "Monitoring & Refinement",
           description:
-            "Track organic ranking position, search impression share, conversion rates, review velocity and revenue impact from optimisation.",
-        },
-        {
-          num: "06",
-          title: "Continuous Authority Compounding",
-          description:
-            "Expand keyword targeting, iterate on listing content, build review volume and adapt strategy based on Amazon algorithm updates and competitive changes.",
+            "We track rankings and conversion rates, adjusting as Amazon's algorithm and your competition shift.",
         },
       ],
     },
@@ -2364,7 +2314,7 @@ export const seoChildServices: SeoChildService[] = [
       },
     ],
     detailedDescription:
-      "Amazon SEO is the process of optimising product listings to rank higher in Amazon's internal search results, driven by the A9 and A10 algorithms that determine which products surface for customer searches. At Eddinet, our Amazon SEO services in Delhi NCR help sellers succeed in the ecosystem where customers go with the clearest buying intent — Amazon itself.\n\nAmazon search operates fundamentally differently from Google. Instead of content and backlinks, Amazon's algorithm prioritises conversion rate, sales velocity, review quality, relevance and fulfilment method. Ranking well on Amazon means convincing both the algorithm and the shopper simultaneously — a challenge that requires Amazon-specific expertise rather than general SEO knowledge.\n\nOur Amazon SEO approach starts with platform-specific keyword research using search query performance data, competitor ASIN analysis and A9 search term intelligence to identify the high-converting search terms that drive sales. Listing optimisation covers title, bullet points, description and backend search terms, all crafted around high-intent keywords and the purchase psychology of Amazon shoppers.\n\nA+ Content and Enhanced Brand Content are strategic Amazon SEO assets. We design modules that improve conversion rates, reduce returns and add keyword-rich content that supports organic ranking. Review and rating strategy — through ethical generation systems including Amazon Vine and follow-up campaigns — builds the social proof that Amazon's algorithm rewards.\n\nOur Amazon SEO integrates PPC and organic strategy, using advertising data to inform keyword targeting while organic ranking improvements reduce dependency on paid spend. For sellers in Delhi NCR competing in Amazon's product searches, our Amazon SEO services deliver the platform-specific expertise needed to rank, convert and grow.",
+      "Amazon runs on its own rules — relevance, conversion rate, and customer satisfaction signals, not backlinks or domain authority. As a SEO company in India working with sellers and brands, Eddinet focuses specifically on what moves the needle inside Amazon's marketplace, not generic SEO principles applied where they don't fit.\n\nWe've helped listings move from buried and ignored to consistently visible, by treating keywords, content, images, and reviews as one connected system instead of separate tasks. Ranking without conversion doesn't grow a business — so we optimize for both at once.",
     whoNeedsThis: {
       heading: "Who Needs Amazon SEO?",
       description:
@@ -2380,34 +2330,34 @@ export const seoChildServices: SeoChildService[] = [
     },
     benefits: [
       {
-        title: "Page One Vendor Visibility",
+        title: "Higher Listing Visibility",
         description:
-          "Move core keywords from buried positions to Amazon page one through listing optimisation, relevance signals and conversion improvement.",
+          "Better rankings for the exact terms your customers search.",
       },
       {
-        title: "A9/A10 Algorithm Alignment",
+        title: "Stronger Conversion Rates",
         description:
-          "Optimisation engineered specifically for Amazon's ranking algorithm — conversion, velocity, reviews and relevance — not Google principles.",
+          "Optimized content and visuals that turn views into actual purchases.",
       },
       {
-        title: "Conversion-Focused Listings",
+        title: "More Organic Sales",
         description:
-          "Titles, bullets, descriptions and A+ Content crafted around buying psychology that lift both rankings and conversion rates.",
+          "Reduced reliance on Amazon PPC for consistent traffic.",
       },
       {
-        title: "Backend Keyword Expansion",
+        title: "Smarter Ad Spend",
         description:
-          "Strategic backend search term placement that expands listing visibility across high-intent queries without cluttering customer-facing copy.",
+          "Organic visibility and paid campaigns supporting each other instead of competing.",
       },
       {
-        title: "Review & Rating Growth",
+        title: "Greater Buyer Trust",
         description:
-          "Ethical review generation through Amazon Vine and smart follow-up campaigns that build the social proof Amazon rewards.",
+          "Well-structured listings and strong reviews build confidence before purchase.",
       },
       {
-        title: "PPC-Organic Synergy",
+        title: "Sustained, Long-Term Growth",
         description:
-          "Integrated advertising and organic strategy where paid data informs SEO and organic gains reduce advertising dependency.",
+          "Ongoing optimization keeps you competitive as the marketplace shifts.",
       },
     ],
     industries: [
@@ -2451,19 +2401,27 @@ export const seoChildServices: SeoChildService[] = [
     faqs: [
       {
         q: "How is Amazon SEO different from Google SEO?",
-        a: "Amazon's A9/A10 algorithm prioritises conversion rate, sales velocity, review quality and fulfilment method — completely different from Google's content and backlink-based approach. Amazon SEO requires platform-specific keyword research, listing optimisation and backend configuration that generalist SEO does not cover.",
+        a: "Amazon SEO focuses on Amazon's own algorithm, which prioritizes keyword relevance, conversion rate, and customer satisfaction, rather than backlinks and general web authority.",
       },
       {
-        q: "How long does Amazon SEO take to show results?",
-        a: "Listing optimisation can show ranking improvement within 1 to 2 weeks as Amazon re-indexes updated content. Significant ranking movement for competitive keywords typically takes 4 to 8 weeks of sustained optimisation. Review building compounds over 3 to 6 months.",
+        q: "How long does it take to see improved rankings on Amazon?",
+        a: "Initial listing changes can show impact within a few weeks, though strong, sustained rankings usually build over a couple of months alongside consistent sales and reviews.",
       },
       {
-        q: "Do you also manage Amazon PPC campaigns?",
-        a: "Yes. We offer integrated Amazon SEO and PPC services where advertising data informs organic keyword strategy and organic ranking improvements reduce dependency on paid spend. The two channels work together for maximum Amazon visibility.",
+        q: "Do you help with Amazon PPC as well?",
+        a: "Our focus is organic Amazon SEO, but we help ensure your organic and paid strategies complement rather than compete with each other.",
       },
       {
-        q: "Can you help with Amazon A+ Content?",
-        a: "Absolutely. A+ Content design and optimisation is a core part of our Amazon SEO service. Enhanced Brand Content improves conversion rates, reduces returns and provides additional keyword-rich content that supports organic ranking.",
+        q: "Can Amazon SEO help if I have very few reviews?",
+        a: "Yes, listing and keyword optimization still improve visibility, but building a genuine review strategy alongside it will significantly strengthen rankings and conversions over time.",
+      },
+      {
+        q: "Will you write my product listing content?",
+        a: "Yes, we handle title, bullet point, and description optimization, along with backend search term and A+ Content guidance.",
+      },
+      {
+        q: "Does Amazon SEO work the same across all product categories?",
+        a: "The core principles stay consistent, but keyword competition and buyer behavior vary by category, so we tailor strategy accordingly.",
       },
     ],
     crossLinks: [

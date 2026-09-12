@@ -23,21 +23,7 @@ export default function ContactForm({ compact = false }: { compact?: boolean }) 
 
   if (compact) {
     return (
-      <form onSubmit={handleSubmit} className="flex flex-col">
-        <div className="flex items-center gap-3.5 mb-3.5">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[var(--main-accent)] to-[rgba(var(--accent-rgb),0.6)] flex items-center justify-center text-[1.15rem] shrink-0 shadow-[0_8px_20px_rgba(var(--accent-rgb),0.3)]">
-            🚀
-          </div>
-          <div>
-            <h3 className="text-[1.05rem] font-extrabold leading-tight text-[var(--text-main)]">
-              Get Your Free Strategy Call
-            </h3>
-            <p className="text-[var(--text-muted)] text-[0.7rem] leading-snug">
-              We&apos;ll map the fastest path to growth.
-            </p>
-          </div>
-        </div>
-
+      <form onSubmit={handleSubmit} className="flex flex-col pt-3.5">
         <div className="space-y-2.5">
           <div className="grid grid-cols-2 gap-2.5 max-[600px]:grid-cols-1">
             <div>

@@ -3,47 +3,53 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import {
-  seoChildServices,
-  getSeoChildBySlug,
-} from "@/data/seo-child-services";
+  generatedChildServices,
+  getGeneratedChildByCategoryAndSlug,
+  getCategoryBySlug,
+} from "@/data/generated-child-services";
 import ContactForm from "@/components/ContactForm";
 import Industries from "@/components/Industries";
 import { site } from "@/data/site";
 
 export function generateStaticParams() {
-  return seoChildServices.map((c) => ({ childSlug: c.slug }));
+  return generatedChildServices.map((c) => ({
+    slug: c.categorySlug,
+    childSlug: c.slug,
+  }));
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ childSlug: string }>;
+  params: Promise<{ slug: string; childSlug: string }>;
 }): Promise<Metadata> {
-  const { childSlug } = await params;
-  const child = getSeoChildBySlug(childSlug);
+  const { slug, childSlug } = await params;
+  const child = getGeneratedChildByCategoryAndSlug(slug, childSlug);
   if (!child) return {};
   return {
     title: child.metaTitle,
     description: child.metaDescription,
     alternates: {
-      canonical: `https://eddinet.com/services/seo/${child.slug}`,
+      canonical: `https://eddinet.com/services/${slug}/${child.slug}`,
     },
     openGraph: {
       title: child.metaTitle,
       description: child.metaDescription,
-      url: `https://eddinet.com/services/seo/${child.slug}`,
+      url: `https://eddinet.com/services/${slug}/${child.slug}`,
     },
   };
 }
 
-export default async function SeoChildPage({
+export default async function ServiceChildPage({
   params,
 }: {
-  params: Promise<{ childSlug: string }>;
+  params: Promise<{ slug: string; childSlug: string }>;
 }) {
-  const { childSlug } = await params;
-  const child = getSeoChildBySlug(childSlug);
+  const { slug, childSlug } = await params;
+  const child = getGeneratedChildByCategoryAndSlug(slug, childSlug);
   if (!child) notFound();
+
+  const category = getCategoryBySlug(slug);
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -51,8 +57,8 @@ export default async function SeoChildPage({
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://eddinet.com/" },
       { "@type": "ListItem", position: 2, name: "Services", item: "https://eddinet.com/services" },
-      { "@type": "ListItem", position: 3, name: "SEO & AI SEO", item: "https://eddinet.com/services/seo" },
-      { "@type": "ListItem", position: 4, name: child.title, item: `https://eddinet.com/services/seo/${child.slug}` },
+      { "@type": "ListItem", position: 3, name: child.categoryTitle, item: `https://eddinet.com/services/${slug}` },
+      { "@type": "ListItem", position: 4, name: child.title, item: `https://eddinet.com/services/${slug}/${child.slug}` },
     ],
   };
 
@@ -62,7 +68,7 @@ export default async function SeoChildPage({
     serviceType: child.title,
     name: `${child.title} Services in Delhi NCR`,
     description: child.detailedDescription,
-    url: `https://eddinet.com/services/seo/${child.slug}`,
+    url: `https://eddinet.com/services/${slug}/${child.slug}`,
     provider: {
       "@type": "Organization",
       name: "Eddinet",
@@ -106,7 +112,7 @@ export default async function SeoChildPage({
             <span className="text-[var(--text-dim)]/60">/</span>
             <Link href="/services" className="hover:text-[var(--main-accent)] no-underline transition-colors duration-300">Services</Link>
             <span className="text-[var(--text-dim)]/60">/</span>
-            <Link href="/services/seo" className="hover:text-[var(--main-accent)] no-underline transition-colors duration-300">SEO &amp; AI SEO</Link>
+            <Link href={`/services/${slug}`} className="hover:text-[var(--main-accent)] no-underline transition-colors duration-300">{child.categoryTitle}</Link>
             <span className="text-[var(--text-dim)]/60">/</span>
             <span className="text-[var(--main-accent)]">{child.title}</span>
           </nav>
@@ -201,7 +207,6 @@ export default async function SeoChildPage({
           <div className="grid grid-cols-3 gap-6 max-[1024px]:grid-cols-2 max-[640px]:grid-cols-1">
             {child.features.map((feature, i) => (
               <div key={i} className="group relative rounded-2xl p-7 overflow-hidden transition-all duration-500 hover:-translate-y-2 bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-transparent hover:shadow-[0_20px_50px_rgba(var(--accent-rgb),0.15)]">
-                {/* Gradient edge on hover */}
                 <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{
                   background: "var(--card-edge-gradient)",
                   padding: "1px",
@@ -296,9 +301,9 @@ export default async function SeoChildPage({
           {/* 90-day expectation band */}
           <div className="grid grid-cols-3 gap-5 mb-12 max-[768px]:grid-cols-1">
             {[
-              { phase: "Month 1–2", title: "Foundation", desc: "Full audit, critical fixes and strategy locked in — blockers cleared fast.", icon: "🔍" },
-              { phase: "Month 3–4", title: "Momentum", desc: "First ranking lifts and qualified traffic movement become visible.", icon: "📈" },
-              { phase: "Month 5+", title: "Compounding", desc: "Authority compounds and cost per lead keeps falling as visibility grows.", icon: "🚀" },
+              { phase: "Week 1–2", title: "Kickoff", desc: "Discovery, audit and a clear project plan agreed before real work begins.", icon: "🔍" },
+              { phase: "Week 3–6", title: "Execution", desc: "Core work ships in milestones you review and sign off as we go.", icon: "📈" },
+              { phase: "Month 2+", title: "Scaling", desc: "Winning approaches are repeated, measured and scaled for outcomes.", icon: "🚀" },
             ].map((e, i) => (
               <div key={i} className="relative overflow-hidden rounded-2xl p-6 text-center transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(var(--accent-rgb),0.25)]">
                 <div className="absolute inset-0 opacity-95" style={{ background: "var(--primary-gradient)" }} />
@@ -354,7 +359,7 @@ export default async function SeoChildPage({
               <span className="gradient-text">{child.whyChooseUs.heading}</span>
             </h2>
             <p className="text-[var(--text-muted)] text-[1.05rem] max-w-[680px] mx-auto">
-              {serviceName.toLowerCase()} in Delhi NCR is crowded with agencies that sell tactics. Eddinet sells a connected system — strategy, technical execution, intent-led content and transparent reporting engineered to turn search visibility into revenue.
+              {serviceName.toLowerCase()} is crowded with agencies that sell tactics. Eddinet sells a connected system — strategy, execution, quality and transparent reporting engineered to turn delivery into reliable outcomes.
             </p>
           </div>
 
@@ -386,7 +391,7 @@ export default async function SeoChildPage({
                 </div>
 
                 <Link href="/contact" className="inline-flex items-center gap-2.5 py-3 px-6 rounded-full font-bold text-[0.9rem] no-underline transition-all duration-300 text-[var(--on-primary)] shadow-[0_10px_25px_-5px_rgba(var(--accent-rgb),0.4)] hover:-translate-y-[3px]" style={{ background: "var(--primary-gradient)" }}>
-                  Get a free {serviceName} audit →
+                  Get a free {serviceName} consultation →
                 </Link>
               </div>
 
