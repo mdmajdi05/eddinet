@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { caseStudies } from "@/data/caseStudies";
+import { caseStudies } from "@/data/case-studies";
 
 export default function Portfolio() {
   return (

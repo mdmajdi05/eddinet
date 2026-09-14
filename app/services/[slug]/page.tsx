@@ -2,18 +2,10 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  servicePages,
-  getServiceBySlug,
-  faqsByService,
-  relatedServices,
-  itemDetails,
-  childServiceImages,
-  type Service,
-} from "@/data/services";
-import { getChildSlug } from "@/data/generated-child-services";
-import { processSteps } from "@/data/site";
+import { servicePages, getServiceBySlug } from "@/data/services";
+import { getCategoryPageContent } from "@/data/service-page-content";
 import ContactForm from "@/components/ContactForm";
+import AboutSection from "@/components/AboutSection";
 
 export function generateStaticParams() {
   return servicePages.map((s) => ({ slug: s.slug }));
@@ -25,16 +17,16 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const s = getServiceBySlug(slug);
-  if (!s) return {};
+  const content = getCategoryPageContent(slug);
+  if (!content) return {};
   return {
-    title: `${s.title} Services in Delhi NCR`,
-    description: s.desc,
-    alternates: { canonical: `https://eddinet.com/services/${s.slug}` },
+    title: content.metaTitle,
+    description: content.metaDescription,
+    alternates: { canonical: `https://eddinet.com/services/${slug}` },
     openGraph: {
-      title: `${s.title} Services in Delhi NCR | Eddinet`,
-      description: s.desc,
-      url: `https://eddinet.com/services/${s.slug}`,
+      title: content.metaTitle,
+      description: content.metaDescription,
+      url: `https://eddinet.com/services/${slug}`,
     },
   };
 }
@@ -47,17 +39,12 @@ function slugify(text: string) {
     .replace(/(^-|-$)/g, "");
 }
 
-const cardPositions = ["center", "top", "center 35%", "center 60%", "bottom", "center 25%"];
-
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const s = getServiceBySlug(slug);
   if (!s) notFound();
-
-  const faqs = faqsByService[s.slug] ?? [];
-  const related = (relatedServices[s.slug] ?? [])
-    .map(getServiceBySlug)
-    .filter((x): x is Service => Boolean(x));
+  const content = getCategoryPageContent(slug);
+  if (!content) notFound();
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -93,8 +80,19 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     },
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: content.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <>
+      {/* 1. HERO */}
       <section className="pt-[150px] pb-[80px] overflow-hidden relative">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute inset-0 bg-gradient-to-br from-[var(--main-accent)]/5 via-transparent to-transparent" />
@@ -102,22 +100,28 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </div>
 
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5 relative z-10">
-          {/* Breadcrumb */}
           <nav className="mb-8 text-[0.85rem] text-[var(--text-dim)] flex flex-wrap items-center gap-2" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-[var(--main-accent)] no-underline transition-colors duration-300">Home</Link>
             <span>/</span>
             <Link href="/services" className="hover:text-[var(--main-accent)] no-underline transition-colors duration-300">Services</Link>
             <span>/</span>
-            <span className="text-[var(--main-accent)]">{s.title}</span>
+            <span className="text-[var(--main-accent)]">{content.title}</span>
           </nav>
 
           <div className="grid grid-cols-[1.1fr_0.9fr] gap-[50px] items-center max-[1024px]:grid-cols-1">
             <div>
               <h1 className="text-[3rem] font-extrabold leading-[1.1] mb-5 text-[var(--text-main)] max-[768px]:text-[2.2rem]">
-                {s.title} <span className="gradient-text">Services in Delhi NCR</span>
+                {content.heroGradient ? (
+                  <>
+                    {content.heroLead}{" "}
+                    <span className="gradient-text">{content.heroGradient}</span>
+                  </>
+                ) : (
+                  <span className="gradient-text">{content.heroHeading}</span>
+                )}
               </h1>
               <p className="text-[var(--text-muted)] text-[1.12rem] leading-relaxed mb-8 max-w-[600px]">
-                {s.desc}
+                {content.heroSubheading}
               </p>
               <div className="flex gap-4 flex-wrap mb-6">
                 <Link
@@ -136,7 +140,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               </div>
               <div className="flex items-center gap-8 pt-6 border-t border-[var(--border-color)] max-[768px]:flex-wrap">
                 <div>
-                  <strong className="block text-xl text-[var(--text-main)]">{s.allItems.length}+</strong>
+                  <strong className="block text-xl text-[var(--text-main)]">{content.allItemsCount}+</strong>
                   <span className="text-sm text-[var(--text-dim)]">Sub-services available</span>
                 </div>
                 <div>
@@ -156,79 +160,86 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </div>
       </section>
 
-      {/* What's included */}
+      {/* 2. ABOUT */}
+      <AboutSection
+        paragraphs={content.about}
+        image={s.image}
+        subheading={content.heroSubheading}
+        gradientWord="Eddinet"
+      />
+
+      {/* 3. WHAT'S INCLUDED */}
       <section className="py-[80px]">
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
           <div className="text-center mb-12">
             <h2 className="text-[2.4rem] font-extrabold leading-[1.2] mb-3 text-[var(--text-main)] max-[768px]:text-[1.9rem]">
-              What&apos;s Included in <span className="gradient-text">{s.title}</span>
+              Our Services in <span className="gradient-text">{content.title}</span>
             </h2>
             <p className="text-[var(--text-muted)] text-[1.05rem] max-w-[640px] mx-auto">
-              Every engagement is scoped around your business outcome. These are the capabilities we bring to {s.title.toLowerCase()} projects.
+              Every engagement is scoped around your business outcome. These are the services we deliver for {content.title.toLowerCase()} projects.
             </p>
           </div>
-          <div className="grid grid-cols-3 gap-6 max-[1024px]:grid-cols-2 max-[600px]:grid-cols-1">
-            {s.allItems.map((item, j) => {
-              const childSlug = getChildSlug(s.slug, item);
-              const cardHref = childSlug ? `/services/${s.slug}/${childSlug}` : null;
-              const cardContent = (
-                <>
-                  <div className="relative w-full h-56">
+          <div className="grid grid-cols-2 gap-6 max-[1024px]:grid-cols-1">
+            {content.services.map((item, j) => {
+              const cardClasses =
+                "group relative grid grid-cols-[minmax(0,0.42fr)_minmax(0,0.58fr)] bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[rgba(var(--accent-rgb),0.35)] hover:shadow-[0_20px_50px_rgba(var(--accent-rgb),0.12)] scroll-mt-28";
+
+              const btnClasses =
+                "mt-auto inline-flex items-center justify-center gap-2 py-3 px-5 rounded-full font-bold text-[0.85rem] no-underline self-start text-[var(--main-accent)] border border-[rgba(var(--accent-rgb),0.3)] bg-[rgba(var(--accent-rgb),0.06)] transition-all duration-300 hover:text-[var(--on-primary)] hover:border-transparent hover:[background:var(--primary-gradient)] hover:shadow-[0_10px_25px_-5px_rgba(var(--accent-rgb),0.4)] hover:gap-3 group/btn";
+
+              const imageBlock = (
+                <div className="p-4 sm:p-5 flex items-center bg-[var(--bg-card)]">
+                  <div className="relative w-full rounded-2xl overflow-hidden border border-[var(--border-color)] shadow-[0_15px_40px_-15px_rgba(0,0,0,0.5)]">
                     <Image
-                      src={childServiceImages[s.slug]?.[item] ?? s.image}
-                      alt={item}
-                      fill
-                      className="object-fill"
-                      sizes="(max-width: 768px) 100vw, 33vw"
+                      src={item.image}
+                      alt={item.title}
+                      width={800}
+                      height={450}
+                      className="w-full h-auto object-contain block"
+                      sizes="(max-width: 1024px) 100vw, 33vw"
                       unoptimized
                     />
-                    <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 py-1 px-3 rounded-full bg-black/45 backdrop-blur-md border border-white/10 text-white/90 text-[0.7rem] font-bold z-10">
-                      ✓ Included
+                    <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 py-1 px-3 rounded-full bg-black/60 text-white/90 text-[0.7rem] font-bold z-10">
+                      ✓ Core Service
                     </span>
                   </div>
-
-                  <div className="p-5 flex flex-col flex-1">
-                    <h3 className="text-[1rem] text-[var(--text-main)] font-bold leading-snug mb-2">{item}</h3>
-                    <p className="text-[var(--text-muted)] text-[0.85rem] leading-relaxed mb-5">
-                      {itemDetails[item] ?? `End-to-end ${item.toLowerCase()} capability delivered as part of a connected growth system.`}
-                    </p>
-                    {cardHref ? (
-                      <Link
-                        href={cardHref}
-                        className="mt-auto inline-flex items-center justify-center gap-2 py-3 px-5 rounded-full font-bold text-[0.85rem] no-underline text-[var(--main-accent)] border border-[rgba(var(--accent-rgb),0.3)] bg-[rgba(var(--accent-rgb),0.06)] transition-all duration-300 hover:text-[var(--on-primary)] hover:border-transparent hover:[background:var(--primary-gradient)] hover:shadow-[0_10px_25px_-5px_rgba(var(--accent-rgb),0.4)] hover:gap-3 group/btn"
-                      >
-                        Learn More
-                        <span className="transition-transform duration-300 group-hover/btn:translate-x-1">→</span>
-                      </Link>
-                    ) : (
-                      <Link
-                        href="/contact"
-                        className="mt-auto inline-flex items-center justify-center gap-2 py-3 px-5 rounded-full font-bold text-[0.85rem] no-underline text-[var(--main-accent)] border border-[rgba(var(--accent-rgb),0.3)] bg-[rgba(var(--accent-rgb),0.06)] transition-all duration-300 hover:text-[var(--on-primary)] hover:border-transparent hover:[background:var(--primary-gradient)] hover:shadow-[0_10px_25px_-5px_rgba(var(--accent-rgb),0.4)] hover:gap-3 group/btn"
-                      >
-                        Contact Us
-                        <span className="transition-transform duration-300 group-hover/btn:translate-x-1">→</span>
-                      </Link>
-                    )}
-                  </div>
-                </>
+                </div>
               );
 
-              return cardHref ? (
+              const contentBlock = (
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="text-[1.05rem] text-[var(--text-main)] font-bold leading-snug mb-2">{item.title}</h3>
+                  <p className="text-[var(--text-muted)] text-[0.88rem] leading-relaxed mb-5">
+                    {item.description}
+                  </p>
+                  {item.href ? (
+                    <span className={btnClasses}>
+                      Learn More
+                      <span className="transition-transform duration-300 group-hover/btn:translate-x-1">→</span>
+                    </span>
+                  ) : (
+                    <Link href="/contact" className={btnClasses}>
+                      Contact Us
+                      <span className="transition-transform duration-300 group-hover/btn:translate-x-1">→</span>
+                    </Link>
+                  )}
+                </div>
+              );
+
+              return item.href ? (
                 <Link
                   key={j}
-                  href={cardHref}
-                  id={slugify(item)}
-                  className="group relative flex flex-col bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[rgba(var(--accent-rgb),0.35)] hover:shadow-[0_20px_50px_rgba(var(--accent-rgb),0.12)] scroll-mt-28 no-underline"
+                  href={item.href!}
+                  id={slugify(item.title)}
+                  className={`${cardClasses} no-underline`}
                 >
-                  {cardContent}
+                  {imageBlock}
+                  {contentBlock}
                 </Link>
               ) : (
-                <div
-                  key={j}
-                  id={slugify(item)}
-                  className="group relative flex flex-col bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[rgba(var(--accent-rgb),0.35)] hover:shadow-[0_20px_50px_rgba(var(--accent-rgb),0.12)] scroll-mt-28"
-                >
-                  {cardContent}
+                <div key={j} id={slugify(item.title)} className={cardClasses}>
+                  {imageBlock}
+                  {contentBlock}
                 </div>
               );
             })}
@@ -236,19 +247,19 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </div>
       </section>
 
-      {/* Process */}
+      {/* 4. PROCESS */}
       <section className="py-[80px] bg-[var(--strip-bg)] border-y border-[var(--border-color)]">
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
           <div className="text-center mb-12">
             <h2 className="text-[2.4rem] font-extrabold leading-[1.2] mb-3 text-[var(--text-main)] max-[768px]:text-[1.9rem]">
-              How We Run <span className="gradient-text">{s.title}</span> Projects
+              <span className="gradient-text">{content.process.heading}</span>
             </h2>
             <p className="text-[var(--text-muted)] text-[1.05rem] max-w-[640px] mx-auto">
               An outcome-led process, from first conversation to continuous improvement.
             </p>
           </div>
           <div className="grid grid-cols-3 gap-[30px] max-[1024px]:grid-cols-2 max-[768px]:grid-cols-1">
-            {processSteps.map((step, i) => (
+            {content.process.steps.map((step, i) => (
               <div key={i} className="relative p-7 bg-[var(--bg-card)] border border-[var(--border-color)] rounded-[var(--radius-lg)] transition-all duration-300 hover:border-[var(--border-hover)] hover:-translate-y-1 overflow-hidden">
                 <div className="absolute -top-3 -right-2 text-[4.5rem] font-extrabold leading-none opacity-[0.06] select-none">{step.num}</div>
                 <div className="w-11 h-11 rounded-lg flex items-center justify-center text-[1.05rem] font-extrabold mb-4 text-[var(--on-primary)] shadow-[0_8px_25px_rgba(var(--accent-rgb),0.25)]" style={{ background: "var(--primary-gradient)" }}>
@@ -262,17 +273,112 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </div>
       </section>
 
-      {/* FAQ */}
-      {faqs.length > 0 && (
+      {/* 5. KEY BENEFITS */}
+      <section className="py-[80px]">
+        <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[var(--tag-bg)] border border-[var(--tag-border)] rounded-3xl text-[var(--main-accent)] text-[0.8rem] font-semibold uppercase tracking-wider mb-4">
+              Why It Works
+            </div>
+            <h2 className="text-[2.4rem] font-extrabold leading-[1.2] mb-3 text-[var(--text-main)] max-[768px]:text-[1.9rem]">
+              Key <span className="gradient-text">Benefits</span>
+            </h2>
+            <p className="text-[var(--text-muted)] text-[1.05rem] max-w-[640px] mx-auto">
+              The compounding advantages of a properly engineered {content.title.toLowerCase()} channel.
+            </p>
+          </div>
+          <div className="grid grid-cols-3 gap-6 max-[1024px]:grid-cols-2 max-[640px]:grid-cols-1">
+            {content.benefits.map((benefit, i) => (
+              <div key={i} className="group relative rounded-2xl p-7 overflow-hidden transition-all duration-500 hover:-translate-y-2 bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-transparent hover:shadow-[0_20px_50px_rgba(var(--accent-rgb),0.15)]">
+                <div className="relative z-10">
+                  <div className="flex items-start justify-between mb-5">
+                    <div className="w-12 h-12 flex items-center justify-center text-[1.4rem] rounded-xl bg-gradient-to-br from-[var(--main-accent)] to-[rgba(var(--accent-rgb),0.5)] shadow-[0_8px_25px_rgba(var(--accent-rgb),0.35)] transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+                      {["📈", "🤖", "💰", "⚡", "🎯"][i % 5]}
+                    </div>
+                  </div>
+                  <h3 className="text-[1.08rem] font-extrabold text-[var(--text-main)] mb-2">{benefit.title}</h3>
+                  <p className="text-[var(--text-muted)] text-[0.88rem] leading-relaxed">{benefit.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 6. WHY CHOOSE US */}
+      <section className="py-[80px] bg-[var(--strip-bg)] border-y border-[var(--border-color)]">
+        <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[var(--tag-bg)] border border-[var(--tag-border)] rounded-3xl text-[var(--main-accent)] text-[0.8rem] font-semibold uppercase tracking-wider mb-4">
+              Why Choose Us
+            </div>
+            <h2 className="text-[2.4rem] font-extrabold leading-[1.2] mb-3 text-[var(--text-main)] max-[768px]:text-[1.9rem]">
+              <span className="gradient-text">{content.whyChooseUs.heading}</span>
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 gap-5 max-[768px]:grid-cols-1">
+            {content.whyChooseUs.points.map((point, i) => (
+              <div key={i} className="relative rounded-2xl p-7 overflow-hidden bg-[var(--panel-bg)] border border-[var(--border-color)]">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="w-11 h-11 rounded-xl flex items-center justify-center text-[1.05rem] font-extrabold text-[var(--on-primary)] shadow-[0_6px_16px_rgba(var(--accent-rgb),0.25)]" style={{ background: "var(--primary-gradient)" }}>
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span className="text-[0.62rem] font-extrabold text-[var(--main-accent)] uppercase tracking-wider">{`0${i + 1}`}</span>
+                </div>
+                <p className="text-[var(--text-main)] text-[0.95rem] font-semibold leading-relaxed">{point}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. TESTIMONIALS */}
+      <section className="py-[80px]">
+        <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[var(--tag-bg)] border border-[var(--tag-border)] rounded-3xl text-[var(--main-accent)] text-[0.8rem] font-semibold uppercase tracking-wider mb-4">
+              Client Reviews
+            </div>
+            <h2 className="text-[2.4rem] font-extrabold leading-[1.2] mb-3 text-[var(--text-main)] max-[768px]:text-[1.9rem]">
+              What Our <span className="gradient-text">Clients Say</span>
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 gap-6 max-[900px]:grid-cols-1">
+            {content.testimonials.map((t, i) => (
+              <div key={i} className="relative p-8 rounded-2xl bg-[var(--panel-bg)] border border-[var(--border-color)] overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:border-[rgba(var(--accent-rgb),0.3)]">
+                <div className="absolute top-5 right-7 text-[4rem] font-extrabold leading-none text-[var(--main-accent)] opacity-10 select-none">&ldquo;</div>
+                <div className="flex gap-1 mb-5">
+                  {Array.from({ length: 5 }).map((_, s) => (
+                    <span key={s} className="text-[var(--main-accent)] text-[0.95rem]">★</span>
+                  ))}
+                </div>
+                <p className="text-[var(--text-muted)] text-[0.95rem] leading-relaxed mb-7">{t.review}</p>
+                <div className="flex items-center gap-3.5 pt-5 border-t border-[var(--border-color)]">
+                  <div className="w-11 h-11 rounded-full flex items-center justify-center font-extrabold text-[0.85rem] text-[var(--on-primary)] shadow-[0_8px_20px_rgba(var(--accent-rgb),0.3)]" style={{ background: "var(--primary-gradient)" }}>
+                    {t.name.split(" ").map((n) => n[0]).join("")}
+                  </div>
+                  <div>
+                    <p className="text-[var(--text-main)] font-bold text-[0.9rem]">{t.name}</p>
+                    <p className="text-[var(--text-dim)] text-[0.8rem]">{t.designation}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 8. FAQ */}
+      {content.faqs.length > 0 && (
         <section className="py-[80px]">
           <div className="w-full max-w-[820px] mx-auto px-5">
             <div className="text-center mb-10">
               <h2 className="text-[2.4rem] font-extrabold leading-[1.2] mb-3 text-[var(--text-main)] max-[768px]:text-[1.9rem]">
-                {s.title} - <span className="gradient-text">FAQs</span>
+                {content.title} - <span className="gradient-text">FAQs</span>
               </h2>
             </div>
             <div className="flex flex-col gap-4">
-              {faqs.map((f, i) => (
+              {content.faqs.map((f, i) => (
                 <details key={i} className="group bg-[var(--bg-card)] border border-[var(--border-color)] rounded-[var(--radius-md)] overflow-hidden" open={i === 0}>
                   <summary className="py-[22px] px-7 font-bold text-[1.02rem] cursor-pointer select-none list-none flex items-center justify-between gap-4 text-[var(--text-main)] [&::-webkit-details-marker]:hidden">
                     {f.q}
@@ -288,8 +394,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </section>
       )}
 
-      {/* Related services */}
-      {related.length > 0 && (
+      {/* 9. RELATED SERVICES */}
+      {content.related.length > 0 && (
         <section className="py-[80px] bg-[var(--strip-bg)] border-t border-[var(--border-color)]">
           <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
             <div className="text-center mb-12">
@@ -297,11 +403,11 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 Related <span className="gradient-text">Services</span>
               </h2>
               <p className="text-[var(--text-muted)] text-[1.05rem] max-w-[640px] mx-auto">
-                These capabilities work best alongside {s.title.toLowerCase()} as part of one system.
+                These services work best alongside {content.title.toLowerCase()} as part of one system.
               </p>
             </div>
             <div className="grid grid-cols-3 gap-6 max-[1024px]:grid-cols-2 max-[768px]:grid-cols-1">
-              {related.map((r) => (
+              {content.related.map((r) => (
                 <Link
                   key={r.slug}
                   href={`/services/${r.slug}`}
@@ -320,15 +426,15 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </section>
       )}
 
-      {/* CTA */}
+      {/* 10. CTA */}
       <section className="py-[80px]">
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
           <div className="border border-[rgba(var(--accent-rgb),0.3)] rounded-3xl py-[60px] px-10 text-center relative overflow-hidden max-[640px]:px-6" style={{ background: "var(--cta-bg)" }}>
             <h2 className="text-[2.6rem] font-extrabold mb-4 text-[var(--text-main)] max-[768px]:text-[1.9rem]">
-              Ready to Build Your {s.title} Strategy?
+              Ready to Build Your {content.title} Strategy?
             </h2>
             <p className="text-[1.12rem] text-[var(--text-muted)] max-w-[600px] mx-auto mb-8">
-              Book a free 30-minute consultation. We&apos;ll identify how {s.title.toLowerCase()} fits into your growth system - with no commitment required.
+              Book a free 30-minute consultation. We&apos;ll identify how {content.title.toLowerCase()} fits into your growth system - with no commitment required.
             </p>
             <div className="flex justify-center gap-4 flex-wrap">
               <Link
@@ -354,6 +460,12 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
+      {content.faqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
     </>
   );
 }

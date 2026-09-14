@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { caseStudies } from "@/data/caseStudies";
+import { caseStudies } from "@/data/case-studies";
 
 export const metadata: Metadata = {
   title: "Case Studies - Real Work, Real Outcomes",

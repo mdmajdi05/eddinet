@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { insights, getInsightBySlug } from "@/data/insights";
-import { site } from "@/data/site";
+import { insights, getInsightBySlug } from "@/data/blog";
+import { site } from "@/data/contact";
 
 export function generateStaticParams() {
   return insights.map((i) => ({ slug: i.slug }));

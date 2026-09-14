@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PortfolioGrid from "@/components/PortfolioGrid";
-import { projectCategories } from "@/data/projects";
+import { projectCategories } from "@/data/portfolio";
 
 const marqueeItems = [
   ...projectCategories.map((c) => c.label),

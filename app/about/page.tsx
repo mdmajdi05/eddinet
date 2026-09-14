@@ -3,7 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import GrowthSystem from "@/components/about/GrowthSystem";
 import Reveal from "@/components/about/Reveal";
-import { site, processSteps } from "@/data/site";
+import { site } from "@/data/contact";
+import { processSteps } from "@/data/home";
 import { industries } from "@/data/industries";
 
 export const metadata: Metadata = {

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { insights } from "@/data/insights";
+import { insights } from "@/data/blog";
 
 export default function Blog() {
   return (

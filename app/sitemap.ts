@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 import { servicePages } from "@/data/services";
 import { seoChildServices } from "@/data/seo-child-services";
 import { industries } from "@/data/industries";
-import { insights } from "@/data/insights";
-import { caseStudies } from "@/data/caseStudies";
+import { insights } from "@/data/blog";
+import { caseStudies } from "@/data/case-studies";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://eddinet.com";

@@ -57,15 +57,21 @@ export interface SeoChildService {
     points: string[];
   };
   features: SeoChildFeature[];
+  featuresHeading?: string;
+  featuresDescription?: string;
   benefits: SeoChildBenefit[];
+  benefitsHeading?: string;
+  benefitsDescription?: string;
   industries: SeoChildIndustry[];
   metrics: SeoChildMetric[];
   whyChooseUs: {
     heading: string;
+    description?: string;
     points: string[];
   };
   process: {
     heading: string;
+    description?: string;
     steps: SeoChildProcessStep[];
   };
   caseStudy: {
@@ -332,12 +338,15 @@ export const seoChildServices: SeoChildService[] = [
     metaTitle: "AI SEO / Generative SEO Services in Delhi NCR | Eddinet",
     metaDescription:
       "Win visibility in AI-generated search answers. Eddinet's AI SEO optimises your content for Google SGE, ChatGPT search & AI overviews. Future-proof your organic strategy. Get a free audit.",
-    heroHeading: "AI SEO (Generative SEO) Services in Delhi NCR",
+    heroHeading: "AI SEO (Generative SEO) Service in Delhi NCR",
     heroSubheading:
       "We offer advanced AI SEO (Generative SEO) service in Delhi to help businesses automate, scale, and future-proof their search engine optimization efforts. Our team leverages artificial intelligence and generative engine optimization (GEO) to create search-ready content, target high-intent semantic queries, and implement data-driven strategies for top rankings on search engines and AI platforms like ChatGPT, Gemini, and Google AI Overviews.",
     image: "/SEO-SERVICES-CHILD-IMAGES/AI SEO (Generative SEO).webp",
     problemStatement:
       "Search is evolving faster than most businesses can adapt. Google's AI Overviews, Bing Copilot, ChatGPT Search and Perplexity are changing how answers are generated and surfaced. Brands optimised only for traditional blue links are losing visibility to competitors who structure their content for AI consumption. Without AI SEO, your expertise stops getting cited where your customers are actually searching.",
+    featuresHeading: "Types of AI SEO Solutions",
+    featuresDescription:
+      "Six specialized solution types that make your brand visible across Google, ChatGPT, Gemini and Perplexity — from deep AI audits to generative engine optimization, semantic content, technical SEO and authority building.",
     features: [
       {
         title: "AI SEO Audit & Strategy",
@@ -371,7 +380,9 @@ export const seoChildServices: SeoChildService[] = [
       },
     ],
     whyChooseUs: {
-      heading: "Why Choose Eddinet for AI SEO",
+      heading: "Why Choose Us as the Best AI SEO Agency in Delhi",
+      description:
+        "Choosing the best AI SEO agency in Delhi means working with experts who understand both Google algorithms and generative search ecosystems.",
       points: [
         "Future-Ready Strategies: We adopt cutting-edge GEO and semantic optimization techniques well ahead of conventional digital marketing agencies.",
         "Data-Driven Execution: Our decisions are rooted in deep analytics, semantic data tracking, and verified performance metrics.",
@@ -455,6 +466,9 @@ export const seoChildServices: SeoChildService[] = [
         "Any business watching organic traffic decline despite maintaining traditional SEO efforts",
       ],
     },
+    benefitsHeading: "Key Benefits of AI SEO for Your Business",
+    benefitsDescription:
+      "What your brand earns when you start showing up across Google, ChatGPT, Gemini and Perplexity — from higher-quality traffic to compounded organic authority.",
     benefits: [
       {
         title: "Multi-Platform Visibility",
@@ -557,9 +571,9 @@ export const seoChildServices: SeoChildService[] = [
     metaTitle: "Lead Generation SEO Services in Delhi NCR | Eddinet",
     metaDescription:
       "Turn organic traffic into qualified leads. Eddinet's Lead Generation SEO combines high-intent keywords, conversion-focused landing pages & lead capture flows. Get a free strategy call.",
-    heroHeading: "Lead Generation SEO Services in Delhi NCR",
+    heroHeading: "Lead Generation SEO Services in India",
     heroSubheading:
-      "Eddinet provides targeted lead generation SEO services in India designed to capture high-intent buyers, eliminate wasted ad spend, and convert organic search traffic into qualified business inquiries. High-intent search engine optimization, conversion rate optimization, and B2B & B2C revenue growth — traffic is optional, pipeline growth is non-negotiable.",
+      "High-Intent Search Engine Optimization | Conversion Rate Optimization | B2B & B2C Revenue Growth\n\nEddinet provides targeted lead generation SEO services in India designed to capture high-intent buyers, eliminate wasted ad spend, and convert organic search traffic into qualified business inquiries.",
     image: "/SEO-SERVICES-CHILD-IMAGES/Lead Generation SEO.webp",
     problemStatement:
       "Ranking on Google means nothing if the traffic does not convert into paying customers. Many businesses invest heavily in SEO and see traffic growth, but their landing pages fail to capture intent, their conversion funnels leak and the traffic never translates into revenue. Without lead-focused SEO strategy, organic growth becomes a vanity metric that costs money but does not generate it.",
@@ -597,6 +611,8 @@ export const seoChildServices: SeoChildService[] = [
     ],
     whyChooseUs: {
       heading: "Why Choose Us for Lead Generation SEO",
+      description:
+        "When you choose Eddinet, you partner with a performance-focused team committed to clear accountability and tangible revenue growth. Here is why leading brands choose us:",
       points: [
         "Lead-First Growth Focus: We measure success by leads, phone calls, and revenue generated—not just keyword rankings or arbitrary pageviews.",
         "Customized Execution: We craft bespoke SEO blueprints tailored to your business model, target market, and sales cycle rather than using generic templates.",
@@ -607,6 +623,8 @@ export const seoChildServices: SeoChildService[] = [
     },
     process: {
       heading: "Our Lead Generation SEO Process",
+      description:
+        "Our structured 6-step framework ensures continuous lead growth and high return on investment (ROI):",
       steps: [
         {
           num: "01",

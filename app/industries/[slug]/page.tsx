@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { industries, getIndustryBySlug } from "@/data/industries";
-import { caseStudies } from "@/data/caseStudies";
+import { caseStudies } from "@/data/case-studies";
 
 export function generateStaticParams() {
   return industries.map((ind) => ({ slug: ind.slug }));

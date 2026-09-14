@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
-import { site } from "@/data/site";
+import { site } from "@/data/contact";
 
 export const metadata: Metadata = {
   title: "Contact Us - Talk to a Digital Growth Expert",

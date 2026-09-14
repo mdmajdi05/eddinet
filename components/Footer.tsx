@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { services } from "@/data/services";
-import { site } from "@/data/site";
+import { site } from "@/data/contact";
 import { NewsletterForm, LiveStatus, BackToTop } from "@/components/footer-extras";
 
 const keyServices = services.filter((s) =>

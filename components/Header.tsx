@@ -8,7 +8,7 @@ import ConsultModal from "./ConsultModal";
 import MegaMenu from "./MegaMenu";
 import Image from "next/image";
 import { services } from "@/data/services";
-import { site } from "@/data/site";
+import { site } from "@/data/contact";
 
 const navLinks = [
   { label: "Home", href: "/" },

@@ -1,3 +1,11 @@
+﻿// ============================================================================
+//  FILE: data/blog.ts  (BLOG PAGE)
+// WHAT'S IN THIS FILE:  (BLOG)
+//   insights[] - blog posts. NAYA BLOG ADD KARNE KE LIYE YAHIN:
+//                title, slug, category, image, date, summary, body[]
+// ============================================================================
+
+
 export interface InsightSection {
   heading?: string;
   paragraphs: string[];

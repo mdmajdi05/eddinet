@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { insights } from "@/data/insights";
+import { insights } from "@/data/blog";
 
 export const metadata: Metadata = {
   title: "Blog - Practical Thinking on Marketing and Technology",

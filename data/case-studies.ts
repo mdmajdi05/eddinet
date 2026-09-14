@@ -1,3 +1,9 @@
+﻿// ============================================================================
+//  FILE: data/case-studies.ts  (CASE STUDIES PAGE)
+// WHAT'S IN THIS FILE:  (CASE STUDIES)  - long-form case studies, currently empty
+// ============================================================================
+
+
 export interface CaseStudy {
   slug: string;
   tag: string;

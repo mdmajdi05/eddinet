@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { portfolioProjects, projectCategories, type PortfolioProject } from "@/data/projects";
+import { portfolioProjects, projectCategories, type PortfolioProject } from "@/data/portfolio";
 
 function ProjectCard({ p }: { p: PortfolioProject }) {
   const inner = (

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { caseStudies, getCaseStudyBySlug } from "@/data/caseStudies";
-import { site } from "@/data/site";
+import { caseStudies, getCaseStudyBySlug } from "@/data/case-studies";
+import { site } from "@/data/contact";
 
 export function generateStaticParams() {
   return caseStudies.map((c) => ({ slug: c.slug }));

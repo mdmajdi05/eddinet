@@ -1,3 +1,13 @@
+﻿// ============================================================================
+//  FILE: data/portfolio.ts  (PORTFOLIO PAGE)
+// WHAT'S IN THIS FILE:  (PORTFOLIO)
+//   portfolioProjects[] - all 62 client sites. NAYA CLIENT ADD KARNA HOTO
+//                         YAHIN SE karo. Har entry: title, slug, url,
+//                         image, category, gradient, client, year, tags.
+//   projectCategories    - filter categories for portfolio grids
+// ============================================================================
+
+
 // ============================================================
 // EDDINET PROJECT PORTFOLIO — TEMPLATE
 // ------------------------------------------------------------

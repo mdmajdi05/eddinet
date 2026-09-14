@@ -3,7 +3,7 @@ import Link from "next/link";
 import ServicesExplorer from "@/components/ServicesExplorer";
 import ContactForm from "@/components/ContactForm";
 import { servicePages } from "@/data/services";
-import { processSteps } from "@/data/site";
+import { processSteps } from "@/data/home";
 
 export const metadata: Metadata = {
   title: "Digital Growth, Marketing & Technology Services in Delhi NCR",

@@ -71,7 +71,7 @@ export function slugify(text: string): string {
     .replace(/(^-|-$)+/g, "");
 }
 
-interface CategoryTemplate {
+export interface CategoryTemplate {
   approach: string;
   features: { title: string; description: string }[];
   steps: { title: string; description: string }[];
@@ -1746,7 +1746,7 @@ const sharedMetrics: { value: string; label: string }[] = [
   { value: "24×7", label: "Support & monitoring" },
 ];
 
-const sharedTestimonials: { name: string; designation: string; review: string }[] = [
+export const sharedTestimonials: { name: string; designation: string; review: string }[] = [
   {
     name: "Rohan Malhotra",
     designation: "Founder, D2C Brand",
@@ -1913,4 +1913,10 @@ export function getGeneratedChildrenForCategory(
 
 export function getCategoryBySlug(categorySlug: string): Service | undefined {
   return services.find((s) => s.slug === categorySlug);
+}
+
+export function getCategoryTemplate(
+  categorySlug: string,
+): CategoryTemplate | undefined {
+  return templates[categorySlug];
 }

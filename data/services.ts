@@ -1,3 +1,16 @@
+﻿// ============================================================================
+//  FILE: data/services.ts
+// WHAT'S IN THIS FILE:  (SERVICES)
+//   services[]     - 10 core service categories (icon, title, desc, image, allItems)
+//   serviceTabs    - home "services tabs" (All / Web / SEO ...)
+//   servicePages   - list used by /services + sitemap
+//   itemDetails    - one-line desc per child service (for generated pages)
+//   faqsByService  - FAQ per service category
+//   relatedServices- cross-link suggestions per category
+//   childServiceImages - per-child page images
+// ============================================================================
+
+
 export interface ServiceGroup {
   label: string;
   items: string[];

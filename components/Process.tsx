@@ -1,4 +1,4 @@
-import { processSteps } from "@/data/site";
+import { processSteps } from "@/data/home";
 
 export default function Process() {
   return (
