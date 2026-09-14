@@ -3,6 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { site } from "@/data/contact";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://eddinet.com/"),
@@ -36,7 +37,7 @@ const organizationSchema = {
   url: "https://eddinet.com/",
   logo: "https://eddinet.com/eddinet-logo.png",
   email: "contact@eddinet.com",
-  telephone: "+91 70428 40441",
+  telephone: site.phone,
   address: {
     "@type": "PostalAddress",
     streetAddress: "Okhla Industrial Estate, Phase I",

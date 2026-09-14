@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { site } from "@/data/contact";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -47,7 +48,7 @@ const sections: { h: string; p: string[] }[] = [
   {
     h: "7. Contact Us",
     p: [
-      "For any privacy-related questions, contact us at contact@eddinet.com or call +91 70428 40441. Our office is located at Okhla Industrial Estate, Phase I, New Delhi - 110020.",
+      `For any privacy-related questions, contact us at ${site.email} or call ${site.phone}. Our office is located at Okhla Industrial Estate, Phase I, New Delhi - 110020.`,
     ],
   },
 ];

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { servicePages, getServiceBySlug } from "@/data/services";
 import { getCategoryPageContent } from "@/data/service-page-content";
+import { site } from "@/data/contact";
 import ContactForm from "@/components/ContactForm";
 import AboutSection from "@/components/AboutSection";
 
@@ -444,7 +445,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               >
                 Talk to a Digital Growth Expert
               </Link>
-              <a href="https://wa.me/917042840441" target="_blank" className="inline-flex items-center justify-center gap-2.5 py-3.5 px-7 rounded-full font-bold text-[0.95rem] no-underline transition-all duration-300 bg-[#25D366] text-white shadow-[0_8px_20px_rgba(37,211,102,0.3)] hover:bg-[#20ba5a] hover:-translate-y-[3px]">
+              <a href={site.whatsapp} target="_blank" className="inline-flex items-center justify-center gap-2.5 py-3.5 px-7 rounded-full font-bold text-[0.95rem] no-underline transition-all duration-300 bg-[#25D366] text-white shadow-[0_8px_20px_rgba(37,211,102,0.3)] hover:bg-[#20ba5a] hover:-translate-y-[3px]">
                 Chat on WhatsApp
               </a>
             </div>

@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { site } from "@/data/contact";
 
 export default function ContactForm({ compact = false }: { compact?: boolean }) {
   const [submitted, setSubmitted] = useState(false);
@@ -40,7 +41,7 @@ export default function ContactForm({ compact = false }: { compact?: boolean }) 
               <input
                 type="tel"
                 required
-                placeholder="+91 98765 43210"
+                placeholder={site.phone}
                 className="w-full py-2 px-4 bg-[var(--input-bg)] border border-[var(--border-color)] rounded-xl text-[var(--text-main)] font-[inherit] text-[0.92rem] outline-none transition-all duration-300 focus:border-[var(--main-accent)] focus:ring-2 focus:ring-[rgba(var(--accent-rgb),0.15)] focus:bg-[var(--input-bg-focus)]"
               />
             </div>
@@ -119,7 +120,7 @@ export default function ContactForm({ compact = false }: { compact?: boolean }) 
           <input
             type="tel"
             required
-            placeholder="+91 98765 43210"
+            placeholder={site.phone}
             className="w-full py-3 px-4 bg-[var(--input-bg)] border border-[var(--border-color)] rounded-lg text-[var(--text-main)] font-[inherit] text-[0.95rem] outline-none transition-all duration-300 focus:border-[var(--main-accent)] focus:bg-[var(--input-bg-focus)]"
           />
         </div>

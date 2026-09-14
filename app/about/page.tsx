@@ -333,7 +333,7 @@ const organizationSchema = {
   logo: "https://eddinet.com/eddinet-logo.png",
   description: site.tagline,
   email: site.email,
-  telephone: "+91-70428-40441",
+  telephone: site.phone,
   address: {
     "@type": "PostalAddress",
     streetAddress: "Okhla Industrial Estate, Phase I",

@@ -553,7 +553,6 @@ export default function ServiceChildPage({
                     className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                     unoptimized
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-card)] via-[rgba(11,15,25,0.25)] to-transparent" />
                 </div>
                 <div className="relative z-10 p-7 pt-6">
                   <div className="w-10 h-10 rounded-xl bg-[rgba(var(--accent-rgb),0.08)] flex items-center justify-center text-[1.1rem] mb-4 transition-all duration-300 group-hover:scale-110 group-hover:bg-[rgba(var(--accent-rgb),0.15)]">

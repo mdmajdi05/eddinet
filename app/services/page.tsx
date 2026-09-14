@@ -4,6 +4,7 @@ import ServicesExplorer from "@/components/ServicesExplorer";
 import ContactForm from "@/components/ContactForm";
 import { servicePages } from "@/data/services";
 import { processSteps } from "@/data/home";
+import { site } from "@/data/contact";
 
 export const metadata: Metadata = {
   title: "Digital Growth, Marketing & Technology Services in Delhi NCR",
@@ -335,7 +336,7 @@ export default function ServicesIndexPage() {
                   Talk to a Digital Growth Expert
                 </Link>
                 <a
-                  href="https://wa.me/917042840441"
+                  href={site.whatsapp}
                   target="_blank"
                   className="inline-flex items-center justify-center gap-2.5 py-4 px-8 rounded-full font-bold text-[0.95rem] no-underline transition-all duration-300 bg-[#25D366] text-white shadow-[0_8px_20px_rgba(37,211,102,0.3)] hover:bg-[#20ba5a] hover:-translate-y-[3px]"
                 >

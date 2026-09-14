@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { site } from "@/data/contact";
 
 export default function ConsultModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const [submitted, setSubmitted] = useState(false);
@@ -35,7 +36,7 @@ export default function ConsultModal({ isOpen, onClose }: { isOpen: boolean; onC
             </div>
             <div className="mb-5">
               <label className="block text-[0.85rem] font-semibold mb-2 text-[var(--text-muted)]">Phone Number *</label>
-              <input type="tel" className="w-full py-3 px-4 bg-[var(--input-bg)] border border-[var(--border-color)] rounded-lg text-[var(--text-main)] font-[inherit] text-[0.95rem] outline-none transition-all duration-300 focus:border-[var(--main-accent)] focus:bg-[var(--input-bg-focus)]" placeholder="+91 98765 43210" required />
+              <input type="tel" className="w-full py-3 px-4 bg-[var(--input-bg)] border border-[var(--border-color)] rounded-lg text-[var(--text-main)] font-[inherit] text-[0.95rem] outline-none transition-all duration-300 focus:border-[var(--main-accent)] focus:bg-[var(--input-bg-focus)]" placeholder={site.phone} required />
             </div>
             <div className="mb-5">
               <label className="block text-[0.85rem] font-semibold mb-2 text-[var(--text-muted)]">Service Needed</label>

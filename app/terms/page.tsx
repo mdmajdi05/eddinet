@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { site } from "@/data/contact";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
@@ -53,7 +54,7 @@ const sections: { h: string; p: string[] }[] = [
   {
     h: "8. Contact",
     p: [
-      "For questions about these terms, contact us at contact@eddinet.com or call +91 70428 40441.",
+      `For questions about these terms, contact us at ${site.email} or call ${site.phone}.`,
     ],
   },
 ];

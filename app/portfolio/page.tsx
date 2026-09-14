@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PortfolioGrid from "@/components/PortfolioGrid";
 import { projectCategories } from "@/data/portfolio";
+import { site } from "@/data/contact";
 
 const marqueeItems = [
   ...projectCategories.map((c) => c.label),
@@ -90,7 +91,7 @@ export default function PortfolioPage() {
                 Start Your Project
               </Link>
               <a
-                href="https://wa.me/917042840441"
+                href={site.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2.5 py-3.5 px-7 rounded-full font-bold text-[0.95rem] no-underline transition-all duration-300 bg-[#25D366] text-white shadow-[0_8px_20px_rgba(37,211,102,0.3)] hover:bg-[#20ba5a] hover:-translate-y-[3px]"
