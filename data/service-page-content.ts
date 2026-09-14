@@ -89,10 +89,10 @@ const genericBenefits: { title: string; description: string }[] = [
 const genericWhyChooseUs: { heading: string; points: string[] } = {
   heading: "Why Businesses Pick Eddinet",
   points: [
-    "We treat your project like a partnership, not a vendor task — a named team, clear owners and direct access.",
-    "We plan around outcomes, with realistic timelines we actually commit to.",
-    "No black boxes: clean, documented work and transparent reporting at every milestone.",
-    "We stay involved after delivery, refining and improving based on real performance data.",
+    "Partnership, Not Vendor Work: We treat your project like a partnership, not a vendor task — a named team, clear owners and direct access.",
+    "Outcome-Driven Timelines: We plan around outcomes, with realistic timelines we actually commit to.",
+    "No Black Boxes: Clean, documented work and transparent reporting at every milestone.",
+    "Ongoing Optimisation: We stay involved after delivery, refining and improving based on real performance data.",
   ],
 };
 

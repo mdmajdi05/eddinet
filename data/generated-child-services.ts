@@ -193,12 +193,12 @@ const templates: Record<string, CategoryTemplate> = {
     ],
     whyHeading: "Why Businesses Pick Eddinet for Social Media in India",
     whyPoints: [
-      "We treat social as part of your growth system, not a separate vanity channel reporting likes and impressions.",
-      "Content is built for the platform and the buyer with a consistent monthly cadence your team can plan around.",
-      "Community is managed daily by real humans — not scheduled bots — so enquiries never sit unanswered.",
-      "Paid and organic are planned together, so budget amplifies content that has already proved itself.",
-      "Reporting shows engagement quality and business impact, with clear recommendations every single month.",
-      "We run Meta, Instagram, LinkedIn, YouTube and X as one system — not five separate agencies.",
+      "Growth System, Not a Vanity Channel: We treat social as part of your growth system, not a separate vanity channel reporting likes and impressions.",
+      "Platform-Smart Content: Content is built for the platform and the buyer with a consistent monthly cadence your team can plan around.",
+      "Human Community Management: Community is managed daily by real humans — not scheduled bots — so enquiries never sit unanswered.",
+      "Paid + Organic Together: Paid and organic are planned together, so budget amplifies content that has already proved itself.",
+      "Impact-Focused Reporting: Reporting shows engagement quality and business impact, with clear recommendations every single month.",
+      "One System Across Platforms: We run Meta, Instagram, LinkedIn, YouTube and X as one system — not five separate agencies.",
     ],
     extraFaqs: [
       {
@@ -331,12 +331,12 @@ const templates: Record<string, CategoryTemplate> = {
     ],
     whyHeading: "Why Businesses Pick Eddinet for Paid Media in India",
     whyPoints: [
-      "We report on cost per lead and ROAS, not impressions and vanity clicks.",
-      "Every campaign is structured around a conversion goal before it launches.",
-      "Tracking is set up properly first, so all decisions are based on real data.",
-      "Your budget is treated as earned trust — spent only on what is proven to work.",
-      "Creative, landing pages and offers are aligned to the ad promise so clicks convert.",
-      "One team runs Google, Meta, YouTube, LinkedIn and Amazon as a connected system.",
+      "Revenue-First Reporting: We report on cost per lead and ROAS, not impressions and vanity clicks.",
+      "Conversion-Led Structure: Every campaign is structured around a conversion goal before it launches.",
+      "Data Before Spend: Tracking is set up properly first, so all decisions are based on real data.",
+      "Budget Treated as Trust: Your budget is treated as earned trust — spent only on what is proven to work.",
+      "Full-Funnel Alignment: Creative, landing pages and offers are aligned to the ad promise so clicks convert.",
+      "Connected System, Not Silos: One team runs Google, Meta, YouTube, LinkedIn and Amazon as a connected system.",
     ],
     extraFaqs: [
       {
@@ -469,12 +469,12 @@ const templates: Record<string, CategoryTemplate> = {
     ],
     whyHeading: "Why Businesses Pick Eddinet for Design & Creative",
     whyPoints: [
-      "We design for performance and brand together — never style in isolation.",
-      "You review strong directions early instead of waiting for a surprise at the end.",
-      "Every deliverable is production-ready for web, ads and print on handover.",
-      "Structured revision rounds keep quality high without endless cycles.",
-      "Source files and brand guides remain yours for reuse and future work.",
-      "Design, web and marketing are connected in one team — no translation losses.",
+      "Performance + Brand Together: We design for performance and brand together — never style in isolation.",
+      "Early Direction, No Surprises: You review strong directions early instead of waiting for a surprise at the end.",
+      "Production-Ready Deliverables: Every deliverable is production-ready for web, ads and print on handover.",
+      "Structured Revisions: Structured revision rounds keep quality high without endless cycles.",
+      "Your Files Stay Yours: Source files and brand guides remain yours for reuse and future work.",
+      "One Connected Creative Team: Design, web and marketing are connected in one team — no translation losses.",
     ],
     extraFaqs: [
       {
@@ -607,12 +607,12 @@ const templates: Record<string, CategoryTemplate> = {
     ],
     whyHeading: "Why Businesses Pick Eddinet for Web Development",
     whyPoints: [
-      "We build with performance and SEO as requirements, not afterthoughts patched on later.",
-      "Modern, maintainable tech stacks chosen for your actual needs — not whatever we prefer.",
-      "Mobile-first approach tested across real devices and connection speeds.",
-      "Transparent milestones — you review working versions as we go, never a surprise reveal.",
-      "Post-launch hosting, monitoring and support are available as part of the same team.",
-      "Web, SEO, content and paid campaigns are built as one connected system.",
+      "Performance and SEO Built In: We build with performance and SEO as requirements, not afterthoughts patched on later.",
+      "Modern, Maintainable Stacks: Modern, maintainable tech stacks chosen for your actual needs — not whatever we prefer.",
+      "Mobile-First by Default: Mobile-first approach tested across real devices and connection speeds.",
+      "Transparent Milestones: Transparent milestones — you review working versions as we go, never a surprise reveal.",
+      "Support After Launch: Post-launch hosting, monitoring and support are available as part of the same team.",
+      "One Connected System: Web, SEO, content and paid campaigns are built as one connected system.",
     ],
     extraFaqs: [
       {
@@ -745,12 +745,12 @@ const templates: Record<string, CategoryTemplate> = {
     ],
     whyHeading: "Why Businesses Pick Eddinet for eCommerce",
     whyPoints: [
-      "We build the full selling system, not just a pretty storefront.",
-      "Conversion and SEO are engineered in from the very first page.",
-      "Payments, shipping and inventory are handled as part of the build, not bolt-ons.",
-      "Migrations are done safely with data and rankings fully protected.",
-      "Post-launch optimisation and support keep improving sales results.",
-      "One team connects store, SEO, paid ads and marketplace strategy.",
+      "Full Selling System: We build the full selling system, not just a pretty storefront.",
+      "Conversion + SEO First: Conversion and SEO are engineered in from the very first page.",
+      "Operations Included: Payments, shipping and inventory are handled as part of the build, not bolt-ons.",
+      "Safe Migrations: Migrations are done safely with data and rankings fully protected.",
+      "Post-Launch Optimisation: Post-launch optimisation and support keep improving sales results.",
+      "Store + Growth in One Team: One team connects store, SEO, paid ads and marketplace strategy.",
     ],
     extraFaqs: [
       {
@@ -883,12 +883,12 @@ const templates: Record<string, CategoryTemplate> = {
     ],
     whyHeading: "Why Businesses Pick Eddinet for Mobile App Development",
     whyPoints: [
-      "We start with the problem, not the platform — design and engineering decisions follow from your business goal.",
-      "You review real builds in sprints, so there are no surprises when the project ends.",
-      "We recommend native vs cross-platform honestly, based on what's actually right for your app.",
-      "Launch, store submission and post-release care are handled by the same in-house team.",
-      "Cost and timelines are confirmed upfront and protected through the entire build.",
-      "From MVP to scale, we stay accountable to your business outcomes — not just deliverables.",
+      "Problem-First Engineering: We start with the problem, not the platform — design and engineering decisions follow from your business goal.",
+      "Sprout-Like Sprints: You review real builds in sprints, so there are no surprises when the project ends.",
+      "Honest Platform Advice: We recommend native vs cross-platform honestly, based on what's actually right for your app.",
+      "One Team, Launch to Care: Launch, store submission and post-release care are handled by the same in-house team.",
+      "Protected Timelines: Cost and timelines are confirmed upfront and protected through the entire build.",
+      "Accountable to Outcomes: From MVP to scale, we stay accountable to your business outcomes — not just deliverables.",
     ],
     extraFaqs: [
       {
@@ -1021,12 +1021,12 @@ const templates: Record<string, CategoryTemplate> = {
     ],
     whyHeading: "Why Businesses Pick Eddinet for Software & AI",
     whyPoints: [
-      "AI is applied where it pays, not just where it sounds impressive on a slide.",
-      "Everything is scoped and priced after discovery, so you're not funding surprises.",
-      "You see and use the software in sprints, which keeps risk and rework low.",
-      "Security, data handling and integration with existing tools are never afterthoughts.",
-      "We stay with you after launch with support and continuous improvement.",
-      "Software, web, cloud and marketing teams work as one connected unit.",
+      "AI Where It Pays: AI is applied where it pays, not just where it sounds impressive on a slide.",
+      "Scoped, Not Surprising: Everything is scoped and priced after discovery, so you're not funding surprises.",
+      "Low-Risk Sprints: You see and use the software in sprints, which keeps risk and rework low.",
+      "Security Built In: Security, data handling and integration with existing tools are never afterthoughts.",
+      "Support After Launch: We stay with you after launch with support and continuous improvement.",
+      "One Connected Unit: Software, web, cloud and marketing teams work as one connected unit.",
     ],
     extraFaqs: [
       {
@@ -1159,12 +1159,12 @@ const templates: Record<string, CategoryTemplate> = {
     ],
     whyHeading: "Why Businesses Pick Eddinet for Cloud & DevOps",
     whyPoints: [
-      "We design for reliability and cost, not for adding impressive acronyms to a proposal.",
-      "Every migration is staged with backups and rollback — uptime is never a gamble.",
-      "Monitoring and security are configured, documented and tested, not skipped.",
-      "You'll actually understand your cloud setup, with clear docs and a clean handover.",
-      "We can run it for you long term or hand it over properly — your choice.",
-      "AWS, Kubernetes, CI/CD, security and cost are managed as one connected practice.",
+      "Reliability Over Acronyms: We design for reliability and cost, not for adding impressive acronyms to a proposal.",
+      "Uptime Never a Gamble: Every migration is staged with backups and rollback — uptime is never a gamble.",
+      "Configured, Documented, Tested: Monitoring and security are configured, documented and tested, not skipped.",
+      "Clear Ownership: You'll actually understand your cloud setup, with clear docs and a clean handover.",
+      "Runs by You or Us: We can run it for you long term or hand it over properly — your choice.",
+      "One Connected Practice: AWS, Kubernetes, CI/CD, security and cost are managed as one connected practice.",
     ],
     extraFaqs: [
       {
@@ -1297,12 +1297,12 @@ const templates: Record<string, CategoryTemplate> = {
     ],
     whyHeading: "Why Businesses Pick Eddinet for Hosting & Migration",
     whyPoints: [
-      "Every migration is planned with backups and rollback — never a leap of faith.",
-      "Uptime and data integrity come first; timeline second; billing transparency third.",
-      "We right-size hosting to your real needs instead of pushing you up a price ladder.",
-      "Domain, DNS, SSL and email are coordinated in one place, not across five tickets.",
-      "Performance is proven and documented after every move — we show you the numbers.",
-      "We stay available long term for management, patching and support.",
+      "Backups and Rollback: Every migration is planned with backups and rollback — never a leap of faith.",
+      "Uptime First: Uptime and data integrity come first; timeline second; billing transparency third.",
+      "Right-Sized Hosting: We right-size hosting to your real needs instead of pushing you up a price ladder.",
+      "One Place, Not Five Tickets: Domain, DNS, SSL and email are coordinated in one place, not across five tickets.",
+      "Proven Performance: Performance is proven and documented after every move — we show you the numbers.",
+      "Long-Term Availability: We stay available long term for management, patching and support.",
     ],
     extraFaqs: [
       {
@@ -1435,12 +1435,12 @@ const templates: Record<string, CategoryTemplate> = {
     ],
     whyHeading: "Why Businesses Pick Eddinet for Maintenance & Support",
     whyPoints: [
-      "We run maintenance as proactive care, not reactive firefighting.",
-      "Monitoring and alerts are configured before they are needed, not after the outage.",
-      "Backups are verified regularly — we know they restore when it matters.",
-      "You get a direct support channel with named engineers, not a ticket black hole.",
-      "Emergency response plans cover critical issues outside business hours.",
-      "Reports are in plain English — you understand what's being done and why.",
+      "Proactive Care, Not Firefighting: We run maintenance as proactive care, not reactive firefighting.",
+      "Alerts Before Outages: Monitoring and alerts are configured before they are needed, not after the outage.",
+      "Verified Backups: Backups are verified regularly — we know they restore when it matters.",
+      "Named Engineers, No Black Holes: You get a direct support channel with named engineers, not a ticket black hole.",
+      "24/7 Emergency Response: Emergency response plans cover critical issues outside business hours.",
+      "Plain-English Reporting: Reports are in plain English — you understand what's being done and why.",
     ],
     extraFaqs: [
       {
@@ -1573,12 +1573,12 @@ const templates: Record<string, CategoryTemplate> = {
     ],
     whyHeading: "Why Businesses Pick Eddinet for Reputation Management",
     whyPoints: [
-      "We monitor and act — alerts, responses and improvement, not just dashboards.",
-      "Review growth is ethical and systematic, never fake or incentivised.",
-      "Responses stay on-brand and meet platform best practices everywhere.",
-      "Reputation work is connected to local SEO for real search impact.",
-      "Reporting ties reputation activity to enquiries and trust.",
-      "You get a defined playbook for crises — prepared before you need it.",
+      "Monitor, Don't Just Report: We monitor and act — alerts, responses and improvement, not just dashboards.",
+      "Ethical Review Growth: Review growth is ethical and systematic, never fake or incentivised.",
+      "On-Brand Responses: Responses stay on-brand and meet platform best practices everywhere.",
+      "Reputation + Local SEO: Reputation work is connected to local SEO for real search impact.",
+      "Reporting That Ties to Trust: Reporting ties reputation activity to enquiries and trust.",
+      "Crisis Playbook Ready: You get a defined playbook for crises — prepared before you need it.",
     ],
     extraFaqs: [
       {
@@ -1711,12 +1711,12 @@ const templates: Record<string, CategoryTemplate> = {
     ],
     whyHeading: "Why Businesses Pick Eddinet for Content",
     whyPoints: [
-      "Every piece has a purpose tied to the funnel, not just a word count.",
-      "Writing is grounded in search intent and audience insight, not guesswork.",
-      "Editorial calendars make delivery predictable for your team.",
-      "We refresh old content instead of always starting from scratch.",
-      "Content is coordinated with SEO and ads as one connected system.",
-      "Reports tie content to rankings, traffic and enquiries — not fake metrics.",
+      "Purpose Behind Every Word: Every piece has a purpose tied to the funnel, not just a word count.",
+      "Grounded in Intent: Writing is grounded in search intent and audience insight, not guesswork.",
+      "Predictable Delivery: Editorial calendars make delivery predictable for your team.",
+      "Refresh Before Rebuild: We refresh old content instead of always starting from scratch.",
+      "Content + SEO + Ads: Content is coordinated with SEO and ads as one connected system.",
+      "Real Content Metrics: Reports tie content to rankings, traffic and enquiries — not fake metrics.",
     ],
     extraFaqs: [
       {

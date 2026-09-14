@@ -3809,11 +3809,11 @@ export const docxDesignCreativeCategory: DocxCategoryContent = {
   whyChooseUs: {
     heading: "Why Choose Us for Design & Creative",
     points: [
-      "We don't outsource your work to random freelancers. Every project is handled by our in-house team, so quality stays consistent.",
-      "We explain our decisions. If we recommend a keyword strategy or a design direction, we'll tell you why — no vague jargon.",
-      "We move at a realistic pace. Good SEO and good design both take real work; we won't promise page-one rankings in a week, but we will show you steady, honest progress.",
-      "We stay involved after launch. Our work doesn't end when a design is delivered or a campaign goes live — we track, adjust, and keep improving.",
-      "We've done this across industries. From healthcare to real estate to e-commerce, we've learned what works and what doesn't, so you're not paying for our learning curve.",
+      "In-House, Never Outsourced: We don't outsource your work to random freelancers. Every project is handled by our in-house team, so quality stays consistent.",
+      "Decisions, Explained: We explain our decisions. If we recommend a keyword strategy or a design direction, we'll tell you why — no vague jargon.",
+      "Realistic, Honest Pacing: We move at a realistic pace. Good SEO and good design both take real work; we won't promise page-one rankings in a week, but we will show you steady, honest progress.",
+      "Involved Beyond Launch: We stay involved after launch. Our work doesn't end when a design is delivered or a campaign goes live — we track, adjust, and keep improving.",
+      "Cross-Industry Experience: We've done this across industries. From healthcare to real estate to e-commerce, we've learned what works and what doesn't, so you're not paying for our learning curve.",
     ],
   },
   process: {
@@ -3931,10 +3931,10 @@ export const docxWebDevelopmentCategory: DocxCategoryContent = {
   whyChooseUs: {
     heading: "Why Choose Us for Development Services in Delhi",
     points: [
-      "We say no to work we can't do well, so every project we take on is handled properly.",
-      "We communicate in plain language — clear updates, no jargon, no surprises.",
-      "We build for the long term with clean, well-documented code that's easy to maintain or hand off.",
-      "We stick around after launch, offering ongoing support, fixes, updates, and future features.",
+      "Work We Actually Deliver: We say no to work we can't do well, so every project we take on is handled properly.",
+      "Plain-Language Communication: We communicate in plain language — clear updates, no jargon, no surprises.",
+      "Built for the Long Term: We build for the long term with clean, well-documented code that's easy to maintain or hand off.",
+      "Support That Continues: We stick around after launch, offering ongoing support, fixes, updates, and future features.",
     ],
   },
   process: {

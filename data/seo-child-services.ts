@@ -142,12 +142,12 @@ export const seoChildServices: SeoChildService[] = [
     whyChooseUs: {
       heading: "Why Choose Eddinet for Traditional SEO",
       points: [
-        "Full-funnel SEO strategy — not isolated tactics or monthly report dumps",
-        "Technical, content and authority teams working as one integrated unit",
-        "Transparent reporting tied to leads and revenue, not vanity metrics",
-        "Proven track record across B2B, eCommerce, healthcare and SaaS verticals",
-        "Google algorithm updates anticipated and adapted to, not reacted to in panic",
-        "Clear communication with dedicated SEO strategists, not ticketing black holes",
+        "Full-Funnel Strategy: Full-funnel SEO strategy — not isolated tactics or monthly report dumps.",
+        "Integrated Teams: Technical, content and authority teams working as one integrated unit.",
+        "Revenue-Linked Reporting: Transparent reporting tied to leads and revenue, not vanity metrics.",
+        "Proven Track Record: Proven track record across B2B, eCommerce, healthcare and SaaS verticals.",
+        "Adaptive to Algorithm Updates: Google algorithm updates anticipated and adapted to, not reacted to in panic.",
+        "Dedicated Strategists: Clear communication with dedicated SEO strategists, not ticketing black holes.",
       ],
     },
     process: {
@@ -852,11 +852,11 @@ features: [
     whyChooseUs: {
       heading: "Why Choose Us – Your Local SEO Experts in India",
       points: [
-        "We focus only on what moves your rankings. No filler tasks, no vanity metrics — every action ties back to visibility and leads.",
-        "We understand Indian local search behavior. From regional language nuances to how customers compare local options, our strategies are built for the market you're actually operating in.",
-        "We're transparent, always. You'll know exactly what we're doing, why we're doing it, and what results to expect realistically, not with inflated promises.",
-        "We treat your business like it's ours. As a local SEO company in India that works closely with each client, we care about your growth as much as you do, because your results are our reputation.",
-        "We adapt as search evolves. Google's algorithms change constantly, and our strategies are built to adjust with them, not break because of them.",
+        "Ranking-Focused Work Only: We focus only on what moves your rankings. No filler tasks, no vanity metrics — every action ties back to visibility and leads.",
+        "Built for Indian Local Search: We understand Indian local search behavior. From regional language nuances to how customers compare local options, our strategies are built for the market you're actually operating in.",
+        "Radical Transparency: We're transparent, always. You'll know exactly what we're doing, why we're doing it, and what results to expect realistically, not with inflated promises.",
+        "Your Growth Is Our Reputation: We treat your business like it's ours. As a local SEO company in India that works closely with each client, we care about your growth as much as you do, because your results are our reputation.",
+        "Adaptive Strategy: We adapt as search evolves. Google's algorithms change constantly, and our strategies are built to adjust with them, not break because of them.",
       ],
     },
     process: {
@@ -1098,11 +1098,11 @@ features: [
     whyChooseUs: {
       heading: "Why Choose Us – A Reliable Enterprise SEO Firm in India",
       points: [
-        "We understand organizational complexity. From multiple stakeholders to legacy systems, we know enterprise SEO isn't just about strategy — it's about execution within a large, moving organization.",
-        "We build for scale from day one. Every recommendation we make is designed to work across hundreds or thousands of pages, not just a handful of test cases.",
-        "We communicate at every level. Whether it's a technical conversation with your dev team or a results conversation with leadership, we tailor communication so everyone stays informed and confident.",
-        "We protect what you've already built. Enterprise brands have existing rankings and traffic to lose. Our approach prioritizes stability alongside growth, especially during migrations and major changes.",
-        "We stay accountable with data. We report transparently on what's working, what isn't, and what we're doing about it — no vague promises, just clear numbers.",
+        "We Understand Organizational Complexity: From multiple stakeholders to legacy systems, we know enterprise SEO isn't just about strategy — it's about execution within a large, moving organization.",
+        "We Build for Scale From Day One: Every recommendation we make is designed to work across hundreds or thousands of pages, not just a handful of test cases.",
+        "We Communicate at Every Level: Whether it's a technical conversation with your dev team or a results conversation with leadership, we tailor communication so everyone stays informed and confident.",
+        "We Protect What You've Already Built: Enterprise brands have existing rankings and traffic to lose. Our approach prioritizes stability alongside growth, especially during migrations and major changes.",
+        "We Stay Accountable With Data: We report transparently on what's working, what isn't, and what we're doing about it — no vague promises, just clear numbers.",
       ],
     },
     process: {
@@ -1336,11 +1336,11 @@ features: [
     whyChooseUs: {
       heading: "Why Choose Us for B2B SEO Services in India",
       points: [
-        "We understand complex buyer journeys. Our strategies are built around how B2B decisions actually get made, not simplified for a single-search, single-decision model.",
-        "We prioritize pipeline over vanity metrics. Rankings and traffic matter, but we stay focused on what actually contributes to leads and revenue.",
-        "We work well with technical and niche industries. From SaaS to industrial manufacturing, we know how to make specialized offerings understandable and search-friendly.",
-        "We collaborate closely with your team. Whether it's your marketing team, sales leadership, or subject matter experts, we work with the people who understand your business best to build content that actually converts.",
-        "We stay transparent at every step. No inflated promises — just clear strategy, honest reporting, and steady, measurable progress.",
+        "We Understand Complex Buyer Journeys: Our strategies are built around how B2B decisions actually get made, not simplified for a single-search, single-decision model.",
+        "We Prioritize Pipeline Over Vanity Metrics: Rankings and traffic matter, but we stay focused on what actually contributes to leads and revenue.",
+        "Niche & Technical Industries: From SaaS to industrial manufacturing, we know how to make specialized offerings understandable and search-friendly.",
+        "We Collaborate Closely With Your Team: Whether it's your marketing team, sales leadership, or subject matter experts, we work with the people who understand your business best to build content that actually converts.",
+        "Transparent at Every Step: No inflated promises — just clear strategy, honest reporting, and steady, measurable progress.",
       ],
     },
     process: {
@@ -1793,11 +1793,11 @@ benefits: [
     whyChooseUs: {
       heading: "Why Businesses Pick Eddinet as Their SEO Company in India",
       points: [
-        "We take structure seriously. Our international SEO services in India start with getting the technical foundation right, since that's where most global SEO mistakes actually happen.",
-        "We research natively, not by translation. Every market gets its own keyword research based on how people there actually search.",
-        "We protect what you've already built. New market strategies are designed to add growth without disrupting your existing rankings.",
-        "We coordinate across teams easily. International SEO touches development, content, and regional marketing, and we work smoothly across all of them.",
-        "We report market by market. You'll always know exactly which regions are performing and why, not just one blended number.",
+        "We Take Structure Seriously: Our international SEO services in India start with getting the technical foundation right, since that's where most global SEO mistakes actually happen.",
+        "Native Research, Not Translation: Every market gets its own keyword research based on how people there actually search.",
+        "We Protect What You've Already Built: New market strategies are designed to add growth without disrupting your existing rankings.",
+        "Cross-Team Coordination: International SEO touches development, content, and regional marketing, and we work smoothly across all of them.",
+        "Market-by-Market Reporting: You'll always know exactly which regions are performing and why, not just one blended number.",
       ],
     },
     process: {
@@ -2031,11 +2031,11 @@ benefits: [
     whyChooseUs: {
       heading: "Why Businesses Pick Eddinet as Their SEO Company in India",
       points: [
-        "Quality First, Scale Second — We prioritize real page value so your rankings remain sustainable long-term.",
-        "Intent-Focused Templates — Every template reflects actual user search queries rather than filler variations.",
-        "Technical Scale Management — We optimize internal linking, crawl efficiency, and indexation right from launch.",
-        "Data-Driven Collaboration — We structure your data carefully to power high-performing automated pages.",
-        "Pattern-Based Performance Tracking — We analyze entire page categories together to continuously refine your system.",
+        "Quality First, Scale Second: We prioritize real page value so your rankings remain sustainable long-term.",
+        "Intent-Focused Templates: Every template reflects actual user search queries rather than filler variations.",
+        "Technical Scale Management: We optimize internal linking, crawl efficiency, and indexation right from launch.",
+        "Data-Driven Collaboration: We structure your data carefully to power high-performing automated pages.",
+        "Pattern-Based Performance Tracking: We analyze entire page categories together to continuously refine your system.",
       ],
     },
     process: {
@@ -2269,11 +2269,11 @@ faqs: [
     whyChooseUs: {
       heading: "Why Businesses Pick Eddinet as Their SEO Company in India",
       points: [
-        "We speak Amazon's language, not just Google's. Our Amazon SEO services in India are built around A9/A10 specifically, not generic SEO applied incorrectly.",
-        "We optimize for the sale, not just the click. Every recommendation considers both visibility and what actually convinces someone to buy.",
-        "We look at the full listing, not one piece. Keywords, images, and reviews all get treated as part of the same system.",
-        "We benchmark against real competitors. Our strategies reflect what's genuinely working in your specific category.",
-        "We keep up as Amazon changes. Algorithm shifts and new best practices get folded into our approach continuously.",
+        "Amazon-Native, Not Google-Derived: We speak Amazon's language, not just Google's. Our Amazon SEO services in India are built around A9/A10 specifically, not generic SEO applied incorrectly.",
+        "Optimized for the Sale, Not the Click: Every recommendation considers both visibility and what actually convinces someone to buy.",
+        "The Full Listing, Not One Piece: Keywords, images, and reviews all get treated as part of the same system.",
+        "Benchmarked Against Real Competitors: Our strategies reflect what's genuinely working in your specific category.",
+        "Current as Amazon Changes: Algorithm shifts and new best practices get folded into our approach continuously.",
       ],
     },
     process: {
@@ -2512,12 +2512,12 @@ faqs: [
     whyChooseUs: {
       heading: "Why Choose Eddinet for eCommerce SEO",
       points: [
-        "Platform expertise across Shopify, WooCommerce, Magento and custom eCommerce builds",
-        "Category-first strategy that targets the highest-impact pages for shopping traffic",
-        "Faceted navigation management that prevents crawl waste and duplicate content",
-        "Product page optimisation at scale with unique, conversion-focused descriptions",
-        "Schema markup implementation that qualifies for rich results across your catalogue",
-        "Integration with PPC, email and social for a complete eCommerce growth system",
+        "Platform Expertise: Platform expertise across Shopify, WooCommerce, Magento and custom eCommerce builds.",
+        "Category-First Strategy: Category-first strategy that targets the highest-impact pages for shopping traffic.",
+        "Faceted Navigation Control: Faceted navigation management that prevents crawl waste and duplicate content.",
+        "Product Optimisation at Scale: Product page optimisation at scale with unique, conversion-focused descriptions.",
+        "Rich Results Ready: Schema markup implementation that qualifies for rich results across your catalogue.",
+        "Complete Growth System: Integration with PPC, email and social for a complete eCommerce growth system.",
       ],
     },
     process: {
@@ -2754,12 +2754,12 @@ faqs: [
     whyChooseUs: {
       heading: "Why Choose Eddinet for Shopify SEO",
       points: [
-        "Deep Shopify platform expertise — we know every limitation and every workaround",
-        "Theme-specific speed optimisation that addresses Shopify's unique performance challenges",
-        "App audit capability that identifies and eliminates hidden SEO problems from apps",
-        "Collection-first strategy that maximises Shopify's highest-impact SEO pages",
-        "Integration with Shopify development for seamless technical implementation",
-        "Proven results across Shopify, Shopify Plus and headless Shopify implementations",
+        "Deep Shopify Expertise: Deep Shopify platform expertise — we know every limitation and every workaround.",
+        "Theme-Specific Speed Optimisation: Theme-specific speed optimisation that addresses Shopify's unique performance challenges.",
+        "App Audit Capability: App audit capability that identifies and eliminates hidden SEO problems from apps.",
+        "Collection-First Strategy: Collection-first strategy that maximises Shopify's highest-impact SEO pages.",
+        "Seamless Technical Integration: Integration with Shopify development for seamless technical implementation.",
+        "Proven Shopify Results: Proven results across Shopify, Shopify Plus and headless Shopify implementations.",
       ],
     },
     process: {

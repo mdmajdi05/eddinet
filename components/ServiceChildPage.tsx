@@ -5,6 +5,7 @@ import Industries from "@/components/Industries";
 import AboutSection from "@/components/AboutSection";
 import LineClampedText from "@/components/LineClampedText";
 import GetQuoteButton from "@/components/GetQuoteButton";
+import SectionHeader from "@/components/SectionHeader";
 import { services } from "@/data/services";
 import { site } from "@/data/contact";
 
@@ -171,7 +172,7 @@ export default function ServiceChildPage({
                     alt={child.title}
                     width={1200}
                     height={675}
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-[1.05]"
+                    className="w-full h-full object-cover object-top transition-transform duration-700 ease-out hover:scale-[1.05]"
                     unoptimized
                   />
                   <div className="absolute bottom-4 left-5 inline-flex items-center gap-2 py-1.5 px-3.5 rounded-full bg-[rgba(11,15,25,0.6)] backdrop-blur-md border border-white/15 text-[0.72rem] font-bold text-white">
@@ -205,21 +206,15 @@ export default function ServiceChildPage({
       ========================================================= */}
       <section className="py-[90px]">
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[var(--tag-bg)] border border-[var(--tag-border)] rounded-3xl text-[var(--main-accent)] text-[0.8rem] font-semibold uppercase tracking-wider mb-4">
-              Our Services
-            </div>
-            <h2 className="text-[2.4rem] font-extrabold leading-[1.2] mb-3 text-[var(--text-main)] tracking-[-0.5px] max-[768px]:text-[1.9rem]">
-              {child.featuresHeading ?? (
-                <>
-                  The Complete <span className="gradient-text">{serviceName}</span> Services
-                </>
-              )}
-            </h2>
-            <p className="text-[var(--text-muted)] text-[1.05rem] max-w-[640px] mx-auto">
-              {child.featuresDescription ?? `Everything our ${serviceName.toLowerCase()} services cover — engineered to work as one connected system.`}
-            </p>
-          </div>
+          <SectionHeader
+            chip="Our Services"
+            title={child.featuresHeading ?? (
+              <>
+                The Complete <span className="gradient-text">{serviceName}</span> Services
+              </>
+            )}
+            description={child.featuresDescription ?? `Everything our ${serviceName.toLowerCase()} services cover — engineered to work as one connected system.`}
+          />
 
           <div className="grid grid-cols-2 gap-6 max-[1024px]:grid-cols-1">
             {child.features.map((feature, i) => (
@@ -264,17 +259,12 @@ export default function ServiceChildPage({
       ========================================================= */}
       <section className="py-[90px] bg-[var(--strip-bg)] border-y border-[var(--border-color)]">
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[var(--tag-bg)] border border-[var(--tag-border)] rounded-3xl text-[var(--main-accent)] text-[0.8rem] font-semibold uppercase tracking-wider mb-4">
-              Our Process
-            </div>
-            <h2 className="text-[2.4rem] font-extrabold leading-[1.2] mb-3 text-[var(--text-main)] tracking-[-0.5px] max-[768px]:text-[1.9rem]">
-              How We Execute <span className="gradient-text">{serviceName}</span> Projects
-            </h2>
-            <p className="text-[var(--text-muted)] text-[1.05rem] max-w-[640px] mx-auto">
-              {child.process.description ?? "An outcome-led process, from first conversation to continuous improvement."}
-            </p>
-          </div>
+          <SectionHeader
+            chip="Our Process"
+            title={<>How We Execute <span className="gradient-text">{serviceName}</span> Projects</>}
+            description={child.process.description ?? "An outcome-led process, from first conversation to continuous improvement."}
+            spacing="lg"
+          />
 
           <div className="relative">
             <div className="absolute left-0 right-0 top-[28px] h-[2px] bg-gradient-to-r from-transparent via-[rgba(var(--accent-rgb),0.5)] to-transparent max-[1024px]:hidden" />
@@ -306,21 +296,15 @@ export default function ServiceChildPage({
       ========================================================= */}
       <section className="py-[90px]">
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[var(--tag-bg)] border border-[var(--tag-border)] rounded-3xl text-[var(--main-accent)] text-[0.8rem] font-semibold uppercase tracking-wider mb-4">
-              What You Can Expect
-            </div>
-            <h2 className="text-[2.4rem] font-extrabold leading-[1.2] mb-3 text-[var(--text-main)] tracking-[-0.5px] max-[768px]:text-[1.9rem]">
-              {child.benefitsHeading ?? (
-                <>
-                  Outcomes Built Into <span className="gradient-text">Every Engagement</span>
-                </>
-              )}
-            </h2>
-            <p className="text-[var(--text-muted)] text-[1.05rem] max-w-[640px] mx-auto">
-              {child.benefitsDescription ?? "A clear roadmap with accountability at every stage — so expectations and reality stay aligned."}
-            </p>
-          </div>
+          <SectionHeader
+            chip="What You Can Expect"
+            title={child.benefitsHeading ?? (
+              <>
+                Outcomes Built Into <span className="gradient-text">Every Engagement</span>
+              </>
+            )}
+            description={child.benefitsDescription ?? "A clear roadmap with accountability at every stage — so expectations and reality stay aligned."}
+          />
 
           <div className="grid grid-cols-3 gap-5 mb-12 max-[768px]:grid-cols-1">
             {[
@@ -373,18 +357,12 @@ export default function ServiceChildPage({
       ========================================================= */}
       <section className="py-[90px] bg-[var(--strip-bg)] border-y border-[var(--border-color)]">
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[var(--tag-bg)] border border-[var(--tag-border)] rounded-3xl text-[var(--main-accent)] text-[0.8rem] font-semibold uppercase tracking-wider mb-4">
-              Why Choose Us
-            </div>
-            <h2 className="text-[2.4rem] font-extrabold leading-[1.2] mb-3 text-[var(--text-main)] tracking-[-0.5px] max-[768px]:text-[1.9rem]">
-              <span className="gradient-text">{child.whyChooseUs.heading}</span>
-            </h2>
-            <p className="text-[var(--text-muted)] text-[1.05rem] max-w-[680px] mx-auto">
-              {child.whyChooseUs.description ??
-                `${serviceName.toLowerCase()} in Delhi NCR is crowded with agencies that sell tactics. Eddinet sells a connected system — strategy, technical execution, intent-led content and transparent reporting engineered to turn search visibility into revenue.`}
-            </p>
-          </div>
+          <SectionHeader
+            chip="Why Choose Us"
+            title={<span className="gradient-text">{child.whyChooseUs.heading}</span>}
+            description={child.whyChooseUs.description ??
+              `${serviceName.toLowerCase()} in Delhi NCR is crowded with agencies that sell tactics. Eddinet sells a connected system — strategy, technical execution, intent-led content and transparent reporting engineered to turn search visibility into revenue.`}
+          />
 
           <div className="relative rounded-3xl overflow-hidden border border-[rgba(var(--accent-rgb),0.25)] bg-[var(--panel-bg)] shadow-[var(--shadow-lg)]">
             <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[var(--main-accent)] via-transparent to-purple-500 opacity-50" />
@@ -450,14 +428,10 @@ export default function ServiceChildPage({
       ========================================================= */}
       <section className="py-[90px]">
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[var(--tag-bg)] border border-[var(--tag-border)] rounded-3xl text-[var(--main-accent)] text-[0.8rem] font-semibold uppercase tracking-wider mb-4">
-              Client Reviews
-            </div>
-            <h2 className="text-[2.4rem] font-extrabold leading-[1.2] mb-3 text-[var(--text-main)] tracking-[-0.5px] max-[768px]:text-[1.9rem]">
-              What Our <span className="gradient-text">Clients Say</span>
-            </h2>
-          </div>
+          <SectionHeader
+            chip="Client Reviews"
+            title={<>What Our <span className="gradient-text">Clients Say</span></>}
+          />
 
           <div className="grid grid-cols-2 gap-6 max-[900px]:grid-cols-1">
             {child.testimonials.map((t, i) => (
@@ -494,15 +468,10 @@ export default function ServiceChildPage({
       ========================================================= */}
       <section className="py-[90px]">
         <div className="w-full max-w-[820px] mx-auto px-5">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[var(--tag-bg)] border border-[var(--tag-border)] rounded-3xl text-[var(--main-accent)] text-[0.8rem] font-semibold uppercase tracking-wider mb-4">
-              Common Questions
-            </div>
-            <h2 className="text-[2.4rem] font-extrabold leading-[1.2] mb-3 text-[var(--text-main)] tracking-[-0.5px] max-[768px]:text-[1.9rem]">
-              Frequently Asked Questions About{" "}
-              <span className="gradient-text">{child.title}</span>
-            </h2>
-          </div>
+          <SectionHeader
+            chip="Common Questions"
+            title={<>Frequently Asked Questions About{" "}<span className="gradient-text">{child.title}</span></>}
+          />
 
           <div className="flex flex-col gap-4">
             {child.faqs.map((f, i) => (
@@ -528,29 +497,23 @@ export default function ServiceChildPage({
       ========================================================= */}
       <section className="py-[90px] bg-[var(--strip-bg)] border-y border-[var(--border-color)]">
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[var(--tag-bg)] border border-[var(--tag-border)] rounded-3xl text-[var(--main-accent)] text-[0.8rem] font-semibold uppercase tracking-wider mb-4">
-              Think Bigger
-            </div>
-            <h2 className="text-[2.4rem] font-extrabold leading-[1.2] mb-3 text-[var(--text-main)] tracking-[-0.5px] max-[768px]:text-[1.9rem]">
-              Synergistic <span className="gradient-text">Growth Systems</span>
-            </h2>
-            <p className="text-[var(--text-muted)] text-[1.05rem] max-w-[640px] mx-auto">
-              {serviceName.toLowerCase()} works best as part of an integrated growth strategy. Explore how these services connect.
-            </p>
-          </div>
+          <SectionHeader
+            chip="Think Bigger"
+            title={<>Synergistic <span className="gradient-text">Growth Systems</span></>}
+            description={`${serviceName.toLowerCase()} works best as part of an integrated growth strategy. Explore how these services connect.`}
+          />
 
           <div className="grid grid-cols-3 gap-6 max-[1024px]:grid-cols-2 max-[768px]:grid-cols-1">
             {child.crossLinks.map((link, i) => (
               <Link key={i} href={link.slug} className="group relative rounded-[var(--radius-lg)] bg-[var(--bg-card)] border border-[var(--border-color)] overflow-hidden no-underline transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(var(--accent-rgb),0.15)]">
                 <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[var(--main-accent)] via-transparent to-purple-500 opacity-40 group-hover:opacity-100 transition-opacity duration-500 z-10" />
-                <div className="relative h-[145px] overflow-hidden">
+                <div className="relative">
                   <Image
                     src={crossImage(link.slug) ?? child.image}
                     alt={link.title}
                     width={600}
                     height={350}
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                    className="w-full h-auto object-contain transition-transform duration-700 ease-out group-hover:scale-105"
                     unoptimized
                   />
                 </div>

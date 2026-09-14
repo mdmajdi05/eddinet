@@ -2,13 +2,38 @@
 import { useState } from "react";
 import { site } from "@/data/contact";
 
+const fieldCls =
+  "w-full py-3 px-4 bg-[var(--input-bg)] border border-[var(--border-color)] rounded-lg text-[var(--text-main)] font-[inherit] text-[0.95rem] outline-none transition-all duration-300 focus:border-[var(--main-accent)] focus:bg-[var(--input-bg-focus)]";
+
 export default function ConsultModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [service, setService] = useState("SEO & Organic Growth");
+  const [message, setMessage] = useState("");
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    setSending(true);
+
+    const lines = [
+      "*New Strategy Call Request - Eddinet*",
+      "==================================",
+      `*Name:* ${name.trim()}`,
+      `*Phone:* ${phone.trim()}`,
+      `*Service Needed:* ${service}`,
+      message.trim() ? `*Message:* ${message.trim()}` : "",
+      "",
+      "===================================",
+      "Sent from the Eddinet website",
+    ].filter(Boolean);
+
+    const url = `${site.whatsapp}?text=${encodeURIComponent(lines.join("\n"))}`;
+    window.open(url, "_blank");
+
     setSubmitted(true);
-    setTimeout(() => { setSubmitted(false); onClose(); }, 2000);
+    setTimeout(() => { setSubmitted(false); onClose(); setName(""); setPhone(""); setMessage(""); }, 2000);
   }
 
   return (
@@ -32,15 +57,15 @@ export default function ConsultModal({ isOpen, onClose }: { isOpen: boolean; onC
           <form onSubmit={handleSubmit}>
             <div className="mb-5">
               <label className="block text-[0.85rem] font-semibold mb-2 text-[var(--text-muted)]">Full Name *</label>
-              <input type="text" className="w-full py-3 px-4 bg-[var(--input-bg)] border border-[var(--border-color)] rounded-lg text-[var(--text-main)] font-[inherit] text-[0.95rem] outline-none transition-all duration-300 focus:border-[var(--main-accent)] focus:bg-[var(--input-bg-focus)]" placeholder="e.g. Rahul Sharma" required />
+              <input type="text" value={name} onChange={(e) => setName(e.target.value)} className={fieldCls} placeholder="e.g. Rahul Sharma" required />
             </div>
             <div className="mb-5">
               <label className="block text-[0.85rem] font-semibold mb-2 text-[var(--text-muted)]">Phone Number *</label>
-              <input type="tel" className="w-full py-3 px-4 bg-[var(--input-bg)] border border-[var(--border-color)] rounded-lg text-[var(--text-main)] font-[inherit] text-[0.95rem] outline-none transition-all duration-300 focus:border-[var(--main-accent)] focus:bg-[var(--input-bg-focus)]" placeholder={site.phone} required />
+              <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} className={fieldCls} placeholder={site.phone} required />
             </div>
             <div className="mb-5">
               <label className="block text-[0.85rem] font-semibold mb-2 text-[var(--text-muted)]">Service Needed</label>
-              <select className="w-full py-3 px-4 bg-[var(--input-bg)] border border-[var(--border-color)] rounded-lg text-[var(--text-main)] font-[inherit] text-[0.95rem] outline-none transition-all duration-300 focus:border-[var(--main-accent)] focus:bg-[var(--input-bg-focus)]">
+              <select value={service} onChange={(e) => setService(e.target.value)} className={fieldCls}>
                 <option>SEO &amp; Organic Growth</option>
                 <option>Google &amp; Meta Ads</option>
                 <option>Website Development</option>
@@ -49,10 +74,11 @@ export default function ConsultModal({ isOpen, onClose }: { isOpen: boolean; onC
             </div>
             <div className="mb-5">
               <label className="block text-[0.85rem] font-semibold mb-2 text-[var(--text-muted)]">Message / Website URL</label>
-              <textarea className="w-full py-3 px-4 bg-[var(--input-bg)] border border-[var(--border-color)] rounded-lg text-[var(--text-main)] font-[inherit] text-[0.95rem] outline-none transition-all duration-300 focus:border-[var(--main-accent)] focus:bg-[var(--input-bg-focus)] resize-vertical min-h-[90px]" placeholder="Tell us about your business goals..." />
+              <textarea value={message} onChange={(e) => setMessage(e.target.value)} className={`${fieldCls} resize-vertical min-h-[90px]`} placeholder="Tell us about your business goals..." />
             </div>
-            <button type="submit" className="inline-flex items-center justify-center gap-2.5 py-3.5 px-7 rounded-full font-bold text-[0.95rem] cursor-pointer transition-all duration-300 border-none outline-none text-[var(--on-primary)] shadow-[0_10px_25px_-5px_rgba(var(--accent-rgb),0.4)] hover:-translate-y-[3px] hover:shadow-[0_15px_30px_-5px_rgba(var(--accent-rgb),0.6)] w-full" style={{ background: "var(--primary-gradient)" }}>
-              Submit &amp; Get Proposal
+            <button type="submit" disabled={sending} className="inline-flex items-center justify-center gap-2.5 py-3.5 px-7 rounded-full font-bold text-[0.95rem] cursor-pointer transition-all duration-300 border-none outline-none text-[var(--on-primary)] shadow-[0_10px_25px_-5px_rgba(var(--accent-rgb),0.4)] hover:-translate-y-[3px] hover:shadow-[0_15px_30px_-5px_rgba(var(--accent-rgb),0.6)] w-full disabled:opacity-60" style={{ background: "var(--primary-gradient)" }}>
+              {sending ? "Opening WhatsApp..." : "Submit & Get Proposal"}
+              {!sending && <span>→</span>}
             </button>
           </form>
         )}
