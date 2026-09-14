@@ -499,6 +499,11 @@ html[data-theme="red-light"] {
   animation: pulse-slide 3.6s ease-in-out infinite;
 }
 
+@keyframes quotePop {
+  0% { opacity: 0; transform: translateY(18px) scale(0.96); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
 /* Numbered insight rows */
 .insight-row {
   position: relative;

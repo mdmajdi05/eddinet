@@ -4,6 +4,7 @@ import ContactForm from "@/components/ContactForm";
 import Industries from "@/components/Industries";
 import AboutSection from "@/components/AboutSection";
 import LineClampedText from "@/components/LineClampedText";
+import GetQuoteButton from "@/components/GetQuoteButton";
 import { services } from "@/data/services";
 import { site } from "@/data/contact";
 
@@ -98,7 +99,7 @@ export default function ServiceChildPage({
       {/* =========================================================
           1. HERO — split with framed image + floating metric chips
       ========================================================= */}
-      <section className="relative pt-[120px] pb-[90px] overflow-hidden">
+      <section className="relative flex items-center pt-[100px] pb-[60px] overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute inset-0 bg-gradient-to-br from-[var(--main-accent)]/5 via-transparent to-transparent" />
           <div className="absolute top-[-25%] right-[-15%] w-[560px] h-[560px] rounded-full bg-[var(--main-accent)]/10 blur-3xl animate-drift" />
@@ -107,7 +108,7 @@ export default function ServiceChildPage({
         </div>
 
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5 relative z-10">
-          <nav className="mb-5 text-[0.85rem] text-[var(--text-dim)] flex flex-wrap items-center gap-2" aria-label="Breadcrumb">
+          <nav className="mb-4 text-[0.85rem] text-[var(--text-dim)] flex flex-wrap items-center gap-2" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-[var(--main-accent)] no-underline transition-colors duration-300">Home</Link>
             <span className="text-[var(--text-dim)]/60">/</span>
             <Link href="/services" className="hover:text-[var(--main-accent)] no-underline transition-colors duration-300">Services</Link>
@@ -117,12 +118,12 @@ export default function ServiceChildPage({
             <span className="text-[var(--main-accent)]">{child.title}</span>
           </nav>
 
-          <div className="grid grid-cols-[1.2fr_0.8fr] gap-12 items-center max-[1024px]:grid-cols-1">
+          <div className="grid grid-cols-[1.3fr_0.7fr] gap-10 items-center max-[1024px]:grid-cols-1">
             <div>
-              <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[var(--tag-bg)] border border-[var(--tag-border)] rounded-3xl text-[var(--main-accent)] text-[0.8rem] font-semibold uppercase tracking-wider mb-5">
+              <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[var(--tag-bg)] border border-[var(--tag-border)] rounded-3xl text-[var(--main-accent)] text-[0.8rem] font-semibold uppercase tracking-wider mb-4">
                 ⚡ Eddinet {serviceName} Team
               </div>
-              <h1 className="text-[3rem] font-extrabold leading-[1.08] mb-5 text-[var(--text-main)] tracking-[-1px] max-[768px]:text-[2.2rem]">
+              <h1 className="text-[3rem] font-extrabold leading-[1.08] mb-4 text-[var(--text-main)] tracking-[-1px] max-[768px]:text-[2.2rem]">
                 {heroPrefix}
                 {heroSuffix && (
                   <>
@@ -131,10 +132,10 @@ export default function ServiceChildPage({
                   </>
                 )}
               </h1>
-              <p className="text-[var(--text-muted)] text-[1.08rem] leading-relaxed mb-9 max-w-[600px] whitespace-pre-line">
+              <p className="text-[var(--text-muted)] text-[1.08rem] leading-relaxed mb-6 max-w-[600px] whitespace-pre-line">
                 {child.heroSubheading}
               </p>
-              <div className="flex gap-4 flex-wrap mb-10">
+              <div className="flex gap-4 flex-wrap mb-8">
                 <Link href="/contact" className="inline-flex items-center justify-center gap-2.5 py-3.5 px-7 rounded-full font-bold text-[0.95rem] no-underline transition-all duration-300 text-[var(--on-primary)] shadow-[0_10px_25px_-5px_rgba(var(--accent-rgb),0.4)] hover:-translate-y-[3px] hover:shadow-[0_15px_30px_-5px_rgba(var(--accent-rgb),0.6)]" style={{ background: "var(--primary-gradient)" }}>
                   🚀 Talk to a Specialist
                 </Link>
@@ -164,7 +165,7 @@ export default function ServiceChildPage({
 
             <div className="relative">
               <div className="relative rounded-3xl overflow-hidden border border-[var(--border-color)] bg-[var(--panel-bg)] shadow-[var(--shadow-xl)]">
-                <div className="relative h-[300px] overflow-hidden">
+                <div className="relative h-[210px] overflow-hidden">
                   <Image
                     src={child.image}
                     alt={child.title}
@@ -173,7 +174,6 @@ export default function ServiceChildPage({
                     className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-[1.05]"
                     unoptimized
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[rgba(11,15,25,0.85)] via-[rgba(11,15,25,0.3)] to-transparent" />
                   <div className="absolute bottom-4 left-5 inline-flex items-center gap-2 py-1.5 px-3.5 rounded-full bg-[rgba(11,15,25,0.6)] backdrop-blur-md border border-white/15 text-[0.72rem] font-bold text-white">
                     ⚡ {serviceName} Delivery Team
                   </div>
@@ -243,10 +243,7 @@ export default function ServiceChildPage({
                       sizes="(max-width: 1024px) 100vw, 42vw"
                       unoptimized
                     />
-                    <div className="absolute bottom-3 left-4 flex items-center gap-2">
-                      <div className="w-10 h-10 flex items-center justify-center text-[1.15rem] rounded-xl bg-gradient-to-br from-[var(--main-accent)] to-[rgba(var(--accent-rgb),0.5)] shadow-[0_8px_25px_rgba(var(--accent-rgb),0.35)] transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6">
-                        {["🕸️", "🗺️", "✍️", "🔗", "📊", "🛡️", "📱", "🧠", "⚡", "🌐"][i % 10]}
-                      </div>
+                    <div className="absolute bottom-3 left-4">
                       <span className="text-[0.7rem] font-extrabold text-[var(--main-accent)] bg-[rgba(11,15,25,0.7)] border border-[var(--border-color)] rounded-full px-2.5 py-1">{String(i + 1).padStart(2, "0")}</span>
                     </div>
                   </div>
@@ -254,6 +251,7 @@ export default function ServiceChildPage({
                 <div className="relative z-10 p-7 flex flex-col justify-center">
                   <h3 className="text-[1.1rem] font-extrabold text-[var(--text-main)] mb-2.5">{feature.title}</h3>
                   <p className="text-[var(--text-muted)] text-[0.88rem] leading-relaxed">{feature.description}</p>
+                  <GetQuoteButton service={feature.title} />
                 </div>
               </div>
             ))}
