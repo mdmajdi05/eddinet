@@ -1,0 +1,40 @@
+# ============================================================================
+#  EDDINET — .dockerignore
+#  Build context me jo nahi jaana chahiye wahi yahan (image chhota + fast)
+# ============================================================================
+
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# next.js build output (builder stage . se naya build karega)
+.next
+out
+build
+
+# git / IDE
+.git
+.gitignore
+.vscode
+.idea
+
+# env / secrets (kabhi image me mat bhejo)
+.env*.local
+.env
+
+# logs
+*.log
+npm-debug.log*
+start-err.log
+start-out.log
+
+# local misc
+_unused-assets
+Dockerfile
+.dockerignore
+tsconfig.tsbuildinfo
+
+# binary assets / os files
+.DS_Store
+Thumbs.db

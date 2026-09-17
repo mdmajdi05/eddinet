@@ -6,6 +6,7 @@ import Reveal from "@/components/about/Reveal";
 import { site } from "@/data/contact";
 import { processSteps } from "@/data/home";
 import { industries } from "@/data/industries";
+import { IMG } from "@/data/images";
 
 export const metadata: Metadata = {
   title: "About Eddinet | Digital Marketing, Software, AI & Cloud Agency in Delhi NCR",
@@ -404,7 +405,7 @@ export default function AboutPage() {
                 <div className="absolute inset-0 translate-x-[12px] translate-y-[12px] rounded-[32px] bg-[var(--bg-card)] border border-[var(--border-color)] rotate-[3deg] shadow-[var(--shadow-lg)]" />
                 <div className="relative overflow-hidden rounded-[30px] border-[5px] border-[var(--bg-card)] shadow-[0_30px_80px_rgba(0,0,0,0.18)]">
                   <Image
-                    src="/about-section.webp"
+                    src={IMG.about.aboutSection.src}
                     alt="Eddinet team collaborating in the office in Delhi NCR"
                     width={1000}
                     height={667}

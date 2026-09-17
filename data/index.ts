@@ -27,6 +27,9 @@
 //  │ (216 service detail pages)      │ generated-child-services.ts +          │
 //  │                                 │ seo-child-services.ts (raw data —      │
 //  │                                 │           DON'T EDIT, banner dekho)    │
+//  │ EVERY PAGE (images)             │ images.ts  (image registry — har page │
+//  │                                 │           ki image kahan hai, naming  │
+//  │                                 │           convention + IMG.* helpers)  │
 //  └─────────────────────────────────┴────────────────────────────────────────┘
 //
 //  QUICK EXAMPLE — naya portfolio/client site add karna (data/portfolio.ts):
@@ -59,3 +62,4 @@ export * from "./blog";
 export * from "./industries";
 export * from "./contact";
 export * from "./case-studies";
+export * from "./images";

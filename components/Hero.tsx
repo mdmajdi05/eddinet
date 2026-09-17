@@ -1,4 +1,7 @@
+import { imgSrc } from "@/data/images";
+
 export default function Hero() {
+  const heroSrc = imgSrc("hero");
   return (
     <section
       id="home"
@@ -8,7 +11,7 @@ export default function Hero() {
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-90"
-          style={{ backgroundImage: "url('/hero.png')" }}
+          style={{ backgroundImage: `url('${heroSrc}')` }}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-[var(--main-accent)]/5 via-transparent to-transparent" />
         <div className="absolute top-[-40%] right-[-20%] w-[600px] h-[600px] rounded-full bg-[var(--main-accent)]/10 blur-3xl" />

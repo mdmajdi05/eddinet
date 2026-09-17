@@ -9,6 +9,7 @@ import MegaMenu from "./MegaMenu";
 import Image from "next/image";
 import { services } from "@/data/services";
 import { site } from "@/data/contact";
+import { IMG } from "@/data/images";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -72,7 +73,7 @@ export default function Header() {
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center shrink-0" onClick={() => setMobileOpen(false)}>
-              <Image src="/eddinet-logo.png" alt="Eddinet" width={320} height={88} className="h-[88px] w-auto max-[560px]:h-[40px]" priority />
+              <Image src={IMG.brand.eddinetLogo.src} alt="Eddinet" width={320} height={88} className="h-[88px] w-auto max-[560px]:h-[40px]" priority />
             </Link>
 
             <nav className="hidden lg:flex items-center gap-8">

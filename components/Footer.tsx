@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { services } from "@/data/services";
 import { site } from "@/data/contact";
+import { IMG } from "@/data/images";
 import { NewsletterForm, LiveStatus, BackToTop } from "@/components/footer-extras";
 
 const keyServices = services.filter((s) =>
@@ -71,7 +72,7 @@ export default function Footer() {
         <div className="grid grid-cols-12 gap-10 py-[64px] max-[1024px]:grid-cols-2 max-[600px]:grid-cols-1">
           <div className="col-span-4 max-[1024px]:col-span-2">
             <Link href="/" className="inline-flex items-center">
-              <Image src="/eddinet-logo.png" alt="Eddinet" width={320} height={88} className="h-[80px] w-auto object-contain" />
+              <Image src={IMG.brand.eddinetLogo.src} alt="Eddinet" width={320} height={88} className="h-[80px] w-auto object-contain" />
             </Link>
             <p className="text-[var(--chrome-text-muted)] text-[0.95rem] leading-relaxed mt-5 max-w-[340px]">
               {site.tagline}. We design, build and run the systems that grow businesses - from

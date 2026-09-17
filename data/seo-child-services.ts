@@ -1,4 +1,4 @@
-export interface SeoChildFeature {
+﻿export interface SeoChildFeature {
   title: string;
   description: string;
 }
@@ -93,8 +93,8 @@ export const seoChildServices: SeoChildService[] = [
       "Dominate Google rankings with proven traditional SEO strategies. Eddinet delivers technical SEO, on-page optimisation & authority building for lasting organic growth. Get a free proposal.",
     heroHeading: "Traditional SEO Services in Delhi NCR",
     heroSubheading:
-      "Build durable organic visibility with search strategies engineered for how Google actually ranks websites — technical health, content relevance, authority and user experience working as one system.",
-    image: "/SEO-SERVICES-CHILD-IMAGES/seo_service_image.webp.webp",
+      "Build durable organic visibility with search strategies engineered for how Google actually ranks websites â€” technical health, content relevance, authority and user experience working as one system.",
+    image: "/images/services/seo-child/seo-service.webp",
     problemStatement:
       "Most businesses struggle to rank on Google because they approach SEO as a checklist rather than a connected system. Broken technical foundations, weak content, inconsistent citations and zero authority signals combine to keep even great businesses buried on page two or beyond. Without a structured, data-led approach, SEO spend produces reports but not revenue.",
     features: [
@@ -111,12 +111,12 @@ export const seoChildServices: SeoChildService[] = [
       {
         title: "Keyword Research & Strategy",
         description:
-          "High-intent keyword mapping across your funnel — from awareness to transaction — ensuring your pages target searches that actually drive qualified traffic and conversions.",
+          "High-intent keyword mapping across your funnel â€” from awareness to transaction â€” ensuring your pages target searches that actually drive qualified traffic and conversions.",
       },
       {
         title: "Content Strategy & Optimisation",
         description:
-          "Strategic content built around topical authority, search intent gaps and long-term ranking potential — not keyword-stuffed pages that algorithms penalise.",
+          "Strategic content built around topical authority, search intent gaps and long-term ranking potential â€” not keyword-stuffed pages that algorithms penalise.",
       },
       {
         title: "Link Building & Authority",
@@ -131,7 +131,7 @@ export const seoChildServices: SeoChildService[] = [
       {
         title: "Analytics & Reporting",
         description:
-          "Clear, outcome-focused reporting that ties SEO performance to business metrics — traffic quality, lead volume, conversion rates and revenue impact.",
+          "Clear, outcome-focused reporting that ties SEO performance to business metrics â€” traffic quality, lead volume, conversion rates and revenue impact.",
       },
       {
         title: "Competitor Analysis",
@@ -142,7 +142,7 @@ export const seoChildServices: SeoChildService[] = [
     whyChooseUs: {
       heading: "Why Choose Eddinet for Traditional SEO",
       points: [
-        "Full-Funnel Strategy: Full-funnel SEO strategy — not isolated tactics or monthly report dumps.",
+        "Full-Funnel Strategy: Full-funnel SEO strategy â€” not isolated tactics or monthly report dumps.",
         "Integrated Teams: Technical, content and authority teams working as one integrated unit.",
         "Revenue-Linked Reporting: Transparent reporting tied to leads and revenue, not vanity metrics.",
         "Proven Track Record: Proven track record across B2B, eCommerce, healthcare and SaaS verticals.",
@@ -192,7 +192,7 @@ export const seoChildServices: SeoChildService[] = [
       ],
     },
     caseStudy: {
-      title: "B2B Manufacturing — Organic Revenue Growth",
+      title: "B2B Manufacturing â€” Organic Revenue Growth",
       metric: "+180% Organic Traffic in 8 Months",
       description:
         "A Delhi-based B2B manufacturer had zero organic visibility. Through comprehensive technical fixes, strategic content creation and authority building, we grew their organic traffic from 200 to 560 monthly sessions and doubled their qualified leads within 8 months.",
@@ -208,11 +208,11 @@ export const seoChildServices: SeoChildService[] = [
         name: "Priya Kapoor",
         designation: "Marketing Head, NovaTech Systems",
         review:
-          "What sets Eddinet apart is their transparency. Every month we see exactly what moved, why it moved and what they are doing next. No jargon, no black box — just results.",
+          "What sets Eddinet apart is their transparency. Every month we see exactly what moved, why it moved and what they are doing next. No jargon, no black box â€” just results.",
       },
     ],
     detailedDescription:
-      "Traditional SEO is the foundation of sustainable organic growth, encompassing the core disciplines that search engines use to evaluate, rank and surface websites in search results. At Eddinet, our Traditional SEO services in Delhi NCR go far beyond surface-level keyword stuffing or superficial audits. We build integrated search strategies that address every ranking signal — technical health, on-page relevance, content authority and user experience — as a single, interconnected system.\n\nOur approach begins with a comprehensive technical audit that identifies crawlability issues, indexation problems, Core Web Vitals deficiencies and site architecture weaknesses that silently suppress rankings. We then layer on meticulous on-page optimisation — title tags, meta descriptions, header hierarchy, internal linking and content alignment — all tuned to match search intent with precision.\n\nContent strategy forms the third pillar of our Traditional SEO framework. We develop topical authority through strategically planned content clusters, gap analysis and long-term ranking potential rather than chasing short-lived keyword trends. Combined with ethical link building through digital PR, content marketing and strategic outreach, we build domain authority that compounds over time.\n\nWhat makes our Traditional SEO approach different is the integration. Technical fixes inform content strategy. Content performance guides authority building. Authority signals amplify on-page optimisation. Every element reinforces the others, creating a compounding effect that delivers lasting organic growth. For businesses in Delhi NCR seeking durable search visibility, our Traditional SEO services provide the systematic, data-driven foundation that transforms organic search into a predictable revenue channel.",
+      "Traditional SEO is the foundation of sustainable organic growth, encompassing the core disciplines that search engines use to evaluate, rank and surface websites in search results. At Eddinet, our Traditional SEO services in Delhi NCR go far beyond surface-level keyword stuffing or superficial audits. We build integrated search strategies that address every ranking signal â€” technical health, on-page relevance, content authority and user experience â€” as a single, interconnected system.\n\nOur approach begins with a comprehensive technical audit that identifies crawlability issues, indexation problems, Core Web Vitals deficiencies and site architecture weaknesses that silently suppress rankings. We then layer on meticulous on-page optimisation â€” title tags, meta descriptions, header hierarchy, internal linking and content alignment â€” all tuned to match search intent with precision.\n\nContent strategy forms the third pillar of our Traditional SEO framework. We develop topical authority through strategically planned content clusters, gap analysis and long-term ranking potential rather than chasing short-lived keyword trends. Combined with ethical link building through digital PR, content marketing and strategic outreach, we build domain authority that compounds over time.\n\nWhat makes our Traditional SEO approach different is the integration. Technical fixes inform content strategy. Content performance guides authority building. Authority signals amplify on-page optimisation. Every element reinforces the others, creating a compounding effect that delivers lasting organic growth. For businesses in Delhi NCR seeking durable search visibility, our Traditional SEO services provide the systematic, data-driven foundation that transforms organic search into a predictable revenue channel.",
     whoNeedsThis: {
       heading: "Who Needs Traditional SEO?",
       description:
@@ -240,7 +240,7 @@ export const seoChildServices: SeoChildService[] = [
       {
         title: "Technical Foundation Excellence",
         description:
-          "A technically sound website that search engines can crawl, index and understand efficiently — removing the invisible barriers that suppress rankings.",
+          "A technically sound website that search engines can crawl, index and understand efficiently â€” removing the invisible barriers that suppress rankings.",
       },
       {
         title: "Topical Authority Building",
@@ -255,7 +255,7 @@ export const seoChildServices: SeoChildService[] = [
       {
         title: "Measurable Business Impact",
         description:
-          "Clear reporting tied to leads, conversions and revenue — not vanity metrics — so you see exactly how organic search contributes to your bottom line.",
+          "Clear reporting tied to leads, conversions and revenue â€” not vanity metrics â€” so you see exactly how organic search contributes to your bottom line.",
       },
     ],
     industries: [
@@ -299,15 +299,15 @@ export const seoChildServices: SeoChildService[] = [
     faqs: [
       {
         q: "How long does traditional SEO take to show results?",
-        a: "Visible ranking improvement typically begins within 3 to 4 months, with meaningful business impact building over 6 to 12 months as technical health, content authority and backlink profiles compound. SEO is a long-term investment that compounds — the earlier you start, the faster you pull ahead of competitors.",
+        a: "Visible ranking improvement typically begins within 3 to 4 months, with meaningful business impact building over 6 to 12 months as technical health, content authority and backlink profiles compound. SEO is a long-term investment that compounds â€” the earlier you start, the faster you pull ahead of competitors.",
       },
       {
         q: "What makes traditional SEO different from other SEO types?",
-        a: "Traditional SEO focuses on the foundational pillars — technical health, on-page optimisation, content relevance and domain authority. It is the bedrock that every other SEO specialisation (local, ecommerce, B2B) builds upon. Without strong traditional SEO, tactical approaches like link building alone will underperform.",
+        a: "Traditional SEO focuses on the foundational pillars â€” technical health, on-page optimisation, content relevance and domain authority. It is the bedrock that every other SEO specialisation (local, ecommerce, B2B) builds upon. Without strong traditional SEO, tactical approaches like link building alone will underperform.",
       },
       {
         q: "Do you guarantee first-page rankings?",
-        a: "No ethical SEO agency can guarantee specific rankings because Google's algorithm considers hundreds of signals and changes regularly. What we guarantee is a transparent, data-driven strategy executed by experienced professionals, with clear reporting tied to meaningful business outcomes — traffic quality, lead volume and conversion growth.",
+        a: "No ethical SEO agency can guarantee specific rankings because Google's algorithm considers hundreds of signals and changes regularly. What we guarantee is a transparent, data-driven strategy executed by experienced professionals, with clear reporting tied to meaningful business outcomes â€” traffic quality, lead volume and conversion growth.",
       },
       {
         q: "How do you measure SEO success?",
@@ -341,12 +341,12 @@ export const seoChildServices: SeoChildService[] = [
     heroHeading: "AI SEO (Generative SEO) Service in Delhi NCR",
     heroSubheading:
       "We offer advanced AI SEO (Generative SEO) service in Delhi to help businesses automate, scale, and future-proof their search engine optimization efforts. Our team leverages artificial intelligence and generative engine optimization (GEO) to create search-ready content, target high-intent semantic queries, and implement data-driven strategies for top rankings on search engines and AI platforms like ChatGPT, Gemini, and Google AI Overviews.",
-    image: "/SEO-SERVICES-CHILD-IMAGES/AI SEO (Generative SEO).webp",
+    image: "/images/services/seo-child/ai-seo.webp",
     problemStatement:
       "Search is evolving faster than most businesses can adapt. Google's AI Overviews, Bing Copilot, ChatGPT Search and Perplexity are changing how answers are generated and surfaced. Brands optimised only for traditional blue links are losing visibility to competitors who structure their content for AI consumption. Without AI SEO, your expertise stops getting cited where your customers are actually searching.",
     featuresHeading: "Types of AI SEO Solutions",
     featuresDescription:
-      "Six specialized solution types that make your brand visible across Google, ChatGPT, Gemini and Perplexity — from deep AI audits to generative engine optimization, semantic content, technical SEO and authority building.",
+      "Six specialized solution types that make your brand visible across Google, ChatGPT, Gemini and Perplexity â€” from deep AI audits to generative engine optimization, semantic content, technical SEO and authority building.",
     features: [
       {
         title: "AI SEO Audit & Strategy",
@@ -432,7 +432,7 @@ export const seoChildServices: SeoChildService[] = [
       ],
     },
     caseStudy: {
-      title: "SaaS Platform — AI Overview Visibility",
+      title: "SaaS Platform â€” AI Overview Visibility",
       metric: "Featured in 40+ AI Overviews in 3 Months",
       description:
       "A B2B SaaS company was invisible in Google's AI Overviews despite strong traditional rankings. Through schema engineering, entity optimisation and content restructuring, we achieved featured placement in over 40 AI-generated answers, increasing brand mention-driven traffic by 220%.",
@@ -442,7 +442,7 @@ export const seoChildServices: SeoChildService[] = [
         name: "Arjun Nair",
         designation: "CEO, CloudStack Solutions",
         review:
-          "Eddinet helped us understand that SEO is no longer just about page one rankings. Their AI SEO strategy got our brand mentioned in Google's AI Overviews — a channel we did not even know existed.",
+          "Eddinet helped us understand that SEO is no longer just about page one rankings. Their AI SEO strategy got our brand mentioned in Google's AI Overviews â€” a channel we did not even know existed.",
       },
       {
         name: "Sneha Reddy",
@@ -468,7 +468,7 @@ export const seoChildServices: SeoChildService[] = [
     },
     benefitsHeading: "Key Benefits of AI SEO for Your Business",
     benefitsDescription:
-      "What your brand earns when you start showing up across Google, ChatGPT, Gemini and Perplexity — from higher-quality traffic to compounded organic authority.",
+      "What your brand earns when you start showing up across Google, ChatGPT, Gemini and Perplexity â€” from higher-quality traffic to compounded organic authority.",
     benefits: [
       {
         title: "Multi-Platform Visibility",
@@ -532,11 +532,11 @@ export const seoChildServices: SeoChildService[] = [
     faqs: [
       {
         q: "What is AI SEO and how is it different from traditional SEO?",
-        a: "AI SEO (also called Generative SEO) optimises your content and online presence so your brand gets cited, recommended and surfaced in AI-generated search answers — Google AI Overviews, ChatGPT Search, Perplexity and Bing Copilot. Traditional SEO focuses on ranking in classic blue-link results. AI SEO builds for the next generation of search where answers are generated, not just listed.",
+        a: "AI SEO (also called Generative SEO) optimises your content and online presence so your brand gets cited, recommended and surfaced in AI-generated search answers â€” Google AI Overviews, ChatGPT Search, Perplexity and Bing Copilot. Traditional SEO focuses on ranking in classic blue-link results. AI SEO builds for the next generation of search where answers are generated, not just listed.",
       },
       {
         q: "Will AI SEO replace traditional SEO?",
-        a: "AI SEO does not replace traditional SEO — it builds on top of it. Technical health, content quality and authority signals remain foundational. AI SEO adds a new layer of structured data, entity optimisation and content formatting that helps AI models extract and cite your content in generated answers.",
+        a: "AI SEO does not replace traditional SEO â€” it builds on top of it. Technical health, content quality and authority signals remain foundational. AI SEO adds a new layer of structured data, entity optimisation and content formatting that helps AI models extract and cite your content in generated answers.",
       },
       {
         q: "How do you track AI SEO performance?",
@@ -574,7 +574,7 @@ export const seoChildServices: SeoChildService[] = [
     heroHeading: "Lead Generation SEO Services in India",
     heroSubheading:
       "High-Intent Search Engine Optimization | Conversion Rate Optimization | B2B & B2C Revenue Growth\n\nEddinet provides targeted lead generation SEO services in India designed to capture high-intent buyers, eliminate wasted ad spend, and convert organic search traffic into qualified business inquiries.",
-    image: "/SEO-SERVICES-CHILD-IMAGES/Lead Generation SEO.webp",
+    image: "/images/services/seo-child/lead-generation-seo.webp",
     problemStatement:
       "Ranking on Google means nothing if the traffic does not convert into paying customers. Many businesses invest heavily in SEO and see traffic growth, but their landing pages fail to capture intent, their conversion funnels leak and the traffic never translates into revenue. Without lead-focused SEO strategy, organic growth becomes a vanity metric that costs money but does not generate it.",
     features: [
@@ -614,7 +614,7 @@ export const seoChildServices: SeoChildService[] = [
       description:
         "When you choose Eddinet, you partner with a performance-focused team committed to clear accountability and tangible revenue growth. Here is why leading brands choose us:",
       points: [
-        "Lead-First Growth Focus: We measure success by leads, phone calls, and revenue generated—not just keyword rankings or arbitrary pageviews.",
+        "Lead-First Growth Focus: We measure success by leads, phone calls, and revenue generatedâ€”not just keyword rankings or arbitrary pageviews.",
         "Customized Execution: We craft bespoke SEO blueprints tailored to your business model, target market, and sales cycle rather than using generic templates.",
         "Full Data Transparency: Receive straightforward, easy-to-read reports detailing organic ranking updates, form conversions, calls, and qualified lead metrics.",
         "Integrated Conversion Expertise: We combine technical SEO expertise with behavioral copywriting and conversion rate optimization to ensure peak website performance.",
@@ -665,7 +665,7 @@ export const seoChildServices: SeoChildService[] = [
       ],
     },
     caseStudy: {
-      title: "B2B SaaS — Lead Pipeline Growth",
+      title: "B2B SaaS â€” Lead Pipeline Growth",
       metric: "+320% Qualified Leads from Organic Search",
       description:
         "A B2B SaaS company was generating organic traffic but zero pipeline. By restructuring their content around high-intent keywords, building dedicated landing pages and optimising lead capture flows, we increased their qualified organic leads by 320% and reduced cost-per-lead by 55%.",
@@ -675,13 +675,13 @@ export const seoChildServices: SeoChildService[] = [
         name: "Rohit Sharma",
         designation: "Head of Marketing, DataFlow Analytics",
         review:
-          "Before Eddinet, our SEO was generating traffic that looked great in reports but never turned into pipeline. Their lead generation SEO approach changed everything — organic is now our second-biggest source of qualified leads.",
+          "Before Eddinet, our SEO was generating traffic that looked great in reports but never turned into pipeline. Their lead generation SEO approach changed everything â€” organic is now our second-biggest source of qualified leads.",
       },
       {
         name: "Kavita Joshi",
         designation: "Founder, LegalEdge Consulting",
         review:
-          "Eddinet does not just drive traffic — they drive business. Every recommendation, every page, every keyword was chosen because it would generate leads, not just rankings. That focus made all the difference.",
+          "Eddinet does not just drive traffic â€” they drive business. Every recommendation, every page, every keyword was chosen because it would generate leads, not just rankings. That focus made all the difference.",
       },
     ],
     detailedDescription:
@@ -708,7 +708,7 @@ export const seoChildServices: SeoChildService[] = [
       {
         title: "Conversion-Optimised Landing Pages",
         description:
-          "Purpose-built pages designed for a single action — capturing leads with clear CTAs, strategic forms and distraction-free experiences.",
+          "Purpose-built pages designed for a single action â€” capturing leads with clear CTAs, strategic forms and distraction-free experiences.",
       },
       {
         title: "Measurable Lead Attribution",
@@ -772,7 +772,7 @@ export const seoChildServices: SeoChildService[] = [
     faqs: [
       {
         q: "How is lead generation SEO different from regular SEO?",
-        a: "Regular SEO focuses on rankings and traffic growth. Lead generation SEO is engineered around a specific outcome — turning search visibility into qualified enquiries. Every keyword, landing page and content asset is designed to capture intent and convert visitors into leads that feed your sales pipeline.",
+        a: "Regular SEO focuses on rankings and traffic growth. Lead generation SEO is engineered around a specific outcome â€” turning search visibility into qualified enquiries. Every keyword, landing page and content asset is designed to capture intent and convert visitors into leads that feed your sales pipeline.",
       },
       {
         q: "How quickly can lead generation SEO produce leads?",
@@ -780,7 +780,7 @@ export const seoChildServices: SeoChildService[] = [
       },
       {
         q: "Do you also build the landing pages?",
-        a: "Yes. Landing page design, copywriting and CRO are part of our lead generation SEO service. We build conversion-optimised pages that are engineered for a single action — turning organic visitors into qualified leads.",
+        a: "Yes. Landing page design, copywriting and CRO are part of our lead generation SEO service. We build conversion-optimised pages that are engineered for a single action â€” turning organic visitors into qualified leads.",
       },
       {
         q: "Can you integrate leads with our CRM?",
@@ -813,10 +813,10 @@ export const seoChildServices: SeoChildService[] = [
       "Dominate local search and Google Maps. Eddinet's Local SEO optimises your Google Business Profile, citations & reviews to drive foot traffic and nearby customers. Free proposal.",
     heroHeading: "Local SEO Services in Delhi NCR",
     heroSubheading:
-      "Eddinet specializes in local SEO services in India that help businesses like yours get found by people who are searching nearby and ready to buy. We get your business seen on Google Search, Google Maps, and the local pack — the results that show up right when someone types \"near me\".",
-    image: "/SEO-SERVICES-CHILD-IMAGES/Local SEO.webp",
+      "Eddinet specializes in local SEO services in India that help businesses like yours get found by people who are searching nearby and ready to buy. We get your business seen on Google Search, Google Maps, and the local pack â€” the results that show up right when someone types \"near me\".",
+    image: "/images/services/seo-child/local-seo.webp",
     problemStatement:
-      "If your business does not appear in the Google Maps 3-pack or local search results when customers search for services nearby, you are handing revenue to competitors who do. Many businesses have inconsistent listings, unoptimised Google Business Profiles, weak review strategies and zero local content strategy — making them invisible to the most valuable search traffic: local customers ready to buy right now.",
+      "If your business does not appear in the Google Maps 3-pack or local search results when customers search for services nearby, you are handing revenue to competitors who do. Many businesses have inconsistent listings, unoptimised Google Business Profiles, weak review strategies and zero local content strategy â€” making them invisible to the most valuable search traffic: local customers ready to buy right now.",
 features: [
       {
         title: "Google My Business SEO Services",
@@ -831,7 +831,7 @@ features: [
       {
         title: "Local Citation & NAP Building",
         description:
-          "We list your business consistently across relevant directories and platforms, making sure your Name, Address, and Phone number match everywhere. Inconsistent listings confuse Google and cost you trust — we clean that up and build it right.",
+          "We list your business consistently across relevant directories and platforms, making sure your Name, Address, and Phone number match everywhere. Inconsistent listings confuse Google and cost you trust â€” we clean that up and build it right.",
       },
       {
         title: "Review & Reputation Management",
@@ -841,7 +841,7 @@ features: [
       {
         title: "Local Keyword Research & Content",
         description:
-          "We find out exactly how your customers search — by neighborhood, by service, by intent — and build content around those terms so your site speaks their language.",
+          "We find out exactly how your customers search â€” by neighborhood, by service, by intent â€” and build content around those terms so your site speaks their language.",
       },
       {
         title: "Local Link Building",
@@ -850,9 +850,9 @@ features: [
       },
     ],
     whyChooseUs: {
-      heading: "Why Choose Us – Your Local SEO Experts in India",
+      heading: "Why Choose Us â€“ Your Local SEO Experts in India",
       points: [
-        "Ranking-Focused Work Only: We focus only on what moves your rankings. No filler tasks, no vanity metrics — every action ties back to visibility and leads.",
+        "Ranking-Focused Work Only: We focus only on what moves your rankings. No filler tasks, no vanity metrics â€” every action ties back to visibility and leads.",
         "Built for Indian Local Search: We understand Indian local search behavior. From regional language nuances to how customers compare local options, our strategies are built for the market you're actually operating in.",
         "Radical Transparency: We're transparent, always. You'll know exactly what we're doing, why we're doing it, and what results to expect realistically, not with inflated promises.",
         "Your Growth Is Our Reputation: We treat your business like it's ours. As a local SEO company in India that works closely with each client, we care about your growth as much as you do, because your results are our reputation.",
@@ -872,7 +872,7 @@ features: [
           num: "02",
           title: "Strategy Building",
           description:
-            "Based on what we find, we build a custom local SEO roadmap — realistic, prioritized, and tied to your specific business goals.",
+            "Based on what we find, we build a custom local SEO roadmap â€” realistic, prioritized, and tied to your specific business goals.",
         },
         {
           num: "03",
@@ -895,17 +895,17 @@ features: [
       ],
     },
     caseStudy: {
-      title: "Multi-Location Healthcare — Local Visibility Growth",
+      title: "Multi-Location Healthcare â€” Local Visibility Growth",
       metric: "+250% Google Maps Impressions in 4 Months",
       description:
-        "A multi-location healthcare chain had inconsistent listings and zero review strategy. We optimised all Google Business Profiles, fixed 200+ citation inconsistencies and built a review generation system that grew their average rating from 3.8 to 4.6 stars — driving a 250% increase in Maps impressions and 180% increase in direction requests.",
+        "A multi-location healthcare chain had inconsistent listings and zero review strategy. We optimised all Google Business Profiles, fixed 200+ citation inconsistencies and built a review generation system that grew their average rating from 3.8 to 4.6 stars â€” driving a 250% increase in Maps impressions and 180% increase in direction requests.",
     },
     testimonials: [
       {
         name: "Amit Verma",
         designation: "Owner, QuickFix Home Services",
         review:
-          "Before Eddinet, we were invisible on Google Maps. Now we appear in the top 3 for every service we offer in our area. The phone rings three times more than before — all from local customers finding us on Google.",
+          "Before Eddinet, we were invisible on Google Maps. Now we appear in the top 3 for every service we offer in our area. The phone rings three times more than before â€” all from local customers finding us on Google.",
       },
       {
         name: "Deepika Singh",
@@ -915,7 +915,7 @@ features: [
       },
     ],
     detailedDescription:
-      "If someone in your city searches for what you sell right now, does your business show up? For most local businesses in India, the honest answer is \"not really\" — and that's costing them customers every single day. We get your business seen on Google Search, Google Maps, and the local pack — the three results that show up right when someone types \"near me\". Whether you run a clinic, a restaurant, a boutique, or a service business, ranking locally is what turns online searches into walk-ins, calls, and bookings.\n\nAt Eddinet, we focus on one thing: making sure local customers in your city find you at the exact moment they're ready to buy. Whether someone is searching on Google Maps or browsing local search results, we optimize your local online presence so you show up at the top.\n\nWe don't rely on generic global tactics. We map out how local buyers in your specific area search, optimize your Google Business Profile, fix local map signals, and turn local searches into direct calls and directions to your doorstep. You get clear, hands-on work from a team that knows local search inside out.",
+      "If someone in your city searches for what you sell right now, does your business show up? For most local businesses in India, the honest answer is \"not really\" â€” and that's costing them customers every single day. We get your business seen on Google Search, Google Maps, and the local pack â€” the three results that show up right when someone types \"near me\". Whether you run a clinic, a restaurant, a boutique, or a service business, ranking locally is what turns online searches into walk-ins, calls, and bookings.\n\nAt Eddinet, we focus on one thing: making sure local customers in your city find you at the exact moment they're ready to buy. Whether someone is searching on Google Maps or browsing local search results, we optimize your local online presence so you show up at the top.\n\nWe don't rely on generic global tactics. We map out how local buyers in your specific area search, optimize your Google Business Profile, fix local map signals, and turn local searches into direct calls and directions to your doorstep. You get clear, hands-on work from a team that knows local search inside out.",
     whoNeedsThis: {
       heading: "Who Needs Local SEO?",
       description:
@@ -923,7 +923,7 @@ features: [
       points: [
         "Restaurants, cafes and food businesses competing for nearby dining searches",
         "Healthcare clinics and dental practices needing patient appointments from local searches",
-        "Home service providers — plumbers, electricians, HVAC — targeting 'near me' service queries",
+        "Home service providers â€” plumbers, electricians, HVAC â€” targeting 'near me' service queries",
         "Retail stores and showrooms where foot traffic directly drives revenue",
         "Multi-location businesses needing consistent visibility across all branches",
         "Law firms and professional services competing in local market searches",
@@ -938,7 +938,7 @@ features: [
       {
         title: "Higher Quality Leads",
         description:
-          "People finding you locally are usually closer to making a decision — local searchers have immediate intent to visit, call, or buy.",
+          "People finding you locally are usually closer to making a decision â€” local searchers have immediate intent to visit, call, or buy.",
       },
       {
         title: "Better Return Than Paid Ads Alone",
@@ -996,25 +996,25 @@ features: [
     metrics: [
       { value: "250%", label: "Average increase in Google Maps impressions" },
       { value: "180%", label: "Growth in direction requests and phone calls" },
-      { value: "4.6★", label: "Average client star rating after review optimisation" },
+      { value: "4.6â˜…", label: "Average client star rating after review optimisation" },
       { value: "200+", label: "Citation consistency fixes per client engagement" },
     ],
     faqs: [
       {
         q: "What exactly do local SEO services in India include?",
-        a: "It covers Google Business Profile optimization, on-page and technical SEO, local citations, review management, local keyword targeting, and local link building — all aimed at getting your business found by nearby customers on Google Search and Maps.",
+        a: "It covers Google Business Profile optimization, on-page and technical SEO, local citations, review management, local keyword targeting, and local link building â€” all aimed at getting your business found by nearby customers on Google Search and Maps.",
       },
       {
         q: "How is a local SEO agency in India different from a regular SEO agency?",
-        a: "A local SEO agency focuses specifically on location-based rankings — the Map Pack, \"near me\" searches, and city or neighborhood-level keywords — rather than broad, national keyword competition. The strategies, tools, and priorities are different from standard SEO.",
+        a: "A local SEO agency focuses specifically on location-based rankings â€” the Map Pack, \"near me\" searches, and city or neighborhood-level keywords â€” rather than broad, national keyword competition. The strategies, tools, and priorities are different from standard SEO.",
       },
       {
         q: "Why is Google My Business SEO so important?",
-        a: "Your Google Business Profile often appears before your website in local search results. Optimizing it properly — categories, photos, posts, service areas, and reviews — directly affects whether you show up in the Map Pack for relevant searches.",
+        a: "Your Google Business Profile often appears before your website in local search results. Optimizing it properly â€” categories, photos, posts, service areas, and reviews â€” directly affects whether you show up in the Map Pack for relevant searches.",
       },
       {
         q: "How long does it take to see results?",
-        a: "Most businesses start noticing movement in rankings and visibility within 6 to 12 weeks, with stronger, more consistent results building over 4 to 6 months. Local SEO is a compounding effort — the earlier you start, the sooner you're ahead of competitors.",
+        a: "Most businesses start noticing movement in rankings and visibility within 6 to 12 weeks, with stronger, more consistent results building over 4 to 6 months. Local SEO is a compounding effort â€” the earlier you start, the sooner you're ahead of competitors.",
       },
       {
         q: "Do I need a website to benefit from local SEO?",
@@ -1030,7 +1030,7 @@ features: [
       },
       {
         q: "What does it cost to work with a local SEO company in India?",
-        a: "Pricing depends on your industry, competition, number of locations, and current website condition. We assess this during the initial audit and share a clear, customized quote — no vague packages, no hidden costs.",
+        a: "Pricing depends on your industry, competition, number of locations, and current website condition. We assess this during the initial audit and share a clear, customized quote â€” no vague packages, no hidden costs.",
       },
     ],
     crossLinks: [
@@ -1059,10 +1059,10 @@ features: [
       "Scalable SEO for large, complex websites. Eddinet delivers enterprise-grade technical SEO, content architecture & reporting for multi-team organisations. Free strategy call.",
     heroHeading: "Enterprise SEO Services in Delhi NCR",
     heroSubheading:
-      "Enterprise SEO isn't small-business SEO scaled up — with hundreds of pages, multiple stakeholders, legacy tech, and a brand that can't afford experiments. Our enterprise SEO services are built for exactly this: complex, cross-functional work that moves the needle across your whole organization, not one landing page. If your SEO feels scattered across departments or rankings haven't moved despite real budget, that's an effort problem — it's a structure problem.",
-    image: "/SEO-SERVICES-CHILD-IMAGES/Enterprise SEO.webp",
+      "Enterprise SEO isn't small-business SEO scaled up â€” with hundreds of pages, multiple stakeholders, legacy tech, and a brand that can't afford experiments. Our enterprise SEO services are built for exactly this: complex, cross-functional work that moves the needle across your whole organization, not one landing page. If your SEO feels scattered across departments or rankings haven't moved despite real budget, that's an effort problem â€” it's a structure problem.",
+    image: "/images/services/seo-child/enterprise-seo.webp",
     problemStatement:
-      "Enterprise websites face a fundamentally different set of SEO challenges — thousands of pages, complex site architectures, multiple stakeholders, legacy systems and aggressive competition. Standard SEO checklists do not scale. Without enterprise-grade technical governance, content architecture and reporting frameworks, large sites bleed organic potential across duplicate content, crawl waste, indexation issues and fragmented keyword strategies.",
+      "Enterprise websites face a fundamentally different set of SEO challenges â€” thousands of pages, complex site architectures, multiple stakeholders, legacy systems and aggressive competition. Standard SEO checklists do not scale. Without enterprise-grade technical governance, content architecture and reporting frameworks, large sites bleed organic potential across duplicate content, crawl waste, indexation issues and fragmented keyword strategies.",
     features: [
       {
         title: "Enterprise Technical SEO Audits",
@@ -1082,7 +1082,7 @@ features: [
       {
         title: "Enterprise Link Building & Digital PR",
         description:
-          "We build authoritative backlinks through digital PR, strategic partnerships, and content-driven outreach — the kind of link profile that matches the authority a large brand should already have.",
+          "We build authoritative backlinks through digital PR, strategic partnerships, and content-driven outreach â€” the kind of link profile that matches the authority a large brand should already have.",
       },
       {
         title: "SEO Migration & Platform Support",
@@ -1092,17 +1092,17 @@ features: [
       {
         title: "Corporate SEO Services & Reporting",
         description:
-          "We deliver reporting dashboards tailored to different stakeholders — technical detail for your dev team, performance summaries for marketing, and ROI-focused insights for leadership.",
+          "We deliver reporting dashboards tailored to different stakeholders â€” technical detail for your dev team, performance summaries for marketing, and ROI-focused insights for leadership.",
       },
     ],
     whyChooseUs: {
-      heading: "Why Choose Us – A Reliable Enterprise SEO Firm in India",
+      heading: "Why Choose Us â€“ A Reliable Enterprise SEO Firm in India",
       points: [
-        "We Understand Organizational Complexity: From multiple stakeholders to legacy systems, we know enterprise SEO isn't just about strategy — it's about execution within a large, moving organization.",
+        "We Understand Organizational Complexity: From multiple stakeholders to legacy systems, we know enterprise SEO isn't just about strategy â€” it's about execution within a large, moving organization.",
         "We Build for Scale From Day One: Every recommendation we make is designed to work across hundreds or thousands of pages, not just a handful of test cases.",
         "We Communicate at Every Level: Whether it's a technical conversation with your dev team or a results conversation with leadership, we tailor communication so everyone stays informed and confident.",
         "We Protect What You've Already Built: Enterprise brands have existing rankings and traffic to lose. Our approach prioritizes stability alongside growth, especially during migrations and major changes.",
-        "We Stay Accountable With Data: We report transparently on what's working, what isn't, and what we're doing about it — no vague promises, just clear numbers.",
+        "We Stay Accountable With Data: We report transparently on what's working, what isn't, and what we're doing about it â€” no vague promises, just clear numbers.",
       ],
     },
     process: {
@@ -1112,7 +1112,7 @@ features: [
           num: "01",
           title: "Discovery & Stakeholder Alignment",
           description:
-            "We start by understanding your business structure, internal teams, existing tools, and current SEO performance — and align with every stakeholder who touches the website.",
+            "We start by understanding your business structure, internal teams, existing tools, and current SEO performance â€” and align with every stakeholder who touches the website.",
         },
         {
           num: "02",
@@ -1124,13 +1124,13 @@ features: [
           num: "03",
           title: "Strategic Roadmap Development",
           description:
-            "We prioritize fixes and opportunities based on business impact, resourcing, and timeline — giving you a realistic, phased plan instead of an overwhelming task list.",
+            "We prioritize fixes and opportunities based on business impact, resourcing, and timeline â€” giving you a realistic, phased plan instead of an overwhelming task list.",
         },
         {
           num: "04",
           title: "Execution & Cross-Team Coordination",
           description:
-            "We work directly with your internal teams — developers, content writers, and marketing leads — to implement changes without disrupting day-to-day operations.",
+            "We work directly with your internal teams â€” developers, content writers, and marketing leads â€” to implement changes without disrupting day-to-day operations.",
         },
         {
           num: "05",
@@ -1141,10 +1141,10 @@ features: [
       ],
     },
     caseStudy: {
-      title: "E-Commerce Enterprise — Organic Revenue Recovery",
+      title: "E-Commerce Enterprise â€” Organic Revenue Recovery",
       metric: "+420% Organic Sessions After Platform Migration",
       description:
-        "A large e-commerce platform lost 60% of organic traffic during a platform migration. Our enterprise SEO team managed the full migration — URL mapping, redirect strategy, technical QA and content preservation — recovering all lost traffic and growing organic sessions by 420% within 12 months.",
+        "A large e-commerce platform lost 60% of organic traffic during a platform migration. Our enterprise SEO team managed the full migration â€” URL mapping, redirect strategy, technical QA and content preservation â€” recovering all lost traffic and growing organic sessions by 420% within 12 months.",
     },
     testimonials: [
       {
@@ -1161,7 +1161,7 @@ features: [
       },
     ],
     detailedDescription:
-      "Eddinet is a full-service SEO partner built for organizations that need more than basic optimization checklists. We've worked with businesses managing multi-location websites, large product catalogs, multi-language content, and international domains — the kind of SEO work that requires coordination between marketing, IT, content, and leadership teams all at once.\n\nWhat sets us apart is that we don't treat enterprise SEO as \"regular SEO but bigger.\" It's a different discipline altogether, one that requires careful technical architecture planning, governance over content at scale, and reporting that speaks to both marketing managers and CFOs.\n\nAs a growing enterprise SEO company in India, we've built our processes specifically around this complexity, so nothing falls through the cracks when a hundred people across three departments are involved in a single website.",
+      "Eddinet is a full-service SEO partner built for organizations that need more than basic optimization checklists. We've worked with businesses managing multi-location websites, large product catalogs, multi-language content, and international domains â€” the kind of SEO work that requires coordination between marketing, IT, content, and leadership teams all at once.\n\nWhat sets us apart is that we don't treat enterprise SEO as \"regular SEO but bigger.\" It's a different discipline altogether, one that requires careful technical architecture planning, governance over content at scale, and reporting that speaks to both marketing managers and CFOs.\n\nAs a growing enterprise SEO company in India, we've built our processes specifically around this complexity, so nothing falls through the cracks when a hundred people across three departments are involved in a single website.",
     whoNeedsThis: {
       heading: "Who Needs Enterprise SEO?",
       description:
@@ -1248,7 +1248,7 @@ features: [
     faqs: [
       {
         q: "What makes enterprise SEO services in India different from regular SEO?",
-        a: "Enterprise SEO deals with much larger websites, multiple stakeholders, complex technical architecture, and often multi-location or multi-language requirements — all of which need specialized processes that standard SEO packages aren't built to handle.",
+        a: "Enterprise SEO deals with much larger websites, multiple stakeholders, complex technical architecture, and often multi-location or multi-language requirements â€” all of which need specialized processes that standard SEO packages aren't built to handle.",
       },
       {
         q: "How long does an enterprise SEO agency in India typically take to show results?",
@@ -1264,11 +1264,11 @@ features: [
       },
       {
         q: "What happens to our SEO during a website migration or rebrand?",
-        a: "We manage the entire SEO side of migrations — redirects, technical mapping, and monitoring — to protect existing rankings and minimize traffic loss during the transition.",
+        a: "We manage the entire SEO side of migrations â€” redirects, technical mapping, and monitoring â€” to protect existing rankings and minimize traffic loss during the transition.",
       },
       {
         q: "How is reporting handled for corporate SEO services in India?",
-        a: "We provide layered reporting — technical detail for your dev team, performance summaries for marketing, and business-impact metrics for leadership — so every stakeholder gets relevant, digestible information.",
+        a: "We provide layered reporting â€” technical detail for your dev team, performance summaries for marketing, and business-impact metrics for leadership â€” so every stakeholder gets relevant, digestible information.",
       },
     ],
     crossLinks: [
@@ -1297,10 +1297,10 @@ features: [
       "Attract qualified B2B buyers through search. Eddinet's B2B SEO targets long buying cycles, authority content & lead-focused strategy for business-to-business companies. Free audit.",
     heroHeading: "B2B SEO Services in Delhi NCR",
     heroSubheading:
-      "Getting traffic to your website is easy. Getting inquiries from CTOs, Founders, and Procurement Heads who have actual budgets is the hard part. If your website brings in clicks but zero sales calls, you don't have a traffic problem — you have an intent problem. Our B2B SEO services are built to put your business in front of real decision-makers right when they are ready to buy.",
-    image: "/SEO-SERVICES-CHILD-IMAGES/b2b SEO.webp",
+      "Getting traffic to your website is easy. Getting inquiries from CTOs, Founders, and Procurement Heads who have actual budgets is the hard part. If your website brings in clicks but zero sales calls, you don't have a traffic problem â€” you have an intent problem. Our B2B SEO services are built to put your business in front of real decision-makers right when they are ready to buy.",
+    image: "/images/services/seo-child/b2b-seo.webp",
     problemStatement:
-      "B2B search operates on a fundamentally different timeline than B2C. Decision-makers research for weeks or months, compare multiple vendors, involve technical evaluators and need substantial proof before engaging. Most SEO agencies apply consumer tactics to B2B — driving irrelevant traffic, targeting the wrong keywords and producing content that impresses nobody in the buying committee. Without B2B-specific SEO strategy, your organic presence fails to influence the complex buying process.",
+      "B2B search operates on a fundamentally different timeline than B2C. Decision-makers research for weeks or months, compare multiple vendors, involve technical evaluators and need substantial proof before engaging. Most SEO agencies apply consumer tactics to B2B â€” driving irrelevant traffic, targeting the wrong keywords and producing content that impresses nobody in the buying committee. Without B2B-specific SEO strategy, your organic presence fails to influence the complex buying process.",
     features: [
       {
         title: "Intent-Based Keyword Research",
@@ -1340,7 +1340,7 @@ features: [
         "We Prioritize Pipeline Over Vanity Metrics: Rankings and traffic matter, but we stay focused on what actually contributes to leads and revenue.",
         "Niche & Technical Industries: From SaaS to industrial manufacturing, we know how to make specialized offerings understandable and search-friendly.",
         "We Collaborate Closely With Your Team: Whether it's your marketing team, sales leadership, or subject matter experts, we work with the people who understand your business best to build content that actually converts.",
-        "Transparent at Every Step: No inflated promises — just clear strategy, honest reporting, and steady, measurable progress.",
+        "Transparent at Every Step: No inflated promises â€” just clear strategy, honest reporting, and steady, measurable progress.",
       ],
     },
     process: {
@@ -1385,23 +1385,23 @@ features: [
       ],
     },
     caseStudy: {
-      title: "Industrial Equipment Manufacturer — Pipeline Growth",
+      title: "Industrial Equipment Manufacturer â€” Pipeline Growth",
       metric: "+280% Marketing Qualified Leads in 9 Months",
       description:
-        "A B2B industrial equipment manufacturer was getting traffic but no pipeline. We restructured their content around buyer journey stages, created technical evaluation content and built authority through industry-specific publications — driving a 280% increase in marketing qualified leads and directly influencing $2.4M in pipeline.",
+        "A B2B industrial equipment manufacturer was getting traffic but no pipeline. We restructured their content around buyer journey stages, created technical evaluation content and built authority through industry-specific publications â€” driving a 280% increase in marketing qualified leads and directly influencing $2.4M in pipeline.",
     },
     testimonials: [
       {
         name: "Rajesh Khanna",
         designation: "CMO, PrecisionTech Industries",
         review:
-          "Eddinet understood that B2B SEO is not about traffic volume — it is about attracting the right buyers at the right stage. Their strategy brought us exactly the kind of leads our sales team actually wants to work with.",
+          "Eddinet understood that B2B SEO is not about traffic volume â€” it is about attracting the right buyers at the right stage. Their strategy brought us exactly the kind of leads our sales team actually wants to work with.",
       },
       {
         name: "Neha Agarwal",
         designation: "Head of Growth, SaaSBridge Solutions",
         review:
-          "The content Eddinet created for us does not just rank — it converts. Their understanding of B2B buying committees and technical evaluation processes is what separates them from every other SEO agency we have worked with.",
+          "The content Eddinet created for us does not just rank â€” it converts. Their understanding of B2B buying committees and technical evaluation processes is what separates them from every other SEO agency we have worked with.",
       },
     ],
     detailedDescription:
@@ -1495,7 +1495,7 @@ benefits: [
       },
       {
         q: "Can SEO really generate qualified B2B leads, not just traffic?",
-        a: "Yes, when strategy is built around actual buyer intent — mapping content to each stage of the decision process rather than chasing high-volume but low-relevance keywords.",
+        a: "Yes, when strategy is built around actual buyer intent â€” mapping content to each stage of the decision process rather than chasing high-volume but low-relevance keywords.",
       },
       {
         q: "Do you work with niche or technical industries?",
@@ -1507,7 +1507,7 @@ benefits: [
       },
       {
         q: "How do you measure success beyond rankings?",
-        a: "We track organic traffic quality, form submissions, demo requests, and where possible, pipeline contribution — so you can see SEO's actual impact on revenue, not just search visibility.",
+        a: "We track organic traffic quality, form submissions, demo requests, and where possible, pipeline contribution â€” so you can see SEO's actual impact on revenue, not just search visibility.",
       },
     ],
     crossLinks: [
@@ -1537,9 +1537,9 @@ benefits: [
     heroHeading: "Technical SEO Services in Delhi NCR",
     heroSubheading:
       "Eddinet provides professional technical SEO services in India to take complete responsibility for your website's technical health, fixing backend bottlenecks so search engines can rank your pages effortlessly and drive qualified buyers directly to your business.",
-    image: "/SEO-SERVICES-CHILD-IMAGES/Technical SEO.webp",
+    image: "/images/services/seo-child/technical-seo.webp",
     problemStatement:
-      "You can have the best content and the strongest backlink profile, but if Google cannot crawl your pages efficiently, render your JavaScript, or if your site takes 8 seconds to load, none of it matters. Technical SEO issues are invisible to most businesses — silently killing rankings, suppressing indexation and destroying user experience. Without a technically sound foundation, every other SEO investment underperforms.",
+      "You can have the best content and the strongest backlink profile, but if Google cannot crawl your pages efficiently, render your JavaScript, or if your site takes 8 seconds to load, none of it matters. Technical SEO issues are invisible to most businesses â€” silently killing rankings, suppressing indexation and destroying user experience. Without a technically sound foundation, every other SEO investment underperforms.",
     features: [
       {
         title: "In-Depth Technical Audits",
@@ -1612,10 +1612,10 @@ benefits: [
       ],
     },
     caseStudy: {
-      title: "Next.js E-Commerce — Core Web Vitals Recovery",
+      title: "Next.js E-Commerce â€” Core Web Vitals Recovery",
       metric: "LCP Improved from 8.2s to 1.8s",
       description:
-        "A Next.js e-commerce platform had severe Core Web Vitals issues — LCP at 8.2 seconds, high CLS and poor INP scores. Through image optimisation, code splitting, server-side rendering fixes and caching strategy, we brought LCP to 1.8 seconds, eliminated CLS and improved INP to under 200ms — resulting in a 45% improvement in organic rankings.",
+        "A Next.js e-commerce platform had severe Core Web Vitals issues â€” LCP at 8.2 seconds, high CLS and poor INP scores. Through image optimisation, code splitting, server-side rendering fixes and caching strategy, we brought LCP to 1.8 seconds, eliminated CLS and improved INP to under 200ms â€” resulting in a 45% improvement in organic rankings.",
     },
     testimonials: [
       {
@@ -1628,7 +1628,7 @@ benefits: [
         name: "Pooja Bhatia",
         designation: "Head of Digital, MediCare Plus",
         review:
-          "We had been told our website was 'fine' by two other agencies. Eddinet's technical audit found 47 critical issues we had no idea existed. After fixing them, our organic traffic grew 60% in three months — from technical fixes alone.",
+          "We had been told our website was 'fine' by two other agencies. Eddinet's technical audit found 47 critical issues we had no idea existed. After fixing them, our organic traffic grew 60% in three months â€” from technical fixes alone.",
       },
     ],
     detailedDescription:
@@ -1636,7 +1636,7 @@ benefits: [
     whoNeedsThis: {
       heading: "Who Needs Technical SEO?",
       description:
-        "Any website that underperforms in search due to technical issues — slow loading, poor crawlability, indexation problems or JavaScript rendering failures — needs Technical SEO.",
+        "Any website that underperforms in search due to technical issues â€” slow loading, poor crawlability, indexation problems or JavaScript rendering failures â€” needs Technical SEO.",
       points: [
         "Websites with pages not appearing on Google despite being published months ago",
         "Businesses experiencing sudden traffic drops after site changes or redesigns",
@@ -1754,15 +1754,15 @@ benefits: [
       "Expand globally with the right SEO strategy. Eddinet's International SEO covers multi-language optimisation, hreflang & geo-targeting for global search visibility. Free proposal.",
     heroHeading: "International SEO Services in Delhi NCR",
     heroSubheading:
-      "Eddinet helps businesses expand across countries and languages without losing the rankings they've already earned at home. International SEO isn't just translating — it's structure, and getting that structure wrong is what usually goes unnoticed until traffic starts dropping.",
-    image: "/SEO-SERVICES-CHILD-IMAGES/International SEO.webp",
+      "Eddinet helps businesses expand across countries and languages without losing the rankings they've already earned at home. International SEO isn't just translating â€” it's structure, and getting that structure wrong is what usually goes unnoticed until traffic starts dropping.",
+    image: "/images/services/seo-child/international-seo.webp",
     problemStatement:
-      "Expanding into international markets without proper SEO creates a mess — duplicate content across country versions, wrong language pages showing in wrong countries, hreflang errors that confuse Google and wasted crawl budget on content that should not rank in certain regions. Most businesses either ignore international SEO entirely or implement it incorrectly, leaving global search potential untapped and technical debt accumulating.",
+      "Expanding into international markets without proper SEO creates a mess â€” duplicate content across country versions, wrong language pages showing in wrong countries, hreflang errors that confuse Google and wasted crawl budget on content that should not rank in certain regions. Most businesses either ignore international SEO entirely or implement it incorrectly, leaving global search potential untapped and technical debt accumulating.",
     features: [
       {
         title: "Site Structure & Domain Strategy",
         description:
-          "We help you choose the right international structure — subdirectories, subdomains, or ccTLDs — based on your resources, markets, and long-term expansion goals.",
+          "We help you choose the right international structure â€” subdirectories, subdomains, or ccTLDs â€” based on your resources, markets, and long-term expansion goals.",
       },
       {
         title: "Hreflang Implementation & Auditing",
@@ -1787,7 +1787,7 @@ benefits: [
       {
         title: "Cross-Market Technical Audits",
         description:
-          "We audit for issues specific to global sites — duplicate content across regions, incorrect canonicals, and crawl inefficiencies across multiple site versions.",
+          "We audit for issues specific to global sites â€” duplicate content across regions, incorrect canonicals, and crawl inefficiencies across multiple site versions.",
       },
     ],
     whyChooseUs: {
@@ -1836,10 +1836,10 @@ benefits: [
       ],
     },
     caseStudy: {
-      title: "SaaS Platform — 5-Country Expansion",
+      title: "SaaS Platform â€” 5-Country Expansion",
       metric: "Organic Traffic Across 5 Countries in 6 Months",
       description:
-        "A SaaS platform expanding from India to US, UK, UAE, Australia and Canada needed international SEO from scratch. We implemented hreflang architecture, created localised content for each market and built regional backlink profiles — achieving page-one rankings in all 5 countries within 6 months.",
+        "A SaaS platform expanding from India to US, UK, UAE, Australia and Canada needed international SEO from scratch. We implemented hreflang architecture, created localised content for each market and built regional backlink profiles â€” achieving page-one rankings in all 5 countries within 6 months.",
     },
     testimonials: [
       {
@@ -1856,7 +1856,7 @@ benefits: [
       },
     ],
     detailedDescription:
-      "Expanding into new markets brings technical decisions most SEO strategies never touch — hreflang tags, domain structure, geo-targeting, duplicate content across language versions. As a SEO company in India working with businesses going global, Eddinet focuses on getting these foundations right first, because everything else in an international strategy depends on them.\n\nWe've guided businesses through decisions like choosing between subdirectories, subdomains, and country-code domains, and building content strategies that reflect real regional search behavior instead of direct translation. Our approach treats every new market as its own search environment, not a copy-paste extension of your existing site.",
+      "Expanding into new markets brings technical decisions most SEO strategies never touch â€” hreflang tags, domain structure, geo-targeting, duplicate content across language versions. As a SEO company in India working with businesses going global, Eddinet focuses on getting these foundations right first, because everything else in an international strategy depends on them.\n\nWe've guided businesses through decisions like choosing between subdirectories, subdomains, and country-code domains, and building content strategies that reflect real regional search behavior instead of direct translation. Our approach treats every new market as its own search environment, not a copy-paste extension of your existing site.",
     whoNeedsThis: {
       heading: "Who Needs International SEO?",
       description:
@@ -1947,7 +1947,7 @@ benefits: [
       },
       {
         q: "Should I use subdomains, subdirectories, or country-code domains?",
-        a: "It depends on your resources, target markets, and long-term goals — we assess your specific situation before recommending a structure.",
+        a: "It depends on your resources, target markets, and long-term goals â€” we assess your specific situation before recommending a structure.",
       },
       {
         q: "Is translated content enough for international SEO?",
@@ -1992,15 +1992,15 @@ benefits: [
       "Scale organic traffic with programmatic SEO. Eddinet builds data-driven template pages targeting thousands of long-tail keywords at scale. Free strategy call for your business.",
     heroHeading: "Programmatic SEO Services in Delhi NCR",
     heroSubheading:
-      "Eddinet provides specialized Programmatic SEO Services in India for businesses that need thousands of pages — city pages, product variations, comparison pages — without flooding their site with thin, repetitive content. Scale is easy to get wrong; done right, it's one of the fastest ways to capture search demand you're currently missing entirely.",
-    image: "/SEO-SERVICES-CHILD-IMAGES/Programmatic SEO.webp",
+      "Eddinet provides specialized Programmatic SEO Services in India for businesses that need thousands of pages â€” city pages, product variations, comparison pages â€” without flooding their site with thin, repetitive content. Scale is easy to get wrong; done right, it's one of the fastest ways to capture search demand you're currently missing entirely.",
+    image: "/images/services/seo-child/programmatic-seo.webp",
     problemStatement:
-      "Manually creating individual pages for every product, location, feature or use-case is impossible at scale. Businesses with large inventories, multiple locations or extensive service offerings leave thousands of long-tail search queries unanswered — queries that individually drive small traffic but collectively represent massive organic potential. Without programmatic SEO, you are ignoring the long tail where competition is low and conversion intent is high.",
+      "Manually creating individual pages for every product, location, feature or use-case is impossible at scale. Businesses with large inventories, multiple locations or extensive service offerings leave thousands of long-tail search queries unanswered â€” queries that individually drive small traffic but collectively represent massive organic potential. Without programmatic SEO, you are ignoring the long tail where competition is low and conversion intent is high.",
     features: [
       {
         title: "Opportunity Research",
         description:
-          "We identify where programmatic SEO genuinely makes sense for your business — locations, comparisons, product variations — based on real search volume and business relevance.",
+          "We identify where programmatic SEO genuinely makes sense for your business â€” locations, comparisons, product variations â€” based on real search volume and business relevance.",
       },
       {
         title: "Data Structuring & Template Design",
@@ -2074,31 +2074,31 @@ benefits: [
       ],
     },
     caseStudy: {
-      title: "eCommerce Marketplace — Long-Tail Traffic Explosion",
+      title: "eCommerce Marketplace â€” Long-Tail Traffic Explosion",
       metric: "12,000+ Pages Indexed, +500% Organic Traffic",
       description:
-        "An eCommerce marketplace had 500 product pages but was missing thousands of category, feature and comparison queries. We built programmatic templates for product categories, brand comparisons and use-case pages — generating 12,000+ unique indexed pages and growing organic traffic by 500% in 8 months.",
+        "An eCommerce marketplace had 500 product pages but was missing thousands of category, feature and comparison queries. We built programmatic templates for product categories, brand comparisons and use-case pages â€” generating 12,000+ unique indexed pages and growing organic traffic by 500% in 8 months.",
     },
     testimonials: [
       {
         name: "Tarun Malhotra",
         designation: "Founder, ShopNest Marketplace",
         review:
-          "Programmatic SEO seemed too good to be true — until Eddinet built it for us. 12,000 pages indexed, all driving qualified traffic. Our organic channel went from an afterthought to our biggest growth driver.",
+          "Programmatic SEO seemed too good to be true â€” until Eddinet built it for us. 12,000 pages indexed, all driving qualified traffic. Our organic channel went from an afterthought to our biggest growth driver.",
       },
       {
         name: "Shruti Verma",
         designation: "Head of SEO, TravelHUB India",
         review:
-          "Eddinet built programmatic templates for every city, route and travel package we offer. The scale of organic growth was beyond anything we expected — all from pages that target specific, high-intent search queries.",
+          "Eddinet built programmatic templates for every city, route and travel package we offer. The scale of organic growth was beyond anything we expected â€” all from pages that target specific, high-intent search queries.",
       },
     ],
     detailedDescription:
-      "Programmatic SEO gets misunderstood as simply generating pages in bulk. Done properly, it's a careful balance of real data, meaningful variation, and templates built around genuine search intent. As a SEO company in India that's built exactly this kind of system, Eddinet focuses on scale that actually holds up — pages that rank because they're useful, not just numerous.\n\nWe've helped businesses avoid the common trap of generic, duplicate-feeling pages by anchoring every template in real data and clear user value, so growth in page count doesn't come at the cost of quality or rankings.",
+      "Programmatic SEO gets misunderstood as simply generating pages in bulk. Done properly, it's a careful balance of real data, meaningful variation, and templates built around genuine search intent. As a SEO company in India that's built exactly this kind of system, Eddinet focuses on scale that actually holds up â€” pages that rank because they're useful, not just numerous.\n\nWe've helped businesses avoid the common trap of generic, duplicate-feeling pages by anchoring every template in real data and clear user value, so growth in page count doesn't come at the cost of quality or rankings.",
     whoNeedsThis: {
       heading: "Who Needs Programmatic SEO?",
       description:
-        "Businesses with large structured datasets — product catalogues, location networks, service offerings or feature sets — that map to thousands of individual search queries.",
+        "Businesses with large structured datasets â€” product catalogues, location networks, service offerings or feature sets â€” that map to thousands of individual search queries.",
       points: [
         "E-commerce platforms with thousands of products, categories and comparison opportunities",
         "Multi-location businesses needing pages for every branch or service area",
@@ -2189,7 +2189,7 @@ faqs: [
       },
       {
         q: "What kind of businesses benefit most from programmatic SEO?",
-        a: "Businesses with location-based services, large product catalogs, or naturally scalable data — like real estate, marketplaces, or multi-location service providers typically benefit the most.",
+        a: "Businesses with location-based services, large product catalogs, or naturally scalable data â€” like real estate, marketplaces, or multi-location service providers typically benefit the most.",
       },
       {
         q: "How much data do we need to get started?",
@@ -2230,10 +2230,10 @@ faqs: [
       "Rank higher on Amazon search. Eddinet's Amazon SEO covers listing optimisation, A9 algorithm strategy, backend keywords & A+ content. Grow your Amazon visibility. Free audit.",
     heroHeading: "Amazon SEO Services in Delhi NCR",
     heroSubheading:
-      "Eddinet helps sellers stop losing sales to page-three listings. On Amazon, ranking has nothing to do with Google — it's about A9/A10 and what actually gets your product in front of a shopper who's ready to buy right now.",
-    image: "/SEO-SERVICES-CHILD-IMAGES/seo_service_image.webp.webp",
+      "Eddinet helps sellers stop losing sales to page-three listings. On Amazon, ranking has nothing to do with Google â€” it's about A9/A10 and what actually gets your product in front of a shopper who's ready to buy right now.",
+    image: "/images/services/seo-child/seo-service.webp",
     problemStatement:
-      "Amazon is the first place consumers search when they want to buy. But ranking on Amazon requires a fundamentally different SEO approach than Google. Backend keywords, listing copy, image strategy, review velocity, conversion rate and fulfilment method all influence A9/A10 ranking. Most sellers either apply Google SEO thinking to Amazon or ignore optimisation entirely — losing visibility to competitors who understand Amazon's unique ranking ecosystem.",
+      "Amazon is the first place consumers search when they want to buy. But ranking on Amazon requires a fundamentally different SEO approach than Google. Backend keywords, listing copy, image strategy, review velocity, conversion rate and fulfilment method all influence A9/A10 ranking. Most sellers either apply Google SEO thinking to Amazon or ignore optimisation entirely â€” losing visibility to competitors who understand Amazon's unique ranking ecosystem.",
     features: [
       {
         title: "Amazon Keyword Research",
@@ -2312,10 +2312,10 @@ faqs: [
       ],
     },
     caseStudy: {
-      title: "Home Electronics Brand — Amazon Ranking Growth",
+      title: "Home Electronics Brand â€” Amazon Ranking Growth",
       metric: "From Page 5 to Page 1 for 15 Core Keywords",
       description:
-        "A home electronics brand was buried on page 5 for their main keywords. Through comprehensive listing optimisation, backend keyword restructuring, A+ Content creation and review generation, we moved 15 core keywords to page 1 within 4 months — increasing organic sales by 340%.",
+        "A home electronics brand was buried on page 5 for their main keywords. Through comprehensive listing optimisation, backend keyword restructuring, A+ Content creation and review generation, we moved 15 core keywords to page 1 within 4 months â€” increasing organic sales by 340%.",
     },
     testimonials: [
       {
@@ -2328,11 +2328,11 @@ faqs: [
         name: "Ritu Saxena",
         designation: "E-Commerce Manager, HomeStyle Brands",
         review:
-          "The A+ Content Eddinet created for us not only improved our rankings but also our conversion rate. We went from 8% to 15% conversion on optimised listings — a direct impact on our bottom line.",
+          "The A+ Content Eddinet created for us not only improved our rankings but also our conversion rate. We went from 8% to 15% conversion on optimised listings â€” a direct impact on our bottom line.",
       },
     ],
     detailedDescription:
-      "Amazon runs on its own rules — relevance, conversion rate, and customer satisfaction signals, not backlinks or domain authority. As a SEO company in India working with sellers and brands, Eddinet focuses specifically on what moves the needle inside Amazon's marketplace, not generic SEO principles applied where they don't fit.\n\nWe've helped listings move from buried and ignored to consistently visible, by treating keywords, content, images, and reviews as one connected system instead of separate tasks. Ranking without conversion doesn't grow a business — so we optimize for both at once.",
+      "Amazon runs on its own rules â€” relevance, conversion rate, and customer satisfaction signals, not backlinks or domain authority. As a SEO company in India working with sellers and brands, Eddinet focuses specifically on what moves the needle inside Amazon's marketplace, not generic SEO principles applied where they don't fit.\n\nWe've helped listings move from buried and ignored to consistently visible, by treating keywords, content, images, and reviews as one connected system instead of separate tasks. Ranking without conversion doesn't grow a business â€” so we optimize for both at once.",
     whoNeedsThis: {
       heading: "Who Needs Amazon SEO?",
       description:
@@ -2414,7 +2414,7 @@ faqs: [
       { value: "340%", label: "Average increase in organic Amazon sales" },
       { value: "15", label: "Core keywords moved to page one in 4 months" },
       { value: "4-6x", label: "Return on Amazon SEO investment" },
-      { value: "8→15%", label: "Conversion rate improvement on optimised listings" },
+      { value: "8â†’15%", label: "Conversion rate improvement on optimised listings" },
     ],
     faqs: [
       {
@@ -2468,15 +2468,15 @@ faqs: [
       "Drive qualified shopping traffic to your store. Eddinet's eCommerce SEO covers product, category & collection page optimisation for Shopify, WooCommerce & more. Free audit.",
     heroHeading: "eCommerce SEO Services in Delhi NCR",
     heroSubheading:
-      "Product-focused SEO that connects high-intent shoppers with your catalogue — category pages, product pages, filters and collections engineered for search visibility and conversion.",
-    image: "/SEO-SERVICES-CHILD-IMAGES/eCommerce SEO.webp",
+      "Product-focused SEO that connects high-intent shoppers with your catalogue â€” category pages, product pages, filters and collections engineered for search visibility and conversion.",
+    image: "/images/services/seo-child/ecommerce-seo.webp",
     problemStatement:
-      "eCommerce websites face unique SEO challenges — thousands of product pages, faceted navigation creating crawl waste, thin product descriptions, duplicate content across variants and category structures that fight each other for rankings. Without eCommerce-specific SEO strategy, your most valuable product and category pages remain buried while competitors capture the shopping traffic that should be yours.",
+      "eCommerce websites face unique SEO challenges â€” thousands of product pages, faceted navigation creating crawl waste, thin product descriptions, duplicate content across variants and category structures that fight each other for rankings. Without eCommerce-specific SEO strategy, your most valuable product and category pages remain buried while competitors capture the shopping traffic that should be yours.",
     features: [
       {
         title: "Category & Collection Page Optimisation",
         description:
-          "Strategic optimisation of category and collection pages — the highest-impact eCommerce SEO lever — with keyword targeting, content depth and internal linking.",
+          "Strategic optimisation of category and collection pages â€” the highest-impact eCommerce SEO lever â€” with keyword targeting, content depth and internal linking.",
       },
       {
         title: "Product Page SEO",
@@ -2491,7 +2491,7 @@ faqs: [
       {
         title: "eCommerce Schema Markup",
         description:
-          "Product, offer, review and availability schema that qualifies for rich results — price displays, star ratings and availability in search.",
+          "Product, offer, review and availability schema that qualifies for rich results â€” price displays, star ratings and availability in search.",
       },
       {
         title: "Internal Linking for Product Discovery",
@@ -2506,7 +2506,7 @@ faqs: [
       {
         title: "Technical eCommerce SEO",
         description:
-          "Platform-specific technical optimisation for Shopify, WooCommerce, Magento and custom builds — including speed, crawlability and indexation management.",
+          "Platform-specific technical optimisation for Shopify, WooCommerce, Magento and custom builds â€” including speed, crawlability and indexation management.",
       },
     ],
     whyChooseUs: {
@@ -2562,10 +2562,10 @@ faqs: [
       ],
     },
     caseStudy: {
-      title: "Fashion eCommerce — Organic Revenue Growth",
+      title: "Fashion eCommerce â€” Organic Revenue Growth",
       metric: "+450% Organic Revenue in 10 Months",
       description:
-        "A fashion eCommerce store had strong products but weak category and product page SEO. We restructured category hierarchy, rewrote product descriptions, implemented product schema and fixed faceted navigation — growing organic revenue by 450% in 10 months.",
+        "A fashion eCommerce store had strong products but weak category and product page SEO. We restructured category hierarchy, rewrote product descriptions, implemented product schema and fixed faceted navigation â€” growing organic revenue by 450% in 10 months.",
     },
     testimonials: [
       {
@@ -2578,11 +2578,11 @@ faqs: [
         name: "Rahul Mehra",
         designation: "E-Commerce Director, HomeKart",
         review:
-          "The faceted navigation fix alone saved us from a crawl budget disaster. Eddinet's eCommerce SEO expertise is not generic — they understand the unique challenges of online stores.",
+          "The faceted navigation fix alone saved us from a crawl budget disaster. Eddinet's eCommerce SEO expertise is not generic â€” they understand the unique challenges of online stores.",
       },
     ],
     detailedDescription:
-      "eCommerce SEO is search engine optimisation tailored specifically to online stores, addressing the unique challenges of product catalogues, category hierarchies, faceted navigation and shopping-intent searches. At Eddinet, our eCommerce SEO services in Delhi NCR help online retailers rank for the transactional queries that drive real revenue.\n\neCommerce websites face challenges that content sites never encounter — thousands of product pages, faceted navigation creating crawl waste, thin manufacturer descriptions, duplicate content across variants and category structures that compete with each other. Our eCommerce SEO strategy starts with the highest-impact lever: category and collection page optimisation. These pages target the most valuable shopping keywords and drive the majority of organic eCommerce revenue.\n\nProduct page SEO ensures each listing is unique, informative and conversion-ready — with keyword-rich descriptions, structured data, image optimisation and review integration that help individual products rank and convert. Faceted navigation management prevents filter and sort combinations from creating crawl waste and duplicate content, channelling authority to the pages that matter.\n\neCommerce schema markup is essential for rich result eligibility. We implement Product, Offer, Review and Availability schema that qualifies your listings for price displays, star ratings and availability information directly in Google search results. Internal linking between categories, subcategories, related products and supporting content distributes authority and guides shoppers through your catalogue.\n\nTechnical eCommerce SEO — platform-specific optimisation for Shopify, WooCommerce, Magento and custom builds — completes the framework, ensuring speed, crawlability and indexation health across your entire store. For online retailers in Delhi NCR, our eCommerce SEO services connect high-intent shoppers directly to your products and categories.",
+      "eCommerce SEO is search engine optimisation tailored specifically to online stores, addressing the unique challenges of product catalogues, category hierarchies, faceted navigation and shopping-intent searches. At Eddinet, our eCommerce SEO services in Delhi NCR help online retailers rank for the transactional queries that drive real revenue.\n\neCommerce websites face challenges that content sites never encounter â€” thousands of product pages, faceted navigation creating crawl waste, thin manufacturer descriptions, duplicate content across variants and category structures that compete with each other. Our eCommerce SEO strategy starts with the highest-impact lever: category and collection page optimisation. These pages target the most valuable shopping keywords and drive the majority of organic eCommerce revenue.\n\nProduct page SEO ensures each listing is unique, informative and conversion-ready â€” with keyword-rich descriptions, structured data, image optimisation and review integration that help individual products rank and convert. Faceted navigation management prevents filter and sort combinations from creating crawl waste and duplicate content, channelling authority to the pages that matter.\n\neCommerce schema markup is essential for rich result eligibility. We implement Product, Offer, Review and Availability schema that qualifies your listings for price displays, star ratings and availability information directly in Google search results. Internal linking between categories, subcategories, related products and supporting content distributes authority and guides shoppers through your catalogue.\n\nTechnical eCommerce SEO â€” platform-specific optimisation for Shopify, WooCommerce, Magento and custom builds â€” completes the framework, ensuring speed, crawlability and indexation health across your entire store. For online retailers in Delhi NCR, our eCommerce SEO services connect high-intent shoppers directly to your products and categories.",
     whoNeedsThis: {
       heading: "Who Needs eCommerce SEO?",
       description:
@@ -2600,7 +2600,7 @@ faqs: [
       {
         title: "Category Page Domination",
         description:
-          "Strategic optimisation of the highest-impact pages in eCommerce — categories and collections targeting the most valuable shopping keywords.",
+          "Strategic optimisation of the highest-impact pages in eCommerce â€” categories and collections targeting the most valuable shopping keywords.",
       },
       {
         title: "Faceted Navigation Control",
@@ -2625,7 +2625,7 @@ faqs: [
       {
         title: "Organic Revenue Growth",
         description:
-          "A complete e-commerce search strategy measured by organic revenue attribution — not traffic vanity metrics that do not reflect sales.",
+          "A complete e-commerce search strategy measured by organic revenue attribution â€” not traffic vanity metrics that do not reflect sales.",
       },
     ],
     industries: [
@@ -2707,13 +2707,13 @@ faqs: [
     title: "Shopify SEO",
     metaTitle: "Shopify SEO Services in Delhi NCR | Eddinet",
     metaDescription:
-      "Rank your Shopify store higher on Google. Eddinet's Shopify SEO tackles platform-specific challenges — theme speed, URL structure & technical limitations. Get a free audit.",
+      "Rank your Shopify store higher on Google. Eddinet's Shopify SEO tackles platform-specific challenges â€” theme speed, URL structure & technical limitations. Get a free audit.",
     heroHeading: "Shopify SEO Services in Delhi NCR",
     heroSubheading:
       "Shopify-specific SEO expertise that navigates platform constraints, optimises theme performance and builds organic growth strategies around Shopify's unique technical architecture.",
-    image: "/SEO-SERVICES-CHILD-IMAGES/Shopify SEO.webp",
+    image: "/images/services/seo-child/shopify-seo.webp",
     problemStatement:
-      "Shopify is powerful for launching quickly, but its SEO limitations are real — rigid URL structures, forced duplicate content from /collections and /products paths, limited access to robots.txt, theme bloat affecting speed and app dependencies adding unnecessary code. Most Shopify stores suffer from these technical constraints without even realising they are suppressing rankings. Without Shopify-specific SEO expertise, these platform limitations quietly cap your organic potential.",
+      "Shopify is powerful for launching quickly, but its SEO limitations are real â€” rigid URL structures, forced duplicate content from /collections and /products paths, limited access to robots.txt, theme bloat affecting speed and app dependencies adding unnecessary code. Most Shopify stores suffer from these technical constraints without even realising they are suppressing rankings. Without Shopify-specific SEO expertise, these platform limitations quietly cap your organic potential.",
     features: [
       {
         title: "Shopify Theme Speed Optimisation",
@@ -2723,12 +2723,12 @@ faqs: [
       {
         title: "URL Structure Workarounds",
         description:
-          "Strategic handling of Shopify's rigid URL architecture — /collections/, /products/ paths, canonical tags and redirects that prevent duplicate content issues.",
+          "Strategic handling of Shopify's rigid URL architecture â€” /collections/, /products/ paths, canonical tags and redirects that prevent duplicate content issues.",
       },
       {
         title: "Shopify App SEO Audit",
         description:
-          "Review every installed app for SEO impact — identifying apps that inject unnecessary scripts, create duplicate content or slow down your storefront.",
+          "Review every installed app for SEO impact â€” identifying apps that inject unnecessary scripts, create duplicate content or slow down your storefront.",
       },
       {
         title: "Collection Page Optimisation",
@@ -2754,7 +2754,7 @@ faqs: [
     whyChooseUs: {
       heading: "Why Choose Eddinet for Shopify SEO",
       points: [
-        "Deep Shopify Expertise: Deep Shopify platform expertise — we know every limitation and every workaround.",
+        "Deep Shopify Expertise: Deep Shopify platform expertise â€” we know every limitation and every workaround.",
         "Theme-Specific Speed Optimisation: Theme-specific speed optimisation that addresses Shopify's unique performance challenges.",
         "App Audit Capability: App audit capability that identifies and eliminates hidden SEO problems from apps.",
         "Collection-First Strategy: Collection-first strategy that maximises Shopify's highest-impact SEO pages.",
@@ -2775,7 +2775,7 @@ faqs: [
           num: "02",
           title: "Audit the Core Constraint",
           description:
-            "Full Shopify audit — theme performance, app impact, URL structure, collection hierarchy, product page quality and technical configuration.",
+            "Full Shopify audit â€” theme performance, app impact, URL structure, collection hierarchy, product page quality and technical configuration.",
         },
         {
           num: "03",
@@ -2804,10 +2804,10 @@ faqs: [
       ],
     },
     caseStudy: {
-      title: "Shopify Fashion Store — Speed & Rankings Recovery",
+      title: "Shopify Fashion Store â€” Speed & Rankings Recovery",
       metric: "Page Speed Score: 34 to 92, +200% Organic Traffic",
       description:
-        "A Shopify fashion store had a page speed score of 34 due to 15 unnecessary apps and an unoptimised theme. We audited and removed redundant apps, optimised the theme code, compressed all images and restructured collections — achieving a 92 speed score and 200% organic traffic growth.",
+        "A Shopify fashion store had a page speed score of 34 due to 15 unnecessary apps and an unoptimised theme. We audited and removed redundant apps, optimised the theme code, compressed all images and restructured collections â€” achieving a 92 speed score and 200% organic traffic growth.",
     },
     testimonials: [
       {
@@ -2824,7 +2824,7 @@ faqs: [
       },
     ],
     detailedDescription:
-      "Shopify SEO is the specialist practice of optimising Shopify stores within the platform's unique technical constraints, navigating its rigid URL architecture while maximising the built-in SEO features Shopify provides. At Eddinet, our Shopify SEO services in Delhi NCR help Shopify merchants turn their platform limitations into a competitive advantage.\n\nShopify is powerful for launching stores quickly, but its SEO constraints are real — rigid URL structures, forced duplicate content paths, limited robots.txt access, theme bloat affecting page speed and apps injecting unnecessary code. Most Shopify merchants never realise these constraints are quietly suppressing their rankings. Our Shopify SEO services are built around deep knowledge of every platform limitation and every workaround.\n\nTheme speed optimisation is often the highest-impact fix. We clean up theme code, audit every installed app for performance impact, optimise images and implement lazy loading to improve Core Web Vitals scores that directly influence rankings. App audits identify and eliminate hidden SEO problems — scripts that slow your storefront or create duplicate content.\n\nShopify URL structure workarounds address the platform's /collections/ and /products/ path constraints. We implement canonical tags, strategic redirects and content differentiation strategies that prevent duplicate content from diluting rankings. Collection page optimisation targets Shopify's highest-impact SEO pages, with strategic collection structure, descriptions, keyword targeting and internal linking.\n\nProduct page enhancement — unique descriptions, structured data, image alt tags and above-the-fold content — differentiates your listings. Complete Shopify technical configuration, including sitemap management, canonical implementation and hreflang setup, ensures maximum crawl efficiency. For Shopify merchants in Delhi NCR, our Shopify SEO services deliver platform-specific expertise that generic agencies simply do not possess.",
+      "Shopify SEO is the specialist practice of optimising Shopify stores within the platform's unique technical constraints, navigating its rigid URL architecture while maximising the built-in SEO features Shopify provides. At Eddinet, our Shopify SEO services in Delhi NCR help Shopify merchants turn their platform limitations into a competitive advantage.\n\nShopify is powerful for launching stores quickly, but its SEO constraints are real â€” rigid URL structures, forced duplicate content paths, limited robots.txt access, theme bloat affecting page speed and apps injecting unnecessary code. Most Shopify merchants never realise these constraints are quietly suppressing their rankings. Our Shopify SEO services are built around deep knowledge of every platform limitation and every workaround.\n\nTheme speed optimisation is often the highest-impact fix. We clean up theme code, audit every installed app for performance impact, optimise images and implement lazy loading to improve Core Web Vitals scores that directly influence rankings. App audits identify and eliminate hidden SEO problems â€” scripts that slow your storefront or create duplicate content.\n\nShopify URL structure workarounds address the platform's /collections/ and /products/ path constraints. We implement canonical tags, strategic redirects and content differentiation strategies that prevent duplicate content from diluting rankings. Collection page optimisation targets Shopify's highest-impact SEO pages, with strategic collection structure, descriptions, keyword targeting and internal linking.\n\nProduct page enhancement â€” unique descriptions, structured data, image alt tags and above-the-fold content â€” differentiates your listings. Complete Shopify technical configuration, including sitemap management, canonical implementation and hreflang setup, ensures maximum crawl efficiency. For Shopify merchants in Delhi NCR, our Shopify SEO services deliver platform-specific expertise that generic agencies simply do not possess.",
     whoNeedsThis: {
       heading: "Who Needs Shopify SEO?",
       description:
@@ -2842,7 +2842,7 @@ faqs: [
       {
         title: "Platform-Specific Expertise",
         description:
-          "Deep knowledge of every Shopify limitation and workaround — expertise generic agencies do not have and cannot fake.",
+          "Deep knowledge of every Shopify limitation and workaround â€” expertise generic agencies do not have and cannot fake.",
       },
       {
         title: "Theme Speed Transformation",
@@ -2862,7 +2862,7 @@ faqs: [
       {
         title: "Collection-First Strategy",
         description:
-          "Optimising Shopify's highest-impact SEO pages — collections — with structure, content and internal linking engineered for rankings.",
+          "Optimising Shopify's highest-impact SEO pages â€” collections â€” with structure, content and internal linking engineered for rankings.",
       },
       {
         title: "Technical Configuration Mastery",
@@ -2903,7 +2903,7 @@ faqs: [
       },
     ],
     metrics: [
-      { value: "34→92", label: "Page speed score improvement on Shopify stores" },
+      { value: "34â†’92", label: "Page speed score improvement on Shopify stores" },
       { value: "200%", label: "Average organic traffic growth for Shopify clients" },
       { value: "15", label: "Unnecessary apps removed in a single audit" },
       { value: "40%", label: "Average increase in organic revenue" },
@@ -2911,7 +2911,7 @@ faqs: [
     faqs: [
       {
         q: "What makes Shopify SEO different from other eCommerce SEO?",
-        a: "Shopify has unique technical constraints — rigid URL structures (/collections/, /products/), limited robots.txt access, forced duplicate content paths and app dependencies that affect performance. Shopify-specific SEO requires expertise in navigating these platform limitations while maximising the built-in SEO features Shopify provides.",
+        a: "Shopify has unique technical constraints â€” rigid URL structures (/collections/, /products/), limited robots.txt access, forced duplicate content paths and app dependencies that affect performance. Shopify-specific SEO requires expertise in navigating these platform limitations while maximising the built-in SEO features Shopify provides.",
       },
       {
         q: "Can you improve my Shopify store speed?",

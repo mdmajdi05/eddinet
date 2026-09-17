@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { IMG } from "@/data/images";
 
 const capabilities = [
   {
@@ -78,7 +79,7 @@ export default function About() {
               <div className="relative overflow-hidden rounded-[30px] border-[6px] border-[var(--bg-card)] shadow-[0_30px_80px_rgba(0,0,0,0.18)]">
 
                 <Image
-                  src="/about-section.webp"
+                  src={IMG.about.aboutSection.src}
                   alt="Eddinet team collaborating in office"
                   width={1000}
                   height={200}

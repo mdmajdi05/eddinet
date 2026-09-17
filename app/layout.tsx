@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://eddinet.com/",
   },
+  verification: {
+    google: "xCtFiK_TY-W1mnzQIx0XxwK_CdgtRyu6NP9TgpUS8LU",
+  },
   openGraph: {
     title: "Eddinet | Digital Growth, Marketing & Technology Partner in Delhi NCR",
     description:
