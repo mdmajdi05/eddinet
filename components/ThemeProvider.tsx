@@ -10,7 +10,7 @@ type ThemeContextType = {
 };
 
 const ThemeContext = createContext<ThemeContextType>({
-  accent: "cyan",
+  accent: "red",
   mode: "dark",
   setAccent: () => {},
   toggleMode: () => {},
@@ -19,13 +19,13 @@ const ThemeContext = createContext<ThemeContextType>({
 export const useTheme = () => useContext(ThemeContext);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [accent, setAccentState] = useState("cyan");
+  const [accent, setAccentState] = useState("red");
   const [mode, setMode] = useState("dark");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-    const savedAccent = localStorage.getItem("du-accent") || "cyan";
+    const savedAccent = localStorage.getItem("du-accent") || "red";
     const savedMode = localStorage.getItem("du-mode") || "dark";
     setAccentState(savedAccent);
     setMode(savedMode);

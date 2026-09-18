@@ -1,35 +1,80 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { site } from "@/data/contact";
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#0d0d0d",
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://eddinet.com/"),
-  title: "Eddinet | Digital Growth, Marketing & Technology Partner in Delhi NCR",
+  title: "Digital Marketing & Software Agency Delhi NCR | Eddinet",
   description:
-    "Eddinet is a Delhi NCR digital growth, marketing and technology partner offering SEO, AI SEO, social media, PPC, content, web, eCommerce, apps, software, AI, cloud, DevOps, hosting and support services.",
+    "Eddinet is a leading digital marketing & software agency in Delhi NCR, offering SEO, web & app development, and branding. Get a free consultation today.",
+  robots: {
+    index: true,
+    follow: true,
+  },
+  authors: [{ name: "Eddinet" }],
   alternates: {
     canonical: "https://eddinet.com/",
+    languages: {
+      "en-in": "https://eddinet.com/",
+      "x-default": "https://eddinet.com/",
+    },
   },
   verification: {
     google: "xCtFiK_TY-W1mnzQIx0XxwK_CdgtRyu6NP9TgpUS8LU",
   },
+  manifest: "/site.webmanifest",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png" }],
+  },
   openGraph: {
-    title: "Eddinet | Digital Growth, Marketing & Technology Partner in Delhi NCR",
+    title: "Digital Marketing & Software Agency Delhi NCR | Eddinet",
     description:
-      "Eddinet is a Delhi NCR digital growth, marketing and technology partner offering SEO, AI SEO, social media, PPC, content, web, eCommerce, apps, software, AI, cloud, DevOps, hosting and support services.",
+      "Eddinet is a leading digital marketing & software agency in Delhi NCR, offering SEO, web & app development, and branding. Get a free consultation today.",
     url: "https://eddinet.com/",
     siteName: "Eddinet",
     type: "website",
     locale: "en_IN",
+    images: [
+      {
+        url: "https://eddinet.com/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Eddinet - Digital Marketing & Software Agency",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Eddinet | Digital Growth, Marketing & Technology Partner in Delhi NCR",
+    title: "Digital Marketing & Software Agency Delhi NCR | Eddinet",
     description:
-      "Eddinet is a Delhi NCR digital growth, marketing and technology partner offering SEO, AI SEO, social media, PPC, content, web, eCommerce, apps, software, AI, cloud, DevOps, hosting and support services.",
+      "Eddinet is a leading digital marketing & software agency in Delhi NCR, offering SEO, web & app development, and branding. Get a free consultation today.",
+    images: ["https://eddinet.com/opengraph-image.png"],
+  },
+  other: {
+    language: "English",
+    "content-language": "en-IN",
+    referrer: "strict-origin-when-cross-origin",
+    "mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "black-translucent",
+    "apple-mobile-web-app-title": "Eddinet",
+    "geo.region": "IN-DL",
+    "geo.placename": "Delhi NCR",
+    "geo.position": "28.6139;77.2090",
+    ICBM: "28.6139, 77.2090",
   },
 };
 
@@ -57,15 +102,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" data-theme="cyan" suppressHydrationWarning>
+    <html lang="en" data-theme="red" suppressHydrationWarning>
       <head>
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var a=localStorage.getItem("du-accent")||"cyan";var m=localStorage.getItem("du-mode")||"dark";var t=m==="dark"?a:a+"-light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();`,
+            __html: `(function(){try{var a=localStorage.getItem("du-accent")||"red";var m=localStorage.getItem("du-mode")||"dark";var t=m==="dark"?a:a+"-light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();`,
           }}
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

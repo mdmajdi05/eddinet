@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { servicePages } from "@/data/services";
 import { seoChildServices } from "@/data/seo-child-services";
+import { generatedChildServices } from "@/data/generated-child-services";
 import { industries } from "@/data/industries";
 import { insights } from "@/data/blog";
 import { caseStudies } from "@/data/case-studies";
@@ -10,14 +11,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
   const staticRoutes: MetadataRoute.Sitemap = [
-    { url: `${base}/`, lastModified: now, changeFrequency: "weekly", priority: 1 },
+    { url: `${base}/`, lastModified: now, changeFrequency: "daily", priority: 1 },
     { url: `${base}/services`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${base}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${base}/portfolio`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${base}/case-studies`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${base}/industries`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/industries`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${base}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
-    { url: `${base}/contact`, lastModified: now, changeFrequency: "yearly", priority: 0.8 },
+    { url: `${base}/portfolio`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
+    { url: `${base}/case-studies`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/privacy-policy`, lastModified: now, changeFrequency: "yearly", priority: 0.2 },
     { url: `${base}/terms`, lastModified: now, changeFrequency: "yearly", priority: 0.2 },
   ];
@@ -25,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const serviceRoutes: MetadataRoute.Sitemap = servicePages.map((s) => ({
     url: `${base}/services/${s.slug}`,
     lastModified: now,
-    changeFrequency: "monthly",
+    changeFrequency: "weekly",
     priority: 0.9,
   }));
 
@@ -33,14 +34,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${base}/services/seo/${c.slug}`,
     lastModified: now,
     changeFrequency: "monthly",
-    priority: 0.9,
+    priority: 0.8,
+  }));
+
+  const generatedChildRoutes: MetadataRoute.Sitemap = generatedChildServices.map((c) => ({
+    url: `${base}/services/${c.categorySlug}/${c.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.8,
   }));
 
   const industryRoutes: MetadataRoute.Sitemap = industries.map((i) => ({
     url: `${base}/industries/${i.slug}`,
     lastModified: now,
     changeFrequency: "monthly",
-    priority: 0.6,
+    priority: 0.7,
   }));
 
   const blogRoutes: MetadataRoute.Sitemap = insights.map((i) => ({
@@ -53,7 +61,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const caseStudyRoutes: MetadataRoute.Sitemap = caseStudies.map((c) => ({
     url: `${base}/case-studies/${c.slug}`,
     lastModified: now,
-    changeFrequency: "yearly",
+    changeFrequency: "monthly",
     priority: 0.7,
   }));
 
@@ -61,6 +69,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticRoutes,
     ...serviceRoutes,
     ...seoChildRoutes,
+    ...generatedChildRoutes,
     ...industryRoutes,
     ...blogRoutes,
     ...caseStudyRoutes,
