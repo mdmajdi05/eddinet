@@ -18,7 +18,7 @@ export interface ChildServiceView {
   heroSubheading: string;
   image: string;
   detailedDescription: string;
-  features: { title: string; description: string }[];
+  features: { title: string; description: string; image?: string }[];
   featuresHeading?: string;
   featuresDescription?: string;
   process: {
@@ -230,7 +230,7 @@ export default function ServiceChildPage({
                 <div className="p-4 sm:p-5 flex items-center bg-[var(--bg-card)]">
                   <div className="relative w-full rounded-2xl overflow-hidden border border-[var(--border-color)] shadow-[0_15px_40px_-15px_rgba(0,0,0,0.5)]">
                     <Image
-                      src={child.image}
+                      src={feature.image ?? child.image}
                       alt={feature.title}
                       width={800}
                       height={450}

@@ -15,11 +15,11 @@
 //      /images/brand/…                    brand/logos (header, footer, favicons)
 //      /images/home/…                     homepage (hero, hero-bg aur baaki)
 //      /images/about/…                    About page
-//      /images/services/…                 services (10 core service category)
-//      /images/services/seo-child/…       SEO ke child pages (12)
-//      /images/services/ai-seo/…          AI SEO page sections
-//      /images/services/lead-generation/… Lead Generation page sections
-//      /images/services/local-seo/…       Local SEO page sections
+//      /images/services/…                 services (13 core service categories)
+//      /images/services/seo/seo/…         SEO ke child pages (12)
+//      /images/services/seo/ai-seo/…      AI SEO page sections
+//      /images/services/seo/lead-generation/… Lead Generation page sections
+//      /images/services/seo/local-seo/…   Local SEO page sections
 //      /images/services/seo-page/…        Main SEO page sections
 //      /images/blog/…                     blog thumbnails (0 hai abhi —
 //                                         blog.ts unsplash URL use karta hai)
@@ -32,7 +32,7 @@
 //      <page>-<section>-<descriptor>.<ext>
 //
 //      ✔  seo-ai-seo.webp, ai-seo.webp, technical-seo.webp
-//      ✔  authority-trust-building.png, google-my-business-seo.png
+//      ✔  authority-trust-building.webp, google-my-business-seo.webp
 //      ✖  "AI SEO (Generative SEO).webp"   <- spaces/caps na rakho
 //      ✖  seo_service_image.webp.webp     <- double extension na rakho
 //
@@ -150,7 +150,7 @@ export const IMG = {
   },
 
   // ==========================================================================
-  //  SERVICES — 10 CORE SERVICE CATEGORY images
+  //  SERVICES — 13 CORE SERVICE CATEGORY images
   // ==========================================================================
   services: {
     seoAiSeo: {
@@ -233,6 +233,30 @@ export const IMG = {
       section: "Services tab cards",
       // usedIn: data/services.ts (slug "reputation-management")
     },
+    mobileAppDevelopment: {
+      key: "mobile_app_development_banner",
+      src: "/images/services/mobile_app_development_banner.webp",
+      alt: "Mobile app development service illustration",
+      page: "services",
+      section: "Services tab cards",
+      // usedIn: data/services.ts (slug "mobile-app-development")
+    },
+    maintenanceSupport: {
+      key: "maintenance_support_plans",
+      src: "/images/services/maintenance_support_plans.webp",
+      alt: "Maintenance & support service illustration",
+      page: "services",
+      section: "Services tab cards",
+      // usedIn: data/services.ts (slug "maintenance-support")
+    },
+    content: {
+      key: "content_marketing_services",
+      src: "/images/services/content_marketing_services.webp",
+      alt: "Content marketing service illustration",
+      page: "services",
+      section: "Services tab cards",
+      // usedIn: data/services.ts (slug "content")
+    },
   },
 
   // ==========================================================================
@@ -241,77 +265,84 @@ export const IMG = {
   servicesSeoChild: {
     seoService: {
       key: "seo-service",
-      src: "/images/services/seo-child/seo-service.webp",
+      src: "/images/services/seo/seo/seo-service.webp",
       alt: "SEO services overview illustration",
       page: "services-seo-child",
-      usedIn: 'childServiceImages["SEO"] + ["Amazon SEO"]',
+      usedIn: 'childServiceImages["SEO"]',
+    },
+    amazonSeo: {
+      key: "amazon-seo",
+      src: "/images/services/seo/seo/amazon-seo.webp",
+      alt: "Amazon SEO illustration",
+      page: "services-seo-child",
+      usedIn: 'childServiceImages["Amazon SEO"]',
     },
     aiSeo: {
       key: "ai-seo",
-      src: "/images/services/seo-child/ai-seo.webp",
+      src: "/images/services/seo/seo/ai-seo.webp",
       alt: "AI SEO (Generative SEO) illustration",
       page: "services-seo-child",
       usedIn: 'childServiceImages["AI SEO (Generative SEO)"]',
     },
     leadGenerationSeo: {
       key: "lead-generation-seo",
-      src: "/images/services/seo-child/lead-generation-seo.webp",
+      src: "/images/services/seo/seo/lead-generation-seo.webp",
       alt: "Lead generation SEO illustration",
       page: "services-seo-child",
       usedIn: 'childServiceImages["Lead Generation SEO"]',
     },
     localSeo: {
       key: "local-seo",
-      src: "/images/services/seo-child/local-seo.webp",
+      src: "/images/services/seo/seo/local-seo.webp",
       alt: "Local SEO illustration",
       page: "services-seo-child",
       usedIn: 'childServiceImages["Local SEO"]',
     },
     enterpriseSeo: {
       key: "enterprise-seo",
-      src: "/images/services/seo-child/enterprise-seo.webp",
+      src: "/images/services/seo/seo/enterprise-seo.webp",
       alt: "Enterprise SEO illustration",
       page: "services-seo-child",
       usedIn: 'childServiceImages["Enterprise SEO"]',
     },
     b2bSeo: {
       key: "b2b-seo",
-      src: "/images/services/seo-child/b2b-seo.webp",
+      src: "/images/services/seo/seo/b2b-seo.webp",
       alt: "B2B SEO illustration",
       page: "services-seo-child",
       usedIn: 'childServiceImages["B2B SEO"]',
     },
     technicalSeo: {
       key: "technical-seo",
-      src: "/images/services/seo-child/technical-seo.webp",
+      src: "/images/services/seo/seo/technical-seo.webp",
       alt: "Technical SEO illustration",
       page: "services-seo-child",
       usedIn: 'childServiceImages["Technical SEO"]',
     },
     internationalSeo: {
       key: "international-seo",
-      src: "/images/services/seo-child/international-seo.webp",
+      src: "/images/services/seo/seo/international-seo.webp",
       alt: "International SEO illustration",
       page: "services-seo-child",
       usedIn: 'childServiceImages["International SEO"]',
     },
     programmaticSeo: {
       key: "programmatic-seo",
-      src: "/images/services/seo-child/programmatic-seo.webp",
+      src: "/images/services/seo/seo/programmatic-seo.webp",
       alt: "Programmatic SEO illustration",
       page: "services-seo-child",
       usedIn: 'childServiceImages["Programmatic SEO"]',
     },
     ecommerceSeo: {
       key: "ecommerce-seo",
-      src: "/images/services/seo-child/ecommerce-seo.webp",
+      src: "/images/services/seo/seo/ecommerce-seo.webp",
       alt: "eCommerce SEO illustration",
       page: "services-seo-child",
       usedIn: 'childServiceImages["eCommerce SEO"]',
     },
     shopifySeo: {
       key: "shopify-seo",
-      src: "/images/services/seo-child/shopify-seo.webp",
+      src: "/images/services/seo/seo/shopify-seo.webp",
       alt: "Shopify SEO illustration",
       page: "services-seo-child",
       usedIn: 'childServiceImages["Shopify SEO"]',
@@ -324,31 +355,31 @@ export const IMG = {
   servicesAiSeo: {
     authorityTrustBuilding: {
       key: "authority-trust-building",
-      src: "/images/services/ai-seo/authority-trust-building.png",
+      src: "/images/services/seo/ai-seo/authority-trust-building.webp",
       alt: "Authority & trust building for AI search",
       page: "services-ai-seo",
     },
     contentOptimizationAi: {
       key: "content-optimization-ai-search-engines",
-      src: "/images/services/ai-seo/content-optimization-ai-search-engines.png",
+      src: "/images/services/seo/ai-seo/content-optimization-ai-search-engines.webp",
       alt: "Content optimization for AI & search engines",
       page: "services-ai-seo",
     },
     geo: {
       key: "geo",
-      src: "/images/services/ai-seo/geo.png",
+      src: "/images/services/seo/ai-seo/geo.webp",
       alt: "Generative engine optimization (GEO) visual",
       page: "services-ai-seo",
     },
     intentKeywordResearch: {
       key: "intent-based-keyword-research",
-      src: "/images/services/ai-seo/intent-based-keyword-research.png",
+      src: "/images/services/seo/ai-seo/intent-based-keyword-research.webp",
       alt: "Intent based keyword research visual",
       page: "services-ai-seo",
     },
     structuredDataTechnicalSeo: {
       key: "structured-data-technical-seo",
-      src: "/images/services/ai-seo/structured-data-technical-seo.png",
+      src: "/images/services/seo/ai-seo/structured-data-technical-seo.webp",
       alt: "Structured data & technical SEO visual",
       page: "services-ai-seo",
     },
@@ -360,37 +391,37 @@ export const IMG = {
   servicesLeadGeneration: {
     buyerIntentKeywordTargeting: {
       key: "buyer-intent-keyword-targeting",
-      src: "/images/services/lead-generation/buyer-intent-keyword-targeting.png",
+      src: "/images/services/seo/lead-generation/buyer-intent-keyword-targeting.webp",
       alt: "Buyer intent keyword targeting visual",
       page: "services-lead-generation",
     },
     conversionRateOptimization: {
       key: "conversion-rate-optimization",
-      src: "/images/services/lead-generation/conversion-rate-optimization.png",
+      src: "/images/services/seo/lead-generation/conversion-rate-optimization.webp",
       alt: "Conversion rate optimization (CRO) visual",
       page: "services-lead-generation",
     },
     fullWebsiteOptimization: {
       key: "full-website-optimization",
-      src: "/images/services/lead-generation/full-website-optimization.png",
+      src: "/images/services/seo/lead-generation/full-website-optimization.webp",
       alt: "Full website optimization visual",
       page: "services-lead-generation",
     },
     landingPageOptimization: {
       key: "landing-page-optimization",
-      src: "/images/services/lead-generation/landing-page-optimization.png",
+      src: "/images/services/seo/lead-generation/landing-page-optimization.webp",
       alt: "Landing page optimization visual",
       page: "services-lead-generation",
     },
     leadCaptureContentMarketing: {
       key: "lead-capture-content-marketing",
-      src: "/images/services/lead-generation/lead-capture-content-marketing.png",
+      src: "/images/services/seo/lead-generation/lead-capture-content-marketing.webp",
       alt: "Lead capture content marketing visual",
       page: "services-lead-generation",
     },
     localLeadGeneration: {
       key: "local-lead-generation-seo",
-      src: "/images/services/lead-generation/local-lead-generation-seo.png",
+      src: "/images/services/seo/lead-generation/local-lead-generation-seo.webp",
       alt: "Local lead generation SEO visual",
       page: "services-lead-generation",
     },
@@ -402,37 +433,37 @@ export const IMG = {
   servicesLocalSeo: {
     googleMyBusiness: {
       key: "google-my-business-seo",
-      src: "/images/services/local-seo/google-my-business-seo.png",
+      src: "/images/services/seo/local-seo/google-my-business-seo.webp",
       alt: "Google My Business SEO visual",
       page: "services-local-seo",
     },
     citationNap: {
       key: "local-citation-nap-building",
-      src: "/images/services/local-seo/local-citation-nap-building.png",
+      src: "/images/services/seo/local-seo/local-citation-nap-building.webp",
       alt: "Local citation & NAP building visual",
       page: "services-local-seo",
     },
     keywordResearchContent: {
       key: "local-keyword-research-content",
-      src: "/images/services/local-seo/local-keyword-research-content.png",
+      src: "/images/services/seo/local-seo/local-keyword-research-content.webp",
       alt: "Local keyword research & content visual",
       page: "services-local-seo",
     },
     linkBuilding: {
       key: "local-link-building",
-      src: "/images/services/local-seo/local-link-building.png",
+      src: "/images/services/seo/local-seo/local-link-building.webp",
       alt: "Local link building visual",
       page: "services-local-seo",
     },
     onPageTechnical: {
       key: "on-page-technical-local-seo",
-      src: "/images/services/local-seo/on-page-technical-local-seo.png",
+      src: "/images/services/seo/local-seo/on-page-technical-local-seo.webp",
       alt: "On-page & technical local SEO visual",
       page: "services-local-seo",
     },
     reviewReputation: {
       key: "review-reputation-management",
-      src: "/images/services/local-seo/review-reputation-management.png",
+      src: "/images/services/seo/local-seo/review-reputation-management.webp",
       alt: "Review & reputation management visual",
       page: "services-local-seo",
     },
@@ -442,12 +473,6 @@ export const IMG = {
   //  MAIN SEO PAGE SECTION images (reserve)
   // ==========================================================================
   servicesSeoPage: {
-    amazonSeo: {
-      key: "amazon-seo",
-      src: "/images/services/seo-page/amazon-seo.png",
-      alt: "Amazon SEO visual",
-      page: "services-seo-page",
-    },
     ecommerceSeo: {
       key: "ecommerce-seo-page",
       src: "/images/services/seo-page/ecommerce-seo.png",
@@ -498,7 +523,7 @@ export const ALL_IMAGES: AppImage[] = [
   // about
   IMG.about.aboutSection,
 
-  // services — 10 core
+  // services — 13 core
   IMG.services.seoAiSeo,
   IMG.services.socialMedia,
   IMG.services.performanceMarketing,
@@ -509,9 +534,13 @@ export const ALL_IMAGES: AppImage[] = [
   IMG.services.cloudDevops,
   IMG.services.hostingMigration,
   IMG.services.reputationManagement,
+  IMG.services.mobileAppDevelopment,
+  IMG.services.maintenanceSupport,
+  IMG.services.content,
 
   // services → seo child (12)
   IMG.servicesSeoChild.seoService,
+  IMG.servicesSeoChild.amazonSeo,
   IMG.servicesSeoChild.aiSeo,
   IMG.servicesSeoChild.leadGenerationSeo,
   IMG.servicesSeoChild.localSeo,
@@ -546,8 +575,7 @@ export const ALL_IMAGES: AppImage[] = [
   IMG.servicesLocalSeo.onPageTechnical,
   IMG.servicesLocalSeo.reviewReputation,
 
-  // services → seo page (6)
-  IMG.servicesSeoPage.amazonSeo,
+  // services → seo page (5)
   IMG.servicesSeoPage.ecommerceSeo,
   IMG.servicesSeoPage.localSeo,
   IMG.servicesSeoPage.mobileSeo,

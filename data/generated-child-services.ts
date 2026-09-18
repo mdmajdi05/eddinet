@@ -1800,8 +1800,8 @@ function getSlugMap(catSlug: string): Record<string, string> {
   return slugMaps[catSlug];
 }
 
-export function getChildSlug(catSlug: string, item: string): string {
-  if (catSlug === "seo") return seoItemToSlug[item] ?? slugify(item);
+export function getChildSlug(catSlug: string, item: string): string | null {
+  if (catSlug === "seo") return seoItemToSlug[item] ?? null;
   return getSlugMap(catSlug)[item] ?? slugify(item);
 }
 

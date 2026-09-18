@@ -5,6 +5,7 @@ import {
   getSeoChildBySlug,
 } from "@/data/seo-child-services";
 import { mergeDocxChildContent } from "@/data/docx-content";
+import { seoFeatureImages } from "@/data/seo-feature-images";
 import ServiceChildPage from "@/components/ServiceChildPage";
 
 export function generateStaticParams() {
@@ -43,9 +44,18 @@ export default async function SeoChildPage({
   if (!baseChild) notFound();
   const child = mergeDocxChildContent(childSlug, baseChild);
 
+  const featureImages = seoFeatureImages[child.slug] ?? {};
+  const childWithImages = {
+    ...child,
+    features: child.features.map((feature) => ({
+      ...feature,
+      image: featureImages[feature.title] ?? child.image,
+    })),
+  };
+
   return (
     <ServiceChildPage
-      child={child}
+      child={childWithImages}
       category={{ title: "SEO & AI SEO", href: "/services/seo" }}
       canonicalUrl={`https://eddinet.com/services/seo/${child.slug}`}
     />

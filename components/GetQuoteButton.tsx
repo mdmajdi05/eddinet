@@ -15,7 +15,7 @@ export default function GetQuoteButton({ service }: GetQuoteButtonProps) {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="mt-4 self-start inline-flex items-center gap-2 font-bold text-[0.88rem] text-[var(--main-accent)] hover:gap-3 transition-all duration-300 cursor-pointer bg-transparent border-0 p-0 no-underline"
+        className="mt-4 self-start inline-flex items-center gap-2 font-bold text-[0.88rem] text-[var(--main-accent)] hover:gap-3 transition-all duration-300 cursor-pointer bg-transparent border-0 p-0 group"
       >
         Get Quote <span aria-hidden>→</span>
       </button>

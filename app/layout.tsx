@@ -31,13 +31,17 @@ export const metadata: Metadata = {
   verification: {
     google: "xCtFiK_TY-W1mnzQIx0XxwK_CdgtRyu6NP9TgpUS8LU",
   },
-  manifest: "/site.webmanifest",
+  manifest: "/ENDINET_EN_Favicons/site.webmanifest",
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/ENDINET_EN_Favicons/favicon.ico", sizes: "any" },
+      { url: "/ENDINET_EN_Favicons/favicon.svg", type: "image/svg+xml" },
+      { url: "/ENDINET_EN_Favicons/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/ENDINET_EN_Favicons/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/ENDINET_EN_Favicons/favicon-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/ENDINET_EN_Favicons/favicon-512x512.png", sizes: "512x512", type: "image/png" },
     ],
-    apple: [{ url: "/apple-touch-icon.png" }],
+    apple: [{ url: "/ENDINET_EN_Favicons/apple-touch-icon.png" }],
   },
   openGraph: {
     title: "Digital Marketing & Software Agency Delhi NCR | Eddinet",
@@ -111,7 +115,7 @@ export default function RootLayout({
         />
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var a=localStorage.getItem("du-accent")||"red";var m=localStorage.getItem("du-mode")||"dark";var t=m==="dark"?a:a+"-light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();`,
+            __html: `(function(){try{var m=localStorage.getItem("du-mode")||"dark";document.documentElement.setAttribute("data-theme",m==="dark"?"red":"red-light");}catch(e){}})();`,
           }}
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

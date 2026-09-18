@@ -1,0 +1,96 @@
+// AUTO-GENERATED mapping: SEO child slug -> feature title -> image
+// self-gen files are Eddinet-branded placeholders generated to match existing
+// SEO feature images. Provided (client-supplied) images are mapped as-is.
+// Used by app/services/seo/[childSlug]/page.tsx to give each feature card its own image.
+
+export const seoFeatureImages: Record<string, Record<string, string>> = {
+  "ai-seo": {
+    "AI SEO Audit & Strategy": "/images/services/seo/ai-seo/ai-seo-audit-and-strategy-self-gen.webp",
+    "Generative Engine Optimization (GEO)": "/images/services/seo/ai-seo/geo.webp",
+    "Intent-Based Keyword & Topic Research": "/images/services/seo/ai-seo/intent-based-keyword-research.webp",
+    "Content Optimization for AI & Search Engines": "/images/services/seo/ai-seo/content-optimization-ai-search-engines.webp",
+    "Structured Data & Technical SEO": "/images/services/seo/ai-seo/structured-data-technical-seo.webp",
+    "Authority & Trust Building": "/images/services/seo/ai-seo/authority-trust-building.webp",
+  },
+  "lead-generation-seo": {
+    "Buyer Intent Keyword Targeting": "/images/services/seo/lead-generation/buyer-intent-keyword-targeting.webp",
+    "Conversion Rate Optimization (CRO)": "/images/services/seo/lead-generation/conversion-rate-optimization.webp",
+    "Landing Page Optimization": "/images/services/seo/lead-generation/landing-page-optimization.webp",
+    "Local Lead Generation SEO": "/images/services/seo/lead-generation/local-lead-generation-seo.webp",
+    "Lead Capture Content Marketing": "/images/services/seo/lead-generation/lead-capture-content-marketing.webp",
+    "Full Website Optimization": "/images/services/seo/lead-generation/full-website-optimization.webp",
+  },
+  "local-seo": {
+    "Google My Business SEO Services": "/images/services/seo/local-seo/google-my-business-seo.webp",
+    "On-Page & Technical Local SEO": "/images/services/seo/local-seo/on-page-technical-local-seo.webp",
+    "Local Citation & NAP Building": "/images/services/seo/local-seo/local-citation-nap-building.webp",
+    "Review & Reputation Management": "/images/services/seo/local-seo/review-reputation-management.webp",
+    "Local Keyword Research & Content": "/images/services/seo/local-seo/local-keyword-research-content.webp",
+    "Local Link Building": "/images/services/seo/local-seo/local-link-building.webp",
+  },
+  "enterprise-seo": {
+    "Enterprise Technical SEO Audits": "/images/services/seo/enterprise-seo/enterprise-technical-seo-audits-self-gen.webp",
+    "Large-Scale Content Strategy & Optimization": "/images/services/seo/enterprise-seo/large-scale-content-strategy-and-optimization-self-gen.webp",
+    "Multi-Location & Multi-Domain SEO": "/images/services/seo/enterprise-seo/multi-location-and-multi-domain-seo-self-gen.webp",
+    "Enterprise Link Building & Digital PR": "/images/services/seo/enterprise-seo/enterprise-link-building-and-digital-pr-self-gen.webp",
+    "SEO Migration & Platform Support": "/images/services/seo/enterprise-seo/seo-migration-and-platform-support-self-gen.webp",
+    "Corporate SEO Services & Reporting": "/images/services/seo/enterprise-seo/corporate-seo-services-and-reporting-self-gen.webp",
+  },
+  "b2b-seo": {
+    "Intent-Based Keyword Research": "/images/services/seo/b2b-seo/intent-based-keyword-research-self-gen.webp",
+    "Website Optimization for B2B": "/images/services/seo/b2b-seo/website-optimization-for-b2b-self-gen.webp",
+    "Decision-Focused Content": "/images/services/seo/b2b-seo/decision-focused-content-self-gen.webp",
+    "Technical & On-Page SEO": "/images/services/seo/b2b-seo/technical-and-on-page-seo-self-gen.webp",
+    "Lead-Focused Strategy": "/images/services/seo/b2b-seo/lead-focused-strategy-self-gen.webp",
+    "Conversion Rate Optimization": "/images/services/seo/b2b-seo/conversion-rate-optimization-self-gen.webp",
+  },
+  "technical-seo": {
+    "In-Depth Technical Audits": "/images/services/seo/technical-seo/in-depth-technical-audits-self-gen.webp",
+    "Core Web Vitals & Speed Optimization": "/images/services/seo/technical-seo/core-web-vitals-and-speed-optimization-self-gen.webp",
+    "Site Architecture & Internal Linking": "/images/services/seo/technical-seo/site-architecture-and-internal-linking-self-gen.webp",
+    "Crawling, Indexing & Rendering Fixes": "/images/services/seo/technical-seo/crawling-indexing-and-rendering-fixes-self-gen.webp",
+    "Seamless Website Migrations": "/images/services/seo/technical-seo/seamless-website-migrations-self-gen.webp",
+  },
+  "international-seo": {
+    "Site Structure & Domain Strategy": "/images/services/seo/international-seo/site-structure-and-domain-strategy-self-gen.webp",
+    "Hreflang Implementation & Auditing": "/images/services/seo/international-seo/hreflang-implementation-and-auditing-self-gen.webp",
+    "Native Keyword Research by Market": "/images/services/seo/international-seo/native-keyword-research-by-market-self-gen.webp",
+    "Localized Content Strategy": "/images/services/seo/international-seo/localized-content-strategy-self-gen.webp",
+    "Geo-Targeting & Search Console Setup": "/images/services/seo/international-seo/geo-targeting-and-search-console-setup-self-gen.webp",
+    "Cross-Market Technical Audits": "/images/services/seo/international-seo/cross-market-technical-audits-self-gen.webp",
+  },
+  "programmatic-seo": {
+    "Opportunity Research": "/images/services/seo/programmatic-seo/opportunity-research-self-gen.webp",
+    "Data Structuring & Template Design": "/images/services/seo/programmatic-seo/data-structuring-and-template-design-self-gen.webp",
+    "On-Page Optimization at Scale": "/images/services/seo/programmatic-seo/on-page-optimization-at-scale-self-gen.webp",
+    "Internal Linking Architecture": "/images/services/seo/programmatic-seo/internal-linking-architecture-self-gen.webp",
+    "Quality Control & Enrichment": "/images/services/seo/programmatic-seo/quality-control-and-enrichment-self-gen.webp",
+    "Performance Monitoring by Page Category": "/images/services/seo/programmatic-seo/performance-monitoring-by-page-category-self-gen.webp",
+  },
+  "amazon-seo": {
+    "Amazon Keyword Research": "/images/services/seo/amazon-seo/amazon-keyword-research-self-gen.webp",
+    "Listing Optimization": "/images/services/seo/amazon-seo/listing-optimization-self-gen.webp",
+    "A+ Content & Enhanced Brand Content": "/images/services/seo/amazon-seo/a-content-and-enhanced-brand-content-self-gen.webp",
+    "Image & Visual Strategy Guidance": "/images/services/seo/amazon-seo/image-and-visual-strategy-guidance-self-gen.webp",
+    "Review & Rating Strategy": "/images/services/seo/amazon-seo/review-and-rating-strategy-self-gen.webp",
+    "Amazon Audits & Competitor Benchmarking": "/images/services/seo/amazon-seo/amazon-audits-and-competitor-benchmarking-self-gen.webp",
+  },
+  "ecommerce-seo": {
+    "Category & Collection Page Optimisation": "/images/services/seo/ecommerce-seo/category-and-collection-page-optimisation-self-gen.webp",
+    "Product Page SEO": "/images/services/seo/ecommerce-seo/product-page-seo-self-gen.webp",
+    "Faceted Navigation Management": "/images/services/seo/ecommerce-seo/faceted-navigation-management-self-gen.webp",
+    "eCommerce Schema Markup": "/images/services/seo/ecommerce-seo/ecommerce-schema-markup-self-gen.webp",
+    "Internal Linking for Product Discovery": "/images/services/seo/ecommerce-seo/internal-linking-for-product-discovery-self-gen.webp",
+    "eCommerce Content Strategy": "/images/services/seo/ecommerce-seo/ecommerce-content-strategy-self-gen.webp",
+    "Technical eCommerce SEO": "/images/services/seo/ecommerce-seo/technical-ecommerce-seo-self-gen.webp",
+  },
+  "shopify-seo": {
+    "Shopify Theme Speed Optimisation": "/images/services/seo/shopify-seo/shopify-theme-speed-optimisation-self-gen.webp",
+    "URL Structure Workarounds": "/images/services/seo/shopify-seo/url-structure-workarounds-self-gen.webp",
+    "Shopify App SEO Audit": "/images/services/seo/shopify-seo/shopify-app-seo-audit-self-gen.webp",
+    "Collection Page Optimisation": "/images/services/seo/shopify-seo/collection-page-optimisation-self-gen.webp",
+    "Product Page Enhancement": "/images/services/seo/shopify-seo/product-page-enhancement-self-gen.webp",
+    "Shopify Blog & Content SEO": "/images/services/seo/shopify-seo/shopify-blog-and-content-seo-self-gen.webp",
+    "Shopify Technical Configuration": "/images/services/seo/shopify-seo/shopify-technical-configuration-self-gen.webp",
+  },
+};

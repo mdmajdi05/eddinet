@@ -238,7 +238,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                     {item.description}
                   </p>
                   {item.href ? (
-                    <span className={btnClasses}>
+                    <span className="mt-auto self-start inline-flex items-center gap-2 font-bold text-[0.88rem] text-[var(--main-accent)] hover:gap-3 transition-all duration-300 group/btn">
                       Learn More
                       <span className="transition-transform duration-300 group-hover/btn:translate-x-1">→</span>
                     </span>
