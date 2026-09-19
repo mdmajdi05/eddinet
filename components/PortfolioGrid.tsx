@@ -1,159 +1,902 @@
 "use client";
-import { useState } from "react";
-import Image from "next/image";
+
+import {
+  useEffect,
+  useRef,
+  useState,
+} from "react";
+
 import Link from "next/link";
-import { portfolioProjects, projectCategories, type PortfolioProject } from "@/data/portfolio";
+
+import {
+  portfolioProjects,
+  projectCategories,
+  type PortfolioProject,
+} from "@/data/portfolio";
+
+function getIcon(label: string) {
+  switch (label) {
+    case "Websites & Portals":
+      return "🌐";
+
+    case "eCommerce & D2C":
+      return "🛒";
+
+    case "Software & SaaS":
+      return "⚙️";
+
+    case "AI & Automation":
+      return "🤖";
+
+    case "Mobile Apps":
+      return "📱";
+
+    case "SEO":
+      return "🔍";
+
+    case "Paid Media & Social":
+      return "📣";
+
+    case "Content & Design":
+      return "🎨";
+
+    case "Cloud, Hosting & DevOps":
+      return "☁️";
+
+    default:
+      return "✦";
+  }
+}
+
+/* =========================================================
+   PROJECT CARD
+   DESKTOP LIVE WEBSITE PREVIEW
+   ========================================================= */
 
 function ProjectCard({ p }: { p: PortfolioProject }) {
-  const inner = (
-    <>
-      <div className="absolute inset-0 overflow-hidden">
-        <Image
-          src={p.image}
-          alt={p.title}
-          fill
-          className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-110"
-          unoptimized
-        />
-        {p.url && (
-          <iframe
-            src={p.url}
-            title={p.title}
-            loading="lazy"
-            tabIndex={-1}
-            className="live-preview live-preview-frame"
-          />
+  const [hovered, setHovered] = useState(false);
+  const [cardWidth, setCardWidth] = useState(0);
+
+  const cardRef = useRef<HTMLDivElement | null>(null);
+
+  /*
+   * IMPORTANT
+   *
+   * The website ALWAYS renders at desktop width.
+   *
+   * It does NOT use the small portfolio-card width
+   * as its browser viewport.
+   */
+
+  const DESKTOP_WIDTH = 1440;
+
+  /*
+   * Long virtual desktop page.
+   *
+   * This gives us enough content to create the
+   * top-to-bottom hover preview.
+   */
+
+  const DESKTOP_HEIGHT = 3440;
+
+  /*
+   * How far the website moves upward while hovering.
+   *
+   * Because the desktop canvas is scaled afterwards,
+   * this remains proportional to the desktop layout.
+   */
+
+  const SCROLL_DISTANCE = 1750;
+
+  /* =========================================================
+     GET ACTUAL CARD WIDTH
+     ========================================================= */
+
+  useEffect(() => {
+    const element = cardRef.current;
+
+    if (!element) return;
+
+    const updateWidth = () => {
+      const width =
+        element.getBoundingClientRect().width;
+
+      setCardWidth(width);
+    };
+
+    updateWidth();
+
+    const resizeObserver =
+      new ResizeObserver(() => {
+        updateWidth();
+      });
+
+    resizeObserver.observe(element);
+
+    window.addEventListener(
+      "resize",
+      updateWidth
+    );
+
+    return () => {
+      resizeObserver.disconnect();
+
+      window.removeEventListener(
+        "resize",
+        updateWidth
+      );
+    };
+  }, []);
+
+  /* =========================================================
+     DESKTOP SCALE
+     ========================================================= */
+
+  /*
+   * Example:
+   *
+   * Card width = 450px
+   * Desktop width = 1440px
+   *
+   * Scale:
+   *
+   * 450 / 1440 = 0.3125
+   *
+   * So the website still thinks it is 1440px wide,
+   * but visually it fits inside the 450px card.
+   */
+
+  const desktopScale =
+    cardWidth > 0
+      ? cardWidth / DESKTOP_WIDTH
+      : 0.3;
+
+  /* =========================================================
+     PROJECT CARD
+     ========================================================= */
+
+  const card = (
+    <div
+      ref={cardRef}
+      className="
+        group
+        relative
+        w-full
+        overflow-hidden
+        rounded-[20px]
+        border
+        border-[var(--border-color)]
+        bg-[var(--bg-card)]
+        transition-all
+        duration-500
+
+        hover:-translate-y-1
+        hover:border-[rgba(var(--accent-rgb),0.45)]
+        hover:shadow-[0_25px_60px_rgba(var(--accent-rgb),0.16)]
+      "
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+
+      {/* =================================================
+          WEBSITE PREVIEW WINDOW
+          ================================================= */}
+
+      <div
+  className="
+    relative
+    w-full
+    h-[450px]
+
+    max-[1200px]:h-[450px]
+    max-[900px]:h-[450px]
+    max-[650px]:h-[450px]
+
+    overflow-hidden
+    bg-white
+  "
+>
+
+        {/* =================================================
+            DESKTOP WEBSITE CANVAS
+            ================================================= */}
+
+        {p.url ? (
+          <div
+            className="
+              absolute
+              top-0
+              left-0
+              overflow-hidden
+            "
+            style={{
+              /*
+               * The actual browser canvas remains 1440px.
+               */
+              width: `${DESKTOP_WIDTH}px`,
+              height: `${DESKTOP_HEIGHT}px`,
+
+              /*
+               * Scale the desktop website down to
+               * exactly fit the portfolio card.
+               */
+              transform: `scale(${desktopScale})`,
+
+              transformOrigin:
+                "top left",
+
+              /*
+               * Do NOT use width: 100% here.
+               *
+               * 1440px is intentional because we want
+               * the website to stay in desktop layout.
+               */
+            }}
+          >
+
+            <iframe
+              src={p.url}
+              title={`${p.title} desktop website preview`}
+              loading="lazy"
+              scrolling="no"
+              className="
+                absolute
+                top-0
+                left-0
+
+                border-0
+                bg-white
+
+                pointer-events-none
+
+                will-change-transform
+              "
+              style={{
+                /*
+                 * IMPORTANT:
+                 *
+                 * iframe browser viewport = 1440px
+                 *
+                 * Therefore responsive websites should
+                 * detect this as desktop.
+                 */
+
+                width: `${DESKTOP_WIDTH}px`,
+                height: `${DESKTOP_HEIGHT}px`,
+
+                /*
+                 * Hover:
+                 *
+                 * TOP
+                 * ↓
+                 * middle
+                 * ↓
+                 * bottom
+                 */
+
+                transform: hovered
+                  ? `translateY(-${SCROLL_DISTANCE}px)`
+                  : "translateY(0px)",
+
+                transitionProperty:
+                  "transform",
+
+                transitionDuration:
+                  hovered
+                    ? "10000ms"
+                    : "700ms",
+
+                transitionTimingFunction:
+                  hovered
+                    ? "linear"
+                    : "ease-out",
+              }}
+            />
+
+          </div>
+        ) : (
+
+          /* =================================================
+             NO URL
+             ================================================= */
+
+          <div
+            className="
+              absolute
+              inset-0
+              flex
+              items-center
+              justify-center
+              bg-[var(--bg-card)]
+            "
+          >
+            <span
+              className="
+                text-sm
+                font-semibold
+                text-[var(--text-muted)]
+              "
+            >
+              Preview unavailable
+            </span>
+          </div>
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-[rgba(11,15,25,0.94)] via-[rgba(11,15,25,0.35)] to-transparent transition-opacity duration-300 group-hover:opacity-0" />
+
+        {/* =================================================
+            TOP FADE
+            ================================================= */}
+
+        <div
+          className="
+            pointer-events-none
+            absolute
+            top-0
+            left-0
+            right-0
+            h-10
+            z-20
+
+            bg-gradient-to-b
+            from-black/[0.07]
+            to-transparent
+          "
+        />
+
+        {/* =================================================
+            BOTTOM FADE
+            ================================================= */}
+
+        <div
+          className="
+            pointer-events-none
+            absolute
+            bottom-0
+            left-0
+            right-0
+            h-20
+            z-20
+
+            bg-gradient-to-t
+            from-black/[0.12]
+            to-transparent
+          "
+        />
+
+        {/* =================================================
+            LIVE BADGE
+            ================================================= */}
+
+        {p.url && (
+          <div
+            className="
+              pointer-events-none
+
+              absolute
+              top-4
+              right-4
+              z-30
+
+              flex
+              items-center
+              gap-2
+
+              rounded-full
+
+              border
+              border-black/10
+
+              bg-white/90
+              backdrop-blur-md
+
+              px-3
+              py-1.5
+
+              shadow-[0_8px_25px_rgba(0,0,0,0.12)]
+            "
+          >
+
+            <span
+              className="
+                block
+                w-1.5
+                h-1.5
+                rounded-full
+                bg-green-500
+              "
+            />
+
+            <span
+              className="
+                text-[0.65rem]
+                font-bold
+                tracking-wide
+                text-black/70
+              "
+            >
+              LIVE
+            </span>
+
+          </div>
+        )}
+
       </div>
-
-      <span className="absolute top-4 left-4 inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full bg-[rgba(11,15,25,0.65)] backdrop-blur-md border border-[rgba(255,255,255,0.15)] text-[0.68rem] font-bold text-white transition-opacity duration-300 group-hover:opacity-0">
-        ⚡ Built by Eddinet
-      </span>
-      {p.status && (
-        <span className="absolute top-4 right-4 inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full bg-[rgba(16,185,129,0.9)] text-[0.68rem] font-bold text-white transition-opacity duration-300 group-hover:opacity-0">
-          <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-          {p.status}
-        </span>
-      )}
-      {p.url && (
-        <span className="absolute top-4 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 py-1 px-3 rounded-full bg-[rgba(11,15,25,0.72)] backdrop-blur-md border border-white/25 text-[0.68rem] font-bold text-white opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#10b981] animate-pulse" />
-          Live preview
-        </span>
-      )}
-
-      <div className="absolute inset-x-0 bottom-0 p-5 md:p-6 z-10 transition-opacity duration-300 group-hover:opacity-0">
-        <div className="flex items-center gap-2 flex-wrap mb-2">
-          <span className="py-1 px-2.5 rounded-lg bg-white/15 backdrop-blur-md border border-white/20 text-[0.68rem] font-bold text-white">
-            {p.service}
-          </span>
-          <span className="text-[0.7rem] font-semibold text-white/60">{p.industry}</span>
-        </div>
-
-        <h4 className="font-extrabold text-white leading-snug text-[1.05rem] mb-1">{p.title}</h4>
-        <p className="text-white/65 text-[0.82rem] leading-relaxed mb-4">{p.client}</p>
-
-        <div className="flex items-center gap-4 border-t border-white/15 pt-3.5">
-          <span className="ml-auto inline-flex items-center gap-2 text-[0.82rem] font-bold text-white">
-            {p.url ? "View Live" : "Explore"}
-            <span className={`transition-transform duration-300 ${p.url ? "translate-x-0 group-hover:translate-x-1" : ""}`}>→</span>
-          </span>
-        </div>
-      </div>
-    </>
+    </div>
   );
 
-  const classes = `group relative h-[380px] w-[300px] md:w-[340px] shrink-0 snap-start overflow-hidden rounded-[var(--radius-lg)] border border-white/10 transition-all duration-500 hover:border-[rgba(var(--accent-rgb),0.55)] hover:shadow-[0_25px_60px_rgba(var(--accent-rgb),0.18)]`;
+  /* =======================================================
+     EXTERNAL PROJECT LINK
+     ======================================================= */
 
-  return p.url ? (
-    <Link href={p.url} target="_blank" rel="noopener noreferrer" className={`no-underline ${classes}`}>
-      {inner}
+  if (!p.url) {
+    return card;
+  }
+
+  return (
+    <Link
+      href={p.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block no-underline"
+      aria-label={`Visit ${p.title}`}
+    >
+      {card}
     </Link>
-  ) : (
-    <div className={classes}>{inner}</div>
   );
 }
 
-export default function PortfolioGrid() {
-  const [active, setActive] = useState("all");
+/* =========================================================
+   PORTFOLIO GRID
+   ========================================================= */
 
-  const activeCategory = projectCategories.find((c) => c.key === active);
-  const filtered = active === "all" ? portfolioProjects : portfolioProjects.filter((p) => p.category === active);
-  const grouped = projectCategories
-    .map((cat) => ({
-      cat,
-      items: portfolioProjects.filter((p) => p.category === cat.key),
-    }))
-    .filter((g) => (active === "all" ? g.items.length > 0 : g.cat.key === active && g.items.length > 0));
+export default function PortfolioGrid({
+  initialCategory = "all",
+  hideControls = false,
+}: {
+  initialCategory?: string;
+  hideControls?: boolean;
+}) {
+  const [active, setActive] =
+    useState(initialCategory);
+
+  /* =========================================================
+     FILTER PROJECTS
+     ========================================================= */
+
+  const filteredProjects =
+    active === "all"
+      ? portfolioProjects
+      : portfolioProjects.filter(
+          (p) => p.category === active
+        );
+
+  const activeCategory =
+    projectCategories.find(
+      (c) => c.key === active
+    );
 
   return (
-    <div>
-      <div className="flex flex-wrap justify-center gap-3 mb-8">
-        <button
-          onClick={() => setActive("all")}
-          className="py-2.5 px-5 rounded-full font-bold text-[0.88rem] cursor-pointer transition-all duration-300 border"
-          style={{
-            background: active === "all" ? "var(--primary-gradient)" : "var(--chip-bg)",
-            borderColor: active === "all" ? "transparent" : "var(--border-color)",
-            color: active === "all" ? "var(--on-primary)" : "var(--text-main)",
-          }}
+    <div className="w-full">
+
+      {/* =================================================
+          FILTER CONTROLS
+          ================================================= */}
+
+      {!hideControls && (
+        <div
+          className="
+            flex
+            flex-wrap
+            justify-center
+            gap-2.5
+            mb-10
+          "
         >
-          All Projects
-        </button>
-        {projectCategories.map((c) => {
-          const isActive = active === c.key;
-          return (
-            <button
-              key={c.key}
-              onClick={() => setActive(c.key)}
-              className="py-2.5 px-5 rounded-full font-bold text-[0.88rem] cursor-pointer transition-all duration-300 border"
-              style={{
-                background: isActive ? "var(--primary-gradient)" : "var(--chip-bg)",
-                borderColor: isActive ? "transparent" : "var(--border-color)",
-                color: isActive ? "var(--on-primary)" : "var(--text-main)",
-              }}
+
+          {/* ALL PROJECTS */}
+
+          <button
+            type="button"
+            onClick={() => setActive("all")}
+            className="
+              py-2.5
+              px-5
+              rounded-full
+              font-bold
+              text-[0.85rem]
+              cursor-pointer
+              transition-all
+              duration-300
+              border
+            "
+            style={{
+              background:
+                active === "all"
+                  ? "var(--primary-gradient)"
+                  : "var(--chip-bg)",
+
+              borderColor:
+                active === "all"
+                  ? "transparent"
+                  : "var(--border-color)",
+
+              color:
+                active === "all"
+                  ? "var(--on-primary)"
+                  : "var(--text-main)",
+            }}
+          >
+            All Projects
+          </button>
+
+          {/* CATEGORIES */}
+
+          {projectCategories.map(
+            (category) => {
+              const isActive =
+                active === category.key;
+
+              return (
+                <button
+                  key={category.key}
+                  type="button"
+                  onClick={() =>
+                    setActive(category.key)
+                  }
+                  className="
+                    py-2.5
+                    px-5
+                    rounded-full
+                    font-bold
+                    text-[0.85rem]
+                    cursor-pointer
+                    transition-all
+                    duration-300
+                    border
+                  "
+                  style={{
+                    background: isActive
+                      ? "var(--primary-gradient)"
+                      : "var(--chip-bg)",
+
+                    borderColor: isActive
+                      ? "transparent"
+                      : "var(--border-color)",
+
+                    color: isActive
+                      ? "var(--on-primary)"
+                      : "var(--text-main)",
+                  }}
+                >
+                  {category.label}
+                </button>
+              );
+            }
+          )}
+
+        </div>
+      )}
+
+      {/* =================================================
+          CATEGORY HEADER
+          ================================================= */}
+
+      {hideControls &&
+        activeCategory && (
+          <div className="mb-10">
+
+            <div
+              className="
+                flex
+                items-center
+                gap-3
+                mb-3
+              "
             >
-              {c.label}
-            </button>
-          );
-        })}
-      </div>
 
-      <div className="flex flex-col gap-14">
-        {grouped.map((g) => (
-          <div key={g.cat.key}>
-            <div className="flex items-center gap-4 mb-6">
-              <span className="text-[1.6rem] leading-none select-none">{g.cat.label === "Websites & Portals" ? "🌐" : g.cat.label === "eCommerce & D2C" ? "🛒" : g.cat.label === "Software & SaaS" ? "⚙️" : g.cat.label === "AI & Automation" ? "🤖" : g.cat.label === "Mobile Apps" ? "📱" : g.cat.label === "SEO & AI SEO" ? "🔍" : g.cat.label === "Paid Media & Social" ? "📣" : g.cat.label === "Content & Design" ? "🎨" : g.cat.label === "Cloud, Hosting & DevOps" ? "☁️" : "🛡️"}</span>
-              <h3 className="text-[1.6rem] font-extrabold text-[var(--text-main)] max-[768px]:text-[1.3rem]">
-                {g.cat.label}
-              </h3>
-              <span className="py-1 px-3 rounded-full bg-[var(--tag-bg)] border border-[var(--tag-border)] text-[0.75rem] font-bold text-[var(--main-accent)]">
-                {g.items.length} {g.items.length === 1 ? "project" : "projects"}
+              <span
+                className="
+                  text-[1.7rem]
+                  leading-none
+                "
+              >
+                {getIcon(
+                  activeCategory.label
+                )}
               </span>
-              <span className="h-px flex-1 bg-[var(--border-color)]" />
+
+              <h1
+                className="
+                  text-[2.4rem]
+                  font-extrabold
+                  leading-[1.15]
+                  text-[var(--text-main)]
+
+                  max-[768px]:text-[1.9rem]
+                "
+              >
+                {activeCategory.label}
+              </h1>
+
             </div>
 
-            <div className="overflow-x-auto pb-4 [scrollbar-width:thin]">
-              <div className="flex gap-5 md:gap-6 w-max px-1 snap-x snap-mandatory">
-                {g.items.map((p, i) => (
-                  <ProjectCard key={p.id} p={p} />
-                ))}
-              </div>
+            <div
+              className="
+                flex
+                items-center
+                gap-3
+              "
+            >
+
+              <span
+                className="
+                  inline-flex
+                  items-center
+                  py-1.5
+                  px-3
+
+                  rounded-full
+
+                  bg-[var(--tag-bg)]
+
+                  border
+                  border-[var(--tag-border)]
+
+                  text-[0.75rem]
+                  font-bold
+
+                  text-[var(--main-accent)]
+                "
+              >
+                {filteredProjects.length}{" "}
+                {filteredProjects.length === 1
+                  ? "Project"
+                  : "Projects"}
+              </span>
+
+              <span
+                className="
+                  h-px
+                  flex-1
+                  bg-[var(--border-color)]
+                "
+              />
+
             </div>
+
           </div>
-        ))}
-      </div>
+        )}
 
-      <div className="text-center mt-12">
+      {/* =================================================
+          ALL PORTFOLIO HEADER
+          ================================================= */}
+
+      {!hideControls && (
+        <div
+          className="
+            mb-10
+            text-center
+          "
+        >
+
+          <h1
+            className="
+              text-[2.6rem]
+              font-extrabold
+              text-[var(--text-main)]
+              mb-3
+
+              max-[768px]:text-[2rem]
+            "
+          >
+            Our{" "}
+            <span className="gradient-text">
+              Portfolio
+            </span>
+          </h1>
+
+          <p
+            className="
+              max-w-[650px]
+              mx-auto
+
+              text-[1rem]
+              leading-[1.7]
+
+              text-[var(--text-muted)]
+            "
+          >
+            Explore websites, digital products,
+            software, SaaS, AI and other digital
+            work created by Eddinet.
+          </p>
+
+        </div>
+      )}
+
+      {/* =================================================
+          PROJECT GRID
+          ================================================= */}
+
+      {filteredProjects.length > 0 ? (
+
+        <div
+          className="
+            grid
+            grid-cols-3
+            gap-x-6
+            gap-y-12
+
+            max-[1050px]:grid-cols-2
+
+            max-[650px]:grid-cols-1
+            max-[650px]:gap-y-10
+          "
+        >
+
+          {filteredProjects.map(
+            (project) => (
+
+              <div
+                key={project.id}
+                className="min-w-0"
+              >
+
+                {/* ==========================================
+                    LIVE WEBSITE PREVIEW CARD
+                    ========================================== */}
+
+                <ProjectCard
+                  p={project}
+                />
+
+                {/* ==========================================
+                    INFORMATION BELOW CARD
+                    ========================================== */}
+
+                <div className="pt-4 px-1">
+
+                  <div
+                    className="
+                      flex
+                      items-start
+                      justify-between
+                      gap-4
+                    "
+                  >
+
+                    <div>
+
+                      <h3
+                        className="
+                          text-[1.05rem]
+                          font-bold
+                          leading-[1.3]
+                          text-[var(--text-main)]
+                          mb-1
+                        "
+                      >
+                        {project.title}
+                      </h3>
+
+                      {/* =================================================
+                          FIXED:
+                          portfolioProjects has `tags`, not `tag`
+                          ================================================= */}
+
+                      {project.tags?.length > 0 && (
+                        <p
+                          className="
+                            text-[0.78rem]
+                            font-semibold
+                            text-[var(--main-accent)]
+                          "
+                        >
+                          {project.tags[0]}
+                        </p>
+                      )}
+
+                    </div>
+
+                    {project.url && (
+                      <span
+                        className="
+                          shrink-0
+                          text-[0.85rem]
+                          font-bold
+                          text-[var(--main-accent)]
+                        "
+                      >
+                        ↗
+                      </span>
+                    )}
+
+                  </div>
+
+                </div>
+
+              </div>
+            )
+          )}
+
+        </div>
+
+      ) : (
+
+        /* =================================================
+           EMPTY STATE
+           ================================================= */
+
+        <div
+          className="
+            py-20
+            text-center
+
+            rounded-2xl
+
+            border
+            border-[var(--border-color)]
+          "
+        >
+          <p
+            className="
+              text-[var(--text-muted)]
+            "
+          >
+            No projects available in this
+            category yet.
+          </p>
+        </div>
+
+      )}
+
+      {/* =================================================
+          CTA
+          ================================================= */}
+
+      <div
+        className="
+          text-center
+          mt-16
+        "
+      >
+
         <Link
           href="/contact"
-          className="inline-flex items-center justify-center gap-2.5 py-3.5 px-7 rounded-full font-bold text-[0.95rem] no-underline transition-all duration-300 text-[var(--on-primary)] hover:-translate-y-[3px]"
-          style={{ background: "var(--primary-gradient)" }}
+          className="
+            inline-flex
+            items-center
+            justify-center
+            gap-2.5
+
+            py-3.5
+            px-7
+
+            rounded-full
+
+            font-bold
+            text-[0.95rem]
+
+            no-underline
+
+            transition-all
+            duration-300
+
+            text-[var(--on-primary)]
+
+            hover:-translate-y-[2px]
+
+            shadow-[0_10px_25px_-5px_rgba(var(--accent-rgb),0.35)]
+          "
+          style={{
+            background:
+              "var(--primary-gradient)",
+          }}
         >
-          Want A Project Like These? Start Yours →
+          Start Your Project →
         </Link>
+
       </div>
+
     </div>
   );
 }

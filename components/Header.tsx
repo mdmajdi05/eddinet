@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useTheme } from "./ThemeProvider";
 import ConsultModal from "./ConsultModal";
 import MegaMenu from "./MegaMenu";
+import PortfolioMegaMenu from "./PortfolioMegaMenu";
 import Image from "next/image";
 import { services } from "@/data/services";
 import { site } from "@/data/contact";
@@ -13,7 +14,6 @@ import { IMG } from "@/data/images";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Portfolio", href: "/portfolio" },
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "Contact Us", href: "/contact" },
@@ -22,7 +22,6 @@ const navLinks = [
 const mobileLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
-  { label: "Portfolio", href: "/portfolio" },
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "Contact Us", href: "/contact" },
@@ -75,6 +74,7 @@ export default function Header() {
                 Home
               </Link>
               <MegaMenu />
+              <PortfolioMegaMenu />
               {navLinks.slice(1).map((l) => (
                 <Link
                   key={l.href}
