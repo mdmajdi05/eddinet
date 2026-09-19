@@ -4,14 +4,15 @@ import PortfolioGrid from "@/components/PortfolioGrid";
 import { projectCategories } from "@/data/portfolio";
 
 type Props = {
-  params: {
+  params: Promise<{
     category: string;
-  };
+  }>;
 };
 
-export function generateMetadata({ params }: Props): Metadata {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { category } = await params;
   const cat = projectCategories.find(
-    (c) => c.key === params.category
+    (c) => c.key === category
   );
 
   if (!cat) {
@@ -29,11 +30,12 @@ export function generateMetadata({ params }: Props): Metadata {
   };
 }
 
-export default function PortfolioCategoryPage({
+export default async function PortfolioCategoryPage({
   params,
 }: Props) {
+  const { category } = await params;
   const cat = projectCategories.find(
-    (c) => c.key === params.category
+    (c) => c.key === category
   );
 
   if (!cat) {
