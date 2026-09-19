@@ -5,6 +5,7 @@ import { generatedChildServices } from "@/data/generated-child-services";
 import { industries } from "@/data/industries";
 import { insights } from "@/data/blog";
 import { caseStudies } from "@/data/case-studies";
+import { projectCategories } from "@/data/portfolio";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://eddinet.com";
@@ -65,6 +66,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  const portfolioCategoryRoutes: MetadataRoute.Sitemap = projectCategories.map((category) => ({
+    url: `${base}/portfolio/${category.key}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
   return [
     ...staticRoutes,
     ...serviceRoutes,
@@ -73,5 +81,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...industryRoutes,
     ...blogRoutes,
     ...caseStudyRoutes,
+    ...portfolioCategoryRoutes,
   ];
 }

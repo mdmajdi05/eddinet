@@ -84,12 +84,15 @@ export const metadata: Metadata = {
 
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "LocalBusiness"],
   name: "Eddinet",
   url: "https://eddinet.com/",
-  logo: "https://eddinet.com/eddinet-logo.png",
+  logo: "https://eddinet.com/ENDINET_EN_Favicons/favicon-512x512.png",
   email: "contact@eddinet.com",
   telephone: site.phone,
+  priceRange: "$$",
+  areaServed: ["Delhi NCR", "India"],
+  openingHours: "Mo-Sa 10:00-19:00",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Okhla Industrial Estate, Phase I",

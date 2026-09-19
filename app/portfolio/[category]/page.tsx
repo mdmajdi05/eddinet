@@ -9,6 +9,10 @@ type Props = {
   }>;
 };
 
+export function generateStaticParams() {
+  return projectCategories.map((category) => ({ category: category.key }));
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category } = await params;
   const cat = projectCategories.find(
