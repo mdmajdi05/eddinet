@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { caseStudies, getCaseStudyBySlug } from "@/data/case-studies";
 import { site } from "@/data/contact";
-import SentenceLines from "@/components/SentenceLines";
+import AdaptiveLines from "@/components/AdaptiveLines";
 
 export function generateStaticParams() {
   return caseStudies.map((c) => ({ slug: c.slug }));
@@ -76,9 +76,10 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
               <h1 className="text-[3rem] font-extrabold leading-[1.12] mb-4 text-[var(--text-main)] max-[768px]:text-[2.2rem]">
                 {c.client}
               </h1>
-              <p className="text-[var(--text-muted)] text-[1.12rem] leading-relaxed mb-8 max-w-[620px]">
-                <SentenceLines text={c.summary} />
-              </p>
+              <AdaptiveLines
+                className="text-[var(--text-muted)] text-[1.12rem] leading-relaxed mb-8 max-w-[620px]"
+                text={c.summary}
+              />
               <div className="flex items-center gap-8 pt-6 border-t border-[var(--border-color)]">
                 <div>
                   <div className="text-[2.2rem] font-extrabold gradient-text">{c.metric}</div>

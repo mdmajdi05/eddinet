@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ServicesExplorer from "@/components/ServicesExplorer";
 import ContactForm from "@/components/ContactForm";
+import AdaptiveLines from "@/components/AdaptiveLines";
 import { servicePages } from "@/data/services";
 import { processSteps } from "@/data/home";
 import { site } from "@/data/contact";
@@ -100,15 +101,10 @@ export default function ServicesIndexPage() {
               <span className="gradient-text">Thirteen Capabilities</span>
             </h1>
 
-            <p className="text-[var(--text-muted)] text-[1.15rem] leading-relaxed max-w-[700px] mx-auto mb-9">
-              <span className="block">
-                Visibility, acquisition, conversion, technology and operations -
-              </span>
-              <span className="block mt-3">
-                engineered to work as one connected system for your business, not
-                a menu of isolated services.
-              </span>
-            </p>
+            <AdaptiveLines
+              className="text-[var(--text-muted)] text-[1.15rem] leading-relaxed max-w-[700px] mx-auto mb-9"
+              text="Visibility, acquisition, conversion, technology and operations - engineered to work as one connected system for your business, not a menu of isolated services."
+            />
 
             <div className="flex items-center justify-center gap-4 flex-wrap mb-12">
               <Link

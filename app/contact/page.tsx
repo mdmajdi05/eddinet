@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
+import AdaptiveLines from "@/components/AdaptiveLines";
 import { site } from "@/data/contact";
 
 export const metadata: Metadata = {
@@ -86,15 +87,10 @@ export default function ContactPage() {
           <h1 className="text-[3rem] font-extrabold leading-[1.13] mb-5 text-[var(--text-main)] max-[768px]:text-[2.15rem]">
             Let&apos;s Build Your <span className="gradient-text">Growth System</span>
           </h1>
-          <p className="text-[var(--text-muted)] text-[1.12rem] leading-relaxed max-w-[680px] mx-auto mb-9">
-            <span className="block">
-              Tell us about your business and the outcome you&apos;re chasing.
-            </span>
-            <span className="block mt-3">
-              In a free 30-minute consultation we&apos;ll identify your growth constraint and show you how marketing
-              and technology can work as one system.
-            </span>
-          </p>
+          <AdaptiveLines
+            className="text-[var(--text-muted)] text-[1.12rem] leading-relaxed max-w-[680px] mx-auto mb-9"
+            text="Tell us about your business and the outcome you're chasing. In a free 30-minute consultation we'll identify your growth constraint and show you how marketing and technology can work as one system."
+          />
           <div className="flex items-center justify-center gap-9 flex-wrap">
             {["Free 30-minute consultation", "Response within 2 business hours", "No commitment required"].map((f) => (
               <span key={f} className="inline-flex items-center gap-2 text-[0.92rem] font-semibold text-[var(--text-main)]">

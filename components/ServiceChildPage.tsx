@@ -6,7 +6,7 @@ import AboutSection from "@/components/AboutSection";
 import LineClampedText from "@/components/LineClampedText";
 import GetQuoteButton from "@/components/GetQuoteButton";
 import SectionHeader from "@/components/SectionHeader";
-import SentenceLines from "@/components/SentenceLines";
+import AdaptiveLines from "@/components/AdaptiveLines";
 import { services } from "@/data/services";
 import { site } from "@/data/contact";
 
@@ -134,9 +134,10 @@ export default function ServiceChildPage({
                   </>
                 )}
               </h1>
-              <p className="text-[var(--text-muted)] text-[1.08rem] leading-relaxed mb-6 max-w-[600px]">
-                <SentenceLines text={child.heroSubheading} />
-              </p>
+              <AdaptiveLines
+                className="text-[var(--text-muted)] text-[1.08rem] leading-relaxed mb-6 max-w-[600px]"
+                text={child.heroSubheading}
+              />
               <div className="flex gap-4 flex-wrap mb-8">
                 <Link href="/contact" className="inline-flex items-center justify-center gap-2.5 py-3.5 px-7 rounded-full font-bold text-[0.95rem] no-underline transition-all duration-300 text-[var(--on-primary)] shadow-[0_10px_25px_-5px_rgba(var(--accent-rgb),0.4)] hover:-translate-y-[3px] hover:shadow-[0_15px_30px_-5px_rgba(var(--accent-rgb),0.6)]" style={{ background: "var(--primary-gradient)" }}>
                   🚀 Talk to a Specialist

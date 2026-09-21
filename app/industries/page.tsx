@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { industries } from "@/data/industries";
+import AdaptiveLines from "@/components/AdaptiveLines";
 
 export const metadata: Metadata = {
   title: "Industries We Serve - Strategy Built Around Your Business",
@@ -20,14 +21,10 @@ export default function IndustriesPage() {
           <h1 className="text-[3rem] font-extrabold leading-[1.15] mb-4 text-[var(--text-main)] max-[768px]:text-[2.2rem]">
             Strategy Shaped by the <span className="gradient-text">Business</span>, Not a Template
           </h1>
-          <p className="text-[var(--text-muted)] text-[1.15rem] max-w-[680px] mx-auto">
-            <span className="block">
-              A real estate developer, a healthcare provider and a D2C brand don&apos;t compete for attention the same way.
-            </span>
-            <span className="block mt-3">
-              These are the industries where Eddinet builds by context rather than applying one framework everywhere.
-            </span>
-          </p>
+          <AdaptiveLines
+            className="text-[var(--text-muted)] text-[1.15rem] max-w-[680px] mx-auto"
+            text="A real estate developer, a healthcare provider and a D2C brand don't compete for attention the same way. These are the industries where Eddinet builds by context rather than applying one framework everywhere."
+          />
         </div>
       </section>
 

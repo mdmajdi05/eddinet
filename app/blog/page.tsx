@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { insights } from "@/data/blog";
+import AdaptiveLines from "@/components/AdaptiveLines";
 
 export const metadata: Metadata = {
   title: "Blog - Practical Thinking on Marketing and Technology",
@@ -21,14 +22,10 @@ export default function BlogPage() {
           <h1 className="text-[3rem] font-extrabold leading-[1.15] mb-4 text-[var(--text-main)] max-[768px]:text-[2.2rem]">
             Practical Thinking on <span className="gradient-text">Marketing and Technology</span>
           </h1>
-          <p className="text-[var(--text-muted)] text-[1.15rem] max-w-[680px] mx-auto">
-            <span className="block">
-              What we&apos;re seeing and testing across SEO, paid media, content, web, eCommerce and technology -
-            </span>
-            <span className="block mt-3">
-              written to be useful, whether or not you become a client.
-            </span>
-          </p>
+          <AdaptiveLines
+            className="text-[var(--text-muted)] text-[1.15rem] max-w-[680px] mx-auto"
+            text="What we're seeing and testing across SEO, paid media, content, web, eCommerce and technology - written to be useful, whether or not you become a client."
+          />
         </div>
       </section>
 

@@ -8,7 +8,7 @@ import { site } from "@/data/contact";
 import ContactForm from "@/components/ContactForm";
 import AboutSection from "@/components/AboutSection";
 import LineClampedText from "@/components/LineClampedText";
-import SentenceLines from "@/components/SentenceLines";
+import AdaptiveLines from "@/components/AdaptiveLines";
 import SectionHeader from "@/components/SectionHeader";
 
 export function generateStaticParams() {
@@ -128,9 +128,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                   <span className="gradient-text">{content.heroHeading}</span>
                 )}
               </h1>
-              <p className="text-[var(--text-muted)] text-[1.08rem] leading-relaxed mb-6 max-w-[600px]">
-                <SentenceLines text={content.heroSubheading} />
-              </p>
+              <AdaptiveLines
+                className="text-[var(--text-muted)] text-[1.08rem] leading-relaxed mb-6 max-w-[600px]"
+                text={content.heroSubheading}
+              />
               <div className="flex gap-4 flex-wrap mb-8">
                 <Link
                   href="/contact"

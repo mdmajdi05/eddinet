@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { caseStudies } from "@/data/case-studies";
+import AdaptiveLines from "@/components/AdaptiveLines";
 
 export const metadata: Metadata = {
   title: "Case Studies - Real Work, Real Outcomes",
@@ -21,14 +22,10 @@ export default function CaseStudiesPage() {
           <h1 className="text-[3rem] font-extrabold leading-[1.15] mb-4 text-[var(--text-main)] max-[768px]:text-[2.2rem]">
             Real Work. <span className="gradient-text">Real Outcomes.</span>
           </h1>
-          <p className="text-[var(--text-muted)] text-[1.15rem] max-w-[680px] mx-auto">
-            <span className="block">
-              How strategy performs against a real budget, a real market and a real competitor set -
-            </span>
-            <span className="block mt-3">
-              documented challenge to outcome.
-            </span>
-          </p>
+          <AdaptiveLines
+            className="text-[var(--text-muted)] text-[1.15rem] max-w-[680px] mx-auto"
+            text="How strategy performs against a real budget, a real market and a real competitor set - documented challenge to outcome."
+          />
         </div>
       </section>
 
