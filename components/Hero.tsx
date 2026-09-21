@@ -32,7 +32,15 @@ export default function Hero() {
               From Marketing to Technology. Marketing, technology and infrastructure engineered to work as one connected growth system.
             </p> */}
             <p className="text-[1rem] text-white/50 mb-9 max-w-[620px] max-[1024px]:mx-auto">
-              With 5+ years of experience and 1,000+ successful projects, Eddinet is a trusted Digital Marketing & Software Agency in Delhi, helping businesses grow through SEO & Digital Marketing, Creative & Content, Web & Software, Mobile Apps, AI & Automation, and Cloud & DevOps. We connect these capabilities to turn digital activity into measurable business outcomes.
+              <span className="block">
+                With 5+ years of experience and 1,000+ successful projects, Eddinet is a trusted Digital Marketing & Software Agency in Delhi,
+              </span>
+              <span className="block mt-3">
+                helping businesses grow through SEO & Digital Marketing, Creative & Content, Web & Software, Mobile Apps, AI & Automation, and Cloud & DevOps.
+              </span>
+              <span className="block mt-3">
+                We connect these capabilities to turn digital activity into measurable business outcomes.
+              </span>
             </p>
             
             {/* Buttons */}
