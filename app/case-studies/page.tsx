@@ -22,7 +22,12 @@ export default function CaseStudiesPage() {
             Real Work. <span className="gradient-text">Real Outcomes.</span>
           </h1>
           <p className="text-[var(--text-muted)] text-[1.15rem] max-w-[680px] mx-auto">
-            How strategy performs against a real budget, a real market and a real competitor set - documented challenge to outcome.
+            <span className="block">
+              How strategy performs against a real budget, a real market and a real competitor set -
+            </span>
+            <span className="block mt-3">
+              documented challenge to outcome.
+            </span>
           </p>
         </div>
       </section>

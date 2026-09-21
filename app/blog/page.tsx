@@ -22,7 +22,12 @@ export default function BlogPage() {
             Practical Thinking on <span className="gradient-text">Marketing and Technology</span>
           </h1>
           <p className="text-[var(--text-muted)] text-[1.15rem] max-w-[680px] mx-auto">
-            What we&apos;re seeing and testing across SEO, paid media, content, web, eCommerce and technology - written to be useful, whether or not you become a client.
+            <span className="block">
+              What we&apos;re seeing and testing across SEO, paid media, content, web, eCommerce and technology -
+            </span>
+            <span className="block mt-3">
+              written to be useful, whether or not you become a client.
+            </span>
           </p>
         </div>
       </section>

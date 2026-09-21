@@ -101,9 +101,13 @@ export default function ServicesIndexPage() {
             </h1>
 
             <p className="text-[var(--text-muted)] text-[1.15rem] leading-relaxed max-w-[700px] mx-auto mb-9">
-              Visibility, acquisition, conversion, technology and operations -
-              engineered to work as one connected system for your business, not
-              a menu of isolated services.
+              <span className="block">
+                Visibility, acquisition, conversion, technology and operations -
+              </span>
+              <span className="block mt-3">
+                engineered to work as one connected system for your business, not
+                a menu of isolated services.
+              </span>
             </p>
 
             <div className="flex items-center justify-center gap-4 flex-wrap mb-12">

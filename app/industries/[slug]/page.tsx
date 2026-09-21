@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { industries, getIndustryBySlug } from "@/data/industries";
 import { caseStudies } from "@/data/case-studies";
+import SentenceLines from "@/components/SentenceLines";
 
 export function generateStaticParams() {
   return industries.map((ind) => ({ slug: ind.slug }));
@@ -62,7 +63,9 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
             <h1 className="text-[3rem] font-extrabold leading-[1.12] mb-4 text-[var(--text-main)] max-[768px]:text-[2.2rem]">
               {ind.name} Digital Growth <span className="gradient-text">in Delhi NCR</span>
             </h1>
-            <p className="text-[var(--text-muted)] text-[1.12rem] leading-relaxed mb-8">{ind.blurb}</p>
+            <p className="text-[var(--text-muted)] text-[1.12rem] leading-relaxed mb-8">
+              <SentenceLines text={ind.blurb} />
+            </p>
             <div className="flex gap-4 flex-wrap">
               <Link
                 href="/contact"

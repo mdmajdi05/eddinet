@@ -374,12 +374,17 @@ export default function AboutPage() {
                 <span className="gradient-text">One Growth System</span>
               </h1>
               <p className="text-[var(--text-muted)] text-[1.12rem] leading-relaxed mb-8 max-w-[640px]">
-                Eddinet is a{" "}
-                <strong className="font-bold text-[var(--main-accent)]">
-                  digital marketing &amp; software agency in Delhi NCR
-                </strong>{" "}
-                bringing SEO, AI SEO, paid media, creative, web, software, AI automation and Cloud &amp;
-                DevOps together under one roof — planned around outcomes, not a menu of services.
+                <span className="block">
+                  Eddinet is a{" "}
+                  <strong className="font-bold text-[var(--main-accent)]">
+                    digital marketing &amp; software agency in Delhi NCR
+                  </strong>{" "}
+                  bringing SEO, AI SEO, paid media, creative, web, software, AI automation and Cloud &amp;
+                  DevOps together under one roof —
+                </span>
+                <span className="block mt-3">
+                  planned around outcomes, not a menu of services.
+                </span>
               </p>
               <div className="flex gap-4 flex-wrap">
                 <Link

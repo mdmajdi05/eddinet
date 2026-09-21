@@ -21,7 +21,12 @@ export default function IndustriesPage() {
             Strategy Shaped by the <span className="gradient-text">Business</span>, Not a Template
           </h1>
           <p className="text-[var(--text-muted)] text-[1.15rem] max-w-[680px] mx-auto">
-            A real estate developer, a healthcare provider and a D2C brand don&apos;t compete for attention the same way. These are the industries where Eddinet builds by context rather than applying one framework everywhere.
+            <span className="block">
+              A real estate developer, a healthcare provider and a D2C brand don&apos;t compete for attention the same way.
+            </span>
+            <span className="block mt-3">
+              These are the industries where Eddinet builds by context rather than applying one framework everywhere.
+            </span>
           </p>
         </div>
       </section>
