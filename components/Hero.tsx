@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative pt-[180px] pb-[100px] overflow-hidden bg-black"
+      className="relative pt-[130px] pb-[60px] overflow-hidden bg-black"
     >
       {/* Background with hero image + gradient overlay */}
       <div className="absolute inset-0 pointer-events-none">
@@ -22,29 +22,29 @@ export default function Hero() {
         <div className="grid grid-cols-[1.1fr_0.9fr] gap-[50px] items-center max-[1024px]:grid-cols-1 max-[1024px]:text-center">
           {/* Left Content */}
           <div>
-            <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[var(--tag-bg)] border border-[var(--tag-border)] rounded-3xl text-[var(--main-accent)] text-[0.85rem] font-semibold uppercase tracking-wider mb-4">
+            <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[var(--tag-bg)] border border-[var(--tag-border)] rounded-3xl text-[var(--main-accent)] text-[0.85rem] font-semibold uppercase tracking-wider mb-3">
               ⚡ Marketing thinks · Technology that acts · Under one roof
             </div>
-            <h1 className="text-[3.5rem] font-extrabold leading-[1.15] mb-6 tracking-[-1px] text-white max-[768px]:text-[2.4rem]">
+            <h1 className="text-[3rem] font-extrabold leading-[1.15] mb-4 tracking-[-1px] text-white max-[768px]:text-[2.4rem]">
               Digital Marketing &amp; Software Agency in Delhi NCR That <span className="gradient-text">Turns Growth Into Revenue</span>
             </h1>
             {/* <p className="text-[1.2rem] text-white/60 mb-4 max-w-[620px] max-[1024px]:mx-auto">
               From Marketing to Technology. Marketing, technology and infrastructure engineered to work as one connected growth system.
             </p> */}
-            <p className="text-[1rem] text-white/50 mb-9 max-w-[620px] max-[1024px]:mx-auto">
+            <p className="text-[0.95rem] text-white/50 mb-6 max-w-[620px] max-[1024px]:mx-auto">
               <span className="block">
                 With 5+ years of experience and 1,000+ successful projects, Eddinet is a trusted Digital Marketing & Software Agency in Delhi,
               </span>
-              <span className="block mt-3">
+              <span className="block mt-2">
                 helping businesses grow through SEO & Digital Marketing, Creative & Content, Web & Software, Mobile Apps, AI & Automation, and Cloud & DevOps.
               </span>
-              <span className="block mt-3">
+              <span className="block mt-2">
                 We connect these capabilities to turn digital activity into measurable business outcomes.
               </span>
             </p>
             
             {/* Buttons */}
-            <div className="flex gap-4 flex-wrap mb-10 max-[1024px]:justify-center">
+            <div className="flex gap-4 flex-wrap mb-6 max-[1024px]:justify-center">
               <button 
                 className="inline-flex items-center justify-center gap-2.5 py-3.5 px-7 rounded-full font-bold text-[0.95rem] cursor-pointer transition-all duration-300 border-none outline-none text-white shadow-[0_10px_25px_-5px_rgba(var(--accent-rgb),0.4)] hover:-translate-y-[3px] hover:shadow-[0_15px_30px_-5px_rgba(var(--accent-rgb),0.6)]" 
                 style={{ background: "var(--primary-gradient)" }}
@@ -60,22 +60,22 @@ export default function Hero() {
             </div>
 
             {/* Capability strip */}
-            <div className="flex flex-wrap items-center gap-x-8 gap-y-4 pt-6 border-t border-white/10 max-[1024px]:justify-center">
+            <div className="flex flex-wrap items-center gap-x-8 gap-y-3 pt-4 border-t border-white/10 max-[1024px]:justify-center">
               <div className="flex items-center gap-3">
-                <div className="w-11 h-11 rounded-full bg-[rgba(var(--accent-rgb),0.15)] text-[var(--main-accent)] flex items-center justify-center text-xl font-bold">
+                <div className="w-10 h-10 rounded-full bg-[rgba(var(--accent-rgb),0.15)] text-[var(--main-accent)] flex items-center justify-center text-lg font-bold">
                   🎯
                 </div>
                 <div>
-                  <strong className="block text-lg text-white">Full-Funnel</strong>
+                  <strong className="block text-base text-white">Full-Funnel</strong>
                   <span className="text-sm text-white/40">Marketing &amp; Growth</span>
                 </div>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-11 h-11 rounded-full bg-[rgba(var(--accent-rgb),0.15)] text-[var(--main-accent)] flex items-center justify-center text-xl font-bold">
+                <div className="w-10 h-10 rounded-full bg-[rgba(var(--accent-rgb),0.15)] text-[var(--main-accent)] flex items-center justify-center text-lg font-bold">
                   🛠️
                 </div>
                 <div>
-                  <strong className="block text-lg text-white">Technology</strong>
+                  <strong className="block text-base text-white">Technology</strong>
                   <span className="text-sm text-white/40">Software · AI · Cloud · DevOps</span>
                 </div>
               </div>
