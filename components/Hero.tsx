@@ -26,7 +26,7 @@ export default function Hero() {
               ⚡ Marketing thinks · Technology that acts · Under one roof
             </div>
             <h1 className="text-[3.5rem] font-extrabold leading-[1.15] mb-6 tracking-[-1px] text-white max-[768px]:text-[2.4rem]">
-              The <span className="gradient-text">ROI-Focused</span> Digital Growth Partner in Delhi NCR
+              Digital Marketing &amp; Software Agency in Delhi NCR That <span className="gradient-text">Turns Growth Into Revenue</span>
             </h1>
             {/* <p className="text-[1.2rem] text-white/60 mb-4 max-w-[620px] max-[1024px]:mx-auto">
               From Marketing to Technology. Marketing, technology and infrastructure engineered to work as one connected growth system.
