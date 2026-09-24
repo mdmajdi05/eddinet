@@ -493,9 +493,29 @@ export default function BlogPostPage() {
       <div className="max-w-[1440px] mx-auto px-6 xl:px-10 pb-20">
         <div>
           <div>
+            <nav
+              className="flex flex-wrap items-center gap-2 text-[0.85rem] text-[var(--text-dim)] pt-[110px] mb-4"
+              aria-label="Breadcrumb"
+            >
+              <Link
+                href="/"
+                className="hover:text-[var(--main-accent)] no-underline transition-colors duration-300"
+              >
+                Home
+              </Link>
+              <span>/</span>
+              <Link
+                href="/blog"
+                className="hover:text-[var(--main-accent)] no-underline transition-colors duration-300"
+              >
+                Blog
+              </Link>
+              <span>/</span>
+              <span className="text-[var(--main-accent)] line-clamp-1">{post.title}</span>
+            </nav>
             <Link
               href={`/blog`}
-              className="inline-flex items-center gap-2 text-[var(--text-muted)] hover:text-[var(--main-accent)] transition-transform duration-200 mb-8 group pt-[110px]"
+              className="inline-flex items-center gap-2 text-[var(--text-muted)] hover:text-[var(--main-accent)] transition-transform duration-200 mb-8 group"
             >
               <ArrowLeft className="w-4 h-4 transition-transform duration-200 group-hover:-translate-x-1" />
               <span className="text-sm font-medium">Back to Blog</span>

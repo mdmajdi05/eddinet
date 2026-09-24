@@ -5,6 +5,7 @@ import Link from "next/link";
 import { caseStudies, getCaseStudyBySlug } from "@/data/case-studies";
 import { site } from "@/data/contact";
 import AdaptiveLines from "@/components/AdaptiveLines";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export function generateStaticParams() {
   return caseStudies.map((c) => ({ slug: c.slug }));
@@ -62,13 +63,13 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
     <>
       <section className="pt-[150px] pb-[60px]">
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
-          <nav className="mb-8 text-[0.85rem] text-[var(--text-dim)] flex flex-wrap items-center gap-2" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-[var(--main-accent)] no-underline transition-colors duration-300">Home</Link>
-            <span>/</span>
-            <Link href="/case-studies" className="hover:text-[var(--main-accent)] no-underline transition-colors duration-300">Case Studies</Link>
-            <span>/</span>
-            <span className="text-[var(--main-accent)]">{c.client}</span>
-          </nav>
+          <Breadcrumbs
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Case Studies", href: "/case-studies" },
+              { label: c.client },
+            ]}
+          />
 
           <div className="grid grid-cols-[1.1fr_0.9fr] gap-[50px] items-center max-[1024px]:grid-cols-1">
             <div>

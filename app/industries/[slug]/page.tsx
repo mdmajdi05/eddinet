@@ -5,6 +5,7 @@ import Image from "next/image";
 import { industries, getIndustryBySlug } from "@/data/industries";
 import { caseStudies } from "@/data/case-studies";
 import AdaptiveLines from "@/components/AdaptiveLines";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export function generateStaticParams() {
   return industries.map((ind) => ({ slug: ind.slug }));
@@ -50,13 +51,13 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
     <>
       <section className="pt-[150px] pb-[60px]">
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
-          <nav className="mb-8 text-[0.85rem] text-[var(--text-dim)] flex flex-wrap items-center gap-2" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-[var(--main-accent)] no-underline transition-colors duration-300">Home</Link>
-            <span>/</span>
-            <Link href="/industries" className="hover:text-[var(--main-accent)] no-underline transition-colors duration-300">Industries</Link>
-            <span>/</span>
-            <span className="text-[var(--main-accent)]">{ind.name}</span>
-          </nav>
+          <Breadcrumbs
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Industries", href: "/industries" },
+              { label: ind.name },
+            ]}
+          />
 
           <div className="max-w-[820px]">
             <div className="text-[3rem] mb-5 inline-block">{ind.icon}</div>

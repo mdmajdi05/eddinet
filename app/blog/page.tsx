@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { insights } from "@/data/blog";
 import AdaptiveLines from "@/components/AdaptiveLines";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Blog - Practical Thinking on Marketing and Technology",
@@ -16,6 +17,13 @@ export default function BlogPage() {
     <>
       <section className="pt-[170px] pb-[70px]">
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5 text-center">
+          <Breadcrumbs
+            className="mb-5 justify-center"
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Blog" },
+            ]}
+          />
           <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[var(--tag-bg)] border border-[var(--tag-border)] rounded-3xl text-[var(--main-accent)] text-[0.85rem] font-semibold uppercase tracking-wider mb-4">
             Blog
           </div>

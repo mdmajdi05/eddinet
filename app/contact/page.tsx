@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 import AdaptiveLines from "@/components/AdaptiveLines";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { site } from "@/data/contact";
 
 export const metadata: Metadata = {
@@ -81,6 +82,13 @@ export default function ContactPage() {
           <div className="absolute top-[-25%] right-[-10%] w-[500px] h-[500px] rounded-full bg-[var(--main-accent)]/8 blur-3xl" />
         </div>
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5 relative z-10 text-center">
+          <Breadcrumbs
+            className="mb-5 justify-center"
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Contact Us" },
+            ]}
+          />
           <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[var(--tag-bg)] border border-[var(--tag-border)] rounded-3xl text-[var(--main-accent)] text-[0.85rem] font-semibold uppercase tracking-wider mb-5">
             Contact Us
           </div>

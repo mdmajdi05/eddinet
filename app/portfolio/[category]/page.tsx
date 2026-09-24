@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import PortfolioGrid from "@/components/PortfolioGrid";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { projectCategories } from "@/data/portfolio";
 
 type Props = {
@@ -50,6 +51,14 @@ export default async function PortfolioCategoryPage({
     <main className="pt-[125px] pb-[100px]">
 
       <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
+
+        <Breadcrumbs
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Portfolio", href: "/portfolio" },
+            { label: cat.label },
+          ]}
+        />
 
         <PortfolioGrid
           initialCategory={cat.key}

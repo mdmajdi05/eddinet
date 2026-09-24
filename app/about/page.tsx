@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import GrowthSystem from "@/components/about/GrowthSystem";
 import Reveal from "@/components/about/Reveal";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { site } from "@/data/contact";
 import { processSteps } from "@/data/home";
 import { industries } from "@/data/industries";
@@ -364,6 +365,12 @@ export default function AboutPage() {
           <div className="absolute bottom-[-20%] right-[-12%] w-[520px] h-[520px] rounded-full bg-[var(--purple-accent)]/8 blur-3xl" />
         </div>
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5 relative z-10">
+          <Breadcrumbs
+            items={[
+              { label: "Home", href: "/" },
+              { label: "About" },
+            ]}
+          />
           <div className="grid grid-cols-[1.05fr_0.95fr] gap-[50px] items-center max-[1024px]:grid-cols-1">
             <div>
               <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[var(--tag-bg)] border border-[var(--tag-border)] rounded-3xl text-[var(--main-accent)] text-[0.85rem] font-semibold uppercase tracking-wider mb-5">

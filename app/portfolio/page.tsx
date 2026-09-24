@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PortfolioGrid from "@/components/PortfolioGrid";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Portfolio - Websites, Software & Digital Projects | Eddinet",
@@ -15,6 +16,13 @@ export default function PortfolioPage() {
     <main className="pt-[125px] pb-[100px]">
 
       <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
+
+        <Breadcrumbs
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Portfolio" },
+          ]}
+        />
 
         <PortfolioGrid />
 

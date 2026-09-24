@@ -103,6 +103,23 @@ const organizationSchema = {
   },
 };
 
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Eddinet",
+  alternateName: "Eddinet - Digital Marketing & Software Agency",
+  url: "https://eddinet.com/",
+  description:
+    "Digital marketing & software agency in Delhi NCR - SEO, AI SEO, ads, content, web, apps, software, AI, cloud and reputation management.",
+  inLanguage: "en-IN",
+  publisher: {
+    "@type": "Organization",
+    name: "Eddinet",
+    url: "https://eddinet.com/",
+    logo: "https://eddinet.com/ENDINET_EN_Favicons/favicon-512x512.png",
+  },
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -115,6 +132,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
         <script
           dangerouslySetInnerHTML={{

@@ -3,6 +3,7 @@ import Link from "next/link";
 import ServicesExplorer from "@/components/ServicesExplorer";
 import ContactForm from "@/components/ContactForm";
 import AdaptiveLines from "@/components/AdaptiveLines";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { servicePages } from "@/data/services";
 import { processSteps } from "@/data/home";
 import { site } from "@/data/contact";
@@ -91,6 +92,12 @@ export default function ServicesIndexPage() {
         </div>
 
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5 relative z-10">
+          <Breadcrumbs
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Services" },
+            ]}
+          />
           <div className="text-center max-w-[880px] mx-auto">
             <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[var(--tag-bg)] border border-[var(--tag-border)] rounded-3xl text-[var(--main-accent)] text-[0.85rem] font-semibold uppercase tracking-wider mb-6">
               Our Services
