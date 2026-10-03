@@ -399,7 +399,7 @@ export default function Services() {
                         duration-700
                         group-hover:scale-110
                       "
-                      unoptimized
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
 
                     <div className="absolute inset-0 to-transparent" />

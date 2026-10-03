@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Header from "@/components/Header";
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     images: [
       {
-        url: "https://eddinet.com/opengraph-image.png",
+        url: "https://eddinet.com/opengraph-image.webp",
         width: 1200,
         height: 630,
         alt: "Eddinet - Digital Marketing & Software Agency",
@@ -65,7 +66,7 @@ export const metadata: Metadata = {
     title: "Digital Marketing & Software Agency Delhi NCR | Eddinet",
     description:
       "Eddinet is a leading digital marketing & software agency in Delhi NCR, offering SEO, web & app development, and branding. Get a free consultation today.",
-    images: ["https://eddinet.com/opengraph-image.png"],
+    images: ["https://eddinet.com/opengraph-image.webp"],
   },
   other: {
     language: "English",
@@ -87,7 +88,7 @@ const organizationSchema = {
   "@type": ["Organization", "LocalBusiness"],
   name: "Eddinet",
   url: "https://eddinet.com/",
-  logo: "https://eddinet.com/ENDINET_EN_Favicons/favicon-512x512.png",
+  logo: "https://eddinet.com/images/brand/eddinet-logo.webp",
   email: "contact@eddinet.com",
   telephone: site.phone,
   priceRange: "$$",
@@ -116,7 +117,7 @@ const websiteSchema = {
     "@type": "Organization",
     name: "Eddinet",
     url: "https://eddinet.com/",
-    logo: "https://eddinet.com/ENDINET_EN_Favicons/favicon-512x512.png",
+    logo: "https://eddinet.com/images/brand/eddinet-logo.webp",
   },
 };
 
@@ -152,8 +153,16 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
+        <link rel="preconnect" href="https://datafa.st" />
       </head>
       <body>
+        <Script
+          id="datafast"
+          src="https://datafa.st/js/script.js"
+          strategy="afterInteractive"
+          data-website-id="dfid_v6xdyebpgTQWzxC5pXdiH"
+          data-domain="eddinet.com"
+        />
         <ThemeProvider>
           <Header />
           <main>{children}</main>

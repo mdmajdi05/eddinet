@@ -1,10 +1,11 @@
-﻿// ============================================================================
+import { stockImageSrc } from "@/data/stock-images";
+
+// ============================================================================
 //  FILE: data/blog.ts  (BLOG PAGE)
 // WHAT'S IN THIS FILE:  (BLOG)
 //   insights[] - blog posts. NAYA BLOG ADD KARNE KE LIYE YAHIN:
 //                title, slug, category, image, date, summary, body[]
 // ============================================================================
-
 
 export interface InsightSection {
   heading?: string;
@@ -33,7 +34,7 @@ export const insights: Insight[] = [
     label: "SEO & AI Strategy",
     excerpt:
       "Practical strategies to optimise content for AI Overviews and stay visible as search behaviour shifts toward conversational answers.",
-    image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&q=80",
+    image: stockImageSrc("photo-1432888498266-38ffec3eaf0a"),
     date: "August 20, 2026",
     readTime: "7 min read",
     sections: [
@@ -75,7 +76,7 @@ export const insights: Insight[] = [
     label: "Performance Marketing",
     excerpt:
       "A repeatable approach to reducing cost per acquisition - through account structure, signal quality and testing - without cutting profitable spend.",
-    image: "https://images.unsplash.com/photo-1553729459-uj0gfqcewkfd?w=600&q=80",
+    image: stockImageSrc("photo-1556742049-0cfed4f6a45d"),
     date: "August 5, 2026",
     readTime: "6 min read",
     sections: [
@@ -117,7 +118,7 @@ export const insights: Insight[] = [
     label: "Web Development",
     excerpt:
       "Core Web Vitals, UX structure and conversion design - the engineering decisions that turn visitors into customers without slowing your marketing down.",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80",
+    image: stockImageSrc("photo-1498050108023-c5249f4df085"),
     date: "July 18, 2026",
     readTime: "6 min read",
     sections: [
@@ -158,7 +159,7 @@ export const insights: Insight[] = [
     label: "SEO Strategy",
     excerpt:
       "Is SEO worth it for small businesses in India? Learn the costs, benefits, timeline, and when SEO can deliver long-term organic growth.",
-    image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&q=80",
+    image: stockImageSrc("photo-1432888498266-38ffec3eaf0a"),
     date: "September 19, 2026",
     readTime: "8 min read",
     sections: [
@@ -236,7 +237,7 @@ export const insights: Insight[] = [
     label: "SEO Strategy",
     excerpt:
       "Hiring an SEO agency? Ask these 7 critical questions on your first call to avoid vague deliverables, hidden fees, and empty ranking guarantees.",
-    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&q=80",
+    image: stockImageSrc("photo-1556761175-b413da4baf72"),
     date: "September 19, 2026",
     readTime: "9 min read",
     sections: [

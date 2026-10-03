@@ -80,7 +80,7 @@ export default function CaseStudiesPage() {
                       alt={`${c.client} case study`}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      unoptimized
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[rgba(11,15,25,0.9)] to-transparent" />
                     <div className="absolute bottom-3 left-4 right-4">

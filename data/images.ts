@@ -21,10 +21,8 @@
 //      /images/services/seo/lead-generation/… Lead Generation page sections
 //      /images/services/seo/local-seo/…   Local SEO page sections
 //      /images/services/seo-page/…        Main SEO page sections
-//      /images/blog/…                     blog thumbnails (0 hai abhi —
-//                                         blog.ts unsplash URL use karta hai)
-//      /images/portfolio/…                portfolio thumbnails (0 hai abhi —
-//                                         portfolio.ts unsplash URL use karta hai)
+//      /images/stock/…                    downloaded stock images used by blog,
+//                                         portfolio and marketing sections
 //
 //  ────────────────────────────────────────────────────────────────────────────
 //  🏷️  FILE + KEY NAMING RULE  (kebab-case, hamesha):
@@ -37,7 +35,7 @@
 //      ✖  seo_service_image.webp.webp     <- double extension na rakho
 //
 //      KEY = src file ka naam bina extension ke.
-//      E.g. folder="/images/brand/eddinet-logo.png" → KEY = "eddinet-logo"
+//      E.g. folder="/images/brand/eddinet-logo.webp" → KEY = "eddinet-logo"
 //
 //  Har page ka alag section hai is file me. NAYA IMAGE ADD KARNA HO TO:
 //    1. Public me /images/<page>/ artam ki clean kebab-case file rakho
@@ -89,7 +87,7 @@ export const IMG = {
   brand: {
     eddinetLogo: {
       key: "eddinet-logo",
-      src: "/images/brand/eddinet-logo.png",
+      src: "/images/brand/eddinet-logo.webp",
       alt: "Eddinet logo",
       page: "brand",
       section: "header / footer",
@@ -103,15 +101,15 @@ export const IMG = {
   home: {
     hero: {
       key: "hero",
-      src: "/images/home/hero.png",
+      src: "/images/home/hero.webp",
       alt: "Eddinet digital growth hero background",
       page: "home",
       section: "hero",
-      // usedIn: components/Hero.tsx (backgroundImage)
+      // usedIn: components/Hero.tsx (Image fill)
     },
     heroBg1: {
       key: "hero-bg-1",
-      src: "/images/home/hero-bg-1.jpg",
+      src: "/images/home/hero-bg-1.webp",
       alt: "Hero background variation 1",
       page: "home",
       section: "hero",
@@ -119,7 +117,7 @@ export const IMG = {
     },
     heroBg2: {
       key: "hero-bg-2",
-      src: "/images/home/hero-bg-2.jpg",
+      src: "/images/home/hero-bg-2.webp",
       alt: "Hero background variation 2",
       page: "home",
       section: "hero",
@@ -127,7 +125,7 @@ export const IMG = {
     },
     heroBg3: {
       key: "hero-bg-3",
-      src: "/images/home/hero-bg-3.jpg",
+      src: "/images/home/hero-bg-3.webp",
       alt: "Hero background variation 3",
       page: "home",
       section: "hero",
@@ -475,31 +473,31 @@ export const IMG = {
   servicesSeoPage: {
     ecommerceSeo: {
       key: "ecommerce-seo-page",
-      src: "/images/services/seo-page/ecommerce-seo.png",
+      src: "/images/services/seo-page/ecommerce-seo.webp",
       alt: "eCommerce SEO visual",
       page: "services-seo-page",
     },
     localSeo: {
       key: "local-seo-page",
-      src: "/images/services/seo-page/local-seo.png",
+      src: "/images/services/seo-page/local-seo.webp",
       alt: "Local SEO visual",
       page: "services-seo-page",
     },
     mobileSeo: {
       key: "mobile-seo",
-      src: "/images/services/seo-page/mobile-seo.png",
+      src: "/images/services/seo-page/mobile-seo.webp",
       alt: "Mobile SEO visual",
       page: "services-seo-page",
     },
     nationalSeo: {
       key: "national-seo",
-      src: "/images/services/seo-page/national-seo.png",
+      src: "/images/services/seo-page/national-seo.webp",
       alt: "National SEO visual",
       page: "services-seo-page",
     },
     seoForStartups: {
       key: "seo-for-startups",
-      src: "/images/services/seo-page/seo-for-startups.png",
+      src: "/images/services/seo-page/seo-for-startups.webp",
       alt: "SEO for startups visual",
       page: "services-seo-page",
     },
@@ -583,33 +581,5 @@ export const ALL_IMAGES: AppImage[] = [
   IMG.servicesSeoPage.seoForStartups,
 ];
 
-// ============================================================================
-//  REMOTE (UNSPLASH) images — data files inhe use karte hain, isliye yahan
-//  register kara di hai taaki pata rahe kaunsa image kaunsa section use karta
-//  hai. Inhe bundle me download karna ho to bas src yahan se le lo.
-// ============================================================================
-
-/** Blog thumbnails — blog.ts ke Insight.image me unsplash URL hota hai */
-export const REMOTE_IMAGES = {
-  blogSlowStartupKeyword: {
-    key: "blog-slow-startup-keyword",
-    src: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&q=80",
-    alt: "Website metrics on a laptop",
-    page: "blog",
-  },
-  blogSolidRoof: {
-    key: "blog-solid-roof",
-    src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
-    alt: "Analytics charts and graphs",
-    page: "blog",
-  },
-  blogNewWebsiteAwareness: {
-    key: "blog-new-website-awareness",
-    src: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=80",
-    alt: "Product and branding imagery",
-    page: "blog",
-  },
-} as const;
-
-// data/index.ts me bhi `export * from "./images";` aa chuka hoga ya add karna
-// hoga — check karna (re-exports wahi se hote hain).
+// Downloaded stock images are maintained separately in data/stock-images.ts.
+// Fixed brand/page assets remain in the ALL_IMAGES registry above.

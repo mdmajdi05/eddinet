@@ -1,4 +1,4 @@
-﻿// ============================================================================
+// ============================================================================
 //  FILE: data/contact.ts  (CONTACT / COMPANY INFO)
 // WHAT'S IN THIS FILE:
 //   site - company info : name, url, phone, email, address,

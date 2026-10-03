@@ -7,6 +7,7 @@ import LineClampedText from "@/components/LineClampedText";
 import GetQuoteButton from "@/components/GetQuoteButton";
 import SectionHeader from "@/components/SectionHeader";
 import AdaptiveLines from "@/components/AdaptiveLines";
+import ViewportCollapse from "@/components/ViewportCollapse";
 import { services } from "@/data/services";
 import { site } from "@/data/contact";
 
@@ -27,6 +28,8 @@ export interface ChildServiceView {
     description?: string;
     steps: { num: string; title: string; description: string }[];
   };
+  /** Section headings exactly as the source document wrote them, when known. */
+  docxHeadings?: { about?: string; process?: string; faqs?: string };
   benefits: { title: string; description: string }[];
   benefitsHeading?: string;
   benefitsDescription?: string;
@@ -50,11 +53,20 @@ export default function ServiceChildPage({
 }: ServiceChildComponentProps) {
   const serviceName = child.title.split("(")[0].trim();
   const introParas = child.detailedDescription.split("\n\n");
+  const whyPoints = child.whyChooseUs.points.map(splitPoint);
   const heroSuffixMatch = child.heroHeading.match(/\s+(in (?:Delhi NCR|India))$/);
   const heroPrefix = heroSuffixMatch
     ? child.heroHeading.slice(0, heroSuffixMatch.index)
     : child.heroHeading;
   const heroSuffix = heroSuffixMatch ? heroSuffixMatch[1] : "";
+  const docxHeadings = child.docxHeadings;
+  // The document's own FAQ heading is only used when it names the service; a
+  // bare "FAQs" adds nothing over the template, which already names it.
+  const faqsHeading =
+    docxHeadings?.faqs &&
+    !/^(faqs?|frequently asked questions)[.!]?$/i.test(docxHeadings.faqs.trim())
+      ? docxHeadings.faqs
+      : undefined;
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -78,7 +90,7 @@ export default function ServiceChildPage({
       "@type": "Organization",
       name: "Eddinet",
       url: "https://eddinet.com/",
-      logo: "https://eddinet.com/eddinet-logo.png",
+      logo: "https://eddinet.com/images/brand/eddinet-logo.webp",
     },
     areaServed: { "@type": "AdministrativeArea", name: "Delhi NCR" },
   };
@@ -134,10 +146,12 @@ export default function ServiceChildPage({
                   </>
                 )}
               </h1>
-              <AdaptiveLines
-                className="text-[var(--text-muted)] text-[1.08rem] leading-relaxed mb-6 max-w-[600px]"
-                text={child.heroSubheading}
-              />
+              <ViewportCollapse maxLines={10} toggleClassName="-mt-4 mb-6">
+                <AdaptiveLines
+                  className="text-[var(--text-muted)] text-[1.08rem] leading-relaxed mb-6 max-w-[600px]"
+                  text={child.heroSubheading}
+                />
+              </ViewportCollapse>
               <div className="flex gap-4 flex-wrap mb-8">
                 <Link href="/contact" className="inline-flex items-center justify-center gap-2.5 py-3.5 px-7 rounded-full font-bold text-[0.95rem] no-underline transition-all duration-300 text-[var(--on-primary)] shadow-[0_10px_25px_-5px_rgba(var(--accent-rgb),0.4)] hover:-translate-y-[3px] hover:shadow-[0_15px_30px_-5px_rgba(var(--accent-rgb),0.6)]" style={{ background: "var(--primary-gradient)" }}>
                   🚀 Talk to a Specialist
@@ -175,7 +189,7 @@ export default function ServiceChildPage({
                     width={1200}
                     height={675}
                     className="w-full h-full object-cover object-top transition-transform duration-700 ease-out hover:scale-[1.05]"
-                    unoptimized
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <div className="absolute bottom-4 left-5 inline-flex items-center gap-2 py-1.5 px-3.5 rounded-full bg-[rgba(11,15,25,0.6)] backdrop-blur-md border border-white/15 text-[0.72rem] font-bold text-white">
                     ⚡ {serviceName} Delivery Team
@@ -201,6 +215,7 @@ export default function ServiceChildPage({
         paragraphs={introParas}
         image={child.image}
         gradientWord={serviceName}
+        heading={docxHeadings?.about}
       />
 
       {/* =========================================================
@@ -238,7 +253,6 @@ export default function ServiceChildPage({
                       height={450}
                       className="w-full h-auto object-contain block"
                       sizes="(max-width: 1024px) 100vw, 42vw"
-                      unoptimized
                     />
                     <div className="absolute bottom-3 left-4">
                       <span className="text-[0.7rem] font-extrabold text-[var(--main-accent)] bg-[rgba(11,15,25,0.7)] border border-[var(--border-color)] rounded-full px-2.5 py-1">{String(i + 1).padStart(2, "0")}</span>
@@ -258,12 +272,16 @@ export default function ServiceChildPage({
 
       {/* =========================================================
           4. PROCESS — horizontal timeline with gradient spine
+          Hidden when the page has no process steps.
       ========================================================= */}
+      {child.process.steps.length > 0 && (
       <section className="py-[90px] bg-[var(--strip-bg)] border-y border-[var(--border-color)]">
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
           <SectionHeader
             chip="Our Process"
-            title={<>How We Execute <span className="gradient-text">{serviceName}</span> Projects</>}
+            title={docxHeadings?.process ?? (
+              <>How We Execute <span className="gradient-text">{serviceName}</span> Projects</>
+            )}
             description={child.process.description ?? "An outcome-led process, from first conversation to continuous improvement."}
             spacing="lg"
           />
@@ -292,10 +310,13 @@ export default function ServiceChildPage({
           </div>
         </div>
       </section>
+      )}
 
       {/* =========================================================
           5. WHAT YOU CAN EXPECT — phases + outcomes
+          Hidden when the page has no benefits content.
       ========================================================= */}
+      {child.benefits.length > 0 && (
       <section className="py-[90px]">
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
           <SectionHeader
@@ -353,10 +374,13 @@ export default function ServiceChildPage({
           </div>
         </div>
       </section>
+      )}
 
       {/* =========================================================
           6. WHY CHOOSE US — The Eddinet Edge card
+          Hidden when the page has no why-choose-us points.
       ========================================================= */}
+      {child.whyChooseUs.points.length > 0 && (
       <section className="py-[90px] bg-[var(--strip-bg)] border-y border-[var(--border-color)]">
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
           <SectionHeader
@@ -366,31 +390,36 @@ export default function ServiceChildPage({
               `${serviceName.toLowerCase()} in Delhi NCR is crowded with agencies that sell tactics. Eddinet sells a connected system — strategy, technical execution, intent-led content and transparent reporting engineered to turn search visibility into revenue.`}
           />
 
-          <div className="relative rounded-3xl overflow-hidden border border-[rgba(var(--accent-rgb),0.25)] bg-[var(--panel-bg)] shadow-[var(--shadow-lg)]">
-            <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[var(--main-accent)] via-transparent to-purple-500 opacity-50" />
+          {/* No overflow-hidden here: it would break the sticky left column below. */}
+          <div className="relative rounded-3xl border border-[rgba(var(--accent-rgb),0.25)] bg-[var(--panel-bg)] shadow-[var(--shadow-lg)]">
+            <div className="absolute top-0 left-0 right-0 h-[3px] rounded-t-3xl bg-gradient-to-r from-[var(--main-accent)] via-transparent to-purple-500 opacity-50" />
             <div className="grid grid-cols-[0.42fr_0.58fr] max-[1024px]:grid-cols-1">
+              {/* Stretched to the right column's height so the content inside can
+                  pin itself while the points on the right scroll past. */}
               <div className="relative p-9 max-[1024px]:pb-0 border-r border-[var(--border-color)] max-[1024px]:border-r-0 bg-[var(--bg-card)]">
-                <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[rgba(var(--accent-rgb),0.08)] border border-[rgba(var(--accent-rgb),0.2)] rounded-3xl text-[var(--main-accent)] text-[0.78rem] font-bold uppercase tracking-wider mb-5">
-                  ✦ The Eddinet Edge
-                </div>
-                <h3 className="text-[1.5rem] font-extrabold leading-snug mb-4 text-[var(--text-main)] tracking-[-0.3px] max-[768px]:text-[1.3rem]">
-                  What sets our {serviceName.toLowerCase()} apart
-                </h3>
-                <LineClampedText text={introParas[1] ?? introParas[0]} lines={6} />
+                <div className="lg:sticky lg:top-[100px]">
+                  <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[rgba(var(--accent-rgb),0.08)] border border-[rgba(var(--accent-rgb),0.2)] rounded-3xl text-[var(--main-accent)] text-[0.78rem] font-bold uppercase tracking-wider mb-5">
+                    ✦ The Eddinet Edge
+                  </div>
+                  <h3 className="text-[1.5rem] font-extrabold leading-snug mb-4 text-[var(--text-main)] tracking-[-0.3px] max-[768px]:text-[1.3rem]">
+                    What sets our {serviceName.toLowerCase()} apart
+                  </h3>
+                  <LineClampedText text={introParas[1] ?? introParas[0]} lines={6} />
 
-                <div className="grid grid-cols-2 gap-3 mb-7 max-[480px]:grid-cols-1">
-                  {child.metrics.map((m, i) => (
-                    <div key={i} className="group relative rounded-2xl p-4 text-center overflow-hidden bg-[var(--panel-bg)] border border-[var(--border-color)] transition-all duration-500 hover:-translate-y-1 hover:border-[rgba(var(--accent-rgb),0.3)]">
-                      <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[var(--main-accent)] via-transparent to-purple-500 opacity-40 group-hover:opacity-100 transition-opacity duration-500" />
-                      <div className="relative z-10 text-[1.4rem] font-extrabold leading-none gradient-text animate-gradient-x mb-1.5 max-[768px]:text-[1.2rem]">{m.value}</div>
-                      <div className="relative z-10 text-[var(--text-muted)] text-[0.72rem] font-medium leading-snug">{m.label}</div>
-                    </div>
-                  ))}
-                </div>
+                  <div className="grid grid-cols-2 gap-3 mb-7 max-[480px]:grid-cols-1">
+                    {child.metrics.map((m, i) => (
+                      <div key={i} className="group relative rounded-2xl p-4 text-center overflow-hidden bg-[var(--panel-bg)] border border-[var(--border-color)] transition-all duration-500 hover:-translate-y-1 hover:border-[rgba(var(--accent-rgb),0.3)]">
+                        <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[var(--main-accent)] via-transparent to-purple-500 opacity-40 group-hover:opacity-100 transition-opacity duration-500" />
+                        <div className="relative z-10 text-[1.4rem] font-extrabold leading-none gradient-text animate-gradient-x mb-1.5 max-[768px]:text-[1.2rem]">{m.value}</div>
+                        <div className="relative z-10 text-[var(--text-muted)] text-[0.72rem] font-medium leading-snug">{m.label}</div>
+                      </div>
+                    ))}
+                  </div>
 
-                <Link href="/contact" className="inline-flex items-center gap-2.5 py-3 px-6 rounded-full font-bold text-[0.9rem] no-underline transition-all duration-300 text-[var(--on-primary)] shadow-[0_10px_25px_-5px_rgba(var(--accent-rgb),0.4)] hover:-translate-y-[3px]" style={{ background: "var(--primary-gradient)" }}>
-                  Get a free {serviceName} audit →
-                </Link>
+                  <Link href="/contact" className="inline-flex items-center gap-2.5 py-3 px-6 rounded-full font-bold text-[0.9rem] no-underline transition-all duration-300 text-[var(--on-primary)] shadow-[0_10px_25px_-5px_rgba(var(--accent-rgb),0.4)] hover:-translate-y-[3px]" style={{ background: "var(--primary-gradient)" }}>
+                    Get a free {serviceName} audit →
+                  </Link>
+                </div>
               </div>
 
               <div className="relative p-9">
@@ -399,7 +428,7 @@ export default function ServiceChildPage({
                   Why businesses stay with Eddinet
                 </span>
                 <div className="grid grid-cols-2 gap-3.5 max-[640px]:grid-cols-1">
-                  {child.whyChooseUs.points.map((point, i) => (
+                  {whyPoints.map((point, i) => (
                     <div key={i} className="group relative rounded-2xl p-5 overflow-hidden bg-[var(--bg-card)] border border-[var(--border-color)] transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(var(--accent-rgb),0.3)]">
                       <div className="absolute -top-3 -right-1 text-[2.6rem] font-extrabold leading-none opacity-[0.05] select-none">{String(i + 1).padStart(2, "0")}</div>
                       <div className="relative z-10">
@@ -408,13 +437,15 @@ export default function ServiceChildPage({
                             {["🎯", "🧩", "📊", "🏆", "🧠", "🤝"][i % 6]}
                           </span>
                           <h4 className="text-[var(--text-main)] text-[0.95rem] font-bold leading-snug pt-0.5">
-                            {point.split(":")[0]}
+                            {point.title}
                           </h4>
                           <span className="ml-auto text-[0.62rem] font-extrabold text-[var(--main-accent)] uppercase tracking-wider">{`0${i + 1}`}</span>
                         </div>
-                        <p className="text-[var(--text-muted)] text-[0.85rem] leading-relaxed">
-                          {point.split(":").slice(1).join(":").trim()}
-                        </p>
+                        {point.description && (
+                          <p className="text-[var(--text-muted)] text-[0.85rem] leading-relaxed">
+                            {point.description}
+                          </p>
+                        )}
                       </div>
                     </div>
                   ))}
@@ -424,6 +455,7 @@ export default function ServiceChildPage({
           </div>
         </div>
       </section>
+      )}
 
       {/* =========================================================
           7. CLIENT REVIEWS — voices from real engagements
@@ -467,12 +499,16 @@ export default function ServiceChildPage({
 
       {/* =========================================================
           9. FAQ — enhanced accordion
+          Hidden when the page has no FAQs.
       ========================================================= */}
+      {child.faqs.length > 0 && (
       <section className="py-[90px]">
         <div className="w-full max-w-[820px] mx-auto px-5">
           <SectionHeader
             chip="Common Questions"
-            title={<>Frequently Asked Questions About{" "}<span className="gradient-text">{child.title}</span></>}
+            title={faqsHeading ?? (
+              <>Frequently Asked Questions About{" "}<span className="gradient-text">{child.title}</span></>
+            )}
           />
 
           <div className="flex flex-col gap-4">
@@ -493,6 +529,7 @@ export default function ServiceChildPage({
           </div>
         </div>
       </section>
+      )}
 
       {/* =========================================================
           10. EXPLORE MORE — related growth systems
@@ -516,7 +553,7 @@ export default function ServiceChildPage({
                     width={600}
                     height={350}
                     className="w-full h-auto object-contain transition-transform duration-700 ease-out group-hover:scale-105"
-                    unoptimized
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
                 <div className="relative z-10 p-7 pt-6">
@@ -658,4 +695,29 @@ export default function ServiceChildPage({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
     </>
   );
+}
+
+/**
+ * Splits a "Why Choose Us" point into a short heading plus the supporting
+ * sentence(s) that follow it.
+ *
+ * The source copy marks that split two different ways, so whichever separator
+ * comes first wins:
+ *   1. "Heading: supporting text"          -> colon
+ *   2. "Heading. Supporting text."         -> first sentence break
+ * Anything that carries neither is kept whole and rendered as the heading.
+ */
+function splitPoint(point: string): { title: string; description: string } {
+  const colon = point.indexOf(":");
+  const sentence = point.search(/[.!?](?=\s)/);
+  const cut =
+    colon > 0 && (sentence === -1 || colon < sentence) ? colon : sentence;
+
+  if (cut > 0) {
+    const title = point.slice(0, cut).trim();
+    const description = point.slice(cut + 1).trim();
+    if (title && description) return { title, description };
+  }
+
+  return { title: point, description: "" };
 }

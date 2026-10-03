@@ -14,6 +14,8 @@ interface AboutSectionProps {
   title?: string;
   gradientWord?: string;
   subheading?: string;
+  /** Overrides the default "About {gradientWord}" heading when supplied. */
+  heading?: string;
   stats?: AboutStat[];
   imageAlt?: string;
 }
@@ -31,6 +33,7 @@ export default function AboutSection({
   title = "About",
   gradientWord = "Eddinet",
   subheading,
+  heading,
   stats = defaultStats,
   imageAlt = "Eddinet Digital Agency",
 }: AboutSectionProps) {
@@ -102,7 +105,7 @@ export default function AboutSection({
                   width={1000}
                   height={667}
                   className="w-full h-auto object-contain"
-                  unoptimized
+                  sizes="(max-width: 1024px) 95vw, 560px"
                 />
 
                 {/* Image gradient */}
@@ -212,7 +215,11 @@ export default function AboutSection({
 
             {/* HEADING */}
             <h2 className="text-[2rem] font-extrabold leading-[1.2] mb-4 text-[var(--text-main)] max-[768px]:text-[1.7rem]">
-              About <span className="gradient-text">{gradientWord}</span>
+              {heading ?? (
+                <>
+                  About <span className="gradient-text">{gradientWord}</span>
+                </>
+              )}
             </h2>
 
             {subheading && (

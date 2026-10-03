@@ -126,7 +126,13 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
                     className="group bg-[var(--bg-card)] border border-[var(--border-color)] rounded-[var(--radius-lg)] overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[var(--border-hover)] no-underline flex flex-col"
                   >
                     <div className="h-44 relative overflow-hidden">
-                      <Image src={c.image} alt={`${c.client} case study`} fill className="object-cover transition-transform duration-500 group-hover:scale-105" unoptimized />
+                      <Image
+                        src={c.image}
+                        alt={`${c.client} case study`}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
                       <div className="absolute inset-0 bg-gradient-to-t from-[rgba(11,15,25,0.9)] to-transparent" />
                       <div className="absolute bottom-3 left-4 right-4">
                         <div className="text-[0.75rem] uppercase tracking-wider text-[var(--main-accent)] font-bold mb-1">{c.tag}</div>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { imgSrc } from "@/data/images";
 
 export default function Hero() {
@@ -9,9 +10,13 @@ export default function Hero() {
     >
       {/* Background with hero image + gradient overlay */}
       <div className="absolute inset-0 pointer-events-none">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-90"
-          style={{ backgroundImage: `url('${heroSrc}')` }}
+        <Image
+          src={heroSrc}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover opacity-90"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-[var(--main-accent)]/5 via-transparent to-transparent" />
         <div className="absolute top-[-40%] right-[-20%] w-[600px] h-[600px] rounded-full bg-[var(--main-accent)]/10 blur-3xl" />

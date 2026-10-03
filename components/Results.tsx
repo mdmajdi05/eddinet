@@ -1,21 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
+import { stockImageSrc } from "@/data/stock-images";
 
 const outcomes = [
   {
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80",
+    image: stockImageSrc("photo-1551288049-bebda4e38f71"),
     tag: "Visibility",
     title: "SEO & AI SEO",
     desc: "We define measurable visibility goals — qualified organic traffic, rankings on the keywords that matter, and presence in AI-generated answers — then report against them in business terms, not vanity metrics.",
   },
   {
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&q=80",
+    image: stockImageSrc("photo-1556742049-0cfed4f6a45d"),
     tag: "Acquisition",
     title: "Paid Media & Content",
     desc: "Campaigns are planned around cost per acquisition and qualified lead volume, with content and landing pages built to convert. Every number is tied to a real, verifiable business outcome.",
   },
   {
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&q=80",
+    image: stockImageSrc("photo-1498050108023-c5249f4df085"),
     tag: "Technology",
     title: "Web, Apps, Software & Cloud",
     desc: "From high-converting websites and eCommerce to software, AI, cloud and DevOps, technology is measured by reliability, performance and the conversion it enables — and supported long after launch.",
@@ -49,7 +50,7 @@ export default function Results() {
                   alt={r.title}
                   fill
                   className="object-cover transition-transform duration-500 hover:scale-105"
-                  unoptimized
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[rgba(11,15,25,0.85)] to-transparent" />
                 <div className="absolute bottom-3 left-4 right-4">

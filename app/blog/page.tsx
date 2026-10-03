@@ -46,7 +46,13 @@ export default function BlogPage() {
               className="group bg-[var(--bg-card)] border border-[var(--border-color)] rounded-[var(--radius-lg)] overflow-hidden transition-all duration-300 hover:border-[var(--border-hover)] hover:-translate-y-[6px] hover:shadow-[0_15px_35px_rgba(var(--accent-rgb),0.1)] no-underline flex flex-col"
             >
               <div className="h-48 relative overflow-hidden">
-                <Image src={b.image} alt={b.title} fill className="object-cover transition-transform duration-500 group-hover:scale-105" unoptimized />
+                <Image
+                  src={b.image}
+                  alt={b.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
                 <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 py-1 px-3 bg-[rgba(0,0,0,0.6)] backdrop-blur-sm rounded-2xl text-[0.75rem] font-semibold text-[var(--main-accent)]">
                   {b.label}
                 </div>

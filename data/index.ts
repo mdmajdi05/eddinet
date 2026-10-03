@@ -1,4 +1,4 @@
-﻿// ============================================================================
+// ============================================================================
 //  EDDINET — DATA DIRECTORY (sab data kahan hai, isme yahan hi se dhundho)
 // ============================================================================
 //
@@ -38,7 +38,7 @@
 //        title: "Client Name",
 //        slug: "client-name",
 //        url: "https://client.com",
-//        image: "https://images.unsplash.com/...",
+//        image: stockImageSrc("photo-1234567890abcdef"),
 //        category: "web",
 //        gradient: "from-cyan-500 to-blue-600",
 //        client: "Client Name",
@@ -63,3 +63,4 @@ export * from "./industries";
 export * from "./contact";
 export * from "./case-studies";
 export * from "./images";
+export * from "./stock-images";

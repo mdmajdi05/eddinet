@@ -102,7 +102,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                 width={900}
                 height={560}
                 className="w-full h-auto object-cover"
-                unoptimized
+                sizes="(max-width: 900px) 100vw, 900px"
               />
             </div>
           </div>

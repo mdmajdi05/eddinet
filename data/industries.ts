@@ -1,4 +1,4 @@
-﻿// ============================================================================
+// ============================================================================
 //  FILE: data/industries.ts
 // WHAT'S IN THIS FILE:  (INDUSTRIES)
 //   industries[]  - sectors shown on /industries + our-work grids

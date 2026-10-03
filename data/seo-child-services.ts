@@ -1,4 +1,4 @@
-﻿export interface SeoChildFeature {
+export interface SeoChildFeature {
   title: string;
   description: string;
 }

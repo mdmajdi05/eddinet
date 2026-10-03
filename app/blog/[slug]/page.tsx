@@ -38,7 +38,7 @@ export async function generateMetadata({
       authors: [site.name],
       images: [
         {
-          url: "https://eddinet.com/opengraph-image.png",
+          url: "https://eddinet.com/opengraph-image.webp",
           width: 1200,
           height: 630,
           alt: "Eddinet - Digital Marketing & Software Agency",

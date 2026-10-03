@@ -332,7 +332,7 @@ const organizationSchema = {
   "@type": "Organization",
   name: "Eddinet",
   url: site.url,
-  logo: "https://eddinet.com/eddinet-logo.png",
+  logo: "https://eddinet.com/images/brand/eddinet-logo.webp",
   description: site.tagline,
   email: site.email,
   telephone: site.phone,
@@ -422,7 +422,7 @@ export default function AboutPage() {
                     width={1000}
                     height={667}
                     className="w-full h-[430px] object-cover max-[640px]:h-[360px]"
-                    unoptimized
+                    sizes="(max-width: 1024px) 100vw, 520px"
                     priority
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />

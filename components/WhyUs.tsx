@@ -1,43 +1,5 @@
 import Image from "next/image";
-
-const features = [
-  {
-    num: "01",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80",
-    title: "Marketing + Technology Together",
-    desc: "Campaigns, websites, applications and infrastructure are planned as connected parts of one system — not handed to separate vendors with separate goals.",
-  },
-  {
-    num: "02",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80",
-    title: "ROI as the Starting Point",
-    desc: "Services are selected according to the business outcome they need to support — leads, transactions, retention, efficiency or brand growth — rather than the other way around.",
-  },
-  {
-    num: "03",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80",
-    title: "Full-Funnel Thinking",
-    desc: "Organic, paid, content, creative, web and technology capabilities work together instead of operating as isolated activities with competing objectives.",
-  },
-  {
-    num: "04",
-    image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=400&q=80",
-    title: "Data-Backed Decisions",
-    desc: "Performance, search behaviour, user behaviour and business signals guide optimisation — so choices are based on evidence, not assumptions.",
-  },
-  {
-    num: "05",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&q=80",
-    title: "Custom Strategy",
-    desc: "The approach is shaped around your business model, audience, competitive landscape and buying journey — not a generic template applied to every client.",
-  },
-  {
-    num: "06",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&q=80",
-    title: "Built for Long-Term Growth",
-    desc: "The objective is sustainable visibility, reliable technology and measurable business value — not short-term vanity metrics that fade.",
-  },
-];
+import { whyFeatures } from "@/data/home";
 
 export default function WhyUs() {
   return (
@@ -58,7 +20,7 @@ export default function WhyUs() {
           </p>
         </div>
         <div className="grid grid-cols-2 gap-[30px] mt-[50px] max-[1024px]:grid-cols-1">
-          {features.map((f, i) => (
+          {whyFeatures.map((f, i) => (
             <div
               key={i}
               className="flex gap-5 p-7 bg-[var(--bg-card)] border border-[var(--border-color)] rounded-[var(--radius-lg)] transition-all duration-300 hover:border-[var(--hover-line)] hover:-translate-y-1 overflow-hidden"
@@ -69,7 +31,7 @@ export default function WhyUs() {
                   alt={f.title}
                   fill
                   className="object-cover transition-transform duration-500 hover:scale-110"
-                  unoptimized
+                  sizes="120px"
                 />
               </div>
               <div>

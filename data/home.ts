@@ -1,4 +1,6 @@
-﻿// ============================================================================
+import { stockImageSrc } from "@/data/stock-images";
+
+// ============================================================================
 //  FILE: data/home.ts  (HOME PAGE)
 // WHAT'S IN THIS FILE:
 //   processSteps - Home "How we work" timeline steps
@@ -56,37 +58,37 @@ export const processSteps: ProcessStep[] = [
 export const whyFeatures: WhyFeature[] = [
   {
     num: "01",
-    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&q=80",
+    image: stockImageSrc("photo-1504384308090-c894fdcc538d"),
     title: "Marketing + Technology Together",
     desc: "Campaigns, websites, applications and infrastructure are planned as connected parts of one system - not separate vendor hand-offs.",
   },
   {
     num: "02",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80",
+    image: stockImageSrc("photo-1551288049-bebda4e38f71"),
     title: "ROI as the Starting Point",
     desc: "Services are selected according to the business outcome they need to support: leads, transactions, retention, efficiency or brand growth.",
   },
   {
     num: "03",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&q=80",
+    image: stockImageSrc("photo-1460925895917-afdab827c52f"),
     title: "Full-Funnel Thinking",
     desc: "Organic, paid, content, creative, web and technology capabilities work together instead of operating as isolated activities.",
   },
   {
     num: "04",
-    image: "https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=400&q=80",
+    image: stockImageSrc("photo-1531973576160-7125cd663d86"),
     title: "Data-Backed Decisions",
     desc: "Performance, search behaviour, user behaviour and business signals guide optimisation - not assumptions carried over from other clients.",
   },
   {
     num: "05",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&q=80",
+    image: stockImageSrc("photo-1552664730-d307ca884978"),
     title: "Custom Strategy",
     desc: "The approach is shaped around your business model, audience, competitive landscape and buying journey rather than a templated playbook.",
   },
   {
     num: "06",
-    image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=400&q=80",
+    image: stockImageSrc("photo-1521737711867-e3b97375f902"),
     title: "Built for Long-Term Growth",
     desc: "The objective is sustainable visibility, reliable technology and measurable business value - not vanity metrics.",
   },

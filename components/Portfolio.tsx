@@ -42,7 +42,7 @@ export default function Portfolio() {
                     alt={r.client}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
-                    unoptimized
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[rgba(11,15,25,1)] via-[rgba(11,15,25,0.35)] to-transparent" />
                   <div className="absolute bottom-4 left-5 right-5">

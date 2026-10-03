@@ -6,6 +6,8 @@
 //    legacy copy rendered on the matching service page.
 // ============================================================================
 
+import { docxServicePages as docxServiceChildPages } from "./docx-content-services";
+
 export interface DocxSection {
   title: string;
   description: string;
@@ -24,25 +26,35 @@ export interface DocxProcessStep {
 
 export interface DocxPageContent {
   slug: string;
-  category: "seo" | "design-creative" | "web-development";
+  category: string;
   title: string;
   metaTitle: string;
   metaDescription: string;
   heroHeading: string;
   heroSubheading: string;
   about: string;
+  aboutHeading?: string;
   features: DocxSection[];
   featuresHeading?: string;
   featuresDescription?: string;
   benefits: DocxSection[];
   benefitsHeading?: string;
   benefitsDescription?: string;
-  whyChooseUs: { heading: string; description?: string; points: string[] };
-  process: { heading: string; description?: string; steps: DocxProcessStep[] };
+  whyChooseUs: { heading?: string; description?: string; points: string[] };
+  process: { heading?: string; description?: string; steps: DocxProcessStep[] };
   faqs: DocxFaq[];
+  faqsHeading?: string;
+  /**
+   * When true the document is the ONLY source for this page: a section the
+   * document left empty renders nothing, rather than silently keeping the old
+   * site copy. Set on the pages transcribed from "EDDITNET CONTENT (5).docx".
+   * The hand-written entries (SEO, design-creative, web-development) leave it
+   * unset so they keep the original fall-back behaviour.
+   */
+  docOnly?: boolean;
 }
 
-export const docxChildPages: Record<string, DocxPageContent> = {
+const docxHandwrittenChildPages: Record<string, DocxPageContent> = {
   // ==========================================================================
   //  SEO CHILD PAGES  (/services/seo/<slug>)
   // ==========================================================================
@@ -1342,131 +1354,122 @@ export const docxChildPages: Record<string, DocxPageContent> = {
   "graphic-designing": {
     slug: "graphic-designing",
     category: "design-creative",
+    docOnly: true,
     title: "Graphic Designing",
-    metaTitle: "Graphic Designing & SEO Company in India | Eddinet",
+    metaTitle: "Graphic Design Services in Delhi NCR | Eddinet",
     metaDescription:
-      "Design That Speaks. Rankings That Deliver. Eddinet pairs sharp graphic designing with a SEO company in India approach — so brands get seen, understood and chosen. Get a free consultation.",
-    heroHeading: "Graphic Designing Services in Delhi NCR",
+      "Eddinet provides graphic design services in Delhi NCR that turn your ideas into clear, memorable visuals. We create logos, social media posts, brochures, and ad creatives that match your brand.",
+    heroHeading: "Graphic Design Services in Delhi NCR",
     heroSubheading:
-      "If your website looks average and gets lost on page two of Google, you're leaving money on the table every single day. At Eddinet, we sit at the meeting point of two things every growing brand needs: sharp graphic designing that makes people stop scrolling, and a SEO company in India approach that makes sure they actually find you in the first place.",
+      "Custom Graphic Design | Logo & Branding | Affordable Design for Small Businesses\n\nEddinet provides graphic design services in Delhi NCR that turn your ideas into clear, memorable visuals. We create logos, social media posts, brochures, and ad creatives that match your brand.",
     about:
-      "We've worked with founders who had a great product but a forgettable logo. We've worked with businesses ranking on page five for keywords their competitors owned for years. In both cases, the fix wasn't complicated; it was consistent, strategic work done by people who understand Indian markets, Indian buyers, and what actually moves the needle online.\n\nEddinet is a Delhi-based digital growth partner built by people who got tired of agencies overpromising and underdelivering. We're not the biggest name in the industry, and we're fine with that — because our clients don't hire us to be famous; they hire us to grow.\n\nOur team is a mix of designers who've spent years inside brand studios, SEO specialists who've handled everything from local shop websites to enterprise-level portals, and strategists who actually read the analytics dashboard instead of just screenshotting it for a monthly report. What ties us together is a simple belief: a business's online presence should look as good as its actual product, and it should be easy for the right customer to find.\n\nWe work with startups, D2C brands, clinics, real estate developers, educational institutes, and established companies across India who want their digital presence to finally match their ambition.",
+      "Does your brand look different on every platform? Are you tired of templates that make you look like everyone else? If yes, Eddinet is the solution to your problem.\n\nAs a graphic design agency in Delhi NCR, we work with startups, shops, and growing companies. We learn about your business and audience before opening any design software. You also receive clear previews at every stage, so you always know where your project stands.",
+    aboutHeading: "About Us: Graphic Design Agency in Delhi NCR",
+    featuresHeading: "Our Graphic Design Services in Delhi NCR",
+    featuresDescription:
+      "We focus on four areas where good design brings the biggest results.",
     features: [
       {
-        title: "Logo & Brand Identity",
+        title: "Custom Graphic Design Services",
         description:
-          "A logo, color palette, and visual language that people remember and recognize instantly.",
+          "Our custom graphic design services start with a blank canvas, not a template. We create original visuals for your brand, from logos to packaging. Because of this, your business looks unique and is easy to recognize.",
       },
       {
-        title: "Social Media Creatives",
+        title: "Professional Graphic Designer for Branding and Marketing",
         description:
-          "Posts, carousels, and story designs built to stop the scroll and hold attention.",
+          "Our professional graphic designers build complete brand looks, including logos, colour palettes, and typography. We also design social media posts, flyers, brochures, and ad banners. In addition, every file follows one style guide, so your brand stays consistent.",
       },
       {
-        title: "Ad Creatives",
+        title: "Affordable Graphic Design Services",
         description:
-          "High-converting visuals for Google, Meta, and LinkedIn campaigns that are designed around clicks and conversions, not just aesthetics.",
+          "Our affordable graphic design services use clear packages with no hidden charges. You pay for the work you need, not for extras you will never use. As a result, quality design stays within reach of smaller budgets.",
       },
       {
-        title: "Brochures, Flyers & Print Design",
+        title: "Graphic Design Company for Small Business",
         description:
-          "Professional print materials that represent your brand the way it deserves to be represented.",
-      },
-      {
-        title: "Packaging Design",
-        description:
-          "Designs that make your product stand out the moment someone sees it on a shelf or a screen.",
-      },
-      {
-        title: "Website & UI Graphics",
-        description:
-          "Banners, icons, and layout visuals that make your website feel polished and premium.",
+          "Small businesses need design that works hard and costs little. We create a starter kit with a logo, social media templates, and print materials. Your team can then post and print with confidence, without hiring a full-time designer.",
       },
     ],
-    benefits: [
-      {
-        title: "Faster Visibility",
-        description:
-          "Search rankings and thoughtful design work together to get you seen sooner and remembered longer.",
-      },
-      {
-        title: "Stronger Brand Recall",
-        description:
-          "Consistent, well-crafted visuals mean customers recognize you across platforms, not just on your homepage.",
-      },
-      {
-        title: "Better Conversion Rates",
-        description:
-          "Design built with intent turns visitors into leads, not just page views.",
-      },
-      {
-        title: "Sustainable Growth",
-        description:
-          "Our SEO methods are built to last, not to get your site flagged or penalized down the line.",
-      },
-      {
-        title: "Clear Reporting",
-        description:
-          "You'll always know what's being worked on, why, and what results it's bringing in.",
-      },
-      {
-        title: "One Team, Two Strengths",
-        description:
-          "Instead of juggling a design agency and an SEO agency separately, you get both working in sync under one roof.",
-      },
-    ],
+    benefits: [],
     whyChooseUs: {
-      heading: "Why Choose Us",
+      heading: "Why Choose Eddinet for Graphic Design Services in Delhi NCR",
+      description:
+        "We measure success by designs that look consistent, load fast, and help customers remember your brand.",
       points: [
-        "We don't outsource your work to random freelancers. Every project is handled by our in-house team, so quality stays consistent.",
-        "We explain our decisions. If we recommend a keyword strategy or a design direction, we'll tell you why — no vague jargon.",
-        "We move at a realistic pace. Good SEO and good design both take real work; we won't promise page-one rankings in a week, but we will show you steady, honest progress.",
-        "We stay involved after launch. Our work doesn't end when a design is delivered or a campaign goes live — we track, adjust, and keep improving.",
-        "We've done this across industries. From healthcare to real estate to e-commerce, we've learned what works and what doesn't, so you're not paying for our learning curve.",
+        "Original work, not recycled templates: Every design is created for your brand. Your logo and visuals stand apart from competitors. This builds trust and recognition.",
+        "Clear previews before final delivery: You review designs at each stage. Changes are made early, not after the work is finished. This saves time and avoids surprises.",
+        "Print and digital ready: We deliver files in the right formats for social media, websites, and printing. Colours and resolution are checked in advance. Your designs look sharp everywhere.",
+        "Pricing that suits small budgets: Packages are written clearly before we start. Extras are discussed first and never added silently. Billing stays predictable.",
+        "You own the final design: You receive the final files and the right to use them. No hidden restrictions limit your brand. This keeps your business in control.",
+        "Easy communication in your time zone: Our team is available during Indian business hours. Messages get quick, clear replies. Projects stay on schedule.",
       ],
     },
     process: {
-      heading: "Our Graphic Designing Process",
+      heading: "Our Process for Graphic Design in Delhi NCR",
+      description:
+        "Here is how we take your project from the first idea to the final files.",
       steps: [
         {
           num: "01",
-          title: "Discovery Call",
+          title: "Brief and brand discovery",
           description:
-            "We start by understanding your business, your audience, and what \"success\" actually looks like for you, not just generic KPIs.",
+            "We ask about your business, audience, competitors, and style preferences. This shows what your design must achieve. It also prevents guesswork later.",
         },
         {
           num: "02",
-          title: "Research & Audit",
+          title: "Research and concept direction",
           description:
-            "For SEO, that means auditing your current site and competitors. For design, that means understanding your brand, industry, and the visual language your audience responds to.",
+            "We study your market and prepare mood boards. As a result, you approve a clear direction before full design begins. Nothing is built on assumptions.",
         },
         {
           num: "03",
-          title: "Strategy & Planning",
+          title: "First design drafts",
           description:
-            "We map out a clear plan — keywords to target, content to build, or design concepts to explore — before a single asset is created.",
+            "Next, we create initial concepts based on the approved direction. You see them in the format you will actually use. Feedback is simple to share.",
         },
         {
           num: "04",
-          title: "Execution",
+          title: "Revisions and refinement",
           description:
-            "Our designers and SEO specialists get to work, building assets and optimizations that are grounded in the strategy, not just guesswork.",
+            "Then we polish the chosen design using your feedback. We adjust colours, spacing, and text until it feels right. Each round stays organized and on schedule.",
         },
         {
           num: "05",
-          title: "Review & Refinement",
+          title: "Final files and format checks",
           description:
-            "We share drafts and progress reports along the way, and we genuinely welcome your feedback before anything goes live.",
+            "We prepare print-ready and web-ready files in the formats you need. Colours and sizes are checked for each use. This avoids blurry prints and cropped posts.",
         },
         {
           num: "06",
-          title: "Launch & Ongoing Optimization",
+          title: "Handover and support",
           description:
-            "Designs go live, campaigns go out, rankings get tracked — and we keep refining based on real performance, not assumptions.",
+            "Finally, you receive all source and export files, plus a simple usage guide. We remain available for future updates. Your brand can grow without starting over.",
         },
       ],
     },
-    faqs: [],
+    faqsHeading: "FAQs About Graphic Design Services in Delhi NCR",
+    faqs: [
+      {
+        q: "How much do graphic design services in Delhi NCR cost?",
+        a: "The price depends on the type of design, number of concepts, and revision rounds. A single logo costs far less than a full branding package. After a short discovery call, we share a clear quote with no hidden charges.",
+      },
+      {
+        q: "How long does a graphic design project take?",
+        a: "A simple social media post or flyer can take a few days. A complete logo and branding project usually takes one to three weeks. We share a timeline before work begins.",
+      },
+      {
+        q: "What is the difference between a graphic designing company and a freelancer?",
+        a: "A company offers a team, a structured process, and backup if one person is unavailable. A freelancer may cost less but can be limited in capacity. The right choice depends on your project size and long-term needs.",
+      },
+      {
+        q: "Do I get the source files after the design is finished?",
+        a: "Yes, you receive the final files in the formats you need, and source files can be included on request. This lets you or another designer edit them later. We confirm the details before the project starts.",
+      },
+      {
+        q: "Can you design for a small business with a limited budget?",
+        a: "Yes. We offer starter packages for logos, social media designs, and print materials. You can begin with the essentials and add more as your business grows.",
+      },
+    ],
   },
 
   "logo-designing": {
@@ -1478,9 +1481,12 @@ export const docxChildPages: Record<string, DocxPageContent> = {
       "Running a business today means competing for attention every day — on Google, Instagram, WhatsApp, everywhere your customer looks. Eddinet designs logos people remember. Request a free consultation.",
     heroHeading: "Logo Designing Services in Delhi NCR",
     heroSubheading:
-      "Running a business today means competing for attention every single day — on Google, on Instagram, on WhatsApp, everywhere your customer looks. That's where Eddinet comes in. We're a full-service digital agency built around one simple idea: your brand should look as good as the work you actually do.",
+      "Running a business today means competing for attention every single day — on Google, on Instagram, on WhatsApp, everywhere your customer looks. That's where Eddinet comes in. We're a full-service digital agency built around one simple idea: your brand should look as good as the work you actually do. Whether you need a logo that people remember, a website that converts visitors into paying customers, or an SEO company in India that actually understands how Google ranks websites in 2026, we handle it under one roof, with one team, and one point of contact. No jargon-heavy reports. No disappearing after the contract is signed. Just steady, honest work that moves the needle for your business.",
     about:
-      "Whether you need a logo that people remember, a website that converts visitors into paying customers, or an SEO company in India that actually understands how Google ranks websites in 2026, we handle it under one roof, with one team, and one point of contact. No jargon-heavy reports. No disappearing after the contract is signed. Just steady, honest work that moves the needle for your business.\n\nEddinet started with a frustration a lot of business owners share — hiring five different freelancers for five different jobs and still ending up with a brand that doesn't feel connected. A logo from one designer, a website from another developer, and an SEO \"expert\" who disappears after month two. We built Eddinet to fix exactly that.\n\nToday, we're a team of designers, developers, SEO specialists, and content writers working together under one roof in India, serving businesses across the country and abroad. We've worked with startups just getting off the ground, local shops trying to compete online, and established companies looking to scale further.\n\nWhat hasn't changed since day one is our approach: understand the business first, then design the strategy around it, not the other way around. We're not interested in template solutions. We're interested in results you can actually measure — more calls, more leads, more sales.",
+      "Eddinet started with a frustration a lot of business owners share — hiring five different freelancers for five different jobs and still ending up with a brand that doesn't feel connected. A logo from one designer, a website from another developer, and an SEO \"expert\" who disappears after month two.\n\nWe built Eddinet to fix exactly that.\n\nToday, we're a team of designers, developers, SEO specialists, and content writers working together under one roof in India, serving businesses across the country and abroad. We've worked with startups just getting off the ground, local shops trying to compete online, and established companies looking to scale further.\n\nWhat hasn't changed since day one is our approach: understand the business first, then design the strategy around it, not the other way around. We're not interested in template solutions. We're interested in results you can actually measure — more calls, more leads, more sales.",
+    featuresHeading: "Logo Designing Services That Actually Represent Your Brand",
+    featuresDescription:
+      "Your logo is often the very first thing a potential customer sees — before your product, before your pitch, before anything else. It needs to say something in half a second.",
     features: [
       {
         title: "Custom Logo Concepts",
@@ -1513,6 +1519,7 @@ export const docxChildPages: Record<string, DocxPageContent> = {
           "On-page SEO, keyword research based on how your actual customers search, local SEO, content-led SEO, link building through genuine websites, and monthly reporting that tells you what changed and why it matters.",
       },
     ],
+    benefitsHeading: "Benefits of Working With Eddinet",
     benefits: [
       {
         title: "Everything Under One Roof",
@@ -1608,9 +1615,11 @@ export const docxChildPages: Record<string, DocxPageContent> = {
       "Logos That Speak. Brands That Stay. Eddinet builds a brand identity design people actually remember — a complete visual language across every touchpoint. Book a free consultation.",
     heroHeading: "Brand Identity Design Services in Delhi NCR",
     heroSubheading:
-      "Logos That Speak. Brands That Stay. Eddinet helps businesses build a Brand Identity Design that people actually remember — not just a logo sitting on a website, but a complete visual language that shows up consistently across every touchpoint your customer sees.",
+      "Most businesses in India spend lakhs on marketing and still struggle to be remembered. Why? Because nobody's paying attention to the one thing that actually sticks in a customer's mind — their brand identity. At Eddinet, we don't treat Brand Identity Design as \"just a logo project.\" We look at how your brand looks, feels, and communicates everywhere — your website, your packaging, your social media, your invoices, even your email signature. A scattered brand confuses people. A consistent one builds trust, and trust is what actually converts a visitor into a paying customer. We've worked with founders who came to us with nothing more than an idea and a name, and with established companies that had an outdated logo dragging down an otherwise good business. Either way, the process starts the same way: understanding what your brand stands for before we open a single design tool. And here's something most agencies won't tell you — a strong brand identity also makes your digital marketing cheaper and faster to scale. When your visuals are consistent, your ads perform better, your website converts more, and even your SEO efforts get a boost because people recognise and trust your brand when they see it in search results. That's exactly why we pair our design work closely with our team that also runs as a dedicated SEO company in India — because a great-looking brand that nobody can find online is only half the job done.",
     about:
-      "Most businesses in India spend lakhs on marketing and still struggle to be remembered. Why? Because nobody's paying attention to the one thing that actually sticks in a customer's mind — their brand identity.\n\nAt Eddinet, we don't treat Brand Identity Design as \"just a logo project.\" We look at how your brand looks, feels, and communicates everywhere — your website, your packaging, your social media, your invoices, even your email signature. A scattered brand confuses people. A consistent one builds trust, and trust is what actually converts a visitor into a paying customer.\n\nWe've worked with founders who came to us with nothing more than an idea and a name, and with established companies that had an outdated logo dragging down an otherwise good business. Either way, the process starts the same way: understanding what your brand stands for before we open a single design tool.\n\nAnd here's something most agencies won't tell you — a strong brand identity also makes your digital marketing cheaper and faster to scale. When your visuals are consistent, your ads perform better, your website converts more, and even your SEO efforts get a boost because people recognise and trust your brand when they see it in search results. That's exactly why we pair our design work closely with our team that also runs as a dedicated SEO company in India — because a great-looking brand that nobody can find online is only half the job done.\n\nEddinet is a design-and-growth studio based in India, working with businesses that want to look as good as they perform. We're not a giant agency with a hundred account managers between you and the designer. When you work with us, you talk directly to the people actually building your brand.",
+      "Eddinet is a design-and-growth studio based in India, working with businesses that want to look as good as they perform. We're not a giant agency with a hundred account managers between you and the designer. When you work with us, you talk directly to the people actually building your brand.\n\nOur team is a mix of brand strategists, graphic designers, and digital marketers who've spent years figuring out what actually makes a business memorable in a crowded market. We've designed identities for D2C brands, clinics, real estate developers, ed-tech startups, and local businesses that just wanted to stop looking like everyone else in their category.\n\nWhat sets us apart is simple: we don't hand you a logo file and disappear. We stick around, we ask questions, we push back when something won't work for your audience, and we make sure the identity we build actually gets used correctly across every platform. Because a brand guideline document sitting unused in a folder helps nobody.",
+    featuresHeading:
+      "Our Services — Brand Identity Design That Covers Every Touchpoint",
     features: [
       {
         title: "Logo Design & Brand Identity Design",
@@ -1643,6 +1652,7 @@ export const docxChildPages: Record<string, DocxPageContent> = {
           "Design without the right message falls flat. We help define how your brand talks — tone, tagline direction, and the story you tell your customers.",
       },
     ],
+    benefitsHeading: "Benefits of Investing in Brand Identity Design",
     benefits: [
       {
         title: "Instant Recognition",
@@ -1739,9 +1749,12 @@ export const docxChildPages: Record<string, DocxPageContent> = {
       "Your website has about five seconds to convince someone to stay. Eddinet works at the intersection of UI/UX design and search visibility — interfaces people enjoy using, and rankings that get you found. Book a free consultation.",
     heroHeading: "UI/UX Design Services in Delhi NCR",
     heroSubheading:
-      "Your website has about five seconds to convince someone to stay. That's it. If the design feels clunky, or if the page never shows up on Google in the first place, you've already lost the visitor before they even see what you're selling. That's the gap Eddinet fills — we build interfaces people actually enjoy using, and we get you found by the people already searching for what you offer.",
+      "Your website has about five seconds to convince someone to stay. That's it. If the design feels clunky, or if the page never shows up on Google in the first place, you've already lost the visitor before they even see what you're selling. That's the gap Eddinet fills. We're a team that works at the intersection of UI/UX design and search visibility because a beautiful website that nobody finds is just as useless as a high-ranking page that visitors bounce off in ten seconds. We build interfaces people actually enjoy using, and we get you found by the people already searching for what you offer. If you've been going back and forth between \"we need a better website\" and \"we need more traffic,\" you don't have to choose. That's literally what we do, together, under one roof.",
     about:
-      "If you've been going back and forth between \"we need a better website\" and \"we need more traffic,\" you don't have to choose. That's literally what we do, together, under one roof.\n\nEddinet started because we kept seeing the same problem play out with different clients: a business would hire a designer for a slick-looking site, then hire a separate agency for SEO, and the two would barely talk to each other. Six months later, the site looked great but ranked nowhere, or it ranked fine but converted terribly because the UX was working against the content.\n\nWe built our team to close that gap. Our designers think about search intent while they're sketching wireframes, and our SEO specialists understand enough about design to know when a \"quick fix\" for rankings would wreck the user experience. It's a small thing, but it changes how projects actually turn out.\n\nToday, we work with startups, D2C brands, service businesses, and a few enterprise clients who want an agency that wouldn't need three months of hand-holding to understand their product. We're based in India; we keep our teams small enough to actually know your project by name, and we measure our own success the same way you do — by whether your numbers move.",
+      "Eddinet started because we kept seeing the same problem play out with different clients: a business would hire a designer for a slick-looking site, then hire a separate agency for SEO, and the two would barely talk to each other. Six months later, the site looked great but ranked nowhere, or it ranked fine but converted terribly because the UX was working against the content.\n\nWe built our team to close that gap. Our designers think about search intent while they're sketching wireframes, and our SEO specialists understand enough about design to know when a \"quick fix\" for rankings would wreck the user experience. It's a small thing, but it changes how projects actually turn out.\n\nToday, we work with startups, D2C brands, service businesses, and a few enterprise clients who want an agency that wouldn't need three months of hand-holding to understand their product. We're based in India; we keep our teams small enough to actually know your project by name, and we measure our own success the same way you do — by whether your numbers move.",
+    featuresHeading: "UI/UX Design Services in India",
+    featuresDescription:
+      "We split our work into two connected tracks. You can bring us in for one or both — most clients end up wanting both once they see how much they overlap.",
     features: [
       {
         title: "User Research & Wireframing",
@@ -1784,6 +1797,7 @@ export const docxChildPages: Record<string, DocxPageContent> = {
           "We get your business showing up in local search and Google Maps, build steady, credible backlinks, and report monthly on what we did, why, and what happened as a result.",
       },
     ],
+    benefitsHeading: "Benefits of UI/UX Design & SEO Working Together",
     benefits: [
       {
         title: "One Team, One Strategy",
@@ -1879,9 +1893,10 @@ export const docxChildPages: Record<string, DocxPageContent> = {
       "If your business is still posting randomly on Instagram and hoping for the best, it's time for a change. Eddinet builds scroll-stopping social media creatives and the search rankings that bring in customers. Book a free consultation.",
     heroHeading: "Social Media Creatives Services in Delhi NCR",
     heroSubheading:
-      "If your business is still posting randomly on Instagram and hoping for the best, it's time for a change. At Eddinet, we help brands get noticed, get found, and get chosen through scroll-stopping social media creatives and search rankings that actually bring in customers.",
+      "If your business is still posting randomly on Instagram and hoping for the best, it's time for a change. At Eddinet, we help brands get noticed, get found, and get chosen through scroll-stopping social media creatives and search rankings that actually bring in customers. We work with founders, D2C brands, clinics, real estate firms, and local businesses across India who want more than \"likes.\" They want calls, enquiries, and sales. That's the gap Eddinet fills. We're not another agency that hands you a report full of jargon at the end of the month. We're the team that sits down, understands your business, and builds a plan that fits your budget and your goals — not a template we reuse for every client. Whether you need a content calendar that doesn't put your audience to sleep, or you're searching for a reliable SEO company in India that can get your website onto page one, Eddinet is built to deliver both.",
     about:
-      "We work with founders, D2C brands, clinics, real estate firms, and local businesses across India who want more than \"likes.\" They want calls, enquiries, and sales. That's the gap Eddinet fills. We're not another agency that hands you a report full of jargon at the end of the month. We're the team that sits down, understands your business, and builds a plan that fits your budget and your goals — not a template we reuse for every client.\n\nEddinet started with a simple observation: most small and mid-sized businesses in India were either overpaying for generic marketing packages or trying to manage everything in-house with no real strategy. Neither works long-term.\n\nSo we built an agency around two things clients kept asking for — good-looking, high-converting social media creatives, and SEO that's rooted in data, not guesswork. Our team is a mix of designers, content writers, SEO specialists, and performance marketers who've worked with brands in healthcare, real estate, fashion, education, and e-commerce.\n\nWe don't believe in one-size-fits-all packages. A skincare brand doesn't need the same content strategy as a real estate developer, and a local clinic doesn't need the same keyword targeting as an e-commerce store selling pan-India. Every account at Eddinet gets its own strategy, built around your industry, your competitors, and your actual customers.",
+      "Eddinet started with a simple observation: most small and mid-sized businesses in India were either overpaying for generic marketing packages or trying to manage everything in-house with no real strategy. Neither works long-term.\n\nSo we built an agency around two things clients kept asking for — good-looking, high-converting social media creatives, and SEO that's rooted in data, not guesswork. Our team is a mix of designers, content writers, SEO specialists, and performance marketers who've worked with brands in healthcare, real estate, fashion, education, and e-commerce.\n\nWe don't believe in one-size-fits-all packages. A skincare brand doesn't need the same content strategy as a real estate developer, and a local clinic doesn't need the same keyword targeting as an e-commerce store selling pan-India. Every account at Eddinet gets its own strategy, built around your industry, your competitors, and your actual customers.",
+    featuresHeading: "Our Social Media Creatives & Marketing Services",
     features: [
       {
         title: "Social Media Creatives",
@@ -1914,6 +1929,7 @@ export const docxChildPages: Record<string, DocxPageContent> = {
           "Clear, monthly reports on what worked, what didn't, and what we're changing next — no fluff.",
       },
     ],
+    benefitsHeading: "Benefits of Working With Eddinet",
     benefits: [
       {
         title: "Custom Strategy, Not a Copy-Paste Plan",
@@ -1953,6 +1969,8 @@ export const docxChildPages: Record<string, DocxPageContent> = {
     ],
     whyChooseUs: {
       heading: "Why Choose Us",
+      description:
+        "There are hundreds of agencies out there claiming to be the best SEO company in India, and just as many promising \"viral\" social media growth. What sets Eddinet apart isn't a claim; it's how we work.",
       points: [
         "We don't outsource your account to a junior team the moment the contract is signed. We don't hand you a 40-page strategy deck and disappear for a month. And we definitely don't recycle the same content ideas across every client in the same industry.",
         "You get a team that treats your growth like it's our own business on the line — because, in a way, it is. Our reputation depends on your results.",
@@ -2006,9 +2024,10 @@ export const docxChildPages: Record<string, DocxPageContent> = {
       "Design That Grabs Attention. Strategy That Gets You Found. Eddinet designs banners that stop the scroll and backs them up with the SEO that gets your site found. Book a free consultation.",
     heroHeading: "Banner Design Services in Delhi NCR",
     heroSubheading:
-      "Design That Grabs Attention. Strategy That Gets You Found. At Eddinet, we bring together sharp visual design and result-driven digital strategy under one roof. Whether you need a banner that stops the scroll or a partner who can get your website ranking on Google, our team builds work that's made to convert, not just to look nice on a screen.",
+      "A good banner does one job really well — it grabs attention before the visitor scrolls past. A bad one gets ignored in half a second. That's the gap Eddinet fills for brands across India. We're a full-service creative and digital marketing team based out of India, and banner design happens to be one of the things we get asked for the most. Websites, ad campaigns, social media, email headers — if it needs a banner, our designers have probably made hundreds like it. But we don't stop at design. Since we're also recognised as a trusted SEO company in India, everything we design is built with your bigger marketing goals in mind, not just aesthetics. If you're a startup, an eCommerce brand, or an established business looking to refresh how you show up online, this is where design meets strategy.",
     about:
-      "A good banner does one job really well — it grabs attention before the visitor scrolls past. A bad one gets ignored in half a second. That's the gap Eddinet fills for brands across India.\n\nWe're a full-service creative and digital marketing team based out of India, and banner design happens to be one of the things we get asked for the most. Websites, ad campaigns, social media, email headers — if it needs a banner, our designers have probably made hundreds like it. But we don't stop at design. Since we're also recognised as a trusted SEO company in India, everything we design is built with your bigger marketing goals in mind, not just aesthetics.\n\nEddinet started with a simple idea — most agencies either do design or they do marketing. Rarely both, and even more rarely do they do both well. We wanted to change that.\n\nToday, our team of designers, SEO specialists, and marketers work side by side, which means your banner doesn't just look good — it's built to load fast, match your brand tone, and support the SEO and ad campaigns you're already running. As a growing SEO company in India, we've also made sure our design and content teams talk to each other constantly. That's rare in this industry, and it's exactly why clients stick with us.",
+      "Eddinet started with a simple idea — most agencies either do design or they do marketing. Rarely both, and even more rarely do they do both well. We wanted to change that.\n\nToday, our team of designers, SEO specialists, and marketers work side by side, which means your banner doesn't just look good — it's built to load fast, match your brand tone, and support the SEO and ad campaigns you're already running.\n\nWe've worked with businesses across healthcare, real estate, eCommerce, education, and finance, which gives us an edge most single-service agencies don't have. We know what a banner for a doctor's clinic needs versus one for a fashion brand's Diwali sale — and we design accordingly.\n\nAs a growing SEO company in India, we've also made sure our design and content teams talk to each other constantly. That's rare in this industry, and it's exactly why clients stick with us.",
+    featuresHeading: "Banner Design Services for Every Platform",
     features: [
       {
         title: "Banner Design for Every Platform",
@@ -2041,6 +2060,7 @@ export const docxChildPages: Record<string, DocxPageContent> = {
           "Logos, brochures, flyers, and packaging — we keep your visual identity consistent whether someone's viewing you online or holding your brochure in hand.",
       },
     ],
+    benefitsHeading: "Benefits of Working With Eddinet",
     benefits: [
       {
         title: "Faster Turnaround",
@@ -2136,9 +2156,10 @@ export const docxChildPages: Record<string, DocxPageContent> = {
       "A brochure is often the first physical thing a customer holds from your business. Eddinet creates brochure design solutions that inform, persuade and push the reader closer to picking up the phone.",
     heroHeading: "Brochure Design Services in Delhi NCR",
     heroSubheading:
-      "A brochure is often the first physical thing a customer holds in their hand from your business, and first impressions still matter, even in a digital-first world. At Eddinet, we create brochure design solutions that go beyond pretty layouts. Every brochure we design is built to inform, persuade, and push the reader one step closer to picking up the phone or walking into your store.",
+      "A brochure is often the first physical thing a customer holds in their hand from your business, and first impressions still matter, even in a digital-first world. At Eddinet, we create brochure design solutions that go beyond pretty layouts. Every brochure we design is built to inform, persuade, and push the reader one step closer to picking up the phone or walking into your store. Whether you need a trifold brochure for an exhibition, a corporate profile for investors, or a product catalog for your sales team, our designers combine clean visuals with a message that actually sells. We've worked with real estate firms, hospitals, educational institutes, and retail brands across India, and each project has taught us one thing: good design without strategy is just decoration. That's why we treat every brochure as a marketing tool first and a design piece second.",
     about:
-      "Whether you need a trifold brochure for an exhibition, a corporate profile for investors, or a product catalog for your sales team, our designers combine clean visuals with a message that actually sells. We've worked with real estate firms, hospitals, educational institutes, and retail brands across India, and each project has taught us one thing: good design without strategy is just decoration. That's why we treat every brochure as a marketing tool first and a design piece second.\n\nEddinet started with a simple idea — that Indian businesses deserve marketing and design work that actually moves the needle, not just work that looks nice on a portfolio page. Over the years, we've grown into a full-service digital agency, and while we're best known as a dependable SEO company in India, our design bench is just as strong. Brands come to us for search rankings and stay for the creative work, or the other way around — quite often both.\n\nOur team is a mix of designers, content writers, and marketing strategists who sit in the same room (or the same call) and build campaigns together instead of working in silos. This matters more than people realize. A brochure designed without knowing your target keywords, your buyer persona, or your competitor's positioning is just guesswork with a nice font. We don't do guesswork. Every brochure, every landing page, every SEO campaign we run starts with the same question: what does this business actually need to grow?",
+      "Eddinet started with a simple idea, that Indian businesses deserve marketing and design work that actually moves the needle, not just work that looks nice on a portfolio page. Over the years, we've grown into a full-service digital agency, and while we're best known as a dependable SEO company in India, our design bench is just as strong. Brands come to us for search rankings and stay for the creative work, or the other way around — quite often both.\n\nOur team is a mix of designers, content writers, and marketing strategists who sit in the same room (or the same call) and build campaigns together instead of working in silos. This matters more than people realize. A brochure designed without knowing your target keywords, your buyer persona, or your competitor's positioning is just guesswork with a nice font. We don't do guesswork. Every brochure, every landing page, every SEO campaign we run starts with the same question: what does this business actually need to grow?\n\nWe're proud to say that our client relationships tend to last years, not months. That's not an accident, it's because we treat every project, big or small, like it's the only one we have.",
+    featuresHeading: "Our Services — Brochure Design and Beyond",
     features: [
       {
         title: "Brochure Design",
@@ -2166,6 +2187,7 @@ export const docxChildPages: Record<string, DocxPageContent> = {
           "Many clients who come to us for brochure design also need a website that matches. We design and build sites that carry the same visual language as your print materials, so your brand feels the same everywhere a customer meets it.",
       },
     ],
+    benefitsHeading: "Benefits of Choosing Professional Brochure Design",
     benefits: [
       {
         title: "Stronger First Impressions",
@@ -2258,7 +2280,8 @@ export const docxChildPages: Record<string, DocxPageContent> = {
     heroSubheading:
       "Catalogues That Sell. Design Backed by an SEO Company in India That Understands Growth. At Eddinet, we design catalogues that do more than sit on a shelf or sit unread in someone's inbox. A catalogue is often the first real conversation a customer has with your product line, and if it looks flat, dated, or generic, that conversation ends before it starts.",
     about:
-      "We build catalogues for brands that want their products to look as good on paper (or PDF) as they do in real life — clean layouts, sharp product photography placement, typography that's easy to scan, and a structure that actually guides a buyer toward picking up the phone or placing an order.\n\nEddinet started with a simple observation: most businesses in India were either getting good design or good marketing, rarely both from the same team. So we built ourselves to do both.\n\nToday, we work as a full-service digital partner handling everything from catalogue design and branding to SEO, paid ads, and website development for manufacturers, exporters, retailers, and D2C brands across the country. Our design team doesn't work in a silo either. Every catalogue we create is reviewed with one question in mind: will this actually help the client sell more?\n\nThat's really the difference. We're not just a design studio that happens to offer SEO on the side, and we're not an SEO company in India that treats design as an afterthought. Both teams sit at the same table, which means the catalogue you get is built to match how your brand actually shows up online — same colours, same tone, same story.",
+      "Eddinet started with a simple observation: most businesses in India were either getting good design or good marketing, rarely both from the same team. So we built ourselves to do both.\n\nToday, we work as a full-service digital partner handling everything from catalogue design and branding to SEO, paid ads, and website development for manufacturers, exporters, retailers, and D2C brands across the country. Our design team doesn't work in a silo either. Every catalogue we create is reviewed with one question in mind: will this actually help the client sell more?\n\nThat's really the difference. We're not just a design studio that happens to offer SEO on the side, and we're not an SEO company in India that treats design as an afterthought. Both teams sit at the same table, which means the catalogue you get is built to match how your brand actually shows up online — same colours, same tone, same story.",
+    featuresHeading: "Our Catalogue Design Services",
     features: [
       {
         title: "Product Catalogue Design",
@@ -2291,6 +2314,8 @@ export const docxChildPages: Record<string, DocxPageContent> = {
           "Already have a catalogue that feels outdated? We can rework your existing content into a fresh layout without you having to start from scratch.",
       },
     ],
+    benefitsHeading:
+      "Benefits of Working With a Professional Catalogue Design Team",
     benefits: [
       {
         title: "Stronger First Impressions",
@@ -2387,9 +2412,10 @@ export const docxChildPages: Record<string, DocxPageContent> = {
       "Ever sat through a pitch and felt your attention drift within the first two minutes? That's usually a design problem. Eddinet builds presentation design solutions that hold attention and push your audience toward a decision.",
     heroHeading: "Presentation Design Services in Delhi NCR",
     heroSubheading:
-      "Ever sat through a pitch and felt your attention drift within the first two minutes? That's usually not a content problem — it's a design problem. At Eddinet, we build presentation design solutions that hold attention, explain ideas clearly, and push your audience toward a decision, whether that's signing a deal, approving a budget, or funding your startup.",
+      "Ever sat through a pitch and felt your attention drift within the first two minutes? That's usually not a content problem — it's a design problem. At Eddinet, we build presentation design solutions that hold attention, explain ideas clearly, and push your audience toward a decision, whether that's signing a deal, approving a budget, or funding your startup. We're a full-service digital agency, and as a trusted SEO company in India, we understand something most design studios miss: a presentation isn't just a visual, it's a piece of marketing. Every slide has to earn its place, just like every page on a website has to earn its ranking. That's the mindset we bring to every deck we design. Whether you need a single investor pitch or an entire library of sales presentations for your team, Eddinet turns scattered bullet points and rough ideas into a deck that actually gets read, remembered, and acted on.",
     about:
-      "We're a full-service digital agency, and as a trusted SEO company in India, we understand something most design studios miss: a presentation isn't just a visual, it's a piece of marketing. Every slide has to earn its place, just like every page on a website has to earn its ranking. That's the mindset we bring to every deck we design.\n\nWhether you need a single investor pitch or an entire library of sales presentations for your team, Eddinet turns scattered bullet points and rough ideas into a deck that actually gets read, remembered, and acted on.\n\nEddinet started with a simple frustration — too many businesses were spending money on great content and then losing their audience because the presentation looked like it was thrown together at midnight. So we built a team that sits right at the intersection of design, storytelling, and strategy.\n\nToday, we work with startups, growing businesses, and enterprise teams across India, helping them present themselves the way they actually deserve to be seen. Our designers have backgrounds in branding and marketing, not just software — which means every presentation we design carries your brand's tone, not a generic template pulled off the internet.\n\nWe're also known as a dependable SEO company in India, and that dual expertise matters more than people expect. A presentation designed by a team that understands search intent, audience behavior, and conversion psychology simply performs better than one designed by someone who only knows how to move shapes around a canvas.",
+      "Eddinet started with a simple frustration — too many businesses were spending money on great content and then losing their audience because the presentation looked like it was thrown together at midnight. So we built a team that sits right at the intersection of design, storytelling, and strategy.\n\nToday, we work with startups, growing businesses, and enterprise teams across India, helping them present themselves the way they actually deserve to be seen. Our designers have backgrounds in branding and marketing, not just software — which means every presentation we design carries your brand's tone, not a generic template pulled off the internet.\n\nWe're also known as a dependable SEO company in India, and that dual expertise matters more than people expect. A presentation designed by a team that understands search intent, audience behavior, and conversion psychology simply performs better than one designed by someone who only knows how to move shapes around a canvas.",
+    featuresHeading: "Presentation Design Services for Every Occasion",
     features: [
       {
         title: "Pitch Deck & Investor Presentation Design",
@@ -2422,6 +2448,7 @@ export const docxChildPages: Record<string, DocxPageContent> = {
           "Need consistency across every team member's presentations? We build custom PowerPoint and Google Slides templates matched to your brand guidelines, so anyone in your company can create a professional-looking deck in minutes.",
       },
     ],
+    benefitsHeading: "Benefits of Professional Presentation Design",
     benefits: [
       {
         title: "Stronger First Impressions",
@@ -2512,9 +2539,12 @@ export const docxChildPages: Record<string, DocxPageContent> = {
       "If your product looks confusing, feels clunky, or doesn't click with users in the first ten seconds, you're losing customers. Eddinet blends research, strategy and visual craft to build digital products people enjoy using.",
     heroHeading: "Product Design Services in Delhi NCR",
     heroSubheading:
-      "If your product looks confusing, feels clunky, or simply doesn't \"click\" with users in the first ten seconds, you're losing customers before they even give your business a fair shot. At Eddinet, we work with founders, product teams, and growing brands who want their digital products to actually feel good to use — not just look pretty in a pitch deck.",
+      "If your product looks confusing, feels clunky, or simply doesn't \"click\" with users in the first ten seconds, you're losing customers before they even give your business a fair shot. At Eddinet, we work with founders, product teams, and growing brands who want their digital products to actually feel good to use — not just look pretty in a pitch deck. Our product design team blends research, strategy, and visual craft to build apps, websites, and digital experiences that people genuinely enjoy using. We're not here to hand you a Figma file and disappear. We stay involved from the first sketch to the final handoff, and often well beyond that. As a growing SEO company in India, we also understand something most design-only studios miss: a great-looking product that doesn't rank, load fast, or convert visitors is only half a solution. That's why our design work is always built with performance, usability, and search visibility in mind — not just aesthetics.",
     about:
-      "Our product design team blends research, strategy, and visual craft to build apps, websites, and digital experiences that people genuinely enjoy using. We're not here to hand you a Figma file and disappear. We stay involved from the first sketch to the final handoff, and often well beyond that.\n\nAs a growing SEO company in India, we also understand something most design-only studios miss: a great-looking product that doesn't rank, load fast, or convert visitors is only half a solution. That's why our design work is always built with performance, usability, and search visibility in mind — not just aesthetics.\n\nEddinet started with a simple frustration — too many businesses were paying for design work that looked impressive but didn't move the needle. Users still dropped off. Conversions still stayed flat. So we built a team around a different idea: design should be judged by results, not just how it looks on a portfolio page.\n\nToday, we work with startups building their first MVP, established companies redesigning outdated platforms, and eCommerce brands trying to reduce cart abandonment through better UX. Our designers, researchers, and strategists sit in the same room (virtually or otherwise) as our SEO and development teams, which means your product isn't designed in a vacuum. It's built to perform — visually, functionally, and in search results.",
+      "Eddinet started with a simple frustration — too many businesses were paying for design work that looked impressive but didn't move the needle. Users still dropped off. Conversions still stayed flat. So we built a team around a different idea: design should be judged by results, not just how it looks on a portfolio page.\n\nToday, we work with startups building their first MVP, established companies redesigning outdated platforms, and eCommerce brands trying to reduce cart abandonment through better UX. Our designers, researchers, and strategists sit in the same room (virtually or otherwise) as our SEO and development teams, which means your product isn't designed in a vacuum. It's built to perform — visually, functionally, and in search results.\n\nWe're based in India, we understand Indian and global user behaviour, and we've picked up more than a few lessons from projects that didn't go as planned the first time. That experience shows up in how carefully we approach every new brief.",
+    featuresHeading: "Our End-to-End Product Design Services",
+    featuresDescription:
+      "We offer end-to-end product design services, so whether you need a single piece of the puzzle or the whole picture, we can help.",
     features: [
       {
         title: "UI/UX Design",
@@ -2552,6 +2582,7 @@ export const docxChildPages: Record<string, DocxPageContent> = {
           "Since we also work as an SEO company in India, we make sure design decisions — page speed, structure, mobile responsiveness — support your search rankings instead of working against them.",
       },
     ],
+    benefitsHeading: "Benefits of Product Design for Digital Products",
     benefits: [
       {
         title: "Better User Retention",
@@ -2648,9 +2679,12 @@ export const docxChildPages: Record<string, DocxPageContent> = {
       "Professional Video Editing That Turns Views Into Customers. Eddinet edits videos for brands that want content that performs — on reels, YouTube, ad campaigns and websites that need to rank. Get a free consultation.",
     heroHeading: "Video Editing Services in Delhi NCR",
     heroSubheading:
-      "If you've ever uploaded a video and wondered why it didn't get the response you expected, chances are the problem wasn't your idea — it was the editing. A great video isn't just footage stitched together; it's pacing, sound, colour, and story working in sync to hold someone's attention long enough for them to actually care about what you're saying.",
+      "If you've ever uploaded a video and wondered why it didn't get the response you expected, chances are the problem wasn't your idea — it was the editing. A great video isn't just footage stitched together; it's pacing, sound, colour, and story working in sync to hold someone's attention long enough for them to actually care about what you're saying. At Eddinet, we edit videos for brands that want more than \"nice visuals.\" We work with businesses across India who need content that performs — on Instagram reels, YouTube channels, ad campaigns, and websites that also need to rank. Because let's be honest, a stunning video buried on page five of Google isn't doing much for anyone. That's exactly why we've built our video editing services alongside our work as an SEO company in India — so your content doesn't just look good, it gets found. Whether you're a startup shooting your first brand film or an established company that needs a steady stream of social content, our editors know how to shape raw footage into something people actually want to watch till the end.",
     about:
-      "At Eddinet, we edit videos for brands that want more than \"nice visuals.\" We work with businesses across India who need content that performs — on Instagram reels, YouTube channels, ad campaigns, and websites that also need to rank. Because let's be honest, a stunning video buried on page five of Google isn't doing much for anyone. That's exactly why we've built our video editing services alongside our work as an SEO company in India — so your content doesn't just look good, it gets found.\n\nEddinet is a Delhi-based digital agency built around a simple idea: creative work should also be measurable. We didn't start out chasing trends. We started out solving a problem we kept seeing — businesses spending money on video production and SEO separately, with neither team talking to the other, and results suffering because of it.\n\nOver the years, we've grown into a team of editors, colourists, sound designers, and SEO strategists who sit in the same room (sometimes literally, sometimes over a Zoom call at odd hours) to make sure content and visibility move together. As an SEO company in India, we understand what search engines and audiences reward — clarity, relevance, and consistency — and we bring that same thinking into every timeline we edit.\n\nWe've worked with doctors, real estate developers, D2C brands, ed-tech startups, and a fair share of founders who just wanted their Instagram page to stop looking abandoned. Different industries, same goal: content that works while you sleep.",
+      "Eddinet is a Delhi-based digital agency built around a simple idea: creative work should also be measurable. We didn't start out chasing trends. We started out solving a problem we kept seeing — businesses spending money on video production and SEO separately, with neither team talking to the other, and results suffering because of it.\n\nOver the years, we've grown into a team of editors, colourists, sound designers, and SEO strategists who sit in the same room (sometimes literally, sometimes over a Zoom call at odd hours) to make sure content and visibility move together. As an SEO company in India, we understand what search engines and audiences reward — clarity, relevance, and consistency — and we bring that same thinking into every timeline we edit.\n\nWe've worked with doctors, real estate developers, D2C brands, ed-tech startups, and a fair share of founders who just wanted their Instagram page to stop looking abandoned. Different industries, same goal: content that works while you sleep.",
+    featuresHeading: "Video Editing Services Designed for Every Platform",
+    featuresDescription:
+      "Not every video needs the same treatment. A YouTube tutorial and a 15-second Instagram reel don't share the same pacing, the same hooks, or even the same aspect ratio. Our video editing team builds each project around where it's going to live and who's actually going to watch it.",
     features: [
       {
         title: "Social Media Video Editing",
@@ -2688,6 +2722,7 @@ export const docxChildPages: Record<string, DocxPageContent> = {
           "Alongside editing, Eddinet works as a full-fledged SEO company in India, helping the same videos and web pages you invest in actually show up when someone searches for them. Video titles, descriptions, on-page structure, keyword placement — none of it is an afterthought here. It's built into the process from day one.",
       },
     ],
+    benefitsHeading: "Benefits of Working With Eddinet",
     benefits: [
       {
         title: "Faster Turnaround",
@@ -2782,9 +2817,12 @@ export const docxChildPages: Record<string, DocxPageContent> = {
       "Turning Ideas Into Movement, Emotion, and Results. Eddinet is a motion graphics studio that builds animated content people actually watch till the end — explainer videos, animated logos, product reels and brand films.",
     heroHeading: "Motion Graphics Services in Delhi NCR",
     heroSubheading:
-      "If your brand still relies on plain images and static banners to say something on the internet, you're leaving a lot of attention on the table. People scroll fast, they skip text, but they stop for movement. That's exactly where Eddinet comes in.",
+      "Every business today is fighting for two seconds of someone's attention. In those two seconds, a well-timed animation, a smooth transition, or a punchy motion graphic can decide whether a viewer stays or scrolls past. We understand that pressure because we've felt it ourselves — as an SEO company in India, we've spent years figuring out what actually keeps people engaged and what search engines reward. That experience is now baked directly into our motion graphics work. Whether it's a 15-second Instagram reel or a two-minute explainer for your homepage, our team designs every frame keeping your audience's attention span, your brand's tone, and your marketing goals in mind. We don't hand you a \"nice video\" and walk away. We hand you a piece of content built to perform.",
     about:
-      "We're a motion graphics studio that builds animated content people actually watch till the end — explainer videos, animated logos, product reels, social media snippets, and brand films that don't just look good but push the viewer to take action. Add to that the fact that Eddinet started life as an SEO company in India, and you get something most agencies can't offer: motion graphics that are made with visibility, ranking, and conversions in mind, not just aesthetics.\n\nEvery business today is fighting for two seconds of someone's attention. In those two seconds, a well-timed animation, a smooth transition, or a punchy motion graphic can decide whether a viewer stays or scrolls past. We understand that pressure because we've felt it ourselves — as an SEO company in India, we've spent years figuring out what actually keeps people engaged and what search engines reward.\n\nThat experience is now baked directly into our motion graphics work. Whether it's a 15-second Instagram reel or a two-minute explainer for your homepage, our team designs every frame keeping your audience's attention span, your brand's tone, and your marketing goals in mind. We don't hand you a \"nice video\" and walk away. We hand you a piece of content built to perform.\n\nEddinet didn't start as a video agency. We built our name as an SEO company in India, helping brands rank, get found, and grow through organic search. Somewhere along the way, our clients kept asking for the same thing: \"Can you also make our content look this good in video form?\" So we built a motion graphics team around that demand, and it's now one of the most requested services we offer.\n\nWhat makes us different is simple — most motion graphics studios think only about visuals. We think about visuals and visibility together. Every animation we create is optimized for the platform it's going on, whether that's YouTube, Instagram, a landing page, or a paid ad campaign.",
+      "Eddinet didn't start as a video agency. We built our name as an SEO company in India, helping brands rank, get found, and grow through organic search. Somewhere along the way, our clients kept asking for the same thing: \"Can you also make our content look this good in video form?\" So we built a motion graphics team around that demand, and it's now one of the most requested services we offer.\n\nWhat makes us different is simple — most motion graphics studios think only about visuals. We think about visuals and visibility together. Every animation we create is optimized for the platform it's going on, whether that's YouTube, Instagram, a landing page, or a paid ad campaign. Our designers, animators, scriptwriters, and sound editors work under one roof, in one workflow, so nothing gets lost between \"the creative idea\" and \"the final export.\"\n\nToday, Eddinet works with startups, D2C brands, real estate firms, healthcare businesses, and enterprises across India who want content that doesn't just sit there — it works, sells, and ranks.",
+    featuresHeading: "Our Motion Graphics Services",
+    featuresDescription:
+      "We don't believe in one-size-fits-all animation. Depending on where your video will live and what job it needs to do, we build it differently.",
     features: [
       {
         title: "Explainer Video Animation",
@@ -2822,6 +2860,7 @@ export const docxChildPages: Record<string, DocxPageContent> = {
           "Numbers are boring until they move. We turn reports, statistics, and research into animated infographics that are easy to follow and easy to share.",
       },
     ],
+    benefitsHeading: "Benefits of Choosing Motion Graphics for Your Brand",
     benefits: [
       {
         title: "Higher Engagement",
@@ -2866,6 +2905,8 @@ export const docxChildPages: Record<string, DocxPageContent> = {
     },
     process: {
       heading: "Our Process",
+      description:
+        "We keep this simple and transparent, so you always know what stage your project is at.",
       steps: [
         {
           num: "01",
@@ -3980,10 +4021,190 @@ export const docxWebDevelopmentCategory: DocxCategoryContent = {
   },
 };
 
+// ============================================================================
+//  SERVICE CHILD PAGES  (/services/<category>/<slug>)
+//    Transcribed from "EDDITNET CONTENT (6).docx" in docx-content-services.ts.
+//    Merged with the hand-written entries above so every source feeds
+//    mergeDocxChildContent from one lookup.
+// ============================================================================
+
+export const docxChildPages: Record<string, DocxPageContent> = {
+  ...docxHandwrittenChildPages,
+  ...docxServiceChildPages,
+};
+
+// ============================================================================
+//  CATEGORY PAGES  (/services/<category>)
+// ============================================================================
+
+export const docxMobileAppDevelopmentCategory: DocxCategoryContent = {
+  title: "Mobile App Development",
+  metaTitle: "Mobile App Development Services in India | Eddinet",
+  metaDescription:
+    "We build complete mobile ecosystems, not just standalone applications. As a " +
+    "Full-Stack App Development Agency, Eddinet handles every single layer of your",
+  heroHeading: "Mobile App Development Company in India",
+  heroSubheading:
+    "At Eddinet, we transform ideas into high-performing, scalable mobile " +
+    "applications that drive real business growth. As a leading mobile app " +
+    "development company in India, we engineer intuitive, high-speed iOS and Android " +
+    "applications tailored to your business needs ensuring smooth performance, " +
+    "bulletproof security, and engaging user experiences from day one.",
+  about: "We build complete mobile ecosystems, not just standalone applications. As a Full-Stack App Development Agency, Eddinet handles every single layer of your software infrastructure from high-converting mobile interfaces to cloud backend architectures and custom API networks.\n\nBy managing your entire technical stack in-house, we remove cross-vendor friction, accelerate your time-to-market, and deliver mobile apps engineered for speed, security, and long-term scale.",
+  servicesTypes: [
+    {
+      title: "Android App Development",
+      description:
+        "We build feature-rich, native Android applications optimized for high " +
+        "performance, smooth usability, and seamless integration across all Android " +
+        "devices and Google Play Store standards.",
+    },
+    {
+      title: "iOS App Development",
+      description:
+        "We engineer secure, high-converting native iOS apps crafted specifically for " +
+        "Apple's ecosystem, delivering elite UI/UX, fast load times, and full " +
+        "compliance with App Store guidelines.",
+    },
+    {
+      title: "Flutter App Development",
+      description:
+        "We leverage Flutter to deliver fast, native-like cross-platform applications " +
+        "from a single codebase, drastically reducing your development timelines and " +
+        "deployment costs.",
+    },
+    {
+      title: "React Native App Development",
+      description:
+        "We build robust React Native apps that offer true cross-platform " +
+        "performance, giving your brand a native look and feel on both iOS and " +
+        "Android simultaneously.",
+    },
+    {
+      title: "Cross-Platform App Development",
+      description:
+        "We create scalable multi-platform applications engineered to perform " +
+        "consistently across all mobile operating systems without compromising speed " +
+        "or visual appeal.",
+    },
+    {
+      title: "App UI/UX Design",
+      description:
+        "We design clean, user-centered interfaces and intuitive navigation flows " +
+        "that keep users engaged, minimize bounce rates, and maximize in-app " +
+        "conversions.",
+    },
+    {
+      title: "App Backend Development",
+      description:
+        "We build secure, high-capacity server architectures and database " +
+        "infrastructures designed to process heavy traffic loads and complex data " +
+        "streams effortlessly.",
+    },
+    {
+      title: "API & Third-Party Integration",
+      description:
+        "We integrate essential third-party APIs including payment gateways, CRMs, " +
+        "ERPs, live tracking, and cloud services directly into your mobile " +
+        "application.",
+    },
+  ],
+  benefits: [],
+  whyChooseUs: {
+    heading: "Why Choose Eddinet for Mobile App Development",
+    points: [
+        "Custom-Built App Solutions: We build tailored mobile applications engineered " +
+        "around your exact operational workflows never rigid, pre-made app templates.",
+        "Experienced Development Team: Our senior developers and UI/UX designers " +
+        "possess deep technical expertise across native and cross-platform " +
+        "frameworks.",
+        "Scalable & Secure Applications: We prioritize clean code standards, robust " +
+        "cloud hosting, and multi-layer encryption to ensure your app scales safely " +
+        "as traffic grows.",
+        "User-Centered UI/UX: Every interface design decision is guided by real " +
+        "consumer behavior insights, making app navigation effortless for your end " +
+        "users.",
+        "Full-Stack Development Expertise: From server configuration and database " +
+        "management to frontend design and store deployment, we handle every layer " +
+        "in-house.",
+        "Business-Focused Approach: We focus on metrics that matter building features " +
+        "that drive user retention, active engagements, and measurable revenue.",
+        "Transparent Communication: We maintain clear project visibility with regular " +
+        "progress demos, milestone updates, and open communication channels " +
+        "throughout.",
+        "Ongoing Support & Improvement: Our commitment extends beyond launch-we " +
+        "continuously monitor, update, and refine your application to keep it " +
+        "performing at its peak.",
+    ],
+  },
+  process: {
+    heading: "Our Mobile App Development Process",
+    steps: [
+      {
+        num: "01",
+        title: "Understanding Your Business",
+        description:
+          "We analyze your market position, target audience, and primary commercial " +
+          "goals to align project parameters with measurable outcomes.",
+      },
+      {
+        num: "02",
+        title: "App Strategy & Planning",
+        description:
+          "We map out user flows, feature lists, technology stacks, and milestone " +
+          "roadmaps to guarantee smooth execution throughout development.",
+      },
+      {
+        num: "03",
+        title: "UI/UX Design",
+        description:
+          "Our designers create interactive wireframes and visual prototypes, " +
+          "ensuring every screen is intuitive and aligned with your brand identity.",
+      },
+      {
+        num: "04",
+        title: "Frontend & Backend Development",
+        description:
+          "Our developers write clean, efficient code to construct both the " +
+          "user-facing interface and the supporting cloud infrastructure.",
+      },
+      {
+        num: "05",
+        title: "API & System Integration",
+        description:
+          "We link required third-party services, payment channels, and database " +
+          "management systems into a cohesive application ecosystem.",
+      },
+      {
+        num: "06",
+        title: "Testing & Quality Assurance",
+        description:
+          "We execute comprehensive performance, usability, regression, and security " +
+          "testing across multiple devices and operating systems.",
+      },
+      {
+        num: "07",
+        title: "App Deployment",
+        description:
+          "We manage the full submission, optimization, and approval process on both " +
+          "the Apple App Store and Google Play Store.",
+      },
+      {
+        num: "08",
+        title: "Maintenance & Support",
+        description:
+          "We provide ongoing SLA-backed maintenance, bug fixes, performance " +
+          "monitoring, and OS compatibility updates post-launch.",
+      },
+    ],
+  },
+};
+
 export const docxCategoryPages: Record<string, DocxCategoryContent> = {
   seo: docxSeoCategory,
   "design-creative": docxDesignCreativeCategory,
   "web-development": docxWebDevelopmentCategory,
+  "mobile-app-development": docxMobileAppDevelopmentCategory,
 };
 
 // ============================================================================
@@ -4011,6 +4232,45 @@ export interface DocxMergeBase {
   faqs: DocxFaq[];
   whyChooseUs: { heading: string; description?: string; points: string[] };
   process: { heading: string; description?: string; steps: DocxProcessStep[] };
+  /**
+   * Section headings exactly as the transcribed document wrote them. Only set
+   * for pages whose copy came from the document (docOnly); pages that were
+   * already finished keep the template headings they shipped with.
+   */
+  docxHeadings?: { about?: string; process?: string; faqs?: string };
+}
+
+/**
+ * Sections present in the docx, used to decide what falls back and what does
+ * not. The docx is the single source of truth for these pages: a section the
+ * document did not write must not silently keep the old site copy. Only
+ * structural fields with no docx equivalent (image, metrics, testimonials,
+ * crossLinks, ...) fall back to the legacy record.
+ */
+function docxHas(
+  dx: DocxPageContent,
+  section: "benefits" | "faqs" | "process" | "whyChooseUs" | "features"
+): boolean {
+  switch (section) {
+    case "whyChooseUs":
+      return dx.whyChooseUs.points.length > 0;
+    case "process":
+      return dx.process.steps.length > 0;
+    default:
+      return dx[section].length > 0;
+  }
+}
+
+/**
+ * Picks the copy for one section.
+ *  - the document wrote it      -> use the document
+ *  - the document left it empty -> keep the legacy copy, unless docOnly is
+ *                                  set, in which case the section stays empty
+ */
+function pick<T>(dx: DocxPageContent, section: Parameters<typeof docxHas>[1],
+                 fromDocx: T, fromBase: T): T {
+  if (docxHas(dx, section)) return fromDocx;
+  return dx.docOnly ? ([] as unknown as T) : fromBase;
 }
 
 export function mergeDocxChildContent<T extends DocxMergeBase>(
@@ -4027,26 +4287,31 @@ export function mergeDocxChildContent<T extends DocxMergeBase>(
     heroHeading: dx.heroHeading,
     heroSubheading: dx.heroSubheading,
     detailedDescription: dx.about,
-    features: dx.features.length ? dx.features : base.features,
+    features: pick(dx, "features", dx.features, base.features),
     featuresHeading: dx.featuresHeading ?? base.featuresHeading,
     featuresDescription: dx.featuresDescription ?? base.featuresDescription,
-    benefits: dx.benefits.length ? dx.benefits : base.benefits,
+    benefits: pick(dx, "benefits", dx.benefits, base.benefits),
     benefitsHeading: dx.benefitsHeading ?? base.benefitsHeading,
     benefitsDescription: dx.benefitsDescription ?? base.benefitsDescription,
-    faqs: dx.faqs.length ? dx.faqs : base.faqs,
+    faqs: pick(dx, "faqs", dx.faqs, base.faqs),
     whyChooseUs: {
       ...base.whyChooseUs,
-      heading: dx.whyChooseUs.heading,
+      heading: dx.whyChooseUs.heading || base.whyChooseUs.heading,
       description: dx.whyChooseUs.description ?? base.whyChooseUs.description,
-      points: dx.whyChooseUs.points.length
-        ? dx.whyChooseUs.points
-        : base.whyChooseUs.points,
+      points: pick(dx, "whyChooseUs", dx.whyChooseUs.points, base.whyChooseUs.points),
     },
     process: {
       ...base.process,
-      heading: dx.process.heading,
+      heading: dx.process.heading || base.process.heading,
       description: dx.process.description ?? base.process.description,
-      steps: dx.process.steps.length ? dx.process.steps : base.process.steps,
+      steps: pick(dx, "process", dx.process.steps, base.process.steps),
     },
+    docxHeadings: dx.docOnly
+      ? {
+          about: dx.aboutHeading,
+          process: dx.process.heading,
+          faqs: dx.faqsHeading,
+        }
+      : undefined,
   };
 }

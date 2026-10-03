@@ -92,7 +92,7 @@ export default function About() {
   max-[640px]:h-[440px]
   max-[480px]:h-[390px]
 "
-                  unoptimized
+                  sizes="(max-width: 1024px) 95vw, 560px"
                 />
 
                 {/* Image gradient */}

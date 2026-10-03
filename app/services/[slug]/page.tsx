@@ -71,7 +71,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       "@type": "Organization",
       name: "Eddinet",
       url: "https://eddinet.com/",
-      logo: "https://eddinet.com/eddinet-logo.png",
+      logo: "https://eddinet.com/images/brand/eddinet-logo.webp",
     },
     areaServed: { "@type": "AdministrativeArea", name: "Delhi NCR" },
     hasOfferCatalog: {
@@ -174,7 +174,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                   width={1200}
                   height={675}
                   className="w-full h-full object-cover object-top transition-transform duration-700 ease-out hover:scale-[1.05]"
-                  unoptimized
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
                 <div className="absolute bottom-4 left-5 inline-flex items-center gap-2 py-1.5 px-3.5 rounded-full bg-[rgba(11,15,25,0.6)] backdrop-blur-md border border-white/15 text-[0.72rem] font-bold text-white">
                   ⚡ {content.title} Delivery Team
@@ -224,7 +224,6 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                       height={450}
                       className="w-full h-auto object-contain block"
                       sizes="(max-width: 1024px) 100vw, 33vw"
-                      unoptimized
                     />
                     <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 py-1 px-3 rounded-full bg-black/60 text-white/90 text-[0.7rem] font-bold z-10">
                       ✓ Core Service

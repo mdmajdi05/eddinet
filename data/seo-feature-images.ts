@@ -68,7 +68,7 @@ export const seoFeatureImages: Record<string, Record<string, string>> = {
     "Performance Monitoring by Page Category": "/images/services/seo/programmatic-seo/performance-monitoring-by-page-category-self-gen.webp",
   },
   "amazon-seo": {
-    "Amazon Keyword Research": "/images/services/seo/amazon-seo/amazon-keyword-research.png",
+    "Amazon Keyword Research": "/images/services/seo/amazon-seo/amazon-keyword-research.webp",
     "Listing Optimization": "/images/services/seo/amazon-seo/amazon-listing-optimization.webp",
     "A+ Content & Enhanced Brand Content": "/images/services/seo/amazon-seo/a-plus-content-enhanced-brand-content.webp",
     "Image & Visual Strategy Guidance": "/images/services/seo/amazon-seo/image-and-visual-strategy-guidance-self-gen.webp",

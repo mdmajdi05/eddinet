@@ -1,12 +1,17 @@
 {
-  "name": "lucid-web-nextjs",
+  "name": "eddinet-web",
   "version": "1.0.0",
   "private": true,
+  "description": "Eddinet digital marketing and software agency website.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "typecheck": "tsc --noEmit",
+    "images:download": "node scripts/download-remote-images.mjs",
+    "images:check": "node scripts/check-images.mjs",
+    "images:optimize": "node scripts/optimize-images.mjs",
+    "check": "npm run typecheck && npm run images:check"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.3.3",
@@ -22,6 +27,7 @@
     "@types/node": "^22.15.3",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
+    "sharp": "^0.34.5",
     "typescript": "^5.8.3"
   }
 }

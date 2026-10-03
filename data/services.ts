@@ -1,4 +1,4 @@
-﻿// ============================================================================
+// ============================================================================
 //  FILE: data/services.ts
 // WHAT'S IN THIS FILE:  (SERVICES)
 //   services[]     - 10 core service categories (icon, title, desc, image, allItems)
@@ -78,7 +78,7 @@ export const services: Service[] = [
     link: "performance marketing services",
     tabLabel: "Ads / PPC",
     footerLabel: "Google & Meta PPC Ads",
-    allItems: ["Google Ads", "Meta Ads", "YouTube Ads", "Amazon Ads", "LinkedIn Ads", "Lead Generation Ads", "Remarketing / Retargeting", "PPC Management"],
+    allItems: ["Google Ads", "Meta Ads", "YouTube Ads", "Amazon Ads", "LinkedIn Ads", "Lead Generation Ads", "Remarketing / Retargeting"],
   },
   {
     cat: "design",
@@ -232,7 +232,6 @@ export const itemDetails: Record<string, string> = {
   "Amazon Ads": "Sponsored Products and Sponsored Brands campaigns that win clicks and sales on Amazon. PPC built for the A9 algorithm and real purchase intent.",
   "Lead Generation Ads": "Paid campaigns with conversion-focused landing pages and lead capture engineered for qualified enquiries. We buy leads, not clicks — and we verify the quality of what we buy.",
   "Remarketing / Retargeting": "Re-engagement campaigns that bring past visitors back with tailored offers and messaging. The highest-converting platform is your own audience, and we keep them in the conversation.",
-  "PPC Management": "Ongoing bid, budget, keyword and creative management that protects and improves paid performance. We treat your ad account as an investment portfolio, not a dashboard of clicks.",
   "Graphic Designing": "Visual design across digital and print that supports brand messaging and marketing campaigns. Creative that's deliverable-ready at every size and platform, from Instagram to print.",
   "Logo Designing": "Distinctive logo concepts that communicate your brand identity and work across every touchpoint. A mark your customers remember — from favicon to billboard.",
   "Brand Identity Design": "Complete visual identity systems — colour, typography, assets and guidelines — built for consistent recognition. One coherent brand across web, social, ads, print and packaging.",
