@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "banner-design",
-  categorySlug: "design-creative",
-  categoryTitle: "Design & Creative",
-  categoryIcon: "🎨",
-  item: "Banner Design",
+
+
+
+
   title: "Banner Design",
   metaTitle: "Banner Design Services in India | Eddinet",
   metaDescription: "EDDINET provides banner design services in Delhi that make your offer impossible to overlook. We pair a punchy headline with colour and layout that guide the",
   heroHeading: "Banner Design Services in Delhi",
   heroSubheading: "High-Converting Web & Display Ad Banners | Print Banners | Custom Brand Graphics",
-  image: "/images/services/design-creative.webp",
+
   detailedDescription: "EDDINET provides banner design services in Delhi that make your offer impossible to overlook. We pair a punchy headline with colour and layout that guide the eye straight to your button. As a banner designing company in Delhi, we craft original banners for websites, online ads, and print, so every rupee of your budget earns a second look.\n\nAt EDDINET, we turn static ad spaces into high-converting brand touchpoints. Weak visuals and poor layouts waste ad budgets and lower click-through rates. As a leading custom banner design agency in Delhi, we craft precision-engineered ad creatives that capture immediate attention and drive user action.\n\nOur team manages your complete banner ecosystem-from website heroes and promotional pop-ups (web banner design) to high-converting display and retargeting ads (advertising banner design) optimized for Google Display Network, Meta, and programmatic campaigns.",
   features: [
     {
@@ -46,24 +47,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET as Your Custom Banner Design Agency in Delhi?",
     points: [
@@ -104,28 +88,7 @@ export const child = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What are banner design services?",
@@ -152,28 +115,7 @@ export const child = {
       a: "Yes. We deliver all export-ready, high-resolution formats alongside complete editable source files (Figma, PSD, AI) upon project completion.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Design & Creative Services",
-      slug: "/services/design-creative",
-      description: "Explore every design & creative capability under one roof.",
-    },
-    {
-      title: "Web Development Services",
-      slug: "/services/web-development",
-      description: "Fast, structured and SEO-ready websites engineered around usability, performance, conversion and long-term maintainability - so marketing never has to work around a site that wasn't built for it.",
-    },
-    {
-      title: "Ads / PPC & Content Services",
-      slug: "/services/ads-ppc",
-      description: "Google Ads, Meta Ads and performance-focused paid acquisition supported by content and conversion strategy - planned around targeting, budget efficiency and measurable outcomes, not impressions and clicks.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("design-creative"),
   featuresHeading: "Our Banner Design Services in Delhi",
   docxHeadings: {
     about: "About EDDINET: Custom Banner Design Experts",

@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "android-app-development",
-  categorySlug: "mobile-app-development",
-  categoryTitle: "Mobile App Development",
-  categoryIcon: "📲",
-  item: "Android App Development",
+
+
+
+
   title: "Android App Development",
   metaTitle: "Android App Development Services in India | Eddinet",
   metaDescription: "At Eddinet, we empower startups, scaling brands, and enterprises with custom mobile solutions that drive engagement and streamline operations.",
   heroHeading: "Android App Development Company in India",
   heroSubheading: "Your users expect apps that launch instantly, look incredible, and feel effortless. At Eddinet, we bring your vision to life as a specialized Android App Development Company in India engineering high-performance digital products that combine rock-solid security with intuitive design across every Android device.",
-  image: "/images/services/mobile_app_development_banner.webp",
+
   detailedDescription: "At Eddinet, we empower startups, scaling brands, and enterprises with custom mobile solutions that drive engagement and streamline operations. As a trusted mobile app development company in India, we deliver secure, high-performing applications designed to scale alongside your business.\n\nHere is how we streamline your Android app development:\n\nCustom Business Solutions: We build custom mobile apps from scratch to match your operational workflows and visual identity.\n\nAndroid App Development: We craft native Android solutions without using rigid templates to meet your exact feature requirements.\n\nScalable App Architecture: We write clean, robust code in Kotlin and Java backed by secure cloud infrastructure.\n\nEnterprise-Grade Security: We implement strong encryption standards to ensure your platform scales safely as active traffic expands.",
   features: [
     {
@@ -54,24 +55,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Our Android App Development Company in India?",
     points: [
@@ -130,28 +114,7 @@ export const child = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What Does an Android App Development Company Do?",
@@ -186,28 +149,7 @@ export const child = {
       a: "Yes, we can refactor legacy code, redesign interfaces, optimize load speeds, and integrate modern APIs into existing mobile platforms.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Mobile App Development Services",
-      slug: "/services/mobile-app-development",
-      description: "Explore every mobile app development capability under one roof.",
-    },
-    {
-      title: "Software & AI Solutions Services",
-      slug: "/services/software-ai",
-      description: "Custom software, SaaS-style systems, automation and AI-driven solutions that solve operational problems, improve customer experience or extend existing platforms beyond what off-the-shelf tools can do.",
-    },
-    {
-      title: "Cloud & DevOps Services",
-      slug: "/services/cloud-devops",
-      description: "Cloud infrastructure, deployment, CI/CD, scalability, reliability, security and operational practices that keep digital platforms stable as traffic and workloads grow.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("mobile-app-development"),
   featuresHeading: "Our Android App Development Services",
   docxHeadings: {
     about: "About Our Android App Development Company in India",

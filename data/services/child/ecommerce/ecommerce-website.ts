@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "ecommerce-website",
-  categorySlug: "ecommerce",
-  categoryTitle: "eCommerce Solutions",
-  categoryIcon: "🛒",
-  item: "eCommerce Website",
+
+
+
+
   title: "eCommerce Website",
   metaTitle: "eCommerce Website Services in India | Eddinet",
   metaDescription: "Are you looking for digital marketing and development services that not only elevate your visual presence but actively grow your bottom line?",
   heroHeading: "eCommerce Website Development in India",
   heroSubheading: "At Eddinet, we fix slow speeds and high cart abandonment by building fast, custom online stores. As a leading ecommerce website development company in India, we combine conversion-focused design with robust coding to deliver secure, mobile-first platforms engineered for growth.",
-  image: "/images/services/ecommerce-solutions.webp",
+
   detailedDescription: "Are you looking for digital marketing and development services that not only elevate your visual presence but actively grow your bottom line? At Eddinet, we specialize in engineering high-speed websites, targeted ad campaigns, and SEO strategies that align directly with your revenue targets.\n\nDigital growth is more than just online visibility; it's the core engine of your business designed to capture qualified leads, engage intent buyers, and convert traffic into long-term revenue.",
   features: [
     {
@@ -54,24 +55,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for E-Commerce Website Development",
     points: [
@@ -128,28 +112,7 @@ export const child = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "Which platform is best for eCommerce Website Development in India?",
@@ -168,28 +131,7 @@ export const child = {
       a: "Absolutely. During eCommerce Website Development, we seamlessly integrate all major Indian payment channels (UPI, Razorpay, Cashfree, COD verification) and courier tracking platforms (Shiprocket, Delhivery) directly into your site.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to eCommerce Solutions Services",
-      slug: "/services/ecommerce",
-      description: "Explore every ecommerce solutions capability under one roof.",
-    },
-    {
-      title: "Web Development Services",
-      slug: "/services/web-development",
-      description: "Fast, structured and SEO-ready websites engineered around usability, performance, conversion and long-term maintainability - so marketing never has to work around a site that wasn't built for it.",
-    },
-    {
-      title: "Ads / PPC & Content Services",
-      slug: "/services/ads-ppc",
-      description: "Google Ads, Meta Ads and performance-focused paid acquisition supported by content and conversion strategy - planned around targeting, budget efficiency and measurable outcomes, not impressions and clicks.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("ecommerce"),
   featuresHeading: "E-Commerce Website Development Services",
   docxHeadings: {
     about: "About Us Web Design Agency",

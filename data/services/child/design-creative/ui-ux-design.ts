@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "ui-ux-design",
-  categorySlug: "design-creative",
-  categoryTitle: "Design & Creative",
-  categoryIcon: "🎨",
-  item: "UI/UX Design",
+
+
+
+
   title: "UI/UX Design",
   metaTitle: "UI/UX Design Services in India | Eddinet",
   metaDescription: "About EDDINET. Do visitors land on your product and leave without taking action? Do your developers keep guessing how a screen should look?",
   heroHeading: "UI UX Design Services in Delhi",
   heroSubheading: "Website & Mobile App UI/UX | Product Design | Interactive Prototyping & Design Systems",
-  image: "/images/services/design-creative.webp",
+
   detailedDescription: "About EDDINET. Do visitors land on your product and leave without taking action? Do your developers keep guessing how a screen should look? If yes, Eddinet is the solution to your problem\n\nWe are a team of designers, researchers, and developers who treat every screen as a business decision. We begin with how your users actually behave, then shape the interface around those habits. You receive organised files that your developers can build from without second-guessing.",
   features: [
     {
@@ -54,24 +55,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET as a UI UX Design Company in Delhi?",
     points: [
@@ -138,28 +122,7 @@ export const child = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What Are UI UX Design Services?",
@@ -202,28 +165,7 @@ export const child = {
       a: "Yes. We review your current design, find usability problems, and improve both look and flow. We aim to keep what already works so that returning users are not confused.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Design & Creative Services",
-      slug: "/services/design-creative",
-      description: "Explore every design & creative capability under one roof.",
-    },
-    {
-      title: "Web Development Services",
-      slug: "/services/web-development",
-      description: "Fast, structured and SEO-ready websites engineered around usability, performance, conversion and long-term maintainability - so marketing never has to work around a site that wasn't built for it.",
-    },
-    {
-      title: "Ads / PPC & Content Services",
-      slug: "/services/ads-ppc",
-      description: "Google Ads, Meta Ads and performance-focused paid acquisition supported by content and conversion strategy - planned around targeting, budget efficiency and measurable outcomes, not impressions and clicks.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("design-creative"),
   featuresHeading: "Our UI UX Design Services in Delhi",
   docxHeadings: {
     about: "EDDINET provides premier UI UX design services in Delhi. We merge user psychology, clean visual aesthetics, and data-driven interaction patterns to craft digital interfaces that engage users and accelerate conversions.",

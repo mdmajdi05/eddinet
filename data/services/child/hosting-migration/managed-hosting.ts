@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "managed-hosting",
-  categorySlug: "hosting-migration",
-  categoryTitle: "Hosting & Migration",
-  categoryIcon: "🌐",
-  item: "Managed Hosting",
+
+
+
+
   title: "Managed Hosting",
   metaTitle: "Managed Hosting Services in India | Eddinet",
   metaDescription: "Eddinet delivers managed hosting services in India where our engineers run your server, secure it, and fix problems while you run your company.",
   heroHeading: "Managed Hosting Services in India",
   heroSubheading: "Fully Managed Servers | 24/7 Support | Security & Backups Included",
-  image: "/images/services/hosting-migration.webp",
+
   detailedDescription: "Eddinet delivers managed hosting services in India where our engineers run your server, secure it, and fix problems while you run your company. Patching servers at midnight and chasing backup errors should not eat into your working day. As a result, you get a stable website and a team you can call when something looks wrong.\n\nTired of servers that crash without warning? Worried about backups that no one has ever tested? Struggling to find a sysadmin you can trust? If yes, Eddinet is the solution to your problem.\n\nAs a managed hosting provider in India, we give you an experienced sysadmin team without the cost of hiring one. We learn how your website is used, take ownership of the technical routine, and log every action we take. You also receive plain-language updates, so you always know what was done on your server.",
   features: [
     {
@@ -38,24 +39,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Managed Hosting Services in India",
     points: [
@@ -104,28 +88,7 @@ export const child = {
     ],
     description: "Here is how we take over your server and keep it running smoothly.",
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What are managed hosting services in India?",
@@ -148,28 +111,7 @@ export const child = {
       a: "Usually yes, because a single hack or data loss can cost more than a year of hosting. Small teams rarely have a dedicated server admin. Managed hosting fills that gap at a predictable cost.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Hosting & Migration Services",
-      slug: "/services/hosting-migration",
-      description: "Explore every hosting & migration capability under one roof.",
-    },
-    {
-      title: "Cloud & DevOps Services",
-      slug: "/services/cloud-devops",
-      description: "Cloud infrastructure, deployment, CI/CD, scalability, reliability, security and operational practices that keep digital platforms stable as traffic and workloads grow.",
-    },
-    {
-      title: "Web Development Services",
-      slug: "/services/web-development",
-      description: "Fast, structured and SEO-ready websites engineered around usability, performance, conversion and long-term maintainability - so marketing never has to work around a site that wasn't built for it.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("hosting-migration"),
   featuresHeading: "Our Managed Hosting Services in India",
   featuresDescription: "We cover four areas that keep a hosted server healthy day after day.",
   docxHeadings: {

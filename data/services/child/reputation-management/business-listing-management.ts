@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "business-listing-management",
-  categorySlug: "reputation-management",
-  categoryTitle: "Reputation Management",
-  categoryIcon: "⭐",
-  item: "Business Listing Management",
+
+
+
+
   title: "Business Listing Management",
   metaTitle: "Business Listing Management Services in Delhi NCR | Eddinet",
   metaDescription: "Accurate, consistent listings across directories that boost local credibility. NAP consistency everywhere — the boring foundation of local dominance. Eddinet delivers dependable business listing management services in Delhi NCR for India and global clients. Get a free proposal today.",
   heroHeading: "Business Listing Management Services in Delhi NCR",
   heroSubheading: "Accurate, consistent listings across directories that boost local credibility. NAP consistency everywhere — the boring foundation of local dominance.",
-  image: "/images/services/reputation-management.webp",
+
   detailedDescription: "Accurate, consistent listings across directories that boost local credibility. NAP consistency everywhere — the boring foundation of local dominance.\n\nBefore a customer ever picks up the phone, they've already formed an opinion about you — from reviews, search results and what others say about your brand online. At Eddinet, we protect and strengthen exactly that perception. We monitor reviews, search visibility, social presence and business listings in one connected view, respond professionally to feedback, and systematically grow your positive signals — so your reputation becomes an asset that brings customers in rather than a risk you worry about.\n\nMost businesses don't have a reputation problem until one bad review surfaces on page one of Google — and then it's suddenly everyone's problem. Our work prevents that panic by running the whole thing as a system: alerts the moment a new review or mention appears, professional on-brand responses within the platform's window, a steady and ethical review flow that keeps the rating healthy, and listings kept accurate and consistent where local customers look. Downturns get caught early, while improvements compound quietly.\n\nA good reputation isn't a bonus — in local search and in trust, it's often the deciding factor. Reviews directly influence Google Business Profile rankings, and a healthy, recent review base turns hesitant researchers into enquiries. Whether you need online reputation management in India, Google review management, local listing optimisation or brand monitoring, we run reputation as a measurable growth function — audited, reported and connected to your local SEO and sales.\n\nFrom scoping and strategy through delivery, reporting and ongoing support, the entire engagement is run as one connected system — with clear milestones, a named team and a focus on outcomes, not deliverables alone.",
   features: [
     {
@@ -79,24 +80,7 @@ export const child = {
       description: "The system runs every day, so you're not lying awake waiting for a bad review — you're managing perception proactively.",
     },
   ],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Businesses Pick Eddinet for Reputation Management",
     points: [
@@ -143,28 +127,7 @@ export const child = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "Can you help with negative reviews?",
@@ -203,26 +166,5 @@ export const child = {
       a: "We track reviews, mentions and sentiment across Google, social media and business directories in one dashboard with alerts for any new activity.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Reputation Management Services",
-      slug: "/services/reputation-management",
-      description: "Explore every reputation management capability under one roof.",
-    },
-    {
-      title: "SEO Services",
-      slug: "/services/seo",
-      description: "Search visibility built for how people actually search now - traditional Google results and AI-generated answers alike. Technical SEO, content relevance, search intent and AI-search readiness work together to build qualified, compounding organic traffic.",
-    },
-    {
-      title: "Content Services",
-      slug: "/services/content",
-      description: "Strategic content created for search, social, campaigns, landing pages and customer journeys - designed to educate, build authority and support conversion at every stage of the funnel.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("reputation-management"),
 };

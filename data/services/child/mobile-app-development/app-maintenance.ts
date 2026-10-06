@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "app-maintenance",
-  categorySlug: "mobile-app-development",
-  categoryTitle: "Mobile App Development",
-  categoryIcon: "📲",
-  item: "App Maintenance",
+
+
+
+
   title: "App Maintenance",
   metaTitle: "App Maintenance Services in India | Eddinet",
   metaDescription: "Launching an app is only the first step. The real challenge is keeping it fast, secure, and bug-free over time.",
   heroHeading: "Mobile App Maintenance & Support Services in India",
   heroSubheading: "Post-Launch Support | Bug Fixing | Performance Optimization | SLA-Backed Maintenance",
-  image: "/images/services/mobile_app_development_banner.webp",
+
   detailedDescription: "Launching an app is only the first step. The real challenge is keeping it fast, secure, and bug-free over time. Eddinet provides comprehensive mobile app maintenance & support services in India. Our goal is simple: fewer crashes, better app store ratings, and a reduced support workload for your team.\n\nEddinet is a dedicated mobile app maintenance agency in India serving startups, SMEs, and established businesses with live applications. We ensure your mobile apps remain stable, secure, and high-performing long after launch.\n\nCross-Platform Expertise: Hands-on experience with native iOS, Android, Flutter, and React Native applications.\n\nSLA-Backed Model: Structured maintenance built around clear response and resolution timelines.\n\nProactive Monitoring: Active deployment of crash monitoring tools and real-device testing protocols.\n\nPredictable Outcomes: Fewer urgent issues, smoother release cycles, and reliable app stability.",
   features: [
     {
@@ -130,24 +131,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet",
     points: [
@@ -199,28 +183,7 @@ export const child = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What is mobile app maintenance?",
@@ -247,28 +210,7 @@ export const child = {
       a: "Yes, we provide full maintenance support across native iOS (Swift), native Android (Kotlin/Java), and cross-platform applications built on Flutter and React Native.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Mobile App Development Services",
-      slug: "/services/mobile-app-development",
-      description: "Explore every mobile app development capability under one roof.",
-    },
-    {
-      title: "Software & AI Solutions Services",
-      slug: "/services/software-ai",
-      description: "Custom software, SaaS-style systems, automation and AI-driven solutions that solve operational problems, improve customer experience or extend existing platforms beyond what off-the-shelf tools can do.",
-    },
-    {
-      title: "Cloud & DevOps Services",
-      slug: "/services/cloud-devops",
-      description: "Cloud infrastructure, deployment, CI/CD, scalability, reliability, security and operational practices that keep digital platforms stable as traffic and workloads grow.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("mobile-app-development"),
   featuresHeading: "Our Mobile App Maintenance Services",
   docxHeadings: {
     about: "About Eddinet - App Maintenance Agency",

@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "woocommerce-development",
-  categorySlug: "ecommerce",
-  categoryTitle: "eCommerce Solutions",
-  categoryIcon: "🛒",
-  item: "WooCommerce Development",
+
+
+
+
   title: "WooCommerce Development",
   metaTitle: "WooCommerce Development Services in India | Eddinet",
   metaDescription: "As a dedicated WooCommerce Development Agency in Delhi, Eddinet combines technical expertise with a deep understanding of eCommerce strategy.",
   heroHeading: "WooCommerce Development Services in Delhi NCR",
   heroSubheading: "Eddinet is a trusted WooCommerce Development Company in Delhi, helping businesses build powerful, scalable, and fully customized online stores on WordPress. Whether you're starting fresh or upgrading an existing store, our team delivers WooCommerce solutions built around your goals, your customers, and your growth plans.",
-  image: "/images/services/ecommerce-solutions.webp",
+
   detailedDescription: "As a dedicated WooCommerce Development Agency in Delhi, Eddinet combines technical expertise with a deep understanding of eCommerce strategy. WooCommerce's flexibility and open-source foundation make it one of the most powerful platforms for building an online store - and our team knows how to unlock its full potential for your business.\n\nAt Eddinet, every project starts with your specific needs, not a generic template. From store architecture to plugin selection and custom functionality, we focus on building a WooCommerce store that reflects your brand and supports long-term growth. With a strong focus on Custom WooCommerce Development in Delhi, we make sure every solution is aligned with how you actually run your business.",
   features: [
     {
@@ -71,24 +72,7 @@ export const child = {
       description: "If you already use WordPress for your website or blog, WooCommerce integrates directly, making content and commerce management simple.",
     },
   ],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Your WooCommerce Store",
     points: [
@@ -146,28 +130,7 @@ export const child = {
     ],
     description: "As an experienced WooCommerce Development Company in Delhi, we follow a practical, milestone-driven workflow rather than a rigid template - adapted to the scope of your project at every stage.",
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "Why should I choose WooCommerce for my online store?",
@@ -194,28 +157,7 @@ export const child = {
       a: "Costs vary based on design complexity, required plugins, and custom features. We provide transparent, upfront pricing after understanding your project requirements.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to eCommerce Solutions Services",
-      slug: "/services/ecommerce",
-      description: "Explore every ecommerce solutions capability under one roof.",
-    },
-    {
-      title: "Web Development Services",
-      slug: "/services/web-development",
-      description: "Fast, structured and SEO-ready websites engineered around usability, performance, conversion and long-term maintainability - so marketing never has to work around a site that wasn't built for it.",
-    },
-    {
-      title: "Ads / PPC & Content Services",
-      slug: "/services/ads-ppc",
-      description: "Google Ads, Meta Ads and performance-focused paid acquisition supported by content and conversion strategy - planned around targeting, budget efficiency and measurable outcomes, not impressions and clicks.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("ecommerce"),
   featuresHeading: "WHAT WE OFFER",
   benefitsHeading: "Why Choose WooCommerce for Your Online Store?",
   benefitsDescription: "WooCommerce powers millions of online stores worldwide - and for good reason.",

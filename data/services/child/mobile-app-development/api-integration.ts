@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "api-integration",
-  categorySlug: "mobile-app-development",
-  categoryTitle: "Mobile App Development",
-  categoryIcon: "📲",
-  item: "API Integration",
+
+
+
+
   title: "API Integration",
   metaTitle: "API Integration Services in India | Eddinet",
   metaDescription: "Eddinet provides premier Mobile App API Integration Services in India to connect your software with essential tools.",
   heroHeading: "Mobile App API Integration Services in India",
   heroSubheading: "API Integration | Third-Party APIs | RESTful APIs",
-  image: "/images/services/mobile_app_development_banner.webp",
+
   detailedDescription: "Eddinet provides premier Mobile App API Integration Services in India to connect your software with essential tools. We build and link secure APIs to automate workflows, secure transactions, and deliver a smooth user experience across apps, servers, and cloud platforms.\n\nAt Eddinet, we connect your mobile applications with powerful external software and cloud environments to expand functionality. As a trusted API integration company in India, we streamline data transfers, automate workflows, and enhance user experiences without requiring you to rebuild your software from scratch.\n\nHere is how we streamline your mobile app API integration:\n\nThird-Party API Integration: We link payment gateways, analytics, and external software directly into your app to enable new features quickly.\n\nCustom RESTful API Development: We build tailored RESTful APIs with clean code to ensure fast, secure data transfer between devices and servers.\n\nPayment & CRM API Integration: We connect secure payment channels and CRM platforms to automate customer data tracking and payment processing.\n\nSecure & Scalable API Solutions: We use strong encryption, OAuth authentication, and rate limiting to handle high traffic volumes without service delays.",
   features: [
     {
@@ -90,24 +91,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet For API Integration Services?",
     points: [
@@ -176,28 +160,7 @@ export const child = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What Are Mobile App API Integration Services?",
@@ -236,28 +199,7 @@ export const child = {
       a: "Yes, we offer ongoing support plans to track uptime, fix connection bugs, and update endpoints when third-party software releases new versions.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Mobile App Development Services",
-      slug: "/services/mobile-app-development",
-      description: "Explore every mobile app development capability under one roof.",
-    },
-    {
-      title: "Software & AI Solutions Services",
-      slug: "/services/software-ai",
-      description: "Custom software, SaaS-style systems, automation and AI-driven solutions that solve operational problems, improve customer experience or extend existing platforms beyond what off-the-shelf tools can do.",
-    },
-    {
-      title: "Cloud & DevOps Services",
-      slug: "/services/cloud-devops",
-      description: "Cloud infrastructure, deployment, CI/CD, scalability, reliability, security and operational practices that keep digital platforms stable as traffic and workloads grow.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("mobile-app-development"),
   featuresHeading: "Our Mobile App API Integration Services",
   docxHeadings: {
     about: "About Our Mobile App API Integration Company",

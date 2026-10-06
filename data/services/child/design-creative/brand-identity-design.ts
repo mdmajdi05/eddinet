@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "brand-identity-design",
-  categorySlug: "design-creative",
-  categoryTitle: "Design & Creative",
-  categoryIcon: "🎨",
-  item: "Brand Identity Design",
+
+
+
+
   title: "Brand Identity Design",
   metaTitle: "Brand Identity Design Services in India | Eddinet",
   metaDescription: "Eddinet provides brand identity design in Delhi that gives your business a distinct face, voice, and personality.",
   heroHeading: "Brand Identity Design in Delhi",
   heroSubheading: "Brand Identity Design | Visual Identity & Guidelines | Complete Branding Packages",
-  image: "/images/services/design-creative.webp",
+
   detailedDescription: "Eddinet provides brand identity design in Delhi that gives your business a distinct face, voice, and personality. We shape how customers see you, remember you, and choose you. Book your free brand consultation today.\n\nDo customers mistake your business for a competitor? Does your brand look polished on one platform and patchy on another? If yes, Eddinet is the solution to your problem.\n\nAs a brand identity agency in Delhi, we blend strategy with craft. We study your market, your story, and your audience before choosing a single colour. You then receive a brand that feels deliberate, consistent, and unmistakably yours.",
   features: [
     {
@@ -38,24 +39,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Brand Identity Design in Delhi",
     points: [
@@ -103,28 +87,7 @@ export const child = {
     ],
     description: "Here is how a rough idea becomes a finished brand.",
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What is brand identity design?",
@@ -147,28 +110,7 @@ export const child = {
       a: "Most projects take three to six weeks, depending on research and feedback speed. Smaller identity projects can finish sooner. We share a realistic timeline before work begins.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Design & Creative Services",
-      slug: "/services/design-creative",
-      description: "Explore every design & creative capability under one roof.",
-    },
-    {
-      title: "Web Development Services",
-      slug: "/services/web-development",
-      description: "Fast, structured and SEO-ready websites engineered around usability, performance, conversion and long-term maintainability - so marketing never has to work around a site that wasn't built for it.",
-    },
-    {
-      title: "Ads / PPC & Content Services",
-      slug: "/services/ads-ppc",
-      description: "Google Ads, Meta Ads and performance-focused paid acquisition supported by content and conversion strategy - planned around targeting, budget efficiency and measurable outcomes, not impressions and clicks.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("design-creative"),
   featuresHeading: "Our Brand Identity Design Services in Delhi",
   featuresDescription: "We focus on four services that turn a business into a recognisable brand.",
   docxHeadings: {

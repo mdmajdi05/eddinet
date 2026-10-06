@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "aws-cloud-services",
-  categorySlug: "cloud-devops",
-  categoryTitle: "Cloud & DevOps",
-  categoryIcon: "☁️",
-  item: "AWS Cloud Services",
+
+
+
+
   title: "AWS Cloud Services",
   metaTitle: "AWS Cloud Services in India | Eddinet",
   metaDescription: "Businesses need flexible cloud setups to stay competitive and secure. At EDDINET, a premier AWS Cloud Services Company in India, we build and manage cloud",
   heroHeading: "AWS Cloud Services Company in India",
   heroSubheading: "AWS Cloud | Cloud Consulting | Migration & Managed Services",
-  image: "/images/services/cloud-devops.webp",
+
   detailedDescription: "Businesses need flexible cloud setups to stay competitive and secure. At EDDINET, a premier AWS Cloud Services Company in India, we build and manage cloud environments for modern businesses.\n\nWe combine expert cloud consulting with cloud-native migration strategies. As a result, our team helps you reduce infrastructure costs, prevent downtime, and scale digital operations smoothly.\n\nAre you looking for cloud engineering services that not only optimize your infrastructure but actively grow your bottom line? At EDDINET, we specialize in building high-performance AWS cloud architectures and migration strategies that align directly with your revenue targets.\n\nDigital growth is more than just cloud visibility, it is the core engine of your business designed to protect critical workloads, ensure system uptime, and convert operational efficiency into long-term profit.",
   features: [
     {
@@ -46,24 +47,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for AWS Cloud Services?",
     points: [
@@ -112,28 +96,7 @@ export const child = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What do your AWS cloud services in India include?",
@@ -156,28 +119,7 @@ export const child = {
       a: "Yes, we offer ongoing SLA-backed managed services that cover round-the-clock server monitoring, automated system backups, regular software patching, and immediate technical troubleshooting.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Cloud & DevOps Services",
-      slug: "/services/cloud-devops",
-      description: "Explore every cloud & devops capability under one roof.",
-    },
-    {
-      title: "Hosting & Migration Services",
-      slug: "/services/hosting-migration",
-      description: "Hosting architecture, website/application migration, environment setup and infrastructure transition planned for reliability, security and minimal disruption to your live business.",
-    },
-    {
-      title: "Software & AI Solutions Services",
-      slug: "/services/software-ai",
-      description: "Custom software, SaaS-style systems, automation and AI-driven solutions that solve operational problems, improve customer experience or extend existing platforms beyond what off-the-shelf tools can do.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("cloud-devops"),
   docxHeadings: {
     about: "About EDDINET",
     process: "Our AWS Cloud Services Process",

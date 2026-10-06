@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "erp-development",
-  categorySlug: "software-ai",
-  categoryTitle: "Software & AI Solutions",
-  categoryIcon: "🤖",
-  item: "ERP Development",
+
+
+
+
   title: "ERP Development",
   metaTitle: "ERP Development Services in India | Eddinet",
   metaDescription: "EDDINET builds scalable, secure ERP systems that centralize enterprise data and automate operational workflows.",
   heroHeading: "Custom ERP Development Company in India",
   heroSubheading: "Enterprise ERP Systems | Bespoke ERP Solutions | Custom ERP Applications",
-  image: "/images/services/software-ai-solutions.webp",
+
   detailedDescription: "EDDINET builds scalable, secure ERP systems that centralize enterprise data and automate operational workflows. As a premier custom ERP development company in India, we combine technical precision with corporate logic to deliver unified software tailored to your exact business rules.\n\nEDDINET helps startups, SMEs, and large enterprises design, build, and deploy high-converting digital applications.\n\nAs a leading custom ERP development company in India, we turn complex business logic into fast, secure, and scalable digital products engineered to streamline your workflows and accelerate bottom-line revenue.\n\nBy combining clean system architecture with battle-tested security, we help your business digitize operations, eliminate technical debt, and achieve compounding commercial growth.",
   features: [
     {
@@ -50,24 +51,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for Enterprise ERP Development in India?",
     points: [
@@ -120,28 +104,7 @@ export const child = {
     ],
     description: "We follow a transparent agile methodology to ensure predictable delivery schedules and uncompromised software stability.",
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What Does a Custom ERP Development Company in India Do?",
@@ -172,28 +135,7 @@ export const child = {
       a: "Yes, we construct secure custom API connectors and data bridges to integrate your new custom ERP platform seamlessly with legacy tools, CRMs, and external enterprise databases.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Software & AI Solutions Services",
-      slug: "/services/software-ai",
-      description: "Explore every software & ai solutions capability under one roof.",
-    },
-    {
-      title: "Cloud & DevOps Services",
-      slug: "/services/cloud-devops",
-      description: "Cloud infrastructure, deployment, CI/CD, scalability, reliability, security and operational practices that keep digital platforms stable as traffic and workloads grow.",
-    },
-    {
-      title: "Mobile App Development Services",
-      slug: "/services/mobile-app-development",
-      description: "Native and cross-platform mobile applications built around product goals, user experience, retention and scalable technical foundations - connected to the same marketing and data strategy as the rest of your digital presence.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("software-ai"),
   featuresHeading: "Our ERP Software Development Services India",
   featuresDescription: "We offer end-to-end engineering services to integrate complex organizational processes into unified digital platforms.",
   docxHeadings: {

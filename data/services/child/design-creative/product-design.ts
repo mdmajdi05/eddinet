@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "product-design",
-  categorySlug: "design-creative",
-  categoryTitle: "Design & Creative",
-  categoryIcon: "🎨",
-  item: "Product Design",
+
+
+
+
   title: "Product Design",
   metaTitle: "Product Design Services in India | Eddinet",
   metaDescription: "EDDINET provides product design services in Delhi that take an idea from a rough sketch to something people can see, touch, and use.",
   heroHeading: "Product Design Services in Delhi",
   heroSubheading: "Digital Product Design | SaaS & MVP Design | Prototyping, 3D Modelling & Rendering",
-  image: "/images/services/design-creative.webp",
+
   detailedDescription: "EDDINET provides product design services in Delhi that take an idea from a rough sketch to something people can see, touch, and use. We shape the experience, test the concept, and prepare designs your team can build with confidence.\n\nIs your product idea stuck between a sketch and a working version? Do you worry that building the wrong features will burn your budget?\n\nIf yes, EDDINET is the solution to your problem.\n\nAs a product design agency in Delhi, we work with founders, startups, and established businesses that want clarity before they commit to development. We listen to your idea, question the assumptions, and map the shortest path to a testable product. You then receive designs that are focused, realistic, and ready for the next stage.",
   features: [
     {
@@ -50,24 +51,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Product Design Services in Delhi",
     points: [
@@ -115,28 +99,7 @@ export const child = {
     ],
     description: "Here is how an idea becomes a product that is ready to build.",
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What are product design services?",
@@ -159,28 +122,7 @@ export const child = {
       a: "The cost depends on the product type, number of screens or models, and the depth of research. An MVP costs less than a full platform or a physical product with packaging and renders. After a short discovery call, we share a clear quote.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Design & Creative Services",
-      slug: "/services/design-creative",
-      description: "Explore every design & creative capability under one roof.",
-    },
-    {
-      title: "Web Development Services",
-      slug: "/services/web-development",
-      description: "Fast, structured and SEO-ready websites engineered around usability, performance, conversion and long-term maintainability - so marketing never has to work around a site that wasn't built for it.",
-    },
-    {
-      title: "Ads / PPC & Content Services",
-      slug: "/services/ads-ppc",
-      description: "Google Ads, Meta Ads and performance-focused paid acquisition supported by content and conversion strategy - planned around targeting, budget efficiency and measurable outcomes, not impressions and clicks.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("design-creative"),
   featuresHeading: "Our Product Design Services in Delhi",
   featuresDescription: "We focus on five areas, from the first concept to the final render.",
   docxHeadings: {

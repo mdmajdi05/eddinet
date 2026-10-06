@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "youtube-management",
-  categorySlug: "social-media-marketing",
-  categoryTitle: "Social Media Marketing",
-  categoryIcon: "📱",
-  item: "YouTube Management",
+
+
+
+
   title: "YouTube Management",
   metaTitle: "YouTube Management in India | Eddinet",
   metaDescription: "At Eddinet, we are a full-service digital marketing and growth agency built on a single premise: digital success shouldn't be based on guesswork.",
   heroHeading: "YouTube Management Services in India",
   heroSubheading: "At Eddinet, we deliver end-to-end YouTube management services in India to transform your channel into a steady growth engine. From channel strategy and video SEO to publishing and audience engagement, we optimize your content for both search and recommendation feeds so your videos consistently get found, clicked, and watched.",
-  image: "/images/services/social-media.webp",
+
   detailedDescription: "At Eddinet, we are a full-service digital marketing and growth agency built on a single premise: digital success shouldn't be based on guesswork. With over a decade of search engine optimization and online marketing expertise, we help brands, businesses, and creators navigate the evolving digital landscape with precision and transparency.\n\nWe don't just optimize for algorithms; we optimize for people. Whether it's turning a stagnant YouTube channel into a high-engagement video asset, scaling organic web search traffic through modern AI-driven SEO, or crafting strategic digital campaigns, our focus remains on driving real, measurable ROI.",
   features: [
     {
@@ -46,24 +47,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet as Your YouTube Channel Management Agency in India",
     points: [
@@ -110,28 +94,7 @@ export const child = {
     ],
     description: "At Eddinet, our YouTube management process follows a structured, data-driven workflow designed to turn casual viewers into loyal subscribers and long-term brand customers. We combine technical search optimization with strategic content planning so every upload serves a clear business purpose.",
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What do your YouTube channel manag1ement services include?",
@@ -154,28 +117,7 @@ export const child = {
       a: "Running a channel requires SEO, video editing, graphic design, and analytics skills. Partnering with a dedicated agency gives you an expert team for a fraction of the cost of hiring in-house.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Social Media Marketing Services",
-      slug: "/services/social-media-marketing",
-      description: "Explore every social media marketing capability under one roof.",
-    },
-    {
-      title: "Ads / PPC & Content Services",
-      slug: "/services/ads-ppc",
-      description: "Google Ads, Meta Ads and performance-focused paid acquisition supported by content and conversion strategy - planned around targeting, budget efficiency and measurable outcomes, not impressions and clicks.",
-    },
-    {
-      title: "Design & Creative Services",
-      slug: "/services/design-creative",
-      description: "Brand identity, campaign creative, UI/visual systems and marketing assets designed to perform across web, social, advertising and digital products - not just look good in a portfolio.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("social-media-marketing"),
   featuresHeading: "Our YouTube Channel Management Services in India",
   featuresDescription: "At Eddinet, we treat your YouTube channel like a high-converting growth engine. As a premier YouTube channel management agency in India, we handle every single step of the creation, optimization, and distribution process so you can focus on running your business.",
   docxHeadings: {

@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "kubernetes",
-  categorySlug: "cloud-devops",
-  categoryTitle: "Cloud & DevOps",
-  categoryIcon: "☁️",
-  item: "Kubernetes",
+
+
+
+
   title: "Kubernetes",
   metaTitle: "Kubernetes Services in India | Eddinet",
   metaDescription: "Struggling with multi-container orchestration, microservice bottlenecks, or cloud infrastructure complexity? Eddinet provides premier Kubernetes services in",
   heroHeading: "Kubernetes Services Company in India",
   heroSubheading: "Kubernetes Consulting Services | EKS, AKS & GKE Management | Enterprise Solutions",
-  image: "/images/services/cloud-devops.webp",
+
   detailedDescription: "Struggling with multi-container orchestration, microservice bottlenecks, or cloud infrastructure complexity? Eddinet provides premier Kubernetes services in India. We build, deploy, and manage production-grade cluster architectures to streamline container management, ensure auto-scaling resilience, and lower cloud compute costs.\n\nAt Eddinet, we deliver enterprise Kubernetes solutions India to turn complex container deployments into high-availability infrastructure. We manage your entire cluster lifecycle across hybrid and multi-cloud environments eliminating manual scaling delays, optimizing configurations, and preventing security outages.\n\nOur certified sysadmins provide complete cluster management:\n\nManaged Cloud Clusters: End-to-end support for Amazon EKS, Azure AKS, and Google Cloud GKE control planes and node pools.\n\nZero-Downtime Releases: Continuous cluster provisioning, ingress routing, and automated upgrades without live service disruption.\n\nHardened Security: Strict RBAC policies, Pod Security Standards, network isolation, and persistent volume protection for 24/7 safety.",
   features: [
     {
@@ -46,24 +47,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Kubernetes Services?",
     points: [
@@ -109,28 +93,7 @@ export const child = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What is included in your Kubernetes services in India?",
@@ -153,28 +116,7 @@ export const child = {
       a: "We use persistent storage volumes bound outside the container lifecycle, combined with encrypted secrets, network policies, and automated off-site backups.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Cloud & DevOps Services",
-      slug: "/services/cloud-devops",
-      description: "Explore every cloud & devops capability under one roof.",
-    },
-    {
-      title: "Hosting & Migration Services",
-      slug: "/services/hosting-migration",
-      description: "Hosting architecture, website/application migration, environment setup and infrastructure transition planned for reliability, security and minimal disruption to your live business.",
-    },
-    {
-      title: "Software & AI Solutions Services",
-      slug: "/services/software-ai",
-      description: "Custom software, SaaS-style systems, automation and AI-driven solutions that solve operational problems, improve customer experience or extend existing platforms beyond what off-the-shelf tools can do.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("cloud-devops"),
   featuresHeading: "Our Kubernetes Services in India",
   docxHeadings: {
     about: "About Us: Kubernetes Services Company in India",

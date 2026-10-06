@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "video-editing",
-  categorySlug: "design-creative",
-  categoryTitle: "Design & Creative",
-  categoryIcon: "🎨",
-  item: "Video Editing",
+
+
+
+
   title: "Video Editing",
   metaTitle: "Video Editing Services in India | Eddinet",
   metaDescription: "EDDINET provides professional video editing services in Delhi to help brands, creators, and businesses transform raw footage into high-retention visual",
   heroHeading: "Video Editing Services in Delhi",
   heroSubheading: "YouTube Video Editing | Corporate Video Editing | Reels & Social Media Edits",
-  image: "/images/services/design-creative.webp",
+
   detailedDescription: "EDDINET provides professional video editing services in Delhi to help brands, creators, and businesses transform raw footage into high-retention visual stories. Our post-production team combines cinematic pacing, seamless transitions, and immersive sound design to capture audience attention and keep viewers watching until the final frame.\n\nDo your videos lose viewers within the first few seconds? Is your footage sitting unused because nobody has time to edit it? If yes, EDDINET is the solution to your problem.\n\nAs a professional video editing agency in Delhi, we work with creators, brands, and companies that want polished videos without building an in-house team. We watch your footage, learn your goal, and edit with the viewer in mind. You then receive videos that feel smooth, purposeful, and ready to publish.",
   features: [
     {
@@ -38,24 +39,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Video Editing Services in Delhi",
     points: [
@@ -103,28 +87,7 @@ export const child = {
     ],
     description: "Here is how raw footage becomes a finished video.",
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "How much do video editing services in Delhi cost?",
@@ -147,28 +110,7 @@ export const child = {
       a: "A company gives you a trained team, a tested process, and backup when one person is unavailable. You also avoid the cost of software, hardware, and hiring. This frees your team to focus on creating and growing.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Design & Creative Services",
-      slug: "/services/design-creative",
-      description: "Explore every design & creative capability under one roof.",
-    },
-    {
-      title: "Web Development Services",
-      slug: "/services/web-development",
-      description: "Fast, structured and SEO-ready websites engineered around usability, performance, conversion and long-term maintainability - so marketing never has to work around a site that wasn't built for it.",
-    },
-    {
-      title: "Ads / PPC & Content Services",
-      slug: "/services/ads-ppc",
-      description: "Google Ads, Meta Ads and performance-focused paid acquisition supported by content and conversion strategy - planned around targeting, budget efficiency and measurable outcomes, not impressions and clicks.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("design-creative"),
   featuresHeading: "Our Video Editing Services in Delhi",
   featuresDescription: "We focus on four services that cover the places your videos are watched.",
   docxHeadings: {

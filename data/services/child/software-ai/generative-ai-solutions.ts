@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "generative-ai-solutions",
-  categorySlug: "software-ai",
-  categoryTitle: "Software & AI Solutions",
-  categoryIcon: "🤖",
-  item: "Generative AI Solutions",
+
+
+
+
   title: "Generative AI Solutions",
   metaTitle: "Generative AI Solutions Services in India | Eddinet",
   metaDescription: "EDDINET builds high-performance generative AI platforms that enable enterprises to create content, automate complex reasoning, and derive deep value from",
   heroHeading: "Generative AI Solutions Company in India",
   heroSubheading: "Enterprise GenAI Engineering | Custom Fine-Tuned Models | Scalable Application Development",
-  image: "/images/services/software-ai-solutions.webp",
+
   detailedDescription: "EDDINET builds high-performance generative AI platforms that enable enterprises to create content, automate complex reasoning, and derive deep value from unstructured operational data. As a leading generative AI solutions company in India, we combine advanced Large Language Model (LLM) engineering with enterprise security to deliver scalable GenAI applications tailored to your business goals.\n\nEDDINET builds custom generative AI tools, domain-specific foundation models, and intelligent content-generation platforms. As a dedicated generative AI solutions company in India, we transform complex data streams into automated, contextually aware creative and analytical workflows.\n\nOur engineering team combines proprietary model fine-tuning with enterprise-grade security protocols. Consequently, we help forward-thinking organizations automate content creation, extract deep business insights, and accelerate innovation across departments.",
   features: [
     {
@@ -50,24 +51,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for Enterprise Generative AI Solutions?",
     points: [
@@ -120,28 +104,7 @@ export const child = {
     ],
     description: "We follow a systematic agile methodology to build, evaluate, and deploy enterprise-grade generative AI applications safely and efficiently.",
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What Does a Generative AI Solutions Company in India Do?",
@@ -172,28 +135,7 @@ export const child = {
       a: "We deploy models within private, encrypted cloud environments and implement strict data governance protocols so your proprietary data never leaves your enterprise boundary.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Software & AI Solutions Services",
-      slug: "/services/software-ai",
-      description: "Explore every software & ai solutions capability under one roof.",
-    },
-    {
-      title: "Cloud & DevOps Services",
-      slug: "/services/cloud-devops",
-      description: "Cloud infrastructure, deployment, CI/CD, scalability, reliability, security and operational practices that keep digital platforms stable as traffic and workloads grow.",
-    },
-    {
-      title: "Mobile App Development Services",
-      slug: "/services/mobile-app-development",
-      description: "Native and cross-platform mobile applications built around product goals, user experience, retention and scalable technical foundations - connected to the same marketing and data strategy as the rest of your digital presence.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("software-ai"),
   featuresHeading: "Our Generative AI Development Services in India",
   featuresDescription: "We offer comprehensive engineering services to design, fine-tune, and deploy custom GenAI capabilities across your enterprise software ecosystem.",
   docxHeadings: {

@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "presentation-design",
-  categorySlug: "design-creative",
-  categoryTitle: "Design & Creative",
-  categoryIcon: "🎨",
-  item: "Presentation Design",
+
+
+
+
   title: "Presentation Design",
   metaTitle: "Presentation Design Services in India | Eddinet",
   metaDescription: "Ever sat through a pitch and felt your attention drift within the first two minutes? That's usually a design problem. Eddinet builds presentation design solutions that hold attention and push your audience toward a decision.",
   heroHeading: "Presentation Design Services in Delhi NCR",
   heroSubheading: "Ever sat through a pitch and felt your attention drift within the first two minutes? That's usually not a content problem — it's a design problem. At Eddinet, we build presentation design solutions that hold attention, explain ideas clearly, and push your audience toward a decision, whether that's signing a deal, approving a budget, or funding your startup. We're a full-service digital agency, and as a trusted SEO company in India, we understand something most design studios miss: a presentation isn't just a visual, it's a piece of marketing. Every slide has to earn its place, just like every page on a website has to earn its ranking. That's the mindset we bring to every deck we design. Whether you need a single investor pitch or an entire library of sales presentations for your team, Eddinet turns scattered bullet points and rough ideas into a deck that actually gets read, remembered, and acted on.",
-  image: "/images/services/design-creative.webp",
+
   detailedDescription: "Eddinet started with a simple frustration — too many businesses were spending money on great content and then losing their audience because the presentation looked like it was thrown together at midnight. So we built a team that sits right at the intersection of design, storytelling, and strategy.\n\nToday, we work with startups, growing businesses, and enterprise teams across India, helping them present themselves the way they actually deserve to be seen. Our designers have backgrounds in branding and marketing, not just software — which means every presentation we design carries your brand's tone, not a generic template pulled off the internet.\n\nWe're also known as a dependable SEO company in India, and that dual expertise matters more than people expect. A presentation designed by a team that understands search intent, audience behavior, and conversion psychology simply performs better than one designed by someone who only knows how to move shapes around a canvas.",
   features: [
     {
@@ -71,24 +72,7 @@ export const child = {
       description: "Because Eddinet also operates as an established SEO company in India, we naturally structure presentation content in a way that mirrors what actually converts online — clear headlines, scannable points, and a message that lands fast.",
     },
   ],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Us",
     points: [
@@ -130,28 +114,7 @@ export const child = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "Do you provide source design files?",
@@ -190,28 +153,7 @@ export const child = {
       a: "Both. We can work within your existing brand system, evolve it for consistency, or build a completely new identity - whichever your growth plan needs.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Design & Creative Services",
-      slug: "/services/design-creative",
-      description: "Explore every design & creative capability under one roof.",
-    },
-    {
-      title: "Web Development Services",
-      slug: "/services/web-development",
-      description: "Fast, structured and SEO-ready websites engineered around usability, performance, conversion and long-term maintainability - so marketing never has to work around a site that wasn't built for it.",
-    },
-    {
-      title: "Ads / PPC & Content Services",
-      slug: "/services/ads-ppc",
-      description: "Google Ads, Meta Ads and performance-focused paid acquisition supported by content and conversion strategy - planned around targeting, budget efficiency and measurable outcomes, not impressions and clicks.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("design-creative"),
   featuresHeading: "Presentation Design Services for Every Occasion",
   benefitsHeading: "Benefits of Professional Presentation Design",
 };

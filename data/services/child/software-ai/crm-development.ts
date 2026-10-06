@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "crm-development",
-  categorySlug: "software-ai",
-  categoryTitle: "Software & AI Solutions",
-  categoryIcon: "🤖",
-  item: "CRM Development",
+
+
+
+
   title: "CRM Development",
   metaTitle: "CRM Development Services in India | Eddinet",
   metaDescription: "We build scalable customer relationship management systems engineered to optimize sales pipelines and automate client operations.",
   heroHeading: "Custom CRM Development Company in India",
   heroSubheading: "Enterprise CRM Systems | Bespoke CRM Solutions | Custom CRM Applications",
-  image: "/images/services/software-ai-solutions.webp",
+
   detailedDescription: "We build scalable customer relationship management systems engineered to optimize sales pipelines and automate client operations. As a premier custom CRM development company in India, EDDINET delivers secure, high-performing digital platforms customised to your business workflows.\n\nModern organizations require flexible CRM tools to drive operational efficiency and improve client retention. Our engineering team combines technical precision with business logic to build custom solutions that scale seamlessly alongside your active user base.\n\nEDDINET helps startups, SMEs, and large enterprises design, build, and deploy high-converting digital applications.\n\nAs a leading custom CRM development company in India, we specialize in custom system architectures, secure cloud integrations, and intuitive user interfaces.\n\nWe engineer high-speed, secure digital systems that automate your core operations and generate predictable commercial returns.",
   features: [
     {
@@ -50,24 +51,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for Enterprise CRM Development in India?",
     points: [
@@ -120,28 +104,7 @@ export const child = {
     ],
     description: "We follow a structured agile methodology to deliver custom software projects on schedule and within budget.",
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What Does a Custom CRM Development Company in India Do?",
@@ -172,28 +135,7 @@ export const child = {
       a: "Yes, we build secure RESTful APIs and custom connectors to integrate your new CRM seamlessly with existing ERPs, databases, and third-party tools.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Software & AI Solutions Services",
-      slug: "/services/software-ai",
-      description: "Explore every software & ai solutions capability under one roof.",
-    },
-    {
-      title: "Cloud & DevOps Services",
-      slug: "/services/cloud-devops",
-      description: "Cloud infrastructure, deployment, CI/CD, scalability, reliability, security and operational practices that keep digital platforms stable as traffic and workloads grow.",
-    },
-    {
-      title: "Mobile App Development Services",
-      slug: "/services/mobile-app-development",
-      description: "Native and cross-platform mobile applications built around product goals, user experience, retention and scalable technical foundations - connected to the same marketing and data strategy as the rest of your digital presence.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("software-ai"),
   featuresHeading: "CRM Software Development Services in India",
   featuresDescription: "We offer end-to-end engineering services to turn complex customer management workflows into intuitive digital systems.",
   docxHeadings: {

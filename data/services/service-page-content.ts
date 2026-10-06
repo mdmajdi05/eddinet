@@ -24,8 +24,8 @@ import {
 import {
   getChildSlug,
   getCategoryTemplate,
-  sharedTestimonials,
 } from "@/data/services/child/generated-child-services";
+import { sharedTestimonials } from "@/data/services/child/_shared";
 import { processSteps } from "@/data/home/home";
 import { docxCategoryPages } from "@/data/services/child/docx-content";
 

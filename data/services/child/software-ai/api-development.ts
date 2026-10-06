@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "api-development",
-  categorySlug: "software-ai",
-  categoryTitle: "Software & AI Solutions",
-  categoryIcon: "🤖",
-  item: "API Development",
+
+
+
+
   title: "API Development",
   metaTitle: "API Development Services in India | Eddinet",
   metaDescription: "EDDINET builds secure, high-speed API architectures that connect software applications and facilitate automated data exchange.",
   heroHeading: "API Development Company in India",
   heroSubheading: "Custom API Engineering | RESTful & GraphQL Solutions | Enterprise Integrations",
-  image: "/images/services/software-ai-solutions.webp",
+
   detailedDescription: "EDDINET builds secure, high-speed API architectures that connect software applications and facilitate automated data exchange. As a premier API development company in India, we combine robust backend engineering with strict security protocols to deliver scalable interfaces tailored to your digital ecosystem.\n\nEDDINET helps startups, SMEs, and large enterprises design, build, and deploy high-converting digital applications. As a leading API development company in India, we turn complex technical workflows into fast, secure, and reliable integration channels engineered to streamline system communication and accelerate bottom-line revenue.",
   features: [
     {
@@ -50,24 +51,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for Enterprise API Development in India?",
     points: [
@@ -120,28 +104,7 @@ export const child = {
     ],
     description: "We follow a transparent agile methodology to deliver high-performance integrations on schedule and within budget.",
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What Does an API Development Company in India Do?",
@@ -172,28 +135,7 @@ export const child = {
       a: "We implement strict authentication protocols (OAuth2, JWT), end-to-end SSL/TLS encryption, request throttling, IP whitelisting, and regular security audits to prevent data exposure.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Software & AI Solutions Services",
-      slug: "/services/software-ai",
-      description: "Explore every software & ai solutions capability under one roof.",
-    },
-    {
-      title: "Cloud & DevOps Services",
-      slug: "/services/cloud-devops",
-      description: "Cloud infrastructure, deployment, CI/CD, scalability, reliability, security and operational practices that keep digital platforms stable as traffic and workloads grow.",
-    },
-    {
-      title: "Mobile App Development Services",
-      slug: "/services/mobile-app-development",
-      description: "Native and cross-platform mobile applications built around product goals, user experience, retention and scalable technical foundations - connected to the same marketing and data strategy as the rest of your digital presence.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("software-ai"),
   featuresHeading: "Our API Development Services",
   featuresDescription: "We offer end-to-end engineering services to connect disconnected systems and expand your digital platform's capabilities.",
   docxHeadings: {

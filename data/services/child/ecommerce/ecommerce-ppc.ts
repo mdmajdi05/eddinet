@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "ecommerce-ppc",
-  categorySlug: "ecommerce",
-  categoryTitle: "eCommerce Solutions",
-  categoryIcon: "🛒",
-  item: "eCommerce PPC",
+
+
+
+
   title: "eCommerce PPC",
   metaTitle: "eCommerce PPC Services in India | Eddinet",
   metaDescription: "Are you looking for e-commerce PPC management that does not just drive empty traffic, but actively lowers your customer acquisition costs and scales revenue?",
   heroHeading: "eCommerce PPC Services in India",
   heroSubheading: "At Eddinet, we fix high ad spend and low return on ad spend (ROAS) by running laser-targeted campaigns that convert online shoppers into paying customers. Delivering data-backed E-Commerce PPC Services in India, we build and manage dynamic shopping ads, high-intent search campaigns, and retargeting workflows designed to maximize profits and lower your customer acquisition costs.",
-  image: "/images/services/ecommerce-solutions.webp",
+
   detailedDescription: "Are you looking for e-commerce PPC management that does not just drive empty traffic, but actively lowers your customer acquisition costs and scales revenue? At Eddinet, we specialize in managing high-ROI shopping campaigns, dynamic retargeting flows, and performance-driven product ads tailored for growing brands.\n\nPaid advertising is more than just buying clicks; it's the fastest engine for capturing high-intent shoppers, converting abandoned carts into repeat buyers, and maximizing profit margins on every product in your catalog.",
   features: [
     {
@@ -42,24 +43,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for E-Commerce PPC",
     points: [
@@ -108,28 +92,7 @@ export const child = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What are E-Commerce PPC Services in India?",
@@ -148,28 +111,7 @@ export const child = {
       a: "We restructure your product titles, descriptions, image tags, and custom labels within Google Merchant Center to match real search queries and boost product ad impressions.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to eCommerce Solutions Services",
-      slug: "/services/ecommerce",
-      description: "Explore every ecommerce solutions capability under one roof.",
-    },
-    {
-      title: "Web Development Services",
-      slug: "/services/web-development",
-      description: "Fast, structured and SEO-ready websites engineered around usability, performance, conversion and long-term maintainability - so marketing never has to work around a site that wasn't built for it.",
-    },
-    {
-      title: "Ads / PPC & Content Services",
-      slug: "/services/ads-ppc",
-      description: "Google Ads, Meta Ads and performance-focused paid acquisition supported by content and conversion strategy - planned around targeting, budget efficiency and measurable outcomes, not impressions and clicks.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("ecommerce"),
   featuresHeading: "Our E-Commerce PPC Services in India",
   docxHeadings: {
     about: "About Eddinet: E-Commerce Ad Solutions",

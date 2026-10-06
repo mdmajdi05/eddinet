@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "brochure-design",
-  categorySlug: "design-creative",
-  categoryTitle: "Design & Creative",
-  categoryIcon: "🎨",
-  item: "Brochure Design",
+
+
+
+
   title: "Brochure Design",
   metaTitle: "Brochure Design Services in India | Eddinet",
   metaDescription: "EDDINET provides brochure design services in Delhi that give your business a printed and digital voice worth keeping.",
   heroHeading: "Brochure Design Services in Delhi",
   heroSubheading: "Custom Corporate & Tri-Fold Brochures | Company Profiles | Print & Digital Sales Collateral",
-  image: "/images/services/design-creative.webp",
+
   detailedDescription: "EDDINET provides brochure design services in Delhi that give your business a printed and digital voice worth keeping. We shape clear layouts and tight, persuasive copy into brochures that win attention at meetings, exhibitions, and online. Every page is custom-built around your brand, so prospects see a business they can trust.\n\nAt EDDINET, we transform static company details into compelling print and digital brand assets. Unorganized information, weak visual hierarchy, and low-resolution graphics directly harm brand credibility and cost you high-value B2B opportunities. As a top-rated brochure design company in Delhi, we engineer precision-crafted brochures designed to leave a lasting professional mark.\n\nOur creative design team manages your entire collateral ecosystem end-to-end. We develop elegant corporate brochure design solutions and structured company brochure design assets including classic tri-fold brochure design layouts and multi-page business brochure design catalogs optimized for crisp physical printing and instant digital sharing.",
   features: [
     {
@@ -46,24 +47,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET as Your Brochure Design Company in Delhi?",
     points: [
@@ -104,28 +88,7 @@ export const child = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What are brochure design services?",
@@ -152,28 +115,7 @@ export const child = {
       a: "Yes. Upon full project settlement, we deliver complete editable open source files (Adobe InDesign / Illustrator) along with all fonts and linked image assets.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Design & Creative Services",
-      slug: "/services/design-creative",
-      description: "Explore every design & creative capability under one roof.",
-    },
-    {
-      title: "Web Development Services",
-      slug: "/services/web-development",
-      description: "Fast, structured and SEO-ready websites engineered around usability, performance, conversion and long-term maintainability - so marketing never has to work around a site that wasn't built for it.",
-    },
-    {
-      title: "Ads / PPC & Content Services",
-      slug: "/services/ads-ppc",
-      description: "Google Ads, Meta Ads and performance-focused paid acquisition supported by content and conversion strategy - planned around targeting, budget efficiency and measurable outcomes, not impressions and clicks.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("design-creative"),
   featuresHeading: "Our Brochure Design Services in Delhi",
   docxHeadings: {
     about: "About EDDINET: Brochure Designing Agency",

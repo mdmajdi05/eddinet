@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "application-hosting",
-  categorySlug: "hosting-migration",
-  categoryTitle: "Hosting & Migration",
-  categoryIcon: "🌐",
-  item: "Application Hosting",
+
+
+
+
   title: "Application Hosting",
   metaTitle: "Application Hosting Services in India | Eddinet",
   metaDescription: "Eddinet provides application hosting services in India where our engineers build, deploy, and manage server environments around your software stack.",
   heroHeading: "Application Hosting Services Company in India",
   heroSubheading: "Web Application Hosting | Node.js, Laravel & PHP Hosting | SaaS Infrastructure Setup",
-  image: "/images/services/hosting-migration.webp",
+
   detailedDescription: "Eddinet provides application hosting services in India where our engineers build, deploy, and manage server environments around your software stack. As a result, you get faster page loads, fewer bottlenecks, and strong uptime.\n\nOur web application hosting includes low-latency database routing, automated scaling, and 24/7 proactive management. Therefore, your app stays quick and stable as your users grow.\n\nDoes your app crash under load? Do memory leaks and slow servers frustrate your users? Are you unsure whether your hosting setup is built for your code? If yes, Eddinet is the solution to your problem.\n\nAs a web application hosting company in India, we turn standard cloud servers into fast, stable environments for your applications. Our certified sysadmins manage everything from server setup to runtime tuning. As a result, your app stays available and responds quickly, even when traffic grows.",
   features: [
     {
@@ -46,24 +47,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Application Hosting Services?",
     points: [
@@ -109,28 +93,7 @@ export const child = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What do your application hosting services in India include?",
@@ -153,28 +116,7 @@ export const child = {
       a: "Yes, we set up automated, encrypted off-site backups with strict retention policies, ensuring your application data can be restored instantly in any emergency.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Hosting & Migration Services",
-      slug: "/services/hosting-migration",
-      description: "Explore every hosting & migration capability under one roof.",
-    },
-    {
-      title: "Cloud & DevOps Services",
-      slug: "/services/cloud-devops",
-      description: "Cloud infrastructure, deployment, CI/CD, scalability, reliability, security and operational practices that keep digital platforms stable as traffic and workloads grow.",
-    },
-    {
-      title: "Web Development Services",
-      slug: "/services/web-development",
-      description: "Fast, structured and SEO-ready websites engineered around usability, performance, conversion and long-term maintainability - so marketing never has to work around a site that wasn't built for it.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("hosting-migration"),
   featuresHeading: "Our Application Hosting Services in India",
   docxHeadings: {
     about: "About Us: Web Application Hosting Company in India",

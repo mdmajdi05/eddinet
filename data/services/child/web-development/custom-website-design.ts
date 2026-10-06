@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "custom-website-design",
-  categorySlug: "web-development",
-  categoryTitle: "Web Development",
-  categoryIcon: "💻",
-  item: "Custom Website Design",
+
+
+
+
   title: "Custom Website Design",
   metaTitle: "Custom Website Design Services in India | Eddinet",
   metaDescription: "Websites that don't just look good — they bring in business. Eddinet designs custom websites built to convert: fast, functional, and made around your business, not a template. Get a free consultation.",
   heroHeading: "Custom Website Design Services in Delhi NCR",
   heroSubheading: "Websites that don't just look good — they bring in business. Your website should be your best salesperson, not a digital brochure nobody reads. At Eddinet, we design custom websites built to convert — fast, functional, and made around your business, not a template. New site, redesign, or online store — our goal stays the same: turn visitors into customers.",
-  image: "/images/services/web-development.webp",
+
   detailedDescription: "Eddinet is a team of designers, developers, and strategists who build websites that actually perform — not just look good in a screenshot. We've worked across healthcare, real estate, e-commerce, education, and hospitality, so we get to your business fast instead of starting from zero.\n\nWe treat every project like it's the only one we're working on — which is why clients keep coming back for their next website, redesign, or campaign page.",
   features: [
     {
@@ -75,24 +76,7 @@ export const child = {
       description: "Every page, button, and form feels like it belongs to the same business.",
     },
   ],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Custom Website Design Services in India",
     points: [
@@ -138,28 +122,7 @@ export const child = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What does custom website design actually mean?",
@@ -194,26 +157,5 @@ export const child = {
       a: "Absolutely. We hand over an easy-to-use CMS so you can update pages, images, and content without needing a developer for every small change.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Web Development Services",
-      slug: "/services/web-development",
-      description: "Explore every web development capability under one roof.",
-    },
-    {
-      title: "SEO Services",
-      slug: "/services/seo",
-      description: "Search visibility built for how people actually search now - traditional Google results and AI-generated answers alike. Technical SEO, content relevance, search intent and AI-search readiness work together to build qualified, compounding organic traffic.",
-    },
-    {
-      title: "eCommerce Solutions Services",
-      slug: "/services/ecommerce",
-      description: "eCommerce platforms and storefront experiences designed around discovery, product visibility, UX, checkout conversion and repeat purchase - where SEO, paid media and UX have to work in sync.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("web-development"),
 };

@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "custom-software-development",
-  categorySlug: "software-ai",
-  categoryTitle: "Software & AI Solutions",
-  categoryIcon: "🤖",
-  item: "Custom Software Development",
+
+
+
+
   title: "Custom Software Development",
   metaTitle: "Custom Software Development Services in India | Eddinet",
   metaDescription: "We build custom software that fits your exact operational workflows and drives business growth. As a leading Custom Software Development Company in India",
   heroHeading: "Custom Software Development Company in India",
   heroSubheading: "Custom Software | Business Solutions | Enterprise Applications",
-  image: "/images/services/software-ai-solutions.webp",
+
   detailedDescription: "We build custom software that fits your exact operational workflows and drives business growth. As a leading Custom Software Development Company in India, Eddinet engineers fast, secure, and scalable digital solutions that automate processes, boost efficiency, and keep you competitive in evolving markets.\n\nEddinet is a trusted custom software development agency in India. We help startups, SMEs, and large enterprises design, build, and deploy high-performing digital products. Our engineering team uses modern technology frameworks to create secure, fast, and reliable software systems tailored directly to your business goals. We focus heavily on delivery speed, clear code architecture, and measurable digital results.",
   features: [
     {
@@ -62,24 +63,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for Custom Software Development?",
     points: [
@@ -145,28 +129,7 @@ export const child = {
     ],
     description: "We follow a structured engineering process to deliver custom software projects on time and within agreed budget parameters.",
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What Is Custom Software Development?",
@@ -209,28 +172,7 @@ export const child = {
       a: "Yes, we offer flexible SLA-backed maintenance plans that cover ongoing bug fixes, security updates, cloud server monitoring, database backup management, and performance speed optimization.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Software & AI Solutions Services",
-      slug: "/services/software-ai",
-      description: "Explore every software & ai solutions capability under one roof.",
-    },
-    {
-      title: "Cloud & DevOps Services",
-      slug: "/services/cloud-devops",
-      description: "Cloud infrastructure, deployment, CI/CD, scalability, reliability, security and operational practices that keep digital platforms stable as traffic and workloads grow.",
-    },
-    {
-      title: "Mobile App Development Services",
-      slug: "/services/mobile-app-development",
-      description: "Native and cross-platform mobile applications built around product goals, user experience, retention and scalable technical foundations - connected to the same marketing and data strategy as the rest of your digital presence.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("software-ai"),
   featuresHeading: "Our Custom Software Development Services",
   featuresDescription: "We offer end-to-end software development services to help organizations modernize operations and expand their digital capabilities.",
   docxHeadings: {

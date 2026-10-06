@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "app-deployment",
-  categorySlug: "mobile-app-development",
-  categoryTitle: "Mobile App Development",
-  categoryIcon: "📲",
-  item: "App Deployment",
+
+
+
+
   title: "App Deployment",
   metaTitle: "App Deployment Services in India | Eddinet",
   metaDescription: "Publishing your app on major app stores requires complete technical compliance. At Eddinet, a leading provider of Mobile App Deployment Services in India, we",
   heroHeading: "Mobile App Deployment Services in India",
   heroSubheading: "Google Play | Apple App Store | Enterprise App Distribution",
-  image: "/images/services/mobile_app_development_banner.webp",
+
   detailedDescription: "Publishing your app on major app stores requires complete technical compliance. At Eddinet, a leading provider of Mobile App Deployment Services in India, we manage your complete publishing workflow.\n\nFrom store listing setup to guideline approval, we help your business launch software smoothly on both iOS and Android platforms without delay.\n\nAt Eddinet, we help businesses publish mobile applications on the Apple App Store and Google Play Store seamlessly. As a trusted app deployment company in India, we handle everything from developer console setup to enterprise distribution, ensuring your software reaches users quickly, securely, and without policy delays.\n\nHere is how we streamline your mobile app publishing:\n\nAndroid & iOS App Deployment: We manage build configurations, store graphics, and regulatory data for a successful release.\n\nEnd-to-End App Store Submission: We prepare developer consoles, upload builds, and complete store metadata to speed up approvals.\n\nSecure & Reliable Publishing: We protect your source code using signing certificates, secure keys, and protected distribution channels.\n\nEnterprise App Distribution: We configure private distribution setups to deliver internal business apps directly to employee devices.",
   features: [
     {
@@ -46,24 +47,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet For Mobile App Deployment Services?",
     points: [
@@ -126,28 +110,7 @@ export const child = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What Are Mobile App Deployment Services?",
@@ -190,28 +153,7 @@ export const child = {
       a: "Yes, we audit your app to prevent rejections and help resolve policy warnings or rejection notices directly with Google and Apple review teams.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Mobile App Development Services",
-      slug: "/services/mobile-app-development",
-      description: "Explore every mobile app development capability under one roof.",
-    },
-    {
-      title: "Software & AI Solutions Services",
-      slug: "/services/software-ai",
-      description: "Custom software, SaaS-style systems, automation and AI-driven solutions that solve operational problems, improve customer experience or extend existing platforms beyond what off-the-shelf tools can do.",
-    },
-    {
-      title: "Cloud & DevOps Services",
-      slug: "/services/cloud-devops",
-      description: "Cloud infrastructure, deployment, CI/CD, scalability, reliability, security and operational practices that keep digital platforms stable as traffic and workloads grow.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("mobile-app-development"),
   featuresHeading: "Our Mobile App Deployment Services",
   docxHeadings: {
     about: "About Our Mobile App Deployment Company in India",

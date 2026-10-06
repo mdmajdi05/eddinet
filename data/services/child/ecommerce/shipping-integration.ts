@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "shipping-integration",
-  categorySlug: "ecommerce",
-  categoryTitle: "eCommerce Solutions",
-  categoryIcon: "🛒",
-  item: "Shipping Integration",
+
+
+
+
   title: "Shipping Integration",
   metaTitle: "Shipping Integration Services in India | Eddinet",
   metaDescription: "Ask any operations team running an online store in India, and they'll tell you the same thing: shipping is where the chaos hides.",
   heroHeading: "eCommerce Shipping Integration in India",
   heroSubheading: "Getting a product ordered is only half the job getting it delivered on time is where most online stores actually struggle. Eddinet builds eCommerce Shipping API Integration in India that connects your store to the couriers and logistics tools you already work with, so orders move from checkout to doorstep without someone manually chasing every shipment.",
-  image: "/images/services/ecommerce-solutions.webp",
+
   detailedDescription: "Ask any operations team running an online store in India, and they'll tell you the same thing: shipping is where the chaos hides. Rate mismatches, missed pickups, tracking numbers that never update these things pile up fast once order volume grows. That's the exact gap Eddinet's Shipping Integration Services in India are built to close.\n\nWe're not tied to one courier or one platform. Depending on how your business ships one dominant carrier or a mix of five - we shape each Shipping API Integration in India around your actual delivery zones, your order volume, and the way your warehouse team already works. The point isn't just linking two systems together; it's making sure the handoff between your store and your courier doesn't need a human babysitting it.",
   features: [
     {
@@ -46,24 +47,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Shipping Integration Matters for Your Business",
     points: [
@@ -117,28 +101,7 @@ export const child = {
     ],
     description: "No two businesses ship the same way, so we don't start with code, we start by watching how your orders actually move today.",
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What is eCommerce shipping integration?",
@@ -173,28 +136,7 @@ export const child = {
       a: "Yes. We keep an eye on things closely right after launch, and stay available afterward for fixes or whatever comes up as you scale.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to eCommerce Solutions Services",
-      slug: "/services/ecommerce",
-      description: "Explore every ecommerce solutions capability under one roof.",
-    },
-    {
-      title: "Web Development Services",
-      slug: "/services/web-development",
-      description: "Fast, structured and SEO-ready websites engineered around usability, performance, conversion and long-term maintainability - so marketing never has to work around a site that wasn't built for it.",
-    },
-    {
-      title: "Ads / PPC & Content Services",
-      slug: "/services/ads-ppc",
-      description: "Google Ads, Meta Ads and performance-focused paid acquisition supported by content and conversion strategy - planned around targeting, budget efficiency and measurable outcomes, not impressions and clicks.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("ecommerce"),
   featuresHeading: "Our Shipping Integration Services",
   docxHeadings: {
     about: "Eddinet - Shipping Integration Services in India",

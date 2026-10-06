@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "facebook-and-instagram-management",
-  categorySlug: "social-media-marketing",
-  categoryTitle: "Social Media Marketing",
-  categoryIcon: "📱",
-  item: "Facebook & Instagram Management",
+
+
+
+
   title: "Facebook & Instagram Management",
   metaTitle: "Facebook & Instagram Management in India | Eddinet",
   metaDescription: "At Eddinet, we are not just a service provider, we are your growth partners in the digital space. As a forward-thinking agency, we provide high-impact",
   heroHeading: "Facebook & Instagram Management Services in India",
   heroSubheading: "Eddinet provides complete Facebook & Instagram management services India so you can focus on running your business. We combine eye-catching Reels, sharp content strategies, account optimization, and real-time community management to help Indian brands turn everyday social scrollers into real revenue.",
-  image: "/images/services/social-media.webp",
+
   detailedDescription: "At Eddinet, we are not just a service provider, we are your growth partners in the digital space. As a forward-thinking agency, we provide high-impact Facebook & Instagram management services India designed to build lasting brand authority and scale your online presence.\n\nOur mission is to empower businesses with strategic content, high-retention Reels, and proactive community management that drive real, measurable results. Whether you want to boost brand visibility, generate qualified leads, or turn everyday scrollers into loyal customers, we have got you covered.",
   features: [
     {
@@ -46,24 +47,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet For Facebook & Instagram Management Services?",
     points: [
@@ -111,28 +95,7 @@ export const child = {
     ],
     description: "Here is exactly how we take your social media from zero to consistent growth:",
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What Do Facebook & Instagram Management Services Include?",
@@ -159,28 +122,7 @@ export const child = {
       a: "We look at core performance metrics such as organic reach, engagement rates (likes, shares, comments), click-through rates, follower growth, and incoming leads or sales conversions to accurately measure success.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Social Media Marketing Services",
-      slug: "/services/social-media-marketing",
-      description: "Explore every social media marketing capability under one roof.",
-    },
-    {
-      title: "Ads / PPC & Content Services",
-      slug: "/services/ads-ppc",
-      description: "Google Ads, Meta Ads and performance-focused paid acquisition supported by content and conversion strategy - planned around targeting, budget efficiency and measurable outcomes, not impressions and clicks.",
-    },
-    {
-      title: "Design & Creative Services",
-      slug: "/services/design-creative",
-      description: "Brand identity, campaign creative, UI/visual systems and marketing assets designed to perform across web, social, advertising and digital products - not just look good in a portfolio.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("social-media-marketing"),
   featuresHeading: "Our Facebook & Instagram Marketing Services",
   featuresDescription: "We take care of your entire social media operations so you can focus on running your business. Here is how we build, grow, and manage your presence across both platforms:",
   docxHeadings: {

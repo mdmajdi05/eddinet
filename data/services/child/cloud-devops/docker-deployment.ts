@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "docker-deployment",
-  categorySlug: "cloud-devops",
-  categoryTitle: "Cloud & DevOps",
-  categoryIcon: "☁️",
-  item: "Docker Deployment",
+
+
+
+
   title: "Docker Deployment",
   metaTitle: "Docker Deployment Services in India | Eddinet",
   metaDescription: "Eddinet provides premier Docker deployment services in India. We containerize, optimize, and manage high-speed server environments to eliminate dependency",
   heroHeading: "Docker Deployment Services Company in India",
   heroSubheading: "Docker Container Deployment | Containerized Application Deployment | Docker DevOps Services",
-  image: "/images/services/cloud-devops.webp",
+
   detailedDescription: "Eddinet provides premier Docker deployment services in India. We containerize, optimize, and manage high-speed server environments to eliminate dependency conflicts, accelerate release cycles, and scale your applications effortlessly.\n\nAt Eddinet, we turn complex application architectures into scalable, isolated container environments. Slow deployments, dependency mismatches, and unoptimized server stacks cause app downtime and lost revenue. Therefore, we deliver enterprise-grade Docker container deployment India solutions engineered for continuous uptime, low latency, and instant rollbacks.\n\nOur certified DevOps sysadmins manage your complete infrastructure across major cloud platforms. We handle Dockerfile builds, security hardening, multi-stage deployments, and persistent volume mounts to keep your containerized workloads bulletproof 24/7.",
   features: [
     {
@@ -46,24 +47,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Docker Deployment Services?",
     points: [
@@ -110,28 +94,7 @@ export const child = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What do your Docker deployment services in India include?",
@@ -154,28 +117,7 @@ export const child = {
       a: "We use Docker persistent volumes and external storage drivers, ensuring database files are stored safely outside the ephemeral container environment.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Cloud & DevOps Services",
-      slug: "/services/cloud-devops",
-      description: "Explore every cloud & devops capability under one roof.",
-    },
-    {
-      title: "Hosting & Migration Services",
-      slug: "/services/hosting-migration",
-      description: "Hosting architecture, website/application migration, environment setup and infrastructure transition planned for reliability, security and minimal disruption to your live business.",
-    },
-    {
-      title: "Software & AI Solutions Services",
-      slug: "/services/software-ai",
-      description: "Custom software, SaaS-style systems, automation and AI-driven solutions that solve operational problems, improve customer experience or extend existing platforms beyond what off-the-shelf tools can do.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("cloud-devops"),
   featuresHeading: "Our Docker Deployment Services in India",
   docxHeadings: {
     about: "About Us: Docker Container Deployment Company in India",

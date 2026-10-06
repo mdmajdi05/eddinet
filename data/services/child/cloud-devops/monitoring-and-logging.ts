@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "monitoring-and-logging",
-  categorySlug: "cloud-devops",
-  categoryTitle: "Cloud & DevOps",
-  categoryIcon: "☁️",
-  item: "Monitoring & Logging",
+
+
+
+
   title: "Monitoring & Logging",
   metaTitle: "Monitoring & Logging Services in India | Eddinet",
   metaDescription: "Eddinet delivers monitoring and logging services in India that give you full visibility into your infrastructure.",
   heroHeading: "Monitoring and Logging Services in India",
   heroSubheading: "Server Monitoring | Application Logging | DevOps Monitoring Solutions",
-  image: "/images/services/cloud-devops.webp",
+
   detailedDescription: "Eddinet delivers monitoring and logging services in India that give you full visibility into your infrastructure. We track your servers, applications, and cloud resources around the clock. As a result, your team spots issues early and fixes them before customers notice.\n\nHidden errors and downtime quietly drain revenue. Our setups bring metrics, logs, and alerts into one place. Therefore, you always know what is happening across your systems.\n\nEddinet is a team of certified cloud and DevOps engineers. We help Indian businesses replace guesswork with clear, reliable data. Scattered logs and unmonitored servers become one organized view of system health.\n\nWe listen first, then design with care. Our reports use plain language, so technical and non-technical teams can act on them. At the end of each project, we hand over complete documentation.\n\nGood monitoring works quietly in the background. It speaks up only when action is needed. That is the standard we follow on every project.",
   features: [
     {
@@ -38,24 +39,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Monitoring and Logging Services in India",
     points: [
@@ -103,28 +87,7 @@ export const child = {
     ],
     description: "Every Eddinet project follows a clear path, from the first audit to the final handover.",
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What are monitoring and logging services in India?",
@@ -155,28 +118,7 @@ export const child = {
       a: "Yes. We provide regular reviews, alert tuning, and ongoing support plans.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Cloud & DevOps Services",
-      slug: "/services/cloud-devops",
-      description: "Explore every cloud & devops capability under one roof.",
-    },
-    {
-      title: "Hosting & Migration Services",
-      slug: "/services/hosting-migration",
-      description: "Hosting architecture, website/application migration, environment setup and infrastructure transition planned for reliability, security and minimal disruption to your live business.",
-    },
-    {
-      title: "Software & AI Solutions Services",
-      slug: "/services/software-ai",
-      description: "Custom software, SaaS-style systems, automation and AI-driven solutions that solve operational problems, improve customer experience or extend existing platforms beyond what off-the-shelf tools can do.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("cloud-devops"),
   featuresHeading: "Our Monitoring and Logging Services in India",
   featuresDescription: "We focus on four core service areas. Each one is built around your infrastructure, budget, and growth plans.",
   docxHeadings: {

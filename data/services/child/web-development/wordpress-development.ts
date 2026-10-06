@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "wordpress-development",
-  categorySlug: "web-development",
-  categoryTitle: "Web Development",
-  categoryIcon: "💻",
-  item: "WordPress Development",
+
+
+
+
   title: "WordPress Development",
   metaTitle: "WordPress Development Services in India | Eddinet",
   metaDescription: "Your website is your business's first impression — and if it's slow, outdated, or breaks on mobile, customers leave in a single click. Eddinet builds WordPress websites that load fast, rank on Google and convert.",
   heroHeading: "WordPress Development Services in Delhi NCR",
   heroSubheading: "Your website is your business's first impression — and if it's slow, outdated, or breaks on mobile, potential customers leave in a single click. That's why businesses of every size trust Eddinet for WordPress Development Services in India. We build websites that load fast, rank on Google, and turn visitors into paying customers — whether it's a simple business site or a high-traffic online store.",
-  image: "/images/services/web-development.webp",
+
   detailedDescription: "Eddinet is an India-based team specializing in WordPress Web Solutions — from custom theme design and plugin development to core-level PHP customization.\n\nWe build every website around your actual business goals, not a generic template. That's what makes us a long-term partner for businesses that want real results, not just \"a website that's live.\"",
   features: [
     {
@@ -71,24 +72,7 @@ export const child = {
       description: "Regular maintenance and security updates keep your site safe and current.",
     },
   ],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Us for WordPress Development Services in India",
     points: [
@@ -139,28 +123,7 @@ export const child = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "How much does WordPress development cost?",
@@ -191,26 +154,5 @@ export const child = {
       a: "That's not a problem — we customize or upgrade existing themes, plugins, and functionality without needing to rebuild the entire website from scratch.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Web Development Services",
-      slug: "/services/web-development",
-      description: "Explore every web development capability under one roof.",
-    },
-    {
-      title: "SEO Services",
-      slug: "/services/seo",
-      description: "Search visibility built for how people actually search now - traditional Google results and AI-generated answers alike. Technical SEO, content relevance, search intent and AI-search readiness work together to build qualified, compounding organic traffic.",
-    },
-    {
-      title: "eCommerce Solutions Services",
-      slug: "/services/ecommerce",
-      description: "eCommerce platforms and storefront experiences designed around discovery, product visibility, UX, checkout conversion and repeat purchase - where SEO, paid media and UX have to work in sync.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("web-development"),
 };

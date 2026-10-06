@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "amazon-ads",
-  categorySlug: "ads-ppc",
-  categoryTitle: "Ads / PPC & Content",
-  categoryIcon: "📊",
-  item: "Amazon Ads",
+
+
+
+
   title: "Amazon Ads",
   metaTitle: "Amazon Ads Services in India | Eddinet",
   metaDescription: "At Eddinet, we manage your Amazon PPC campaigns to drive higher sales and lower your ACoS (Advertising Cost of Sales).",
   heroHeading: "Amazon Ads Agency in India",
   heroSubheading: "At Eddinet, we transform product clicks into profitable sales and higher organic rank. As a dedicated Amazon Ads Agency in India, we build and manage sponsored ad campaigns that put your products directly in front of active buyers on Amazon. By combining precise keyword research, optimized product listings, and continuous bid management, we reduce your ACoS (Advertising Cost of Sales) and maximize your overall profit margins.",
-  image: "/images/services/performance-marketing.webp",
+
   detailedDescription: "At Eddinet, we manage your Amazon PPC campaigns to drive higher sales and lower your ACoS (Advertising Cost of Sales). As a specialized Amazon Ads agency in India, we handle everything required to grow your product revenue from finding profitable search terms and optimizing product listings to setting up structured campaigns and adjusting daily bids. We focus directly on increasing your sales velocity and net profit margins across your entire product catalog.",
   features: [
     {
@@ -42,24 +43,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Amazon Ads",
     points: [
@@ -111,28 +95,7 @@ export const child = {
     ],
     description: "Our structured process ensures your Amazon campaigns move smoothly from setup to predictable profitability.",
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What is a good ACoS (Advertising Cost of Sales) on Amazon?",
@@ -155,28 +118,7 @@ export const child = {
       a: "Campaigns go live immediately after setup, driving traffic within hours. However, the initial 2 to 4 weeks are crucial for gathering keyword performance data, isolating winning search terms, and tuning bids to achieve your target ACoS.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Ads / PPC & Content Services",
-      slug: "/services/ads-ppc",
-      description: "Explore every ads / ppc & content capability under one roof.",
-    },
-    {
-      title: "Content Services",
-      slug: "/services/content",
-      description: "Strategic content created for search, social, campaigns, landing pages and customer journeys - designed to educate, build authority and support conversion at every stage of the funnel.",
-    },
-    {
-      title: "SEO Services",
-      slug: "/services/seo",
-      description: "Search visibility built for how people actually search now - traditional Google results and AI-generated answers alike. Technical SEO, content relevance, search intent and AI-search readiness work together to build qualified, compounding organic traffic.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("ads-ppc"),
   featuresHeading: "Our Amazon Ads Services in India",
   featuresDescription: "We manage every aspect of your Amazon Advertising campaigns to accelerate product velocity and scale revenue.",
   docxHeadings: {

@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "content-marketing",
-  categorySlug: "content",
-  categoryTitle: "Content",
-  categoryIcon: "✍️",
-  item: "Content Marketing",
+
+
+
+
   title: "Content Marketing",
   metaTitle: "Content Marketing Services in Delhi NCR | Eddinet",
   metaDescription: "Strategic content built to educate, build authority and support the full funnel. Content that earns attention, rankings and conversions. Eddinet delivers dependable content marketing services in Delhi NCR for India and global clients. Get a free proposal today.",
   heroHeading: "Content Marketing Services in Delhi NCR",
   heroSubheading: "Strategic content built to educate, build authority and support the full funnel. Content that earns attention, rankings and conversions.",
-  image: "/images/services/content_marketing_services.webp",
+
   detailedDescription: "Strategic content built to educate, build authority and support the full funnel. Content that earns attention, rankings and conversions.\n\nAnyone can write words; the hard part is writing words that work. At Eddinet, we create content with a job to do — educate, build authority and convert at every stage of the funnel. Every piece is planned around the audience and the outcome, produced to a clear editorial calendar, and refined against how it performs. Content that isn't earning attention, rankings or enquiries is reworked or retired, not left to quietly waste your budget.\n\nContent strategy comes first, always. We map what to create, for whom and what it must achieve — then research, write and refine every piece with search intent and conversion in mind. A blog post earns organic visibility and authority; a landing page turns ads and organic visitors into enquiries; an email nurtures a lead toward a decision; a social asset feeds the whole demand system. The same discipline applies to refresh work: many businesses already sit on strong pages that have decayed, and we revive them rather than always starting from scratch.\n\nWhether you need content marketing services in India, SEO content for rankings, website copywriting, blog writing or a full editorial calendar, the deliverable is content that ranks, engages and converts — delivered on a dependable cadence your team can plan around, coordinated with your SEO and paid media as one system.\n\nFrom scoping and strategy through delivery, reporting and ongoing support, the entire engagement is run as one connected system — with clear milestones, a named team and a focus on outcomes, not deliverables alone.",
   features: [
     {
@@ -79,24 +80,7 @@ export const child = {
       description: "Content feeds SEO, ads, social and email together — so nothing is written in isolation and everything reinforces the rest.",
     },
   ],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Businesses Pick Eddinet for Content",
     points: [
@@ -143,28 +127,7 @@ export const child = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "How long does each piece of content take?",
@@ -203,26 +166,5 @@ export const child = {
       a: "You do. We deliver drafts for your review and approval, incorporate feedback, and only publish once you are happy with the final piece.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Content Services",
-      slug: "/services/content",
-      description: "Explore every content capability under one roof.",
-    },
-    {
-      title: "SEO Services",
-      slug: "/services/seo",
-      description: "Search visibility built for how people actually search now - traditional Google results and AI-generated answers alike. Technical SEO, content relevance, search intent and AI-search readiness work together to build qualified, compounding organic traffic.",
-    },
-    {
-      title: "Ads / PPC & Content Services",
-      slug: "/services/ads-ppc",
-      description: "Google Ads, Meta Ads and performance-focused paid acquisition supported by content and conversion strategy - planned around targeting, budget efficiency and measurable outcomes, not impressions and clicks.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("content"),
 };

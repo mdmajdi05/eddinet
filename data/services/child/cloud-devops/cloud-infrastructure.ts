@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "cloud-infrastructure",
-  categorySlug: "cloud-devops",
-  categoryTitle: "Cloud & DevOps",
-  categoryIcon: "☁️",
-  item: "Cloud Infrastructure",
+
+
+
+
   title: "Cloud Infrastructure",
   metaTitle: "Cloud Infrastructure Services in India | Eddinet",
   metaDescription: "Eddinet provides premier cloud infrastructure services in India. We build, deploy, and manage scalable cloud setups to reduce capital costs, prevent system",
   heroHeading: "Cloud Infrastructure Services Company in India",
   heroSubheading: "Enterprise Cloud Infrastructure | Managed Infrastructure | Multi-Cloud Solutions",
-  image: "/images/services/cloud-devops.webp",
+
   detailedDescription: "Eddinet provides premier cloud infrastructure services in India. We build, deploy, and manage scalable cloud setups to reduce capital costs, prevent system downtime, and accelerate digital growth.\n\nEDDINET builds high-performance digital environments that stabilize enterprise operations and support long-term growth. We design and deploy resilient cloud systems that handle heavy computational loads without speed loss.\n\nBy combining modular infrastructure design with proactive security protocols, we help organizations eliminate server bottlenecks, safeguard critical data, and lower overall operational expenses.",
   features: [
     {
@@ -46,24 +47,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for Cloud Infrastructure Services?",
     points: [
@@ -112,28 +96,7 @@ export const child = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What do your cloud infrastructure services in India include?",
@@ -156,28 +119,7 @@ export const child = {
       a: "Yes, we deliver 24/7 server monitoring, routine operating system patching, automated backups, and emergency troubleshooting.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Cloud & DevOps Services",
-      slug: "/services/cloud-devops",
-      description: "Explore every cloud & devops capability under one roof.",
-    },
-    {
-      title: "Hosting & Migration Services",
-      slug: "/services/hosting-migration",
-      description: "Hosting architecture, website/application migration, environment setup and infrastructure transition planned for reliability, security and minimal disruption to your live business.",
-    },
-    {
-      title: "Software & AI Solutions Services",
-      slug: "/services/software-ai",
-      description: "Custom software, SaaS-style systems, automation and AI-driven solutions that solve operational problems, improve customer experience or extend existing platforms beyond what off-the-shelf tools can do.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("cloud-devops"),
   featuresHeading: "Our Cloud Infrastructure Services in India",
   docxHeadings: {
     about: "About EDDINET - Leading Cloud Infrastructure Company in India",

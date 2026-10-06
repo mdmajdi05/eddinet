@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "payment-gateway-integration",
-  categorySlug: "ecommerce",
-  categoryTitle: "eCommerce Solutions",
-  categoryIcon: "🛒",
-  item: "Payment Gateway Integration",
+
+
+
+
   title: "Payment Gateway Integration",
   metaTitle: "Payment Gateway Integration Services in India | Eddinet",
   metaDescription: "Choosing and integrating the right payment gateway isn't just a technical task; it directly affects your conversion rate, customer trust, and compliance",
   heroHeading: "Payment Gateway Integration Services in India",
   heroSubheading: "Eddinet helps businesses accept payments online with speed, security, and reliability. As a trusted name in payment gateway integration services in India, we connect your website or app to the right payment gateways, so transactions go through smoothly and your customers never abandon checkout over a broken payment flow.",
-  image: "/images/services/ecommerce-solutions.webp",
+
   detailedDescription: "Choosing and integrating the right payment gateway isn't just a technical task; it directly affects your conversion rate, customer trust, and compliance requirements. Eddinet specializes in eCommerce Payment Gateway Integration in India, working across platforms and industries to make sure your checkout is fast, secure, and built to handle real transaction volume.\n\nWe don't push a one-size-fits-all gateway. Instead, we assess your business model, target customers, and transaction patterns to recommend and implement the payment solutions that actually fit - whether that's a single gateway or a multi-gateway setup for redundancy and better approval rates.",
   features: [
     {
@@ -71,24 +72,7 @@ export const child = {
       description: "A well-built integration handles growing transaction volume without breaking down during high-traffic periods like sales or promotions.",
     },
   ],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Payment Gateway Integration",
     points: [
@@ -141,28 +125,7 @@ export const child = {
     ],
     description: "Rather than following a rigid checklist, we adapt our approach based on your platform, transaction volume, and compliance needs - but every project moves through these core stages.",
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "Which payment gateways can you integrate?",
@@ -197,28 +160,7 @@ export const child = {
       a: "Costs depend on the number of gateways, platform complexity, and custom features required. We provide transparent, upfront pricing after reviewing your requirements.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to eCommerce Solutions Services",
-      slug: "/services/ecommerce",
-      description: "Explore every ecommerce solutions capability under one roof.",
-    },
-    {
-      title: "Web Development Services",
-      slug: "/services/web-development",
-      description: "Fast, structured and SEO-ready websites engineered around usability, performance, conversion and long-term maintainability - so marketing never has to work around a site that wasn't built for it.",
-    },
-    {
-      title: "Ads / PPC & Content Services",
-      slug: "/services/ads-ppc",
-      description: "Google Ads, Meta Ads and performance-focused paid acquisition supported by content and conversion strategy - planned around targeting, budget efficiency and measurable outcomes, not impressions and clicks.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("ecommerce"),
   featuresHeading: "PAYMENT SOLUTIONS WE BUILD",
   benefitsHeading: "Why a Well-Integrated Payment Gateway Matters",
   benefitsDescription: "The payment step is where sales are won or lost. A poorly integrated gateway costs you customers and revenue.",

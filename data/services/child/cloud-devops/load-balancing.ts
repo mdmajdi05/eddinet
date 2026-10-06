@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "load-balancing",
-  categorySlug: "cloud-devops",
-  categoryTitle: "Cloud & DevOps",
-  categoryIcon: "☁️",
-  item: "Load Balancing",
+
+
+
+
   title: "Load Balancing",
   metaTitle: "Load Balancing Services in India | Eddinet",
   metaDescription: "Eddinet provides premier load balancing services in India. We design, deploy, and manage traffic distribution setups that remove server overloads, maximize",
   heroHeading: "Load Balancing Services Company in India",
   heroSubheading: "Cloud Traffic Engineering | AWS ALB & NLB Setup | High Availability & Auto-Scaling",
-  image: "/images/services/cloud-devops.webp",
+
   detailedDescription: "Eddinet provides premier load balancing services in India. We design, deploy, and manage traffic distribution setups that remove server overloads, maximize uptime, and speed up your web applications.\n\nSlow pages and single-point-of-failure outages cost you revenue. Our solutions spread incoming traffic across healthy servers in real time. As a result, you get low latency, smooth auto-scaling, and minimal downtime, even during traffic spikes.\n\nEddinet helps businesses turn single-point server setups into fault-tolerant, high-availability clusters. We engineer intelligent traffic routing that bypasses failed server nodes instantly. This prevents downtime and keeps performance strong during heavy traffic.\n\nOur certified sysadmins manage your traffic infrastructure end to end. We listen first, design carefully, and hand over clear documentation. Good infrastructure should be invisible, and that is the standard we follow on every project.",
   features: [
     {
@@ -46,24 +47,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Load Balancing Services?",
     points: [
@@ -109,28 +93,7 @@ export const child = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What do your load balancing services in India include?",
@@ -153,28 +116,7 @@ export const child = {
       a: "SSL termination offloads the heavy cryptographic processing of encrypting and decrypting HTTPS traffic from backend application servers, freeing up CPU power for faster application execution.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Cloud & DevOps Services",
-      slug: "/services/cloud-devops",
-      description: "Explore every cloud & devops capability under one roof.",
-    },
-    {
-      title: "Hosting & Migration Services",
-      slug: "/services/hosting-migration",
-      description: "Hosting architecture, website/application migration, environment setup and infrastructure transition planned for reliability, security and minimal disruption to your live business.",
-    },
-    {
-      title: "Software & AI Solutions Services",
-      slug: "/services/software-ai",
-      description: "Custom software, SaaS-style systems, automation and AI-driven solutions that solve operational problems, improve customer experience or extend existing platforms beyond what off-the-shelf tools can do.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("cloud-devops"),
   featuresHeading: "Our Load Balancing Services in India",
   docxHeadings: {
     about: "About Us: High Availability Load Balancing Experts in India",

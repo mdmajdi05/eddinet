@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "server-security",
-  categorySlug: "cloud-devops",
-  categoryTitle: "Cloud & DevOps",
-  categoryIcon: "☁️",
-  item: "Server Security",
+
+
+
+
   title: "Server Security",
   metaTitle: "Server Security Services in India | Eddinet",
   metaDescription: "Eddinet delivers server security services in India that protect your data, applications, and uptime. We find weak points, close them, and watch for threats",
   heroHeading: "Server Security Services in India",
   heroSubheading: "Cloud Server Security | Linux Hardening | Managed Threat Protection",
-  image: "/images/services/cloud-devops.webp",
+
   detailedDescription: "Eddinet delivers server security services in India that protect your data, applications, and uptime. We find weak points, close them, and watch for threats around the clock. As a result, attackers meet a hardened system instead of an easy target.\n\nOne breach can cost you customers, money, and trust. Our security setups block common attacks and alert you the moment something looks wrong. Therefore, you stay in control of your infrastructure.\n\nEddinet is a cloud server security company in India built around certified sysadmins and DevOps engineers. We help businesses replace scattered, reactive fixes with one clear security plan.\n\nWe listen first, then assess your risks before changing anything. Our reports use plain language, so technical and non-technical teams can act on them. At the end of each project, we hand over full documentation.\n\nGood security works quietly in the background. It stops threats without slowing your business. That is the standard we follow on every project.",
   features: [
     {
@@ -38,24 +39,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Server Security Services in India",
     points: [
@@ -103,28 +87,7 @@ export const child = {
     ],
     description: "Every Eddinet project follows a clear path, from the first audit to ongoing protection.",
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What are server security services in India?",
@@ -155,28 +118,7 @@ export const child = {
       a: "Yes. We provide regular reviews, patch management, and ongoing support plans.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Cloud & DevOps Services",
-      slug: "/services/cloud-devops",
-      description: "Explore every cloud & devops capability under one roof.",
-    },
-    {
-      title: "Hosting & Migration Services",
-      slug: "/services/hosting-migration",
-      description: "Hosting architecture, website/application migration, environment setup and infrastructure transition planned for reliability, security and minimal disruption to your live business.",
-    },
-    {
-      title: "Software & AI Solutions Services",
-      slug: "/services/software-ai",
-      description: "Custom software, SaaS-style systems, automation and AI-driven solutions that solve operational problems, improve customer experience or extend existing platforms beyond what off-the-shelf tools can do.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("cloud-devops"),
   featuresHeading: "Our Server Security Services in India",
   featuresDescription: "We focus on four core service areas. Each one is built around your servers, budget, and risk level.",
   docxHeadings: {

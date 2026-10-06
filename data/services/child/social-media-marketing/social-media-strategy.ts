@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "social-media-strategy",
-  categorySlug: "social-media-marketing",
-  categoryTitle: "Social Media Marketing",
-  categoryIcon: "📱",
-  item: "Social Media Strategy",
+
+
+
+
   title: "Social Media Strategy",
   metaTitle: "Social Media Strategy Services in Delhi NCR | Eddinet",
   metaDescription: "Platform-specific strategy aligned to audience, brand goals and the broader customer journey. We decide what to post where, why, and how it connects to the rest of your marketing. Eddinet delivers dependable social media strategy services in Delhi NCR for India and global clients. Get a free proposal today.",
   heroHeading: "Social Media Strategy Services in Delhi NCR",
   heroSubheading: "Platform-specific strategy aligned to audience, brand goals and the broader customer journey. We decide what to post where, why, and how it connects to the rest of your marketing.",
-  image: "/images/services/social-media.webp",
+
   detailedDescription: "Platform-specific strategy aligned to audience, brand goals and the broader customer journey. We decide what to post where, why, and how it connects to the rest of your marketing.\n\nSocial media for a business is not about posting more — it's about being seen by the people who actually buy. At Eddinet, we run social media as a demand engine connected to the rest of your marketing. That means platform-specific strategy, content your audience stops scrolling for, daily community management and paid amplification that boosts what already works — all tied back to leads, sales and brand growth instead of vanity metrics.\n\nWe start by understanding where your buyers actually spend time and what kind of content they respond to in your industry, then build a monthly content system around that. The same post never needs to be recycled across channels: we produce native content for Instagram, Facebook, LinkedIn, YouTube and X, matched to each platform's format, algorithm and audience behaviour. Every month is planned on a calendar, reviewed against performance data and improved — so the content gets sharper, not just more frequent.\n\nSocial media done properly also feeds everything else you do. Content that performs builds retargeting audiences for paid ads, feeds your SEO with authority signals and gives your sales team social proof to close deals. Whether you need Instagram marketing, LinkedIn management, YouTube marketing, Meta ads or a complete social media marketing strategy in Delhi NCR, we build it as one connected system — planned, produced, published and measured against the outcomes that matter.\n\nFrom scoping and strategy through delivery, reporting and ongoing support, the entire engagement is run as one connected system — with clear milestones, a named team and a focus on outcomes, not deliverables alone.",
   features: [
     {
@@ -79,24 +80,7 @@ export const child = {
       description: "Months of consistent, quality content and fast, helpful responses build a brand people remember and recommend — a moat that competitors can't buy with ads.",
     },
   ],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Businesses Pick Eddinet for Social Media in India",
     points: [
@@ -143,28 +127,7 @@ export const child = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "How often will you post on our channels?",
@@ -203,26 +166,5 @@ export const child = {
       a: "Yes. You get a monthly content calendar and can review posts in advance. Once workflows are comfortable, many clients approve batches to keep the pipeline moving.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Social Media Marketing Services",
-      slug: "/services/social-media-marketing",
-      description: "Explore every social media marketing capability under one roof.",
-    },
-    {
-      title: "Ads / PPC & Content Services",
-      slug: "/services/ads-ppc",
-      description: "Google Ads, Meta Ads and performance-focused paid acquisition supported by content and conversion strategy - planned around targeting, budget efficiency and measurable outcomes, not impressions and clicks.",
-    },
-    {
-      title: "Design & Creative Services",
-      slug: "/services/design-creative",
-      description: "Brand identity, campaign creative, UI/visual systems and marketing assets designed to perform across web, social, advertising and digital products - not just look good in a portfolio.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("social-media-marketing"),
 };

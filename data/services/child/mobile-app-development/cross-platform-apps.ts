@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "cross-platform-apps",
-  categorySlug: "mobile-app-development",
-  categoryTitle: "Mobile App Development",
-  categoryIcon: "📲",
-  item: "Cross-Platform Apps",
+
+
+
+
   title: "Cross-Platform Apps",
   metaTitle: "Cross-Platform Apps Services in India | Eddinet",
   metaDescription: "Eddinet delivers premier Cross-Platform App Development Services in India with a single codebase. We build fast, native-performing iOS and Android apps that",
   heroHeading: "Cross-Platform App Development Services in India",
   heroSubheading: "Multi-Platform | Hybrid | Single-Codebase App Development",
-  image: "/images/services/mobile_app_development_banner.webp",
+
   detailedDescription: "Eddinet delivers premier Cross-Platform App Development Services in India with a single codebase. We build fast, native-performing iOS and Android apps that save costs, launch faster, and reach users across both mobile ecosystems.\n\nAt Eddinet, we build multi-platform apps that perform seamlessly on Android and iOS. We help businesses cut maintenance costs and speed up product launches using single codebase development.\n\nHere is how we streamline your multi-platform app development:\n\nMulti-Platform Development: We build fast, engaging apps for both Android and iOS.\n\nHybrid App Services: We deliver cost-effective solutions that run smoothly across all devices.\n\nSingle Codebase Setup: We write code once to shorten launch times and simplify updates.\n\nScalable Performance: We engineer secure backends that handle heavy traffic effortlessly.",
   features: [
     {
@@ -62,24 +63,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet For a Cross-Platform App Development Company?",
     points: [
@@ -138,28 +122,7 @@ export const child = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What Is Cross-Platform App Development?",
@@ -198,28 +161,7 @@ export const child = {
       a: "Yes, we offer ongoing SLA support plans covering server management, bug fixes, security updates, and compatibility upgrades for new OS versions.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Mobile App Development Services",
-      slug: "/services/mobile-app-development",
-      description: "Explore every mobile app development capability under one roof.",
-    },
-    {
-      title: "Software & AI Solutions Services",
-      slug: "/services/software-ai",
-      description: "Custom software, SaaS-style systems, automation and AI-driven solutions that solve operational problems, improve customer experience or extend existing platforms beyond what off-the-shelf tools can do.",
-    },
-    {
-      title: "Cloud & DevOps Services",
-      slug: "/services/cloud-devops",
-      description: "Cloud infrastructure, deployment, CI/CD, scalability, reliability, security and operational practices that keep digital platforms stable as traffic and workloads grow.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("mobile-app-development"),
   featuresHeading: "Our Cross-Platform App Development Services",
   docxHeadings: {
     about: "About Our Cross-Platform App Development Company",

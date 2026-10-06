@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "ecommerce-optimization",
-  categorySlug: "ecommerce",
-  categoryTitle: "eCommerce Solutions",
-  categoryIcon: "🛒",
-  item: "eCommerce Optimization",
+
+
+
+
   title: "eCommerce Optimization",
   metaTitle: "eCommerce Optimization in India | Eddinet",
   metaDescription: "Are you looking for e-commerce optimization services that don't just increase traffic, but turn existing site visitors into paying customers?",
   heroHeading: "eCommerce Optimization Services in India",
   heroSubheading: "At Eddinet, we fix low conversion rates, slow page loads, and checkout drop-offs by turning existing store traffic into consistent revenue. As a performance-driven agency delivering E-Commerce Optimization Services in India, we optimize user journeys, streamline mobile performance, and eliminate buying friction so you capture maximum sales without increasing your ad spend.",
-  image: "/images/services/ecommerce-solutions.webp",
+
   detailedDescription: "Are you looking for e-commerce optimization services that don't just increase traffic, but turn existing site visitors into paying customers? At Eddinet, we specialize in refining user journeys, speeding up product pages, and removing checkout friction to scale your revenue without increasing your ad spend.\n\nOptimizing your online store is more than just making visual tweaks; it's the most effective strategy for reducing bounce rates, boosting average order values, and turning one-time buyers into loyal brand advocates.",
   features: [
     {
@@ -42,24 +43,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for E-Commerce Optimization",
     points: [
@@ -108,28 +92,7 @@ export const child = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What is E-Commerce Optimization?",
@@ -148,28 +111,7 @@ export const child = {
       a: "We optimize product pages by improving image galleries, sharpening value propositions, adding clear calls to action, displaying trust badges, and making customer reviews clearly visible.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to eCommerce Solutions Services",
-      slug: "/services/ecommerce",
-      description: "Explore every ecommerce solutions capability under one roof.",
-    },
-    {
-      title: "Web Development Services",
-      slug: "/services/web-development",
-      description: "Fast, structured and SEO-ready websites engineered around usability, performance, conversion and long-term maintainability - so marketing never has to work around a site that wasn't built for it.",
-    },
-    {
-      title: "Ads / PPC & Content Services",
-      slug: "/services/ads-ppc",
-      description: "Google Ads, Meta Ads and performance-focused paid acquisition supported by content and conversion strategy - planned around targeting, budget efficiency and measurable outcomes, not impressions and clicks.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("ecommerce"),
   featuresHeading: "E-Commerce Optimization Services in India",
   docxHeadings: {
     about: "About Us: E-Commerce Optimization",

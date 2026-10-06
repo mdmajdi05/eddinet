@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "website-migration",
-  categorySlug: "hosting-migration",
-  categoryTitle: "Hosting & Migration",
-  categoryIcon: "🌐",
-  item: "Website Migration",
+
+
+
+
   title: "Website Migration",
   metaTitle: "Website Migration Services in India | Eddinet",
   metaDescription: "Eddinet provides website migration services in India where our engineers move your files, databases, and emails to a new server with care.",
   heroHeading: "Website Migration Services in India",
   heroSubheading: "Website Migration Without Downtime | Safe Website Transfer | cPanel to cPanel Moves",
-  image: "/images/services/hosting-migration.webp",
+
   detailedDescription: "Eddinet provides website migration services in India where our engineers move your files, databases, and emails to a new server with care. Every move is planned, backed up, and tested first. As a result, your site keeps its speed, its data, and its search rankings.\n\nHas a past website move broken your pages or lost your emails? Are you afraid that switching hosts will wipe out your Google rankings? If yes, Eddinet is the solution to your problem.\n\nAs a website migration company in India, we give you an experienced sysadmin team that has handled moves of every size. We study how your site, domain, and email fit together, then plan the transfer around them. You also receive plain-language updates, so you always know where your migration stands.",
   features: [
     {
@@ -38,24 +39,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Website Migration Services in India",
     points: [
@@ -103,28 +87,7 @@ export const child = {
     ],
     description: "Here is how we move your site from the old host to the new one.",
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "How long does a website migration take?",
@@ -147,28 +110,7 @@ export const child = {
       a: "Only briefly. We need access details at the start and your approval before the DNS switch. After that, we handle the technical work and keep you updated in plain language.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Hosting & Migration Services",
-      slug: "/services/hosting-migration",
-      description: "Explore every hosting & migration capability under one roof.",
-    },
-    {
-      title: "Cloud & DevOps Services",
-      slug: "/services/cloud-devops",
-      description: "Cloud infrastructure, deployment, CI/CD, scalability, reliability, security and operational practices that keep digital platforms stable as traffic and workloads grow.",
-    },
-    {
-      title: "Web Development Services",
-      slug: "/services/web-development",
-      description: "Fast, structured and SEO-ready websites engineered around usability, performance, conversion and long-term maintainability - so marketing never has to work around a site that wasn't built for it.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("hosting-migration"),
   featuresHeading: "Our Website Migration Services in India",
   featuresDescription: "We focus on four areas that decide whether a move goes smoothly.",
   docxHeadings: {

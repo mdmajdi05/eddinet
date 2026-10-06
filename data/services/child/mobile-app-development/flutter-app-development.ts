@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "flutter-app-development",
-  categorySlug: "mobile-app-development",
-  categoryTitle: "Mobile App Development",
-  categoryIcon: "📲",
-  item: "Flutter App Development",
+
+
+
+
   title: "Flutter App Development",
   metaTitle: "Flutter App Development Services in India | Eddinet",
   metaDescription: "We specialize in cross-platform engineering, building custom Flutter solutions designed to meet your specific business requirements, brand identity, and",
   heroHeading: "Flutter App Development Company in India",
   heroSubheading: "Eddinet is a leading Flutter App Development Company in India that builds high-performance, single-codebase mobile applications for iOS and Android. We combine native-like performance with rapid development to help your brand launch faster, scale efficiently, and save costs without separate development cycles.",
-  image: "/images/services/mobile_app_development_banner.webp",
+
   detailedDescription: "We specialize in cross-platform engineering, building custom Flutter solutions designed to meet your specific business requirements, brand identity, and operational goals.\n\nOur development team writes clean, modular Dart code optimized for high performance, smooth animations, and fast load times across every device.\n\nBacked by resilient backend setups and secure cloud architectures, we ensure your application handles increasing traffic seamlessly without compromising speed or security.",
   features: [
     {
@@ -58,24 +59,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet For Flutter App Development",
     points: [
@@ -144,28 +128,7 @@ export const child = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What Is Flutter App Development?",
@@ -204,28 +167,7 @@ export const child = {
       a: "Yes, we offer ongoing SLA maintenance packages that cover server monitoring, bug fixes, security updates, and compatibility adjustments for new OS versions.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Mobile App Development Services",
-      slug: "/services/mobile-app-development",
-      description: "Explore every mobile app development capability under one roof.",
-    },
-    {
-      title: "Software & AI Solutions Services",
-      slug: "/services/software-ai",
-      description: "Custom software, SaaS-style systems, automation and AI-driven solutions that solve operational problems, improve customer experience or extend existing platforms beyond what off-the-shelf tools can do.",
-    },
-    {
-      title: "Cloud & DevOps Services",
-      slug: "/services/cloud-devops",
-      description: "Cloud infrastructure, deployment, CI/CD, scalability, reliability, security and operational practices that keep digital platforms stable as traffic and workloads grow.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("mobile-app-development"),
   featuresHeading: "Our Flutter App Development Services",
   docxHeadings: {
     about: "About Our Flutter App Development Company in India",

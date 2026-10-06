@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "cloud-migration",
-  categorySlug: "cloud-devops",
-  categoryTitle: "Cloud & DevOps",
-  categoryIcon: "☁️",
-  item: "Cloud Migration",
+
+
+
+
   title: "Cloud Migration",
   metaTitle: "Cloud Migration Services in India | Eddinet",
   metaDescription: "Modern organizations require fast, secure cloud environments to maintain operational agility. Eddinet provides premier cloud migration services in India.",
   heroHeading: "Cloud Migration Services Company in India",
   heroSubheading: "AWS Migration | Azure Migration | Enterprise Migration Solutions",
-  image: "/images/services/cloud-devops.webp",
+
   detailedDescription: "Modern organizations require fast, secure cloud environments to maintain operational agility. Eddinet provides premier cloud migration services in India. As a trusted cloud migration company in India, we build, deploy, and manage scalable cloud setups to reduce capital costs, prevent system downtime, and accelerate digital growth.\n\nAt Eddinet, we transition businesses from complex local setups to agile cloud environments. As a trusted provider of enterprise cloud migration in India, we eliminate technical debt, safeguard data, and optimize workloads for continuous long-term growth.\n\nCustomised Roadmaps: Our certified engineers build custom migration plans designed to match your specific business goals and operational needs.\n\nZero-Downtime Transfers: We use secure data pipelines and continuous database replication to move your systems without data loss or service disruption.\n\nCost & Speed Tuning: Post-migration, we constantly fine-tune your setup to cut unnecessary server costs and keep your applications fast.",
   features: [
     {
@@ -46,24 +47,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Cloud Migration Services?",
     points: [
@@ -110,28 +94,7 @@ export const child = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What do your cloud migration services in India include?",
@@ -154,28 +117,7 @@ export const child = {
       a: "Standard application migrations take 2 to 4 weeks, whereas complex enterprise platform transfers require 6 to 12 weeks based on data size.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Cloud & DevOps Services",
-      slug: "/services/cloud-devops",
-      description: "Explore every cloud & devops capability under one roof.",
-    },
-    {
-      title: "Hosting & Migration Services",
-      slug: "/services/hosting-migration",
-      description: "Hosting architecture, website/application migration, environment setup and infrastructure transition planned for reliability, security and minimal disruption to your live business.",
-    },
-    {
-      title: "Software & AI Solutions Services",
-      slug: "/services/software-ai",
-      description: "Custom software, SaaS-style systems, automation and AI-driven solutions that solve operational problems, improve customer experience or extend existing platforms beyond what off-the-shelf tools can do.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("cloud-devops"),
   featuresHeading: "Our Cloud Migration Services in India",
   docxHeadings: {
     about: "About Us: Cloud Migration Services Company in India",

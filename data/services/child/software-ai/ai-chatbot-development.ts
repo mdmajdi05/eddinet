@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "ai-chatbot-development",
-  categorySlug: "software-ai",
-  categoryTitle: "Software & AI Solutions",
-  categoryIcon: "🤖",
-  item: "AI Chatbot Development",
+
+
+
+
   title: "AI Chatbot Development",
   metaTitle: "AI Chatbot Development Services in India | Eddinet",
   metaDescription: "EDDINET builds intelligent, low-latency conversational AI platforms designed to automate customer engagements and streamline internal enterprise",
   heroHeading: "AI Chatbot Development Company in India",
   heroSubheading: "Enterprise Conversational AI | LLM-Powered Chatbots | Virtual Assistant Solutions",
-  image: "/images/services/software-ai-solutions.webp",
+
   detailedDescription: "EDDINET builds intelligent, low-latency conversational AI platforms designed to automate customer engagements and streamline internal enterprise communication. As a premier AI chatbot development company in India, we combine custom Large Language Model (LLM) orchestration with enterprise system integrations to deliver high-performing conversational systems tailored to your customer operations.\n\nEDDINET builds intelligent conversational systems, natural language pipelines, and custom AI virtual assistants. As a specialized AI chatbot development company in India, we transform routine user interactions into automated, context-aware digital conversations.\n\nOur engineering team combines custom LLM orchestration with enterprise-grade data privacy frameworks. Consequently, we help growing brands reduce support response times, improve customer satisfaction scores, and scale 24/7 service availability.",
   features: [
     {
@@ -50,24 +51,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for Enterprise AI Chatbot Solutions?",
     points: [
@@ -120,28 +104,7 @@ export const child = {
     ],
     description: "We follow a systematic agile lifecycle to build and deploy enterprise-grade conversational AI systems safely and on schedule.",
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What Does an AI Chatbot Development Company in India Do?",
@@ -172,28 +135,7 @@ export const child = {
       a: "Yes, we engineer seamless human-in-the-loop fallback mechanisms that automatically transfer complex or sensitive conversations to live support agents alongside full chat context.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Software & AI Solutions Services",
-      slug: "/services/software-ai",
-      description: "Explore every software & ai solutions capability under one roof.",
-    },
-    {
-      title: "Cloud & DevOps Services",
-      slug: "/services/cloud-devops",
-      description: "Cloud infrastructure, deployment, CI/CD, scalability, reliability, security and operational practices that keep digital platforms stable as traffic and workloads grow.",
-    },
-    {
-      title: "Mobile App Development Services",
-      slug: "/services/mobile-app-development",
-      description: "Native and cross-platform mobile applications built around product goals, user experience, retention and scalable technical foundations - connected to the same marketing and data strategy as the rest of your digital presence.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("software-ai"),
   featuresHeading: "Our AI Chatbot Development Services India",
   featuresDescription: "We offer specialized engineering services to design, build, and deploy secure conversational AI interfaces across web, mobile, and omnichannel endpoints.",
   docxHeadings: {

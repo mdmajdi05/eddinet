@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "llm-integration",
-  categorySlug: "software-ai",
-  categoryTitle: "Software & AI Solutions",
-  categoryIcon: "🤖",
-  item: "LLM Integration",
+
+
+
+
   title: "LLM Integration",
   metaTitle: "LLM Integration Services in India | Eddinet",
   metaDescription: "EDDINET builds high-speed, secure Large Language Model architectures engineered to connect state-of-the-art AI models directly to core business logic.",
   heroHeading: "LLM Integration Services in India",
   heroSubheading: "Custom Model Orchestration | Multi-LLM Architectures | Enterprise AI Engineering",
-  image: "/images/services/software-ai-solutions.webp",
+
   detailedDescription: "EDDINET builds high-speed, secure Large Language Model architectures engineered to connect state-of-the-art AI models directly to core business logic. As a premier LLM integration services in India provider, we combine multi-model orchestration with strict enterprise privacy controls to deliver scalable digital platforms tailored to your operational workflows.\n\nEDDINET designs Large Language Model pipelines, multi-model orchestration platforms, and custom AI integration frameworks. As a specialized custom LLM application development company in India, we convert complex foundational models into practical, enterprise-ready software products.\n\nOur engineering team combines advanced prompt management with private cloud deployment protocols. Consequently, we help forward-thinking brands automate decision-making, secure proprietary assets, and achieve measurable operational efficiency.",
   features: [
     {
@@ -50,24 +51,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for LLM Integration Services in India?",
     points: [
@@ -120,28 +104,7 @@ export const child = {
     ],
     description: "We follow a systematic agile lifecycle to build and deploy enterprise-grade Large Language Model applications safely and on schedule.",
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What Does an LLM Integration Company in India Do?",
@@ -172,28 +135,7 @@ export const child = {
       a: "Yes, we deploy open-source models like Llama and Mistral directly to your private AWS, Azure, or GCP cloud instances to keep all data within your secure network boundary.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Software & AI Solutions Services",
-      slug: "/services/software-ai",
-      description: "Explore every software & ai solutions capability under one roof.",
-    },
-    {
-      title: "Cloud & DevOps Services",
-      slug: "/services/cloud-devops",
-      description: "Cloud infrastructure, deployment, CI/CD, scalability, reliability, security and operational practices that keep digital platforms stable as traffic and workloads grow.",
-    },
-    {
-      title: "Mobile App Development Services",
-      slug: "/services/mobile-app-development",
-      description: "Native and cross-platform mobile applications built around product goals, user experience, retention and scalable technical foundations - connected to the same marketing and data strategy as the rest of your digital presence.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("software-ai"),
   featuresHeading: "Our Custom LLM Application Development Services",
   featuresDescription: "We offer end-to-end engineering services to embed, fine-tune, and orchestrate Large Language Models across your software ecosystem.",
   docxHeadings: {

@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "app-migration",
-  categorySlug: "mobile-app-development",
-  categoryTitle: "Mobile App Development",
-  categoryIcon: "📲",
-  item: "App Migration",
+
+
+
+
   title: "App Migration",
   metaTitle: "App Migration Services in India | Eddinet",
   metaDescription: "Eddinet provides top Mobile App Migration Services in India to upgrade outdated apps smoothly. We transfer your code, data, and backend to modern frameworks",
   heroHeading: "Mobile App Migration Services in India",
   heroSubheading: "Legacy Modernization | Platform Migration | App Migration",
-  image: "/images/services/mobile_app_development_banner.webp",
+
   detailedDescription: "Eddinet provides top Mobile App Migration Services in India to upgrade outdated apps smoothly. We transfer your code, data, and backend to modern frameworks making your app faster, secure, and seamless across all devices.\n\nAt Eddinet, we transform legacy mobile applications into high-performing digital products. As a trusted app migration company in India, we fix app slowness, eliminate security risks, and ensure smooth, hassle-free code transfers.\n\nHere is how we streamline your mobile app migration:\n\nLegacy App Modernization: We upgrade old codebases to fix performance bottlenecks and remove security risks.\n\nNative to Cross-Platform Migration: We convert single-platform native apps into unified Flutter or React Native codebases to lower maintenance costs.\n\niOS to Android App Migration: We recreate iOS applications for Android devices while adapting layouts to Google Material Design standards.\n\nSecure & Scalable App Migration: We protect user records and transaction histories to ensure zero data loss and minimal downtime during transfers.",
   features: [
     {
@@ -90,24 +91,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet For Mobile App Migration Services?",
     points: [
@@ -171,28 +155,7 @@ export const child = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What Are Mobile App Migration Services?",
@@ -235,28 +198,7 @@ export const child = {
       a: "Yes, we offer ongoing support plans that cover server health monitoring, immediate bug fixes, security patches, and app store updates.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Mobile App Development Services",
-      slug: "/services/mobile-app-development",
-      description: "Explore every mobile app development capability under one roof.",
-    },
-    {
-      title: "Software & AI Solutions Services",
-      slug: "/services/software-ai",
-      description: "Custom software, SaaS-style systems, automation and AI-driven solutions that solve operational problems, improve customer experience or extend existing platforms beyond what off-the-shelf tools can do.",
-    },
-    {
-      title: "Cloud & DevOps Services",
-      slug: "/services/cloud-devops",
-      description: "Cloud infrastructure, deployment, CI/CD, scalability, reliability, security and operational practices that keep digital platforms stable as traffic and workloads grow.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("mobile-app-development"),
   featuresHeading: "Our Mobile App Migration Services",
   docxHeadings: {
     about: "About Our Mobile App Migration Agency in India",

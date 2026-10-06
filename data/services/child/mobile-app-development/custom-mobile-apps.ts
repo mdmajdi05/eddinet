@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "custom-mobile-apps",
-  categorySlug: "mobile-app-development",
-  categoryTitle: "Mobile App Development",
-  categoryIcon: "📲",
-  item: "Custom Mobile Apps",
+
+
+
+
   title: "Custom Mobile Apps",
   metaTitle: "Custom Mobile Apps Services in India | Eddinet",
   metaDescription: "Eddinet delivers top-tier Custom Mobile App Development Services in India tailored strictly to your unique workflows and business needs.",
   heroHeading: "Custom Mobile App Development Services in India",
   heroSubheading: "Custom | Enterprise | Mobile App Solutions",
-  image: "/images/services/mobile_app_development_banner.webp",
+
   detailedDescription: "Eddinet delivers top-tier Custom Mobile App Development Services in India tailored strictly to your unique workflows and business needs. We combine intuitive design with scalable engineering to build fast, reliable apps that streamline operations, engage users, and drive long-term growth.\n\nAt Eddinet, we build custom mobile applications engineered around your unique business goals, workflows, and growth targets. As a trusted mobile app development company in India, we deliver secure, high-performing digital products that scale seamlessly alongside your expanding user base.\n\nHere is how we streamline your custom mobile app development:\n\nCustom Mobile App Solutions: We build tailored applications from scratch to match your operational goals, branding, and feature requirements.\n\nEnterprise Custom App Development: We digitize organizational workflows and build robust software capable of handling heavy data loads securely.\n\nCustomer Mobile Software Development: We craft engaging consumer-facing apps designed to improve user satisfaction, drive retention, and accelerate revenue growth.\n\nScalable & Secure Applications: We deploy resilient cloud architectures and strict data protection protocols to keep your app fast and safe.",
   features: [
     {
@@ -94,24 +95,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Our Custom Mobile App Development Services?",
     points: [
@@ -170,28 +154,7 @@ export const child = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What Is Custom Mobile App Development?",
@@ -226,28 +189,7 @@ export const child = {
       a: "Yes, we offer ongoing maintenance plans covering server monitoring, rapid bug fixes, security updates, and adjustments for new operating system releases.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Mobile App Development Services",
-      slug: "/services/mobile-app-development",
-      description: "Explore every mobile app development capability under one roof.",
-    },
-    {
-      title: "Software & AI Solutions Services",
-      slug: "/services/software-ai",
-      description: "Custom software, SaaS-style systems, automation and AI-driven solutions that solve operational problems, improve customer experience or extend existing platforms beyond what off-the-shelf tools can do.",
-    },
-    {
-      title: "Cloud & DevOps Services",
-      slug: "/services/cloud-devops",
-      description: "Cloud infrastructure, deployment, CI/CD, scalability, reliability, security and operational practices that keep digital platforms stable as traffic and workloads grow.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("mobile-app-development"),
   featuresHeading: "Our Custom Mobile App Development Services",
   docxHeadings: {
     about: "About Our Custom Mobile App Development Company in India",

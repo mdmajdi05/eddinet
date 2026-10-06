@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "google-ads",
-  categorySlug: "ads-ppc",
-  categoryTitle: "Ads / PPC & Content",
-  categoryIcon: "📊",
-  item: "Google Ads",
+
+
+
+
   title: "Google Ads",
   metaTitle: "Google Ads Services in India | Eddinet",
   metaDescription: "Most agencies burn through ad budgets on low-intent traffic. At Eddinet, we take a performance-first approach to Google Ads customizing every campaign",
   heroHeading: "Best Google Ads Services in India",
   heroSubheading: "Eddinet is a leading Google Ads agency in India, turning your ad spend into high-intent leads and direct sales. We build and manage high-converting Search, Display, and Performance Max campaigns using targeted keyword architecture, continuous bid optimization, and conversion-focused strategies to maximize your ROI.",
-  image: "/images/services/performance-marketing.webp",
+
   detailedDescription: "Most agencies burn through ad budgets on low-intent traffic. At Eddinet, we take a performance-first approach to Google Ads customizing every campaign structure around your exact profit margins, ticket size, and sales goals. We continuously audit search terms, eliminate wasted clicks, and optimize conversion paths so every rupee spent actively contributes to your bottom line.\n\nIf you are looking for Google Ads services in India that deliver scalable sales rather than empty impressions, you are in the right place. We build lean, data-backed Search, Display, and Performance Max campaigns that put your business in front of high-intent buyers the moment they search for what you offer.",
   features: [
     {
@@ -59,24 +60,7 @@ export const child = {
       description: "Clear metrics tied directly to leads, customer acquisition costs, and total return on ad spend (ROAS).",
     },
   ],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Google Ads Services",
     points: [
@@ -127,28 +111,7 @@ export const child = {
     ],
     description: "Our structured, data-led process ensures your campaigns launch smoothly and scale efficiently.",
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "Which Google Ads campaign types do you manage?",
@@ -183,28 +146,7 @@ export const child = {
       a: "Yes. Search Ads put your business in front of buyers actively looking for your offer, driving high-intent traffic ready to convert.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Ads / PPC & Content Services",
-      slug: "/services/ads-ppc",
-      description: "Explore every ads / ppc & content capability under one roof.",
-    },
-    {
-      title: "Content Services",
-      slug: "/services/content",
-      description: "Strategic content created for search, social, campaigns, landing pages and customer journeys - designed to educate, build authority and support conversion at every stage of the funnel.",
-    },
-    {
-      title: "SEO Services",
-      slug: "/services/seo",
-      description: "Search visibility built for how people actually search now - traditional Google results and AI-generated answers alike. Technical SEO, content relevance, search intent and AI-search readiness work together to build qualified, compounding organic traffic.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("ads-ppc"),
   featuresHeading: "Our Google Ads Services in India",
   featuresDescription: "We provide full-funnel Google Ads management to help businesses outpace competitors and acquire qualified leads at a predictable cost.",
   benefitsHeading: "WHAT YOU CAN EXPECT WITH US",

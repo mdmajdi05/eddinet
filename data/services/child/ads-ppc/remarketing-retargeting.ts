@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "remarketing-retargeting",
-  categorySlug: "ads-ppc",
-  categoryTitle: "Ads / PPC & Content",
-  categoryIcon: "📊",
-  item: "Remarketing / Retargeting",
+
+
+
+
   title: "Remarketing / Retargeting",
   metaTitle: "Remarketing / Retargeting Services in India | Eddinet",
   metaDescription: "By combining automated dynamic product ads, conversion-based audience segmentation, and strict frequency caps across Google, Meta, and LinkedIn, we drive",
   heroHeading: "Remarketing & Retargeting Ads Services in India",
   heroSubheading: "At Eddinet, we fix conversion drop-offs by bringing high-intent website visitors back to complete their purchase. As a performance-focused retargeting agency in India, we eliminate wasted ad spend by re-engaging users who left your site or app without taking action.",
-  image: "/images/services/performance-marketing.webp",
+
   detailedDescription: "By combining automated dynamic product ads, conversion-based audience segmentation, and strict frequency caps across Google, Meta, and LinkedIn, we drive down your customer acquisition costs and turn lost traffic into direct revenue.\n\nAt Eddinet, we solve lost conversions by bringing warm visitors back into your sales funnel to complete their purchase. As a specialized retargeting agency in India, we eliminate wasted ad spend by re-engaging users who left your website or app without taking action. By deploying custom audience triggers, dynamic product ads, and precise frequency caps across Google, Meta, and LinkedIn, we drive down your customer acquisition costs and turn bounced traffic into direct revenue.",
   features: [
     {
@@ -42,24 +43,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Remarketing Ads",
     points: [
@@ -108,28 +92,7 @@ export const child = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What is the difference between remarketing and retargeting?",
@@ -148,28 +111,7 @@ export const child = {
       a: "Because retargeting targets warm prospects who already know your brand, campaigns often produce conversions within the first 24 to 48 hours of launch once audience pools are established.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Ads / PPC & Content Services",
-      slug: "/services/ads-ppc",
-      description: "Explore every ads / ppc & content capability under one roof.",
-    },
-    {
-      title: "Content Services",
-      slug: "/services/content",
-      description: "Strategic content created for search, social, campaigns, landing pages and customer journeys - designed to educate, build authority and support conversion at every stage of the funnel.",
-    },
-    {
-      title: "SEO Services",
-      slug: "/services/seo",
-      description: "Search visibility built for how people actually search now - traditional Google results and AI-generated answers alike. Technical SEO, content relevance, search intent and AI-search readiness work together to build qualified, compounding organic traffic.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("ads-ppc"),
   featuresHeading: "Our Retargeting Ads Services in India",
   docxHeadings: {
     about: "About Remarketing & Retargeting Agency",

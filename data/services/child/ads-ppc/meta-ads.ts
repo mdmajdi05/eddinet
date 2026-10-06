@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "meta-ads",
-  categorySlug: "ads-ppc",
-  categoryTitle: "Ads / PPC & Content",
-  categoryIcon: "📊",
-  item: "Meta Ads",
+
+
+
+
   title: "Meta Ads",
   metaTitle: "Meta Ads Services in India | Eddinet",
   metaDescription: "Performance-Driven Meta Ads Agency in India Running successful Meta ads requires far more than just boosting a post and hoping for clicks.",
   heroHeading: "Meta Ads Services in India",
   heroSubheading: "At Eddinet, we turn your ad spend into measurable profit. As a specialized Meta Ads Agency in India, we build, run, and scale high-converting Facebook & Instagram campaigns designed to capture customer attention, drive sales, and grow your bottom line. We pair creative ad assets with precise audience targeting to lower your acquisition costs and maximize your return on ad spend (ROAS).",
-  image: "/images/services/performance-marketing.webp",
+
   detailedDescription: "Performance-Driven Meta Ads Agency in India\n\nRunning successful Meta ads requires far more than just boosting a post and hoping for clicks. The digital space is noisy, and casual scrollers ignore generic corporate ads.\n\nWe take a performance-first approach to Facebook & Instagram Ads management. We analyze your unit economics, build full-funnel strategies, and deliver targeted creative angles that speak directly to your ideal buyers. From cold prospecting to retargeting warm site visitors, we turn your ad account into a predictable revenue engine.",
   features: [
     {
@@ -59,24 +60,7 @@ export const child = {
       description: "You maintain 100% ownership and visibility of your ad account, pixel data, and creative assets at all times.",
     },
   ],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Meta Ads Management?",
     points: [
@@ -118,28 +102,7 @@ export const child = {
     ],
     description: "Here is how we take your paid social advertising from baseline testing to scalable growth:",
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What is the difference between boosting a post and dedicated Meta Ads management?",
@@ -162,28 +125,7 @@ export const child = {
       a: "We implement server-side tracking via the Meta Conversions API (CAPI) alongside the standard Meta Pixel. This dual tracking setup recovers lost conversion data, improves event match quality, and delivers accurate performance data directly to your dashboard.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Ads / PPC & Content Services",
-      slug: "/services/ads-ppc",
-      description: "Explore every ads / ppc & content capability under one roof.",
-    },
-    {
-      title: "Content Services",
-      slug: "/services/content",
-      description: "Strategic content created for search, social, campaigns, landing pages and customer journeys - designed to educate, build authority and support conversion at every stage of the funnel.",
-    },
-    {
-      title: "SEO Services",
-      slug: "/services/seo",
-      description: "Search visibility built for how people actually search now - traditional Google results and AI-generated answers alike. Technical SEO, content relevance, search intent and AI-search readiness work together to build qualified, compounding organic traffic.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("ads-ppc"),
   featuresHeading: "Our Meta Ads Management Services",
   featuresDescription: "We offer end-to-end Meta Ads services in India, handling every detail of your paid social ecosystem so you can focus on scaling operations.",
   benefitsHeading: "WHAT YOU CAN EXPECT WITH US",

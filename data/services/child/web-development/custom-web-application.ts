@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "custom-web-application",
-  categorySlug: "web-development",
-  categoryTitle: "Web Development",
-  categoryIcon: "💻",
-  item: "Custom Web Application",
+
+
+
+
   title: "Custom Web Application",
   metaTitle: "Custom Web Application Services in Delhi NCR | Eddinet",
   metaDescription: "Tailored web apps built around your workflows, data and users rather than generic templates. Software that does exactly what your business needs, not what a SaaS decided for you. Eddinet delivers dependable custom web application services in Delhi NCR for India and global clients. Get a free proposal today.",
   heroHeading: "Custom Web Application Services in Delhi NCR",
   heroSubheading: "Tailored web apps built around your workflows, data and users rather than generic templates. Software that does exactly what your business needs, not what a SaaS decided for you.",
-  image: "/images/services/web-development.webp",
+
   detailedDescription: "Tailored web apps built around your workflows, data and users rather than generic templates. Software that does exactly what your business needs, not what a SaaS decided for you.\n\nA website is judged in seconds — if it's slow, it loses trust before it loses the ranking. At Eddinet, we build websites that are fast, secure and engineered to rank. Development isn't an afterthought bolted onto marketing; it's built around Core Web Vitals, semantic structure, mobile-first UX and maintainability, so your SEO, content and campaigns never have to fight a site that wasn't built for performance.\n\nEvery project starts with discovery — what the site must sell, who it serves and where it will compete. We design the architecture for conversion and search, build in sprints you can review along the way, and test across real devices and speeds before anything goes live. The result is a site your team can actually run: a content management workflow that doesn't require a developer for every small change, code that isn't a mystery to maintain, and hosting and monitoring that keep it fast after launch.\n\nWhether you need a corporate website, a high-converting business website, a WordPress site, a custom Next.js or React build, or a full website rebuild that preserves your rankings, we deliver a digital foundation that converts visitors, ranks in search and scales with your business — not a brochure that goes stale on day one.\n\nFrom scoping and strategy through delivery, reporting and ongoing support, the entire engagement is run as one connected system — with clear milestones, a named team and a focus on outcomes, not deliverables alone.",
   features: [
     {
@@ -79,24 +80,7 @@ export const child = {
       description: "Documentation, training and simple CMS workflows mean you're not dependent on us for every update — you own the site, not us.",
     },
   ],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Businesses Pick Eddinet for Web Development",
     points: [
@@ -143,28 +127,7 @@ export const child = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "Which technologies do you use?",
@@ -203,26 +166,5 @@ export const child = {
       a: "Yes. We can host, monitor, update and maintain your website after launch through our hosting and maintenance plans, so performance and security stay strong.",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Web Development Services",
-      slug: "/services/web-development",
-      description: "Explore every web development capability under one roof.",
-    },
-    {
-      title: "SEO Services",
-      slug: "/services/seo",
-      description: "Search visibility built for how people actually search now - traditional Google results and AI-generated answers alike. Technical SEO, content relevance, search intent and AI-search readiness work together to build qualified, compounding organic traffic.",
-    },
-    {
-      title: "eCommerce Solutions Services",
-      slug: "/services/ecommerce",
-      description: "eCommerce platforms and storefront experiences designed around discovery, product visibility, UX, checkout conversion and repeat purchase - where SEO, paid media and UX have to work in sync.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("web-development"),
 };

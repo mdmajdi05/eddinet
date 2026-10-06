@@ -6,18 +6,19 @@
 //  ek import + ek entry add karo.
 // ============================================================================
 
+import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "shopify-migration",
-  categorySlug: "hosting-migration",
-  categoryTitle: "Hosting & Migration",
-  categoryIcon: "🌐",
-  item: "Shopify Migration",
+
+
+
+
   title: "Shopify Migration",
   metaTitle: "Shopify Migration Services in India | Eddinet",
   metaDescription: "Eddinet provides end-to-end Shopify migration services in India for D2C and B2B brands. We migrate products, customers, orders, SEO URLs, and design with",
   heroHeading: "Shopify Migration Services in India",
   heroSubheading: "Shopify Store Data Migration | WooCommerce & Magento to Shopify | Zero Data Loss",
-  image: "/images/services/hosting-migration.webp",
+
   detailedDescription: "Eddinet provides end-to-end Shopify migration services in India for D2C and B2B brands.\n\nWe migrate products, customers, orders, SEO URLs, and design with zero data loss.\n\nResult: faster store, better UX, and easier management on Shopify or Shopify Plus.\n\nAre you afraid of losing orders, customer accounts, or Google rankings while switching platforms? Is your current store too slow, costly, or complex to maintain? If yes, Eddinet is the solution to your problem.\n\nAs a Shopify migration company in India, we bring hands-on experience from moving stores of many sizes. We study your catalogue, customer data, and SEO setup before moving anything. You also receive plain-language updates, so you always know where your migration stands.",
   features: [
     {
@@ -46,24 +47,7 @@ export const child = {
     },
   ],
   benefits: [],
-  metrics: [
-    {
-      value: "1,000+",
-      label: "Projects delivered",
-    },
-    {
-      value: "5+ Years",
-      label: "In digital growth",
-    },
-    {
-      value: "12+ Countries",
-      label: "Clients served globally",
-    },
-    {
-      value: "24×7",
-      label: "Support & monitoring",
-    },
-  ],
+  metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Shopify Migration Services?",
     points: [
@@ -109,28 +93,7 @@ export const child = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: "Rohan Malhotra",
-      designation: "Founder, D2C Brand",
-      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
-    },
-    {
-      name: "Priya Sharma",
-      designation: "Marketing Head, SaaS Company",
-      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
-    },
-    {
-      name: "Amit Verma",
-      designation: "Director, Real Estate Firm",
-      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
-    },
-    {
-      name: "Neha Gupta",
-      designation: "CEO, Healthcare Startup",
-      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
-    },
-  ],
+  testimonials: sharedTestimonials,
   faqs: [
     {
       q: "What do your Shopify migration services in India include?",
@@ -157,28 +120,7 @@ export const child = {
       a: "Ready to scale your store on Shopify without losing orders, customer data, or search rankings? Partner with Eddinet for a precision-engineered, zero-downtime migration. Contact our engineering team today to schedule your technical consultation!",
     },
   ],
-  crossLinks: [
-    {
-      title: "Back to Hosting & Migration Services",
-      slug: "/services/hosting-migration",
-      description: "Explore every hosting & migration capability under one roof.",
-    },
-    {
-      title: "Cloud & DevOps Services",
-      slug: "/services/cloud-devops",
-      description: "Cloud infrastructure, deployment, CI/CD, scalability, reliability, security and operational practices that keep digital platforms stable as traffic and workloads grow.",
-    },
-    {
-      title: "Web Development Services",
-      slug: "/services/web-development",
-      description: "Fast, structured and SEO-ready websites engineered around usability, performance, conversion and long-term maintainability - so marketing never has to work around a site that wasn't built for it.",
-    },
-    {
-      title: "All Services",
-      slug: "/services",
-      description: "Browse the complete Eddinet service ecosystem.",
-    },
-  ],
+  crossLinks: crossLinksFor("hosting-migration"),
   featuresHeading: "Our Shopify Migration Services in India",
   docxHeadings: {
     about: "About Us: Shopify Migration Company in India",
