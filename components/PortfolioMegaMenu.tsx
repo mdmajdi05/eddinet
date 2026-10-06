@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { projectCategories } from "@/data/portfolio";
+import { projectCategories } from "@/data/portfolio/portfolio";
 
 export default function PortfolioMegaMenu() {
   const [open, setOpen] = useState(false);

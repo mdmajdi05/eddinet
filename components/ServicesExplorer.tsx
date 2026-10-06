@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { servicePages } from "@/data/services";
+import { servicePages } from "@/data/services/services";
 
 const pillars = [
   { key: "all", label: "All Services", cats: null as string[] | null, icon: "✦" },

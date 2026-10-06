@@ -7,7 +7,7 @@
 //      ✅  src={IMG.servicesSeoChild.aiSeo.src}
 //
 //  Images hamesha is registry me se lao. Folder cleanup ho ya path change,
-//  sirf ek jagah edit karna padega: yahan (data/images.ts) + image ka file.
+//  sirf ek jagah edit karna padega: yahan (data/site/images.ts) + image ka file.
 //
 //  ────────────────────────────────────────────────────────────────────────────
 //  📁 FOLDER STRUCTURE (public/images/…) — page-wise, kebab-case:
@@ -157,7 +157,7 @@ export const IMG = {
       alt: "SEO & AI SEO service illustration",
       page: "services",
       section: "Services tab cards",
-      // usedIn: data/services.ts (service slug "seo")
+      // usedIn: data/services/services.ts (service slug "seo")
     },
     socialMedia: {
       key: "social-media",
@@ -165,7 +165,7 @@ export const IMG = {
       alt: "Social media marketing service illustration",
       page: "services",
       section: "Services tab cards",
-      // usedIn: data/services.ts (slug "social-media-marketing")
+      // usedIn: data/services/services.ts (slug "social-media-marketing")
     },
     performanceMarketing: {
       key: "performance-marketing",
@@ -173,7 +173,7 @@ export const IMG = {
       alt: "Ads / PPC & Content service illustration",
       page: "services",
       section: "Services tab cards",
-      // usedIn: data/services.ts (slug "ads-ppc")
+      // usedIn: data/services/services.ts (slug "ads-ppc")
     },
     designCreative: {
       key: "design-creative",
@@ -181,7 +181,7 @@ export const IMG = {
       alt: "Design & Creative service illustration",
       page: "services",
       section: "Services tab cards",
-      // usedIn: data/services.ts (slug "design-creative")
+      // usedIn: data/services/services.ts (slug "design-creative")
     },
     webDevelopment: {
       key: "web-development",
@@ -189,7 +189,7 @@ export const IMG = {
       alt: "Web development service illustration",
       page: "services",
       section: "Services tab cards",
-      // usedIn: data/services.ts (slug "web-development")
+      // usedIn: data/services/services.ts (slug "web-development")
     },
     ecommerceSolutions: {
       key: "ecommerce-solutions",
@@ -197,7 +197,7 @@ export const IMG = {
       alt: "eCommerce solutions service illustration",
       page: "services",
       section: "Services tab cards",
-      // usedIn: data/services.ts (slug "ecommerce")
+      // usedIn: data/services/services.ts (slug "ecommerce")
     },
     softwareAi: {
       key: "software-ai-solutions",
@@ -205,7 +205,7 @@ export const IMG = {
       alt: "Software & AI solutions service illustration",
       page: "services",
       section: "Services tab cards",
-      // usedIn: data/services.ts (slug "software-ai")
+      // usedIn: data/services/services.ts (slug "software-ai")
     },
     cloudDevops: {
       key: "cloud-devops",
@@ -213,7 +213,7 @@ export const IMG = {
       alt: "Cloud & DevOps service illustration",
       page: "services",
       section: "Services tab cards",
-      // usedIn: data/services.ts (slug "cloud-devops")
+      // usedIn: data/services/services.ts (slug "cloud-devops")
     },
     hostingMigration: {
       key: "hosting-migration",
@@ -221,7 +221,7 @@ export const IMG = {
       alt: "Hosting & migration service illustration",
       page: "services",
       section: "Services tab cards",
-      // usedIn: data/services.ts (slug "hosting-migration")
+      // usedIn: data/services/services.ts (slug "hosting-migration")
     },
     reputationManagement: {
       key: "reputation-management",
@@ -229,7 +229,7 @@ export const IMG = {
       alt: "Reputation management service illustration",
       page: "services",
       section: "Services tab cards",
-      // usedIn: data/services.ts (slug "reputation-management")
+      // usedIn: data/services/services.ts (slug "reputation-management")
     },
     mobileAppDevelopment: {
       key: "mobile_app_development_banner",
@@ -237,7 +237,7 @@ export const IMG = {
       alt: "Mobile app development service illustration",
       page: "services",
       section: "Services tab cards",
-      // usedIn: data/services.ts (slug "mobile-app-development")
+      // usedIn: data/services/services.ts (slug "mobile-app-development")
     },
     maintenanceSupport: {
       key: "maintenance_support_plans",
@@ -245,7 +245,7 @@ export const IMG = {
       alt: "Maintenance & support service illustration",
       page: "services",
       section: "Services tab cards",
-      // usedIn: data/services.ts (slug "maintenance-support")
+      // usedIn: data/services/services.ts (slug "maintenance-support")
     },
     content: {
       key: "content_marketing_services",
@@ -253,12 +253,12 @@ export const IMG = {
       alt: "Content marketing service illustration",
       page: "services",
       section: "Services tab cards",
-      // usedIn: data/services.ts (slug "content")
+      // usedIn: data/services/services.ts (slug "content")
     },
   },
 
   // ==========================================================================
-  //  SERVICES → SEO CHILD PAGES (data/services.ts childServiceImages)
+  //  SERVICES → SEO CHILD PAGES (data/services/services.ts childServiceImages)
   // ==========================================================================
   servicesSeoChild: {
     seoService: {
@@ -581,5 +581,5 @@ export const ALL_IMAGES: AppImage[] = [
   IMG.servicesSeoPage.seoForStartups,
 ];
 
-// Downloaded stock images are maintained separately in data/stock-images.ts.
+// Downloaded stock images are maintained separately in data/site/stock-images.ts.
 // Fixed brand/page assets remain in the ALL_IMAGES registry above.

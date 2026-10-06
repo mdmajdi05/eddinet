@@ -8,8 +8,8 @@ import GetQuoteButton from "@/components/GetQuoteButton";
 import SectionHeader from "@/components/SectionHeader";
 import AdaptiveLines from "@/components/AdaptiveLines";
 import ViewportCollapse from "@/components/ViewportCollapse";
-import { services } from "@/data/services";
-import { site } from "@/data/contact";
+import { services } from "@/data/services/services";
+import { site } from "@/data/site/contact";
 
 // Normalised content view shared by every service child page
 // (/services/seo/<slug> and /services/<category>/<slug>).

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import PortfolioGrid from "@/components/PortfolioGrid";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { projectCategories } from "@/data/portfolio";
+import { projectCategories } from "@/data/portfolio/portfolio";
 
 type Props = {
   params: Promise<{

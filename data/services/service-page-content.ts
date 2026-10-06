@@ -1,5 +1,5 @@
 // ============================================================================
-//  FILE: data/service-page-content.ts
+//  FILE: data/services/service-page-content.ts
 //  WHAT'S IN THIS FILE:
 //    Single source of truth for every /services/<category> page. Each category
 //    is normalised into one CategoryPageContent object with a fixed section
@@ -20,14 +20,14 @@ import {
   relatedServices,
   childServiceImages,
   type Service,
-} from "./services";
+} from "@/data/services/services";
 import {
   getChildSlug,
   getCategoryTemplate,
   sharedTestimonials,
-} from "./generated-child-services";
-import { processSteps } from "./home";
-import { docxCategoryPages } from "./docx-content";
+} from "@/data/services/generated-child-services";
+import { processSteps } from "@/data/home/home";
+import { docxCategoryPages } from "@/data/services/docx-content";
 
 export interface CategoryServicesItem {
   title: string;

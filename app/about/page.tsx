@@ -4,10 +4,10 @@ import Link from "next/link";
 import GrowthSystem from "@/components/about/GrowthSystem";
 import Reveal from "@/components/about/Reveal";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { site } from "@/data/contact";
-import { processSteps } from "@/data/home";
-import { industries } from "@/data/industries";
-import { IMG } from "@/data/images";
+import { site } from "@/data/site/contact";
+import { processSteps } from "@/data/home/home";
+import { industries } from "@/data/industries/industries";
+import { IMG } from "@/data/site/images";
 
 export const metadata: Metadata = {
   title: "About Eddinet | Digital Marketing, Software, AI & Cloud Agency in Delhi NCR",

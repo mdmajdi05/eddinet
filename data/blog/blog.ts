@@ -1,7 +1,7 @@
-import { stockImageSrc } from "@/data/stock-images";
+import { stockImageSrc } from "@/data/site/stock-images";
 
 // ============================================================================
-//  FILE: data/blog.ts  (BLOG PAGE)
+//  FILE: data/blog/blog.ts  (BLOG PAGE)
 // WHAT'S IN THIS FILE:  (BLOG)
 //   insights[] - blog posts. NAYA BLOG ADD KARNE KE LIYE YAHIN:
 //                title, slug, category, image, date, summary, body[]

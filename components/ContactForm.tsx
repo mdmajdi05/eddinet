@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { site } from "@/data/contact";
+import { site } from "@/data/site/contact";
 
 const inputCls =
   "w-full py-2 px-4 bg-[var(--input-bg)] border border-[var(--border-color)] rounded-xl text-[var(--text-main)] font-[inherit] text-[0.92rem] outline-none transition-all duration-300 focus:border-[var(--main-accent)] focus:ring-2 focus:ring-[rgba(var(--accent-rgb),0.15)] focus:bg-[var(--input-bg-focus)]";

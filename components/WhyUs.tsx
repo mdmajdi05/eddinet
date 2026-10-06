@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { whyFeatures } from "@/data/home";
+import { whyFeatures } from "@/data/home/home";
 
 export default function WhyUs() {
   return (

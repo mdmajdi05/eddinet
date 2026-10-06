@@ -1,7 +1,7 @@
-import { stockImageSrc } from "@/data/stock-images";
+import { stockImageSrc } from "@/data/site/stock-images";
 
 // ============================================================================
-//  FILE: data/home.ts  (HOME PAGE)
+//  FILE: data/home/home.ts  (HOME PAGE)
 // WHAT'S IN THIS FILE:
 //   processSteps - Home "How we work" timeline steps
 //   whyFeatures  - Home "why choose us" cards

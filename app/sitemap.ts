@@ -1,11 +1,11 @@
 import type { MetadataRoute } from "next";
-import { servicePages } from "@/data/services";
-import { seoChildServices } from "@/data/seo-child-services";
-import { generatedChildServices } from "@/data/generated-child-services";
-import { industries } from "@/data/industries";
-import { insights } from "@/data/blog";
-import { caseStudies } from "@/data/case-studies";
-import { projectCategories } from "@/data/portfolio";
+import { servicePages } from "@/data/services/services";
+import { seoChildServices } from "@/data/seo/seo-child-services";
+import { generatedChildServices } from "@/data/services/generated-child-services";
+import { industries } from "@/data/industries/industries";
+import { insights } from "@/data/blog/blog";
+import { caseStudies } from "@/data/portfolio/case-studies";
+import { projectCategories } from "@/data/portfolio/portfolio";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://eddinet.com";

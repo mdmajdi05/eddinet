@@ -6,7 +6,7 @@ import sharp from "sharp";
 const scriptDirectory = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(scriptDirectory, "..");
 const stockImageRoot = path.join(projectRoot, "public", "images", "stock");
-const stockRegistryPath = path.join(projectRoot, "data", "stock-images.ts");
+const stockRegistryPath = path.join(projectRoot, "data", "site", "stock-images.ts");
 const sourceDirectories = ["app", "components", "data"].map((directory) =>
   path.join(projectRoot, directory),
 );
@@ -178,8 +178,8 @@ function createRegistry(entries) {
 }
 
 function addRegistryImport(content) {
-  if (/from\s+["']@\/data\/stock-images["']/.test(content)) return content;
-  return `import { stockImageSrc } from "@/data/stock-images";\n\n${content}`;
+  if (/from\s+["']@\/data\/(site\/)?stock-images["']/.test(content)) return content;
+  return `import { stockImageSrc } from "@/data/site/stock-images";\n\n${content}`;
 }
 
 async function main() {

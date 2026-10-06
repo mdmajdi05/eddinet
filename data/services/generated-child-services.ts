@@ -4,8 +4,8 @@ import {
   faqsByService,
   relatedServices,
   type Service,
-} from "./services";
-import { seoItemToSlug } from "./seo-child-services";
+} from "@/data/services/services";
+import { seoItemToSlug } from "@/data/seo/seo-child-services";
 
 export interface GeneratedChildFeature {
   title: string;

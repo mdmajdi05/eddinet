@@ -1,12 +1,12 @@
 // ============================================================================
-//  FILE: data/docx-content-services.ts
+//  FILE: data/services/docx-content-services.ts
 //  WHAT'S IN THIS FILE:
 //    Service-page copy transcribed from "EDDITNET CONTENT (6).docx".
 //    One entry per existing child page under /services/<category>/<slug>.
-//    These entries are spread into docxChildPages by data/docx-content.ts.
+//    These entries are spread into docxChildPages by data/services/docx-content.ts.
 // ============================================================================
 
-import type { DocxPageContent } from "./docx-content";
+import type { DocxPageContent } from "@/data/services/docx-content";
 
 export const docxServicePages: Record<string, DocxPageContent> = {
   "ai-agents": {

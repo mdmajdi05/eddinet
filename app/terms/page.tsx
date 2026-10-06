@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { site } from "@/data/contact";
+import { site } from "@/data/site/contact";
 
 export const metadata: Metadata = {
   title: "Terms of Service",

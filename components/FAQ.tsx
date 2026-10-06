@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { homeFaqs } from "@/data/home";
+import { homeFaqs } from "@/data/home/home";
 
 export default function FAQ() {
   const [active, setActive] = useState(0);

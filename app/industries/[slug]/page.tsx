@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { industries, getIndustryBySlug } from "@/data/industries";
-import { caseStudies } from "@/data/case-studies";
+import { industries, getIndustryBySlug } from "@/data/industries/industries";
+import { caseStudies } from "@/data/portfolio/case-studies";
 import AdaptiveLines from "@/components/AdaptiveLines";
 import Breadcrumbs from "@/components/Breadcrumbs";
 

@@ -1,4 +1,4 @@
-import { site } from "@/data/contact";
+import { site } from "@/data/site/contact";
 
 export default function CTA() {
   return (

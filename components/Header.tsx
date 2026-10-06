@@ -8,9 +8,9 @@ import ConsultModal from "./ConsultModal";
 import MegaMenu from "./MegaMenu";
 import PortfolioMegaMenu from "./PortfolioMegaMenu";
 import Image from "next/image";
-import { services } from "@/data/services";
-import { site } from "@/data/contact";
-import { IMG } from "@/data/images";
+import { services } from "@/data/services/services";
+import { site } from "@/data/site/contact";
+import { IMG } from "@/data/site/images";
 
 const navLinks = [
   { label: "Home", href: "/" },

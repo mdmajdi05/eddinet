@@ -22,7 +22,7 @@
 | llms.txt | ✅ Done | `app/llms.txt/route.ts` |
 | sitemap.xml (190 pages) | ✅ Done | `app/sitemap.ts` |
 | robots.txt | ✅ Done | `app/robots.ts` |
-| 203 child service pages | ✅ Done | `data/generated-child-services.ts` |
+| 203 child service pages | ✅ Done | `data/services/generated-child-services.ts` |
 | JSON-LD: Organization, Service, FAQ, Breadcrumb, BlogPosting | ✅ Done | layout + pages |
 | Docker/standalone build | ✅ Done | `next.config.ts` |
 | Google Search Console verification | ✅ Done | `app/layout.tsx` |
@@ -44,13 +44,13 @@
 - **Baad me:** Hindi site banate waqt hreflang `hi-in` wapas add karna.
 
 ### 2.3 Blog — sirf 3 posts + koई categories/tags/pagination nahi
-- **Problem:** `data/blog.ts` me sirf 3 articles. Blog SEO ke liye kamzoor.
+- **Problem:** `data/blog/blog.ts` me sirf 3 articles. Blog SEO ke liye kamzoor.
 - **Todo:**
   - Minimum 10–15 quality posts likhna (1 post per week target).
-  - `category`, `tags`, `readingTime` fields add karo `data/blog.ts`.
+  - `category`, `tags`, `readingTime` fields add karo `data/blog/blog.ts`.
   - Category/tag listing pages banao: `app/blog/[category]/page.tsx`.
   - Pagination/sort banao blog index pe.
-- **Reference:** `app/blog/page.tsx`, `app/blog/[slug]/page.tsx`, `data/blog.ts`
+- **Reference:** `app/blog/page.tsx`, `app/blog/[slug]/page.tsx`, `data/blog/blog.ts`
 
 ### 2.4 RSS Feed — ❌ Missing
 - Blog content ko RSS/Atom feed chahiye (news aggregators + SEO signal).
@@ -63,7 +63,7 @@
 
 ### 2.6 Blog JSON-LD me `image` aur `mainEntity` fields
 - **Problem:** BlogPosting schema me `image` nahi hai.
-- **Solution:** `data/blog.ts` ke post images ko schema me add karo; `publisher.logo` bhi.
+- **Solution:** `data/blog/blog.ts` ke post images ko schema me add karo; `publisher.logo` bhi.
 
 ### 2.7 Local SEO Schema — ❌ Missing
 - `/contact` pe `LocalBusiness`/`ProfessionalService` (Organization already hai layout me).
@@ -75,8 +75,8 @@
   `"potentialAction": { "@type": "SearchAction", "target": "https://eddinet.com/?s={search_term_string}", "query-input": "required name=search_term_string" }`
 
 ### 2.9 Portfolio/Case-study images — remote Unsplash
-- **Problem:** `data/portfolio.ts` ke 40 projects saari Unsplash remote images hain. Google/Pagespeed pe weight + slow.
-- **Solution:** local `public/images/portfolio/` me thumbnails banao aur `data/images.ts` registry se connect karo.
+- **Problem:** `data/portfolio/portfolio.ts` ke 40 projects saari Unsplash remote images hain. Google/Pagespeed pe weight + slow.
+- **Solution:** local `public/images/portfolio/` me thumbnails banao aur `data/site/images.ts` registry se connect karo.
 
 ### 2.10 Website speed / Core Web Vitals
 - **Problem:** saare `<Image>` pe `unoptimized` hai (18 files) → Next image optimizer off hai, koi WebP/AVIF/resize nahi.
@@ -89,11 +89,11 @@
 
 | Cheez | Status | Reference | Kya karna |
 |---|---|---|---|
-| **Case studies** | ❌ Empty | `data/case-studies.ts` | 3–5 real case studies add karo (permission ke baad). Abhi `/case-studies` blank page hai aur saare CTA usi pe le jaate hain. |
-| **Testimonials** | ❌ Empty | `data/home.ts` (line 148) | Client reviews add karo (screenshot/verified). Homepage pe testimonial section abhi nahi dikhta. |
-| **Social links** | ❌ Empty | `data/contact.ts` | LinkedIn/Facebook/Instagram/X/YouTube URLs daalo — Footer me abhi blank hain. |
-| **Portfolio URLs** | ⚠️ Placeholder | `data/portfolio.ts` | Bahut saare project URLs recycled placeholder domains hain → asli client websites daalo (ya section aise show karo jo fix ho). |
-| **Blog** | ⚠️ 3 posts | `data/blog.ts` | 15+ posts (badha kar 30+). |
+| **Case studies** | ❌ Empty | `data/portfolio/case-studies.ts` | 3–5 real case studies add karo (permission ke baad). Abhi `/case-studies` blank page hai aur saare CTA usi pe le jaate hain. |
+| **Testimonials** | ❌ Empty | `data/home/home.ts` (line 148) | Client reviews add karo (screenshot/verified). Homepage pe testimonial section abhi nahi dikhta. |
+| **Social links** | ❌ Empty | `data/site/contact.ts` | LinkedIn/Facebook/Instagram/X/YouTube URLs daalo — Footer me abhi blank hain. |
+| **Portfolio URLs** | ⚠️ Placeholder | `data/portfolio/portfolio.ts` | Bahut saare project URLs recycled placeholder domains hain → asli client websites daalo (ya section aise show karo jo fix ho). |
+| **Blog** | ⚠️ 3 posts | `data/blog/blog.ts` | 15+ posts (badha kar 30+). |
 | Hindi version | ❌ Missing | — | `/hi/` ya i18n. |
 
 ---
@@ -121,7 +121,7 @@
 
 ### 4.3 Blog page client-side render
 - **Problem:** Blog article body (`app/blog/[slug]/page-client.tsx`) client-rendered hai → crawl slow + SEO weak.
-- **Solution:** Server Component me render karo (content `data/blog.ts` se directly).
+- **Solution:** Server Component me render karo (content `data/blog/blog.ts` se directly).
 
 ### 4.4 GZIP/Brotli + caching headers
 - **Problem:** `next.config.ts` me abhi sirf X-Robots-Tag hai.
@@ -160,7 +160,7 @@
 - **Solution:** ya to case studies content banao (2.1 project), ya CTA buttons ko pehle blog/services links pe bhejo.
 
 ### 4.8 About page 989 lines inline
-- `app/about/page.tsx` bahut bada hai - koi problem nahi, lekin maintain ke liye `data/about.ts` ka use karo.
+- `app/about/page.tsx` bahut bada hai - koi problem nahi, lekin maintain ke liye `data/about/about.ts` ka use karo.
 
 ---
 
@@ -180,12 +180,12 @@ npm start          # production serve (after build)
 - Sitemap → `app/sitemap.ts`
 - robots.txt → `app/robots.ts`
 - llms.txt → `app/llms.txt/route.ts`
-- Blog content → `data/blog.ts`
-- Service pages content → `data/service-page-content.ts`, `data/generated-child-services.ts`
-- Contact info → `data/contact.ts`
-- Images registry → `data/images.ts` + `public/images/`
-- Portfolio → `data/portfolio.ts`
-- Homepage content (faqs/testimonials) → `data/home.ts`
+- Blog content → `data/blog/blog.ts`
+- Service pages content → `data/services/service-page-content.ts`, `data/services/generated-child-services.ts`
+- Contact info → `data/site/contact.ts`
+- Images registry → `data/site/images.ts` + `public/images/`
+- Portfolio → `data/portfolio/portfolio.ts`
+- Homepage content (faqs/testimonials) → `data/home/home.ts`
 
 ---
 
@@ -202,7 +202,7 @@ npm start          # production serve (after build)
 
 ### 🟠 Week 2 — Content
 - [ ] 15+ blog posts (categories/tags ke saath)
-- [ ] LinkedIn/Facebook/Instagram/X/Youtube URLs (data/contact.ts)
+- [ ] LinkedIn/Facebook/Instagram/X/Youtube URLs (data/site/contact.ts)
 - [ ] 3+ real case studies
 - [ ] Testimonials with permission
 - [ ] Portfolio URLs fix / local thumbnails

@@ -1,8 +1,8 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { services } from "@/data/services";
-import { getChildSlug } from "@/data/generated-child-services";
+import { services } from "@/data/services/services";
+import { getChildSlug } from "@/data/services/generated-child-services";
 
 type MegaMenuCategory = {
   slug: string;

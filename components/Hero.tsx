@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { imgSrc } from "@/data/images";
+import { imgSrc } from "@/data/site/images";
 
 export default function Hero() {
   const heroSrc = imgSrc("hero");

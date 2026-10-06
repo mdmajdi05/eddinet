@@ -3,7 +3,7 @@ import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 import AdaptiveLines from "@/components/AdaptiveLines";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { site } from "@/data/contact";
+import { site } from "@/data/site/contact";
 
 export const metadata: Metadata = {
   title: "Contact Us - Talk to a Digital Growth Expert",

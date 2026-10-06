@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { stockImageSrc } from "@/data/stock-images";
+import { stockImageSrc } from "@/data/site/stock-images";
 
 const outcomes = [
   {

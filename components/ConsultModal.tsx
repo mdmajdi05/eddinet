@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { site } from "@/data/contact";
+import { site } from "@/data/site/contact";
 
 const fieldCls =
   "w-full py-3 px-4 bg-[var(--input-bg)] border border-[var(--border-color)] rounded-lg text-[var(--text-main)] font-[inherit] text-[0.95rem] outline-none transition-all duration-300 focus:border-[var(--main-accent)] focus:bg-[var(--input-bg-focus)]";

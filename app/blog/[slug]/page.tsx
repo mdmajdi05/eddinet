@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { insights, getInsightBySlug } from "@/data/blog";
-import { site } from "@/data/contact";
+import { insights, getInsightBySlug } from "@/data/blog/blog";
+import { site } from "@/data/site/contact";
 import PageClient from "./page-client";
 
 export function generateStaticParams() {

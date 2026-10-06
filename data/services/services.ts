@@ -1,5 +1,5 @@
 // ============================================================================
-//  FILE: data/services.ts
+//  FILE: data/services/services.ts
 // WHAT'S IN THIS FILE:  (SERVICES)
 //   services[]     - 10 core service categories (icon, title, desc, image, allItems)
 //   serviceTabs    - home "services tabs" (All / Web / SEO ...)

@@ -63,7 +63,7 @@ async function collectRemoteImageReferences() {
   const files = (await Promise.all(sourceDirectories.map(walk))).flat().filter(
     (file) =>
       sourceExtensions.has(path.extname(file).toLowerCase()) &&
-      file !== path.join(projectRoot, "data", "stock-images.ts"),
+      file !== path.join(projectRoot, "data", "site", "stock-images.ts"),
   );
   const references = [];
 

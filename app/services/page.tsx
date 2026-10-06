@@ -4,9 +4,9 @@ import ServicesExplorer from "@/components/ServicesExplorer";
 import ContactForm from "@/components/ContactForm";
 import AdaptiveLines from "@/components/AdaptiveLines";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { servicePages } from "@/data/services";
-import { processSteps } from "@/data/home";
-import { site } from "@/data/contact";
+import { servicePages } from "@/data/services/services";
+import { processSteps } from "@/data/home/home";
+import { site } from "@/data/site/contact";
 
 export const metadata: Metadata = {
   title: "Digital Growth, Marketing & Technology Services in Delhi NCR",

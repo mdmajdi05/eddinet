@@ -9,7 +9,7 @@ import Testimonials from "@/components/Testimonials";
 import Blog from "@/components/Blog";
 import CTA from "@/components/CTA";
 import FAQ from "@/components/FAQ";
-import { homeFaqs } from "@/data/home";
+import { homeFaqs } from "@/data/home/home";
 
 const faqSchema = {
   "@context": "https://schema.org",

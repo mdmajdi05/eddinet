@@ -4,7 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { site } from "@/data/contact";
+import { site } from "@/data/site/contact";
 
 export const viewport: Viewport = {
   width: "device-width",

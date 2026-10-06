@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { IMG } from "@/data/images";
+import { IMG } from "@/data/site/images";
 
 const capabilities = [
   {

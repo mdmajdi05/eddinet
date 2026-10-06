@@ -3,9 +3,9 @@ import { notFound } from "next/navigation";
 import {
   seoChildServices,
   getSeoChildBySlug,
-} from "@/data/seo-child-services";
-import { mergeDocxChildContent } from "@/data/docx-content";
-import { seoFeatureImages } from "@/data/seo-feature-images";
+} from "@/data/seo/seo-child-services";
+import { mergeDocxChildContent } from "@/data/services/docx-content";
+import { seoFeatureImages } from "@/data/seo/seo-feature-images";
 import ServiceChildPage from "@/components/ServiceChildPage";
 
 export function generateStaticParams() {

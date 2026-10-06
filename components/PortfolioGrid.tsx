@@ -12,7 +12,7 @@ import {
   portfolioProjects,
   projectCategories,
   type PortfolioProject,
-} from "@/data/portfolio";
+} from "@/data/portfolio/portfolio";
 
 function getIcon(label: string) {
   switch (label) {

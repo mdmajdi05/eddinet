@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { services, serviceTabs } from "@/data/services";
+import { services, serviceTabs } from "@/data/services/services";
 
 const SHOW_COUNT = 5;
 

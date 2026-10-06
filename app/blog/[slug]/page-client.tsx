@@ -15,9 +15,9 @@ import {
   CircleCheck,
   Phone,
 } from "lucide-react";
-import { insights } from "@/data/blog";
-import { site } from "@/data/contact";
-import { services, type Service } from "@/data/services";
+import { insights } from "@/data/blog/blog";
+import { site } from "@/data/site/contact";
+import { services, type Service } from "@/data/services/services";
 
 // Blog category → related services mapping (right sidebar me form ke niche dikhta hai)
 const RELATED_SERVICES: Record<string, string[]> = {
