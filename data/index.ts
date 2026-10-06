@@ -9,11 +9,19 @@
 //  ├── site/          company info + saari images
 //  ├── home/          homepage copy
 //  ├── about/         about page copy
-//  ├── services/      services + saare service child pages (incl. generated)
+//  ├── services/      parent (10 core services + category page copy)
+//  │   └── child/     ← SAARA service child page content yahin
 //  ├── industries/    sectors
 //  ├── portfolio/     client sites + case studies
-//  ├── blog/          posts
-//  └── seo/           SEO child services + their images
+//  └── blog/          posts
+//
+//  PARENT vs CHILD — yahi farq hai:
+//      parent  →  data/services/services.ts
+//                 data/services/service-page-content.ts
+//                 URL: /services  aur  /services/[slug]
+//      child   →  data/services/child/*.ts
+//                 URL: /services/[slug]/[childSlug]
+//                       /services/seo/[childSlug]
 //
 //  ┌─────────────────────────────────┬────────────────────────────────────────┐
 //  │ BROWSER PAGE                     │ DATA FILE (data/…)                     │
@@ -24,14 +32,16 @@
 //  │ About                           │ about/about.ts  (chhota — page ka      │
 //  │                                 │           content app/about/page.tsx   │
 //  │                                 │           me hai)                      │
-//  │ Services + Services child pages │ services/services.ts (10 core services,│
-//  │                                 │           tabs, per-service FAQs,      │
+//  │ Services (PARENT)               │ services/services.ts (10 core services,│
+//  │  /services  +  /services/[slug]  │           tabs, per-service FAQs,      │
 //  │                                 │           cross-links + child images)  │
 //  │                                 │ services/service-page-content.ts       │
 //  │                                 │           (category page copy)         │
-//  │ (216 service detail pages)      │ services/generated-child-services.ts + │
-//  │                                 │ services/docx-content.ts +             │
-//  │                                 │ services/docx-content-services.ts      │
+//  │ Service CHILD pages             │ services/child/generated-child-services.ts
+//  │  /services/[slug]/[childSlug] +  │ services/child/docx-content.ts +       │
+//  │  /services/seo/[childSlug]       │ services/child/docx-content-services.ts│
+//  │                                 │ services/child/seo-child-services.ts + │
+//  │                                 │ services/child/seo-feature-images.ts   │
 //  │                                 │   (raw/generated — DON'T EDIT, banner   │
 //  │                                 │    dekho; source: EDDITNET .docx)       │
 //  │ Portfolio                       │ portfolio/portfolio.ts (62 client      │
@@ -43,8 +53,6 @@
 //  │ Contact / company info          │ site/contact.ts (phone, email, address,│
 //  │                                 │           hours, whatsapp — header/     │
 //  │                                 │           footer bhi yahin se)          │
-//  │ SEO child pages                 │ seo/seo-child-services.ts +            │
-//  │                                 │ seo/seo-feature-images.ts              │
 //  │ EVERY PAGE (images)             │ site/images.ts (image registry — har   │
 //  │                                 │           page ki image kahan hai,     │
 //  │                                 │           naming convention + IMG.*    │

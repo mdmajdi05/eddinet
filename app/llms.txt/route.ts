@@ -1,6 +1,6 @@
 import { servicePages } from "@/data/services/services";
-import { seoChildServices } from "@/data/seo/seo-child-services";
-import { generatedChildServices } from "@/data/services/generated-child-services";
+import { seoChildServices } from "@/data/services/child/seo-child-services";
+import { generatedChildServices } from "@/data/services/child/generated-child-services";
 import { industries } from "@/data/industries/industries";
 import { insights } from "@/data/blog/blog";
 import { caseStudies } from "@/data/portfolio/case-studies";

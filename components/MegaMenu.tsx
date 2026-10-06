@@ -2,7 +2,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { services } from "@/data/services/services";
-import { getChildSlug } from "@/data/services/generated-child-services";
+import { getChildSlug } from "@/data/services/child/generated-child-services";
 
 type MegaMenuCategory = {
   slug: string;

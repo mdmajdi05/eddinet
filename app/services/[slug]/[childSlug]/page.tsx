@@ -4,8 +4,8 @@ import {
   generatedChildServices,
   getGeneratedChildByCategoryAndSlug,
   getCategoryBySlug,
-} from "@/data/services/generated-child-services";
-import { mergeDocxChildContent } from "@/data/services/docx-content";
+} from "@/data/services/child/generated-child-services";
+import { mergeDocxChildContent } from "@/data/services/child/docx-content";
 import ServiceChildPage from "@/components/ServiceChildPage";
 
 export function generateStaticParams() {

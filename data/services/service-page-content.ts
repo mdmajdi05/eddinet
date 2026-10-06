@@ -25,9 +25,9 @@ import {
   getChildSlug,
   getCategoryTemplate,
   sharedTestimonials,
-} from "@/data/services/generated-child-services";
+} from "@/data/services/child/generated-child-services";
 import { processSteps } from "@/data/home/home";
-import { docxCategoryPages } from "@/data/services/docx-content";
+import { docxCategoryPages } from "@/data/services/child/docx-content";
 
 export interface CategoryServicesItem {
   title: string;

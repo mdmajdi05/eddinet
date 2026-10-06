@@ -22,7 +22,7 @@
 | llms.txt | ✅ Done | `app/llms.txt/route.ts` |
 | sitemap.xml (190 pages) | ✅ Done | `app/sitemap.ts` |
 | robots.txt | ✅ Done | `app/robots.ts` |
-| 203 child service pages | ✅ Done | `data/services/generated-child-services.ts` |
+| 203 child service pages | ✅ Done | `data/services/child/generated-child-services.ts` |
 | JSON-LD: Organization, Service, FAQ, Breadcrumb, BlogPosting | ✅ Done | layout + pages |
 | Docker/standalone build | ✅ Done | `next.config.ts` |
 | Google Search Console verification | ✅ Done | `app/layout.tsx` |
@@ -181,7 +181,7 @@ npm start          # production serve (after build)
 - robots.txt → `app/robots.ts`
 - llms.txt → `app/llms.txt/route.ts`
 - Blog content → `data/blog/blog.ts`
-- Service pages content → `data/services/service-page-content.ts`, `data/services/generated-child-services.ts`
+- Service pages content → `data/services/service-page-content.ts`, `data/services/child/generated-child-services.ts`
 - Contact info → `data/site/contact.ts`
 - Images registry → `data/site/images.ts` + `public/images/`
 - Portfolio → `data/portfolio/portfolio.ts`

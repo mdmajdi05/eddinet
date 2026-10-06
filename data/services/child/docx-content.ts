@@ -1,12 +1,12 @@
 // ============================================================================
-//  FILE: data/services/docx-content.ts
+//  FILE: data/services/child/docx-content.ts
 //  WHAT'S IN THIS FILE:
 //    Structured page content transcribed from "EDDITNET CONTENT (2).docx".
 //    Each entry corresponds to one tab/section in the document and replaces the
 //    legacy copy rendered on the matching service page.
 // ============================================================================
 
-import { docxServicePages as docxServiceChildPages } from "@/data/services/docx-content-services";
+import { docxServicePages as docxServiceChildPages } from "@/data/services/child/docx-content-services";
 
 export interface DocxSection {
   title: string;
