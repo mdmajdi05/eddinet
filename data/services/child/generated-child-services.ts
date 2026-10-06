@@ -6,6 +6,7 @@ import {
   type Service,
 } from "@/data/services/services";
 import { seoItemToSlug } from "@/data/services/child/seo-child-services";
+import { childPages } from "./pages";
 
 export interface GeneratedChildFeature {
   title: string;
@@ -1884,25 +1885,17 @@ export function buildGeneratedChildService(
   };
 }
 
-export const generatedChildServices: GeneratedChildService[] = (() => {
-  const all: GeneratedChildService[] = [];
-  for (const cat of services) {
-    if (cat.slug === "seo") continue;
-    const map = getSlugMap(cat.slug);
-    for (const item of cat.allItems) {
-      all.push(buildGeneratedChildService(cat, item, map[item]));
-    }
-  }
-  return all;
-})();
+// Content ab per-page files se aata hai (ek page = ek file):
+//   data/services/child/<categorySlug>/<childSlug>.ts
+// Naya child page banane par sirf uski file + pages.ts me entry add karo.
+export const generatedChildServices: GeneratedChildService[] =
+  Object.values(childPages);
 
 export function getGeneratedChildByCategoryAndSlug(
   categorySlug: string,
   childSlug: string,
 ): GeneratedChildService | undefined {
-  return generatedChildServices.find(
-    (c) => c.categorySlug === categorySlug && c.slug === childSlug,
-  );
+  return childPages[`${categorySlug}/${childSlug}`];
 }
 
 export function getGeneratedChildrenForCategory(

@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import {
-  seoChildServices,
-  getSeoChildBySlug,
-} from "@/data/services/child/seo-child-services";
-import { mergeDocxChildContent } from "@/data/services/child/docx-content";
-import { seoFeatureImages } from "@/data/services/child/seo-feature-images";
+import { seoChildServices, getSeoChildBySlug } from "@/data/services/child/seo-child-services";
 import ServiceChildPage from "@/components/ServiceChildPage";
 
 export function generateStaticParams() {
@@ -18,9 +13,8 @@ export async function generateMetadata({
   params: Promise<{ childSlug: string }>;
 }): Promise<Metadata> {
   const { childSlug } = await params;
-  const baseChild = getSeoChildBySlug(childSlug);
-  if (!baseChild) return {};
-  const child = mergeDocxChildContent(childSlug, baseChild);
+  const child = getSeoChildBySlug(childSlug);
+  if (!child) return {};
   const canonical = `https://eddinet.com/services/seo/${child.slug}`;
   return {
     title: child.metaTitle,
@@ -40,22 +34,12 @@ export default async function SeoChildPage({
   params: Promise<{ childSlug: string }>;
 }) {
   const { childSlug } = await params;
-  const baseChild = getSeoChildBySlug(childSlug);
-  if (!baseChild) notFound();
-  const child = mergeDocxChildContent(childSlug, baseChild);
-
-  const featureImages = seoFeatureImages[child.slug] ?? {};
-  const childWithImages = {
-    ...child,
-    features: child.features.map((feature) => ({
-      ...feature,
-      image: featureImages[feature.title] ?? child.image,
-    })),
-  };
+  const child = getSeoChildBySlug(childSlug);
+  if (!child) notFound();
 
   return (
     <ServiceChildPage
-      child={childWithImages}
+      child={child}
       category={{ title: "SEO & AI SEO", href: "/services/seo" }}
       canonicalUrl={`https://eddinet.com/services/seo/${child.slug}`}
     />

@@ -1,0 +1,228 @@
+// ============================================================================
+//  FILE: data/services/child/social-media-marketing/social-media-strategy.ts
+//  PAGE: /services/social-media-marketing/social-media-strategy
+//  Is page ka POORA content isi file me hai — yahi single source hai.
+//  Naya child page: ye file copy karo, content badlo, phir pages.ts me
+//  ek import + ek entry add karo.
+// ============================================================================
+
+export const child = {
+  slug: "social-media-strategy",
+  categorySlug: "social-media-marketing",
+  categoryTitle: "Social Media Marketing",
+  categoryIcon: "📱",
+  item: "Social Media Strategy",
+  title: "Social Media Strategy",
+  metaTitle: "Social Media Strategy Services in Delhi NCR | Eddinet",
+  metaDescription: "Platform-specific strategy aligned to audience, brand goals and the broader customer journey. We decide what to post where, why, and how it connects to the rest of your marketing. Eddinet delivers dependable social media strategy services in Delhi NCR for India and global clients. Get a free proposal today.",
+  heroHeading: "Social Media Strategy Services in Delhi NCR",
+  heroSubheading: "Platform-specific strategy aligned to audience, brand goals and the broader customer journey. We decide what to post where, why, and how it connects to the rest of your marketing.",
+  image: "/images/services/social-media.webp",
+  detailedDescription: "Platform-specific strategy aligned to audience, brand goals and the broader customer journey. We decide what to post where, why, and how it connects to the rest of your marketing.\n\nSocial media for a business is not about posting more — it's about being seen by the people who actually buy. At Eddinet, we run social media as a demand engine connected to the rest of your marketing. That means platform-specific strategy, content your audience stops scrolling for, daily community management and paid amplification that boosts what already works — all tied back to leads, sales and brand growth instead of vanity metrics.\n\nWe start by understanding where your buyers actually spend time and what kind of content they respond to in your industry, then build a monthly content system around that. The same post never needs to be recycled across channels: we produce native content for Instagram, Facebook, LinkedIn, YouTube and X, matched to each platform's format, algorithm and audience behaviour. Every month is planned on a calendar, reviewed against performance data and improved — so the content gets sharper, not just more frequent.\n\nSocial media done properly also feeds everything else you do. Content that performs builds retargeting audiences for paid ads, feeds your SEO with authority signals and gives your sales team social proof to close deals. Whether you need Instagram marketing, LinkedIn management, YouTube marketing, Meta ads or a complete social media marketing strategy in Delhi NCR, we build it as one connected system — planned, produced, published and measured against the outcomes that matter.\n\nFrom scoping and strategy through delivery, reporting and ongoing support, the entire engagement is run as one connected system — with clear milestones, a named team and a focus on outcomes, not deliverables alone.",
+  features: [
+    {
+      title: "Platform Strategy & Positioning",
+      description: "We identify where your buyers are, what they respond to and how your brand should sound on each channel — then map the full mix to your business goals before a single post goes live. No scattered posting, no copy-pasted captions from one platform to another.",
+    },
+    {
+      title: "Content Calendar & Production",
+      description: "Planned, on-brand content built for each platform's format, algorithm and audience behaviour — reels, carousels, short videos, LinkedIn thought leadership and X threads produced on a dependable monthly cadence your team can plan around.",
+    },
+    {
+      title: "Community Management",
+      description: "Comments, DMs and mentions handled daily to build real relationships with your audience. Fast, on-brand responses turn followers into enquiries — instead of letting questions, complaints and sales conversations sit unanswered in your inbox.",
+    },
+    {
+      title: "Growth & Audience Research",
+      description: "Data-backed targeting, trending formats and content angles that attract the right followers — researched from your competitors, search trends and what your best customers already respond to.",
+    },
+    {
+      title: "Reporting & Optimisation",
+      description: "Clear dashboards tying reach and engagement to enquires, clicks and conversions. Every report ends with what we learnt and what we'll do differently next month — not just a wall of numbers.",
+    },
+    {
+      title: "Paid Amplification Support",
+      description: "Native ad integration across Meta, LinkedIn and YouTube that puts budget behind your best organic content — so strong posts reach beyond your existing followers and into a much larger lookalike audience.",
+    },
+    {
+      title: "Influencer & Creator Collaboration",
+      description: "Identification, outreach and management of creators whose audiences match your buyer persona, giving your brand the third-party credibility that earned content can't always deliver alone.",
+    },
+    {
+      title: "Social Listening & Sentiment Tracking",
+      description: "Monitoring what's being said about your brand, your competitors and your industry — so you catch trends early, respond to complaints fast and keep your reputation ahead of problems.",
+    },
+  ],
+  benefits: [
+    {
+      title: "Consistent, On-Brand Presence",
+      description: "A recognisable voice and look across every channel you're active on, so your audience always knows it's you — and increasingly trusts that what you post is worth their time.",
+    },
+    {
+      title: "Engagement From Buyers, Not Just Followers",
+      description: "We optimise for meaningful interaction from the people who can actually buy — enquiries, shares and conversations — rather than inflating follower counts that never convert.",
+    },
+    {
+      title: "Content That Supports Sales & SEO",
+      description: "Every asset feeds your ecosystem: strong content powers retargeting pools for paid ads, reinforces brand searches in SEO and gives your team credible material to share in sales conversations.",
+    },
+    {
+      title: "Clear Reporting Tied to Outcomes",
+      description: "Reports connect social activity to business results — traffic, leads and brand mentions — so you always know what your social media spend is returning, not just how many people saw it.",
+    },
+    {
+      title: "Time Back in Your Week",
+      description: "Our team handles the planning, writing, design, posting and community management, so your founders and staff stop being unpaid social media managers and get back to running the business.",
+    },
+    {
+      title: "A Reputation That Compounds",
+      description: "Months of consistent, quality content and fast, helpful responses build a brand people remember and recommend — a moat that competitors can't buy with ads.",
+    },
+  ],
+  metrics: [
+    {
+      value: "1,000+",
+      label: "Projects delivered",
+    },
+    {
+      value: "5+ Years",
+      label: "In digital growth",
+    },
+    {
+      value: "12+ Countries",
+      label: "Clients served globally",
+    },
+    {
+      value: "24×7",
+      label: "Support & monitoring",
+    },
+  ],
+  whyChooseUs: {
+    heading: "Why Businesses Pick Eddinet for Social Media in India",
+    points: [
+      "Growth System, Not a Vanity Channel: We treat social as part of your growth system, not a separate vanity channel reporting likes and impressions.",
+      "Platform-Smart Content: Content is built for the platform and the buyer with a consistent monthly cadence your team can plan around.",
+      "Human Community Management: Community is managed daily by real humans — not scheduled bots — so enquiries never sit unanswered.",
+      "Paid + Organic Together: Paid and organic are planned together, so budget amplifies content that has already proved itself.",
+      "Impact-Focused Reporting: Reporting shows engagement quality and business impact, with clear recommendations every single month.",
+      "One System Across Platforms: We run Meta, Instagram, LinkedIn, YouTube and X as one system — not five separate agencies.",
+    ],
+  },
+  process: {
+    heading: "How Eddinet Works, Step by Step",
+    steps: [
+      {
+        num: "01",
+        title: "Discovery & Full Audit",
+        description: "We review your current presence, competitors and audience — including which posts worked, which flopped and where your competitors are winning attention — to identify the fastest opportunities.",
+      },
+      {
+        num: "02",
+        title: "Strategy & Roadmap",
+        description: "Channel plan, content pillars, tone of voice and a 30/60/90-day roadmap are agreed before we start creating, so everyone knows exactly what's being done and why.",
+      },
+      {
+        num: "03",
+        title: "Content & Campaign Build",
+        description: "Assets, captions and schedules are produced per platform and aligned to your monthly editorial calendar, with a mix of brand, educational, social proof and promotional content.",
+      },
+      {
+        num: "04",
+        title: "Publishing & Daily Community",
+        description: "Posts go live on schedule with active community management — comments answered, DMs responded to and engagement seeded — so the brand is present every single day, not just on posting days.",
+      },
+      {
+        num: "05",
+        title: "Measure & Iterate",
+        description: "Performance is reviewed monthly, winning formats are doubled down on, weak content is replaced and the strategy is refined from real response data rather than opinions.",
+      },
+      {
+        num: "06",
+        title: "Scale What Works",
+        description: "Once a format, angle or campaign proves itself organically, we scale it with paid amplification and creator collaboration to compound the results month over month.",
+      },
+    ],
+  },
+  testimonials: [
+    {
+      name: "Rohan Malhotra",
+      designation: "Founder, D2C Brand",
+      review: "Eddinet treated our work like a partnership, not a vendor project. The process was transparent, milestones were met and the results actually moved our business — not just the dashboards.",
+    },
+    {
+      name: "Priya Sharma",
+      designation: "Marketing Head, SaaS Company",
+      review: "What stood out was how everything connected — strategy, execution and reporting. We always knew what was being done, why it was done, and what it returned. That clarity is rare.",
+    },
+    {
+      name: "Amit Verma",
+      designation: "Director, Real Estate Firm",
+      review: "We had been burned by agencies before with vague promises. Eddinet documented the plan, stayed accountable to it and delivered exactly what they committed to.",
+    },
+    {
+      name: "Neha Gupta",
+      designation: "CEO, Healthcare Startup",
+      review: "The team adapted quickly to our industry, communicated clearly and kept quality high under tight timelines. We would absolutely work with them again.",
+    },
+  ],
+  faqs: [
+    {
+      q: "How often will you post on our channels?",
+      a: "We build a cadence based on your audience and resources — typically 12 to 20 posts per channel per month, with daily stories or status updates where they add value — and adjust constantly based on what the data shows is working. Consistency beats volume: we'd rather post four great pieces than ten rushed ones.",
+    },
+    {
+      q: "Do you manage paid social ads too?",
+      a: "Yes. We run Meta, LinkedIn and YouTube ad campaigns as part of the same content system, amplifying your best organic content into lookalike audiences. Because the ads are built on content that's already proven, we protect spend efficiency and scale only what works.",
+    },
+    {
+      q: "How long before we see results from social media?",
+      a: "Consistency compounds. Most brands see clear movement in engagement and audience quality within 4 to 8 weeks, and measurable enquiries or traffic within a quarter — provided the strategy, content and community system is given time to build momentum. We set honest milestones at the start so expectations are realistic.",
+    },
+    {
+      q: "Can you handle our content creation too?",
+      a: "Yes — copywriting, design, short-video editing and captions are all included. We handle the full production pipeline and deliver final, ready-to-post assets. If you have your own in-house creative, we can also work as a strategy-plus-management layer around your team.",
+    },
+    {
+      q: "Which platforms will Eddinet manage for us?",
+      a: "Platform choice is driven by your audience and buying journey. We most commonly manage Facebook, Instagram, LinkedIn and YouTube, and build strategy for emerging platforms where your market is active.",
+    },
+    {
+      q: "Do you handle community management and content too?",
+      a: "Yes. Strategy, content, community management and advertising are planned together so organic and paid social support one another instead of operating in silos.",
+    },
+    {
+      q: "How quickly can we expect results from social media?",
+      a: "Consistent engagement and follower growth usually appear within 4 to 8 weeks. Lead and revenue impact builds over 3 to 6 months as your content, community and paid reach mature together.",
+    },
+    {
+      q: "What kind of content do you create for our channels?",
+      a: "Platform-native content - posts, reels, stories, carousels and video - built around your brand voice, audience interests and campaign goals, with a monthly calendar you can review and approve.",
+    },
+    {
+      q: "Do we approve content before it goes live?",
+      a: "Yes. You get a monthly content calendar and can review posts in advance. Once workflows are comfortable, many clients approve batches to keep the pipeline moving.",
+    },
+  ],
+  crossLinks: [
+    {
+      title: "Back to Social Media Marketing Services",
+      slug: "/services/social-media-marketing",
+      description: "Explore every social media marketing capability under one roof.",
+    },
+    {
+      title: "Ads / PPC & Content Services",
+      slug: "/services/ads-ppc",
+      description: "Google Ads, Meta Ads and performance-focused paid acquisition supported by content and conversion strategy - planned around targeting, budget efficiency and measurable outcomes, not impressions and clicks.",
+    },
+    {
+      title: "Design & Creative Services",
+      slug: "/services/design-creative",
+      description: "Brand identity, campaign creative, UI/visual systems and marketing assets designed to perform across web, social, advertising and digital products - not just look good in a portfolio.",
+    },
+    {
+      title: "All Services",
+      slug: "/services",
+      description: "Browse the complete Eddinet service ecosystem.",
+    },
+  ],
+};

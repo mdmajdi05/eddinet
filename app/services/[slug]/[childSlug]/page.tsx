@@ -5,7 +5,6 @@ import {
   getGeneratedChildByCategoryAndSlug,
   getCategoryBySlug,
 } from "@/data/services/child/generated-child-services";
-import { mergeDocxChildContent } from "@/data/services/child/docx-content";
 import ServiceChildPage from "@/components/ServiceChildPage";
 
 export function generateStaticParams() {
@@ -21,9 +20,8 @@ export async function generateMetadata({
   params: Promise<{ slug: string; childSlug: string }>;
 }): Promise<Metadata> {
   const { slug, childSlug } = await params;
-  const baseChild = getGeneratedChildByCategoryAndSlug(slug, childSlug);
-  if (!baseChild) return {};
-  const child = mergeDocxChildContent(childSlug, baseChild);
+  const child = getGeneratedChildByCategoryAndSlug(slug, childSlug);
+  if (!child) return {};
   const canonical = `https://eddinet.com/services/${slug}/${child.slug}`;
   return {
     title: child.metaTitle,
@@ -43,9 +41,8 @@ export default async function GeneratedChildPage({
   params: Promise<{ slug: string; childSlug: string }>;
 }) {
   const { slug, childSlug } = await params;
-  const baseChild = getGeneratedChildByCategoryAndSlug(slug, childSlug);
-  if (!baseChild) notFound();
-  const child = mergeDocxChildContent(childSlug, baseChild);
+  const child = getGeneratedChildByCategoryAndSlug(slug, childSlug);
+  if (!child) notFound();
 
   const category = getCategoryBySlug(slug);
 

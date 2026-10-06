@@ -10,7 +10,7 @@
 //  ├── home/          homepage copy
 //  ├── about/         about page copy
 //  ├── services/      parent (10 core services + category page copy)
-//  │   └── child/     ← SAARA service child page content yahin
+//  │   └── child/     ← har service child page = APNI ALAG FILE
 //  ├── industries/    sectors
 //  ├── portfolio/     client sites + case studies
 //  └── blog/          posts
@@ -19,7 +19,9 @@
 //      parent  →  data/services/services.ts
 //                 data/services/service-page-content.ts
 //                 URL: /services  aur  /services/[slug]
-//      child   →  data/services/child/*.ts
+//      child   →  data/services/child/<category>/<child-slug>.ts
+//                 (EK CHILD PAGE = EK FILE — us page ka SAARA content usi me)
+//                 har category ka apna folder + barrel: services/child/pages.ts
 //                 URL: /services/[slug]/[childSlug]
 //                       /services/seo/[childSlug]
 //
@@ -37,13 +39,19 @@
 //  │                                 │           cross-links + child images)  │
 //  │                                 │ services/service-page-content.ts       │
 //  │                                 │           (category page copy)         │
-//  │ Service CHILD pages             │ services/child/generated-child-services.ts
-//  │  /services/[slug]/[childSlug] +  │ services/child/docx-content.ts +       │
-//  │  /services/seo/[childSlug]       │ services/child/docx-content-services.ts│
-//  │                                 │ services/child/seo-child-services.ts + │
-//  │                                 │ services/child/seo-feature-images.ts   │
-//  │                                 │   (raw/generated — DON'T EDIT, banner   │
-//  │                                 │    dekho; source: EDDITNET .docx)       │
+//  │ Service CHILD pages             │ services/child/<category>/<slug>.ts     │
+//  │  /services/[slug]/[childSlug] +  │    ← SAARA page content isi ek file me │
+//  │  /services/seo/[childSlug]       │    (13 category folders, 138 files:     │
+//  │                                 │     software-ai/, web-development/,     │
+//  │                                 │     seo/, ecommerce/, … )               │
+//  │                                 │    EDIT: seedha us file me badlo.        │
+//  │                                 │    NAYA PAGE: file copy + pages.ts      │
+//  │                                 │    me import/entry add karo.            │
+//  │                                 │ services/child/pages.ts (barrel —       │
+//  │                                 │    har child page yahan import hota hai)│
+//  │                                 │ services/child/generated-child-services │
+//  │                                 │    (slug helpers + category templates — │
+//  │                                 │     DON'T EDIT)                         │
 //  │ Portfolio                       │ portfolio/portfolio.ts (62 client      │
 //  │                                 │           sites + categories).         │
 //  │                                 │           NAYA CLIENT YAHIN            │
@@ -76,6 +84,15 @@
 //        tags: ["React", "Next.js"],
 //        description: "Ek line me description",
 //      },
+//
+//  QUICK EXAMPLE — naya service CHILD page add karna:
+//
+//  1) file banao:  data/services/child/<category>/<child-slug>.ts
+//         export const child = { slug: "…", categorySlug: "…", title: "…", … };
+//  2) usi folder ke `pages.ts` me:
+//         import { child as <category>_<child_slug> } from "./<category>/<child-slug>";
+//         export const childPages = { …, "<category>/<child-slug>": <ident>, … };
+//     (pages.ts ke entries ke zaroori hain — URL wahi se bante hain)
 //
 //  Generated service pages ka VISUAL design unke page files me hota hai:
 //      app/services/[slug]/[childSlug]/page.tsx
