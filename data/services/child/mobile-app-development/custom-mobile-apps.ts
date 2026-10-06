@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/mobile-app-development";
 export const child = {
   slug: "custom-mobile-apps",
-
-
-
-
   title: "Custom Mobile Apps",
   metaTitle: "Custom Mobile Apps Services in India | Eddinet",
   metaDescription: "Eddinet delivers top-tier Custom Mobile App Development Services in India tailored strictly to your unique workflows and business needs.",
   heroHeading: "Custom Mobile App Development Services in India",
   heroSubheading: "Custom | Enterprise | Mobile App Solutions",
-
   detailedDescription: "Eddinet delivers top-tier Custom Mobile App Development Services in India tailored strictly to your unique workflows and business needs. We combine intuitive design with scalable engineering to build fast, reliable apps that streamline operations, engage users, and drive long-term growth.\n\nAt Eddinet, we build custom mobile applications engineered around your unique business goals, workflows, and growth targets. As a trusted mobile app development company in India, we deliver secure, high-performing digital products that scale seamlessly alongside your expanding user base.\n\nHere is how we streamline your custom mobile app development:\n\nCustom Mobile App Solutions: We build tailored applications from scratch to match your operational goals, branding, and feature requirements.\n\nEnterprise Custom App Development: We digitize organizational workflows and build robust software capable of handling heavy data loads securely.\n\nCustomer Mobile Software Development: We craft engaging consumer-facing apps designed to improve user satisfaction, drive retention, and accelerate revenue growth.\n\nScalable & Secure Applications: We deploy resilient cloud architectures and strict data protection protocols to keep your app fast and safe.",
   features: [
     {
@@ -94,7 +90,7 @@ export const child = {
       description: "We build specialized digital platforms for healthcare, finance, logistics, real estate, and education sectors.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Our Custom Mobile App Development Services?",

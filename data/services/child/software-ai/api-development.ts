@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/software-ai";
 export const child = {
   slug: "api-development",
-
-
-
-
   title: "API Development",
   metaTitle: "API Development Services in India | Eddinet",
   metaDescription: "EDDINET builds secure, high-speed API architectures that connect software applications and facilitate automated data exchange.",
   heroHeading: "API Development Company in India",
   heroSubheading: "Custom API Engineering | RESTful & GraphQL Solutions | Enterprise Integrations",
-
   detailedDescription: "EDDINET builds secure, high-speed API architectures that connect software applications and facilitate automated data exchange. As a premier API development company in India, we combine robust backend engineering with strict security protocols to deliver scalable interfaces tailored to your digital ecosystem.\n\nEDDINET helps startups, SMEs, and large enterprises design, build, and deploy high-converting digital applications. As a leading API development company in India, we turn complex technical workflows into fast, secure, and reliable integration channels engineered to streamline system communication and accelerate bottom-line revenue.",
   features: [
     {
@@ -50,7 +46,7 @@ export const child = {
       description: "We provide continuous endpoint monitoring, automated load testing, security patch management, and rate-limit tuning to guarantee high uptime.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for Enterprise API Development in India?",

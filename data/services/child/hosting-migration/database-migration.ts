@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/hosting-migration";
 export const child = {
   slug: "database-migration",
-
-
-
-
   title: "Database Migration",
   metaTitle: "Database Migration Services in India | Eddinet",
   metaDescription: "Eddinet provides database migration services in India that move your data to a new server or cloud platform with full verification.",
   heroHeading: "Database Migration Services in India",
   heroSubheading: "Database Migration Without Data Loss | MySQL Migration | Cloud Database Moves",
-
   detailedDescription: "Eddinet provides database migration services in India that move your data to a new server or cloud platform with full verification. We back up, validate every table, and go live only after you approve. Get your free migration plan today.\n\nAre you afraid that a single failed import could corrupt your data? Do you need to switch databases without freezing your application for hours? If yes, Eddinet is the solution to your problem.\n\nAs a database migration company in India, we bring hands-on experience from moving production databases of many sizes. We study your schema, query load, and application dependencies before touching any data. You also receive plain-language updates, so you always know where your migration stands.",
   features: [
     {
@@ -38,7 +34,7 @@ export const child = {
       description: "A good migration starts long before the first byte moves. We map dependencies, estimate cutover time, and prepare a written runbook. After the move, we monitor performance and fix slow queries that appear under real traffic.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Database Migration Services in India",

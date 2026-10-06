@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/design-creative";
 export const child = {
   slug: "banner-design",
-
-
-
-
   title: "Banner Design",
   metaTitle: "Banner Design Services in India | Eddinet",
   metaDescription: "EDDINET provides banner design services in Delhi that make your offer impossible to overlook. We pair a punchy headline with colour and layout that guide the",
   heroHeading: "Banner Design Services in Delhi",
   heroSubheading: "High-Converting Web & Display Ad Banners | Print Banners | Custom Brand Graphics",
-
   detailedDescription: "EDDINET provides banner design services in Delhi that make your offer impossible to overlook. We pair a punchy headline with colour and layout that guide the eye straight to your button. As a banner designing company in Delhi, we craft original banners for websites, online ads, and print, so every rupee of your budget earns a second look.\n\nAt EDDINET, we turn static ad spaces into high-converting brand touchpoints. Weak visuals and poor layouts waste ad budgets and lower click-through rates. As a leading custom banner design agency in Delhi, we craft precision-engineered ad creatives that capture immediate attention and drive user action.\n\nOur team manages your complete banner ecosystem-from website heroes and promotional pop-ups (web banner design) to high-converting display and retargeting ads (advertising banner design) optimized for Google Display Network, Meta, and programmatic campaigns.",
   features: [
     {
@@ -46,7 +42,7 @@ export const child = {
       description: "We craft large-format print banners, roll-up standees, trade show backdrop displays, and outdoor billboards with crisp vector clarity.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET as Your Custom Banner Design Agency in Delhi?",

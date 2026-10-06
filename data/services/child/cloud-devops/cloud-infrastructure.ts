@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/cloud-devops";
 export const child = {
   slug: "cloud-infrastructure",
-
-
-
-
   title: "Cloud Infrastructure",
   metaTitle: "Cloud Infrastructure Services in India | Eddinet",
   metaDescription: "Eddinet provides premier cloud infrastructure services in India. We build, deploy, and manage scalable cloud setups to reduce capital costs, prevent system",
   heroHeading: "Cloud Infrastructure Services Company in India",
   heroSubheading: "Enterprise Cloud Infrastructure | Managed Infrastructure | Multi-Cloud Solutions",
-
   detailedDescription: "Eddinet provides premier cloud infrastructure services in India. We build, deploy, and manage scalable cloud setups to reduce capital costs, prevent system downtime, and accelerate digital growth.\n\nEDDINET builds high-performance digital environments that stabilize enterprise operations and support long-term growth. We design and deploy resilient cloud systems that handle heavy computational loads without speed loss.\n\nBy combining modular infrastructure design with proactive security protocols, we help organizations eliminate server bottlenecks, safeguard critical data, and lower overall operational expenses.",
   features: [
     {
@@ -46,7 +42,7 @@ export const child = {
       description: "We audit compute and storage usage constantly to remove idle server capacity. By setting up auto-scaling policies, we reduce monthly cloud spending while maintaining peak speed.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for Cloud Infrastructure Services?",

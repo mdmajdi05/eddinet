@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/design-creative";
 export const child = {
   slug: "motion-graphics",
-
-
-
-
   title: "Motion Graphics",
   metaTitle: "Motion Graphics Services in India | Eddinet",
   metaDescription: "EDDINET provides high-impact motion graphics services in Delhi. We merge graphic design, kinetic typography, character animation, and dynamic visual effects",
   heroHeading: "Motion Graphics Services in Delhi",
   heroSubheading: "2D & 3D Animation | Explainer Videos | Dynamic Logo Animation & Brand Motion",
-
   detailedDescription: "EDDINET provides high-impact motion graphics services in Delhi. We merge graphic design, kinetic typography, character animation, and dynamic visual effects to turn complex ideas into captivating, easy-to-understand motion assets.\n\nAt EDDINET, we turn static brand concepts into fluid visual experiences. Static marketing assets often fail to hold consumer attention in crowded digital feeds, leading to lower click-through rates and poor message retention. Therefore, our motion graphics company in Delhi designs frame-by-frame animated graphics engineered to capture immediate focus and drive business outcomes.\n\nOur motion design team manages your animation pipeline end-to-end. We deliver specialized animated video services for digital campaigns, high-converting explainer video animation for complex SaaS and corporate products, vibrant 2D animation services for brand storytelling, and custom logo animation to give your brand an unforgettable visual identity.",
   features: [
     {
@@ -46,7 +42,7 @@ export const child = {
       description: "We animate app interfaces, SaaS dashboard workflows, and interactive feature walkthroughs to showcase product functionality to investors and clients.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET as Your Motion Graphics Design Agency in Delhi?",

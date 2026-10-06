@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/hosting-migration";
 export const child = {
   slug: "wordpress-migration",
-
-
-
-
   title: "WordPress Migration",
   metaTitle: "WordPress Migration Services in India | Eddinet",
   metaDescription: "Eddinet delivers premier WordPress migration services in India. We engineer seamless, zero-downtime server transfers preserving custom database",
   heroHeading: "WordPress Migration Services in India",
   heroSubheading: "WordPress Website Migration | Zero-Downtime Host Transfer | Database & Asset Optimization",
-
   detailedDescription: "Eddinet delivers premier WordPress migration services in India. We engineer seamless, zero-downtime server transfers preserving custom database serializations, retaining permalinks, and safeguarding search rankings.\n\nStop risking lost WooCommerce orders, corrupted database tables, and site outages. Our high-fidelity migration workflows move your WordPress sites to new cloud hosts with absolute precision and zero data loss.\n\nEddinet provides specialist WordPress website migration India solutions to convert risky host transfers into smooth, zero-downtime server deployments. We bypass fragile migration plugins by using direct SSH transfers and WP-CLI commands-guaranteeing 100% data fidelity and performance optimization.\n\nOur certified engineers manage your entire migration lifecycle:\n\nMigrate WordPress Site to New Host India: Full-stack migration of core files, custom themes, active plugins, and MySQL databases across any cloud provider.\n\nWordPress Hosting Migration Without Downtime India: Staging deployment, live delta database synchronization, and TTL-managed DNS switchovers.\n\nWordPress Site Transfer Service India: Specialized transfers for WooCommerce stores, custom ACF configurations, and complex WordPress Multisite networks.",
   features: [
     {
@@ -46,7 +42,7 @@ export const child = {
       description: "We map 301 redirects (if domain names change), maintain canonical tags, preserve permalinks, and re-verify SSL configuration to keep your Google search rankings completely intact.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for WordPress Migration Services?",

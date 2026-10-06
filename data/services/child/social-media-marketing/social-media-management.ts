@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits1 } from "../_category/social-media-marketing";
 export const child = {
   slug: "social-media-management",
-
-
-
-
   title: "Social Media Management",
   metaTitle: "Social Media Management in India | Eddinet",
   metaDescription: "We optimize your brand profile for active discovery, meaningful audience interaction, and high-converting performance marketing.",
   heroHeading: "Social Media Management Agency in India",
   heroSubheading: "At Eddinet, we help brands turn social media platforms into predictable engines for engagement, reach, and revenue. As a leading Social Media Marketing Agency in India, we deliver complete strategy, content production, paid media campaigns, and audience management across Meta and major platforms.",
-
   detailedDescription: "We optimize your brand profile for active discovery, meaningful audience interaction, and high-converting performance marketing.\n\nAt Eddinet, we're not just a service provider; we're your growth partners in success. As a forward-thinking Social Media Marketing Agency in India, we are dedicated to delivering exceptional client experiences and sustaining long-term, high-impact partnerships with every brand we manage.\n\nOur mission is to empower businesses through data-backed strategies, scroll-stopping creative design, and cutting-edge digital solutions that drive tangible performance. Whether you're looking to scale brand visibility, foster an engaged community, or generate high-quality leads across Facebook and Instagram, we've got you covered.",
   features: [
     {
@@ -46,7 +42,7 @@ export const child = {
       description: "Influencer marketing involves partnering with key content creators who have established credibility and an active following on social platforms. It leverages the influencer's reach and trust to showcase your products or services, boosting brand awareness and driving conversions.",
     },
   ],
-  benefits: [],
+  benefits: benefits1,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Businesses Pick Eddinet for Social Media in India",

@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/cloud-devops";
 export const child = {
   slug: "docker-deployment",
-
-
-
-
   title: "Docker Deployment",
   metaTitle: "Docker Deployment Services in India | Eddinet",
   metaDescription: "Eddinet provides premier Docker deployment services in India. We containerize, optimize, and manage high-speed server environments to eliminate dependency",
   heroHeading: "Docker Deployment Services Company in India",
   heroSubheading: "Docker Container Deployment | Containerized Application Deployment | Docker DevOps Services",
-
   detailedDescription: "Eddinet provides premier Docker deployment services in India. We containerize, optimize, and manage high-speed server environments to eliminate dependency conflicts, accelerate release cycles, and scale your applications effortlessly.\n\nAt Eddinet, we turn complex application architectures into scalable, isolated container environments. Slow deployments, dependency mismatches, and unoptimized server stacks cause app downtime and lost revenue. Therefore, we deliver enterprise-grade Docker container deployment India solutions engineered for continuous uptime, low latency, and instant rollbacks.\n\nOur certified DevOps sysadmins manage your complete infrastructure across major cloud platforms. We handle Dockerfile builds, security hardening, multi-stage deployments, and persistent volume mounts to keep your containerized workloads bulletproof 24/7.",
   features: [
     {
@@ -46,7 +42,7 @@ export const child = {
       description: "We set up persistent volume mounts for databases and integrate real-time tracking tools. This guarantees full data safety during container restarts and keeps your team informed of resource utilization.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Docker Deployment Services?",

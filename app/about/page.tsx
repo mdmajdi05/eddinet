@@ -883,13 +883,12 @@ export default function AboutPage() {
           <div className="flex flex-wrap justify-center gap-3">
             {industries.map((ind, i) => (
               <Reveal key={i} delay={(i % 6) * 60}>
-                <Link
-                  href={`/industries/${ind.slug}`}
-                  className="inline-flex items-center gap-2 py-2.5 px-4 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)] text-[var(--text-main)] text-[0.9rem] font-semibold transition-all duration-300 hover:border-[var(--border-hover)] hover:-translate-y-0.5 no-underline"
-                >
+                {/* Display-only chip: /industries/* routes exist nahi karte,
+                    isliye Link nahi — warna 404 link ban jata. */}
+                <span className="inline-flex items-center gap-2 py-2.5 px-4 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)] text-[var(--text-main)] text-[0.9rem] font-semibold transition-all duration-300 hover:border-[var(--border-hover)] hover:-translate-y-0.5 no-underline">
                   <span className="text-[1rem]">{ind.icon}</span>
                   {ind.name}
-                </Link>
+                </span>
               </Reveal>
             ))}
           </div>

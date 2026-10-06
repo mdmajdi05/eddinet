@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/software-ai";
 export const child = {
   slug: "rag-applications",
-
-
-
-
   title: "RAG Applications",
   metaTitle: "RAG Applications Services in India | Eddinet",
   metaDescription: "EDDINET builds high-precision Retrieval-Augmented Generation (RAG) architectures engineered to ground Large Language Models in verified corporate knowledge",
   heroHeading: "RAG Application Development Company in India",
   heroSubheading: "Enterprise Vector Search | Retrieval-Augmented Generation | Custom AI Solutions",
-
   detailedDescription: "EDDINET builds high-precision Retrieval-Augmented Generation (RAG) architectures engineered to ground Large Language Models in verified corporate knowledge bases. As a premier RAG application development company in India, we combine enterprise vector search with secure data indexing to deliver hallucination-free AI applications tailored to your business data.\n\nEDDINET builds high-speed retrieval architectures, enterprise vector databases, and contextual AI search engines. As a specialized RAG application development company in India, we transform complex corporate document repositories into accurate, real-time intelligence platforms.\n\nOur engineering team combines advanced hybrid retrieval methods with enterprise-grade data encryption standards. Consequently, we help growing organizations eliminate model hallucinations, secure sensitive internal data, and accelerate operational knowledge discovery.",
   features: [
     {
@@ -50,7 +46,7 @@ export const child = {
       description: "We provide ongoing monitoring of retrieval precision, context relevance scoring, hallucination tracking, and vector index tuning to guarantee high response quality.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for Enterprise RAG Solutions India?",

@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/software-ai";
 export const child = {
   slug: "ai-agents",
-
-
-
-
   title: "AI Agents",
   metaTitle: "AI Agents Services in India | Eddinet",
   metaDescription: "EDDINET constructs high-speed, autonomous AI agent architectures engineered to execute multi-step business logic without manual intervention.",
   heroHeading: "AI Agents Development Company in India",
   heroSubheading: "Autonomous AI Agents | Enterprise Agentic Workflows | Multi-Agent Systems",
-
   detailedDescription: "EDDINET constructs high-speed, autonomous AI agent architectures engineered to execute multi-step business logic without manual intervention. As a premier AI agents development company in India, we combine advanced Large Language Model (LLM) reasoning with secure enterprise tool integrations.\n\nModern organizations utilize agentic workflows to handle decision-making tasks, optimize routine processes, and achieve predictable operational throughput.\n\nEDDINET designs autonomous software agents, intelligent workflow architectures, and multi-agent coordination frameworks. As a dedicated AI agents development company in India, we transform complex operational workflows into self-executing digital processes.\n\nOur engineering team combines tool-calling LLM pipelines with enterprise data protection protocols. Consequently, we help growing brands eliminate repetitive administrative tasks, improve task execution precision, and scale digital operations effortlessly.",
   features: [
     {
@@ -50,7 +46,7 @@ export const child = {
       description: "We provide continuous monitoring of agent execution paths, cost tracking, loop prevention tuning, and security guardrail management for maximum reliability.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for Enterprise AI Agent Solutions India?",

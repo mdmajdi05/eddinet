@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/ads-ppc";
 export const child = {
   slug: "linkedin-ads",
-
-
-
-
   title: "LinkedIn Ads",
   metaTitle: "LinkedIn Ads Services in India | Eddinet",
   metaDescription: "At Eddinet, we build and manage B2B LinkedIn Advertising campaigns that directly connect your offer with high-value decision-makers.",
   heroHeading: "LinkedIn Ads Agency in India",
   heroSubheading: "At Eddinet, we manage performance-driven LinkedIn Advertising campaigns that connect your B2B offer directly with key decision-makers. As a specialized LinkedIn Ads agency in India, we handle job-title targeting, account-based marketing (ABM) setups, ad copywriting, and daily bid optimizations to generate high-quality B2B leads, drive pipeline growth, and deliver a clear return on ad spend (ROAS).",
-
   detailedDescription: "At Eddinet, we build and manage B2B LinkedIn Advertising campaigns that directly connect your offer with high-value decision-makers. As a performance-driven LinkedIn Ads agency in India, we eliminate wasted spend by targeting verified job titles, executive seniorities, and specific account lists.\n\nFrom writing high-converting B2B ad copy and designing native lead gen forms to daily bid management and pipeline tracking, we focus directly on lowering your Cost Per Lead (CPL) and increasing your qualified B2B deal volume.",
   features: [
     {
@@ -42,7 +38,7 @@ export const child = {
       description: "We run systematic A/B tests on creative hooks, call-to-action buttons, lead form fields, and audience parameters to continuously lower acquisition costs and maximize pipeline value.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for LinkedIn Ads",

@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/design-creative";
 export const child = {
   slug: "ui-ux-design",
-
-
-
-
   title: "UI/UX Design",
   metaTitle: "UI/UX Design Services in India | Eddinet",
   metaDescription: "About EDDINET. Do visitors land on your product and leave without taking action? Do your developers keep guessing how a screen should look?",
   heroHeading: "UI UX Design Services in Delhi",
   heroSubheading: "Website & Mobile App UI/UX | Product Design | Interactive Prototyping & Design Systems",
-
   detailedDescription: "About EDDINET. Do visitors land on your product and leave without taking action? Do your developers keep guessing how a screen should look? If yes, Eddinet is the solution to your problem\n\nWe are a team of designers, researchers, and developers who treat every screen as a business decision. We begin with how your users actually behave, then shape the interface around those habits. You receive organised files that your developers can build from without second-guessing.",
   features: [
     {
@@ -54,7 +50,7 @@ export const child = {
       description: "If your website or app feels dated or confusing, our UI UX redesign services bring it up to date. We keep what already works, fix what frustrates users, and improve the look without disrupting your existing audience.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET as a UI UX Design Company in Delhi?",

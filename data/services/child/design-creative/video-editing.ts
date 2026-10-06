@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/design-creative";
 export const child = {
   slug: "video-editing",
-
-
-
-
   title: "Video Editing",
   metaTitle: "Video Editing Services in India | Eddinet",
   metaDescription: "EDDINET provides professional video editing services in Delhi to help brands, creators, and businesses transform raw footage into high-retention visual",
   heroHeading: "Video Editing Services in Delhi",
   heroSubheading: "YouTube Video Editing | Corporate Video Editing | Reels & Social Media Edits",
-
   detailedDescription: "EDDINET provides professional video editing services in Delhi to help brands, creators, and businesses transform raw footage into high-retention visual stories. Our post-production team combines cinematic pacing, seamless transitions, and immersive sound design to capture audience attention and keep viewers watching until the final frame.\n\nDo your videos lose viewers within the first few seconds? Is your footage sitting unused because nobody has time to edit it? If yes, EDDINET is the solution to your problem.\n\nAs a professional video editing agency in Delhi, we work with creators, brands, and companies that want polished videos without building an in-house team. We watch your footage, learn your goal, and edit with the viewer in mind. You then receive videos that feel smooth, purposeful, and ready to publish.",
   features: [
     {
@@ -38,7 +34,7 @@ export const child = {
       description: "Reels reward quick cuts and instant hooks. Our reels editing service adds trending-style transitions, punchy text, and beat-matched music to your clips. In addition, every reel is framed vertically with text kept inside the safe area.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Video Editing Services in Delhi",

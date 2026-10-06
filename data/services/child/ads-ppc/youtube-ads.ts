@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/ads-ppc";
 export const child = {
   slug: "youtube-ads",
-
-
-
-
   title: "YouTube Ads",
   metaTitle: "YouTube Ads Services in India | Eddinet",
   metaDescription: "YouTube Ads Agency At Eddinet, we help businesses across India transform YouTube ad spend into high-intent leads, measurable conversions, and direct pipeline",
   heroHeading: "YouTube Ads Agency in India",
   heroSubheading: "Eddinet is a leading YouTube Ads agency in India, turning video views into high-intent leads and direct revenue. We build, manage, and optimize high-converting video campaigns using targeted placement strategies, conversion-focused scripts, and continuous bid management to maximize your ROI.",
-
   detailedDescription: "YouTube Ads Agency\n\nAt Eddinet, we help businesses across India transform YouTube ad spend into high-intent leads, measurable conversions, and direct pipeline growth. Rather than chasing empty view counts or vanity impressions, we focus on placing your brand directly in front of ready-to-buy audiences at the exact moment they are consuming video content.\n\nAs a performance-focused YouTube Ads agency in India, we handle the heavy lifting from intent-driven targeting and video script planning to continuous bid management and conversion tracking. Whether you want to scale lead generation, launch new products, or dominate your market, we build tailored video ad campaigns engineered to maximize your return on ad spend (ROAS).",
   features: [
     {
@@ -42,7 +38,7 @@ export const child = {
       description: "We run ongoing tests on video hooks, calls-to-action, thumbnail designs, and audience segments, continuously scaling the top-performing creative angles.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for YouTube Ads",

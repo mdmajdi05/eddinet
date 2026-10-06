@@ -13,7 +13,6 @@ const companyLinks = [
   { label: "About Us", href: "/about" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "Case Studies", href: "/case-studies" },
-  { label: "Industries", href: "/industries" },
   { label: "Blog & Insights", href: "/blog" },
   { label: "Privacy Policy", href: "/privacy-policy" },
   { label: "Terms", href: "/terms" },

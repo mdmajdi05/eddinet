@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits1 } from "../_category/social-media-marketing";
 export const child = {
   slug: "youtube-management",
-
-
-
-
   title: "YouTube Management",
   metaTitle: "YouTube Management in India | Eddinet",
   metaDescription: "At Eddinet, we are a full-service digital marketing and growth agency built on a single premise: digital success shouldn't be based on guesswork.",
   heroHeading: "YouTube Management Services in India",
   heroSubheading: "At Eddinet, we deliver end-to-end YouTube management services in India to transform your channel into a steady growth engine. From channel strategy and video SEO to publishing and audience engagement, we optimize your content for both search and recommendation feeds so your videos consistently get found, clicked, and watched.",
-
   detailedDescription: "At Eddinet, we are a full-service digital marketing and growth agency built on a single premise: digital success shouldn't be based on guesswork. With over a decade of search engine optimization and online marketing expertise, we help brands, businesses, and creators navigate the evolving digital landscape with precision and transparency.\n\nWe don't just optimize for algorithms; we optimize for people. Whether it's turning a stagnant YouTube channel into a high-engagement video asset, scaling organic web search traffic through modern AI-driven SEO, or crafting strategic digital campaigns, our focus remains on driving real, measurable ROI.",
   features: [
     {
@@ -46,7 +42,7 @@ export const child = {
       description: "Growth requires continuous refinement. We provide clear, straightforward monthly reports tracking key growth metrics Average View Duration (AVD), CTR, traffic sources, and subscriber conversion rates so you always know your exact return on investment.",
     },
   ],
-  benefits: [],
+  benefits: benefits1,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet as Your YouTube Channel Management Agency in India",

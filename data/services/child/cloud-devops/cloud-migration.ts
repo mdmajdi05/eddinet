@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/cloud-devops";
 export const child = {
   slug: "cloud-migration",
-
-
-
-
   title: "Cloud Migration",
   metaTitle: "Cloud Migration Services in India | Eddinet",
   metaDescription: "Modern organizations require fast, secure cloud environments to maintain operational agility. Eddinet provides premier cloud migration services in India.",
   heroHeading: "Cloud Migration Services Company in India",
   heroSubheading: "AWS Migration | Azure Migration | Enterprise Migration Solutions",
-
   detailedDescription: "Modern organizations require fast, secure cloud environments to maintain operational agility. Eddinet provides premier cloud migration services in India. As a trusted cloud migration company in India, we build, deploy, and manage scalable cloud setups to reduce capital costs, prevent system downtime, and accelerate digital growth.\n\nAt Eddinet, we transition businesses from complex local setups to agile cloud environments. As a trusted provider of enterprise cloud migration in India, we eliminate technical debt, safeguard data, and optimize workloads for continuous long-term growth.\n\nCustomised Roadmaps: Our certified engineers build custom migration plans designed to match your specific business goals and operational needs.\n\nZero-Downtime Transfers: We use secure data pipelines and continuous database replication to move your systems without data loss or service disruption.\n\nCost & Speed Tuning: Post-migration, we constantly fine-tune your setup to cut unnecessary server costs and keep your applications fast.",
   features: [
     {
@@ -46,7 +42,7 @@ export const child = {
       description: "We conduct continuous security audits, vulnerability testing, and resource usage assessments post-launch. By configuring auto-scaling policies and reserved pricing models, we keep your cloud ecosystem safe and cost-effective.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Cloud Migration Services?",

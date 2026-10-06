@@ -34,16 +34,30 @@ export default function AdaptiveLines({
   tolerance = 1,
 }: AdaptiveLinesProps) {
   const wrapRef = useRef<HTMLParagraphElement | null>(null);
-  const plainRef = useRef<HTMLSpanElement | null>(null);
   const [arranged, setArranged] = useState(false);
 
   useLayoutEffect(() => {
     const wrap = wrapRef.current;
-    const plain = plainRef.current;
-    if (!wrap || !plain) return;
+    if (!wrap) return;
 
+    // Probe ko create → measure → remove EHI task me karte hain, isliye ye
+    // copy server HTML me kabhi render nahi hoti aur DOM me persist bhi nahi
+    // karti. Pehle ye ek chhupa hua <span> JSX me tha, jisse har page par
+    // paragraph ka text DO baar HTML me aata tha (ek visible, ek hidden) —
+    // Google ke liye repeated/duplicate text signal.
     const measure = () => {
-      setArranged(plain.scrollWidth > wrap.clientWidth + tolerance);
+      const plain = text.replace(/\s+/g, " ").trim();
+      const probe = document.createElement("span");
+      probe.textContent = plain;
+      probe.setAttribute("aria-hidden", "true");
+      probe.style.cssText =
+        "position:absolute;visibility:hidden;white-space:nowrap;pointer-events:none;";
+      wrap.appendChild(probe);
+      // scrollWidth (width nahi) — taaki available width par constrain hone
+      // par bhi single-line max-content width mile, bilkul purane behaviour jaisa.
+      const singleLineWidth = probe.scrollWidth;
+      probe.remove();
+      setArranged(singleLineWidth > wrap.clientWidth + tolerance);
     };
 
     // Measure before the first paint so there is no visible "flash" of the
@@ -83,19 +97,6 @@ export default function AdaptiveLines({
       ) : (
         <span>{normalized}</span>
       )}
-      {/* Hidden measurer: intrinsic on-screen width of the text as a single line. */}
-      <span
-        ref={plainRef}
-        aria-hidden="true"
-        style={{
-          position: "absolute",
-          visibility: "hidden",
-          whiteSpace: "nowrap",
-          pointerEvents: "none",
-        }}
-      >
-        {normalized}
-      </span>
     </p>
   );
 }

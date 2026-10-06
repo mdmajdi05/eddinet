@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/mobile-app-development";
 export const child = {
   slug: "app-maintenance",
-
-
-
-
   title: "App Maintenance",
   metaTitle: "App Maintenance Services in India | Eddinet",
   metaDescription: "Launching an app is only the first step. The real challenge is keeping it fast, secure, and bug-free over time.",
   heroHeading: "Mobile App Maintenance & Support Services in India",
   heroSubheading: "Post-Launch Support | Bug Fixing | Performance Optimization | SLA-Backed Maintenance",
-
   detailedDescription: "Launching an app is only the first step. The real challenge is keeping it fast, secure, and bug-free over time. Eddinet provides comprehensive mobile app maintenance & support services in India. Our goal is simple: fewer crashes, better app store ratings, and a reduced support workload for your team.\n\nEddinet is a dedicated mobile app maintenance agency in India serving startups, SMEs, and established businesses with live applications. We ensure your mobile apps remain stable, secure, and high-performing long after launch.\n\nCross-Platform Expertise: Hands-on experience with native iOS, Android, Flutter, and React Native applications.\n\nSLA-Backed Model: Structured maintenance built around clear response and resolution timelines.\n\nProactive Monitoring: Active deployment of crash monitoring tools and real-device testing protocols.\n\nPredictable Outcomes: Fewer urgent issues, smoother release cycles, and reliable app stability.",
   features: [
     {
@@ -130,7 +126,7 @@ export const child = {
       description: "Options for standard business-hours support or 24/7 emergency coverage.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet",

@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/design-creative";
 export const child = {
   slug: "product-design",
-
-
-
-
   title: "Product Design",
   metaTitle: "Product Design Services in India | Eddinet",
   metaDescription: "EDDINET provides product design services in Delhi that take an idea from a rough sketch to something people can see, touch, and use.",
   heroHeading: "Product Design Services in Delhi",
   heroSubheading: "Digital Product Design | SaaS & MVP Design | Prototyping, 3D Modelling & Rendering",
-
   detailedDescription: "EDDINET provides product design services in Delhi that take an idea from a rough sketch to something people can see, touch, and use. We shape the experience, test the concept, and prepare designs your team can build with confidence.\n\nIs your product idea stuck between a sketch and a working version? Do you worry that building the wrong features will burn your budget?\n\nIf yes, EDDINET is the solution to your problem.\n\nAs a product design agency in Delhi, we work with founders, startups, and established businesses that want clarity before they commit to development. We listen to your idea, question the assumptions, and map the shortest path to a testable product. You then receive designs that are focused, realistic, and ready for the next stage.",
   features: [
     {
@@ -50,7 +46,7 @@ export const child = {
       description: "Packaging is the first thing a customer touches. Our packaging design services combine structure, graphics, and labelling that fit your product and brand. The result is a pack that protects the product and looks right on a shelf or a screen.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Product Design Services in Delhi",

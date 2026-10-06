@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/mobile-app-development";
 export const child = {
   slug: "flutter-app-development",
-
-
-
-
   title: "Flutter App Development",
   metaTitle: "Flutter App Development Services in India | Eddinet",
   metaDescription: "We specialize in cross-platform engineering, building custom Flutter solutions designed to meet your specific business requirements, brand identity, and",
   heroHeading: "Flutter App Development Company in India",
   heroSubheading: "Eddinet is a leading Flutter App Development Company in India that builds high-performance, single-codebase mobile applications for iOS and Android. We combine native-like performance with rapid development to help your brand launch faster, scale efficiently, and save costs without separate development cycles.",
-
   detailedDescription: "We specialize in cross-platform engineering, building custom Flutter solutions designed to meet your specific business requirements, brand identity, and operational goals.\n\nOur development team writes clean, modular Dart code optimized for high performance, smooth animations, and fast load times across every device.\n\nBacked by resilient backend setups and secure cloud architectures, we ensure your application handles increasing traffic seamlessly without compromising speed or security.",
   features: [
     {
@@ -58,7 +54,7 @@ export const child = {
       description: "We provide continuous post-launch SLA monitoring, bug fixes, performance tuning, and updates for new operating system releases.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet For Flutter App Development",

@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/mobile-app-development";
 export const child = {
   slug: "react-native-development",
-
-
-
-
   title: "React Native Development",
   metaTitle: "React Native Development Services in India | Eddinet",
   metaDescription: "We help businesses grow by building custom cross-platform applications that deliver smooth user experiences. Our team writes clean JavaScript and TypeScript",
   heroHeading: "React Native App Development Company in India",
   heroSubheading: "Eddinet is a leading React Native App Development Company in India that builds fast, high-quality mobile applications using a single codebase. We combine native performance with cross-platform efficiency to help your business launch quickly, save costs, and reach users on both iOS and Android.",
-
   detailedDescription: "We help businesses grow by building custom cross-platform applications that deliver smooth user experiences. Our team writes clean JavaScript and TypeScript code to create reliable apps for iOS and Android. By using secure cloud connections and high-capacity server architectures, we ensure your app scales safely as your user base expands.",
   features: [
     {
@@ -54,7 +50,7 @@ export const child = {
       description: "We offer continuous monitoring, rapid bug fixes, security patches, and updates to keep your app running smoothly on new OS versions.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Our React Native App Development Company in India?",

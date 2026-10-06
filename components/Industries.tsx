@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 const industries = [
   { icon: "🏗️", name: "Real Estate & Property", slug: "real-estate-and-property" },
   { icon: "🏥", name: "Healthcare & Wellness", slug: "healthcare-and-wellness" },
@@ -30,9 +28,11 @@ export default function Industries() {
         </div>
         <div className="grid grid-cols-5 gap-4 max-[1024px]:grid-cols-3 max-[600px]:grid-cols-2 max-[400px]:grid-cols-1">
           {industries.map((ind, i) => (
-            <Link
+            //  Sirf DISPLAY tile — iska koi destination page nahi hai
+            //  (/industries/* routes delete ho chuke hain), isliye Link ki
+            //  jagah plain div taaki koi broken link / 404 na bane.
+            <div
               key={i}
-              href={`/industries/${ind.slug}`}
               className="group py-7 px-4 rounded-xl bg-white/5 border border-white/10 text-center transition-all duration-300 hover:bg-white/10 hover:border-[var(--main-accent)] hover:-translate-y-[6px] hover:shadow-[0_12px_30px_rgba(var(--accent-rgb),0.15)]"
             >
               <span className="text-[2rem] mb-2.5 block group-hover:scale-110 transition-transform duration-300">
@@ -41,7 +41,7 @@ export default function Industries() {
               <span className="text-[0.9rem] font-bold text-white/70 group-hover:text-white transition-colors duration-300">
                 {ind.name}
               </span>
-            </Link>
+            </div>
           ))}
         </div>
       </div>

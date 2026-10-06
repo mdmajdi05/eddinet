@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/hosting-migration";
 export const child = {
   slug: "database-hosting",
-
-
-
-
   title: "Database Hosting",
   metaTitle: "Database Hosting Services in India | Eddinet",
   metaDescription: "Eddinet provides database hosting services in India where our engineers set up, secure, and tune your database servers.",
   heroHeading: "Database Hosting Services in India",
   heroSubheading: "Managed Database Hosting | MySQL & PostgreSQL | Secure Cloud Database Servers",
-
   detailedDescription: "Eddinet provides database hosting services in India where our engineers set up, secure, and tune your database servers. Your data stays fast to query, safe from loss, and ready to grow. As a result, your application no longer waits on a slow or unstable database.\n\nIs your database slowing down your application? Are you worried that one failed disk could wipe out your data? If yes, Eddinet is the solution to your problem.\n\nAs a managed database hosting provider in India, we give you an experienced database and sysadmin team without the cost of hiring one. We study how your application reads and writes data, then build a hosting setup around those patterns. You also receive plain-language reports, so you always know the health of your data.",
   features: [
     {
@@ -38,7 +34,7 @@ export const child = {
       description: "Our cloud database hosting places your data on secure, scalable cloud servers. Storage and compute can grow when your needs increase. We also add private networking and encryption, so your data stays away from public access.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Database Hosting Services in India",

@@ -114,7 +114,12 @@ export const services: Service[] = [
     link: "eCommerce solutions",
     tabLabel: "eCommerce",
     footerLabel: "eCommerce Solutions",
-    allItems: ["eCommerce Website", "eCommerce SEO", "eCommerce PPC", "eCommerce Optimization", "Shopify Web Design", "WooCommerce Development", "Payment Gateway Integration", "Shipping Integration", "Inventory Integration", "Marketplace Integration", "Amazon Store Development", "eCommerce Migration"],
+    //  NOTE: "eCommerce SEO" ish category me NAHI hai — wo "SEO" category
+    //  (line 51) me already listed hai aur uska page /services/seo/ecommerce-seo
+    //  hai. Pehle dono category me item tha, dono URLs same metaTitle/H1 serve
+    //  karte the → duplicate page. eCommerce category ka page 301 se SEO wale
+    //  page par consolidate kar diya gaya hai (next.config.ts redirects).
+    allItems: ["eCommerce Website", "eCommerce PPC", "eCommerce Optimization", "Shopify Web Design", "WooCommerce Development", "Payment Gateway Integration", "Shipping Integration", "Inventory Integration", "Marketplace Integration", "Amazon Store Development", "eCommerce Migration"],
   },
   {
     cat: "mobile",

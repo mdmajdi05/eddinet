@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/mobile-app-development";
 export const child = {
   slug: "ios-app-development",
-
-
-
-
   title: "iOS App Development",
   metaTitle: "iOS App Development Services in India | Eddinet",
   metaDescription: "We craft bespoke iOS software tailored precisely to your business workflows, brand identity, and customer preferences never relying on rigid, off-the-shelf",
   heroHeading: "iOS App Development Company in India",
   heroSubheading: "Eddinet is a leading iOS App Development Company in India that crafts sleek, high-performing applications designed to stand out on the Apple App Store. We combine rock-solid security with swift load times to build premium iOS software that delights users and drives real business growth.",
-
   detailedDescription: "We craft bespoke iOS software tailored precisely to your business workflows, brand identity, and customer preferences never relying on rigid, off-the-shelf templates.\n\nOur engineering team writes clean, modern Swift and Objective-C code optimized specifically for Apple's hardware capabilities, Human Interface Guidelines, and security architecture.\n\nBy combining end-to-end data encryption protocols with high-capacity cloud backends, we protect sensitive user data while ensuring your platform scales seamlessly as user traffic grows.",
   features: [
     {
@@ -58,7 +54,7 @@ export const child = {
       description: "We provide continuous post-launch SLA monitoring, bug fixes, performance tuning, and updates for new iOS releases.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet For an iOS App Development",

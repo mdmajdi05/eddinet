@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/software-ai";
 export const child = {
   slug: "saas-development",
-
-
-
-
   title: "SaaS Development",
   metaTitle: "SaaS Development Services in India | Eddinet",
   metaDescription: "We build scalable cloud applications engineered to automate business operations and generate predictable subscription revenue.",
   heroHeading: "SaaS Product Development Company in India",
   heroSubheading: "Cloud Applications | Multi-Tenant Platforms | B2B SaaS Solutions",
-
   detailedDescription: "We build scalable cloud applications engineered to automate business operations and generate predictable subscription revenue. As a premier SaaS product development company in India, EDDINET delivers fast, secure, and resilient digital solutions designed to match your long-term business targets.\n\nModern organizations rely on high-performing cloud software to expand market reach and serve customers efficiently. Our engineering team combines technical precision with market strategy to turn complex product ideas into high-converting cloud assets.\n\nEDDINET empowers ambitious startups, growing SMEs, and global enterprises to design, build, and deploy custom cloud software. We specialize in modern multi-tenant application development, cloud database architecture, and frictionless UI/UX design.\n\nBy focusing on rapid delivery, secure coding practices, and low-latency infrastructure, we help your business launch market-ready SaaS products that scale effortlessly as your user base expands.",
   features: [
     {
@@ -50,7 +46,7 @@ export const child = {
       description: "We deliver SLA-backed cloud monitoring, automated performance tuning, database optimization, and continuous security patch management to maintain maximum operational uptime.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET as Your B2B SaaS Development Company in India?",

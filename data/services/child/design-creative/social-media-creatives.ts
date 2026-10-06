@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/design-creative";
 export const child = {
   slug: "social-media-creatives",
-
-
-
-
   title: "Social Media Creatives",
   metaTitle: "Social Media Creatives Services in India | Eddinet",
   metaDescription: "EDDINET provides high-impact social media design services in Delhi. We merge visual aesthetics, direct-response copywriting hierarchy, and brand strategy to",
   heroHeading: "Social Media Creatives & Design Services in Delhi",
   heroSubheading: "High-Converting Social Media Creatives | Instagram Post Design | Custom Brand Graphics",
-
   detailedDescription: "EDDINET provides high-impact social media design services in Delhi. We merge visual aesthetics, direct-response copywriting hierarchy, and brand strategy to deliver scroll-stopping social media creatives that capture attention and drive conversions.\n\nStop letting generic, low-quality templates dilute your brand image. Our social media creative agency designs custom, platform-optimized visual assets tailored to boost engagement across Instagram, LinkedIn, Facebook, and performance ad channels.\n\nAt EDDINET, we turn static social feeds into high-performing visual brand engines. Inconsistent visuals, weak typography, and unoptimized ad layouts hurt brand credibility and drive up your customer acquisition costs. Therefore, we engineer custom social media graphics designed to stop the scroll and communicate your core value instantly.\n\nOur creative design team manages your social ecosystem end-to-end:\n\nInstagram Post Design Services: Custom single posts, educational carousels, story layouts, and Reel cover graphics.\n\nPerformance Ad Creatives: High-converting banner graphics for Meta Ads, LinkedIn Ads, and Google Display campaigns.\n\nSocial Media Design Packages: Scalable monthly design retainers tailored for growing startups, e-commerce brands, and enterprises.",
   features: [
     {
@@ -46,7 +42,7 @@ export const child = {
       description: "We design professional LinkedIn carousel posts, thought-leadership graphics, and executive banner visuals that build B2B brand authority.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET as Your Social Media Creative Agency?",

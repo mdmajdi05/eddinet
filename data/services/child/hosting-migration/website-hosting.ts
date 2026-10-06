@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/hosting-migration";
 export const child = {
   slug: "website-hosting",
-
-
-
-
   title: "Website Hosting",
   metaTitle: "Website Hosting Services in India | Eddinet",
   metaDescription: "Eddinet provides website hosting services in India that keep your website fast, secure, and always available. We manage the server, backups, and security, so",
   heroHeading: "Website Hosting Services in India",
   heroSubheading: "Business Website Hosting | Secure Servers & Backups | 24/7 Monitoring",
-
   detailedDescription: "Eddinet provides website hosting services in India that keep your website fast, secure, and always available. We manage the server, backups, and security, so you never have to. As a result, your visitors get quick pages and you get a website that simply works.\n\nEddinet is a web hosting company in India built around certified sysadmins and DevOps engineers. We help businesses replace unreliable hosting with one well-managed, dependable setup.\n\nWe listen first, then review your website, traffic, and goals before recommending a plan. Our reports use plain language, so everyone on your team can understand them. At the end of each project, we hand over clear documentation.\n\nGood hosting should feel invisible. It works quietly and never surprises you. That is the standard we follow on every project.",
   features: [
     {
@@ -38,7 +34,7 @@ export const child = {
       description: "We set up your new hosting and move your existing website with care. Every migration is planned, backed up, and tested first. Your files, databases, and emails arrive complete and ready to use.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Website Hosting Services in India",

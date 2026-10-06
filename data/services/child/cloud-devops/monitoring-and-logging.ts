@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/cloud-devops";
 export const child = {
   slug: "monitoring-and-logging",
-
-
-
-
   title: "Monitoring & Logging",
   metaTitle: "Monitoring & Logging Services in India | Eddinet",
   metaDescription: "Eddinet delivers monitoring and logging services in India that give you full visibility into your infrastructure.",
   heroHeading: "Monitoring and Logging Services in India",
   heroSubheading: "Server Monitoring | Application Logging | DevOps Monitoring Solutions",
-
   detailedDescription: "Eddinet delivers monitoring and logging services in India that give you full visibility into your infrastructure. We track your servers, applications, and cloud resources around the clock. As a result, your team spots issues early and fixes them before customers notice.\n\nHidden errors and downtime quietly drain revenue. Our setups bring metrics, logs, and alerts into one place. Therefore, you always know what is happening across your systems.\n\nEddinet is a team of certified cloud and DevOps engineers. We help Indian businesses replace guesswork with clear, reliable data. Scattered logs and unmonitored servers become one organized view of system health.\n\nWe listen first, then design with care. Our reports use plain language, so technical and non-technical teams can act on them. At the end of each project, we hand over complete documentation.\n\nGood monitoring works quietly in the background. It speaks up only when action is needed. That is the standard we follow on every project.",
   features: [
     {
@@ -38,7 +34,7 @@ export const child = {
       description: "Our DevOps monitoring solutions connect with your CI/CD pipelines, containers, and deployment tools. Because of this, your team sees the impact of every release right away. Faster feedback leads to safer and more frequent updates.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Monitoring and Logging Services in India",

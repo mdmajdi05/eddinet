@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/mobile-app-development";
 export const child = {
   slug: "app-migration",
-
-
-
-
   title: "App Migration",
   metaTitle: "App Migration Services in India | Eddinet",
   metaDescription: "Eddinet provides top Mobile App Migration Services in India to upgrade outdated apps smoothly. We transfer your code, data, and backend to modern frameworks",
   heroHeading: "Mobile App Migration Services in India",
   heroSubheading: "Legacy Modernization | Platform Migration | App Migration",
-
   detailedDescription: "Eddinet provides top Mobile App Migration Services in India to upgrade outdated apps smoothly. We transfer your code, data, and backend to modern frameworks making your app faster, secure, and seamless across all devices.\n\nAt Eddinet, we transform legacy mobile applications into high-performing digital products. As a trusted app migration company in India, we fix app slowness, eliminate security risks, and ensure smooth, hassle-free code transfers.\n\nHere is how we streamline your mobile app migration:\n\nLegacy App Modernization: We upgrade old codebases to fix performance bottlenecks and remove security risks.\n\nNative to Cross-Platform Migration: We convert single-platform native apps into unified Flutter or React Native codebases to lower maintenance costs.\n\niOS to Android App Migration: We recreate iOS applications for Android devices while adapting layouts to Google Material Design standards.\n\nSecure & Scalable App Migration: We protect user records and transaction histories to ensure zero data loss and minimal downtime during transfers.",
   features: [
     {
@@ -90,7 +86,7 @@ export const child = {
       description: "We restructure app code and backend servers into modular components that support rapid future feature expansions.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet For Mobile App Migration Services?",

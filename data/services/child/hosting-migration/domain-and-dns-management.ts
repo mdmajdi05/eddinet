@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/hosting-migration";
 export const child = {
   slug: "domain-and-dns-management",
-
-
-
-
   title: "Domain & DNS Management",
   metaTitle: "Domain & DNS Management in India | Eddinet",
   metaDescription: "One wrong DNS record or expired domain can take your business offline in seconds. Eddinet provides end-to-end domain and DNS management services in India",
   heroHeading: "Domain and DNS Management Services in India",
   heroSubheading: "Managed DNS Services | DNS Setup & Configuration | High Uptime DNS Hosting",
-
   detailedDescription: "One wrong DNS record or expired domain can take your business offline in seconds. Eddinet provides end-to-end domain and DNS management services in India configuring, securing, and monitoring your records 24/7. We handle complex backend settings so your websites, custom emails, and web apps stay 100% online, fast, and completely reachable.\n\nHas your website vanished because of a DNS mistake? Are your emails landing in spam or not arriving at all? If yes, Eddinet is the solution to your problem.\n\nAs a provider of managed DNS services in India, we give you an experienced sysadmin team to look after your domains and records. We review how your domain, website, and email connect, then fix what is broken and protect what works. You also receive plain-language updates, so you always know what changed and why.",
   features: [
     {
@@ -38,7 +34,7 @@ export const child = {
       description: "Our DNS hosting with high uptime places your records on fast, resilient name servers. Multiple servers answer queries, so one failure does not break your site. We also monitor responses, so problems are caught early.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Domain and DNS Management Services in India",

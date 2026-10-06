@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits1 } from "../_category/ecommerce";
 export const child = {
   slug: "shipping-integration",
-
-
-
-
   title: "Shipping Integration",
   metaTitle: "Shipping Integration Services in India | Eddinet",
   metaDescription: "Ask any operations team running an online store in India, and they'll tell you the same thing: shipping is where the chaos hides.",
   heroHeading: "eCommerce Shipping Integration in India",
   heroSubheading: "Getting a product ordered is only half the job getting it delivered on time is where most online stores actually struggle. Eddinet builds eCommerce Shipping API Integration in India that connects your store to the couriers and logistics tools you already work with, so orders move from checkout to doorstep without someone manually chasing every shipment.",
-
   detailedDescription: "Ask any operations team running an online store in India, and they'll tell you the same thing: shipping is where the chaos hides. Rate mismatches, missed pickups, tracking numbers that never update these things pile up fast once order volume grows. That's the exact gap Eddinet's Shipping Integration Services in India are built to close.\n\nWe're not tied to one courier or one platform. Depending on how your business ships one dominant carrier or a mix of five - we shape each Shipping API Integration in India around your actual delivery zones, your order volume, and the way your warehouse team already works. The point isn't just linking two systems together; it's making sure the handoff between your store and your courier doesn't need a human babysitting it.",
   features: [
     {
@@ -46,7 +42,7 @@ export const child = {
       description: "Cash-on-delivery and returns are where a lot of manual spreadsheet work still lives. We build the reconciliation logic so COD collections and return pickups match up against your order records automatically.",
     },
   ],
-  benefits: [],
+  benefits: benefits1,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Shipping Integration Matters for Your Business",

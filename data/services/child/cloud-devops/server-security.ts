@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/cloud-devops";
 export const child = {
   slug: "server-security",
-
-
-
-
   title: "Server Security",
   metaTitle: "Server Security Services in India | Eddinet",
   metaDescription: "Eddinet delivers server security services in India that protect your data, applications, and uptime. We find weak points, close them, and watch for threats",
   heroHeading: "Server Security Services in India",
   heroSubheading: "Cloud Server Security | Linux Hardening | Managed Threat Protection",
-
   detailedDescription: "Eddinet delivers server security services in India that protect your data, applications, and uptime. We find weak points, close them, and watch for threats around the clock. As a result, attackers meet a hardened system instead of an easy target.\n\nOne breach can cost you customers, money, and trust. Our security setups block common attacks and alert you the moment something looks wrong. Therefore, you stay in control of your infrastructure.\n\nEddinet is a cloud server security company in India built around certified sysadmins and DevOps engineers. We help businesses replace scattered, reactive fixes with one clear security plan.\n\nWe listen first, then assess your risks before changing anything. Our reports use plain language, so technical and non-technical teams can act on them. At the end of each project, we hand over full documentation.\n\nGood security works quietly in the background. It stops threats without slowing your business. That is the standard we follow on every project.",
   features: [
     {
@@ -38,7 +34,7 @@ export const child = {
       description: "Our managed server security service gives you an expert team without the cost of hiring one. We monitor threats, apply patches, and respond to incidents. You also get regular reports that show what we found and fixed.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Server Security Services in India",

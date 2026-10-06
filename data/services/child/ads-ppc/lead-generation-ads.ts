@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/ads-ppc";
 export const child = {
   slug: "lead-generation-ads",
-
-
-
-
   title: "Lead Generation Ads",
   metaTitle: "Lead Generation Ads Services in India | Eddinet",
   metaDescription: "At Eddinet, we build performance-driven lead generation campaigns that deliver predictable sales pipelines for businesses across India.",
   heroHeading: "Lead Generation Services in India",
   heroSubheading: "At Eddinet, we solve unpredictable sales pipelines by generating high-intent, verified leads that turn into revenue. As a performance-driven lead generation agency in India, we eliminate wasted ad spend by combining precision targeting, persuasive ad creatives, and high-converting landing pages across Google, Meta, and LinkedIn to consistently lower your Cost Per Lead (CPL).",
-
   detailedDescription: "At Eddinet, we build performance-driven lead generation campaigns that deliver predictable sales pipelines for businesses across India. As a dedicated lead generation agency, we combine precision audience targeting, conversion-focused landing pages, and multi-channel ad management (Google, Meta, LinkedIn) to acquire qualified B2B and B2C leads, reduce acquisition costs, and maximize your revenue growth.",
   features: [
     {
@@ -42,7 +38,7 @@ export const child = {
       description: "We monitor incoming lead quality, Cost Per Lead (CPL), and campaign conversion rates daily-tuning bids and targeting parameters to continuously improve lead-to-sale ratios.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Lead Generation",

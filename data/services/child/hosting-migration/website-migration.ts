@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/hosting-migration";
 export const child = {
   slug: "website-migration",
-
-
-
-
   title: "Website Migration",
   metaTitle: "Website Migration Services in India | Eddinet",
   metaDescription: "Eddinet provides website migration services in India where our engineers move your files, databases, and emails to a new server with care.",
   heroHeading: "Website Migration Services in India",
   heroSubheading: "Website Migration Without Downtime | Safe Website Transfer | cPanel to cPanel Moves",
-
   detailedDescription: "Eddinet provides website migration services in India where our engineers move your files, databases, and emails to a new server with care. Every move is planned, backed up, and tested first. As a result, your site keeps its speed, its data, and its search rankings.\n\nHas a past website move broken your pages or lost your emails? Are you afraid that switching hosts will wipe out your Google rankings? If yes, Eddinet is the solution to your problem.\n\nAs a website migration company in India, we give you an experienced sysadmin team that has handled moves of every size. We study how your site, domain, and email fit together, then plan the transfer around them. You also receive plain-language updates, so you always know where your migration stands.",
   features: [
     {
@@ -38,7 +34,7 @@ export const child = {
       description: "Problems often appear days after a move, not on the day itself. We keep watching your site, fix broken links, and confirm that emails and forms work. You also get a clear checklist showing what was moved and verified.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Website Migration Services in India",

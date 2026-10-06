@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/cloud-devops";
 export const child = {
   slug: "load-balancing",
-
-
-
-
   title: "Load Balancing",
   metaTitle: "Load Balancing Services in India | Eddinet",
   metaDescription: "Eddinet provides premier load balancing services in India. We design, deploy, and manage traffic distribution setups that remove server overloads, maximize",
   heroHeading: "Load Balancing Services Company in India",
   heroSubheading: "Cloud Traffic Engineering | AWS ALB & NLB Setup | High Availability & Auto-Scaling",
-
   detailedDescription: "Eddinet provides premier load balancing services in India. We design, deploy, and manage traffic distribution setups that remove server overloads, maximize uptime, and speed up your web applications.\n\nSlow pages and single-point-of-failure outages cost you revenue. Our solutions spread incoming traffic across healthy servers in real time. As a result, you get low latency, smooth auto-scaling, and minimal downtime, even during traffic spikes.\n\nEddinet helps businesses turn single-point server setups into fault-tolerant, high-availability clusters. We engineer intelligent traffic routing that bypasses failed server nodes instantly. This prevents downtime and keeps performance strong during heavy traffic.\n\nOur certified sysadmins manage your traffic infrastructure end to end. We listen first, design carefully, and hand over clear documentation. Good infrastructure should be invisible, and that is the standard we follow on every project.",
   features: [
     {
@@ -46,7 +42,7 @@ export const child = {
       description: "We track real-time response latency, request volumes, and backend server health metrics to resolve traffic surges before they affect end users.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Load Balancing Services?",

@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/software-ai";
 export const child = {
   slug: "generative-ai-solutions",
-
-
-
-
   title: "Generative AI Solutions",
   metaTitle: "Generative AI Solutions Services in India | Eddinet",
   metaDescription: "EDDINET builds high-performance generative AI platforms that enable enterprises to create content, automate complex reasoning, and derive deep value from",
   heroHeading: "Generative AI Solutions Company in India",
   heroSubheading: "Enterprise GenAI Engineering | Custom Fine-Tuned Models | Scalable Application Development",
-
   detailedDescription: "EDDINET builds high-performance generative AI platforms that enable enterprises to create content, automate complex reasoning, and derive deep value from unstructured operational data. As a leading generative AI solutions company in India, we combine advanced Large Language Model (LLM) engineering with enterprise security to deliver scalable GenAI applications tailored to your business goals.\n\nEDDINET builds custom generative AI tools, domain-specific foundation models, and intelligent content-generation platforms. As a dedicated generative AI solutions company in India, we transform complex data streams into automated, contextually aware creative and analytical workflows.\n\nOur engineering team combines proprietary model fine-tuning with enterprise-grade security protocols. Consequently, we help forward-thinking organizations automate content creation, extract deep business insights, and accelerate innovation across departments.",
   features: [
     {
@@ -50,7 +46,7 @@ export const child = {
       description: "We provide ongoing monitoring of model output quality, latency tuning, cost management, and periodic model re-training to maintain optimal performance over time.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for Enterprise Generative AI Solutions?",

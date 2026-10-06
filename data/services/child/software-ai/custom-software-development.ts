@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/software-ai";
 export const child = {
   slug: "custom-software-development",
-
-
-
-
   title: "Custom Software Development",
   metaTitle: "Custom Software Development Services in India | Eddinet",
   metaDescription: "We build custom software that fits your exact operational workflows and drives business growth. As a leading Custom Software Development Company in India",
   heroHeading: "Custom Software Development Company in India",
   heroSubheading: "Custom Software | Business Solutions | Enterprise Applications",
-
   detailedDescription: "We build custom software that fits your exact operational workflows and drives business growth. As a leading Custom Software Development Company in India, Eddinet engineers fast, secure, and scalable digital solutions that automate processes, boost efficiency, and keep you competitive in evolving markets.\n\nEddinet is a trusted custom software development agency in India. We help startups, SMEs, and large enterprises design, build, and deploy high-performing digital products. Our engineering team uses modern technology frameworks to create secure, fast, and reliable software systems tailored directly to your business goals. We focus heavily on delivery speed, clear code architecture, and measurable digital results.",
   features: [
     {
@@ -62,7 +58,7 @@ export const child = {
       description: "We provide continuous SLA-backed system monitoring, security updates, and performance speed tuning after official launch.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for Custom Software Development?",

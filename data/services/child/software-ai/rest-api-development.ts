@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/software-ai";
 export const child = {
   slug: "rest-api-development",
-
-
-
-
   title: "REST API Development",
   metaTitle: "REST API Development Services in India | Eddinet",
   metaDescription: "EDDINET builds high-speed, scalable RESTful API architectures engineered to facilitate seamless data communication across digital ecosystems.",
   heroHeading: "REST API Development Company in India",
   heroSubheading: "RESTful Architectures | Node.js & Python APIs | Secure Enterprise Integrations",
-
   detailedDescription: "EDDINET builds high-speed, scalable RESTful API architectures engineered to facilitate seamless data communication across digital ecosystems. As a premier REST API development company in India, we combine lightweight backend frameworks with strict security standards to deliver resilient web interfaces tailored to your application needs.\n\nEDDINET bridges the gap between complex software engineering and seamless human experiences. As an industry leader, we craft fast, secure, and intuitive digital products engineered for long-term scalability.\n\nFurthermore, our dedicated developers utilize battle-tested frameworks to transform legacy processes into modern digital systems. Partner with us to modernize your operations, reduce administrative bloat, and unlock market-leading performance.",
   features: [
     {
@@ -50,7 +46,7 @@ export const child = {
       description: "We provide continuous endpoint health monitoring, automated load testing, security patch management, and OpenAPI/Swagger documentation updates.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for REST API Design and Development in India?",

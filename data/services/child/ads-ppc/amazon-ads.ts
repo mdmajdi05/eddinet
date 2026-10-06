@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/ads-ppc";
 export const child = {
   slug: "amazon-ads",
-
-
-
-
   title: "Amazon Ads",
   metaTitle: "Amazon Ads Services in India | Eddinet",
   metaDescription: "At Eddinet, we manage your Amazon PPC campaigns to drive higher sales and lower your ACoS (Advertising Cost of Sales).",
   heroHeading: "Amazon Ads Agency in India",
   heroSubheading: "At Eddinet, we transform product clicks into profitable sales and higher organic rank. As a dedicated Amazon Ads Agency in India, we build and manage sponsored ad campaigns that put your products directly in front of active buyers on Amazon. By combining precise keyword research, optimized product listings, and continuous bid management, we reduce your ACoS (Advertising Cost of Sales) and maximize your overall profit margins.",
-
   detailedDescription: "At Eddinet, we manage your Amazon PPC campaigns to drive higher sales and lower your ACoS (Advertising Cost of Sales). As a specialized Amazon Ads agency in India, we handle everything required to grow your product revenue from finding profitable search terms and optimizing product listings to setting up structured campaigns and adjusting daily bids. We focus directly on increasing your sales velocity and net profit margins across your entire product catalog.",
   features: [
     {
@@ -42,7 +38,7 @@ export const child = {
       description: "We continuously test bid strategies, match types, and placement boosts to drive down your ACoS and maximize sales yield.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Amazon Ads",

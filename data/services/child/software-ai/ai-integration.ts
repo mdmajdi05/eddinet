@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/software-ai";
 export const child = {
   slug: "ai-integration",
-
-
-
-
   title: "AI Integration",
   metaTitle: "AI Integration Services in India | Eddinet",
   metaDescription: "EDDINET builds high-speed, intelligent AI architectures engineered to transform enterprise data into actionable business operations.",
   heroHeading: "AI Integration Services in India",
   heroSubheading: "Custom AI Solutions | Enterprise Machine Learning | Intelligent Automation",
-
   detailedDescription: "EDDINET builds high-speed, intelligent AI architectures engineered to transform enterprise data into actionable business operations. As a premier AI integration services India provider, we combine advanced machine learning frameworks with robust software engineering to deliver secure digital solutions tailored to your operational goals.\n\nEDDINET empowers growing businesses to transition from complex operations to streamlined digital platforms. As a trusted engineering team, we design and deploy fast, resilient software solutions built for multi-tenant cloud reliability.\n\nBy combining clean system architecture with strict security standards, we help your business eliminate operational bottlenecks and drive compounding commercial growth.",
   features: [
     {
@@ -50,7 +46,7 @@ export const child = {
       description: "We provide continuous model performance tracking, drift monitoring, automated re-training workflows, and API rate optimization to maintain high inference reliability.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for Enterprise AI Integration Company India Services?",

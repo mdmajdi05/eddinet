@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/software-ai";
 export const child = {
   slug: "crm-development",
-
-
-
-
   title: "CRM Development",
   metaTitle: "CRM Development Services in India | Eddinet",
   metaDescription: "We build scalable customer relationship management systems engineered to optimize sales pipelines and automate client operations.",
   heroHeading: "Custom CRM Development Company in India",
   heroSubheading: "Enterprise CRM Systems | Bespoke CRM Solutions | Custom CRM Applications",
-
   detailedDescription: "We build scalable customer relationship management systems engineered to optimize sales pipelines and automate client operations. As a premier custom CRM development company in India, EDDINET delivers secure, high-performing digital platforms customised to your business workflows.\n\nModern organizations require flexible CRM tools to drive operational efficiency and improve client retention. Our engineering team combines technical precision with business logic to build custom solutions that scale seamlessly alongside your active user base.\n\nEDDINET helps startups, SMEs, and large enterprises design, build, and deploy high-converting digital applications.\n\nAs a leading custom CRM development company in India, we specialize in custom system architectures, secure cloud integrations, and intuitive user interfaces.\n\nWe engineer high-speed, secure digital systems that automate your core operations and generate predictable commercial returns.",
   features: [
     {
@@ -50,7 +46,7 @@ export const child = {
       description: "We provide ongoing server monitoring, security updates, database tuning, and performance optimization to ensure high system availability.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for Enterprise CRM Development in India?",

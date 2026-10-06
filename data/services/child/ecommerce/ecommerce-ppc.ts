@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits1 } from "../_category/ecommerce";
 export const child = {
   slug: "ecommerce-ppc",
-
-
-
-
   title: "eCommerce PPC",
   metaTitle: "eCommerce PPC Services in India | Eddinet",
   metaDescription: "Are you looking for e-commerce PPC management that does not just drive empty traffic, but actively lowers your customer acquisition costs and scales revenue?",
   heroHeading: "eCommerce PPC Services in India",
   heroSubheading: "At Eddinet, we fix high ad spend and low return on ad spend (ROAS) by running laser-targeted campaigns that convert online shoppers into paying customers. Delivering data-backed E-Commerce PPC Services in India, we build and manage dynamic shopping ads, high-intent search campaigns, and retargeting workflows designed to maximize profits and lower your customer acquisition costs.",
-
   detailedDescription: "Are you looking for e-commerce PPC management that does not just drive empty traffic, but actively lowers your customer acquisition costs and scales revenue? At Eddinet, we specialize in managing high-ROI shopping campaigns, dynamic retargeting flows, and performance-driven product ads tailored for growing brands.\n\nPaid advertising is more than just buying clicks; it's the fastest engine for capturing high-intent shoppers, converting abandoned carts into repeat buyers, and maximizing profit margins on every product in your catalog.",
   features: [
     {
@@ -42,7 +38,7 @@ export const child = {
       description: "We clean up and continuously manage your Google Merchant Center product feeds optimizing titles, attributes, and images for maximum exposure.",
     },
   ],
-  benefits: [],
+  benefits: benefits1,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for E-Commerce PPC",

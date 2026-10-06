@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/cloud-devops";
 export const child = {
   slug: "aws-cloud-services",
-
-
-
-
   title: "AWS Cloud Services",
   metaTitle: "AWS Cloud Services in India | Eddinet",
   metaDescription: "Businesses need flexible cloud setups to stay competitive and secure. At EDDINET, a premier AWS Cloud Services Company in India, we build and manage cloud",
   heroHeading: "AWS Cloud Services Company in India",
   heroSubheading: "AWS Cloud | Cloud Consulting | Migration & Managed Services",
-
   detailedDescription: "Businesses need flexible cloud setups to stay competitive and secure. At EDDINET, a premier AWS Cloud Services Company in India, we build and manage cloud environments for modern businesses.\n\nWe combine expert cloud consulting with cloud-native migration strategies. As a result, our team helps you reduce infrastructure costs, prevent downtime, and scale digital operations smoothly.\n\nAre you looking for cloud engineering services that not only optimize your infrastructure but actively grow your bottom line? At EDDINET, we specialize in building high-performance AWS cloud architectures and migration strategies that align directly with your revenue targets.\n\nDigital growth is more than just cloud visibility, it is the core engine of your business designed to protect critical workloads, ensure system uptime, and convert operational efficiency into long-term profit.",
   features: [
     {
@@ -46,7 +42,7 @@ export const child = {
       description: "We set up automated CI/CD pipelines and infrastructure as code to speed up software deployment cycles. This streamlined approach reduces manual errors, optimizes server setups, and accelerates time-to-market.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for AWS Cloud Services?",

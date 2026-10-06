@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/design-creative";
 export const child = {
   slug: "logo-designing",
-
-
-
-
   title: "Logo Designing",
   metaTitle: "Logo Designing Services in India | Eddinet",
   metaDescription: "Eddinet delivers premium logo design services in Delhi NCR to give your brand an iconic, unforgettable visual identity.",
   heroHeading: "Logo Design Services in Delhi",
   heroSubheading: "Custom Logo Design | Logos for Startups | Professional Brand Identity",
-
   detailedDescription: "Eddinet delivers premium logo design services in Delhi NCR to give your brand an iconic, unforgettable visual identity. We design every logo custom from the ground up crafted around your brand narrative, target market, and growth vision. Stand out with a timeless mark that builds instant credibility. Get your free logo consultation today!\n\nDoes your current logo look like a hundred others? Is it blurry on your website or unreadable on a visiting card? If yes, Eddinet is the solution to your problem.\n\nAs a logo designing company in Delhi, we have created marks for shops, startups, and growing businesses. We learn what makes you different before sketching the first idea. You also see clear previews at every stage, so you always know where your logo stands.",
   features: [
     {
@@ -38,7 +34,7 @@ export const child = {
       description: "Startups need a strong look without a large budget. We offer focused packages that cover a logo, colour palette, and social media profile images. Your brand looks established from the first day, and you can add more later.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Logo Design Services in Delhi",

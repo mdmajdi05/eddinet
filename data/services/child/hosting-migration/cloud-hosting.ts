@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/hosting-migration";
 export const child = {
   slug: "cloud-hosting",
-
-
-
-
   title: "Cloud Hosting",
   metaTitle: "Cloud Hosting Services in India | Eddinet",
   metaDescription: "Many businesses move to the cloud after a painful outage or a surprise bill. That is usually where Eddinet steps in.",
   heroHeading: "Cloud Hosting Services in India",
   heroSubheading: "Product launches, festive sales, and viral campaigns should never put your website at risk. Eddinet delivers cloud hosting services in India that stretch when demand rises and keep running when a server fails. Our engineers design and operate the environment, so your team can stay focused on the business.",
-
   detailedDescription: "Many businesses move to the cloud after a painful outage or a surprise bill. That is usually where Eddinet steps in. As a cloud hosting provider in India, we combine cloud engineering, DevOps, and server security under one team.\n\nWe start by understanding how your website or application actually behaves. Then we build an environment around those patterns instead of forcing a ready-made package. You receive plain-language reports and full documentation, so nothing about your infrastructure stays a mystery.",
   features: [
     {
@@ -38,7 +34,7 @@ export const child = {
       description: "Running the cloud is a daily job. We monitor performance, apply security patches, verify backups, and watch your spending. You also receive clear reports that show what changed and why.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Cloud Hosting Services in India",

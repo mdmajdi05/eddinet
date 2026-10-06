@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits1 } from "../_category/ecommerce";
 export const child = {
   slug: "ecommerce-website",
-
-
-
-
   title: "eCommerce Website",
   metaTitle: "eCommerce Website Services in India | Eddinet",
   metaDescription: "Are you looking for digital marketing and development services that not only elevate your visual presence but actively grow your bottom line?",
   heroHeading: "eCommerce Website Development in India",
   heroSubheading: "At Eddinet, we fix slow speeds and high cart abandonment by building fast, custom online stores. As a leading ecommerce website development company in India, we combine conversion-focused design with robust coding to deliver secure, mobile-first platforms engineered for growth.",
-
   detailedDescription: "Are you looking for digital marketing and development services that not only elevate your visual presence but actively grow your bottom line? At Eddinet, we specialize in engineering high-speed websites, targeted ad campaigns, and SEO strategies that align directly with your revenue targets.\n\nDigital growth is more than just online visibility; it's the core engine of your business designed to capture qualified leads, engage intent buyers, and convert traffic into long-term revenue.",
   features: [
     {
@@ -54,7 +50,7 @@ export const child = {
       description: "We sync your store directly with your CRM, ERP, accounting software, and marketing stack for seamless operations.",
     },
   ],
-  benefits: [],
+  benefits: benefits1,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for E-Commerce Website Development",

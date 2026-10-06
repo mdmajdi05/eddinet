@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/mobile-app-development";
 export const child = {
   slug: "app-ui-ux-design",
-
-
-
-
   title: "App UI/UX Design",
   metaTitle: "App UI/UX Design Services in India | Eddinet",
   metaDescription: "Eddinet provides leading Mobile App UI UX Design Services in India to create simple, clean, and engaging digital experiences.",
   heroHeading: "Mobile App UI/UX Design Services in India",
   heroSubheading: "App Interface Design | User Experience | Wireframing & Prototyping",
-
   detailedDescription: "Eddinet provides leading Mobile App UI UX Design Services in India to create simple, clean, and engaging digital experiences. We place users at the center of our design process to lower bounce rates, boost engagement, and convert visitors into loyal customers.\n\nAt Eddinet, we design intuitive and engaging digital interfaces that elevate user satisfaction and drive business growth. As a leading UI/UX design agency in India, we blend user research, functional wireframing, and visual design to deliver seamless, high-converting mobile app experiences.\n\nHere is how we streamline your mobile user experience design:\n\nMobile User Experience Design: We structure logical screen flows and simplified navigation patterns to help users achieve their goals effortlessly.\n\nUser-Centered App Interface Design: We analyze real user habits to build modern, intuitive screen layouts tailored specifically to your target audience.\n\nWireframing & Prototyping Services: We build clickable wireframes and prototypes early to validate user journeys before writing a single line of code.\n\nConversion-Focused App Experiences: We combine visual hierarchy with clear calls to action to guide users seamlessly toward sign-ups and checkouts.",
   features: [
     {
@@ -62,7 +58,7 @@ export const child = {
       description: "We audit aging applications to refresh visual layouts, fix navigation bottlenecks, and modernize the complete user experience.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Our Mobile App UI UX Design Agency?",

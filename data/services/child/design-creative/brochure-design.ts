@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/design-creative";
 export const child = {
   slug: "brochure-design",
-
-
-
-
   title: "Brochure Design",
   metaTitle: "Brochure Design Services in India | Eddinet",
   metaDescription: "EDDINET provides brochure design services in Delhi that give your business a printed and digital voice worth keeping.",
   heroHeading: "Brochure Design Services in Delhi",
   heroSubheading: "Custom Corporate & Tri-Fold Brochures | Company Profiles | Print & Digital Sales Collateral",
-
   detailedDescription: "EDDINET provides brochure design services in Delhi that give your business a printed and digital voice worth keeping. We shape clear layouts and tight, persuasive copy into brochures that win attention at meetings, exhibitions, and online. Every page is custom-built around your brand, so prospects see a business they can trust.\n\nAt EDDINET, we transform static company details into compelling print and digital brand assets. Unorganized information, weak visual hierarchy, and low-resolution graphics directly harm brand credibility and cost you high-value B2B opportunities. As a top-rated brochure design company in Delhi, we engineer precision-crafted brochures designed to leave a lasting professional mark.\n\nOur creative design team manages your entire collateral ecosystem end-to-end. We develop elegant corporate brochure design solutions and structured company brochure design assets including classic tri-fold brochure design layouts and multi-page business brochure design catalogs optimized for crisp physical printing and instant digital sharing.",
   features: [
     {
@@ -46,7 +42,7 @@ export const child = {
       description: "We convert traditional print layouts into interactive digital PDF brochures complete with clickable links, embedded media tags, and compressed file sizes for swift email delivery.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET as Your Brochure Design Company in Delhi?",

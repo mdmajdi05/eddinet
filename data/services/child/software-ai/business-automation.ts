@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/software-ai";
 export const child = {
   slug: "business-automation",
-
-
-
-
   title: "Business Automation",
   metaTitle: "Business Automation Services in India | Eddinet",
   metaDescription: "EDDINET builds scalable, secure operational automation platforms that streamline internal processes, reduce administrative overhead, and eliminate redundant",
   heroHeading: "Business Process Automation Services in India",
   heroSubheading: "Enterprise Workflow Automation | RPA & AI Engineering | Custom Software Development",
-
   detailedDescription: "EDDINET builds scalable, secure operational automation platforms that streamline internal processes, reduce administrative overhead, and eliminate redundant manual tasks. As a premier provider of business process automation services in India, we combine intelligent workflow orchestration with custom software development to deliver fast, secure digital solutions tailored to your business operations.\n\nEDDINET builds end-to-end operational software, robotic process pipelines, and intelligent workflow automation platforms. As a dedicated business automation software development company in India, we transform complex multi-departmental logic into self-executing digital processes.\n\nOur specialized developers integrate intelligent workflow engines directly with your existing enterprise infrastructure. As a result, we empower modern companies to remove manual work, minimize execution errors, and accelerate core business throughput.",
   features: [
     {
@@ -50,7 +46,7 @@ export const child = {
       description: "We provide ongoing server health tracking, bot monitoring, security patch management, and workflow speed optimization to guarantee uninterrupted operational execution.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for Enterprise Automation Solutions India?",

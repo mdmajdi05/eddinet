@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/hosting-migration";
 export const child = {
   slug: "vps-hosting",
-
-
-
-
   title: "VPS Hosting",
   metaTitle: "VPS Hosting Services in India | Eddinet",
   metaDescription: "Eddinet provides VPS hosting in India for websites and applications that have outgrown shared hosting. You get dedicated resources, full control, and a",
   heroHeading: "VPS Hosting in India",
   heroSubheading: "Managed VPS Hosting | Linux VPS with Root Access | Affordable & Scalable",
-
   detailedDescription: "Eddinet provides VPS hosting in India for websites and applications that have outgrown shared hosting. You get dedicated resources, full control, and a server that stays fast under load. Best of all, our engineers manage the technical work, so you can focus on your business.\n\nEddinet is a team of certified sysadmins and DevOps engineers. We help businesses move from crowded shared servers to stable, well-managed VPS setups.\n\nWe listen first, then review your traffic, software, and goals before recommending a plan. Our reports use plain language, so technical and non-technical teams can both act on them. At the end of each project, we hand over complete documentation.\n\nGood hosting should feel invisible. It works quietly and never surprises you. That is the standard we follow on every project.",
   features: [
     {
@@ -38,7 +34,7 @@ export const child = {
       description: "Need full control? Our VPS hosting with root access lets you install custom software and change server settings freely. Meanwhile, we keep the server secure with firewalls, SSH protection, and regular updates. You get freedom without the risk.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for VPS Hosting in India",

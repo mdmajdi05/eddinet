@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/design-creative";
 export const child = {
   slug: "catalogue-design",
-
-
-
-
   title: "Catalogue Design",
   metaTitle: "Catalogue Design Services in India | Eddinet",
   metaDescription: "EDDINET delivers creative catalogue design services in Delhi that turn product information into clear, engaging, and sales-focused visuals.",
   heroHeading: "Catalogue Design Services in Delhi",
   heroSubheading: "Custom Product Catalogues | Digital & E-Catalogues | Print-Ready B2B Sales Collateral",
-
   detailedDescription: "EDDINET delivers creative catalogue design services in Delhi that turn product information into clear, engaging, and sales-focused visuals. We combine smart layouts, structured product presentation, and strong visual hierarchy to make every catalogue easy to explore and built to convert.\n\nAt EDDINET, we turn dense product data into visually compelling sales channels. Poorly structured SKU lists, inconsistent image formatting, and weak typography slow down procurement decisions and hurt B2B sales conversions. Therefore, our product catalogue design agency crafts precision-engineered print and digital showcase assets built for clarity and impact.\n\nOur design team manages your entire catalog architecture end-to-end. We build structured company catalogue design layouts, offer high-resolution catalog design services, and deliver interactive digital catalogue design and e-catalogue design assets optimized for instant global distribution, mobile viewing, and web-based buying.",
   features: [
     {
@@ -46,7 +42,7 @@ export const child = {
       description: "We build interactive web-based e-catalogues featuring clickable buy-now links that connect directly to your online store or WhatsApp business ordering funnel.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET as Your Product Catalogue Design Agency?",

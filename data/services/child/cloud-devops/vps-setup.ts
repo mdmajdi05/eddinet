@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/cloud-devops";
 export const child = {
   slug: "vps-setup",
-
-
-
-
   title: "VPS Setup",
   metaTitle: "VPS Setup in India | Eddinet",
   metaDescription: "Looking to upgrade from slow, restrictive shared hosting to a high-speed virtual server? Eddinet delivers premier VPS setup services in India.",
   heroHeading: "VPS Setup Services Company in India",
   heroSubheading: "Managed VPS Setup | Linux & Cloud VPS Configurations",
-
   detailedDescription: "Looking to upgrade from slow, restrictive shared hosting to a high-speed virtual server? Eddinet delivers premier VPS setup services in India. We build, optimize, and secure dedicated virtual private environments tailored to your exact traffic needs.\n\nConsequently, our configurations eliminate server downtime, accelerate page loading speeds, and lower monthly infrastructure costs.\n\nAt Eddinet, we turn complex server environments into secure, high-speed digital engines. Slow loading times and unoptimized server stacks lead directly to dropped traffic and lost revenue. Therefore, we deliver custom VPS configurations engineered for low-latency performance, maximum uptime, and seamless scalability.\n\nOur experienced sysadmins build customised web server stacks using Nginx, Apache, or LiteSpeed based on your exact application software demands. We handle full OS installation, domain routing, and firewall setup without disrupting your active business operations. Furthermore, we continuously tune database queries, object caching, SSH rules, and automated off-site backups to keep your server fast and bulletproof under heavy user traffic.",
   features: [
     {
@@ -46,7 +42,7 @@ export const child = {
       description: "We set up cPanel, Plesk, CyberPanel, or aaPanel to make site management simple. Furthermore, we configure DKIM, SPF, and DMARC records to ensure maximum deliverability for your transactional emails.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for VPS Setup Services?",

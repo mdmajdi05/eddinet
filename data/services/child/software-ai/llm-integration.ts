@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/software-ai";
 export const child = {
   slug: "llm-integration",
-
-
-
-
   title: "LLM Integration",
   metaTitle: "LLM Integration Services in India | Eddinet",
   metaDescription: "EDDINET builds high-speed, secure Large Language Model architectures engineered to connect state-of-the-art AI models directly to core business logic.",
   heroHeading: "LLM Integration Services in India",
   heroSubheading: "Custom Model Orchestration | Multi-LLM Architectures | Enterprise AI Engineering",
-
   detailedDescription: "EDDINET builds high-speed, secure Large Language Model architectures engineered to connect state-of-the-art AI models directly to core business logic. As a premier LLM integration services in India provider, we combine multi-model orchestration with strict enterprise privacy controls to deliver scalable digital platforms tailored to your operational workflows.\n\nEDDINET designs Large Language Model pipelines, multi-model orchestration platforms, and custom AI integration frameworks. As a specialized custom LLM application development company in India, we convert complex foundational models into practical, enterprise-ready software products.\n\nOur engineering team combines advanced prompt management with private cloud deployment protocols. Consequently, we help forward-thinking brands automate decision-making, secure proprietary assets, and achieve measurable operational efficiency.",
   features: [
     {
@@ -50,7 +46,7 @@ export const child = {
       description: "We provide continuous monitoring of model latency, token costs, drift tracking, and safety guardrail tuning to maintain reliable execution across all active endpoints.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for LLM Integration Services in India?",

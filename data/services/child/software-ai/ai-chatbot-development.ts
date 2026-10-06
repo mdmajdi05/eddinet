@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/software-ai";
 export const child = {
   slug: "ai-chatbot-development",
-
-
-
-
   title: "AI Chatbot Development",
   metaTitle: "AI Chatbot Development Services in India | Eddinet",
   metaDescription: "EDDINET builds intelligent, low-latency conversational AI platforms designed to automate customer engagements and streamline internal enterprise",
   heroHeading: "AI Chatbot Development Company in India",
   heroSubheading: "Enterprise Conversational AI | LLM-Powered Chatbots | Virtual Assistant Solutions",
-
   detailedDescription: "EDDINET builds intelligent, low-latency conversational AI platforms designed to automate customer engagements and streamline internal enterprise communication. As a premier AI chatbot development company in India, we combine custom Large Language Model (LLM) orchestration with enterprise system integrations to deliver high-performing conversational systems tailored to your customer operations.\n\nEDDINET builds intelligent conversational systems, natural language pipelines, and custom AI virtual assistants. As a specialized AI chatbot development company in India, we transform routine user interactions into automated, context-aware digital conversations.\n\nOur engineering team combines custom LLM orchestration with enterprise-grade data privacy frameworks. Consequently, we help growing brands reduce support response times, improve customer satisfaction scores, and scale 24/7 service availability.",
   features: [
     {
@@ -50,7 +46,7 @@ export const child = {
       description: "We provide ongoing monitoring of conversation logs, intent accuracy tuning, safety guardrail enforcement, and model re-training to ensure reliable customer interactions.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for Enterprise AI Chatbot Solutions?",

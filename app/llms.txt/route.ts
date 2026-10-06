@@ -1,7 +1,6 @@
 import { servicePages } from "@/data/services/services";
 import { seoChildServices } from "@/data/services/child/seo-child-services";
 import { generatedChildServices } from "@/data/services/child/generated-child-services";
-import { industries } from "@/data/industries/industries";
 import { insights } from "@/data/blog/blog";
 import { caseStudies } from "@/data/portfolio/case-studies";
 import { site } from "@/data/site/contact";
@@ -29,7 +28,6 @@ export async function GET() {
     ["/", "Home — services overview, results and testimonials"],
     ["/about", "About Eddinet — company story, mission and stats"],
     ["/services", "All services — 13 capability areas"],
-    ["/industries", "All industries served"],
     ["/portfolio", "Client portfolio and projects"],
     ["/case-studies", "Published case studies"],
     ["/blog", "Blog — insights and guides"],
@@ -57,12 +55,6 @@ export async function GET() {
     }
     sections.push("");
   }
-
-  sections.push("## Industries\n");
-  for (const i of industries) {
-    sections.push(`- [${i.name}](${base}/industries/${i.slug}): ${i.blurb}`);
-  }
-  sections.push("");
 
   sections.push("## Blog\n");
   for (const p of insights) {

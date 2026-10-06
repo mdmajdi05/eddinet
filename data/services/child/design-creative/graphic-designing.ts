@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/design-creative";
 export const child = {
   slug: "graphic-designing",
-
-
-
-
   title: "Graphic Designing",
   metaTitle: "Graphic Design Services in Delhi NCR | Eddinet",
   metaDescription: "Eddinet provides graphic design services in Delhi NCR that turn your ideas into clear, memorable visuals. We create logos, social media posts, brochures, and ad creatives that match your brand.",
   heroHeading: "Graphic Design Services in Delhi NCR",
   heroSubheading: "Custom Graphic Design | Logo & Branding | Affordable Design for Small Businesses\n\nEddinet provides graphic design services in Delhi NCR that turn your ideas into clear, memorable visuals. We create logos, social media posts, brochures, and ad creatives that match your brand.",
-
   detailedDescription: "Does your brand look different on every platform? Are you tired of templates that make you look like everyone else? If yes, Eddinet is the solution to your problem.\n\nAs a graphic design agency in Delhi NCR, we work with startups, shops, and growing companies. We learn about your business and audience before opening any design software. You also receive clear previews at every stage, so you always know where your project stands.",
   features: [
     {
@@ -38,7 +34,7 @@ export const child = {
       description: "Small businesses need design that works hard and costs little. We create a starter kit with a logo, social media templates, and print materials. Your team can then post and print with confidence, without hiring a full-time designer.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Graphic Design Services in Delhi NCR",

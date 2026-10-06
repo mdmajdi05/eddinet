@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/hosting-migration";
 export const child = {
   slug: "managed-hosting",
-
-
-
-
   title: "Managed Hosting",
   metaTitle: "Managed Hosting Services in India | Eddinet",
   metaDescription: "Eddinet delivers managed hosting services in India where our engineers run your server, secure it, and fix problems while you run your company.",
   heroHeading: "Managed Hosting Services in India",
   heroSubheading: "Fully Managed Servers | 24/7 Support | Security & Backups Included",
-
   detailedDescription: "Eddinet delivers managed hosting services in India where our engineers run your server, secure it, and fix problems while you run your company. Patching servers at midnight and chasing backup errors should not eat into your working day. As a result, you get a stable website and a team you can call when something looks wrong.\n\nTired of servers that crash without warning? Worried about backups that no one has ever tested? Struggling to find a sysadmin you can trust? If yes, Eddinet is the solution to your problem.\n\nAs a managed hosting provider in India, we give you an experienced sysadmin team without the cost of hiring one. We learn how your website is used, take ownership of the technical routine, and log every action we take. You also receive plain-language updates, so you always know what was done on your server.",
   features: [
     {
@@ -38,7 +34,7 @@ export const child = {
       description: "Sometimes you need advice, not just maintenance. We review your setup, suggest improvements, and plan upgrades before limits are reached. You get honest guidance on what to change and what to leave alone.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Managed Hosting Services in India",

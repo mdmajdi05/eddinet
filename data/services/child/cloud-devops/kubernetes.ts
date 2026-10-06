@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/cloud-devops";
 export const child = {
   slug: "kubernetes",
-
-
-
-
   title: "Kubernetes",
   metaTitle: "Kubernetes Services in India | Eddinet",
   metaDescription: "Struggling with multi-container orchestration, microservice bottlenecks, or cloud infrastructure complexity? Eddinet provides premier Kubernetes services in",
   heroHeading: "Kubernetes Services Company in India",
   heroSubheading: "Kubernetes Consulting Services | EKS, AKS & GKE Management | Enterprise Solutions",
-
   detailedDescription: "Struggling with multi-container orchestration, microservice bottlenecks, or cloud infrastructure complexity? Eddinet provides premier Kubernetes services in India. We build, deploy, and manage production-grade cluster architectures to streamline container management, ensure auto-scaling resilience, and lower cloud compute costs.\n\nAt Eddinet, we deliver enterprise Kubernetes solutions India to turn complex container deployments into high-availability infrastructure. We manage your entire cluster lifecycle across hybrid and multi-cloud environments eliminating manual scaling delays, optimizing configurations, and preventing security outages.\n\nOur certified sysadmins provide complete cluster management:\n\nManaged Cloud Clusters: End-to-end support for Amazon EKS, Azure AKS, and Google Cloud GKE control planes and node pools.\n\nZero-Downtime Releases: Continuous cluster provisioning, ingress routing, and automated upgrades without live service disruption.\n\nHardened Security: Strict RBAC policies, Pod Security Standards, network isolation, and persistent volume protection for 24/7 safety.",
   features: [
     {
@@ -46,7 +42,7 @@ export const child = {
       description: "We deploy Prometheus and Grafana for real-time cluster health metrics, paired with persistent volume drivers (CSI) to ensure 100% database data safety during container restarts.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Kubernetes Services?",

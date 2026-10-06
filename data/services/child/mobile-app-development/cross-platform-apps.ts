@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/mobile-app-development";
 export const child = {
   slug: "cross-platform-apps",
-
-
-
-
   title: "Cross-Platform Apps",
   metaTitle: "Cross-Platform Apps Services in India | Eddinet",
   metaDescription: "Eddinet delivers premier Cross-Platform App Development Services in India with a single codebase. We build fast, native-performing iOS and Android apps that",
   heroHeading: "Cross-Platform App Development Services in India",
   heroSubheading: "Multi-Platform | Hybrid | Single-Codebase App Development",
-
   detailedDescription: "Eddinet delivers premier Cross-Platform App Development Services in India with a single codebase. We build fast, native-performing iOS and Android apps that save costs, launch faster, and reach users across both mobile ecosystems.\n\nAt Eddinet, we build multi-platform apps that perform seamlessly on Android and iOS. We help businesses cut maintenance costs and speed up product launches using single codebase development.\n\nHere is how we streamline your multi-platform app development:\n\nMulti-Platform Development: We build fast, engaging apps for both Android and iOS.\n\nHybrid App Services: We deliver cost-effective solutions that run smoothly across all devices.\n\nSingle Codebase Setup: We write code once to shorten launch times and simplify updates.\n\nScalable Performance: We engineer secure backends that handle heavy traffic effortlessly.",
   features: [
     {
@@ -62,7 +58,7 @@ export const child = {
       description: "We provide ongoing monitoring, quick bug fixes, security patches, and system updates to keep your software running properly.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet For a Cross-Platform App Development Company?",

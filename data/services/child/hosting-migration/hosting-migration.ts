@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/hosting-migration";
 export const child = {
   slug: "hosting-migration",
-
-
-
-
   title: "Hosting Migration",
   metaTitle: "Hosting Migration Services in India | Eddinet",
   metaDescription: "Eddinet delivers hosting and migration services in India that keep your website and applications fast, secure, and online.",
   heroHeading: "Hosting Migration Services in India",
   heroSubheading: "Cloud & VPS Hosting | Managed Hosting Support | Safe Website & Server Migration",
-
   detailedDescription: "Eddinet delivers hosting and migration services in India that keep your website and applications fast, secure, and online. We set up your hosting, move your data safely, and manage the servers behind it. As a result, you focus on your business while we handle the technical work.\n\nSlow servers and risky migrations cost you traffic and sales. Our team plans every move carefully, so your site stays available. Therefore, you grow without worrying about your infrastructure.\n\nEddinet is a web hosting and server migration company in India built around certified sysadmins and DevOps engineers. We help businesses replace unreliable hosting and messy server setups with one clear, well-managed plan.\n\nWe listen first, then review your current setup before making any change. Our reports use plain language, so technical and non-technical teams can act on them. At the end of each project, we hand over complete documentation.\n\nGood hosting should feel invisible. It works quietly, stays fast, and never surprises you. That is the standard we follow on every project.",
   features: [
     {
@@ -38,7 +34,7 @@ export const child = {
       description: "Our hosting and migration specialists move your website, server, or database to a new home with minimal downtime. We also handle WordPress and Shopify store migrations. Every move is tested before the switch, so your data arrives complete and intact.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Hosting and Migration Services in India",

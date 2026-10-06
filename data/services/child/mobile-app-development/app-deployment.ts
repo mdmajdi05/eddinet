@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/mobile-app-development";
 export const child = {
   slug: "app-deployment",
-
-
-
-
   title: "App Deployment",
   metaTitle: "App Deployment Services in India | Eddinet",
   metaDescription: "Publishing your app on major app stores requires complete technical compliance. At Eddinet, a leading provider of Mobile App Deployment Services in India, we",
   heroHeading: "Mobile App Deployment Services in India",
   heroSubheading: "Google Play | Apple App Store | Enterprise App Distribution",
-
   detailedDescription: "Publishing your app on major app stores requires complete technical compliance. At Eddinet, a leading provider of Mobile App Deployment Services in India, we manage your complete publishing workflow.\n\nFrom store listing setup to guideline approval, we help your business launch software smoothly on both iOS and Android platforms without delay.\n\nAt Eddinet, we help businesses publish mobile applications on the Apple App Store and Google Play Store seamlessly. As a trusted app deployment company in India, we handle everything from developer console setup to enterprise distribution, ensuring your software reaches users quickly, securely, and without policy delays.\n\nHere is how we streamline your mobile app publishing:\n\nAndroid & iOS App Deployment: We manage build configurations, store graphics, and regulatory data for a successful release.\n\nEnd-to-End App Store Submission: We prepare developer consoles, upload builds, and complete store metadata to speed up approvals.\n\nSecure & Reliable Publishing: We protect your source code using signing certificates, secure keys, and protected distribution channels.\n\nEnterprise App Distribution: We configure private distribution setups to deliver internal business apps directly to employee devices.",
   features: [
     {
@@ -46,7 +42,7 @@ export const child = {
       description: "We design clean store graphics and craft keyword-optimized titles, subtitles, and descriptions. This boosts your app's store visibility and drives higher organic downloads from day one.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet For Mobile App Deployment Services?",

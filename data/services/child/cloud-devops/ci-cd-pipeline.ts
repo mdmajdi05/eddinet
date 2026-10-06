@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/cloud-devops";
 export const child = {
   slug: "ci-cd-pipeline",
-
-
-
-
   title: "CI/CD Pipeline",
   metaTitle: "CI/CD Pipeline Services in India | Eddinet",
   metaDescription: "Eddinet provides premier CI/CD pipeline services in India. We design, automate, and manage end-to-end integration and deployment workflows eliminating",
   heroHeading: "CI/CD Pipeline Services Company in India",
   heroSubheading: "DevOps CI/CD Services | Automated Build & Deploy | Jenkins, GitLab CI & GitHub Actions Setup",
-
   detailedDescription: "Eddinet provides premier CI/CD pipeline services in India. We design, automate, and manage end-to-end integration and deployment workflows eliminating release friction, cutting deployment times from hours to minutes, and guaranteeing zero-downtime updates.\n\nEddinet transforms complex software release cycles into automated, high-speed delivery pipelines. We streamline your deployment infrastructure across leading automation platforms to stop production crashes, boost release frequency, and maintain rigorous quality control.\n\nOur certified engineering team handles your entire automation workflow:\n\nTool Chain Integration: Custom setup and speed optimization for Jenkins, GitLab CI, GitHub Actions, and Bitbucket Pipelines.\n\nAutomated Quality Gates: Embedded automated testing, code quality analysis, and vulnerability scanning before live production deployment.\n\nZero-Downtime Releases: Safe deployment strategies using blue-green rollouts, canary releases, and instant fail-safe rollbacks.",
   features: [
     {
@@ -46,7 +42,7 @@ export const child = {
       description: "We automate deployment targets across AWS, Azure, Google Cloud, DigitalOcean, Kubernetes, and bare-metal servers with centralized environment configuration.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for CI/CD Pipeline Services?",

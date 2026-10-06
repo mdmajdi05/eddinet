@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits1 } from "../_category/social-media-marketing";
 export const child = {
   slug: "facebook-and-instagram-management",
-
-
-
-
   title: "Facebook & Instagram Management",
   metaTitle: "Facebook & Instagram Management in India | Eddinet",
   metaDescription: "At Eddinet, we are not just a service provider, we are your growth partners in the digital space. As a forward-thinking agency, we provide high-impact",
   heroHeading: "Facebook & Instagram Management Services in India",
   heroSubheading: "Eddinet provides complete Facebook & Instagram management services India so you can focus on running your business. We combine eye-catching Reels, sharp content strategies, account optimization, and real-time community management to help Indian brands turn everyday social scrollers into real revenue.",
-
   detailedDescription: "At Eddinet, we are not just a service provider, we are your growth partners in the digital space. As a forward-thinking agency, we provide high-impact Facebook & Instagram management services India designed to build lasting brand authority and scale your online presence.\n\nOur mission is to empower businesses with strategic content, high-retention Reels, and proactive community management that drive real, measurable results. Whether you want to boost brand visibility, generate qualified leads, or turn everyday scrollers into loyal customers, we have got you covered.",
   features: [
     {
@@ -46,7 +42,7 @@ export const child = {
       description: "We track what actually matters, reach, click-through rates, and customer conversions. Every month, we deliver clear, fluff-free reports that show you what worked, what didn't, and how we plan to scale your ROI next.",
     },
   ],
-  benefits: [],
+  benefits: benefits1,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet For Facebook & Instagram Management Services?",

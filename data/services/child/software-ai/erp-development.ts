@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/software-ai";
 export const child = {
   slug: "erp-development",
-
-
-
-
   title: "ERP Development",
   metaTitle: "ERP Development Services in India | Eddinet",
   metaDescription: "EDDINET builds scalable, secure ERP systems that centralize enterprise data and automate operational workflows.",
   heroHeading: "Custom ERP Development Company in India",
   heroSubheading: "Enterprise ERP Systems | Bespoke ERP Solutions | Custom ERP Applications",
-
   detailedDescription: "EDDINET builds scalable, secure ERP systems that centralize enterprise data and automate operational workflows. As a premier custom ERP development company in India, we combine technical precision with corporate logic to deliver unified software tailored to your exact business rules.\n\nEDDINET helps startups, SMEs, and large enterprises design, build, and deploy high-converting digital applications.\n\nAs a leading custom ERP development company in India, we turn complex business logic into fast, secure, and scalable digital products engineered to streamline your workflows and accelerate bottom-line revenue.\n\nBy combining clean system architecture with battle-tested security, we help your business digitize operations, eliminate technical debt, and achieve compounding commercial growth.",
   features: [
     {
@@ -50,7 +46,7 @@ export const child = {
       description: "We provide continuous cloud server monitoring, automated database tuning, security patch management, and system speed optimization to ensure maximum application uptime.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for Enterprise ERP Development in India?",

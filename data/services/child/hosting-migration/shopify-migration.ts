@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/hosting-migration";
 export const child = {
   slug: "shopify-migration",
-
-
-
-
   title: "Shopify Migration",
   metaTitle: "Shopify Migration Services in India | Eddinet",
   metaDescription: "Eddinet provides end-to-end Shopify migration services in India for D2C and B2B brands. We migrate products, customers, orders, SEO URLs, and design with",
   heroHeading: "Shopify Migration Services in India",
   heroSubheading: "Shopify Store Data Migration | WooCommerce & Magento to Shopify | Zero Data Loss",
-
   detailedDescription: "Eddinet provides end-to-end Shopify migration services in India for D2C and B2B brands.\n\nWe migrate products, customers, orders, SEO URLs, and design with zero data loss.\n\nResult: faster store, better UX, and easier management on Shopify or Shopify Plus.\n\nAre you afraid of losing orders, customer accounts, or Google rankings while switching platforms? Is your current store too slow, costly, or complex to maintain? If yes, Eddinet is the solution to your problem.\n\nAs a Shopify migration company in India, we bring hands-on experience from moving stores of many sizes. We study your catalogue, customer data, and SEO setup before moving anything. You also receive plain-language updates, so you always know where your migration stands.",
   features: [
     {
@@ -46,7 +42,7 @@ export const child = {
       description: "We integrate Indian and global payment gateways (Razorpay, Cashfree, Stripe, PayU), configure shipping rules, and rebuild essential third-party app workflows.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Shopify Migration Services?",

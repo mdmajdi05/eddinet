@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/hosting-migration";
 export const child = {
   slug: "application-hosting",
-
-
-
-
   title: "Application Hosting",
   metaTitle: "Application Hosting Services in India | Eddinet",
   metaDescription: "Eddinet provides application hosting services in India where our engineers build, deploy, and manage server environments around your software stack.",
   heroHeading: "Application Hosting Services Company in India",
   heroSubheading: "Web Application Hosting | Node.js, Laravel & PHP Hosting | SaaS Infrastructure Setup",
-
   detailedDescription: "Eddinet provides application hosting services in India where our engineers build, deploy, and manage server environments around your software stack. As a result, you get faster page loads, fewer bottlenecks, and strong uptime.\n\nOur web application hosting includes low-latency database routing, automated scaling, and 24/7 proactive management. Therefore, your app stays quick and stable as your users grow.\n\nDoes your app crash under load? Do memory leaks and slow servers frustrate your users? Are you unsure whether your hosting setup is built for your code? If yes, Eddinet is the solution to your problem.\n\nAs a web application hosting company in India, we turn standard cloud servers into fast, stable environments for your applications. Our certified sysadmins manage everything from server setup to runtime tuning. As a result, your app stays available and responds quickly, even when traffic grows.",
   features: [
     {
@@ -46,7 +42,7 @@ export const child = {
       description: "We enforce strict OS security policies, deploy Web Application Firewalls (WAF), configure fail2ban brute-force protection, and issue automated SSL certificates.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Application Hosting Services?",

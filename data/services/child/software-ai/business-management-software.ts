@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/software-ai";
 export const child = {
   slug: "business-management-software",
-
-
-
-
   title: "Business Management Software",
   metaTitle: "Business Management Software Services in India | Eddinet",
   metaDescription: "EDDINET builds scalable, secure management platforms that centralize company data and automate daily operational workflows.",
   heroHeading: "Business Management Software Development Company in India",
   heroSubheading: "Enterprise Operations | Custom Management Systems | SME Digital Platforms",
-
   detailedDescription: "EDDINET builds scalable, secure management platforms that centralize company data and automate daily operational workflows. As a premier business management software development company in India, we combine clean system design with enterprise security to deliver unified tools tailored to your exact business logic.\n\nEDDINET helps startups, SMEs, and large enterprises design, build, and deploy high-converting digital applications. As a leading custom business management software company in India, we turn complex operational logic into fast, secure, and scalable platforms engineered to streamline your workflows and accelerate bottom-line revenue.",
   features: [
     {
@@ -50,7 +46,7 @@ export const child = {
       description: "We provide continuous cloud server monitoring, automated database tuning, security updates, and performance speed optimization to maintain maximum uptime.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for Enterprise Business Management System Development?",

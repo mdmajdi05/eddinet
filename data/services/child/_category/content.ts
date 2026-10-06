@@ -1,0 +1,166 @@
+// ============================================================================
+//  FILE: data/services/child/_category/content.ts
+//  CATEGORY: /services/content
+//
+//  Ye category ke US blocks ka single source hai jo sabhi child pages par
+//  bilkul same hain.  Page files ise import karti hain, copy nahi karti —
+//  isliye yahan ek change poori category me lagu ho jaata hai aur duplicate
+//  text ka scope nahi bachta.
+//
+//  Sirf >= 2 pages par shared values yahan aati hain; jo block kisi ek page
+//  ka unique hai wo usi page file me rehta hai.
+// ============================================================================
+
+import type { GeneratedChildService } from "../generated-child-services";
+
+type Block<K extends "features" | "benefits" | "whyChooseUs" | "process" | "faqs"> =
+  GeneratedChildService[K];
+
+export const features: Block<"features"> = [
+  {
+    title: "Content Strategy & Planning",
+    description: "A plan for what to create, for whom and how it supports revenue — mapped to your funnel, competitors and search landscape before a word is written.",
+  },
+  {
+    title: "Search-Driven Writing",
+    description: "Content built around search intent, topic clusters and rank potential — written for humans, structured for Google and AI search alike.",
+  },
+  {
+    title: "Conversion-Focused Copy",
+    description: "Landing pages, emails and campaign copy written to move readers to the next step — headlines, hooks, proof and clear calls to action.",
+  },
+  {
+    title: "Content Audits & Refresh",
+    description: "Finding underperformers and strengthening existing pages to extend their life — recovering rankings and traffic without starting over.",
+  },
+  {
+    title: "Editorial Calendar & Delivery",
+    description: "A monthly calendar with dependable turnaround and a clear review workflow — so publishing is a system, not a scramble.",
+  },
+  {
+    title: "Multichannel Content",
+    description: "Blog, website, social, email and campaign content produced in one system, so every channel speaks with one voice toward one goal.",
+  },
+  {
+    title: "Case Studies & Thought Leadership",
+    description: "Deep, credible content like case studies, guides and original research that build the authority that converts high-value buyers.",
+  },
+  {
+    title: "Performance Reporting",
+    description: "Content tracked against rankings, traffic and enquiries — with honest monthly insight on what's working and what to change.",
+  },
+];
+
+export const benefits: Block<"benefits"> = [
+  {
+    title: "Content That Ranks",
+    description: "Search-intent planning and topic clusters earn organic visibility over time — compounding traffic instead of one-hit posts.",
+  },
+  {
+    title: "Content That Converts",
+    description: "Copy written to move readers to the next step, not just inform — every piece knows its job in the funnel.",
+  },
+  {
+    title: "A Clear, On-Brand Voice",
+    description: "Consistent tone across blog, web, email and social that builds recognition and trust the longer it runs.",
+  },
+  {
+    title: "Dependable Delivery",
+    description: "A monthly calendar you can plan around, with reliable turnaround and a review workflow that keeps quality consistent.",
+  },
+  {
+    title: "Assets That Keep Working",
+    description: "Content refreshed and strengthened instead of abandoned after publish — your library compounds instead of decaying.",
+  },
+  {
+    title: "One System, Every Channel",
+    description: "Content feeds SEO, ads, social and email together — so nothing is written in isolation and everything reinforces the rest.",
+  },
+];
+
+export const whyChooseUs: Block<"whyChooseUs"> = {
+  heading: "Why Businesses Pick Eddinet for Content",
+  points: [
+    "Purpose Behind Every Word: Every piece has a purpose tied to the funnel, not just a word count.",
+    "Grounded in Intent: Writing is grounded in search intent and audience insight, not guesswork.",
+    "Predictable Delivery: Editorial calendars make delivery predictable for your team.",
+    "Refresh Before Rebuild: We refresh old content instead of always starting from scratch.",
+    "Content + SEO + Ads: Content is coordinated with SEO and ads as one connected system.",
+    "Real Content Metrics: Reports tie content to rankings, traffic and enquiries — not fake metrics.",
+  ],
+};
+
+export const process: Block<"process"> = {
+  heading: "How Eddinet Works, Step by Step",
+  steps: [
+    {
+      num: "01",
+      title: "Content Audit & Goals",
+      description: "We review what exists, what's working and what outcomes content must drive — so we build on strengths instead of guessing.",
+    },
+    {
+      num: "02",
+      title: "Strategy & Calendar",
+      description: "Topics, formats, channels and a monthly editorial calendar are agreed with clear ownership and deadlines.",
+    },
+    {
+      num: "03",
+      title: "Research & Writing",
+      description: "Drafts are produced with research, SEO, audience insight and conversion in mind — never templated filler.",
+    },
+    {
+      num: "04",
+      title: "Review & Revision",
+      description: "You review and we refine through structured rounds until every piece meets the bar, then it goes through final SEO checks.",
+    },
+    {
+      num: "05",
+      title: "Publish, Measure & Improve",
+      description: "Content is published on schedule, tracked for rankings and engagement, and refreshed based on how it actually performs.",
+    },
+    {
+      num: "06",
+      title: "Report & Scale",
+      description: "Monthly performance reviews guide what to scale up, repurpose or replace — the calendar gets smarter as the data grows.",
+    },
+  ],
+};
+
+export const faqs: Block<"faqs"> = [
+  {
+    q: "How long does each piece of content take?",
+    a: "Blog articles and website pages typically take 5 to 7 business days including research and review; landing pages and campaign copy are usually faster. When you have a monthly calendar, we batch work so delivery is steady and dependable rather than bursty.",
+  },
+  {
+    q: "Who reviews content before publishing?",
+    a: "You do. We deliver drafts for your review and approval, incorporate feedback, and only publish once you're happy with the final piece. If you prefer, we can also move to an approval process with defined turnarounds so publishing never stalls on waiting for a sign-off.",
+  },
+  {
+    q: "Is the content optimised for SEO?",
+    a: "Yes — every piece is built around real search intent with optimised titles, headings, meta descriptions, internal links and structured data where relevant. We write for humans first and structure for both Google and AI search results, so the content ranks and reads well.",
+  },
+  {
+    q: "Do you refresh old content as well as write new?",
+    a: "Absolutely — and it's often the fastest win. Your existing pages may already have rankings that have decayed. We audit them, update facts and depth, strengthen headlines and internal links, and push the refreshed pages back up — usually cheaper and quicker than creating new ones.",
+  },
+  {
+    q: "What kind of content does Eddinet produce?",
+    a: "We produce strategic content for search, social, campaigns, landing pages and customer journeys - designed to educate, build authority and support conversion rather than just fill pages.",
+  },
+  {
+    q: "Does content work with our SEO and ads?",
+    a: "Always. SEO content is built around search intent and topical authority, while campaign content is built for ad relevance and conversion. We plan content, SEO and paid media as one system so every piece earns its place in the funnel.",
+  },
+  {
+    q: "Do you refresh existing content or start fresh?",
+    a: "We do both. We start with a content audit to identify what is underperforming, outdated or duplicating itself, then refresh what can be salvaged and build new content only where it adds real value and rank potential.",
+  },
+  {
+    q: "How long does each piece of content take?",
+    a: "Blog articles and website pages typically take 5 to 7 business days including research and review; landing pages and campaign copy are usually faster. Timelines are locked into a monthly editorial calendar.",
+  },
+  {
+    q: "Who reviews and approves content before publishing?",
+    a: "You do. We deliver drafts for your review and approval, incorporate feedback, and only publish once you are happy with the final piece.",
+  },
+];

@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits1 } from "../_category/ecommerce";
 export const child = {
   slug: "ecommerce-optimization",
-
-
-
-
   title: "eCommerce Optimization",
   metaTitle: "eCommerce Optimization in India | Eddinet",
   metaDescription: "Are you looking for e-commerce optimization services that don't just increase traffic, but turn existing site visitors into paying customers?",
   heroHeading: "eCommerce Optimization Services in India",
   heroSubheading: "At Eddinet, we fix low conversion rates, slow page loads, and checkout drop-offs by turning existing store traffic into consistent revenue. As a performance-driven agency delivering E-Commerce Optimization Services in India, we optimize user journeys, streamline mobile performance, and eliminate buying friction so you capture maximum sales without increasing your ad spend.",
-
   detailedDescription: "Are you looking for e-commerce optimization services that don't just increase traffic, but turn existing site visitors into paying customers? At Eddinet, we specialize in refining user journeys, speeding up product pages, and removing checkout friction to scale your revenue without increasing your ad spend.\n\nOptimizing your online store is more than just making visual tweaks; it's the most effective strategy for reducing bounce rates, boosting average order values, and turning one-time buyers into loyal brand advocates.",
   features: [
     {
@@ -42,7 +38,7 @@ export const child = {
       description: "We compress media assets, streamline backend scripts, and optimize server response times to deliver sub-second load speeds that elevate Google rankings and sales.",
     },
   ],
-  benefits: [],
+  benefits: benefits1,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for E-Commerce Optimization",

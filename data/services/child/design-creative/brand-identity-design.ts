@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/design-creative";
 export const child = {
   slug: "brand-identity-design",
-
-
-
-
   title: "Brand Identity Design",
   metaTitle: "Brand Identity Design Services in India | Eddinet",
   metaDescription: "Eddinet provides brand identity design in Delhi that gives your business a distinct face, voice, and personality.",
   heroHeading: "Brand Identity Design in Delhi",
   heroSubheading: "Brand Identity Design | Visual Identity & Guidelines | Complete Branding Packages",
-
   detailedDescription: "Eddinet provides brand identity design in Delhi that gives your business a distinct face, voice, and personality. We shape how customers see you, remember you, and choose you. Book your free brand consultation today.\n\nDo customers mistake your business for a competitor? Does your brand look polished on one platform and patchy on another? If yes, Eddinet is the solution to your problem.\n\nAs a brand identity agency in Delhi, we blend strategy with craft. We study your market, your story, and your audience before choosing a single colour. You then receive a brand that feels deliberate, consistent, and unmistakably yours.",
   features: [
     {
@@ -38,7 +34,7 @@ export const child = {
       description: "Our complete branding package bundles strategy, identity, and everyday materials in one project. You receive a logo, brand kit, social media templates, stationery, and a guidelines book. Consequently, your launch looks cohesive from day one.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for Brand Identity Design in Delhi",

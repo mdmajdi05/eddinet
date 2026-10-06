@@ -7,18 +7,14 @@
 // ============================================================================
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
+import { benefits } from "../_category/mobile-app-development";
 export const child = {
   slug: "api-integration",
-
-
-
-
   title: "API Integration",
   metaTitle: "API Integration Services in India | Eddinet",
   metaDescription: "Eddinet provides premier Mobile App API Integration Services in India to connect your software with essential tools.",
   heroHeading: "Mobile App API Integration Services in India",
   heroSubheading: "API Integration | Third-Party APIs | RESTful APIs",
-
   detailedDescription: "Eddinet provides premier Mobile App API Integration Services in India to connect your software with essential tools. We build and link secure APIs to automate workflows, secure transactions, and deliver a smooth user experience across apps, servers, and cloud platforms.\n\nAt Eddinet, we connect your mobile applications with powerful external software and cloud environments to expand functionality. As a trusted API integration company in India, we streamline data transfers, automate workflows, and enhance user experiences without requiring you to rebuild your software from scratch.\n\nHere is how we streamline your mobile app API integration:\n\nThird-Party API Integration: We link payment gateways, analytics, and external software directly into your app to enable new features quickly.\n\nCustom RESTful API Development: We build tailored RESTful APIs with clean code to ensure fast, secure data transfer between devices and servers.\n\nPayment & CRM API Integration: We connect secure payment channels and CRM platforms to automate customer data tracking and payment processing.\n\nSecure & Scalable API Solutions: We use strong encryption, OAuth authentication, and rate limiting to handle high traffic volumes without service delays.",
   features: [
     {
@@ -90,7 +86,7 @@ export const child = {
       description: "We connect Google Analytics and Firebase to track user behavior, app crashes, and conversion metrics in real time.",
     },
   ],
-  benefits: [],
+  benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet For API Integration Services?",
