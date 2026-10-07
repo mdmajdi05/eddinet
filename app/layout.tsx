@@ -4,7 +4,6 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { site } from "@/data/site/contact";
 
 export const viewport: Viewport = {
@@ -141,19 +140,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-TVHR352P');`,
           }}
         />
-        {/* Google tag (gtag.js) — GA4, page source me seedha yahi dikhta hai */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-DPMM8PP3ZB"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-DPMM8PP3ZB');`,
-          }}
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
@@ -196,7 +182,6 @@ gtag('config', 'G-DPMM8PP3ZB');`,
           data-website-id="dfid_v6xdyebpgTQWzxC5pXdiH"
           data-domain="eddinet.com"
         />
-        <GoogleAnalytics />
         <ThemeProvider>
           <Header />
           <main>{children}</main>
