@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/hosting-migration/database-hosting.ts
-//  PAGE: /services/hosting-migration/database-hosting
+//  PAGE: /services/hosting-migration/database-hosting-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/hosting-migration";
 export const child = {
-  slug: "database-hosting",
+  slug: "database-hosting-services-in-india",
   title: "Database Hosting",
   metaTitle: "Database Hosting Services in India | Eddinet",
   metaDescription: "Eddinet provides database hosting services in India where our engineers set up, secure, and tune your database servers.",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Managed Database Hosting | MySQL & PostgreSQL | Secure Cloud Database Servers",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Database Hosting Services in India",
-  heroSubheading: "Managed Database Hosting | MySQL & PostgreSQL | Secure Cloud Database Servers",
-  detailedDescription: "Eddinet provides database hosting services in India where our engineers set up, secure, and tune your database servers. Your data stays fast to query, safe from loss, and ready to grow. As a result, your application no longer waits on a slow or unstable database.\n\nIs your database slowing down your application? Are you worried that one failed disk could wipe out your data? If yes, Eddinet is the solution to your problem.\n\nAs a managed database hosting provider in India, we give you an experienced database and sysadmin team without the cost of hiring one. We study how your application reads and writes data, then build a hosting setup around those patterns. You also receive plain-language reports, so you always know the health of your data.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "Eddinet provides database hosting services in India where our engineers set up, secure, and tune your database servers. Your data stays fast to query, safe from loss, and ready to grow. As a result, your application no longer waits on a slow or unstable database.",
+  detailedDescription: "Is your database slowing down your application? Are you worried that one failed disk could wipe out your data? If yes, Eddinet is the solution to your problem.\n\nAs a managed database hosting provider in India, we give you an experienced database and sysadmin team without the cost of hiring one. We study how your application reads and writes data, then build a hosting setup around those patterns. You also receive plain-language reports, so you always know the health of your data.",
   features: [
     {
       title: "Managed Database Hosting in India",
@@ -34,6 +42,8 @@ export const child = {
       description: "Our cloud database hosting places your data on secure, scalable cloud servers. Storage and compute can grow when your needs increase. We also add private networking and encryption, so your data stays away from public access.",
     },
   ],
+  featuresHeading: "Our Database Hosting Services in India",
+  featuresDescription: "We concentrate on four areas that decide whether a database stays fast and safe.",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -44,12 +54,12 @@ export const child = {
       "Locked-down access by default: Databases are exposed to only the servers that need them. Strong passwords, encryption, and access logs are standard. This closes the doors attackers look for first.",
       "Room to grow without downtime drama: We plan storage and memory increases before limits are reached. Upgrades are scheduled for quiet hours. Your application keeps running while the database grows.",
       "Clear alerts, fewer false alarms: We set alert thresholds around your real usage. Your team hears about disk space, replication lag, and slow queries early. Noise is kept low, so real warnings stand out.",
-      "Support in Indian business hours: Our team is online when your working day begins. Urgent issues reach people who already know your setup. Therefore, you spend less time explaining and more time fixing.",
+      "Support in Indian business hours: Our team is online when your working day begins. Urgent issues reach people who already know your setup. Therefore, you spend less time explaining and more time fixing. We measure success by faster queries, reliable backups, and steady uptime. Ready to give your data a safer home? Contact Eddinet today for a free consultation and a database hosting plan built for your application.",
     ],
-    description: "We measure success by faster queries, reliable backups, and steady uptime.",
   },
   process: {
     heading: "Our Process for Database Hosting Setup in India",
+    description: "Here is how we move you from a fragile database to a stable, well-protected one.",
     steps: [
       {
         num: "01",
@@ -82,7 +92,6 @@ export const child = {
         description: "Finally, we track load, storage, and slow queries around the clock. Each month, we share a short report and suggest improvements. Your database stays healthy as your business grows.",
       },
     ],
-    description: "Here is how we move you from a fragile database to a stable, well-protected one.",
   },
   testimonials: sharedTestimonials,
   faqs: [
@@ -108,8 +117,6 @@ export const child = {
     },
   ],
   crossLinks: crossLinksFor("hosting-migration"),
-  featuresHeading: "Our Database Hosting Services in India",
-  featuresDescription: "We concentrate on four areas that decide whether a database stays fast and safe.",
   docxHeadings: {
     about: "About Us: Managed Database Hosting Provider in India",
     process: "Our Process for Database Hosting Setup in India",

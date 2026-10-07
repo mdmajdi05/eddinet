@@ -3,7 +3,7 @@ import {
   type Service,
 } from "@/data/services/services";
 import { seoItemToSlug } from "@/data/services/child/seo-child-services";
-import { childPages } from "./pages";
+import { childPages, seoChildPages } from "./pages";
 
 export interface GeneratedChildFeature {
   title: string;
@@ -52,13 +52,28 @@ export interface GeneratedChildService {
   image: string;
   detailedDescription: string;
   features: GeneratedChildFeature[];
+  /** Section headings copied verbatim from the source .docx, when known. */
+  featuresHeading?: string;
+  featuresDescription?: string;
   benefits: GeneratedChildFeature[];
+  benefitsHeading?: string;
+  benefitsDescription?: string;
   metrics: GeneratedChildMetric[];
   whyChooseUs: { heading: string; points: string[] };
   process: { heading: string; steps: GeneratedChildStep[] };
   testimonials: GeneratedChildTestimonial[];
   faqs: GeneratedChildFaq[];
   crossLinks: GeneratedChildCrossLink[];
+  /** Heading the source document used for each section (about/process/faqs). */
+  docxHeadings?: { about?: string; process?: string; faqs?: string };
+  /** Industry list written in the source document (else the shared section). */
+  industries?: {
+    heading: string;
+    description?: string;
+    items: GeneratedChildFeature[];
+  };
+  /** Closing CTA copy written in the source document. */
+  cta?: { heading: string; sub?: string; description?: string };
 }
 
 export function slugify(text: string): string {
@@ -1764,9 +1779,25 @@ function getSlugMap(catSlug: string): Record<string, string> {
   return slugMaps[catSlug];
 }
 
+/**
+ * Menu item name (services.ts `allItems`) → us page ka ASLI slug.
+ *
+ * Slug manually rakha jaata hai (heroHeading se copy karke, hardcoded) —
+ * isliye yahan item ka slugify() assume karna galat hai. Pehle actual
+ * child page dhundo (category + title match), uska slug return karo.
+ * Fallback: purana slugify(item) (agar us item ki koi page file nahi hai).
+ */
 export function getChildSlug(catSlug: string, item: string): string | null {
-  if (catSlug === "seo") return seoItemToSlug[item] ?? null;
-  return getSlugMap(catSlug)[item] ?? slugify(item);
+  if (catSlug === "seo") {
+    const seo = Object.values(seoChildPages).find(
+      (c) => c.title === item,
+    );
+    return seo?.slug ?? seoItemToSlug[item] ?? null;
+  }
+  const match = Object.values(childPages).find(
+    (c) => c.categorySlug === catSlug && c.item === item,
+  );
+  return match?.slug ?? getSlugMap(catSlug)[item] ?? slugify(item);
 }
 
 // Content ab per-page files se aata hai (ek page = ek file):

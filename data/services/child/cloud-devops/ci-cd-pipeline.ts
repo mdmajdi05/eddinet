@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/cloud-devops/ci-cd-pipeline.ts
-//  PAGE: /services/cloud-devops/ci-cd-pipeline
+//  PAGE: /services/cloud-devops/ci-cd-pipeline-services-company-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/cloud-devops";
 export const child = {
-  slug: "ci-cd-pipeline",
+  slug: "ci-cd-pipeline-services-company-in-india",
   title: "CI/CD Pipeline",
   metaTitle: "CI/CD Pipeline Services in India | Eddinet",
   metaDescription: "Eddinet provides premier CI/CD pipeline services in India. We design, automate, and manage end-to-end integration and deployment workflows eliminating",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "DevOps CI/CD Services | Automated Build & Deploy | Jenkins, GitLab CI & GitHub Actions Setup",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "CI/CD Pipeline Services Company in India",
-  heroSubheading: "DevOps CI/CD Services | Automated Build & Deploy | Jenkins, GitLab CI & GitHub Actions Setup",
-  detailedDescription: "Eddinet provides premier CI/CD pipeline services in India. We design, automate, and manage end-to-end integration and deployment workflows eliminating release friction, cutting deployment times from hours to minutes, and guaranteeing zero-downtime updates.\n\nEddinet transforms complex software release cycles into automated, high-speed delivery pipelines. We streamline your deployment infrastructure across leading automation platforms to stop production crashes, boost release frequency, and maintain rigorous quality control.\n\nOur certified engineering team handles your entire automation workflow:\n\nTool Chain Integration: Custom setup and speed optimization for Jenkins, GitLab CI, GitHub Actions, and Bitbucket Pipelines.\n\nAutomated Quality Gates: Embedded automated testing, code quality analysis, and vulnerability scanning before live production deployment.\n\nZero-Downtime Releases: Safe deployment strategies using blue-green rollouts, canary releases, and instant fail-safe rollbacks.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "Eddinet provides premier CI/CD pipeline services in India. We design, automate, and manage end-to-end integration and deployment workflows eliminating release friction, cutting deployment times from hours to minutes, and guaranteeing zero-downtime updates.",
+  detailedDescription: "Eddinet transforms complex software release cycles into automated, high-speed delivery pipelines. We streamline your deployment infrastructure across leading automation platforms to stop production crashes, boost release frequency, and maintain rigorous quality control.\n\nOur certified engineering team handles your entire automation workflow:\n\nTool Chain Integration: Custom setup and speed optimization for Jenkins, GitLab CI, GitHub Actions, and Bitbucket Pipelines.\n\nAutomated Quality Gates: Embedded automated testing, code quality analysis, and vulnerability scanning before live production deployment.\n\nZero-Downtime Releases: Safe deployment strategies using blue-green rollouts, canary releases, and instant fail-safe rollbacks.",
   features: [
     {
       title: "CI/CD Pipeline Setup India",
@@ -42,6 +50,7 @@ export const child = {
       description: "We automate deployment targets across AWS, Azure, Google Cloud, DigitalOcean, Kubernetes, and bare-metal servers with centralized environment configuration.",
     },
   ],
+  featuresHeading: "Our CI/CD Pipeline Services in India",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -112,8 +121,12 @@ export const child = {
       a: "We configure automated health tracking that detects post-deployment errors and automatically redirects traffic to the previous stable build within seconds, completely preventing downtime.",
     },
   ],
+  cta: {
+    heading: "Accelerate Your Software Delivery Pipelines",
+    sub: "Discuss Your CI/CD Requirements",
+    description: "Ready to stop wasting developer hours on manual deployment tasks and ship reliable software faster? Partner with Eddinet to build a lightning-fast, bulletproof CI/CD pipeline. Contact our DevOps engineering team today to schedule your technical consultation!",
+  },
   crossLinks: crossLinksFor("cloud-devops"),
-  featuresHeading: "Our CI/CD Pipeline Services in India",
   docxHeadings: {
     about: "About Us: CI/CD Pipeline Setup Company in India",
     process: "Our CI/CD Implementation Process in India",

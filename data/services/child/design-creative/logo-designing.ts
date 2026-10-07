@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/design-creative/logo-designing.ts
-//  PAGE: /services/design-creative/logo-designing
+//  PAGE: /services/design-creative/logo-design-services-in-delhi-by-eddinet
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/design-creative";
 export const child = {
-  slug: "logo-designing",
+  slug: "logo-design-services-in-delhi-by-eddinet",
   title: "Logo Designing",
-  metaTitle: "Logo Designing Services in India | Eddinet",
+  metaTitle: "Logo Design Services in Delhi | Eddinet",
   metaDescription: "Eddinet delivers premium logo design services in Delhi NCR to give your brand an iconic, unforgettable visual identity.",
-  heroHeading: "Logo Design Services in Delhi",
-  heroSubheading: "Custom Logo Design | Logos for Startups | Professional Brand Identity",
-  detailedDescription: "Eddinet delivers premium logo design services in Delhi NCR to give your brand an iconic, unforgettable visual identity. We design every logo custom from the ground up crafted around your brand narrative, target market, and growth vision. Stand out with a timeless mark that builds instant credibility. Get your free logo consultation today!\n\nDoes your current logo look like a hundred others? Is it blurry on your website or unreadable on a visiting card? If yes, Eddinet is the solution to your problem.\n\nAs a logo designing company in Delhi, we have created marks for shops, startups, and growing businesses. We learn what makes you different before sketching the first idea. You also see clear previews at every stage, so you always know where your logo stands.",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Custom Logo Design | Logos for Startups | Professional Brand Identity",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
+  heroHeading: "Logo Design Services in Delhi by EDDINET",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "Eddinet delivers premium logo design services in Delhi NCR to give your brand an iconic, unforgettable visual identity. We design every logo custom from the ground up crafted around your brand narrative, target market, and growth vision. Stand out with a timeless mark that builds instant credibility. Get your free logo consultation today!",
+  detailedDescription: "Does your current logo look like a hundred others? Is it blurry on your website or unreadable on a visiting card? If yes, Eddinet is the solution to your problem.\n\nAs a logo designing company in Delhi, we have created marks for shops, startups, and growing businesses. We learn what makes you different before sketching the first idea. You also see clear previews at every stage, so you always know where your logo stands.",
   features: [
     {
       title: "Custom Logo Design in Delhi",
@@ -34,6 +42,8 @@ export const child = {
       description: "Startups need a strong look without a large budget. We offer focused packages that cover a logo, colour palette, and social media profile images. Your brand looks established from the first day, and you can add more later.",
     },
   ],
+  featuresHeading: "Our Logo Design Services in Delhi",
+  featuresDescription: "We focus on four areas that decide whether a logo works for your business.",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -49,6 +59,7 @@ export const child = {
   },
   process: {
     heading: "Our Process for Logo Design in Delhi",
+    description: "Here is how we take your logo from the first conversation to the final files.",
     steps: [
       {
         num: "01",
@@ -81,7 +92,6 @@ export const child = {
         description: "Finally, you receive print-ready and web-ready files, plus a short usage guide. We remain available for future updates. Your logo is ready for use everywhere.",
       },
     ],
-    description: "Here is how we take your logo from the first conversation to the final files.",
   },
   testimonials: sharedTestimonials,
   faqs: [
@@ -107,8 +117,6 @@ export const child = {
     },
   ],
   crossLinks: crossLinksFor("design-creative"),
-  featuresHeading: "Our Logo Design Services in Delhi",
-  featuresDescription: "We focus on four areas that decide whether a logo works for your business.",
   docxHeadings: {
     about: "About Us: Logo Designing Company in Delhi",
     process: "Our Process for Logo Design in Delhi",

@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/content/website-content.ts
-//  PAGE: /services/content/website-content
+//  PAGE: /services/content/website-content-services-in-delhi-ncr
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
@@ -9,7 +9,7 @@
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { features, benefits, whyChooseUs, process, faqs } from "../_category/content";
 export const child = {
-  slug: "website-content",
+  slug: "website-content-services-in-delhi-ncr",
   title: "Website Content",
   metaTitle: "Website Content Services in Delhi NCR | Eddinet",
   metaDescription: "Persuasive site copy that communicates value and leads visitors to convert. Words that explain, convince and close. Eddinet delivers dependable website content services in Delhi NCR for India and global clients. Get a free proposal today.",

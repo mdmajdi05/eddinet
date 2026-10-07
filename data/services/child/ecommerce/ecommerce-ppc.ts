@@ -1,19 +1,27 @@
 // ============================================================================
 //  FILE: data/services/child/ecommerce/ecommerce-ppc.ts
-//  PAGE: /services/ecommerce/ecommerce-ppc
+//  PAGE: /services/ecommerce/ecommerce-ppc-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits1 } from "../_category/ecommerce";
 export const child = {
-  slug: "ecommerce-ppc",
+  slug: "ecommerce-ppc-services-in-india",
   title: "eCommerce PPC",
   metaTitle: "eCommerce PPC Services in India | Eddinet",
   metaDescription: "Are you looking for e-commerce PPC management that does not just drive empty traffic, but actively lowers your customer acquisition costs and scales revenue?",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Product & Category Optimization | Search & Display Campaign Setup | Social Media Advertising",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "eCommerce PPC Services in India",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
   heroSubheading: "At Eddinet, we fix high ad spend and low return on ad spend (ROAS) by running laser-targeted campaigns that convert online shoppers into paying customers. Delivering data-backed E-Commerce PPC Services in India, we build and manage dynamic shopping ads, high-intent search campaigns, and retargeting workflows designed to maximize profits and lower your customer acquisition costs.",
   detailedDescription: "Are you looking for e-commerce PPC management that does not just drive empty traffic, but actively lowers your customer acquisition costs and scales revenue? At Eddinet, we specialize in managing high-ROI shopping campaigns, dynamic retargeting flows, and performance-driven product ads tailored for growing brands.\n\nPaid advertising is more than just buying clicks; it's the fastest engine for capturing high-intent shoppers, converting abandoned carts into repeat buyers, and maximizing profit margins on every product in your catalog.",
   features: [
@@ -38,12 +46,13 @@ export const child = {
       description: "We clean up and continuously manage your Google Merchant Center product feeds optimizing titles, attributes, and images for maximum exposure.",
     },
   ],
+  featuresHeading: "Our E-Commerce PPC Services in India",
   benefits: benefits1,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose Eddinet for E-Commerce PPC",
     points: [
-      "E-Commerce Focused PPC Strategy: We build custom ad strategies engineered specifically around catalog size, order value, and profit margins-never generic templates.",
+      "E-Commerce Focused PPC Strategy: We build custom ad strategies engineered specifically around catalog size, order value, and profit margins—never generic templates.",
       "High-Intent Buyer Targeting: We segment and target shoppers displaying clear buying signals, ensuring your ad budget is spent only on high-converting traffic.",
       "Expertise in Shopping & Product Ads: We specialize in setup and bid management for Google Shopping and Meta Catalog Ads to maximize sales volume.",
       "Optimized Product Feed Management: We manage and optimize your product feed, including titles, descriptions, and attributes, improving ad relevance, visibility, and overall performance.",
@@ -108,7 +117,6 @@ export const child = {
     },
   ],
   crossLinks: crossLinksFor("ecommerce"),
-  featuresHeading: "Our E-Commerce PPC Services in India",
   docxHeadings: {
     about: "About Eddinet: E-Commerce Ad Solutions",
     process: "Our E-Commerce PPC Process",

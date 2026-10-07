@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/software-ai/ai-agents.ts
-//  PAGE: /services/software-ai/ai-agents
+//  PAGE: /services/software-ai/ai-agents-development-company-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/software-ai";
 export const child = {
-  slug: "ai-agents",
+  slug: "ai-agents-development-company-in-india",
   title: "AI Agents",
   metaTitle: "AI Agents Services in India | Eddinet",
   metaDescription: "EDDINET constructs high-speed, autonomous AI agent architectures engineered to execute multi-step business logic without manual intervention.",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Autonomous AI Agents | Enterprise Agentic Workflows | Multi-Agent Systems",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "AI Agents Development Company in India",
-  heroSubheading: "Autonomous AI Agents | Enterprise Agentic Workflows | Multi-Agent Systems",
-  detailedDescription: "EDDINET constructs high-speed, autonomous AI agent architectures engineered to execute multi-step business logic without manual intervention. As a premier AI agents development company in India, we combine advanced Large Language Model (LLM) reasoning with secure enterprise tool integrations.\n\nModern organizations utilize agentic workflows to handle decision-making tasks, optimize routine processes, and achieve predictable operational throughput.\n\nEDDINET designs autonomous software agents, intelligent workflow architectures, and multi-agent coordination frameworks. As a dedicated AI agents development company in India, we transform complex operational workflows into self-executing digital processes.\n\nOur engineering team combines tool-calling LLM pipelines with enterprise data protection protocols. Consequently, we help growing brands eliminate repetitive administrative tasks, improve task execution precision, and scale digital operations effortlessly.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "EDDINET constructs high-speed, autonomous AI agent architectures engineered to execute multi-step business logic without manual intervention. As a premier AI agents development company in India, we combine advanced Large Language Model (LLM) reasoning with secure enterprise tool integrations. Modern organizations utilize agentic workflows to handle decision-making tasks, optimize routine processes, and achieve predictable operational throughput.",
+  detailedDescription: "EDDINET designs autonomous software agents, intelligent workflow architectures, and multi-agent coordination frameworks. As a dedicated AI agents development company in India, we transform complex operational workflows into self-executing digital processes.\n\nOur engineering team combines tool-calling LLM pipelines with enterprise data protection protocols. Consequently, we help growing brands eliminate repetitive administrative tasks, improve task execution precision, and scale digital operations effortlessly.",
   features: [
     {
       title: "Autonomous AI Agents Development Services in India",
@@ -31,7 +39,7 @@ export const child = {
     },
     {
       title: "Multi-Agent AI Systems India",
-      description: "We engineer collaborative multi-agent ecosystems where specialized agents-such as research, execution, and validation agents-communicate seamlessly to complete complex enterprise tasks.",
+      description: "We engineer collaborative multi-agent ecosystems where specialized agents—such as research, execution, and validation agents—communicate seamlessly to complete complex enterprise tasks.",
     },
     {
       title: "Agentic RAG & Knowledge Base Integration",
@@ -46,10 +54,13 @@ export const child = {
       description: "We provide continuous monitoring of agent execution paths, cost tracking, loop prevention tuning, and security guardrail management for maximum reliability.",
     },
   ],
+  featuresHeading: "Our Autonomous AI Agents Development Services",
+  featuresDescription: "We offer comprehensive engineering services to design, build, and deploy custom autonomous AI agents across your core software ecosystem.",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for Enterprise AI Agent Solutions India?",
+    description: "We combine frontier AI research with enterprise software practices to build autonomous agents that drive measurable commercial efficiency.",
     points: [
       "Deterministic & Safe Execution: We implement strict output guardrails, action-boundary checks, and manual approval triggers to ensure agents operate safely within corporate policies.",
       "Enterprise-Grade Security Standards: We enforce end-to-end data encryption, private cloud hosting setups, and granular access controls to keep confidential organizational workflows protected.",
@@ -57,10 +68,10 @@ export const child = {
       "Full Process Transparency: We share live staging environments, agent execution logs, and detailed progress reports throughout the build cycle to maintain total visibility.",
       "Dedicated Post-Launch Support: We offer continuous SLA-backed maintenance contracts to manage agent prompt tuning, model upgrades, and system scaling as operational workloads grow.",
     ],
-    description: "We combine frontier AI research with enterprise software practices to build autonomous agents that drive measurable commercial efficiency.",
   },
   process: {
     heading: "Our AI Agents Development Process in India",
+    description: "We follow a systematic agile methodology to engineer stable and predictable autonomous agent architectures for your organization.",
     steps: [
       {
         num: "01",
@@ -98,7 +109,6 @@ export const child = {
         description: "We analyze agent execution histories and edge cases to refine reasoning prompts and optimize system execution speed over time.",
       },
     ],
-    description: "We follow a systematic agile methodology to engineer stable and predictable autonomous agent architectures for your organization.",
   },
   testimonials: sharedTestimonials,
   faqs: [
@@ -131,9 +141,12 @@ export const child = {
       a: "Yes, we engineer human-in-the-loop escalation rules that require human approval before agents execute high-risk or high-value actions.",
     },
   ],
+  cta: {
+    heading: "Build Your Autonomous AI Agent Ecosystem With EDDINET",
+    sub: "Discuss Your AI Agent Requirements",
+    description: "Ready to automate your complex business operations with secure, goal-driven AI agents? Contact the engineering team at EDDINET today to schedule a technical consultation and receive a clear project estimate.",
+  },
   crossLinks: crossLinksFor("software-ai"),
-  featuresHeading: "Our Autonomous AI Agents Development Services",
-  featuresDescription: "We offer comprehensive engineering services to design, build, and deploy custom autonomous AI agents across your core software ecosystem.",
   docxHeadings: {
     about: "About Us: AI Agents Development Company in India",
     process: "Our AI Agents Development Process in India",

@@ -1,13 +1,13 @@
 // ============================================================================
 //  FILE: data/services/child/seo/ai-seo.ts
-//  PAGE: /services/seo/ai-seo
+//  PAGE: /services/seo/ai-seo-generative-seo-service-in-delhi-ncr
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
 
 export const child = {
-  slug: "ai-seo",
+  slug: "ai-seo-generative-seo-service-in-delhi-ncr",
   title: "AI SEO (Generative SEO)",
   metaTitle: "AI SEO (Generative SEO) Service in Delhi | Eddinet",
   metaDescription: "We offer advanced AI SEO (Generative SEO) service in Delhi to automate, scale and future-proof your SEO. GEO, semantic targeting and visibility on ChatGPT, Gemini and Google AI Overviews. Get a free AI SEO audit.",

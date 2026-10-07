@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/mobile-app-development/custom-mobile-apps.ts
-//  PAGE: /services/mobile-app-development/custom-mobile-apps
+//  PAGE: /services/mobile-app-development/custom-mobile-app-development-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/mobile-app-development";
 export const child = {
-  slug: "custom-mobile-apps",
+  slug: "custom-mobile-app-development-services-in-india",
   title: "Custom Mobile Apps",
   metaTitle: "Custom Mobile Apps Services in India | Eddinet",
   metaDescription: "Eddinet delivers top-tier Custom Mobile App Development Services in India tailored strictly to your unique workflows and business needs.",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Custom | Enterprise | Mobile App Solutions",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Custom Mobile App Development Services in India",
-  heroSubheading: "Custom | Enterprise | Mobile App Solutions",
-  detailedDescription: "Eddinet delivers top-tier Custom Mobile App Development Services in India tailored strictly to your unique workflows and business needs. We combine intuitive design with scalable engineering to build fast, reliable apps that streamline operations, engage users, and drive long-term growth.\n\nAt Eddinet, we build custom mobile applications engineered around your unique business goals, workflows, and growth targets. As a trusted mobile app development company in India, we deliver secure, high-performing digital products that scale seamlessly alongside your expanding user base.\n\nHere is how we streamline your custom mobile app development:\n\nCustom Mobile App Solutions: We build tailored applications from scratch to match your operational goals, branding, and feature requirements.\n\nEnterprise Custom App Development: We digitize organizational workflows and build robust software capable of handling heavy data loads securely.\n\nCustomer Mobile Software Development: We craft engaging consumer-facing apps designed to improve user satisfaction, drive retention, and accelerate revenue growth.\n\nScalable & Secure Applications: We deploy resilient cloud architectures and strict data protection protocols to keep your app fast and safe.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "Eddinet delivers top-tier Custom Mobile App Development Services in India tailored strictly to your unique workflows and business needs. We combine intuitive design with scalable engineering to build fast, reliable apps that streamline operations, engage users, and drive long-term growth.",
+  detailedDescription: "At Eddinet, we build custom mobile applications engineered around your unique business goals, workflows, and growth targets. As a trusted mobile app development company in India, we deliver secure, high-performing digital products that scale seamlessly alongside your expanding user base.\n\nHere is how we streamline your custom mobile app development:\n\nCustom Mobile App Solutions: We build tailored applications from scratch to match your operational goals, branding, and feature requirements.\n\nEnterprise Custom App Development: We digitize organizational workflows and build robust software capable of handling heavy data loads securely.\n\nCustomer Mobile Software Development: We craft engaging consumer-facing apps designed to improve user satisfaction, drive retention, and accelerate revenue growth.\n\nScalable & Secure Applications: We deploy resilient cloud architectures and strict data protection protocols to keep your app fast and safe.",
   features: [
     {
       title: "Custom Mobile App Development",
@@ -90,6 +98,7 @@ export const child = {
       description: "We build specialized digital platforms for healthcare, finance, logistics, real estate, and education sectors.",
     },
   ],
+  featuresHeading: "Our Custom Mobile App Development Services",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -185,8 +194,12 @@ export const child = {
       a: "Yes, we offer ongoing maintenance plans covering server monitoring, rapid bug fixes, security updates, and adjustments for new operating system releases.",
     },
   ],
+  cta: {
+    heading: "BUILD YOUR CUSTOM MOBILE APP WITH EDDINET",
+    sub: "Discuss Your Custom App Requirements",
+    description: "Ready to turn your business needs into a high-performing digital product? Partner with Eddinet to build a secure, scalable mobile app built for speed and long-term growth. Contact our technical team today to schedule your consultation!",
+  },
   crossLinks: crossLinksFor("mobile-app-development"),
-  featuresHeading: "Our Custom Mobile App Development Services",
   docxHeadings: {
     about: "About Our Custom Mobile App Development Company in India",
     process: "Our Custom Mobile App Development Process",

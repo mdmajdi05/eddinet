@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/content/campaign-content.ts
-//  PAGE: /services/content/campaign-content
+//  PAGE: /services/content/campaign-content-services-in-delhi-ncr
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
@@ -9,7 +9,7 @@
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { features, benefits, whyChooseUs, process, faqs } from "../_category/content";
 export const child = {
-  slug: "campaign-content",
+  slug: "campaign-content-services-in-delhi-ncr",
   title: "Campaign Content",
   metaTitle: "Campaign Content Services in Delhi NCR | Eddinet",
   metaDescription: "On-brand creative and copy tailored to each campaign goal and channel. Assets that perform in the exact format and placement you need. Eddinet delivers dependable campaign content services in Delhi NCR for India and global clients. Get a free proposal today.",

@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/design-creative/brand-identity-design.ts
-//  PAGE: /services/design-creative/brand-identity-design
+//  PAGE: /services/design-creative/brand-identity-design-in-delhi
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/design-creative";
 export const child = {
-  slug: "brand-identity-design",
+  slug: "brand-identity-design-in-delhi",
   title: "Brand Identity Design",
   metaTitle: "Brand Identity Design Services in India | Eddinet",
   metaDescription: "Eddinet provides brand identity design in Delhi that gives your business a distinct face, voice, and personality.",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Brand Identity Design | Visual Identity & Guidelines | Complete Branding Packages",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Brand Identity Design in Delhi",
-  heroSubheading: "Brand Identity Design | Visual Identity & Guidelines | Complete Branding Packages",
-  detailedDescription: "Eddinet provides brand identity design in Delhi that gives your business a distinct face, voice, and personality. We shape how customers see you, remember you, and choose you. Book your free brand consultation today.\n\nDo customers mistake your business for a competitor? Does your brand look polished on one platform and patchy on another? If yes, Eddinet is the solution to your problem.\n\nAs a brand identity agency in Delhi, we blend strategy with craft. We study your market, your story, and your audience before choosing a single colour. You then receive a brand that feels deliberate, consistent, and unmistakably yours.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "Eddinet provides brand identity design in Delhi that gives your business a distinct face, voice, and personality. We shape how customers see you, remember you, and choose you.",
+  detailedDescription: "Do customers mistake your business for a competitor? Does your brand look polished on one platform and patchy on another? If yes, Eddinet is the solution to your problem.\n\nAs a brand identity agency in Delhi, we blend strategy with craft. We study your market, your story, and your audience before choosing a single colour. You then receive a brand that feels deliberate, consistent, and unmistakably yours.",
   features: [
     {
       title: "Visual Identity Design",
@@ -34,6 +42,8 @@ export const child = {
       description: "Our complete branding package bundles strategy, identity, and everyday materials in one project. You receive a logo, brand kit, social media templates, stationery, and a guidelines book. Consequently, your launch looks cohesive from day one.",
     },
   ],
+  featuresHeading: "Our Brand Identity Design Services in Delhi",
+  featuresDescription: "We focus on four services that turn a business into a recognisable brand.",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -49,6 +59,7 @@ export const child = {
   },
   process: {
     heading: "Our Process for Brand Identity Design in Delhi",
+    description: "Here is how a rough idea becomes a finished brand.",
     steps: [
       {
         num: "01",
@@ -81,7 +92,6 @@ export const child = {
         description: "Finally, we deliver the brand book and all working files. A short walkthrough helps your team apply it correctly. Your identity is ready to scale.",
       },
     ],
-    description: "Here is how a rough idea becomes a finished brand.",
   },
   testimonials: sharedTestimonials,
   faqs: [
@@ -107,8 +117,6 @@ export const child = {
     },
   ],
   crossLinks: crossLinksFor("design-creative"),
-  featuresHeading: "Our Brand Identity Design Services in Delhi",
-  featuresDescription: "We focus on four services that turn a business into a recognisable brand.",
   docxHeadings: {
     about: "About Us: Brand Identity Agency in Delhi",
     process: "Our Process for Brand Identity Design in Delhi",

@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/design-creative/product-design.ts
-//  PAGE: /services/design-creative/product-design
+//  PAGE: /services/design-creative/product-design-services-in-delhi
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
@@ -9,7 +9,7 @@
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/design-creative";
 export const child = {
-  slug: "product-design",
+  slug: "product-design-services-in-delhi",
   title: "Product Design",
   metaTitle: "Product Design Services in India | Eddinet",
   metaDescription: "EDDINET provides product design services in Delhi that take an idea from a rough sketch to something people can see, touch, and use.",

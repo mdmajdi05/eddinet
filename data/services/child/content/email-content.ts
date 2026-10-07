@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/content/email-content.ts
-//  PAGE: /services/content/email-content
+//  PAGE: /services/content/email-content-services-in-delhi-ncr
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
@@ -9,7 +9,7 @@
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { features, benefits, whyChooseUs, process, faqs } from "../_category/content";
 export const child = {
-  slug: "email-content",
+  slug: "email-content-services-in-delhi-ncr",
   title: "Email Content",
   metaTitle: "Email Content Services in Delhi NCR | Eddinet",
   metaDescription: "Emails that nurture, announce and convert across the customer lifecycle. Messaging that earns opens, clicks and replies. Eddinet delivers dependable email content services in Delhi NCR for India and global clients. Get a free proposal today.",

@@ -1,13 +1,13 @@
 // ============================================================================
 //  FILE: data/services/child/seo/shopify-seo.ts
-//  PAGE: /services/seo/shopify-seo
+//  PAGE: /services/seo/shopify-seo-services-in-delhi-ncr
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
 
 export const child = {
-  slug: "shopify-seo",
+  slug: "shopify-seo-services-in-delhi-ncr",
   title: "Shopify SEO",
   metaTitle: "Shopify SEO Services in Delhi NCR | Eddinet",
   metaDescription: "Rank your Shopify store higher on Google. Eddinet's Shopify SEO tackles platform-specific challenges â€” theme speed, URL structure & technical limitations. Get a free audit.",

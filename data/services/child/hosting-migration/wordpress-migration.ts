@@ -1,25 +1,33 @@
 // ============================================================================
 //  FILE: data/services/child/hosting-migration/wordpress-migration.ts
-//  PAGE: /services/hosting-migration/wordpress-migration
+//  PAGE: /services/hosting-migration/wordpress-migration-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/hosting-migration";
 export const child = {
-  slug: "wordpress-migration",
+  slug: "wordpress-migration-services-in-india",
   title: "WordPress Migration",
   metaTitle: "WordPress Migration Services in India | Eddinet",
   metaDescription: "Eddinet delivers premier WordPress migration services in India. We engineer seamless, zero-downtime server transfers preserving custom database",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "WordPress Website Migration | Zero-Downtime Host Transfer | Database & Asset Optimization",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "WordPress Migration Services in India",
-  heroSubheading: "WordPress Website Migration | Zero-Downtime Host Transfer | Database & Asset Optimization",
-  detailedDescription: "Eddinet delivers premier WordPress migration services in India. We engineer seamless, zero-downtime server transfers preserving custom database serializations, retaining permalinks, and safeguarding search rankings.\n\nStop risking lost WooCommerce orders, corrupted database tables, and site outages. Our high-fidelity migration workflows move your WordPress sites to new cloud hosts with absolute precision and zero data loss.\n\nEddinet provides specialist WordPress website migration India solutions to convert risky host transfers into smooth, zero-downtime server deployments. We bypass fragile migration plugins by using direct SSH transfers and WP-CLI commands-guaranteeing 100% data fidelity and performance optimization.\n\nOur certified engineers manage your entire migration lifecycle:\n\nMigrate WordPress Site to New Host India: Full-stack migration of core files, custom themes, active plugins, and MySQL databases across any cloud provider.\n\nWordPress Hosting Migration Without Downtime India: Staging deployment, live delta database synchronization, and TTL-managed DNS switchovers.\n\nWordPress Site Transfer Service India: Specialized transfers for WooCommerce stores, custom ACF configurations, and complex WordPress Multisite networks.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "Eddinet delivers premier WordPress migration services in India. We engineer seamless, zero-downtime server transfers preserving custom database serializations, retaining permalinks, and safeguarding search rankings. Stop risking lost WooCommerce orders, corrupted database tables, and site outages. Our high-fidelity migration workflows move your WordPress sites to new cloud hosts with absolute precision and zero data loss.",
+  detailedDescription: "Eddinet provides specialist WordPress website migration India solutions to convert risky host transfers into smooth, zero-downtime server deployments. We bypass fragile migration plugins by using direct SSH transfers and WP-CLI commands—guaranteeing 100% data fidelity and performance optimization.\n\nOur certified engineers manage your entire migration lifecycle:\n\nMigrate WordPress Site to New Host India: Full-stack migration of core files, custom themes, active plugins, and MySQL databases across any cloud provider.\n\nWordPress Hosting Migration Without Downtime India: Staging deployment, live delta database synchronization, and TTL-managed DNS switchovers.\n\nWordPress Site Transfer Service India: Specialized transfers for WooCommerce stores, custom ACF configurations, and complex WordPress Multisite networks.",
   features: [
     {
       title: "WordPress Migration Services in India",
-      description: "We execute deep, manual-assisted migrations for high-traffic WordPress sites-verifying file permissions, PHP version compatibility, and server environment requirements before going live.",
+      description: "We execute deep, manual-assisted migrations for high-traffic WordPress sites—verifying file permissions, PHP version compatibility, and server environment requirements before going live.",
     },
     {
       title: "WordPress Website Migration India",
@@ -42,6 +50,7 @@ export const child = {
       description: "We map 301 redirects (if domain names change), maintain canonical tags, preserve permalinks, and re-verify SSL configuration to keep your Google search rankings completely intact.",
     },
   ],
+  featuresHeading: "Our WordPress Migration Services in India",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -112,8 +121,12 @@ export const child = {
       a: "Most standard WordPress migrations are completed within 2 to 6 hours. Larger WooCommerce stores or multisite networks are scheduled with detailed maintenance windows and completed within 12 to 24 hours.",
     },
   ],
+  cta: {
+    heading: "Move Your WordPress Site to a Faster Host Safely",
+    sub: "Discuss Your WordPress Migration Requirements",
+    description: "Ready to upgrade your WordPress hosting environment without losing traffic, orders, or search rankings? Partner with Eddinet for a precision-engineered, zero-downtime WordPress migration. Contact our engineering team today to schedule your technical consultation!",
+  },
   crossLinks: crossLinksFor("hosting-migration"),
-  featuresHeading: "Our WordPress Migration Services in India",
   docxHeadings: {
     about: "About Us: WordPress Migration Experts",
     process: "Our WordPress Migration Process in India",

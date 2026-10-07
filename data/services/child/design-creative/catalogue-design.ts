@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/design-creative/catalogue-design.ts
-//  PAGE: /services/design-creative/catalogue-design
+//  PAGE: /services/design-creative/catalogue-design-services-in-delhi
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/design-creative";
 export const child = {
-  slug: "catalogue-design",
+  slug: "catalogue-design-services-in-delhi",
   title: "Catalogue Design",
   metaTitle: "Catalogue Design Services in India | Eddinet",
   metaDescription: "EDDINET delivers creative catalogue design services in Delhi that turn product information into clear, engaging, and sales-focused visuals.",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Custom Product Catalogues | Digital & E-Catalogues | Print-Ready B2B Sales Collateral",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Catalogue Design Services in Delhi",
-  heroSubheading: "Custom Product Catalogues | Digital & E-Catalogues | Print-Ready B2B Sales Collateral",
-  detailedDescription: "EDDINET delivers creative catalogue design services in Delhi that turn product information into clear, engaging, and sales-focused visuals. We combine smart layouts, structured product presentation, and strong visual hierarchy to make every catalogue easy to explore and built to convert.\n\nAt EDDINET, we turn dense product data into visually compelling sales channels. Poorly structured SKU lists, inconsistent image formatting, and weak typography slow down procurement decisions and hurt B2B sales conversions. Therefore, our product catalogue design agency crafts precision-engineered print and digital showcase assets built for clarity and impact.\n\nOur design team manages your entire catalog architecture end-to-end. We build structured company catalogue design layouts, offer high-resolution catalog design services, and deliver interactive digital catalogue design and e-catalogue design assets optimized for instant global distribution, mobile viewing, and web-based buying.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "EDDINET delivers creative catalogue design services in Delhi that turn product information into clear, engaging, and sales-focused visuals. We combine smart layouts, structured product presentation, and strong visual hierarchy to make every catalogue easy to explore and built to convert.",
+  detailedDescription: "At EDDINET, we turn dense product data into visually compelling sales channels. Poorly structured SKU lists, inconsistent image formatting, and weak typography slow down procurement decisions and hurt B2B sales conversions. Therefore, our product catalogue design agency crafts precision-engineered print and digital showcase assets built for clarity and impact.\n\nOur design team manages your entire catalog architecture end-to-end. We build structured company catalogue design layouts, offer high-resolution catalog design services, and deliver interactive digital catalogue design and e-catalogue design assets optimized for instant global distribution, mobile viewing, and web-based buying.",
   features: [
     {
       title: "Custom Product Catalogue Design",
@@ -42,6 +50,7 @@ export const child = {
       description: "We build interactive web-based e-catalogues featuring clickable buy-now links that connect directly to your online store or WhatsApp business ordering funnel.",
     },
   ],
+  featuresHeading: "Our Catalogue Design Services in Delhi",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -52,11 +61,6 @@ export const child = {
       "Dual Print & Digital Mastery: We deliver both high-end print-ready files and fast-loading interactive e-catalogues optimized for mobile and desktop screens.",
       "End-to-End Asset Handling: Complete management covering data structuring, image retouching, vector icon creation, layout execution, and pre-press prep.",
       "Full File Ownership: You retain 100% commercial ownership and editable source files (Adobe InDesign, Illustrator, vector packages) upon project completion.",
-      "Catalogue Solutions for Multi-Industry Inventories",
-      "Industrial, Manufacturing & Spare Parts: Data-dense technical catalogues, part schematic diagrams, cross-reference tables, and heavy-equipment specification guides.",
-      "Fashion, Apparel & Lifestyle: Sleek lookbooks, seasonal collection catalogues, fabric swatch showcases, and lifestyle product look-sheets.",
-      "Home Decor, Furniture & Architecture: High-resolution interior showcases, material specification sheets, modular furniture catalogs, and finish guides.",
-      "FMCG, Cosmetics & Retail: Product lineup brochures, promotional trade catalogues, packaging showcases, and distributor order books.",
     ],
   },
   process: {
@@ -89,6 +93,27 @@ export const child = {
       },
     ],
   },
+  industries: {
+    heading: "Catalogue Solutions for Multi-Industry Inventories",
+    items: [
+      {
+        title: "Industrial, Manufacturing & Spare Parts",
+        description: "Data-dense technical catalogues, part schematic diagrams, cross-reference tables, and heavy-equipment specification guides.",
+      },
+      {
+        title: "Fashion, Apparel & Lifestyle",
+        description: "Sleek lookbooks, seasonal collection catalogues, fabric swatch showcases, and lifestyle product look-sheets.",
+      },
+      {
+        title: "Home Decor, Furniture & Architecture",
+        description: "High-resolution interior showcases, material specification sheets, modular furniture catalogs, and finish guides.",
+      },
+      {
+        title: "FMCG, Cosmetics & Retail",
+        description: "Product lineup brochures, promotional trade catalogues, packaging showcases, and distributor order books.",
+      },
+    ],
+  },
   testimonials: sharedTestimonials,
   faqs: [
     {
@@ -99,9 +124,29 @@ export const child = {
       q: "What is the difference between a print catalogue and a digital e-catalogue design?",
       a: "A print catalogue is formatted in high-resolution CMYK with bleed marks for commercial printing. A digital e-catalogue design is built in RGB with hyperlinked table-of-contents navigation, clickable external links, and compressed file sizes for fast email sharing and web viewing.",
     },
+    {
+      q: "Do you handle catalog design services for US and international clients?",
+      a: "Yes. Our catalog design services accommodate both Indian and international sizing standards (A4, Letter format, square catalogs) and follow global B2B inventory formatting practices.",
+    },
+    {
+      q: "How many products can you fit in a product catalogue design?",
+      a: "We can structure catalogues for inventories ranging from a concise 8-page product highlight showcase to complex 200+ page industrial component catalogues with thousands of individual SKUs.",
+    },
+    {
+      q: "Will I receive editable source files for my company catalogue design?",
+      a: "Yes. Upon project settlement, we deliver complete editable open source files (Adobe InDesign) along with all packaged fonts, vector icons, and linked high-resolution images.",
+    },
+    {
+      q: "How long does a catalogue designing company in Delhi take to deliver a project?",
+      a: "Standard 12-to-24 page product catalogues are typically completed within 5 to 8 business days, while multi-hundred-page technical catalogues are scheduled across structured sprint milestones.",
+    },
   ],
+  cta: {
+    heading: "Showcase Your Products With Impact",
+    sub: "Discuss Your Catalogue Design Requirements",
+    description: "Ready to turn your product line into a high-converting sales engine? Partner with EDDINET for custom, high-precision catalogue design services in Delhi. Contact our creative design team today to schedule your consultation!",
+  },
   crossLinks: crossLinksFor("design-creative"),
-  featuresHeading: "Our Catalogue Design Services in Delhi",
   docxHeadings: {
     about: "About EDDINET: Product Catalogue Design Experts",
     process: "Our Catalogue Design Process",

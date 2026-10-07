@@ -1,55 +1,59 @@
 // ============================================================================
 //  FILE: data/services/child/web-development/shopify-development.ts
-//  PAGE: /services/web-development/shopify-development
+//  PAGE: /services/web-development/shopify-development-company-in-delhi
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
-  slug: "shopify-development",
-
-
-
-
+  slug: "shopify-development-company-in-delhi",
   title: "Shopify Development",
   metaTitle: "Shopify & WooCommerce Development Services in India | Eddinet",
   metaDescription: "An online store is only as good as the experience it gives your customers. Eddinet builds Shopify & WooCommerce stores that load fast, convert visitors into buyers, and scale smoothly as your business grows.",
-  heroHeading: "Shopify & WooCommerce Development Services in Delhi NCR",
-  heroSubheading: "An online store is only as good as the experience it gives your customers. If checkout feels clunky or the site lags on mobile, shoppers abandon their cart and buy from a competitor instead. That's why growing brands and established retailers alike choose Eddinet for Shopify & WooCommerce Development Services in India. We build stores that load fast, convert visitors into buyers, and scale smoothly as your business grows.",
-
-  detailedDescription: "Eddinet is an India-based development team specializing in Shopify Woo Solutions — from custom Shopify themes to fully tailored WooCommerce builds.\n\nWe design every store around how your customers actually shop, not a one-size-fits-all template. That focus on real buying behavior is what makes our stores convert better than a standard setup.",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Custom Shopify Stores | Shopify Plus | D2C Brands | Theme & App Development | Store Migration",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
+  heroHeading: "Shopify Development Company in Delhi",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "EDDINET is a Shopify development company in Delhi. We combine custom theme development, smooth checkout design, and conversion-focused UX to build online stores that sell more and scale easily.",
+  detailedDescription: "Launching a Shopify store is easy. Growing it is the hard part. Too many apps and basic themes slow your store down, so visitors leave and ad spend goes to waste.\n\nThat is why our Shopify development company in Delhi builds every store around speed and sales. We study your products, customers, and growth plan first. Then we build a store that turns visitors into buyers.\n\nWe deliver Shopify development services in India for new and established brands. As a Shopify store development agency in India, we also add custom features when you need them. In addition, we help brands move to Shopify Plus development in India and launch D2C Shopify development in Delhi that is ready to scale.",
   features: [
     {
-      title: "Custom Shopify Store Development",
-      description: "We design and build Shopify stores from the ground up — clean navigation, fast product pages, and a checkout flow built to convert.",
+      title: "Shopify Development Services in India",
+      description: "We build complete Shopify stores from setup to launch. Each store has a clean design, fast loading speed, and a checkout flow that reduces drop-offs.",
     },
     {
-      title: "WooCommerce Store Development",
-      description: "For businesses that want full control over their store, we build secure, scalable WooCommerce sites on WordPress, tailored to your exact catalog and workflow.",
+      title: "Custom Shopify Theme Development",
+      description: "We code custom themes in Liquid instead of using heavy ready-made templates. Your store gets a unique look, better speed, and full design control.",
     },
     {
-      title: "Theme Customization & Store Redesign",
-      description: "Already have a store that isn't performing? We redesign and customize existing Shopify or WooCommerce themes to improve speed, usability, and conversions.",
+      title: "Shopify Store Development Agency in India",
+      description: "We act as your dedicated store team. We handle product setup, collections, navigation, payment gateways, shipping rules, and third-party integrations.",
     },
     {
-      title: "Payment Gateway & Shipping Integration",
-      description: "We integrate the payment gateways, shipping providers, and tax rules your business needs, so orders move smoothly from cart to delivery.",
+      title: "Shopify Plus Development India",
+      description: "We build enterprise-ready stores on Shopify Plus. This includes custom checkout, multi-store setups, wholesale features, and automation for high-volume brands.",
     },
     {
-      title: "App & Plugin Integration",
-      description: "From inventory management to marketing automation, we connect the right Shopify apps and WooCommerce plugins to extend your store's functionality.",
+      title: "D2C Shopify Development Delhi",
+      description: "We help direct-to-consumer brands launch and grow online. Your store gets subscription options, bundles, upsells, and loyalty features that raise order value.",
     },
     {
-      title: "Store Migration",
-      description: "Moving from Shopify to WooCommerce, WooCommerce to Shopify, or from another platform entirely — we handle migrations without losing your product data, SEO rankings, or order history.",
+      title: "Shopify App Development & Integrations",
+      description: "We build custom apps and connect your store with CRM, ERP, inventory, and shipping tools. Your operations run smoothly without manual work.",
     },
     {
-      title: "Ongoing Store Maintenance & Support",
-      description: "We provide continuous updates, security monitoring, and performance checks so your store stays fast, safe, and always ready for traffic spikes.",
+      title: "Store Migration & Redesign",
+      description: "We move your store from WooCommerce, Magento, or other platforms to Shopify. We also redesign slow stores without losing your SEO rankings.",
     },
   ],
+  featuresHeading: "Our Shopify Development Services in India",
   benefits: [
     {
       title: "Faster Page Load Speed",
@@ -78,85 +82,107 @@ export const child = {
   ],
   metrics: sharedMetrics,
   whyChooseUs: {
-    heading: "Why Choose Us for Shopify & WooCommerce Development Services in India",
+    heading: "Why Choose EDDINET as Your Shopify Development Company in Delhi?",
     points: [
-      "Platform-Agnostic Expertise: We're equally skilled in Shopify and WooCommerce, so you get honest platform advice, not a one-size-fits-all pitch.",
-      "Conversion-Focused Design: Every layout and flow decision is made with one goal: turning browsers into buyers.",
-      "Transparent Pricing & Timelines: Clear quotes and realistic timelines from the start, with no hidden costs along the way.",
-      "Dedicated Support: You get a direct point of contact for updates, questions, or urgent fixes — not a generic support ticket queue.",
-      "Proven E-Commerce Experience: We've built and scaled stores across multiple industries, adapting to each business's unique catalog and customer base.",
+      "Custom Code, Not Bloat: We avoid unnecessary apps. Clean code keeps your store fast and easy to manage.",
+      "Conversion-Focused Design: Every page is built to guide shoppers from product to checkout.",
+      "Mobile-First Approach: Most online shoppers use phones. Therefore, we design for small screens first.",
+      "SEO-Ready Setup: We handle clean URLs, structured data, metadata, and speed during the build.",
+      "Indian Market Expertise: We set up UPI, COD, Razorpay, and local shipping partners that Indian customers expect.",
+      "Clear Timelines: We follow set milestones from design to launch. As a result, your store goes live on time.",
     ],
   },
   process: {
-    heading: "Our Shopify Woo Solutions Process",
+    heading: "Our Shopify Development Process",
     steps: [
       {
         num: "01",
-        title: "Discovery & Planning",
-        description: "We learn your product catalog, target customers, and business goals to map out the right approach.",
+        title: "Discovery & Requirement Analysis",
+        description: "We learn about your products, target customers, and business goals. After that, we agree on the scope, features, and timeline.",
       },
       {
         num: "02",
-        title: "Platform Strategy",
-        description: "We help you decide between Shopify and WooCommerce based on your budget, scale, and long-term plans, if you haven't already chosen.",
+        title: "UX Planning & Store Structure",
+        description: "Our team plans your navigation, collections, and product page layout. This step creates a clear buying journey before design begins.",
       },
       {
         num: "03",
-        title: "Design",
-        description: "We create a store layout and visual design aligned with your brand, built to guide shoppers toward checkout.",
+        title: "UI Design & Visual Style",
+        description: "Our designers create store layouts for desktop and mobile. We choose colours, fonts, and visuals that match your brand. You review the designs and share feedback.",
       },
       {
         num: "04",
-        title: "Development & Integrations",
-        description: "Our developers build out the store, connect payment gateways, shipping rules, and any required apps or plugins.",
+        title: "Theme Development & Integration",
+        description: "Once the design is approved, our developers build the theme with clean Liquid code. We also set up payments, shipping, taxes, and apps.",
       },
       {
         num: "05",
-        title: "Testing & QA",
-        description: "We test every product page, cart flow, and checkout path across devices to catch issues before launch.",
+        title: "Testing, Launch & Support",
+        description: "Before launch, we test speed, checkout, devices, and payment flows. Then we publish your store and stay available for updates and support.",
+      },
+    ],
+  },
+  industries: {
+    heading: "Shopify Stores for Multi-Industry Needs",
+    items: [
+      {
+        title: "Fashion & Lifestyle",
+        description: "Visual product pages, size guides, and easy returns that build buyer confidence.",
       },
       {
-        num: "06",
-        title: "Launch",
-        description: "Your store goes live with a smooth transition and no disruption to existing orders or customers.",
+        title: "Beauty, Health & Wellness",
+        description: "Subscription options, bundles, and review sections that increase repeat orders.",
       },
       {
-        num: "07",
-        title: "Post-Launch Support",
-        description: "We continue monitoring performance and providing updates as your store grows.",
+        title: "Home, Electronics & Gifting",
+        description: "Detailed product pages, filters, and comparison tools that help customers decide faster.",
+      },
+      {
+        title: "B2B & Wholesale Brands",
+        description: "Bulk pricing, customer accounts, and quick-order forms for business buyers.",
       },
     ],
   },
   testimonials: sharedTestimonials,
   faqs: [
     {
-      q: "Should I choose Shopify or WooCommerce for my store?",
-      a: "It depends on your budget, technical needs, and growth plans. Shopify offers a faster, more managed setup, while WooCommerce gives you more control and flexibility on your own WordPress site. We help you choose based on what fits your business, not a fixed agenda.",
+      q: "What does a Shopify development company do?",
+      a: "A Shopify development company designs, builds, and customises online stores on the Shopify platform. This includes themes, apps, integrations, and store optimisation.",
     },
     {
-      q: "How much does Shopify or WooCommerce development cost?",
-      a: "Cost depends on store complexity, number of products, and the integrations you need. Eddinet provides a clear, transparent quote after understanding your requirements — no hidden charges.",
+      q: "How much do Shopify development services in India cost?",
+      a: "The cost depends on design needs, number of products, and custom features. A standard store costs less than a custom or Shopify Plus build. Share your requirements, and we will send a clear quote.",
     },
     {
-      q: "How long does it take to build an online store?",
-      a: "A standard store is typically ready in 3–4 weeks, while stores with custom features, multiple integrations, or large catalogs can take 5–8 weeks.",
+      q: "How long does a Shopify development company in Delhi take to build a store?",
+      a: "Most stores take 3 to 6 weeks. This covers design, development, and testing. Custom builds may take longer, and we confirm the timeline before we start.",
     },
     {
-      q: "Can you migrate my existing store to Shopify or WooCommerce?",
-      a: "Yes. We migrate stores between platforms without losing product data, order history, or existing SEO rankings.",
+      q: "What is the difference between Shopify and Shopify Plus?",
+      a: "Shopify Plus is the enterprise plan. It offers checkout customisation, higher scalability, automation tools, and multi-store management. It suits fast-growing and high-volume brands.",
     },
     {
-      q: "Will my store be optimized for mobile shoppers?",
-      a: "Absolutely. Every store we build is designed mobile-first, since the majority of online shopping now happens on phones.",
+      q: "Can you build a Shopify store for my D2C brand?",
+      a: "Yes. We build D2C stores with bundles, subscriptions, upsells, and tracking that help you grow with ads and repeat sales.",
     },
     {
-      q: "Do you provide support after the store goes live?",
-      a: "Yes. We offer ongoing maintenance, security monitoring, and performance support to keep your store running smoothly long after launch.",
+      q: "Can you migrate my existing store to Shopify?",
+      a: "Yes. We move your products, customers, and orders safely. We also set up redirects, so you keep your search rankings.",
     },
     {
-      q: "Can you integrate specific payment gateways or shipping providers?",
-      a: "Yes, we integrate the payment gateways, shipping partners, and tax configurations specific to your business and target market.",
+      q: "Do I get full ownership of my store?",
+      a: "Yes. Your store and custom theme code belong to you once the project is complete.",
     },
   ],
+  cta: {
+    heading: "Build a Shopify Store That Sells",
+    sub: "Discuss Your Shopify Requirements",
+    description: "Ready to grow your online store? Partner with EDDINET, a trusted Shopify development company in Delhi. Contact our team today to schedule a free consultation and get a clear quote within 24 hours. [Get a Free Quote] | [Call Us: +91-XXXXXXXXXX]",
+  },
   crossLinks: crossLinksFor("web-development"),
+  docxHeadings: {
+    about: "About EDDINET: Shopify Development Company in Delhi",
+    process: "Our Shopify Development Process",
+    faqs: "Frequently Asked Questions",
+  },
 };

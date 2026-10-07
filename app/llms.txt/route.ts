@@ -3,6 +3,7 @@ import { seoChildServices } from "@/data/services/child/seo-child-services";
 import { generatedChildServices } from "@/data/services/child/generated-child-services";
 import { insights } from "@/data/blog/blog";
 import { caseStudies } from "@/data/portfolio/case-studies";
+import { projectCategories } from "@/data/portfolio/portfolio";
 import { site } from "@/data/site/contact";
 
 export const dynamic = "force-static";
@@ -69,6 +70,11 @@ export async function GET() {
     }
   } else {
     sections.push("- No case studies published yet. Contact us for proof of work: " + site.email);
+  }
+  sections.push("");
+  sections.push("## Portfolio\n");
+  for (const c of projectCategories) {
+    sections.push(`- [${c.label} projects](${base}/portfolio/${c.key}): Client work in ${c.label.toLowerCase()}`);
   }
   sections.push("");
 

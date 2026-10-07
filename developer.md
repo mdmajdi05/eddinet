@@ -172,7 +172,27 @@ npm run dev        # http://localhost:3000
 npm run build      # production build
 npx tsc --noEmit   # type check
 npm start          # production serve (after build)
+npm run serve      # standalone serve (Dockerfile-style, copies static+public)
 ```
+
+### 🛡️ Site Checker — mandatory build-time check
+
+Har **build ke baad** AI agent ko yeh run karna hai (rule: hard requirement):
+
+```bash
+npm run check:site
+```
+
+- Checker project bahar hai: `../site-checker/` (eddinet-next se independent, kisi bhi project pe chal sakta hai).
+- Config: `site-checker.config.json` (baseUrl, thresholds, kaunse rules on/off).
+- Server khud start/stop karta hai (`scripts/serve-standalone.mjs`), crawl ~170 pages + assets, phir rules lagata hai:
+  `broken-links`, `not-found` (soft-404), `thin-content`, `sitemap` (coverage/freshness), `llms-txt`, `breadcrumbs`, `page-issues`.
+- Report: `site-checker-report/report.md` + `report.json` (console pe bhi summary).
+- `failOn: "error"` → koi bhi error issue ho to exit code 1 (CI/build fail). Warnings report me rehti hain.
+- Exit codes: `0` pass, `1` issues found, `2` fatal (server/crawl fail) — agent ko in teeno ko decode karna hai.
+
+**Naya rule add karna ho:** `../site-checker/src/rules/<id>.mjs` me ek file banao (`{ id, title, description, defaultSeverity, check(ctx) }`), auto-load ho jayega. Details: `../site-checker/README.md`.
+
 
 **Yeh files kaam ke liye:**
 - Meta/SEO → `app/layout.tsx`
@@ -199,6 +219,7 @@ npm start          # production serve (after build)
 - [ ] Blog: har post ka own OG image + JSON-LD image
 - [ ] RSS feed.xml banao
 - [ ] Suspicious 404 check: /hi/, /case-studies/*
+- [ ] `npm run check:site` → 0 errors (site-checker, har build ke baad run karo)
 
 ### 🟠 Week 2 — Content
 - [ ] 15+ blog posts (categories/tags ke saath)

@@ -1,19 +1,27 @@
 // ============================================================================
 //  FILE: data/services/child/ecommerce/ecommerce-website.ts
-//  PAGE: /services/ecommerce/ecommerce-website
+//  PAGE: /services/ecommerce/ecommerce-website-development-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits1 } from "../_category/ecommerce";
 export const child = {
-  slug: "ecommerce-website",
+  slug: "ecommerce-website-development-in-india",
   title: "eCommerce Website",
   metaTitle: "eCommerce Website Services in India | Eddinet",
   metaDescription: "Are you looking for digital marketing and development services that not only elevate your visual presence but actively grow your bottom line?",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Custom eCommerce Website Development | Conversion-Driven UI/UX | Mobile-Optimized Shopping",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "eCommerce Website Development in India",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
   heroSubheading: "At Eddinet, we fix slow speeds and high cart abandonment by building fast, custom online stores. As a leading ecommerce website development company in India, we combine conversion-focused design with robust coding to deliver secure, mobile-first platforms engineered for growth.",
   detailedDescription: "Are you looking for digital marketing and development services that not only elevate your visual presence but actively grow your bottom line? At Eddinet, we specialize in engineering high-speed websites, targeted ad campaigns, and SEO strategies that align directly with your revenue targets.\n\nDigital growth is more than just online visibility; it's the core engine of your business designed to capture qualified leads, engage intent buyers, and convert traffic into long-term revenue.",
   features: [
@@ -50,6 +58,7 @@ export const child = {
       description: "We sync your store directly with your CRM, ERP, accounting software, and marketing stack for seamless operations.",
     },
   ],
+  featuresHeading: "E-Commerce Website Development Services",
   benefits: benefits1,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -63,7 +72,7 @@ export const child = {
       "Performance-Focused Websites: We optimize images, clean up scripts, and leverage edge caching to deliver sub-second page load speeds that boost both SEO and sales.",
       "Business-Focused Approach: We build stores designed around core business metrics focusing on average order value (AOV), conversion rates, and repeat customer retention.",
       "Ongoing Support & Improvement: We provide dedicated technical support, plugin updates, server management, and continuous feature enhancements post-launch.",
-      "E-Commerce Website Development in India",
+      "E-Commerce Website Development in India: ",
       "Payment & Shipping Integrations: We configure localized payment processors (UPI, PayTM, Razorpay) and native Indian logistics services (Shiprocket, Delhivery, BlueDart) to deliver seamless local buying experiences.",
       "Scalable Solutions for Growing Brands: Through our eCommerce Development Services, our e-commerce builds scale effortlessly alongside your growth, handling expanding SKUs, thousands of concurrent visitors, and multi-region expansion with ease.",
     ],
@@ -128,7 +137,6 @@ export const child = {
     },
   ],
   crossLinks: crossLinksFor("ecommerce"),
-  featuresHeading: "E-Commerce Website Development Services",
   docxHeadings: {
     about: "About Us Web Design Agency",
     process: "Our E-Commerce Website Development Process",

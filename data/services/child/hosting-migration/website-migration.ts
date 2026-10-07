@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/hosting-migration/website-migration.ts
-//  PAGE: /services/hosting-migration/website-migration
+//  PAGE: /services/hosting-migration/website-migration-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/hosting-migration";
 export const child = {
-  slug: "website-migration",
+  slug: "website-migration-services-in-india",
   title: "Website Migration",
   metaTitle: "Website Migration Services in India | Eddinet",
   metaDescription: "Eddinet provides website migration services in India where our engineers move your files, databases, and emails to a new server with care.",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Website Migration Without Downtime | Safe Website Transfer | cPanel to cPanel Moves",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Website Migration Services in India",
-  heroSubheading: "Website Migration Without Downtime | Safe Website Transfer | cPanel to cPanel Moves",
-  detailedDescription: "Eddinet provides website migration services in India where our engineers move your files, databases, and emails to a new server with care. Every move is planned, backed up, and tested first. As a result, your site keeps its speed, its data, and its search rankings.\n\nHas a past website move broken your pages or lost your emails? Are you afraid that switching hosts will wipe out your Google rankings? If yes, Eddinet is the solution to your problem.\n\nAs a website migration company in India, we give you an experienced sysadmin team that has handled moves of every size. We study how your site, domain, and email fit together, then plan the transfer around them. You also receive plain-language updates, so you always know where your migration stands.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "Eddinet provides website migration services in India where our engineers move your files, databases, and emails to a new server with care. Every move is planned, backed up, and tested first. As a result, your site keeps its speed, its data, and its search rankings.",
+  detailedDescription: "Has a past website move broken your pages or lost your emails? Are you afraid that switching hosts will wipe out your Google rankings? If yes, Eddinet is the solution to your problem.\n\nAs a website migration company in India, we give you an experienced sysadmin team that has handled moves of every size. We study how your site, domain, and email fit together, then plan the transfer around them. You also receive plain-language updates, so you always know where your migration stands.",
   features: [
     {
       title: "Website Migration Without Downtime in India",
@@ -34,6 +42,8 @@ export const child = {
       description: "Problems often appear days after a move, not on the day itself. We keep watching your site, fix broken links, and confirm that emails and forms work. You also get a clear checklist showing what was moved and verified.",
     },
   ],
+  featuresHeading: "Our Website Migration Services in India",
+  featuresDescription: "We focus on four areas that decide whether a move goes smoothly.",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -49,6 +59,7 @@ export const child = {
   },
   process: {
     heading: "Our Process for Website Migration in India",
+    description: "Here is how we move your site from the old host to the new one.",
     steps: [
       {
         num: "01",
@@ -81,7 +92,6 @@ export const child = {
         description: "Finally, we watch errors, speed, and search visibility for several days. Redirects and broken links are corrected. Once you are satisfied, we help you retire the old server.",
       },
     ],
-    description: "Here is how we move your site from the old host to the new one.",
   },
   testimonials: sharedTestimonials,
   faqs: [
@@ -107,8 +117,6 @@ export const child = {
     },
   ],
   crossLinks: crossLinksFor("hosting-migration"),
-  featuresHeading: "Our Website Migration Services in India",
-  featuresDescription: "We focus on four areas that decide whether a move goes smoothly.",
   docxHeadings: {
     about: "About Us: Website Migration Company in India",
     process: "Our Process for Website Migration in India",

@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/ads-ppc/lead-generation-ads.ts
-//  PAGE: /services/ads-ppc/lead-generation-ads
+//  PAGE: /services/ads-ppc/lead-generation-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
@@ -9,7 +9,7 @@
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/ads-ppc";
 export const child = {
-  slug: "lead-generation-ads",
+  slug: "lead-generation-services-in-india",
   title: "Lead Generation Ads",
   metaTitle: "Lead Generation Ads Services in India | Eddinet",
   metaDescription: "At Eddinet, we build performance-driven lead generation campaigns that deliver predictable sales pipelines for businesses across India.",

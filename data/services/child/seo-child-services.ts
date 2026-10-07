@@ -96,15 +96,15 @@ export function getSeoChildBySlug(slug: string): SeoChildService | undefined {
 }
 
 export const seoItemToSlug: Record<string, string> = {
-  "AI SEO (Generative SEO)": "ai-seo",
-  "Lead Generation SEO": "lead-generation-seo",
-  "Local SEO": "local-seo",
-  "Enterprise SEO": "enterprise-seo",
-  "B2B SEO": "b2b-seo",
-  "Technical SEO": "technical-seo",
-  "International SEO": "international-seo",
-  "Programmatic SEO": "programmatic-seo",
-  "Amazon SEO": "amazon-seo",
-  "eCommerce SEO": "ecommerce-seo",
-  "Shopify SEO": "shopify-seo",
+  "AI SEO (Generative SEO)": "ai-seo-generative-seo-service-in-delhi-ncr",
+  "Lead Generation SEO": "lead-generation-seo-services-in-india",
+  "Local SEO": "local-seo-services-in-delhi-ncr",
+  "Enterprise SEO": "enterprise-seo-services-in-delhi-ncr",
+  "B2B SEO": "b2b-seo-services-in-delhi-ncr",
+  "Technical SEO": "technical-seo-services-in-delhi-ncr",
+  "International SEO": "international-seo-services-in-delhi-ncr",
+  "Programmatic SEO": "programmatic-seo-services-in-delhi-ncr",
+  "Amazon SEO": "amazon-seo-services-in-delhi-ncr",
+  "eCommerce SEO": "ecommerce-seo-services-in-delhi-ncr",
+  "Shopify SEO": "shopify-seo-services-in-delhi-ncr",
 };

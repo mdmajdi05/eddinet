@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/ads-ppc/linkedin-ads.ts
-//  PAGE: /services/ads-ppc/linkedin-ads
+//  PAGE: /services/ads-ppc/linkedin-ads-agency-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
@@ -9,7 +9,7 @@
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/ads-ppc";
 export const child = {
-  slug: "linkedin-ads",
+  slug: "linkedin-ads-agency-in-india",
   title: "LinkedIn Ads",
   metaTitle: "LinkedIn Ads Services in India | Eddinet",
   metaDescription: "At Eddinet, we build and manage B2B LinkedIn Advertising campaigns that directly connect your offer with high-value decision-makers.",

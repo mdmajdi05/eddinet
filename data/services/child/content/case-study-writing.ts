@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/content/case-study-writing.ts
-//  PAGE: /services/content/case-study-writing
+//  PAGE: /services/content/case-study-writing-services-in-delhi-ncr
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
@@ -9,7 +9,7 @@
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { features, benefits, whyChooseUs, process, faqs } from "../_category/content";
 export const child = {
-  slug: "case-study-writing",
+  slug: "case-study-writing-services-in-delhi-ncr",
   title: "Case Study Writing",
   metaTitle: "Case Study Writing Services in Delhi NCR | Eddinet",
   metaDescription: "Proof-driven stories that document results and build credibility. The evidence that wins the deals your landing pages can't. Eddinet delivers dependable case study writing services in Delhi NCR for India and global clients. Get a free proposal today.",

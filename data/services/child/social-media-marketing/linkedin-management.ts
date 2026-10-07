@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/social-media-marketing/linkedin-management.ts
-//  PAGE: /services/social-media-marketing/linkedin-management
+//  PAGE: /services/social-media-marketing/linkedin-management-services-in-delhi-ncr
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
@@ -9,7 +9,7 @@
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { features, benefits2, whyChooseUs, process, faqs } from "../_category/social-media-marketing";
 export const child = {
-  slug: "linkedin-management",
+  slug: "linkedin-management-services-in-delhi-ncr",
   title: "LinkedIn Management",
   metaTitle: "LinkedIn Management Services in Delhi NCR | Eddinet",
   metaDescription: "LinkedIn presence, thought-leadership content and lead-focused engagement for a professional audience. The channel where B2B buyers decide — handled with credibility and consistency. Eddinet delivers dependable linkedin management services in Delhi NCR for India and global clients. Get a free proposal today.",

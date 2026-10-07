@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/social-media-marketing/social-media-strategy.ts
-//  PAGE: /services/social-media-marketing/social-media-strategy
+//  PAGE: /services/social-media-marketing/social-media-strategy-services-in-delhi-ncr
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
@@ -9,7 +9,7 @@
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { features, benefits2, whyChooseUs, process, faqs } from "../_category/social-media-marketing";
 export const child = {
-  slug: "social-media-strategy",
+  slug: "social-media-strategy-services-in-delhi-ncr",
   title: "Social Media Strategy",
   metaTitle: "Social Media Strategy Services in Delhi NCR | Eddinet",
   metaDescription: "Platform-specific strategy aligned to audience, brand goals and the broader customer journey. We decide what to post where, why, and how it connects to the rest of your marketing. Eddinet delivers dependable social media strategy services in Delhi NCR for India and global clients. Get a free proposal today.",

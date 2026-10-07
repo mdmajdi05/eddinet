@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/cloud-devops/cloud-infrastructure.ts
-//  PAGE: /services/cloud-devops/cloud-infrastructure
+//  PAGE: /services/cloud-devops/cloud-infrastructure-services-company-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/cloud-devops";
 export const child = {
-  slug: "cloud-infrastructure",
+  slug: "cloud-infrastructure-services-company-in-india",
   title: "Cloud Infrastructure",
   metaTitle: "Cloud Infrastructure Services in India | Eddinet",
   metaDescription: "Eddinet provides premier cloud infrastructure services in India. We build, deploy, and manage scalable cloud setups to reduce capital costs, prevent system",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Enterprise Cloud Infrastructure | Managed Infrastructure | Multi-Cloud Solutions",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Cloud Infrastructure Services Company in India",
-  heroSubheading: "Enterprise Cloud Infrastructure | Managed Infrastructure | Multi-Cloud Solutions",
-  detailedDescription: "Eddinet provides premier cloud infrastructure services in India. We build, deploy, and manage scalable cloud setups to reduce capital costs, prevent system downtime, and accelerate digital growth.\n\nEDDINET builds high-performance digital environments that stabilize enterprise operations and support long-term growth. We design and deploy resilient cloud systems that handle heavy computational loads without speed loss.\n\nBy combining modular infrastructure design with proactive security protocols, we help organizations eliminate server bottlenecks, safeguard critical data, and lower overall operational expenses.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "Eddinet provides premier cloud infrastructure services in India. We build, deploy, and manage scalable cloud setups to reduce capital costs, prevent system downtime, and accelerate digital growth.",
+  detailedDescription: "EDDINET builds high-performance digital environments that stabilize enterprise operations and support long-term growth. We design and deploy resilient cloud systems that handle heavy computational loads without speed loss.\n\nBy combining modular infrastructure design with proactive security protocols, we help organizations eliminate server bottlenecks, safeguard critical data, and lower overall operational expenses.",
   features: [
     {
       title: "Enterprise Cloud Infrastructure in India",
@@ -42,6 +50,7 @@ export const child = {
       description: "We audit compute and storage usage constantly to remove idle server capacity. By setting up auto-scaling policies, we reduce monthly cloud spending while maintaining peak speed.",
     },
   ],
+  featuresHeading: "Our Cloud Infrastructure Services in India",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -115,8 +124,12 @@ export const child = {
       a: "Yes, we deliver 24/7 server monitoring, routine operating system patching, automated backups, and emergency troubleshooting.",
     },
   ],
+  cta: {
+    heading: "Scale Your Business With Cloud Infrastructure",
+    sub: "Discuss Your Infrastructure Requirements",
+    description: "Ready to optimize your business performance with secure, enterprise-grade cloud infrastructure? Partner with EDDINET to plan, build, and manage your cloud setup. Contact our technical team today to schedule your cloud consultation!",
+  },
   crossLinks: crossLinksFor("cloud-devops"),
-  featuresHeading: "Our Cloud Infrastructure Services in India",
   docxHeadings: {
     about: "About EDDINET - Leading Cloud Infrastructure Company in India",
     process: "Our Cloud Infrastructure Process",

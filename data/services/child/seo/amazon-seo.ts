@@ -1,13 +1,13 @@
 // ============================================================================
 //  FILE: data/services/child/seo/amazon-seo.ts
-//  PAGE: /services/seo/amazon-seo
+//  PAGE: /services/seo/amazon-seo-services-in-delhi-ncr
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
 
 export const child = {
-  slug: "amazon-seo",
+  slug: "amazon-seo-services-in-delhi-ncr",
   title: "Amazon SEO",
   metaTitle: "Amazon SEO Services in India | Eddinet",
   metaDescription: "Eddinet helps sellers stop losing sales to page-three listings. Amazon SEO services in India built around A9/A10 — keywords, content, images and reviews as one system. Get a free Amazon SEO audit.",

@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/ads-ppc/remarketing-retargeting.ts
-//  PAGE: /services/ads-ppc/remarketing-retargeting
+//  PAGE: /services/ads-ppc/remarketing-and-retargeting-ads-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
@@ -9,7 +9,7 @@
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/ads-ppc";
 export const child = {
-  slug: "remarketing-retargeting",
+  slug: "remarketing-and-retargeting-ads-services-in-india",
   title: "Remarketing / Retargeting",
   metaTitle: "Remarketing / Retargeting Services in India | Eddinet",
   metaDescription: "By combining automated dynamic product ads, conversion-based audience segmentation, and strict frequency caps across Google, Meta, and LinkedIn, we drive",

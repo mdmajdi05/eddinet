@@ -1,19 +1,27 @@
 // ============================================================================
 //  FILE: data/services/child/ecommerce/inventory-integration.ts
-//  PAGE: /services/ecommerce/inventory-integration
+//  PAGE: /services/ecommerce/ecommerce-inventory-integration-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits1 } from "../_category/ecommerce";
 export const child = {
-  slug: "inventory-integration",
+  slug: "ecommerce-inventory-integration-in-india",
   title: "Inventory Integration",
   metaTitle: "Inventory Integration Services in India | Eddinet",
   metaDescription: "Managing online orders is only efficient if your stock counts are accurate across every channel. At Eddinet, we deliver robust Inventory Management",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Multi-Channel Inventory Sync | Centralized Stock Automation | ERP & Warehouse System Integration",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "eCommerce Inventory Integration in India",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
   heroSubheading: "At Eddinet, we eliminate stock mismatches, manual entry, and fulfillment delays by automating your supply chain. Delivering eCommerce Inventory Integration in India, we build real-time data pipelines that synchronize stock across online storefronts, marketplaces, and warehouses stopping overselling and protecting sales.",
   detailedDescription: "Managing online orders is only efficient if your stock counts are accurate across every channel. At Eddinet, we deliver robust Inventory Management Integration in India that connects your online store directly with your warehouse, ERPs, and multi-channel marketplaces.\n\nManaging inventory manually leads to delayed orders, double-selling, and poor customer experiences. Our automated integration systems ensure your stock levels update instantaneously across all platforms the moment a purchase happens.",
   features: [
@@ -34,6 +42,7 @@ export const child = {
       description: "We implement automated workflows that route customer orders to the nearest warehouse location while instantly reflecting returned stock back into your live catalog.",
     },
   ],
+  featuresHeading: "E-Commerce Inventory Integration Services in India",
   benefits: benefits1,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -94,7 +103,6 @@ export const child = {
     },
   ],
   crossLinks: crossLinksFor("ecommerce"),
-  featuresHeading: "E-Commerce Inventory Integration Services in India",
   docxHeadings: {
     about: "About Us: Inventory Management Integration in India",
     process: "Our Inventory Integration Process",

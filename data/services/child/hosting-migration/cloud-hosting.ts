@@ -1,19 +1,27 @@
 // ============================================================================
 //  FILE: data/services/child/hosting-migration/cloud-hosting.ts
-//  PAGE: /services/hosting-migration/cloud-hosting
+//  PAGE: /services/hosting-migration/cloud-hosting-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/hosting-migration";
 export const child = {
-  slug: "cloud-hosting",
+  slug: "cloud-hosting-services-in-india",
   title: "Cloud Hosting",
   metaTitle: "Cloud Hosting Services in India | Eddinet",
   metaDescription: "Many businesses move to the cloud after a painful outage or a surprise bill. That is usually where Eddinet steps in.",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Scalable Cloud Hosting | AWS Cloud Hosting Services | High Availability Cloud Hosting",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Cloud Hosting Services in India",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
   heroSubheading: "Product launches, festive sales, and viral campaigns should never put your website at risk. Eddinet delivers cloud hosting services in India that stretch when demand rises and keep running when a server fails. Our engineers design and operate the environment, so your team can stay focused on the business.",
   detailedDescription: "Many businesses move to the cloud after a painful outage or a surprise bill. That is usually where Eddinet steps in. As a cloud hosting provider in India, we combine cloud engineering, DevOps, and server security under one team.\n\nWe start by understanding how your website or application actually behaves. Then we build an environment around those patterns instead of forcing a ready-made package. You receive plain-language reports and full documentation, so nothing about your infrastructure stays a mystery.",
   features: [
@@ -34,6 +42,8 @@ export const child = {
       description: "Running the cloud is a daily job. We monitor performance, apply security patches, verify backups, and watch your spending. You also receive clear reports that show what changed and why.",
     },
   ],
+  featuresHeading: "Our Cloud Hosting Services in India",
+  featuresDescription: "We concentrate on four areas where cloud hosting makes the biggest difference.",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -44,12 +54,12 @@ export const child = {
       "Failover that has been tested: We do not just draw a failover plan. We trigger controlled failures to confirm it works. Your team knows what happens before a real incident does.",
       "Security in every layer: Access rules, encryption, and patching are built into the setup. Unusual activity is flagged early. Protection grows along with your infrastructure.",
       "Easy exit, no lock-in: Your accounts remain in your name, with documentation we hand over. You can review or change providers at any point. This keeps the relationship honest.",
-      "Support during Indian business hours: Our engineers are online when your working day begins. Urgent issues reach people who already know your setup. Therefore, you spend less time explaining and more time fixing.",
+      "Support during Indian business hours: Our engineers are online when your working day begins. Urgent issues reach people who already know your setup. Therefore, you spend less time explaining and more time fixing. We measure success by faster page loads, steadier uptime, and predictable cloud costs. Ready to run on infrastructure that grows with you? Contact Eddinet today for a free consultation and a cloud hosting plan built for your traffic.",
     ],
-    description: "We measure success by faster page loads, steadier uptime, and predictable cloud costs.",
   },
   process: {
     heading: "Our Process for Cloud Hosting Setup in India",
+    description: "Here is how we take you from your current server to a stable cloud environment.",
     steps: [
       {
         num: "01",
@@ -82,7 +92,6 @@ export const child = {
         description: "Finally, we review usage every month and adjust resources. Unused capacity is trimmed, and scaling rules are refined. Your setup stays efficient as the business grows.",
       },
     ],
-    description: "Here is how we take you from your current server to a stable cloud environment.",
   },
   testimonials: sharedTestimonials,
   faqs: [
@@ -108,8 +117,6 @@ export const child = {
     },
   ],
   crossLinks: crossLinksFor("hosting-migration"),
-  featuresHeading: "Our Cloud Hosting Services in India",
-  featuresDescription: "We concentrate on four areas where cloud hosting makes the biggest difference.",
   docxHeadings: {
     about: "About Us: Your Cloud Hosting Provider in India",
     process: "Our Process for Cloud Hosting Setup in India",

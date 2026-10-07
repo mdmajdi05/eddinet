@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/design-creative/motion-graphics.ts
-//  PAGE: /services/design-creative/motion-graphics
+//  PAGE: /services/design-creative/motion-graphics-services-in-delhi
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
@@ -9,7 +9,7 @@
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/design-creative";
 export const child = {
-  slug: "motion-graphics",
+  slug: "motion-graphics-services-in-delhi",
   title: "Motion Graphics",
   metaTitle: "Motion Graphics Services in India | Eddinet",
   metaDescription: "EDDINET provides high-impact motion graphics services in Delhi. We merge graphic design, kinetic typography, character animation, and dynamic visual effects",

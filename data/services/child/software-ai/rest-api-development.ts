@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/software-ai/rest-api-development.ts
-//  PAGE: /services/software-ai/rest-api-development
+//  PAGE: /services/software-ai/rest-api-development-company-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/software-ai";
 export const child = {
-  slug: "rest-api-development",
+  slug: "rest-api-development-company-in-india",
   title: "REST API Development",
   metaTitle: "REST API Development Services in India | Eddinet",
   metaDescription: "EDDINET builds high-speed, scalable RESTful API architectures engineered to facilitate seamless data communication across digital ecosystems.",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "RESTful Architectures | Node.js & Python APIs | Secure Enterprise Integrations",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "REST API Development Company in India",
-  heroSubheading: "RESTful Architectures | Node.js & Python APIs | Secure Enterprise Integrations",
-  detailedDescription: "EDDINET builds high-speed, scalable RESTful API architectures engineered to facilitate seamless data communication across digital ecosystems. As a premier REST API development company in India, we combine lightweight backend frameworks with strict security standards to deliver resilient web interfaces tailored to your application needs.\n\nEDDINET bridges the gap between complex software engineering and seamless human experiences. As an industry leader, we craft fast, secure, and intuitive digital products engineered for long-term scalability.\n\nFurthermore, our dedicated developers utilize battle-tested frameworks to transform legacy processes into modern digital systems. Partner with us to modernize your operations, reduce administrative bloat, and unlock market-leading performance.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "EDDINET builds high-speed, scalable RESTful API architectures engineered to facilitate seamless data communication across digital ecosystems. As a premier REST API development company in India, we combine lightweight backend frameworks with strict security standards to deliver resilient web interfaces tailored to your application needs.",
+  detailedDescription: "EDDINET bridges the gap between complex software engineering and seamless human experiences. As an industry leader, we craft fast, secure, and intuitive digital products engineered for long-term scalability.\n\nFurthermore, our dedicated developers utilize battle-tested frameworks to transform legacy processes into modern digital systems. Partner with us to modernize your operations, reduce administrative bloat, and unlock market-leading performance.",
   features: [
     {
       title: "Custom REST API Development India",
@@ -46,10 +54,13 @@ export const child = {
       description: "We provide continuous endpoint health monitoring, automated load testing, security patch management, and OpenAPI/Swagger documentation updates.",
     },
   ],
+  featuresHeading: "Our RESTful API Development Services",
+  featuresDescription: "We offer end-to-end engineering services to build, secure, and maintain stateless web API architectures.",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for REST API Design and Development in India?",
+    description: "We combine deep backend engineering expertise with security-first practices to build APIs that power dependable digital applications.",
     points: [
       "Optimized Response Speed: We engineer lightweight Node.js and Python backend logic to guarantee low-latency processing and rapid data transmission across connected channels.",
       "Robust Security Standards: We enforce JWT validation, OAuth2 flows, HTTPS encryption, and rate-limiting controls to keep your sensitive application data protected.",
@@ -57,10 +68,10 @@ export const child = {
       "Full Development Transparency: We share regular sprint updates, staging environments, and Postman API collections throughout the engineering cycle to maintain clear visibility.",
       "Dedicated Technical Support: We offer SLA-backed post-launch maintenance to handle API versioning, server updates, and infrastructure expansions over the long term.",
     ],
-    description: "We combine deep backend engineering expertise with security-first practices to build APIs that power dependable digital applications.",
   },
   process: {
     heading: "Our REST API Development Process in India",
+    description: "We follow a transparent agile methodology to engineer stable RESTful services on schedule and within budget.",
     steps: [
       {
         num: "01",
@@ -98,7 +109,6 @@ export const child = {
         description: "We track response times, system health, and call volumes continuously, adjusting infrastructure and applying patches as usage grows.",
       },
     ],
-    description: "We follow a transparent agile methodology to engineer stable RESTful services on schedule and within budget.",
   },
   testimonials: sharedTestimonials,
   faqs: [
@@ -131,9 +141,12 @@ export const child = {
       a: "Yes, we deliver interactive Swagger/OpenAPI documentation and Postman collections to ensure simple developer onboarding and effortless third-party integration.",
     },
   ],
+  cta: {
+    heading: "Build Your RESTful API Architecture With EDDINET",
+    sub: "Discuss Your REST API Requirements",
+    description: "Ready to power your web and mobile applications with fast, secure RESTful APIs? Contact the engineering team at EDDINET today to schedule a technical consultation and receive a clear project estimate.",
+  },
   crossLinks: crossLinksFor("software-ai"),
-  featuresHeading: "Our RESTful API Development Services",
-  featuresDescription: "We offer end-to-end engineering services to build, secure, and maintain stateless web API architectures.",
   docxHeadings: {
     about: "About Us: REST API Development Company in India",
     process: "Our REST API Development Process in India",

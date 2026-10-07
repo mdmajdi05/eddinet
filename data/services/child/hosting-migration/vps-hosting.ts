@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/hosting-migration/vps-hosting.ts
-//  PAGE: /services/hosting-migration/vps-hosting
+//  PAGE: /services/hosting-migration/vps-hosting-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/hosting-migration";
 export const child = {
-  slug: "vps-hosting",
+  slug: "vps-hosting-in-india",
   title: "VPS Hosting",
   metaTitle: "VPS Hosting Services in India | Eddinet",
   metaDescription: "Eddinet provides VPS hosting in India for websites and applications that have outgrown shared hosting. You get dedicated resources, full control, and a",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Managed VPS Hosting | Linux VPS with Root Access | Affordable & Scalable",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "VPS Hosting in India",
-  heroSubheading: "Managed VPS Hosting | Linux VPS with Root Access | Affordable & Scalable",
-  detailedDescription: "Eddinet provides VPS hosting in India for websites and applications that have outgrown shared hosting. You get dedicated resources, full control, and a server that stays fast under load. Best of all, our engineers manage the technical work, so you can focus on your business.\n\nEddinet is a team of certified sysadmins and DevOps engineers. We help businesses move from crowded shared servers to stable, well-managed VPS setups.\n\nWe listen first, then review your traffic, software, and goals before recommending a plan. Our reports use plain language, so technical and non-technical teams can both act on them. At the end of each project, we hand over complete documentation.\n\nGood hosting should feel invisible. It works quietly and never surprises you. That is the standard we follow on every project.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "Eddinet provides VPS hosting in India for websites and applications that have outgrown shared hosting. You get dedicated resources, full control, and a server that stays fast under load. Best of all, our engineers manage the technical work, so you can focus on your business.",
+  detailedDescription: "Eddinet is a team of certified sysadmins and DevOps engineers. We help businesses move from crowded shared servers to stable, well-managed VPS setups.\n\nWe listen first, then review your traffic, software, and goals before recommending a plan. Our reports use plain language, so technical and non-technical teams can both act on them. At the end of each project, we hand over complete documentation.\n\nGood hosting should feel invisible. It works quietly and never surprises you. That is the standard we follow on every project.",
   features: [
     {
       title: "Managed VPS Hosting in India",
@@ -34,6 +42,8 @@ export const child = {
       description: "Need full control? Our VPS hosting with root access lets you install custom software and change server settings freely. Meanwhile, we keep the server secure with firewalls, SSH protection, and regular updates. You get freedom without the risk.",
     },
   ],
+  featuresHeading: "Our VPS Hosting Services in India",
+  featuresDescription: "We focus on four core service areas. Each one is built around your traffic, budget, and growth plans.",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -49,6 +59,7 @@ export const child = {
   },
   process: {
     heading: "Our Process for VPS Hosting Setup in India",
+    description: "Every Eddinet project follows a clear path, from the first review to ongoing support.",
     steps: [
       {
         num: "01",
@@ -81,7 +92,6 @@ export const child = {
         description: "Finally, we share documentation and answer your team's questions. You also get regular health checks. As your traffic grows, we adjust your resources to match.",
       },
     ],
-    description: "Every Eddinet project follows a clear path, from the first review to ongoing support.",
   },
   testimonials: sharedTestimonials,
   faqs: [
@@ -107,8 +117,6 @@ export const child = {
     },
   ],
   crossLinks: crossLinksFor("hosting-migration"),
-  featuresHeading: "Our VPS Hosting Services in India",
-  featuresDescription: "We focus on four core service areas. Each one is built around your traffic, budget, and growth plans.",
   docxHeadings: {
     about: "About Us: Managed VPS Hosting Provider in India",
     process: "Our Process for VPS Hosting Setup in India",

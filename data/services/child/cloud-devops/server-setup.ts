@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/cloud-devops/server-setup.ts
-//  PAGE: /services/cloud-devops/server-setup
+//  PAGE: /services/cloud-devops/server-setup-services-company-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/cloud-devops";
 export const child = {
-  slug: "server-setup",
+  slug: "server-setup-services-company-in-india",
   title: "Server Setup",
   metaTitle: "Server Setup in India | Eddinet",
   metaDescription: "Tired of slow speeds and server crashes? Eddinet provides premier server setup services in India. We build, deploy, and manage high-speed, secure server",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Production Server Setup | Managed Server Setup | Linux & Cloud Server Configurations",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Server Setup Services Company in India",
-  heroSubheading: "Production Server Setup | Managed Server Setup | Linux & Cloud Server Configurations",
-  detailedDescription: "Tired of slow speeds and server crashes? Eddinet provides premier server setup services in India. We build, deploy, and manage high-speed, secure server setups tailored to your traffic needs eliminating downtime, cutting costs, and driving your digital growth.\n\nAt Eddinet, we turn complex server environments into secure, high-speed digital engines. Slow loading times and unoptimized server stacks lead directly to dropped traffic and lost revenue. Therefore, we deliver custom server configurations engineered for low-latency performance, maximum uptime, and seamless scalability.\n\nOur experienced system administrators build tailored web server stacks using Nginx, Apache, or LiteSpeed based on your exact application software demands. We handle full OS installation, domain routing, and firewall setup without disrupting your active business operations. Furthermore, we continuously tune database queries, object caching, SSH rules, and automated off-site backups to keep your server fast and bulletproof under heavy user traffic.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "Tired of slow speeds and server crashes? Eddinet provides premier server setup services in India. We build, deploy, and manage high-speed, secure server setups tailored to your traffic needs eliminating downtime, cutting costs, and driving your digital growth.",
+  detailedDescription: "At Eddinet, we turn complex server environments into secure, high-speed digital engines. Slow loading times and unoptimized server stacks lead directly to dropped traffic and lost revenue. Therefore, we deliver custom server configurations engineered for low-latency performance, maximum uptime, and seamless scalability.\n\nOur experienced system administrators build tailored web server stacks using Nginx, Apache, or LiteSpeed based on your exact application software demands. We handle full OS installation, domain routing, and firewall setup without disrupting your active business operations. Furthermore, we continuously tune database queries, object caching, SSH rules, and automated off-site backups to keep your server fast and bulletproof under heavy user traffic.",
   features: [
     {
       title: "Production Server Setup India",
@@ -42,6 +50,7 @@ export const child = {
       description: "We enforce strict SSH access controls, Fail2ban brute-force protection, UFW/IPTables firewalls, and active SSL certificates. These security protocols shield your private server against unauthorized access and cyber threats.",
     },
   ],
+  featuresHeading: "Our Server Setup Services in India",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -113,8 +122,12 @@ export const child = {
       a: "Yes, we offer ongoing managed service contracts covering 24/7 server monitoring, routine OS patching, continuous security updates, and automated off-site backups.",
     },
   ],
+  cta: {
+    heading: "Scale Your Infrastructure With High-Speed Servers",
+    sub: "Discuss Your Server Setup Requirements",
+    description: "Ready to accelerate your application performance with a custom-engineered server setup? Partner with Eddinet to build, harden, and manage your cloud environment. Contact our engineering team today to schedule your technical consultation!",
+  },
   crossLinks: crossLinksFor("cloud-devops"),
-  featuresHeading: "Our Server Setup Services in India",
   docxHeadings: {
     about: "About Us: Server Setup Company in India",
     process: "Our Server Setup Process in India",

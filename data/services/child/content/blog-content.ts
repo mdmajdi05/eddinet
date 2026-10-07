@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/content/blog-content.ts
-//  PAGE: /services/content/blog-content
+//  PAGE: /services/content/blog-content-services-in-delhi-ncr
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
@@ -9,7 +9,7 @@
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { features, benefits, whyChooseUs, process, faqs } from "../_category/content";
 export const child = {
-  slug: "blog-content",
+  slug: "blog-content-services-in-delhi-ncr",
   title: "Blog Content",
   metaTitle: "Blog Content Services in Delhi NCR | Eddinet",
   metaDescription: "Insightful articles that attract readers, build authority and feed SEO. Posted on schedule, written for real humans. Eddinet delivers dependable blog content services in Delhi NCR for India and global clients. Get a free proposal today.",

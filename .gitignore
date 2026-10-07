@@ -29,3 +29,7 @@ next-env.d.ts
 
 # local backup (non-committed image/zips/uploads ko yahan rakho)
 _unused-assets/
+
+# local notes / build output (repo me nahi chahiye)
+structure.md
+build.log

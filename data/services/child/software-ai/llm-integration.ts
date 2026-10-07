@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/software-ai/llm-integration.ts
-//  PAGE: /services/software-ai/llm-integration
+//  PAGE: /services/software-ai/llm-integration-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/software-ai";
 export const child = {
-  slug: "llm-integration",
+  slug: "llm-integration-services-in-india",
   title: "LLM Integration",
   metaTitle: "LLM Integration Services in India | Eddinet",
   metaDescription: "EDDINET builds high-speed, secure Large Language Model architectures engineered to connect state-of-the-art AI models directly to core business logic.",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Custom Model Orchestration | Multi-LLM Architectures | Enterprise AI Engineering",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "LLM Integration Services in India",
-  heroSubheading: "Custom Model Orchestration | Multi-LLM Architectures | Enterprise AI Engineering",
-  detailedDescription: "EDDINET builds high-speed, secure Large Language Model architectures engineered to connect state-of-the-art AI models directly to core business logic. As a premier LLM integration services in India provider, we combine multi-model orchestration with strict enterprise privacy controls to deliver scalable digital platforms tailored to your operational workflows.\n\nEDDINET designs Large Language Model pipelines, multi-model orchestration platforms, and custom AI integration frameworks. As a specialized custom LLM application development company in India, we convert complex foundational models into practical, enterprise-ready software products.\n\nOur engineering team combines advanced prompt management with private cloud deployment protocols. Consequently, we help forward-thinking brands automate decision-making, secure proprietary assets, and achieve measurable operational efficiency.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "EDDINET builds high-speed, secure Large Language Model architectures engineered to connect state-of-the-art AI models directly to core business logic. As a premier LLM integration services in India provider, we combine multi-model orchestration with strict enterprise privacy controls to deliver scalable digital platforms tailored to your operational workflows.",
+  detailedDescription: "EDDINET designs Large Language Model pipelines, multi-model orchestration platforms, and custom AI integration frameworks. As a specialized custom LLM application development company in India, we convert complex foundational models into practical, enterprise-ready software products.\n\nOur engineering team combines advanced prompt management with private cloud deployment protocols. Consequently, we help forward-thinking brands automate decision-making, secure proprietary assets, and achieve measurable operational efficiency.",
   features: [
     {
       title: "Custom LLM Application Development Services India",
@@ -23,15 +31,15 @@ export const child = {
     },
     {
       title: "GPT Integration Services India",
-      description: "We build secure API pipelines connecting OpenAI's GPT models to your internal web platforms, CRMs, and customer service portals for fast textual analysis and automated response generation.",
+      description: "We build secure API pipelines connecting OpenAI’s GPT models to your internal web platforms, CRMs, and customer service portals for fast textual analysis and automated response generation.",
     },
     {
       title: "Claude Integration Services India",
-      description: "We integrate Anthropic's Claude models to handle long-context document processing, complex reasoning tasks, and nuanced technical writing within your corporate workflow.",
+      description: "We integrate Anthropic’s Claude models to handle long-context document processing, complex reasoning tasks, and nuanced technical writing within your corporate workflow.",
     },
     {
       title: "Gemini Integration Services India",
-      description: "We deploy Google's Gemini multi-modal interfaces to process combined text, image, audio, and code workflows seamlessly across your enterprise applications.",
+      description: "We deploy Google’s Gemini multi-modal interfaces to process combined text, image, audio, and code workflows seamlessly across your enterprise applications.",
     },
     {
       title: "LLM Integration Company in India Services",
@@ -46,10 +54,13 @@ export const child = {
       description: "We provide continuous monitoring of model latency, token costs, drift tracking, and safety guardrail tuning to maintain reliable execution across all active endpoints.",
     },
   ],
+  featuresHeading: "Our Custom LLM Application Development Services",
+  featuresDescription: "We offer end-to-end engineering services to embed, fine-tune, and orchestrate Large Language Models across your software ecosystem.",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for LLM Integration Services in India?",
+    description: "We combine frontier AI orchestration with enterprise software practices to deliver LLM solutions that drive commercial growth.",
     points: [
       "Multi-Model Flexibility: We build vendor-agnostic systems that allow you to swap or route queries dynamically between GPT, Claude, Gemini, or Llama based on cost, latency, and context needs.",
       "Enterprise-Grade Security: We enforce private cloud deployments, token encryption, and strict zero-data-retention compliance to ensure your proprietary business data is never exposed.",
@@ -57,10 +68,10 @@ export const child = {
       "Full Process Transparency: We share live staging environments, prompt test benches, and transparent sprint reports throughout the development lifecycle to keep you fully informed.",
       "Dedicated Post-Launch Support: We offer SLA-backed maintenance contracts to handle model version transitions, vector database scaling, and ongoing infrastructure updates over the long term.",
     ],
-    description: "We combine frontier AI orchestration with enterprise software practices to deliver LLM solutions that drive commercial growth.",
   },
   process: {
     heading: "Our LLM Integration Process in India",
+    description: "We follow a systematic agile lifecycle to build and deploy enterprise-grade Large Language Model applications safely and on schedule.",
     steps: [
       {
         num: "01",
@@ -98,7 +109,6 @@ export const child = {
         description: "We analyze real-world interaction logs continuously, refining prompt architectures and re-tuning model weights as fresh operational data becomes available.",
       },
     ],
-    description: "We follow a systematic agile lifecycle to build and deploy enterprise-grade Large Language Model applications safely and on schedule.",
   },
   testimonials: sharedTestimonials,
   faqs: [
@@ -131,9 +141,12 @@ export const child = {
       a: "Yes, we deploy open-source models like Llama and Mistral directly to your private AWS, Azure, or GCP cloud instances to keep all data within your secure network boundary.",
     },
   ],
+  cta: {
+    heading: "Build Your LLM Infrastructure With EDDINET",
+    sub: "Discuss Your Large Language Model Requirements",
+    description: "Ready to power your enterprise applications with secure, low-latency Large Language Models? Contact the engineering team at EDDINET today to schedule a technical consultation and receive a clear project estimate.",
+  },
   crossLinks: crossLinksFor("software-ai"),
-  featuresHeading: "Our Custom LLM Application Development Services",
-  featuresDescription: "We offer end-to-end engineering services to embed, fine-tune, and orchestrate Large Language Models across your software ecosystem.",
   docxHeadings: {
     about: "About Us: LLM Integration Services in India",
     process: "Our LLM Integration Process in India",

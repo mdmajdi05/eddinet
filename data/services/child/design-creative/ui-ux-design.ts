@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/design-creative/ui-ux-design.ts
-//  PAGE: /services/design-creative/ui-ux-design
+//  PAGE: /services/design-creative/ui-ux-design-services-in-delhi
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/design-creative";
 export const child = {
-  slug: "ui-ux-design",
+  slug: "ui-ux-design-services-in-delhi",
   title: "UI/UX Design",
   metaTitle: "UI/UX Design Services in India | Eddinet",
   metaDescription: "About EDDINET. Do visitors land on your product and leave without taking action? Do your developers keep guessing how a screen should look?",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Website & Mobile App UI/UX | Product Design | Interactive Prototyping & Design Systems",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "UI UX Design Services in Delhi",
-  heroSubheading: "Website & Mobile App UI/UX | Product Design | Interactive Prototyping & Design Systems",
-  detailedDescription: "About EDDINET. Do visitors land on your product and leave without taking action? Do your developers keep guessing how a screen should look? If yes, Eddinet is the solution to your problem\n\nWe are a team of designers, researchers, and developers who treat every screen as a business decision. We begin with how your users actually behave, then shape the interface around those habits. You receive organised files that your developers can build from without second-guessing.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "EDDINET provides premier UI UX design services in Delhi. We merge user psychology, clean visual aesthetics, and data-driven interaction patterns to craft digital interfaces that engage users and accelerate conversions.",
+  detailedDescription: "Do visitors land on your product and leave without taking action? Do your developers keep guessing how a screen should look? If yes, Eddinet is the solution to your problem.\n\nWe are a team of designers, researchers, and developers who treat every screen as a business decision. We begin with how your users actually behave, then shape the interface around those habits. You receive organised files that your developers can build from without second-guessing.",
   features: [
     {
       title: "Website UI Design",
@@ -50,6 +58,7 @@ export const child = {
       description: "If your website or app feels dated or confusing, our UI UX redesign services bring it up to date. We keep what already works, fix what frustrates users, and improve the look without disrupting your existing audience.",
     },
   ],
+  featuresHeading: "Our UI UX Design Services in Delhi",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -62,16 +71,8 @@ export const child = {
       "Mobile-First Design Approach: Most visitors arrive on a phone, so we design for small screens first. The layout then scales up cleanly to tablets and desktops.",
       "Scalable Product Design: We plan for growth from the start. New features and pages fit into the existing structure without a full redesign.",
       "Developer-Friendly Design Handoff: Clean files, clear specifications, and named components save developers hours of guessing. Builds move faster, and fewer errors reach production.",
-      "Collaborative Design Process: You review work at each stage and share feedback early. Decisions stay transparent, and the final design reflects your team's input.",
-      "UI UX Design for Different Digital Products",
-      "Business Websites: We design company websites that build trust quickly and turn visitors into enquiries. Clear structure and strong calls to action do most of the work.",
-      "E-Commerce Websites: Our store designs simplify browsing, filtering, and checkout. Fewer steps and clearer product pages help reduce abandoned carts.",
-      "Mobile Applications: We design apps that feel natural from the first tap. Onboarding, navigation, and key tasks are tested before development begins.",
-      "SaaS Products: SaaS users need clarity, not clutter. We design dashboards, settings, and onboarding flows that help new users reach value quickly.",
-      "Enterprise Software: Complex tools can still feel manageable. We organise dense data and long workflows into screens that busy teams can use all day.",
-      "Digital Platforms & Products: From marketplaces to booking portals, we design experiences that connect several user types. Each group gets a clear, purposeful path.",
+      "Collaborative Design Process: You review work at each stage and share feedback early. Decisions stay transparent, and the final design reflects your team's input. Ready for an interface your customers enjoy using? Contact Eddinet today for a free consultation and a clear design plan.",
     ],
-    description: "Ready for an interface your customers enjoy using? Contact Eddinet today for a free consultation and a clear design plan.",
   },
   process: {
     heading: "Our UI UX Design Process",
@@ -118,6 +119,35 @@ export const child = {
       },
     ],
   },
+  industries: {
+    heading: "UI UX Design for Different Digital Products",
+    items: [
+      {
+        title: "Business Websites",
+        description: "We design company websites that build trust quickly and turn visitors into enquiries. Clear structure and strong calls to action do most of the work.",
+      },
+      {
+        title: "E-Commerce Websites",
+        description: "Our store designs simplify browsing, filtering, and checkout. Fewer steps and clearer product pages help reduce abandoned carts.",
+      },
+      {
+        title: "Mobile Applications",
+        description: "We design apps that feel natural from the first tap. Onboarding, navigation, and key tasks are tested before development begins.",
+      },
+      {
+        title: "SaaS Products",
+        description: "SaaS users need clarity, not clutter. We design dashboards, settings, and onboarding flows that help new users reach value quickly.",
+      },
+      {
+        title: "Enterprise Software",
+        description: "Complex tools can still feel manageable. We organise dense data and long workflows into screens that busy teams can use all day.",
+      },
+      {
+        title: "Digital Platforms & Products",
+        description: "From marketplaces to booking portals, we design experiences that connect several user types. Each group gets a clear, purposeful path.",
+      },
+    ],
+  },
   testimonials: sharedTestimonials,
   faqs: [
     {
@@ -161,10 +191,14 @@ export const child = {
       a: "Yes. We review your current design, find usability problems, and improve both look and flow. We aim to keep what already works so that returning users are not confused.",
     },
   ],
+  cta: {
+    heading: "Create Better Digital Experiences With EDDINET",
+    sub: "Discuss Your UI UX Design Requirements",
+    description: "Tell us about your website, app, or product idea, and our team will suggest the right design approach. Contact Eddinet today for a free consultation and a clear, tailored quote.",
+  },
   crossLinks: crossLinksFor("design-creative"),
-  featuresHeading: "Our UI UX Design Services in Delhi",
   docxHeadings: {
-    about: "EDDINET provides premier UI UX design services in Delhi. We merge user psychology, clean visual aesthetics, and data-driven interaction patterns to craft digital interfaces that engage users and accelerate conversions.",
+    about: "About EDDINET",
     process: "Our UI UX Design Process",
     faqs: "FAQs About UI UX Design Services in Delhi",
   },

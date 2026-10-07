@@ -116,7 +116,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <div className="grid grid-cols-[1.3fr_0.7fr] gap-10 items-center max-[1024px]:grid-cols-1">
             <div>
               <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[var(--tag-bg)] border border-[var(--tag-border)] rounded-3xl text-[var(--main-accent)] text-[0.8rem] font-semibold uppercase tracking-wider mb-4">
-                ⚡ Eddinet {content.title} Team
+                {content.heroEyebrow || <>⚡ Eddinet {content.title} Team</>}
               </div>
               <h1 className="text-[3rem] font-extrabold leading-[1.08] mb-4 text-[var(--text-main)] tracking-[-1px] max-[768px]:text-[2.2rem]">
                 {content.heroGradient ? (
@@ -197,14 +197,50 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         paragraphs={content.about}
         image={s.image}
         gradientWord={content.title}
+        heading={content.aboutHeading}
       />
+
+      {/* 2b. SERVICE GROUPS (document-authored category overview) */}
+      {content.serviceGroups && (
+        <section className="py-[80px]">
+          <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
+            <SectionHeader
+              title={content.serviceGroups.heading}
+              description={
+                content.servicesDescription ??
+                `A quick view of everything our ${content.title.toLowerCase()} engagement covers.`
+              }
+            />
+            <div className="grid grid-cols-2 gap-6 max-[1024px]:grid-cols-1">
+              {content.serviceGroups.items.map((group, i) => (
+                <div
+                  key={i}
+                  className="group relative p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)] transition-all duration-300 hover:-translate-y-1.5 hover:border-[rgba(var(--accent-rgb),0.35)] hover:shadow-[0_20px_50px_rgba(var(--accent-rgb),0.12)]"
+                >
+                  <h3 className="text-[1.05rem] text-[var(--text-main)] font-bold leading-snug mb-2">
+                    {group.title}
+                  </h3>
+                  <p className="text-[var(--text-muted)] text-[0.88rem] leading-relaxed">
+                    {group.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* 3. WHAT'S INCLUDED */}
       <section className="py-[80px]">
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
           <SectionHeader
-            title={<>Our Services in <span className="gradient-text">{content.title}</span></>}
-            description="Every engagement is scoped around your business outcome. These are the services we deliver for {content.title.toLowerCase()} projects."
+            title={content.servicesHeading ?? (
+              <>Our Services in <span className="gradient-text">{content.title}</span></>
+            )}
+            description={
+              content.servicesDescription ??
+              `Every engagement is scoped around your business outcome. These are the services we deliver for ${content.title.toLowerCase()} projects.`
+            }
           />
           <div className="grid grid-cols-2 gap-6 max-[1024px]:grid-cols-1">
             {content.services.map((item, j) => {
@@ -278,8 +314,17 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
           <SectionHeader
             chip="Our Process"
-            title={<>How We Execute <span className="gradient-text">{content.title}</span> Projects</>}
-            description="An outcome-led process, from first conversation to continuous improvement."
+            title={
+              content.processHeading ? (
+                <>{content.processHeading}</>
+              ) : (
+                <>How We Execute <span className="gradient-text">{content.title}</span> Projects</>
+              )
+            }
+            description={
+              content.process.description ??
+              "An outcome-led process, from first conversation to continuous improvement."
+            }
             spacing="lg"
           />
 
@@ -434,12 +479,38 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </div>
       </section>
 
+      {/* 7b. INDUSTRIES — authored in the document, when present */}
+      {content.industries && (
+        <section className="py-[80px] bg-[var(--strip-bg)] border-y border-[var(--border-color)]">
+          <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
+            <SectionHeader
+              chip="Industries We Serve"
+              title={content.industries.heading}
+            />
+            <div className="grid grid-cols-4 gap-6 max-[1024px]:grid-cols-2 max-[640px]:grid-cols-1">
+              {content.industries.items.map((ind, i) => (
+                <div key={i} className="group relative rounded-2xl p-7 overflow-hidden transition-all duration-500 hover:-translate-y-2 bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-transparent hover:shadow-[0_20px_50px_rgba(var(--accent-rgb),0.15)]">
+                  <div className="absolute -top-3 -right-1 text-[3.4rem] font-extrabold leading-none opacity-[0.05] select-none">{String(i + 1).padStart(2, "0")}</div>
+                  <div className="relative z-10">
+                    <div className="w-12 h-12 mb-5 flex items-center justify-center text-[1.4rem] rounded-xl bg-gradient-to-br from-[var(--main-accent)] to-[rgba(var(--accent-rgb),0.5)] shadow-[0_8px_25px_rgba(var(--accent-rgb),0.35)] transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+                      {["🏗️", "🛍️", "🏥", "💼", "🎓", "🏭"][i % 6]}
+                    </div>
+                    <h3 className="text-[1.08rem] font-extrabold text-[var(--text-main)] mb-2">{ind.title}</h3>
+                    <p className="text-[var(--text-muted)] text-[0.88rem] leading-relaxed">{ind.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* 8. FAQ */}
       {content.faqs.length > 0 && (
         <section className="py-[80px]">
           <div className="w-full max-w-[820px] mx-auto px-5">
             <SectionHeader
-              title={<>{content.title} - <span className="gradient-text">FAQs</span></>}
+              title={<>Frequently Asked Questions About <span className="gradient-text">{content.title}</span></>}
             />
             <div className="flex flex-col gap-4">
               {content.faqs.map((f, i) => (
@@ -490,11 +561,17 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <section className="py-[80px]">
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
           <div className="border border-[rgba(var(--accent-rgb),0.3)] rounded-3xl py-[60px] px-10 text-center relative overflow-hidden max-[640px]:px-6" style={{ background: "var(--cta-bg)" }}>
+            {content.cta?.sub && (
+              <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[var(--tag-bg)] border border-[var(--tag-border)] rounded-3xl text-[var(--main-accent)] text-[0.8rem] font-semibold uppercase tracking-wider mb-5">
+                {content.cta.sub}
+              </div>
+            )}
             <h2 className="text-[2.6rem] font-extrabold mb-4 text-[var(--text-main)] max-[768px]:text-[1.9rem]">
-              Ready to Build Your {content.title} Strategy?
+              {content.cta?.heading ?? `Ready to Build Your ${content.title} Strategy?`}
             </h2>
             <p className="text-[1.12rem] text-[var(--text-muted)] max-w-[600px] mx-auto mb-8">
-              Book a free 30-minute consultation. We&apos;ll identify how {content.title.toLowerCase()} fits into your growth system - with no commitment required.
+              {content.cta?.description ??
+                `Book a free 30-minute consultation. We'll identify how ${content.title.toLowerCase()} fits into your growth system - with no commitment required.`}
             </p>
             <div className="flex justify-center gap-4 flex-wrap">
               <Link

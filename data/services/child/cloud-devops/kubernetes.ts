@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/cloud-devops/kubernetes.ts
-//  PAGE: /services/cloud-devops/kubernetes
+//  PAGE: /services/cloud-devops/kubernetes-services-company-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/cloud-devops";
 export const child = {
-  slug: "kubernetes",
+  slug: "kubernetes-services-company-in-india",
   title: "Kubernetes",
   metaTitle: "Kubernetes Services in India | Eddinet",
   metaDescription: "Struggling with multi-container orchestration, microservice bottlenecks, or cloud infrastructure complexity? Eddinet provides premier Kubernetes services in",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Kubernetes Consulting Services | EKS, AKS & GKE Management | Enterprise Solutions",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Kubernetes Services Company in India",
-  heroSubheading: "Kubernetes Consulting Services | EKS, AKS & GKE Management | Enterprise Solutions",
-  detailedDescription: "Struggling with multi-container orchestration, microservice bottlenecks, or cloud infrastructure complexity? Eddinet provides premier Kubernetes services in India. We build, deploy, and manage production-grade cluster architectures to streamline container management, ensure auto-scaling resilience, and lower cloud compute costs.\n\nAt Eddinet, we deliver enterprise Kubernetes solutions India to turn complex container deployments into high-availability infrastructure. We manage your entire cluster lifecycle across hybrid and multi-cloud environments eliminating manual scaling delays, optimizing configurations, and preventing security outages.\n\nOur certified sysadmins provide complete cluster management:\n\nManaged Cloud Clusters: End-to-end support for Amazon EKS, Azure AKS, and Google Cloud GKE control planes and node pools.\n\nZero-Downtime Releases: Continuous cluster provisioning, ingress routing, and automated upgrades without live service disruption.\n\nHardened Security: Strict RBAC policies, Pod Security Standards, network isolation, and persistent volume protection for 24/7 safety.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "Struggling with multi-container orchestration, microservice bottlenecks, or cloud infrastructure complexity? Eddinet provides premier Kubernetes services in India. We build, deploy, and manage production-grade cluster architectures to streamline container management, ensure auto-scaling resilience, and lower cloud compute costs.",
+  detailedDescription: "At Eddinet, we deliver enterprise Kubernetes solutions India to turn complex container deployments into high-availability infrastructure. We manage your entire cluster lifecycle across hybrid and multi-cloud environments eliminating manual scaling delays, optimizing configurations, and preventing security outages.\n\nOur certified sysadmins provide complete cluster management:\n\nManaged Cloud Clusters: End-to-end support for Amazon EKS, Azure AKS, and Google Cloud GKE control planes and node pools.\n\nZero-Downtime Releases: Continuous cluster provisioning, ingress routing, and automated upgrades without live service disruption.\n\nHardened Security: Strict RBAC policies, Pod Security Standards, network isolation, and persistent volume protection for 24/7 safety.",
   features: [
     {
       title: "Kubernetes Consulting Services in India",
@@ -23,7 +31,7 @@ export const child = {
     },
     {
       title: "EKS AKS GKE Management Company in India",
-      description: "We deliver end-to-end management for cloud Kubernetes engines, including Amazon EKS, Microsoft AKS, and Google Cloud GKE-optimizing control planes and node pools for peak efficiency.",
+      description: "We deliver end-to-end management for cloud Kubernetes engines, including Amazon EKS, Microsoft AKS, and Google Cloud GKE—optimizing control planes and node pools for peak efficiency.",
     },
     {
       title: "Enterprise Kubernetes Solutions India",
@@ -42,6 +50,7 @@ export const child = {
       description: "We deploy Prometheus and Grafana for real-time cluster health metrics, paired with persistent volume drivers (CSI) to ensure 100% database data safety during container restarts.",
     },
   ],
+  featuresHeading: "Our Kubernetes Services in India",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -112,8 +121,12 @@ export const child = {
       a: "We use persistent storage volumes bound outside the container lifecycle, combined with encrypted secrets, network policies, and automated off-site backups.",
     },
   ],
+  cta: {
+    heading: "Scale Your Microservices With Enterprise Kubernetes",
+    sub: "Discuss Your Kubernetes Requirements",
+    description: "Ready to eliminate container complexity, scale microservices effortlessly, and cut cloud expenses? Partner with Eddinet to build and maintain a secure, lightning-fast Kubernetes infrastructure. Contact our engineering team today to schedule your technical consultation!",
+  },
   crossLinks: crossLinksFor("cloud-devops"),
-  featuresHeading: "Our Kubernetes Services in India",
   docxHeadings: {
     about: "About Us: Kubernetes Services Company in India",
     process: "Our Kubernetes Implementation Process in India",

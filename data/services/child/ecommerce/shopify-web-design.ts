@@ -1,25 +1,28 @@
 // ============================================================================
 //  FILE: data/services/child/ecommerce/shopify-web-design.ts
-//  PAGE: /services/ecommerce/shopify-web-design
+//  PAGE: /services/ecommerce/shopify-development-services-in-delhi
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
-  slug: "shopify-web-design",
-
-
-
-
+  slug: "shopify-development-services-in-delhi",
   title: "Shopify Web Design",
   metaTitle: "Shopify Web Design Services in India | Eddinet",
   metaDescription: "Eddinet is recognized as one of the leading providers of Shopify Development Services in Delhi, helping brands turn their online store vision into a",
-  heroHeading: "Shopify Development Services in Delhi NCR",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Shopify Store Setup | Shopify App Development | Shopify Theme Design",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
+  heroHeading: "Shopify Development Services in Delhi",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
   heroSubheading: "Launch, grow, and scale your online store with Eddinet, a trusted name for Shopify Development Services in Delhi that understands both the platform and your business goals. From first-time store setup to advanced custom features, Eddinet's Delhi-based team builds fast, secure, and conversion-ready Shopify stores tailored to your brand.",
-
-  detailedDescription: "Eddinet is recognized as one of the leading providers of Shopify Development Services in Delhi, helping brands turn their online store vision into a high-performing reality. Shopify's ease of use, flexibility, and speed make it one of the best platforms available for building and running a modern eCommerce business and our team knows how to make the most of it.\n\nAt Eddinet, our approach is centered on your specific business needs rather than one-size-fits-all templates. Every store we build is planned around your goals, your customers, and the way you want your brand to be experienced online. With a dedicated focus on Shopify development in Delhi, we make sure every solution we deliver is aligned with your growth objectives from day one.",
+  detailedDescription: "Eddinet is recognized as one of the leading providers of Shopify Development Services in Delhi, helping brands turn their online store vision into a high-performing reality. Shopify's ease of use, flexibility, and speed make it one of the best platforms available for building and running a modern eCommerce business  and our team knows how to make the most of it.\n\nAt Eddinet, our approach is centered on your specific business needs rather than one-size-fits-all templates. Every store we build is planned around your goals, your customers, and the way you want your brand to be experienced online. With a dedicated focus on Shopify development in Delhi, we make sure every solution we deliver is aligned with your growth objectives from day one.",
   features: [
     {
       title: "Shopify Store Setup",
@@ -45,7 +48,14 @@ export const child = {
       title: "Shopify Migration Services",
       description: "Moving from WooCommerce, Magento, BigCommerce, or another platform? We manage a smooth, secure migration of your products, customer data, and order history to Shopify with zero disruption to your business.",
     },
+    {
+      title: "Discuss your idea with our experts",
+      description: "Have a project in mind or just exploring your options? Talk to our Shopify specialists for a free, no-obligation consultation and see how we can bring your online store to life.",
+    },
   ],
+  featuresHeading: "OUR SERVICES",
+  benefitsHeading: "Why Choose Shopify for Your Online Store?",
+  benefitsDescription: "Shopify remains one of the most trusted eCommerce platforms worldwide and for good reason.",
   benefits: [
     {
       title: "Easy Setup",
@@ -74,18 +84,28 @@ export const child = {
   ],
   metrics: sharedMetrics,
   whyChooseUs: {
-    heading: "Why Choose Eddinet for Your Shopify Store",
+    heading: "Why Choose Shopify for Your Online Store?",
+    description: "Shopify remains one of the most trusted eCommerce platforms worldwide and for good reason.",
     points: [
+      "Easy Setup: Get your store up and running quickly with Shopify's intuitive interface, requiring no complex technical setup to get started.",
+      "Secure Payments: Shopify offers built-in, PCI-compliant payment processing, giving your customers a safe and reliable checkout experience every time.",
+      "Mobile-Friendly & Responsive: Every Shopify store is optimized for mobile by default, ensuring your customers get a seamless shopping experience on any device.",
+      "Customizable Design: With thousands of themes and endless customization options, Shopify lets you build a store that truly reflects your brand identity.",
+      "Scalable: Whether you're just starting out or scaling to thousands of orders a day, Shopify grows with your business without compromising performance.",
+      "Powerful SEO Tools: Shopify comes equipped with built-in SEO features that help your store rank better and attract more organic traffic.",
+      "Our Satisfied Clients: We're proud to have helped businesses across industries build and grow successful Shopify stores. Our clients trust us not just for our technical expertise, but for our commitment to delivering results.",
+      "Why Choose Eddinet for Your Shopify Store: ",
       "Years of Experience: Our team brings years of hands-on experience building and scaling Shopify stores across diverse industries and business sizes.",
-      "% Customized Development: We don't believe in one-size-fits-all. Every store we build is tailored to your specific business needs, goals, and brand identity.",
+      "100% Customized Development: We don't believe in one-size-fits-all. Every store we build is tailored to your specific business needs, goals, and brand identity.",
       "SEO-Friendly Development: Our development practices are built with SEO best practices in mind from day one, helping your store gain visibility right from launch.",
-      "X Fast Delivery of Projects: Our streamlined process and experienced team allow us to deliver projects twice as fast, without cutting corners on quality.",
-      "% Client Satisfaction: We prioritize clear communication and quality delivery, resulting in consistently high satisfaction across our client base.",
+      "2X Fast Delivery of Projects: Our streamlined process and experienced team allow us to deliver projects twice as fast, without cutting corners on quality.",
+      "100% Client Satisfaction: We prioritize clear communication and quality delivery, resulting in consistently high satisfaction across our client base.",
       "Pay Only What's Agreed: No hidden charges, no surprise costs. You pay exactly what was agreed upon at the start of the project full transparency, always.",
     ],
   },
   process: {
     heading: "OUR SHOPIFY DEVELOPMENT PROCESS",
+    description: "We follow a structured, transparent process so you always know what's happening with your project and why.",
     steps: [
       {
         num: "01",
@@ -100,7 +120,7 @@ export const child = {
       {
         num: "03",
         title: "Designing Your Brand Experience",
-        description: "Our designers and developers build a store that matches your brand - custom themes, layouts, and UI elements designed for a smooth, engaging shopping experience.",
+        description: "Our designers and developers build a store that matches your brand — custom themes, layouts, and UI elements designed for a smooth, engaging shopping experience.",
       },
       {
         num: "04",
@@ -132,8 +152,12 @@ export const child = {
         title: "Growing With You, Beyond Launch",
         description: "Our relationship doesn't end at launch. We provide continued support, updates, and maintenance to keep your Shopify store secure, fast, and up to date.",
       },
+      {
+        num: "10",
+        title: "Let's Turn Your Vision Into a Live Store",
+        description: "Ready to turn your idea into a thriving online business? Partner with our Shopify experts in Delhi and get a store that's built to perform, scale, and convert. Get in touch today for a free consultation.",
+      },
     ],
-    description: "We follow a structured, transparent process so you always know what's happening with your project and why.",
   },
   testimonials: sharedTestimonials,
   faqs: [
@@ -159,11 +183,8 @@ export const child = {
     },
   ],
   crossLinks: crossLinksFor("ecommerce"),
-  featuresHeading: "OUR SERVICES",
-  benefitsHeading: "Why Choose Shopify for Your Online Store?",
-  benefitsDescription: "Shopify remains one of the most trusted eCommerce platforms worldwide and for good reason.",
   docxHeadings: {
-    about: "Eddinet - Trusted Shopify Development Services in Delhi",
+    about: "Eddinet – Trusted Shopify Development Services in Delhi",
     process: "OUR SHOPIFY DEVELOPMENT PROCESS",
     faqs: "FREQUENTLY ASKED QUESTIONS",
   },

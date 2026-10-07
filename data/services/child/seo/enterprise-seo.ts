@@ -1,13 +1,13 @@
 // ============================================================================
 //  FILE: data/services/child/seo/enterprise-seo.ts
-//  PAGE: /services/seo/enterprise-seo
+//  PAGE: /services/seo/enterprise-seo-services-in-delhi-ncr
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
 
 export const child = {
-  slug: "enterprise-seo",
+  slug: "enterprise-seo-services-in-delhi-ncr",
   title: "Enterprise SEO",
   metaTitle: "Enterprise SEO Services in India | Eddinet",
   metaDescription: "Eddinet's enterprise SEO services in India are built for complex, cross-functional work — multi-location sites, large catalogs, technical architecture and corporate governance. Get a free enterprise SEO consultation.",

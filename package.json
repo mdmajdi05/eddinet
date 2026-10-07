@@ -7,6 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "serve": "node scripts/serve-standalone.mjs",
+    "check:site": "node ../site-checker/bin/check.mjs --config site-checker.config.json",
     "typecheck": "tsc --noEmit",
     "images:download": "node scripts/download-remote-images.mjs",
     "images:check": "node scripts/check-images.mjs",

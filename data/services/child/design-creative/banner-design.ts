@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/design-creative/banner-design.ts
-//  PAGE: /services/design-creative/banner-design
+//  PAGE: /services/design-creative/banner-design-services-in-delhi
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/design-creative";
 export const child = {
-  slug: "banner-design",
+  slug: "banner-design-services-in-delhi",
   title: "Banner Design",
   metaTitle: "Banner Design Services in India | Eddinet",
   metaDescription: "EDDINET provides banner design services in Delhi that make your offer impossible to overlook. We pair a punchy headline with colour and layout that guide the",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "High-Converting Web & Display Ad Banners | Print Banners | Custom Brand Graphics",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Banner Design Services in Delhi",
-  heroSubheading: "High-Converting Web & Display Ad Banners | Print Banners | Custom Brand Graphics",
-  detailedDescription: "EDDINET provides banner design services in Delhi that make your offer impossible to overlook. We pair a punchy headline with colour and layout that guide the eye straight to your button. As a banner designing company in Delhi, we craft original banners for websites, online ads, and print, so every rupee of your budget earns a second look.\n\nAt EDDINET, we turn static ad spaces into high-converting brand touchpoints. Weak visuals and poor layouts waste ad budgets and lower click-through rates. As a leading custom banner design agency in Delhi, we craft precision-engineered ad creatives that capture immediate attention and drive user action.\n\nOur team manages your complete banner ecosystem-from website heroes and promotional pop-ups (web banner design) to high-converting display and retargeting ads (advertising banner design) optimized for Google Display Network, Meta, and programmatic campaigns.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "EDDINET provides banner design services in Delhi that make your offer impossible to overlook. We pair a punchy headline with colour and layout that guide the eye straight to your button. As a banner designing company in Delhi, we craft original banners for websites, online ads, and print, so every rupee of your budget earns a second look.",
+  detailedDescription: "At EDDINET, we turn static ad spaces into high-converting brand touchpoints. Weak visuals and poor layouts waste ad budgets and lower click-through rates. As a leading custom banner design agency in Delhi, we craft precision-engineered ad creatives that capture immediate attention and drive user action.\n\nOur team manages your complete banner ecosystem—from website heroes and promotional pop-ups (web banner design) to high-converting display and retargeting ads (advertising banner design) optimized for Google Display Network, Meta, and programmatic campaigns.",
   features: [
     {
       title: "Banner Design Services in Delhi",
@@ -42,6 +50,7 @@ export const child = {
       description: "We craft large-format print banners, roll-up standees, trade show backdrop displays, and outdoor billboards with crisp vector clarity.",
     },
   ],
+  featuresHeading: "Our Banner Design Services in Delhi",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -111,8 +120,12 @@ export const child = {
       a: "Yes. We deliver all export-ready, high-resolution formats alongside complete editable source files (Figma, PSD, AI) upon project completion.",
     },
   ],
+  cta: {
+    heading: "Boost Your Ad Campaign Performance With EDDINET",
+    sub: "Discuss Your Banner Design Requirements",
+    description: "Ready to increase your click-through rates and transform your ad campaigns with high-converting banners? Partner with EDDINET for custom, professional banner design services. Contact our creative team today to schedule your consultation!",
+  },
   crossLinks: crossLinksFor("design-creative"),
-  featuresHeading: "Our Banner Design Services in Delhi",
   docxHeadings: {
     about: "About EDDINET: Custom Banner Design Experts",
     process: "Our Banner Design Process",

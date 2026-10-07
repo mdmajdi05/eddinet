@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/ads-ppc/meta-ads.ts
-//  PAGE: /services/ads-ppc/meta-ads
+//  PAGE: /services/ads-ppc/meta-ads-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
@@ -8,7 +8,7 @@
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
-  slug: "meta-ads",
+  slug: "meta-ads-services-in-india",
 
 
 

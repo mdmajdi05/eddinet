@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/software-ai/business-automation.ts
-//  PAGE: /services/software-ai/business-automation
+//  PAGE: /services/software-ai/business-process-automation-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/software-ai";
 export const child = {
-  slug: "business-automation",
+  slug: "business-process-automation-services-in-india",
   title: "Business Automation",
   metaTitle: "Business Automation Services in India | Eddinet",
   metaDescription: "EDDINET builds scalable, secure operational automation platforms that streamline internal processes, reduce administrative overhead, and eliminate redundant",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Enterprise Workflow Automation | RPA & AI Engineering | Custom Software Development",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Business Process Automation Services in India",
-  heroSubheading: "Enterprise Workflow Automation | RPA & AI Engineering | Custom Software Development",
-  detailedDescription: "EDDINET builds scalable, secure operational automation platforms that streamline internal processes, reduce administrative overhead, and eliminate redundant manual tasks. As a premier provider of business process automation services in India, we combine intelligent workflow orchestration with custom software development to deliver fast, secure digital solutions tailored to your business operations.\n\nEDDINET builds end-to-end operational software, robotic process pipelines, and intelligent workflow automation platforms. As a dedicated business automation software development company in India, we transform complex multi-departmental logic into self-executing digital processes.\n\nOur specialized developers integrate intelligent workflow engines directly with your existing enterprise infrastructure. As a result, we empower modern companies to remove manual work, minimize execution errors, and accelerate core business throughput.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "EDDINET builds scalable, secure operational automation platforms that streamline internal processes, reduce administrative overhead, and eliminate redundant manual tasks. As a premier provider of business process automation services in India, we combine intelligent workflow orchestration with custom software development to deliver fast, secure digital solutions tailored to your business operations.",
+  detailedDescription: "EDDINET builds end-to-end operational software, robotic process pipelines, and intelligent workflow automation platforms. As a dedicated business automation software development company in India, we transform complex multi-departmental logic into self-executing digital processes.\n\nOur specialized developers integrate intelligent workflow engines directly with your existing enterprise infrastructure. As a result, we empower modern companies to remove manual work, minimize execution errors, and accelerate core business throughput.",
   features: [
     {
       title: "Business Automation Software Development Company India",
@@ -46,10 +54,13 @@ export const child = {
       description: "We provide ongoing server health tracking, bot monitoring, security patch management, and workflow speed optimization to guarantee uninterrupted operational execution.",
     },
   ],
+  featuresHeading: "Our Business Process Automation Services India",
+  featuresDescription: "We offer comprehensive engineering services to digitize, automate, and orchestrate complex operational workflows across your entire organization.",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for Enterprise Automation Solutions India?",
+    description: "We combine technical software engineering excellence with business strategy to build custom automation platforms that drive measurable operational ROI.",
     points: [
       "Customised Process Logic: We engineer custom software systems completely from scratch, giving you full ownership of your source code without forcing you into rigid off-the-shelf automation platforms.",
       "Enterprise-Grade Security Standards: We enforce end-to-end encryption, multi-factor authentication, and strict role-based access governance to safeguard sensitive corporate records during automated execution.",
@@ -57,10 +68,10 @@ export const child = {
       "Full Process Visibility: We share live staging environments, interactive process diagrams, and clear milestone reports throughout the development lifecycle to keep your team fully informed.",
       "Dedicated Post-Launch Support: We offer comprehensive SLA-backed maintenance contracts to manage workflow adjustments, server tracking, and system scaling over the long term.",
     ],
-    description: "We combine technical software engineering excellence with business strategy to build custom automation platforms that drive measurable operational ROI.",
   },
   process: {
     heading: "Our Business Automation Development Process in India",
+    description: "We follow a systematic agile lifecycle to design, build, and deploy secure enterprise automation solutions safely and on schedule.",
     steps: [
       {
         num: "01",
@@ -98,7 +109,6 @@ export const child = {
         description: "We analyze process logs and runtime performance continuously, optimizing workflow paths and scaling infrastructure as your business operations grow.",
       },
     ],
-    description: "We follow a systematic agile lifecycle to design, build, and deploy secure enterprise automation solutions safely and on schedule.",
   },
   testimonials: sharedTestimonials,
   faqs: [
@@ -131,9 +141,12 @@ export const child = {
       a: "Yes, we engineer custom API bridges, database connectors, and RPA bots that allow modern automation platforms to interact securely with legacy enterprise systems without breaking existing data structures.",
     },
   ],
+  cta: {
+    heading: "Build Your Business Automation Infrastructure With EDDINET",
+    sub: "Discuss Your Business Automation Requirements",
+    description: "Ready to eliminate manual bottlenecks and scale your operations with custom enterprise automation solutions? Contact the engineering team at EDDINET today to schedule a technical consultation and receive a clear project estimate.",
+  },
   crossLinks: crossLinksFor("software-ai"),
-  featuresHeading: "Our Business Process Automation Services India",
-  featuresDescription: "We offer comprehensive engineering services to digitize, automate, and orchestrate complex operational workflows across your entire organization.",
   docxHeadings: {
     about: "About Us: Business Automation Software Development Company in India",
     process: "Our Business Automation Development Process in India",

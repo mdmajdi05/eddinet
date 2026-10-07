@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/cloud-devops/monitoring-and-logging.ts
-//  PAGE: /services/cloud-devops/monitoring-and-logging
+//  PAGE: /services/cloud-devops/monitoring-and-logging-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/cloud-devops";
 export const child = {
-  slug: "monitoring-and-logging",
+  slug: "monitoring-and-logging-services-in-india",
   title: "Monitoring & Logging",
   metaTitle: "Monitoring & Logging Services in India | Eddinet",
   metaDescription: "Eddinet delivers monitoring and logging services in India that give you full visibility into your infrastructure.",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Server Monitoring | Application Logging | DevOps Monitoring Solutions",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Monitoring and Logging Services in India",
-  heroSubheading: "Server Monitoring | Application Logging | DevOps Monitoring Solutions",
-  detailedDescription: "Eddinet delivers monitoring and logging services in India that give you full visibility into your infrastructure. We track your servers, applications, and cloud resources around the clock. As a result, your team spots issues early and fixes them before customers notice.\n\nHidden errors and downtime quietly drain revenue. Our setups bring metrics, logs, and alerts into one place. Therefore, you always know what is happening across your systems.\n\nEddinet is a team of certified cloud and DevOps engineers. We help Indian businesses replace guesswork with clear, reliable data. Scattered logs and unmonitored servers become one organized view of system health.\n\nWe listen first, then design with care. Our reports use plain language, so technical and non-technical teams can act on them. At the end of each project, we hand over complete documentation.\n\nGood monitoring works quietly in the background. It speaks up only when action is needed. That is the standard we follow on every project.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "Eddinet delivers monitoring and logging services in India that give you full visibility into your infrastructure. We track your servers, applications, and cloud resources around the clock. As a result, your team spots issues early and fixes them before customers notice. Hidden errors and downtime quietly drain revenue. Our setups bring metrics, logs, and alerts into one place. Therefore, you always know what is happening across your systems.",
+  detailedDescription: "Eddinet is a team of certified cloud and DevOps engineers. We help Indian businesses replace guesswork with clear, reliable data. Scattered logs and unmonitored servers become one organized view of system health.\n\nWe listen first, then design with care. Our reports use plain language, so technical and non-technical teams can act on them. At the end of each project, we hand over complete documentation.\n\nGood monitoring works quietly in the background. It speaks up only when action is needed. That is the standard we follow on every project.",
   features: [
     {
       title: "Cloud Monitoring and Logging in India",
@@ -34,6 +42,8 @@ export const child = {
       description: "Our DevOps monitoring solutions connect with your CI/CD pipelines, containers, and deployment tools. Because of this, your team sees the impact of every release right away. Faster feedback leads to safer and more frequent updates.",
     },
   ],
+  featuresHeading: "Our Monitoring and Logging Services in India",
+  featuresDescription: "We focus on four core service areas. Each one is built around your infrastructure, budget, and growth plans.",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -49,6 +59,7 @@ export const child = {
   },
   process: {
     heading: "Our Process for Monitoring and Logging Setup in India",
+    description: "Every Eddinet project follows a clear path, from the first audit to the final handover.",
     steps: [
       {
         num: "01",
@@ -81,7 +92,6 @@ export const child = {
         description: "Finally, we train your team and share full documentation. We also schedule monthly health reviews to keep your coverage sharp.",
       },
     ],
-    description: "Every Eddinet project follows a clear path, from the first audit to the final handover.",
   },
   testimonials: sharedTestimonials,
   faqs: [
@@ -115,8 +125,6 @@ export const child = {
     },
   ],
   crossLinks: crossLinksFor("cloud-devops"),
-  featuresHeading: "Our Monitoring and Logging Services in India",
-  featuresDescription: "We focus on four core service areas. Each one is built around your infrastructure, budget, and growth plans.",
   docxHeadings: {
     about: "About Us: Cloud Monitoring and Logging Experts in India",
     process: "Our Process for Monitoring and Logging Setup in India",

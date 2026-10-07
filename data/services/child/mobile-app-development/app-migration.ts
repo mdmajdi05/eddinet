@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/mobile-app-development/app-migration.ts
-//  PAGE: /services/mobile-app-development/app-migration
+//  PAGE: /services/mobile-app-development/mobile-app-migration-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/mobile-app-development";
 export const child = {
-  slug: "app-migration",
+  slug: "mobile-app-migration-services-in-india",
   title: "App Migration",
   metaTitle: "App Migration Services in India | Eddinet",
   metaDescription: "Eddinet provides top Mobile App Migration Services in India to upgrade outdated apps smoothly. We transfer your code, data, and backend to modern frameworks",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Legacy Modernization | Platform Migration | App Migration",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Mobile App Migration Services in India",
-  heroSubheading: "Legacy Modernization | Platform Migration | App Migration",
-  detailedDescription: "Eddinet provides top Mobile App Migration Services in India to upgrade outdated apps smoothly. We transfer your code, data, and backend to modern frameworks making your app faster, secure, and seamless across all devices.\n\nAt Eddinet, we transform legacy mobile applications into high-performing digital products. As a trusted app migration company in India, we fix app slowness, eliminate security risks, and ensure smooth, hassle-free code transfers.\n\nHere is how we streamline your mobile app migration:\n\nLegacy App Modernization: We upgrade old codebases to fix performance bottlenecks and remove security risks.\n\nNative to Cross-Platform Migration: We convert single-platform native apps into unified Flutter or React Native codebases to lower maintenance costs.\n\niOS to Android App Migration: We recreate iOS applications for Android devices while adapting layouts to Google Material Design standards.\n\nSecure & Scalable App Migration: We protect user records and transaction histories to ensure zero data loss and minimal downtime during transfers.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "Eddinet provides top Mobile App Migration Services in India to upgrade outdated apps smoothly. We transfer your code, data, and backend to modern frameworks making your app faster, secure, and seamless across all devices.",
+  detailedDescription: "At Eddinet, we transform legacy mobile applications into high-performing digital products. As a trusted app migration company in India, we fix app slowness, eliminate security risks, and ensure smooth, hassle-free code transfers.\n\nHere is how we streamline your mobile app migration:\n\nLegacy App Modernization: We upgrade old codebases to fix performance bottlenecks and remove security risks.\n\nNative to Cross-Platform Migration: We convert single-platform native apps into unified Flutter or React Native codebases to lower maintenance costs.\n\niOS to Android App Migration: We recreate iOS applications for Android devices while adapting layouts to Google Material Design standards.\n\nSecure & Scalable App Migration: We protect user records and transaction histories to ensure zero data loss and minimal downtime during transfers.",
   features: [
     {
       title: "Legacy Mobile App Migration",
@@ -86,6 +94,7 @@ export const child = {
       description: "We restructure app code and backend servers into modular components that support rapid future feature expansions.",
     },
   ],
+  featuresHeading: "Our Mobile App Migration Services",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -194,8 +203,12 @@ export const child = {
       a: "Yes, we offer ongoing support plans that cover server health monitoring, immediate bug fixes, security patches, and app store updates.",
     },
   ],
+  cta: {
+    heading: "MODERNIZE & MIGRATE YOUR MOBILE APP WITH EDDINET",
+    sub: "Discuss Your App Migration Requirements",
+    description: "Ready to upgrade your legacy application to a fast, scalable mobile platform? Partner with Eddinet to convert, modernize, and launch your mobile software safely with zero downtime. Contact our engineering team today to schedule your consultation!",
+  },
   crossLinks: crossLinksFor("mobile-app-development"),
-  featuresHeading: "Our Mobile App Migration Services",
   docxHeadings: {
     about: "About Our Mobile App Migration Agency in India",
     process: "Our Mobile App Migration Process",

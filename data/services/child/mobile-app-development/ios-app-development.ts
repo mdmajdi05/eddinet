@@ -1,19 +1,27 @@
 // ============================================================================
 //  FILE: data/services/child/mobile-app-development/ios-app-development.ts
-//  PAGE: /services/mobile-app-development/ios-app-development
+//  PAGE: /services/mobile-app-development/ios-app-development-company-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/mobile-app-development";
 export const child = {
-  slug: "ios-app-development",
+  slug: "ios-app-development-company-in-india",
   title: "iOS App Development",
   metaTitle: "iOS App Development Services in India | Eddinet",
   metaDescription: "We craft bespoke iOS software tailored precisely to your business workflows, brand identity, and customer preferences never relying on rigid, off-the-shelf",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Custom iPhone App Development | Native iOS App Development | iPad App Development",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "iOS App Development Company in India",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
   heroSubheading: "Eddinet is a leading iOS App Development Company in India that crafts sleek, high-performing applications designed to stand out on the Apple App Store. We combine rock-solid security with swift load times to build premium iOS software that delights users and drives real business growth.",
   detailedDescription: "We craft bespoke iOS software tailored precisely to your business workflows, brand identity, and customer preferences never relying on rigid, off-the-shelf templates.\n\nOur engineering team writes clean, modern Swift and Objective-C code optimized specifically for Apple's hardware capabilities, Human Interface Guidelines, and security architecture.\n\nBy combining end-to-end data encryption protocols with high-capacity cloud backends, we protect sensitive user data while ensuring your platform scales seamlessly as user traffic grows.",
   features: [
@@ -54,6 +62,7 @@ export const child = {
       description: "We provide continuous post-launch SLA monitoring, bug fixes, performance tuning, and updates for new iOS releases.",
     },
   ],
+  featuresHeading: "Our iOS App Development Services",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -64,7 +73,7 @@ export const child = {
       "iPad App Development Expertise: We possess specialized experience building powerful iPad applications tailored for enterprise workflows, media, and productivity.",
       "User-Focused iOS Experiences: Every screen transition, micro-interaction, and layout design is refined to feel natural, responsive, and satisfying for end users.",
       "Secure & Scalable App Development: We implement strict data privacy controls, secure authentication, and cloud infrastructure ready to handle exponential user growth.",
-      "End-to-End Development Support: We handle every phase under one roof-from strategy, wireframing, and backend engineering to App Store release and maintenance.",
+      "End-to-End Development Support: We handle every phase under one roof—from strategy, wireframing, and backend engineering to App Store release and maintenance.",
       "Transparent Development Process: We maintain clear visibility with scheduled sprint demos, milestone reporting, and open lines of communication throughout the project.",
       "Ongoing Maintenance & Support: Our partnership continues long past deployment with proactive server monitoring, bug fixes, and feature enhancements.",
     ],
@@ -153,8 +162,12 @@ export const child = {
       a: "Yes, we offer flexible post-launch support packages covering server monitoring, bug fixes, security patches, and compatibility updates for new iOS versions.",
     },
   ],
+  cta: {
+    heading: "BUILD YOUR IOS APP WITH EDDINET",
+    sub: "Discuss Your iOS App Development Requirements",
+    description: "Ready to convert your app concept into a top-tier digital product? Partner with Eddinet to build a secure, high-performing iOS application engineered to engage users and scale your business. Contact our technical team today to schedule your strategy session!",
+  },
   crossLinks: crossLinksFor("mobile-app-development"),
-  featuresHeading: "Our iOS App Development Services",
   docxHeadings: {
     about: "About Eddinet: iOS App Development Agency in India",
     process: "Our iOS App Development Process",

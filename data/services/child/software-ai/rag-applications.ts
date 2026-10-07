@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/software-ai/rag-applications.ts
-//  PAGE: /services/software-ai/rag-applications
+//  PAGE: /services/software-ai/rag-application-development-company-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/software-ai";
 export const child = {
-  slug: "rag-applications",
+  slug: "rag-application-development-company-in-india",
   title: "RAG Applications",
   metaTitle: "RAG Applications Services in India | Eddinet",
   metaDescription: "EDDINET builds high-precision Retrieval-Augmented Generation (RAG) architectures engineered to ground Large Language Models in verified corporate knowledge",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Enterprise Vector Search | Retrieval-Augmented Generation | Custom AI Solutions",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "RAG Application Development Company in India",
-  heroSubheading: "Enterprise Vector Search | Retrieval-Augmented Generation | Custom AI Solutions",
-  detailedDescription: "EDDINET builds high-precision Retrieval-Augmented Generation (RAG) architectures engineered to ground Large Language Models in verified corporate knowledge bases. As a premier RAG application development company in India, we combine enterprise vector search with secure data indexing to deliver hallucination-free AI applications tailored to your business data.\n\nEDDINET builds high-speed retrieval architectures, enterprise vector databases, and contextual AI search engines. As a specialized RAG application development company in India, we transform complex corporate document repositories into accurate, real-time intelligence platforms.\n\nOur engineering team combines advanced hybrid retrieval methods with enterprise-grade data encryption standards. Consequently, we help growing organizations eliminate model hallucinations, secure sensitive internal data, and accelerate operational knowledge discovery.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "EDDINET builds high-precision Retrieval-Augmented Generation (RAG) architectures engineered to ground Large Language Models in verified corporate knowledge bases. As a premier RAG application development company in India, we combine enterprise vector search with secure data indexing to deliver hallucination-free AI applications tailored to your business data.",
+  detailedDescription: "EDDINET builds high-speed retrieval architectures, enterprise vector databases, and contextual AI search engines. As a specialized RAG application development company in India, we transform complex corporate document repositories into accurate, real-time intelligence platforms.\n\nOur engineering team combines advanced hybrid retrieval methods with enterprise-grade data encryption standards. Consequently, we help growing organizations eliminate model hallucinations, secure sensitive internal data, and accelerate operational knowledge discovery.",
   features: [
     {
       title: "Custom RAG Development Services India",
@@ -46,10 +54,13 @@ export const child = {
       description: "We provide ongoing monitoring of retrieval precision, context relevance scoring, hallucination tracking, and vector index tuning to guarantee high response quality.",
     },
   ],
+  featuresHeading: "Our Custom RAG Development Services India",
+  featuresDescription: "We offer comprehensive engineering services to design, build, and deploy custom Retrieval-Augmented Generation architectures across your enterprise ecosystem.",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for Enterprise RAG Solutions India?",
+    description: "We combine deep information retrieval expertise with enterprise AI engineering to deliver RAG applications that provide dependable, verified answers.",
     points: [
       "Zero Hallucination Precision: We implement strict context-bounding guardrails and reranking algorithms, ensuring generated responses remain grounded entirely in your verified internal documentation.",
       "Granular Document Security: We enforce strict role-based access control (RBAC) within the retrieval layer, guaranteeing users only receive information from documents they have permission to view.",
@@ -57,10 +68,10 @@ export const child = {
       "Full Process Visibility: We share live development environments, retrieval evaluation logs, and transparent progress reports throughout the engineering cycle to maintain clear visibility.",
       "Dedicated Post-Launch Support: We offer comprehensive SLA-backed maintenance to manage vector database scaling, embedding model upgrades, and ongoing retrieval optimization over the long term.",
     ],
-    description: "We combine deep information retrieval expertise with enterprise AI engineering to deliver RAG applications that provide dependable, verified answers.",
   },
   process: {
     heading: "Our Custom RAG Development Process in India",
+    description: "We follow a systematic agile methodology to engineer stable and contextually accurate RAG systems for your organization.",
     steps: [
       {
         num: "01",
@@ -98,7 +109,6 @@ export const child = {
         description: "We analyze user query patterns and edge cases to refine chunk sizes, adjust embedding parameters, and update the vector index as new enterprise documents are added.",
       },
     ],
-    description: "We follow a systematic agile methodology to engineer stable and contextually accurate RAG systems for your organization.",
   },
   testimonials: sharedTestimonials,
   faqs: [
@@ -131,9 +141,12 @@ export const child = {
       a: "Yes, we build secure data connectors that link your RAG system directly to Google Drive, SharePoint, AWS S3, SQL databases, Notion, and custom internal APIs.",
     },
   ],
+  cta: {
+    heading: "Build Your Custom RAG Platform With EDDINET",
+    sub: "Discuss Your RAG Requirements",
+    description: "Ready to unlock your enterprise data with secure, hallucination-free Retrieval-Augmented Generation solutions? Contact the engineering team at EDDINET today to schedule a technical consultation and receive a clear project estimate.",
+  },
   crossLinks: crossLinksFor("software-ai"),
-  featuresHeading: "Our Custom RAG Development Services India",
-  featuresDescription: "We offer comprehensive engineering services to design, build, and deploy custom Retrieval-Augmented Generation architectures across your enterprise ecosystem.",
   docxHeadings: {
     about: "About Us: RAG Application Development Company in India",
     process: "Our Custom RAG Development Process in India",

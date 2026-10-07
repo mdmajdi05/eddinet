@@ -1,13 +1,13 @@
 // ============================================================================
 //  FILE: data/services/child/seo/lead-generation-seo.ts
-//  PAGE: /services/seo/lead-generation-seo
+//  PAGE: /services/seo/lead-generation-seo-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
 
 export const child = {
-  slug: "lead-generation-seo",
+  slug: "lead-generation-seo-services-in-india",
   title: "Lead Generation SEO",
   metaTitle: "Lead Generation SEO Services in India | Eddinet",
   metaDescription: "Eddinet provides targeted lead generation SEO services in India designed to capture high-intent buyers, eliminate wasted ad spend and convert organic search traffic into qualified business inquiries. Get a free proposal.",

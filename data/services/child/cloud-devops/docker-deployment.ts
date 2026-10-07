@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/cloud-devops/docker-deployment.ts
-//  PAGE: /services/cloud-devops/docker-deployment
+//  PAGE: /services/cloud-devops/docker-deployment-services-company-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/cloud-devops";
 export const child = {
-  slug: "docker-deployment",
+  slug: "docker-deployment-services-company-in-india",
   title: "Docker Deployment",
   metaTitle: "Docker Deployment Services in India | Eddinet",
   metaDescription: "Eddinet provides premier Docker deployment services in India. We containerize, optimize, and manage high-speed server environments to eliminate dependency",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Docker Container Deployment | Containerized Application Deployment | Docker DevOps Services",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Docker Deployment Services Company in India",
-  heroSubheading: "Docker Container Deployment | Containerized Application Deployment | Docker DevOps Services",
-  detailedDescription: "Eddinet provides premier Docker deployment services in India. We containerize, optimize, and manage high-speed server environments to eliminate dependency conflicts, accelerate release cycles, and scale your applications effortlessly.\n\nAt Eddinet, we turn complex application architectures into scalable, isolated container environments. Slow deployments, dependency mismatches, and unoptimized server stacks cause app downtime and lost revenue. Therefore, we deliver enterprise-grade Docker container deployment India solutions engineered for continuous uptime, low latency, and instant rollbacks.\n\nOur certified DevOps sysadmins manage your complete infrastructure across major cloud platforms. We handle Dockerfile builds, security hardening, multi-stage deployments, and persistent volume mounts to keep your containerized workloads bulletproof 24/7.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "Eddinet provides premier Docker deployment services in India. We containerize, optimize, and manage high-speed server environments to eliminate dependency conflicts, accelerate release cycles, and scale your applications effortlessly.",
+  detailedDescription: "At Eddinet, we turn complex application architectures into scalable, isolated container environments. Slow deployments, dependency mismatches, and unoptimized server stacks cause app downtime and lost revenue. Therefore, we deliver enterprise-grade Docker container deployment India solutions engineered for continuous uptime, low latency, and instant rollbacks.\n\nOur certified DevOps sysadmins manage your complete infrastructure across major cloud platforms. We handle Dockerfile builds, security hardening, multi-stage deployments, and persistent volume mounts to keep your containerized workloads bulletproof 24/7.",
   features: [
     {
       title: "Docker Setup and Deployment India",
@@ -42,6 +50,7 @@ export const child = {
       description: "We set up persistent volume mounts for databases and integrate real-time tracking tools. This guarantees full data safety during container restarts and keeps your team informed of resource utilization.",
     },
   ],
+  featuresHeading: "Our Docker Deployment Services in India",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -113,8 +122,12 @@ export const child = {
       a: "We use Docker persistent volumes and external storage drivers, ensuring database files are stored safely outside the ephemeral container environment.",
     },
   ],
+  cta: {
+    heading: "Accelerate Your Application Delivery With Docker",
+    sub: "Discuss Your Docker Deployment Requirements",
+    description: "Ready to speed up software deployments, eliminate environment bugs, and scale your application effortlessly? Partner with Eddinet to build, secure, and manage your containerized setup. Contact our DevOps engineering team today to schedule your technical consultation!",
+  },
   crossLinks: crossLinksFor("cloud-devops"),
-  featuresHeading: "Our Docker Deployment Services in India",
   docxHeadings: {
     about: "About Us: Docker Container Deployment Company in India",
     process: "Our Docker Deployment Process in India",

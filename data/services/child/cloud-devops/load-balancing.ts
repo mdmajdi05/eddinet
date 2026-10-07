@@ -1,25 +1,33 @@
 // ============================================================================
 //  FILE: data/services/child/cloud-devops/load-balancing.ts
-//  PAGE: /services/cloud-devops/load-balancing
+//  PAGE: /services/cloud-devops/load-balancing-services-company-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/cloud-devops";
 export const child = {
-  slug: "load-balancing",
+  slug: "load-balancing-services-company-in-india",
   title: "Load Balancing",
   metaTitle: "Load Balancing Services in India | Eddinet",
   metaDescription: "Eddinet provides premier load balancing services in India. We design, deploy, and manage traffic distribution setups that remove server overloads, maximize",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Cloud Traffic Engineering | AWS ALB & NLB Setup | High Availability & Auto-Scaling",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Load Balancing Services Company in India",
-  heroSubheading: "Cloud Traffic Engineering | AWS ALB & NLB Setup | High Availability & Auto-Scaling",
-  detailedDescription: "Eddinet provides premier load balancing services in India. We design, deploy, and manage traffic distribution setups that remove server overloads, maximize uptime, and speed up your web applications.\n\nSlow pages and single-point-of-failure outages cost you revenue. Our solutions spread incoming traffic across healthy servers in real time. As a result, you get low latency, smooth auto-scaling, and minimal downtime, even during traffic spikes.\n\nEddinet helps businesses turn single-point server setups into fault-tolerant, high-availability clusters. We engineer intelligent traffic routing that bypasses failed server nodes instantly. This prevents downtime and keeps performance strong during heavy traffic.\n\nOur certified sysadmins manage your traffic infrastructure end to end. We listen first, design carefully, and hand over clear documentation. Good infrastructure should be invisible, and that is the standard we follow on every project.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "Eddinet provides premier load balancing services in India. We design, deploy, and manage traffic distribution setups that remove server overloads, maximize uptime, and speed up your web applications. Slow pages and single-point-of-failure outages cost you revenue. Our solutions spread incoming traffic across healthy servers in real time. As a result, you get low latency, smooth auto-scaling, and minimal downtime, even during traffic spikes.",
+  detailedDescription: "Eddinet helps businesses turn single-point server setups into fault-tolerant, high-availability clusters. We engineer intelligent traffic routing that bypasses failed server nodes instantly. This prevents downtime and keeps performance strong during heavy traffic.\n\nOur certified sysadmins manage your traffic infrastructure end to end. We listen first, design carefully, and hand over clear documentation. Good infrastructure should be invisible, and that is the standard we follow on every project.",
   features: [
     {
       title: "Cloud Load Balancing Setup India",
-      description: "We deploy and optimize cloud load balancers across AWS, Azure, Google Cloud, DigitalOcean, and hybrid setups-routing traffic dynamically to prevent server bottlenecks.",
+      description: "We deploy and optimize cloud load balancers across AWS, Azure, Google Cloud, DigitalOcean, and hybrid setups—routing traffic dynamically to prevent server bottlenecks.",
     },
     {
       title: "AWS ALB NLB Setup India",
@@ -42,6 +50,7 @@ export const child = {
       description: "We track real-time response latency, request volumes, and backend server health metrics to resolve traffic surges before they affect end users.",
     },
   ],
+  featuresHeading: "Our Load Balancing Services in India",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -112,8 +121,12 @@ export const child = {
       a: "SSL termination offloads the heavy cryptographic processing of encrypting and decrypting HTTPS traffic from backend application servers, freeing up CPU power for faster application execution.",
     },
   ],
+  cta: {
+    heading: "Eliminate Server Overloads & Ensure 100% Uptime",
+    sub: "Discuss Your Load Balancing Requirements",
+    description: "Ready to stop server crashes, handle traffic spikes effortlessly, and accelerate application performance? Partner with Eddinet to build a high-availability load balancing architecture engineered for non-stop uptime. Contact our DevOps engineering team today to schedule your technical consultation!",
+  },
   crossLinks: crossLinksFor("cloud-devops"),
-  featuresHeading: "Our Load Balancing Services in India",
   docxHeadings: {
     about: "About Us: High Availability Load Balancing Experts in India",
     process: "Our Load Balancing Implementation Process in India",

@@ -16,7 +16,11 @@ import { site } from "@/data/site/contact";
 export interface ChildServiceView {
   title: string;
   slug: string;
+  /** Badge chip rendered ABOVE the <h1> (doc line "Hero eyebrow badge:-").
+   *  Falls back to the template "⚡ Eddinet … Team" chip when absent. */
+  heroEyebrow?: string;
   heroHeading: string;
+  /** Paragraph rendered BELOW the <h1> (doc's hero paragraph). */
   heroSubheading: string;
   image: string;
   detailedDescription: string;
@@ -38,6 +42,23 @@ export interface ChildServiceView {
   testimonials: { name: string; designation: string; review: string }[];
   faqs: { q: string; a: string }[];
   crossLinks: { title: string; slug: string; description: string }[];
+  /**
+   * "…for Multi-Industry Needs" copy from the source document. Present only on
+   * the pages where the document wrote it — those pages show this list instead
+   * of the shared <Industries /> homepage section.
+   *
+   * SEO child pages declare a bare `{ name, description }[]` here; that data has
+   * never been rendered and still isn't — only the documented object form is.
+   */
+  industries?:
+    | {
+        heading: string;
+        description?: string;
+        items: { title: string; description: string }[];
+      }
+    | { name: string; description: string }[];
+  /** Closing CTA block written in the source document. */
+  cta?: { heading: string; sub?: string; description?: string };
 }
 
 interface ServiceChildComponentProps {
@@ -54,12 +75,19 @@ export default function ServiceChildPage({
   const serviceName = child.title.split("(")[0].trim();
   const introParas = child.detailedDescription.split("\n\n");
   const whyPoints = child.whyChooseUs.points.map(splitPoint);
-  const heroSuffixMatch = child.heroHeading.match(/\s+(in (?:Delhi NCR|India))$/);
+  const heroSuffixMatch = child.heroHeading.match(
+    /\s+(in (?:Delhi NCR|Delhi|India))$/,
+  );
   const heroPrefix = heroSuffixMatch
     ? child.heroHeading.slice(0, heroSuffixMatch.index)
     : child.heroHeading;
   const heroSuffix = heroSuffixMatch ? heroSuffixMatch[1] : "";
   const docxHeadings = child.docxHeadings;
+  // Documented industry list. SEO child pages carry a bare array here, which
+  // is not rendered — only the object form written by the source document is.
+  const docIndustries = Array.isArray(child.industries)
+    ? undefined
+    : child.industries;
   // The document's own FAQ heading is only used when it names the service; a
   // bare "FAQs" adds nothing over the template, which already names it.
   const faqsHeading =
@@ -135,7 +163,7 @@ export default function ServiceChildPage({
           <div className="grid grid-cols-[1.3fr_0.7fr] gap-10 items-center max-[1024px]:grid-cols-1">
             <div>
               <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[var(--tag-bg)] border border-[var(--tag-border)] rounded-3xl text-[var(--main-accent)] text-[0.8rem] font-semibold uppercase tracking-wider mb-4">
-                ⚡ Eddinet {serviceName} Team
+                {child.heroEyebrow || <>⚡ Eddinet {serviceName} Team</>}
               </div>
               <h1 className="text-[3rem] font-extrabold leading-[1.08] mb-4 text-[var(--text-main)] tracking-[-1px] max-[768px]:text-[2.2rem]">
                 {heroPrefix}
@@ -493,9 +521,45 @@ export default function ServiceChildPage({
       </section>
 
       {/* =========================================================
-          8. INDUSTRIES WE SERVE — reused homepage section
+          8. INDUSTRIES WE SERVE — reused homepage section.
+          Pages whose source document carries its own industry list
+          ("…for Multi-Industry Needs") render that list instead.
       ========================================================= */}
+      {docIndustries ? (
+      <section className="py-[90px]">
+        <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
+          <SectionHeader
+            chip="Industries We Serve"
+            title={docIndustries.heading}
+            description={docIndustries.description}
+          />
+
+          <div className="grid grid-cols-4 gap-6 max-[1024px]:grid-cols-2 max-[640px]:grid-cols-1">
+            {docIndustries.items.map((ind, i) => (
+              <div key={i} className="group relative p-7 rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-transparent hover:shadow-[0_20px_50px_rgba(var(--accent-rgb),0.15)]">
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{
+                  background: "var(--card-edge-gradient)",
+                  padding: "1px",
+                  WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                  WebkitMaskComposite: "xor",
+                  maskComposite: "exclude",
+                }} />
+                <div className="absolute -top-3 -right-1 text-[3.4rem] font-extrabold leading-none opacity-[0.05] select-none">{String(i + 1).padStart(2, "0")}</div>
+                <div className="relative z-10">
+                  <div className="w-12 h-12 mb-5 flex items-center justify-center text-[1.4rem] rounded-xl bg-gradient-to-br from-[var(--main-accent)] to-[rgba(var(--accent-rgb),0.5)] shadow-[0_8px_25px_rgba(var(--accent-rgb),0.35)] transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+                    {["🏗️", "🛍️", "🏥", "💼", "🎓", "🏭"][i % 6]}
+                  </div>
+                  <h3 className="text-[1.08rem] font-extrabold text-[var(--text-main)] mb-2">{ind.title}</h3>
+                  <p className="text-[var(--text-muted)] text-[0.88rem] leading-relaxed">{ind.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      ) : (
       <Industries />
+      )}
 
       {/* =========================================================
           9. FAQ — enhanced accordion
@@ -668,13 +732,17 @@ export default function ServiceChildPage({
 
             <div className="relative z-10">
               <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[var(--tag-bg)] border border-[var(--tag-border)] rounded-3xl text-[var(--main-accent)] text-[0.8rem] font-semibold uppercase tracking-wider mb-6">
-                Free 30-Minute Strategy Call
+                {child.cta?.sub ?? "Free 30-Minute Strategy Call"}
               </div>
               <h2 className="text-[2.6rem] font-extrabold mb-4 text-[var(--text-main)] tracking-[-0.5px] max-[768px]:text-[1.9rem]">
-                Ready to Build Your <span className="gradient-text">{serviceName}</span> Strategy?
+                {child.cta ? child.cta.heading : (
+                  <>Ready to Build Your <span className="gradient-text">{serviceName}</span> Strategy?</>
+                )}
               </h2>
               <p className="text-[1.12rem] text-[var(--text-muted)] max-w-[600px] mx-auto mb-9">
-                Book a free 30-minute consultation. We&apos;ll identify how {serviceName.toLowerCase()} fits into your growth system — with no commitment required.
+                {child.cta?.description ?? (
+                  <>Book a free 30-minute consultation. We&apos;ll identify how {serviceName.toLowerCase()} fits into your growth system — with no commitment required.</>
+                )}
               </p>
               <div className="flex justify-center gap-4 flex-wrap">
                 <Link href="/contact" className="inline-flex items-center justify-center gap-2.5 py-3.5 px-7 rounded-full font-bold text-[0.95rem] no-underline transition-all duration-300 text-[var(--on-primary)] shadow-[0_10px_25px_-5px_rgba(var(--accent-rgb),0.4)] hover:-translate-y-[3px] hover:shadow-[0_15px_30px_-5px_rgba(var(--accent-rgb),0.6)]" style={{ background: "var(--primary-gradient)" }}>

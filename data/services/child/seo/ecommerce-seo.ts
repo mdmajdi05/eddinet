@@ -1,13 +1,13 @@
 // ============================================================================
 //  FILE: data/services/child/seo/ecommerce-seo.ts
-//  PAGE: /services/seo/ecommerce-seo
+//  PAGE: /services/seo/ecommerce-seo-services-in-delhi-ncr
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
 
 export const child = {
-  slug: "ecommerce-seo",
+  slug: "ecommerce-seo-services-in-delhi-ncr",
   title: "eCommerce SEO",
   metaTitle: "eCommerce SEO Services in Delhi NCR | Eddinet",
   metaDescription: "Drive qualified shopping traffic to your store. Eddinet's eCommerce SEO covers product, category & collection page optimisation for Shopify, WooCommerce & more. Free audit.",

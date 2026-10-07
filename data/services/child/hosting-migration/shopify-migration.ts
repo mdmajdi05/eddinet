@@ -1,25 +1,33 @@
 // ============================================================================
 //  FILE: data/services/child/hosting-migration/shopify-migration.ts
-//  PAGE: /services/hosting-migration/shopify-migration
+//  PAGE: /services/hosting-migration/shopify-migration-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/hosting-migration";
 export const child = {
-  slug: "shopify-migration",
+  slug: "shopify-migration-services-in-india",
   title: "Shopify Migration",
   metaTitle: "Shopify Migration Services in India | Eddinet",
   metaDescription: "Eddinet provides end-to-end Shopify migration services in India for D2C and B2B brands. We migrate products, customers, orders, SEO URLs, and design with",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Shopify Store Data Migration | WooCommerce & Magento to Shopify | Zero Data Loss",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Shopify Migration Services in India",
-  heroSubheading: "Shopify Store Data Migration | WooCommerce & Magento to Shopify | Zero Data Loss",
-  detailedDescription: "Eddinet provides end-to-end Shopify migration services in India for D2C and B2B brands.\n\nWe migrate products, customers, orders, SEO URLs, and design with zero data loss.\n\nResult: faster store, better UX, and easier management on Shopify or Shopify Plus.\n\nAre you afraid of losing orders, customer accounts, or Google rankings while switching platforms? Is your current store too slow, costly, or complex to maintain? If yes, Eddinet is the solution to your problem.\n\nAs a Shopify migration company in India, we bring hands-on experience from moving stores of many sizes. We study your catalogue, customer data, and SEO setup before moving anything. You also receive plain-language updates, so you always know where your migration stands.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "Eddinet provides end-to-end Shopify migration services in India for D2C and B2B brands. We migrate products, customers, orders, SEO URLs, and design with zero data loss. Result: faster store, better UX, and easier management on Shopify or Shopify Plus.",
+  detailedDescription: "Are you afraid of losing orders, customer accounts, or Google rankings while switching platforms? Is your current store too slow, costly, or complex to maintain? If yes, Eddinet is the solution to your problem.\n\nAs a Shopify migration company in India, we bring hands-on experience from moving stores of many sizes. We study your catalogue, customer data, and SEO setup before moving anything. You also receive plain-language updates, so you always know where your migration stands.",
   features: [
     {
       title: "Shopify Migration",
-      description: "We execute full-stack store migrations-transferring products, customer records, order histories, pages, blogs, and custom metafields with absolute accuracy.",
+      description: "We execute full-stack store migrations—transferring products, customer records, order histories, pages, blogs, and custom metafields with absolute accuracy.",
     },
     {
       title: "WooCommerce to Shopify Migration India",
@@ -42,6 +50,7 @@ export const child = {
       description: "We integrate Indian and global payment gateways (Razorpay, Cashfree, Stripe, PayU), configure shipping rules, and rebuild essential third-party app workflows.",
     },
   ],
+  featuresHeading: "Our Shopify Migration Services in India",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -111,13 +120,13 @@ export const child = {
       q: "How long does a typical Shopify migration take?",
       a: "Standard store migrations usually take between 3 to 7 days, while large Magento or enterprise multi-store migrations are completed within 1 to 3 weeks following thorough staging tests.",
     },
-    {
-      q: "Discuss Your Shopify Migration Requirements",
-      a: "Ready to scale your store on Shopify without losing orders, customer data, or search rankings? Partner with Eddinet for a precision-engineered, zero-downtime migration. Contact our engineering team today to schedule your technical consultation!",
-    },
   ],
+  cta: {
+    heading: "Upgrade Your E-Commerce Store to Shopify Today",
+    sub: "Discuss Your Shopify Migration Requirements",
+    description: "Ready to scale your store on Shopify without losing orders, customer data, or search rankings? Partner with Eddinet for a precision-engineered, zero-downtime migration. Contact our engineering team today to schedule your technical consultation!",
+  },
   crossLinks: crossLinksFor("hosting-migration"),
-  featuresHeading: "Our Shopify Migration Services in India",
   docxHeadings: {
     about: "About Us: Shopify Migration Company in India",
     process: "Our Shopify Migration Process in India",

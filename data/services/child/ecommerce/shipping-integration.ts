@@ -1,19 +1,26 @@
 // ============================================================================
 //  FILE: data/services/child/ecommerce/shipping-integration.ts
-//  PAGE: /services/ecommerce/shipping-integration
+//  PAGE: /services/ecommerce/ecommerce-shipping-integration-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
-import { benefits1 } from "../_category/ecommerce";
 export const child = {
-  slug: "shipping-integration",
+  slug: "ecommerce-shipping-integration-in-india",
   title: "Shipping Integration",
   metaTitle: "Shipping Integration Services in India | Eddinet",
   metaDescription: "Ask any operations team running an online store in India, and they'll tell you the same thing: shipping is where the chaos hides.",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Courier & Carrier API Connections | Real-Time Rate & Serviceability Checks | Automated Label & Manifest Generation",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "eCommerce Shipping Integration in India",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
   heroSubheading: "Getting a product ordered is only half the job getting it delivered on time is where most online stores actually struggle. Eddinet builds eCommerce Shipping API Integration in India that connects your store to the couriers and logistics tools you already work with, so orders move from checkout to doorstep without someone manually chasing every shipment.",
   detailedDescription: "Ask any operations team running an online store in India, and they'll tell you the same thing: shipping is where the chaos hides. Rate mismatches, missed pickups, tracking numbers that never update these things pile up fast once order volume grows. That's the exact gap Eddinet's Shipping Integration Services in India are built to close.\n\nWe're not tied to one courier or one platform. Depending on how your business ships one dominant carrier or a mix of five - we shape each Shipping API Integration in India around your actual delivery zones, your order volume, and the way your warehouse team already works. The point isn't just linking two systems together; it's making sure the handoff between your store and your courier doesn't need a human babysitting it.",
   features: [
@@ -41,23 +48,59 @@ export const child = {
       title: "Returns & COD Reconciliation",
       description: "Cash-on-delivery and returns are where a lot of manual spreadsheet work still lives. We build the reconciliation logic so COD collections and return pickups match up against your order records automatically.",
     },
+    {
+      title: "Talk to Our Integration Team",
+      description: "If you're not sure what setup actually fits your order volume and courier mix, just ask. A quick call is usually enough to figure out where to start.",
+    },
   ],
-  benefits: benefits1,
+  featuresHeading: "Our Shipping Integration Services",
+  benefitsHeading: "Why Shipping Integration Matters for Your Business",
+  benefitsDescription: "It's easy to think of shipping integration as a back-end technicality. In practice, it shapes how customers feel about your brand and how much your operations actually cost to run.",
+  benefits: [
+    {
+      title: "Fewer Manual Errors",
+      description: "Every time a human re-types an address or a courier code, there's a chance of a mistake. Automating that handoff removes most of the errors that quietly cause failed deliveries.",
+    },
+    {
+      title: "Accurate Delivery Estimates",
+      description: "Customers bail on carts when delivery timelines feel like a guess. Real, live serviceability data at checkout fixes that.",
+    },
+    {
+      title: "Faster Order Processing",
+      description: "When labels and manifests generate themselves, orders leave the warehouse faster no waiting around for someone to batch-process them at the end of the day.",
+    },
+    {
+      title: "Better Customer Communication",
+      description: "Nobody enjoys writing \"where is my order\" replies all day. Synced tracking data means customers get updates automatically, and your support team gets their time back.",
+    },
+    {
+      title: "Multi-Courier Flexibility",
+      description: "With an aggregator layer in place, you're not stuck with one carrier's performance in a given region you can route around a bad courier without touching your storefront.",
+    },
+    {
+      title: "Easier Reconciliation",
+      description: "COD and returns reconciliation eats hours of finance and ops time every week when it's manual. Automating it gets that time back.",
+    },
+    {
+      title: "Our Satisfied Clients",
+      description: "We've worked with eCommerce businesses across India to untangle shipping setups that had grown messy over time fewer delays, less manual firefighting, and integrations that hold up once order volumes actually spike.",
+    },
+  ],
   metrics: sharedMetrics,
   whyChooseUs: {
-    heading: "Why Shipping Integration Matters for Your Business",
+    heading: "Why Choose Eddinet for Shipping Integration",
     points: [
-      "Fewer Manual Errors: Every time a human re-types an address or a courier code, there's a chance of a mistake. Automating that handoff removes most of the errors that quietly cause failed deliveries.",
-      "Accurate Delivery Estimates: Customers bail on carts when delivery timelines feel like a guess. Real, live serviceability data at checkout fixes that.",
-      "Faster Order Processing: When labels and manifests generate themselves, orders leave the warehouse faster no waiting around for someone to batch-process them at the end of the day.",
-      "Better Customer Communication: Nobody enjoys writing \"where is my order\" replies all day. Synced tracking data means customers get updates automatically, and your support team gets their time back.",
-      "Multi-Courier Flexibility: With an aggregator layer in place, you're not stuck with one carrier's performance in a given region you can route around a bad courier without touching your storefront.",
-      "Easier Reconciliation: COD and returns reconciliation eats hours of finance and ops time every week when it's manual. Automating it gets that time back.",
+      "Years of Experience: We've integrated shipping and logistics systems for businesses at very different stages from a handful of daily orders to high-volume operations so we've usually seen the edge case you're worried about.",
+      "100% Customized Integration: Your courier mix, your order flow, your platform nothing here gets forced into a generic template.",
+      "Reliable, Tested Deployments: We'd rather catch a bug during testing than have you find it after a customer's order goes missing. Everything gets run through real scenarios before launch.",
+      "2X Fast Delivery of Projects: A tighter, more efficient process means we deliver faster without skipping the testing that actually matters.",
+      "100% Client Satisfaction: We keep you in the loop throughout, which tends to be the difference between a smooth project and a frustrating one.",
+      "Pay Only What's Agreed: Whatever we agree on at the start is what you pay  no hidden add-ons showing up later.",
     ],
-    description: "It's easy to think of shipping integration as a back-end technicality. In practice, it shapes how customers feel about your brand and how much your operations actually cost to run.",
   },
   process: {
     heading: "Our Process Of Shipping & Logistic Integration in INDIA",
+    description: "No two businesses ship the same way, so we don't start with code, we start by watching how your orders actually move today.",
     steps: [
       {
         num: "01",
@@ -72,7 +115,7 @@ export const child = {
       {
         num: "03",
         title: "Building the API Connections",
-        description: "This is the technical core - our developers wire up the actual connections between your store, the courier's API, and any middleware sitting in between.",
+        description: "This is the technical core — our developers wire up the actual connections between your store, the courier's API, and any middleware sitting in between.",
       },
       {
         num: "04",
@@ -82,20 +125,24 @@ export const child = {
       {
         num: "05",
         title: "Testing Across Real Scenarios",
-        description: "Before anything goes live, we throw real conditions at it: different pincodes, COD orders, return flows, and a spike in order volume, just to see where things might crack.",
+        description: "",
       },
       {
         num: "06",
+        title: "Before anything goes live, we throw real conditions at it",
+        description: "different pincodes, COD orders, return flows, and a spike in order volume, just to see where things might crack.",
+      },
+      {
+        num: "07",
         title: "Going Live With Monitoring",
         description: "Launch day isn't really the finish line. We stay close to the system for the first few weeks, catching any edge case that only shows up under real traffic.",
       },
       {
-        num: "07",
+        num: "08",
         title: "Ongoing Support as You Scale",
         description: "As you add couriers, expand into new regions, or just grow past your current volume, we're around to extend the integration rather than have you rebuild it from scratch.",
       },
     ],
-    description: "No two businesses ship the same way, so we don't start with code, we start by watching how your orders actually move today.",
   },
   testimonials: sharedTestimonials,
   faqs: [
@@ -109,15 +156,15 @@ export const child = {
     },
     {
       q: "Can you integrate shipping with any eCommerce platform?",
-      a: "Yes - Shopify, WooCommerce, Magento, or a custom-built store, the integration approach adjusts to whatever platform you're on.",
+      a: "Yes — Shopify, WooCommerce, Magento, or a custom-built store, the integration approach adjusts to whatever platform you're on.",
     },
     {
       q: "Do you handle COD and return integration?",
-      a: "Yes. Cash-on-delivery reconciliation and return pickup handling get built right into the same workflow, not bolted on",
+      a: "Yes. Cash-on-delivery reconciliation and return pickup handling get built right into the same workflow, not bolted on separately.",
     },
     {
       q: "Can the integration show real-time delivery estimates at checkout?",
-      a: "Yes, that's usually one of the first things we set up - live rate and serviceability checks so customers know before they commit to an order.",
+      a: "Yes, that's usually one of the first things we set up — live rate and serviceability checks so customers know before they commit to an order.",
     },
     {
       q: "How long does a shipping integration project take?",
@@ -125,7 +172,7 @@ export const child = {
     },
     {
       q: "What happens if we add a new courier later?",
-      a: "We extend the existing integration to bring in the new courier or region no need to tear down what's already working.",
+      a: "We extend the existing integration to bring in the new courier or region  no need to tear down what's already working.",
     },
     {
       q: "Do you provide support after the integration goes live?",
@@ -133,9 +180,8 @@ export const child = {
     },
   ],
   crossLinks: crossLinksFor("ecommerce"),
-  featuresHeading: "Our Shipping Integration Services",
   docxHeadings: {
-    about: "Eddinet - Shipping Integration Services in India",
+    about: "Eddinet – Shipping Integration Services in India",
     process: "Our Process Of Shipping & Logistic Integration in INDIA",
     faqs: "Frequently Asked Questions",
   },

@@ -1,13 +1,13 @@
 // ============================================================================
 //  FILE: data/services/child/seo/international-seo.ts
-//  PAGE: /services/seo/international-seo
+//  PAGE: /services/seo/international-seo-services-in-delhi-ncr
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
 
 export const child = {
-  slug: "international-seo",
+  slug: "international-seo-services-in-delhi-ncr",
   title: "International SEO",
   metaTitle: "International SEO Services in India | Eddinet",
   metaDescription: "Eddinet helps businesses expand across countries and languages without losing the rankings they've already earned at home — hreflang, geo-targeting and localized content. Get a free international SEO consultation.",

@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/design-creative/video-editing.ts
-//  PAGE: /services/design-creative/video-editing
+//  PAGE: /services/design-creative/video-editing-services-in-delhi
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/design-creative";
 export const child = {
-  slug: "video-editing",
+  slug: "video-editing-services-in-delhi",
   title: "Video Editing",
   metaTitle: "Video Editing Services in India | Eddinet",
   metaDescription: "EDDINET provides professional video editing services in Delhi to help brands, creators, and businesses transform raw footage into high-retention visual",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "YouTube Video Editing | Corporate Video Editing | Reels & Social Media Edits",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Video Editing Services in Delhi",
-  heroSubheading: "YouTube Video Editing | Corporate Video Editing | Reels & Social Media Edits",
-  detailedDescription: "EDDINET provides professional video editing services in Delhi to help brands, creators, and businesses transform raw footage into high-retention visual stories. Our post-production team combines cinematic pacing, seamless transitions, and immersive sound design to capture audience attention and keep viewers watching until the final frame.\n\nDo your videos lose viewers within the first few seconds? Is your footage sitting unused because nobody has time to edit it? If yes, EDDINET is the solution to your problem.\n\nAs a professional video editing agency in Delhi, we work with creators, brands, and companies that want polished videos without building an in-house team. We watch your footage, learn your goal, and edit with the viewer in mind. You then receive videos that feel smooth, purposeful, and ready to publish.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "EDDINET provides professional video editing services in Delhi to help brands, creators, and businesses transform raw footage into high-retention visual stories. Our post-production team combines cinematic pacing, seamless transitions, and immersive sound design to capture audience attention and keep viewers watching until the final frame.",
+  detailedDescription: "Do your videos lose viewers within the first few seconds? Is your footage sitting unused because nobody has time to edit it? If yes, EDDINET is the solution to your problem.\n\nAs a professional video editing agency in Delhi, we work with creators, brands, and companies that want polished videos without building an in-house team. We watch your footage, learn your goal, and edit with the viewer in mind. You then receive videos that feel smooth, purposeful, and ready to publish.",
   features: [
     {
       title: "YouTube Video Editing Services",
@@ -34,6 +42,8 @@ export const child = {
       description: "Reels reward quick cuts and instant hooks. Our reels editing service adds trending-style transitions, punchy text, and beat-matched music to your clips. In addition, every reel is framed vertically with text kept inside the safe area.",
     },
   ],
+  featuresHeading: "Our Video Editing Services in Delhi",
+  featuresDescription: "We focus on four services that cover the places your videos are watched.",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -49,6 +59,7 @@ export const child = {
   },
   process: {
     heading: "Our Process for Video Editing in Delhi",
+    description: "Here is how raw footage becomes a finished video.",
     steps: [
       {
         num: "01",
@@ -81,7 +92,6 @@ export const child = {
         description: "Finally, you receive files in the right format and size for each platform. Project files can be shared on request. Your team can upload immediately.",
       },
     ],
-    description: "Here is how raw footage becomes a finished video.",
   },
   testimonials: sharedTestimonials,
   faqs: [
@@ -107,8 +117,6 @@ export const child = {
     },
   ],
   crossLinks: crossLinksFor("design-creative"),
-  featuresHeading: "Our Video Editing Services in Delhi",
-  featuresDescription: "We focus on four services that cover the places your videos are watched.",
   docxHeadings: {
     about: "About Us: Professional Video Editing Agency in Delhi",
     process: "Our Process for Video Editing in Delhi",

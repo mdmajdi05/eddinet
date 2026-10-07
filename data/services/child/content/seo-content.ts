@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/content/seo-content.ts
-//  PAGE: /services/content/seo-content
+//  PAGE: /services/content/seo-content-services-in-delhi-ncr
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
@@ -9,7 +9,7 @@
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { features, benefits, whyChooseUs, process, faqs } from "../_category/content";
 export const child = {
-  slug: "seo-content",
+  slug: "seo-content-services-in-delhi-ncr",
   title: "SEO Content",
   metaTitle: "SEO Content Services in Delhi NCR | Eddinet",
   metaDescription: "Search-intent content written for rankings, relevance and organic traffic. Copy that ranks and reads — not keyword soup. Eddinet delivers dependable seo content services in Delhi NCR for India and global clients. Get a free proposal today.",

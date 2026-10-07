@@ -1,126 +1,125 @@
 // ============================================================================
 //  FILE: data/services/child/hosting-migration/hosting-migration.ts
-//  PAGE: /services/hosting-migration/hosting-migration
+//  PAGE: /services/hosting-migration/hosting-migration-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/hosting-migration";
 export const child = {
-  slug: "hosting-migration",
+  slug: "hosting-migration-services-in-india",
   title: "Hosting Migration",
   metaTitle: "Hosting Migration Services in India | Eddinet",
   metaDescription: "Eddinet delivers hosting and migration services in India that keep your website and applications fast, secure, and online.",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Web Hosting Migration | Server Migration Services | Shared Hosting to VPS Moves",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Hosting Migration Services in India",
-  heroSubheading: "Cloud & VPS Hosting | Managed Hosting Support | Safe Website & Server Migration",
-  detailedDescription: "Eddinet delivers hosting and migration services in India that keep your website and applications fast, secure, and online. We set up your hosting, move your data safely, and manage the servers behind it. As a result, you focus on your business while we handle the technical work.\n\nSlow servers and risky migrations cost you traffic and sales. Our team plans every move carefully, so your site stays available. Therefore, you grow without worrying about your infrastructure.\n\nEddinet is a web hosting and server migration company in India built around certified sysadmins and DevOps engineers. We help businesses replace unreliable hosting and messy server setups with one clear, well-managed plan.\n\nWe listen first, then review your current setup before making any change. Our reports use plain language, so technical and non-technical teams can act on them. At the end of each project, we hand over complete documentation.\n\nGood hosting should feel invisible. It works quietly, stays fast, and never surprises you. That is the standard we follow on every project.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "Eddinet provides hosting migration services in India that move your website and server to a faster, safer home without breaking anything. We audit your current setup, plan the move, and go live only after testing.",
+  detailedDescription: "Is your host slow, overpriced, or unresponsive when you need help? Are you afraid that switching providers will break your site or your email? If yes, Eddinet is the solution to your problem.\n\nAs web hosting migration specialists in India, we give you sysadmins who have handled moves across cPanel servers, VPS platforms, and cloud environments. We read your server the way a doctor reads a report: what runs on it, what depends on it, and what could fail. Then we plan the move around those findings and keep you informed in plain language.",
   features: [
     {
-      title: "Website, VPS, and Cloud Hosting Services in India",
-      description: "We host websites of every size on shared, VPS, and cloud platforms. Small sites get reliable, affordable plans. Growing businesses get scalable cloud hosting with room for traffic spikes. We help you pick the right plan, so you never overpay or outgrow your server.",
+      title: "Web Hosting Migration in India",
+      description: "Our web hosting migration moves your site between hosts while keeping your setup consistent. We match PHP versions, server software, cron jobs, and SSL certificates. Because of this, your site behaves the same on the new host as it did on the old one.",
     },
     {
-      title: "Managed Hosting and Server Support in India",
-      description: "Our managed hosting service gives you an expert team without the cost of hiring one. We handle monitoring, security patches, backups, and performance tuning. In addition, our engineers respond quickly when something needs attention.",
+      title: "Server Migration Services in India",
+      description: "Our server migration services handle full server moves, including multiple sites, databases, mail, and custom configurations. We document the old server before touching it. As a result, no hidden setting or scheduled task gets forgotten.",
     },
     {
-      title: "Application, Database, and DNS Hosting in India",
-      description: "We host web applications, databases, and domains on stable, secure infrastructure. This includes MySQL and PostgreSQL databases, plus managed DNS with high uptime. Because of this, your app, data, and domain all work together smoothly.",
+      title: "Shared Hosting to VPS Migration in India",
+      description: "Outgrown shared hosting? We move you to a VPS with dedicated resources and a setup tuned for your traffic. In addition, we configure security and backups on the new server, so you gain speed and control without extra risk.",
     },
     {
-      title: "Website, Hosting, and Database Migration Services in India",
-      description: "Our hosting and migration specialists move your website, server, or database to a new home with minimal downtime. We also handle WordPress and Shopify store migrations. Every move is tested before the switch, so your data arrives complete and intact.",
+      title: "Migrate to a New Hosting Provider in India",
+      description: "Leaving a provider can be tricky, especially if they are slow to cooperate. We plan around that by collecting what we need early and keeping your old service active until the move is verified. Your domain, email, and data stay under your control.",
     },
   ],
+  featuresHeading: "Our Hosting Migration Services in India",
+  featuresDescription: "We cover four kinds of moves, each with its own risks and checks.",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
-    heading: "Why Choose Eddinet for Hosting and Migration Services in India",
+    heading: "Why Choose Eddinet for Hosting Migration Services in India",
     points: [
-      "Migration without the panic: We plan every move with backups and testing. As a result, your site stays online with minimal downtime. Your search rankings stay protected during the switch.",
-      "One partner for hosting and migration: You do not need separate vendors for servers, domains, and data moves. Everything is managed by one accountable team. This saves time and avoids finger-pointing.",
-      "Stack-friendly setup: We work with WordPress, Laravel, Node.js, Shopify, and custom applications. You never face a forced rebuild. We simply give your existing stack a better home.",
-      "Security built in: Every server is hardened, patched, and backed up from day one. Suspicious activity is flagged early. Your data stays protected as you grow.",
-      "Plain-language reports: Managers get clear summaries of uptime and performance. Meanwhile, engineers get the technical detail they need. Everyone knows exactly what was done.",
-      "Indian business hours support: Our team understands local time zones and responds when your day starts. Therefore, urgent issues get attention when you need it most. You speak to real engineers who know your setup.",
+      "Hidden dependencies found early: Old servers often hide cron jobs, custom modules, and forgotten settings. We uncover them during the audit. This prevents the surprise failures that follow careless moves.",
+      "Rollback at every stage: The old host stays intact until you confirm success. If something looks wrong, we switch back quickly. You never face a one-way move.",
+      "Rankings and email protected: We keep URLs, redirects, and mail records consistent through the switch. Your search visibility and inbox stay steady. Customers notice nothing except better speed.",
+      "Honest advice on where to move: We recommend the platform your traffic actually needs, whether shared, VPS, or cloud. You avoid paying for power you will not use. If your current host is fine, we say so.",
+      "Written plan, fixed scope: You get a clear list of what will move and when. Extra work is discussed before it starts. Billing stays free of surprises.",
+      "Support in Indian business hours: Our team is online when your working day begins. Urgent issues reach people who already know your migration. Therefore, you spend less time explaining and more time fixing.",
     ],
-    description: "We measure success by faster load times, stronger uptime, and smooth, low-risk migrations.",
   },
   process: {
-    heading: "Our Process for Hosting and Migration Setup in India",
+    heading: "Our Process for Hosting Migration in India",
+    description: "Here is how we move you from your current host to the new one.",
     steps: [
       {
         num: "01",
-        title: "Infrastructure review",
-        description: "We study your current hosting, traffic, and applications. This shows what works and what needs to change. It also helps us choose the right plan and migration method.",
+        title: "Environment audit",
+        description: "We record server software, versions, sites, databases, mail, and scheduled tasks. This exposes hidden dependencies before they cause trouble. It also shows whether your new host is a true match.",
       },
       {
         num: "02",
-        title: "Planning and backup",
-        description: "We build a clear plan with timelines and a full backup of your data. As a result, nothing is lost if something goes wrong. Backups are verified before we touch your live site.",
+        title: "Compatibility check",
+        description: "We compare the old and new environments and flag differences, such as PHP versions or missing modules. As a result, conflicts are solved on paper, not on launch day. You see the findings in plain language.",
       },
       {
         num: "03",
-        title: "Setup and configuration",
-        description: "Next, we prepare the new server with the right software, security, and settings. We also connect your domain and DNS records. Everything is configured before your site goes live.",
+        title: "Backup and rollback plan",
+        description: "Next, we take verified backups and keep the old host running. If anything fails, you can return to the old setup at once. Nothing is cancelled until you approve.",
       },
       {
         num: "04",
-        title: "Migration and testing",
-        description: "Then we move your files, databases, and emails to the new environment. We test speed, links, forms, and checkout flows on the new server. Any issue is fixed before the switch.",
+        title: "Staged transfer and testing",
+        description: "Then we copy data to the new server and test it on a private link. We check pages, logins, forms, email, and performance. Faults are fixed before any visitor sees them.",
       },
       {
         num: "05",
-        title: "Go-live and monitoring",
-        description: "We switch traffic during low-traffic hours to reduce the impact on visitors. Monitoring tools then watch performance and uptime closely. Problems are caught and fixed right away.",
+        title: "DNS cutover",
+        description: "We lower TTL values ahead of time and switch records at a low-traffic hour. Live checks follow immediately. The old host stays online while the change spreads.",
       },
       {
         num: "06",
-        title: "Handover and support",
-        description: "Finally, we train your team and share full documentation. You also get ongoing support and regular health checks. As your business grows, we adjust your hosting to match.",
+        title: "Post-migration monitoring",
+        description: "Finally, we watch errors, speed, and email delivery for several days. Once everything is stable, we help you close the old account safely. You receive a checklist showing what was moved and verified.",
       },
     ],
-    description: "Every Eddinet project follows a clear path, from the first review to ongoing support.",
   },
   testimonials: sharedTestimonials,
   faqs: [
     {
-      q: "What are hosting and migration services in India?",
-      a: "Hosting services keep your website or application running on a secure, fast server. Migration services move your site, data, or server to a new host safely.",
+      q: "How do I know it is time to migrate to a new hosting provider?",
+      a: "Warning signs include frequent slowdowns, repeated downtime, weak support, and hitting plan limits. Rising renewal prices without better performance is another clue. If two or more apply, a move is worth planning.",
     },
     {
-      q: "Why do I need a web hosting and server migration company in India?",
-      a: "Migrations can cause downtime, data loss, and broken pages when done alone. An expert team plans, tests, and completes the move properly.",
+      q: "What is the difference between hosting migration and website migration?",
+      a: "Hosting migration moves your whole hosting environment, including server settings, multiple sites, and mail. Website migration focuses on moving one site's files and data. Many projects involve both, and we scope them together.",
     },
     {
-      q: "Which hosting types do you offer?",
-      a: "We offer website hosting, VPS hosting, cloud hosting, managed hosting, application hosting, and database hosting.",
+      q: "Is shared hosting to VPS migration difficult?",
+      a: "It needs care because a VPS is managed differently, with its own software, security, and resource settings. We build and tune the VPS first, then move your site and test it. This avoids performance surprises after the switch.",
     },
     {
-      q: "Will my website go down during migration?",
-      a: "We aim for minimal downtime. We test everything on the new server first and switch traffic during low-traffic hours.",
+      q: "Will my old host block or delay the migration?",
+      a: "Most hosts cooperate, but some are slow to release backups or access. We plan for this by requesting what we need early and keeping your old plan active. If delays occur, we tell you and adjust the timeline.",
     },
     {
-      q: "Can you migrate WordPress and Shopify stores?",
-      a: "Yes. We handle WordPress site moves and Shopify store data migration, including products, pages, and customer records.",
-    },
-    {
-      q: "How long does a migration take?",
-      a: "Simple website moves take a few days. Large databases or multi-server setups may take longer, and we share a timeline after the review.",
-    },
-    {
-      q: "Do you offer support after migration?",
-      a: "Yes. We provide monitoring, regular health checks, and ongoing support plans.",
+      q: "What should I prepare before a server migration?",
+      a: "Share your hosting login details, domain access, and a list of sites and email accounts. Note any custom software or scheduled tasks you know about. We handle the rest and share a checklist at the start.",
     },
   ],
   crossLinks: crossLinksFor("hosting-migration"),
-  featuresHeading: "Our Hosting and Migration Services in India",
-  featuresDescription: "We focus on four core service areas. Each one is built around your traffic, budget, and growth plans.",
   docxHeadings: {
-    about: "About Us: Web Hosting and Server Migration Company in India",
-    process: "Our Process for Hosting and Migration Setup in India",
+    about: "About Us: Web Hosting Migration Experts in India",
+    process: "Our Process for Hosting Migration in India",
     faqs: "FAQs",
   },
 };

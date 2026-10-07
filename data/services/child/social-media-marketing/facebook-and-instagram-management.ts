@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/social-media-marketing/facebook-and-instagram-management.ts
-//  PAGE: /services/social-media-marketing/facebook-and-instagram-management
+//  PAGE: /services/social-media-marketing/facebook-and-instagram-management-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
@@ -9,7 +9,7 @@
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits1 } from "../_category/social-media-marketing";
 export const child = {
-  slug: "facebook-and-instagram-management",
+  slug: "facebook-and-instagram-management-services-in-india",
   title: "Facebook & Instagram Management",
   metaTitle: "Facebook & Instagram Management in India | Eddinet",
   metaDescription: "At Eddinet, we are not just a service provider, we are your growth partners in the digital space. As a forward-thinking agency, we provide high-impact",

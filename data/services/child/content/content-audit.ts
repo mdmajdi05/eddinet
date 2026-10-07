@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/content/content-audit.ts
-//  PAGE: /services/content/content-audit
+//  PAGE: /services/content/content-audit-services-in-delhi-ncr
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
@@ -9,7 +9,7 @@
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { features, benefits, whyChooseUs, process, faqs } from "../_category/content";
 export const child = {
-  slug: "content-audit",
+  slug: "content-audit-services-in-delhi-ncr",
   title: "Content Audit",
   metaTitle: "Content Audit Services in Delhi NCR | Eddinet",
   metaDescription: "Reviewing existing content to find gaps, duplicates and refresh opportunities. A clear, prioritised map of what to fix, refresh or retire. Eddinet delivers dependable content audit services in Delhi NCR for India and global clients. Get a free proposal today.",

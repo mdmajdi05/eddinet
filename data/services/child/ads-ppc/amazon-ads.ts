@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/ads-ppc/amazon-ads.ts
-//  PAGE: /services/ads-ppc/amazon-ads
+//  PAGE: /services/ads-ppc/amazon-ads-agency-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
@@ -9,7 +9,7 @@
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/ads-ppc";
 export const child = {
-  slug: "amazon-ads",
+  slug: "amazon-ads-agency-in-india",
   title: "Amazon Ads",
   metaTitle: "Amazon Ads Services in India | Eddinet",
   metaDescription: "At Eddinet, we manage your Amazon PPC campaigns to drive higher sales and lower your ACoS (Advertising Cost of Sales).",

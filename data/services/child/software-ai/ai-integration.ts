@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/software-ai/ai-integration.ts
-//  PAGE: /services/software-ai/ai-integration
+//  PAGE: /services/software-ai/ai-integration-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
@@ -9,7 +9,7 @@
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/software-ai";
 export const child = {
-  slug: "ai-integration",
+  slug: "ai-integration-services-in-india",
   title: "AI Integration",
   metaTitle: "AI Integration Services in India | Eddinet",
   metaDescription: "EDDINET builds high-speed, intelligent AI architectures engineered to transform enterprise data into actionable business operations.",

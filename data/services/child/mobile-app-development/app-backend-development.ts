@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/mobile-app-development/app-backend-development.ts
-//  PAGE: /services/mobile-app-development/app-backend-development
+//  PAGE: /services/mobile-app-development/mobile-app-backend-development-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/mobile-app-development";
 export const child = {
-  slug: "app-backend-development",
+  slug: "mobile-app-backend-development-services-in-india",
   title: "App Backend Development",
   metaTitle: "App Backend Development Services in India | Eddinet",
   metaDescription: "Eddinet provides expert Mobile App Backend Development Services in India to power your software with fast, secure cloud architecture.",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Cloud Backend | Scalable Architecture | API-First Development",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Mobile App Backend Development Services in India",
-  heroSubheading: "Cloud Backend | Scalable Architecture | API-First Development",
-  detailedDescription: "Eddinet provides expert Mobile App Backend Development Services in India to power your software with fast, secure cloud architecture. We build reliable backend systems that process data instantly, prevent app crashes, and scale effortlessly as your user traffic grows.\n\nAt Eddinet, we build powerful, secure, and flexible cloud server environments that power high-performing mobile applications. As a leading backend development agency in India, we engineer server setups that process data instantly, protect sensitive user records, and scale effortlessly as your active user base grows.\n\nHere is how we streamline your mobile app backend development:\n\nCloud Backend Development: We build robust cloud server setups that connect seamlessly with your mobile frontend to handle heavy user activity.\n\nScalable App Architecture: We structure databases and backend code to absorb sudden traffic surges without performance drops or service interruptions.\n\nAPI-First Backend Engineering: We design secure APIs first to enable lightning-fast communication between servers, mobile apps, and third-party systems.\n\nSecure & High-Performance Systems: We apply end-to-end encryption and speed tuning to safeguard user data and ensure instant loading across all devices.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "Eddinet provides expert Mobile App Backend Development Services in India to power your software with fast, secure cloud architecture. We build reliable backend systems that process data instantly, prevent app crashes, and scale effortlessly as your user traffic grows.",
+  detailedDescription: "At Eddinet, we build powerful, secure, and flexible cloud server environments that power high-performing mobile applications. As a leading backend development agency in India, we engineer server setups that process data instantly, protect sensitive user records, and scale effortlessly as your active user base grows.\n\nHere is how we streamline your mobile app backend development:\n\nCloud Backend Development: We build robust cloud server setups that connect seamlessly with your mobile frontend to handle heavy user activity.\n\nScalable App Architecture: We structure databases and backend code to absorb sudden traffic surges without performance drops or service interruptions.\n\nAPI-First Backend Engineering: We design secure APIs first to enable lightning-fast communication between servers, mobile apps, and third-party systems.\n\nSecure & High-Performance Systems: We apply end-to-end encryption and speed tuning to safeguard user data and ensure instant loading across all devices.",
   features: [
     {
       title: "Custom App Backend Development",
@@ -82,6 +90,7 @@ export const child = {
       description: "We plan server limits and database capacity early to prevent performance drops as your user base doubles.",
     },
   ],
+  featuresHeading: "Our Mobile App Backend Development Services",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -95,7 +104,7 @@ export const child = {
       "Flexible & Future-Ready Architecture: Our modular server designs allow you to add new features or third-party tools anytime without rebuilding.",
       "Seamless Frontend Integration: We work closely with mobile developers to ensure fast API connections and smooth data synchronization.",
       "Long-Term Backend Support: Our partnership continues past deployment with active server monitoring, scaling adjustments, and security patches.",
-      "Backend Development for Different Mobile Apps",
+      "Backend Development for Different Mobile Apps: ",
       "E-Commerce Applications: We build high-capacity backends that manage huge product catalogs, process instant payments, and sync real-time stock levels.",
       "On-Demand Apps: We engineer fast backends capable of processing live GPS tracking, instant driver routing, and automated booking dispatch.",
       "Enterprise Mobile Applications: We construct secure enterprise server setups that connect internal corporate databases and automate workforce workflows.",
@@ -193,8 +202,12 @@ export const child = {
       a: "Yes, we offer ongoing SLA maintenance covering live server monitoring, database tuning, security patches, and cloud cost management.",
     },
   ],
+  cta: {
+    heading: "BUILD A SCALABLE BACKEND FOR YOUR MOBILE APP",
+    sub: "Discuss Your Backend Development Requirements",
+    description: "Ready to power your app with a fast, secure, and scalable backend? Partner with Eddinet to build a high-performance cloud architecture engineered to scale your business. Contact our technical engineering team today to schedule your strategy session!",
+  },
   crossLinks: crossLinksFor("mobile-app-development"),
-  featuresHeading: "Our Mobile App Backend Development Services",
   docxHeadings: {
     about: "About Our App Backend Development Agency",
     process: "Our API-First Backend Engineering Process",

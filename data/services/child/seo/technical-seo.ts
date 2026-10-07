@@ -1,13 +1,13 @@
 // ============================================================================
 //  FILE: data/services/child/seo/technical-seo.ts
-//  PAGE: /services/seo/technical-seo
+//  PAGE: /services/seo/technical-seo-services-in-delhi-ncr
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
 
 export const child = {
-  slug: "technical-seo",
+  slug: "technical-seo-services-in-delhi-ncr",
   title: "Technical SEO",
   metaTitle: "Technical SEO Services in India | Eddinet",
   metaDescription: "Eddinet provides professional technical SEO services in India — fixing backend bottlenecks so search engines can rank your pages effortlessly and drive qualified buyers to your business. Get a free audit.",

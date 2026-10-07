@@ -1,13 +1,13 @@
 // ============================================================================
 //  FILE: data/services/child/seo/b2b-seo.ts
-//  PAGE: /services/seo/b2b-seo
+//  PAGE: /services/seo/b2b-seo-services-in-delhi-ncr
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
 
 export const child = {
-  slug: "b2b-seo",
+  slug: "b2b-seo-services-in-delhi-ncr",
   title: "B2B SEO",
   metaTitle: "B2B SEO Services in India | Eddinet",
   metaDescription: "Our B2B SEO services in India put your business in front of real decision-makers right when they are ready to buy — CTOs, founders and procurement heads with actual budgets. Get a free B2B SEO consultation.",

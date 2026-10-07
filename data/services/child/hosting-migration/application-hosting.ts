@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/hosting-migration/application-hosting.ts
-//  PAGE: /services/hosting-migration/application-hosting
+//  PAGE: /services/hosting-migration/application-hosting-services-company-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/hosting-migration";
 export const child = {
-  slug: "application-hosting",
+  slug: "application-hosting-services-company-in-india",
   title: "Application Hosting",
   metaTitle: "Application Hosting Services in India | Eddinet",
   metaDescription: "Eddinet provides application hosting services in India where our engineers build, deploy, and manage server environments around your software stack.",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Web Application Hosting | Node.js, Laravel & PHP Hosting | SaaS Infrastructure Setup",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Application Hosting Services Company in India",
-  heroSubheading: "Web Application Hosting | Node.js, Laravel & PHP Hosting | SaaS Infrastructure Setup",
-  detailedDescription: "Eddinet provides application hosting services in India where our engineers build, deploy, and manage server environments around your software stack. As a result, you get faster page loads, fewer bottlenecks, and strong uptime.\n\nOur web application hosting includes low-latency database routing, automated scaling, and 24/7 proactive management. Therefore, your app stays quick and stable as your users grow.\n\nDoes your app crash under load? Do memory leaks and slow servers frustrate your users? Are you unsure whether your hosting setup is built for your code? If yes, Eddinet is the solution to your problem.\n\nAs a web application hosting company in India, we turn standard cloud servers into fast, stable environments for your applications. Our certified sysadmins manage everything from server setup to runtime tuning. As a result, your app stays available and responds quickly, even when traffic grows.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "Eddinet provides application hosting services in India where our engineers build, deploy, and manage server environments around your software stack. As a result, you get faster page loads, fewer bottlenecks, and strong uptime. Our web application hosting includes low-latency database routing, automated scaling, and 24/7 proactive management. Therefore, your app stays quick and stable as your users grow.",
+  detailedDescription: "Does your app crash under load? Do memory leaks and slow servers frustrate your users? Are you unsure whether your hosting setup is built for your code? If yes, Eddinet is the solution to your problem.\n\nAs a web application hosting company in India, we turn standard cloud servers into fast, stable environments for your applications. Our certified sysadmins manage everything from server setup to runtime tuning. As a result, your app stays available and responds quickly, even when traffic grows.",
   features: [
     {
       title: "Web Application Hosting India",
@@ -42,6 +50,7 @@ export const child = {
       description: "We enforce strict OS security policies, deploy Web Application Firewalls (WAF), configure fail2ban brute-force protection, and issue automated SSL certificates.",
     },
   ],
+  featuresHeading: "Our Application Hosting Services in India",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -112,8 +121,12 @@ export const child = {
       a: "Yes, we set up automated, encrypted off-site backups with strict retention policies, ensuring your application data can be restored instantly in any emergency.",
     },
   ],
+  cta: {
+    heading: "Optimize Your Application Speed & Reliability Today",
+    sub: "Discuss Your Application Hosting Requirements",
+    description: "Ready to stop server crashes, accelerate database queries, and scale your application effortlessly? Partner with Eddinet to build a lightning-fast, high-availability application hosting infrastructure. Contact our engineering team today to schedule your technical consultation!",
+  },
   crossLinks: crossLinksFor("hosting-migration"),
-  featuresHeading: "Our Application Hosting Services in India",
   docxHeadings: {
     about: "About Us: Web Application Hosting Company in India",
     process: "Our Application Hosting Implementation Process in India",

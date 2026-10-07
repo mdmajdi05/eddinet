@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/content/content-marketing.ts
-//  PAGE: /services/content/content-marketing
+//  PAGE: /services/content/content-marketing-services-in-delhi-ncr
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
@@ -9,7 +9,7 @@
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { features, benefits, whyChooseUs, process, faqs } from "../_category/content";
 export const child = {
-  slug: "content-marketing",
+  slug: "content-marketing-services-in-delhi-ncr",
   title: "Content Marketing",
   metaTitle: "Content Marketing Services in Delhi NCR | Eddinet",
   metaDescription: "Strategic content built to educate, build authority and support the full funnel. Content that earns attention, rankings and conversions. Eddinet delivers dependable content marketing services in Delhi NCR for India and global clients. Get a free proposal today.",

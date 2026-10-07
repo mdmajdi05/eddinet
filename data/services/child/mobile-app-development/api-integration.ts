@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/mobile-app-development/api-integration.ts
-//  PAGE: /services/mobile-app-development/api-integration
+//  PAGE: /services/mobile-app-development/mobile-app-api-integration-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/mobile-app-development";
 export const child = {
-  slug: "api-integration",
+  slug: "mobile-app-api-integration-services-in-india",
   title: "API Integration",
   metaTitle: "API Integration Services in India | Eddinet",
   metaDescription: "Eddinet provides premier Mobile App API Integration Services in India to connect your software with essential tools.",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "API Integration | Third-Party APIs | RESTful APIs",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Mobile App API Integration Services in India",
-  heroSubheading: "API Integration | Third-Party APIs | RESTful APIs",
-  detailedDescription: "Eddinet provides premier Mobile App API Integration Services in India to connect your software with essential tools. We build and link secure APIs to automate workflows, secure transactions, and deliver a smooth user experience across apps, servers, and cloud platforms.\n\nAt Eddinet, we connect your mobile applications with powerful external software and cloud environments to expand functionality. As a trusted API integration company in India, we streamline data transfers, automate workflows, and enhance user experiences without requiring you to rebuild your software from scratch.\n\nHere is how we streamline your mobile app API integration:\n\nThird-Party API Integration: We link payment gateways, analytics, and external software directly into your app to enable new features quickly.\n\nCustom RESTful API Development: We build tailored RESTful APIs with clean code to ensure fast, secure data transfer between devices and servers.\n\nPayment & CRM API Integration: We connect secure payment channels and CRM platforms to automate customer data tracking and payment processing.\n\nSecure & Scalable API Solutions: We use strong encryption, OAuth authentication, and rate limiting to handle high traffic volumes without service delays.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "Eddinet provides premier Mobile App API Integration Services in India to connect your software with essential tools. We build and link secure APIs to automate workflows, secure transactions, and deliver a smooth user experience across apps, servers, and cloud platforms.",
+  detailedDescription: "At Eddinet, we connect your mobile applications with powerful external software and cloud environments to expand functionality. As a trusted API integration company in India, we streamline data transfers, automate workflows, and enhance user experiences without requiring you to rebuild your software from scratch.\n\nHere is how we streamline your mobile app API integration:\n\nThird-Party API Integration: We link payment gateways, analytics, and external software directly into your app to enable new features quickly.\n\nCustom RESTful API Development: We build tailored RESTful APIs with clean code to ensure fast, secure data transfer between devices and servers.\n\nPayment & CRM API Integration: We connect secure payment channels and CRM platforms to automate customer data tracking and payment processing.\n\nSecure & Scalable API Solutions: We use strong encryption, OAuth authentication, and rate limiting to handle high traffic volumes without service delays.",
   features: [
     {
       title: "Third-Party API Integration",
@@ -86,6 +94,7 @@ export const child = {
       description: "We connect Google Analytics and Firebase to track user behavior, app crashes, and conversion metrics in real time.",
     },
   ],
+  featuresHeading: "Our Mobile App API Integration Services",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -99,7 +108,7 @@ export const child = {
       "Reliable Data Synchronization: We build real-time data sync channels to eliminate data lag and keep user profiles updated across platforms.",
       "Performance-Focused Integration: We optimize API response times and cache data smart to keep your mobile app fast and responsive.",
       "Ongoing Technical Support: Our team provides continuous monitoring, bug fixes, and updates to match changing third-party API versions.",
-      "Payment & CRM API Setup Services in India",
+      "Payment & CRM API Setup Services in India: ",
       "Payment Gateway API Integration: We integrate secure payment options into your mobile app for fast checkouts and automated digital receipts.",
       "CRM API Integration: We link your app with CRM systems to collect leads, track customer actions, and improve support response times.",
       "Customer Data Synchronization: We enable automated two-way data sync between your app and core business databases to remove manual entry.",
@@ -195,8 +204,12 @@ export const child = {
       a: "Yes, we offer ongoing support plans to track uptime, fix connection bugs, and update endpoints when third-party software releases new versions.",
     },
   ],
+  cta: {
+    heading: "CONNECT YOUR MOBILE APP WITH THE TOOLS YOUR BUSINESS NEEDS",
+    sub: "Discuss Your API Integration Requirements",
+    description: "Ready to power your app with smooth, secure API integrations? Partner with Eddinet to build fast, connected mobile applications that streamline operations and accelerate business growth. Contact our engineering team today to schedule your consultation!",
+  },
   crossLinks: crossLinksFor("mobile-app-development"),
-  featuresHeading: "Our Mobile App API Integration Services",
   docxHeadings: {
     about: "About Our Mobile App API Integration Company",
     process: "Our API Integration Process",

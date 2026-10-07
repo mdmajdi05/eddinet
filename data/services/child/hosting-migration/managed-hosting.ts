@@ -1,28 +1,36 @@
 // ============================================================================
 //  FILE: data/services/child/hosting-migration/managed-hosting.ts
-//  PAGE: /services/hosting-migration/managed-hosting
+//  PAGE: /services/hosting-migration/managed-hosting-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/hosting-migration";
 export const child = {
-  slug: "managed-hosting",
+  slug: "managed-hosting-services-in-india",
   title: "Managed Hosting",
   metaTitle: "Managed Hosting Services in India | Eddinet",
   metaDescription: "Eddinet delivers managed hosting services in India where our engineers run your server, secure it, and fix problems while you run your company.",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Fully Managed Servers | 24/7 Support | Security & Backups Included",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Managed Hosting Services in India",
-  heroSubheading: "Fully Managed Servers | 24/7 Support | Security & Backups Included",
-  detailedDescription: "Eddinet delivers managed hosting services in India where our engineers run your server, secure it, and fix problems while you run your company. Patching servers at midnight and chasing backup errors should not eat into your working day. As a result, you get a stable website and a team you can call when something looks wrong.\n\nTired of servers that crash without warning? Worried about backups that no one has ever tested? Struggling to find a sysadmin you can trust? If yes, Eddinet is the solution to your problem.\n\nAs a managed hosting provider in India, we give you an experienced sysadmin team without the cost of hiring one. We learn how your website is used, take ownership of the technical routine, and log every action we take. You also receive plain-language updates, so you always know what was done on your server.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "Eddinet delivers managed hosting services in India where our engineers run your server, secure it, and fix problems while you run your company. Patching servers at midnight and chasing backup errors should not eat into your working day. As a result, you get a stable website and a team you can call when something looks wrong.",
+  detailedDescription: "Tired of servers that crash without warning? Worried about backups that no one has ever tested? Struggling to find a sysadmin you can trust? If yes, Eddinet is the solution to your problem.\n\nAs a managed hosting provider in India, we give you an experienced sysadmin team without the cost of hiring one. We learn how your website is used, take ownership of the technical routine, and log every action we take. You also receive plain-language updates, so you always know what was done on your server.",
   features: [
     {
       title: "Fully Managed Server Hosting in India",
       description: "With fully managed server hosting, we handle installation, configuration, updates, and performance tuning. You do not need to log in to the server for routine tasks. When you need a change, you send a request and our team completes it.",
     },
     {
-      title: "/7 Managed Hosting Support in India",
+      title: "24/7 Managed Hosting Support in India",
       description: "Servers do not fail on a schedule. Our 24/7 managed hosting support watches uptime, load, and disk space around the clock. Alerts reach an engineer who can act, so small warnings are handled before they grow.",
     },
     {
@@ -34,6 +42,8 @@ export const child = {
       description: "Sometimes you need advice, not just maintenance. We review your setup, suggest improvements, and plan upgrades before limits are reached. You get honest guidance on what to change and what to leave alone.",
     },
   ],
+  featuresHeading: "Our Managed Hosting Services in India",
+  featuresDescription: "We cover four areas that keep a hosted server healthy day after day.",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -44,12 +54,12 @@ export const child = {
       "Patching without panic: Updates are planned, tested, and applied at low-traffic hours. Critical security fixes are prioritised. Your site stays protected without unexpected downtime.",
       "Clear boundaries, no hidden extras: Our scope of work is written down before we start. You know what is included and what costs extra. This prevents billing surprises later.",
       "Advice that saves money: We flag oversized plans and unused resources. You upgrade when you need to, not because a plan says so. Honest sizing keeps costs sensible.",
-      "Support that matches Indian business hours: Our team is available when your working day starts. Urgent issues reach people who already know your setup. Therefore, you spend less time explaining and more time solving.",
+      "Support that matches Indian business hours: Our team is available when your working day starts. Urgent issues reach people who already know your setup. Therefore, you spend less time explaining and more time solving. We measure success by steady uptime, quick issue resolution, and fewer server surprises. Ready to hand over the server work? Contact Eddinet today for a free consultation and a managed hosting plan built around your website.",
     ],
-    description: "We measure success by steady uptime, quick issue resolution, and fewer server surprises.",
   },
   process: {
     heading: "Our Process for Managed Hosting Setup in India",
+    description: "Here is how we take over your server and keep it running smoothly.",
     steps: [
       {
         num: "01",
@@ -82,7 +92,6 @@ export const child = {
         description: "Finally, we review performance, security, and growth plans with you. We recommend changes only when they add value. Your hosting stays matched to your business.",
       },
     ],
-    description: "Here is how we take over your server and keep it running smoothly.",
   },
   testimonials: sharedTestimonials,
   faqs: [
@@ -108,8 +117,6 @@ export const child = {
     },
   ],
   crossLinks: crossLinksFor("hosting-migration"),
-  featuresHeading: "Our Managed Hosting Services in India",
-  featuresDescription: "We cover four areas that keep a hosted server healthy day after day.",
   docxHeadings: {
     about: "About Us: Managed Hosting Provider in India",
     process: "Our Process for Managed Hosting Setup in India",

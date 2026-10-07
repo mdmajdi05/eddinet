@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/hosting-migration/database-migration.ts
-//  PAGE: /services/hosting-migration/database-migration
+//  PAGE: /services/hosting-migration/database-migration-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
@@ -9,7 +9,7 @@
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/hosting-migration";
 export const child = {
-  slug: "database-migration",
+  slug: "database-migration-services-in-india",
   title: "Database Migration",
   metaTitle: "Database Migration Services in India | Eddinet",
   metaDescription: "Eddinet provides database migration services in India that move your data to a new server or cloud platform with full verification.",

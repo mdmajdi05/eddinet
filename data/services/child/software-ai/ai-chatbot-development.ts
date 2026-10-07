@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/software-ai/ai-chatbot-development.ts
-//  PAGE: /services/software-ai/ai-chatbot-development
+//  PAGE: /services/software-ai/ai-chatbot-development-company-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/software-ai";
 export const child = {
-  slug: "ai-chatbot-development",
+  slug: "ai-chatbot-development-company-in-india",
   title: "AI Chatbot Development",
   metaTitle: "AI Chatbot Development Services in India | Eddinet",
   metaDescription: "EDDINET builds intelligent, low-latency conversational AI platforms designed to automate customer engagements and streamline internal enterprise",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Enterprise Conversational AI | LLM-Powered Chatbots | Virtual Assistant Solutions",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "AI Chatbot Development Company in India",
-  heroSubheading: "Enterprise Conversational AI | LLM-Powered Chatbots | Virtual Assistant Solutions",
-  detailedDescription: "EDDINET builds intelligent, low-latency conversational AI platforms designed to automate customer engagements and streamline internal enterprise communication. As a premier AI chatbot development company in India, we combine custom Large Language Model (LLM) orchestration with enterprise system integrations to deliver high-performing conversational systems tailored to your customer operations.\n\nEDDINET builds intelligent conversational systems, natural language pipelines, and custom AI virtual assistants. As a specialized AI chatbot development company in India, we transform routine user interactions into automated, context-aware digital conversations.\n\nOur engineering team combines custom LLM orchestration with enterprise-grade data privacy frameworks. Consequently, we help growing brands reduce support response times, improve customer satisfaction scores, and scale 24/7 service availability.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "EDDINET builds intelligent, low-latency conversational AI platforms designed to automate customer engagements and streamline internal enterprise communication. As a premier AI chatbot development company in India, we combine custom Large Language Model (LLM) orchestration with enterprise system integrations to deliver high-performing conversational systems tailored to your customer operations.",
+  detailedDescription: "EDDINET builds intelligent conversational systems, natural language pipelines, and custom AI virtual assistants. As a specialized AI chatbot development company in India, we transform routine user interactions into automated, context-aware digital conversations.\n\nOur engineering team combines custom LLM orchestration with enterprise-grade data privacy frameworks. Consequently, we help growing brands reduce support response times, improve customer satisfaction scores, and scale 24/7 service availability.",
   features: [
     {
       title: "LLM-Powered Chatbot Development India",
@@ -46,10 +54,13 @@ export const child = {
       description: "We provide ongoing monitoring of conversation logs, intent accuracy tuning, safety guardrail enforcement, and model re-training to ensure reliable customer interactions.",
     },
   ],
+  featuresHeading: "Our AI Chatbot Development Services India",
+  featuresDescription: "We offer specialized engineering services to design, build, and deploy secure conversational AI interfaces across web, mobile, and omnichannel endpoints.",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for Enterprise AI Chatbot Solutions?",
+    description: "We combine state-of-the-art NLP engineering with enterprise security to build intelligent chatbots that elevate user experiences and lower operational costs.",
     points: [
       "Hallucination-Free Architecture: We utilize custom RAG pipelines and strict output guardrails to ensure your chatbot provides factually accurate answers rooted solely in your verified documentation.",
       "Zero Third-Party Data Exposure: We enforce private cloud hosting, strict data anonymization, and zero-data-retention policies to guarantee your private corporate data is never used to train public LLM models.",
@@ -57,10 +68,10 @@ export const child = {
       "Transparent Development Sprints: We share live staging bots, prompt collections, and performance metrics throughout the build process to provide full visibility into your chatbot's capabilities.",
       "Dedicated Post-Launch Maintenance: We offer continuous SLA-backed maintenance to manage prompt tuning, model upgrades, and system scalability as your active user base expands.",
     ],
-    description: "We combine state-of-the-art NLP engineering with enterprise security to build intelligent chatbots that elevate user experiences and lower operational costs.",
   },
   process: {
     heading: "Our AI Chatbot Development Process in India",
+    description: "We follow a systematic agile lifecycle to build and deploy enterprise-grade conversational AI systems safely and on schedule.",
     steps: [
       {
         num: "01",
@@ -98,7 +109,6 @@ export const child = {
         description: "We establish automated feedback loops that identify unresolved queries, enabling continuous refinement of the underlying knowledge base.",
       },
     ],
-    description: "We follow a systematic agile lifecycle to build and deploy enterprise-grade conversational AI systems safely and on schedule.",
   },
   testimonials: sharedTestimonials,
   faqs: [
@@ -131,9 +141,12 @@ export const child = {
       a: "Yes, we engineer seamless human-in-the-loop fallback mechanisms that automatically transfer complex or sensitive conversations to live support agents alongside full chat context.",
     },
   ],
+  cta: {
+    heading: "Build Your Intelligent AI Chatbot With EDDINET",
+    sub: "Discuss Your Chatbot Requirements",
+    description: "Ready to elevate your customer support and automate routine queries with an enterprise-grade AI chatbot? Contact the engineering team at EDDINET today to schedule a technical consultation and receive a custom project estimate.",
+  },
   crossLinks: crossLinksFor("software-ai"),
-  featuresHeading: "Our AI Chatbot Development Services India",
-  featuresDescription: "We offer specialized engineering services to design, build, and deploy secure conversational AI interfaces across web, mobile, and omnichannel endpoints.",
   docxHeadings: {
     about: "About Us: AI Chatbot Development Company in India",
     process: "Our AI Chatbot Development Process in India",

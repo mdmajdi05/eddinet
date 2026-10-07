@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/software-ai/business-management-software.ts
-//  PAGE: /services/software-ai/business-management-software
+//  PAGE: /services/software-ai/business-management-software-development-company-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/software-ai";
 export const child = {
-  slug: "business-management-software",
+  slug: "business-management-software-development-company-in-india",
   title: "Business Management Software",
   metaTitle: "Business Management Software Services in India | Eddinet",
   metaDescription: "EDDINET builds scalable, secure management platforms that centralize company data and automate daily operational workflows.",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Enterprise Operations | Custom Management Systems | SME Digital Platforms",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Business Management Software Development Company in India",
-  heroSubheading: "Enterprise Operations | Custom Management Systems | SME Digital Platforms",
-  detailedDescription: "EDDINET builds scalable, secure management platforms that centralize company data and automate daily operational workflows. As a premier business management software development company in India, we combine clean system design with enterprise security to deliver unified tools tailored to your exact business logic.\n\nEDDINET helps startups, SMEs, and large enterprises design, build, and deploy high-converting digital applications. As a leading custom business management software company in India, we turn complex operational logic into fast, secure, and scalable platforms engineered to streamline your workflows and accelerate bottom-line revenue.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "EDDINET builds scalable, secure management platforms that centralize company data and automate daily operational workflows. As a premier business management software development company in India, we combine clean system design with enterprise security to deliver unified tools tailored to your exact business logic.",
+  detailedDescription: "EDDINET helps startups, SMEs, and large enterprises design, build, and deploy high-converting digital applications. As a leading custom business management software company in India, we turn complex operational logic into fast, secure, and scalable platforms engineered to streamline your workflows and accelerate bottom-line revenue.",
   features: [
     {
       title: "Enterprise Business Management System Development",
@@ -46,10 +54,13 @@ export const child = {
       description: "We provide continuous cloud server monitoring, automated database tuning, security updates, and performance speed optimization to maintain maximum uptime.",
     },
   ],
+  featuresHeading: "Our Custom Business Management Software Services",
+  featuresDescription: "We offer end-to-end engineering services to digitize core business processes and improve team productivity.",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for Enterprise Business Management System Development?",
+    description: "We combine technical excellence with business strategy to build custom management software that improves operational clarity and drives profit.",
     points: [
       "Tailored System Architecture: We engineer custom platforms completely from scratch, giving you total ownership of source code without forcing you into rigid pre-made software templates.",
       "Enterprise-Grade Security Standards: We implement end-to-end data encryption, multi-factor authentication, and strict role-based access protocols to safeguard sensitive corporate records continuously.",
@@ -57,10 +68,10 @@ export const child = {
       "Full Process Transparency: We share regular development updates, live staging links, and transparent milestone reports throughout the development lifecycle to keep you fully informed.",
       "Long-Term Operational Support: We provide continuous SLA-backed maintenance contracts to keep your management platform secure, updated, and aligned with your evolving commercial targets.",
     ],
-    description: "We combine technical excellence with business strategy to build custom management software that improves operational clarity and drives profit.",
   },
   process: {
     heading: "Our Business Management Software Development Process",
+    description: "We follow a transparent agile methodology to ensure predictable delivery schedules and uncompromised software stability.",
     steps: [
       {
         num: "01",
@@ -85,7 +96,7 @@ export const child = {
       {
         num: "05",
         title: "Module Integration & System Verification",
-        description: "We connect individual operational modules-including inventory, team tracking, and reporting-verifying fast and secure data synchronization across channels.",
+        description: "We connect individual operational modules—including inventory, team tracking, and reporting—verifying fast and secure data synchronization across channels.",
       },
       {
         num: "06",
@@ -98,7 +109,6 @@ export const child = {
         description: "We deploy your custom software to secure cloud servers smoothly, providing ongoing maintenance, server uptime tracking, and periodic feature enhancements.",
       },
     ],
-    description: "We follow a transparent agile methodology to ensure predictable delivery schedules and uncompromised software stability.",
   },
   testimonials: sharedTestimonials,
   faqs: [
@@ -131,9 +141,12 @@ export const child = {
       a: "Yes, we construct secure custom API connectors and data bridges to integrate your new management platform seamlessly with legacy tools, accounting software, and external databases.",
     },
   ],
+  cta: {
+    heading: "Build Your Custom Management Platform With EDDINET",
+    sub: "Discuss Your Business Management Software Requirements",
+    description: "Ready to streamline your operational processes with a high-performing custom platform? Contact the engineering team at EDDINET today to schedule a technical consultation and receive a clear project estimate.",
+  },
   crossLinks: crossLinksFor("software-ai"),
-  featuresHeading: "Our Custom Business Management Software Services",
-  featuresDescription: "We offer end-to-end engineering services to digitize core business processes and improve team productivity.",
   docxHeadings: {
     about: "About Us: Business Management Software Development Company in India",
     process: "Our Business Management Software Development Process",

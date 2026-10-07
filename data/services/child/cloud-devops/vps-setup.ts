@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/cloud-devops/vps-setup.ts
-//  PAGE: /services/cloud-devops/vps-setup
+//  PAGE: /services/cloud-devops/vps-setup-services-company-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/cloud-devops";
 export const child = {
-  slug: "vps-setup",
+  slug: "vps-setup-services-company-in-india",
   title: "VPS Setup",
   metaTitle: "VPS Setup in India | Eddinet",
   metaDescription: "Looking to upgrade from slow, restrictive shared hosting to a high-speed virtual server? Eddinet delivers premier VPS setup services in India.",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Managed VPS Setup | Linux & Cloud VPS Configurations",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "VPS Setup Services Company in India",
-  heroSubheading: "Managed VPS Setup | Linux & Cloud VPS Configurations",
-  detailedDescription: "Looking to upgrade from slow, restrictive shared hosting to a high-speed virtual server? Eddinet delivers premier VPS setup services in India. We build, optimize, and secure dedicated virtual private environments tailored to your exact traffic needs.\n\nConsequently, our configurations eliminate server downtime, accelerate page loading speeds, and lower monthly infrastructure costs.\n\nAt Eddinet, we turn complex server environments into secure, high-speed digital engines. Slow loading times and unoptimized server stacks lead directly to dropped traffic and lost revenue. Therefore, we deliver custom VPS configurations engineered for low-latency performance, maximum uptime, and seamless scalability.\n\nOur experienced sysadmins build customised web server stacks using Nginx, Apache, or LiteSpeed based on your exact application software demands. We handle full OS installation, domain routing, and firewall setup without disrupting your active business operations. Furthermore, we continuously tune database queries, object caching, SSH rules, and automated off-site backups to keep your server fast and bulletproof under heavy user traffic.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "Looking to upgrade from slow, restrictive shared hosting to a high-speed virtual server? Eddinet delivers premier VPS setup services in India. We build, optimize, and secure dedicated virtual private environments tailored to your exact traffic needs. Consequently, our configurations eliminate server downtime, accelerate page loading speeds, and lower monthly infrastructure costs.",
+  detailedDescription: "At Eddinet, we turn complex server environments into secure, high-speed digital engines. Slow loading times and unoptimized server stacks lead directly to dropped traffic and lost revenue. Therefore, we deliver custom VPS configurations engineered for low-latency performance, maximum uptime, and seamless scalability.\n\nOur experienced sysadmins build customised web server stacks using Nginx, Apache, or LiteSpeed based on your exact application software demands. We handle full OS installation, domain routing, and firewall setup without disrupting your active business operations. Furthermore, we continuously tune database queries, object caching, SSH rules, and automated off-site backups to keep your server fast and bulletproof under heavy user traffic.",
   features: [
     {
       title: "Managed VPS Setup India",
@@ -42,6 +50,7 @@ export const child = {
       description: "We set up cPanel, Plesk, CyberPanel, or aaPanel to make site management simple. Furthermore, we configure DKIM, SPF, and DMARC records to ensure maximum deliverability for your transactional emails.",
     },
   ],
+  featuresHeading: "Our VPS Setup Services in India",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -113,8 +122,12 @@ export const child = {
       a: "Yes, we offer ongoing managed service packages covering 24/7 server monitoring, security updates, software patching, and automated backups.",
     },
   ],
+  cta: {
+    heading: "Scale Your Business With Reliable VPS Hosting",
+    sub: "Discuss Your VPS Setup Requirements",
+    description: "Ready to boost your website speed and reliability with a custom virtual private server? Partner with Eddinet to build, secure, and manage your server environment. Contact our sysadmin team today to schedule your consultation!",
+  },
   crossLinks: crossLinksFor("cloud-devops"),
-  featuresHeading: "Our VPS Setup Services in India",
   docxHeadings: {
     about: "About Us: VPS Server Setup Company in India",
     process: "Our VPS Setup Process in India",

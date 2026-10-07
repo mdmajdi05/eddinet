@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/software-ai/generative-ai-solutions.ts
-//  PAGE: /services/software-ai/generative-ai-solutions
+//  PAGE: /services/software-ai/generative-ai-solutions-company-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/software-ai";
 export const child = {
-  slug: "generative-ai-solutions",
+  slug: "generative-ai-solutions-company-in-india",
   title: "Generative AI Solutions",
   metaTitle: "Generative AI Solutions Services in India | Eddinet",
   metaDescription: "EDDINET builds high-performance generative AI platforms that enable enterprises to create content, automate complex reasoning, and derive deep value from",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Enterprise GenAI Engineering | Custom Fine-Tuned Models | Scalable Application Development",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Generative AI Solutions Company in India",
-  heroSubheading: "Enterprise GenAI Engineering | Custom Fine-Tuned Models | Scalable Application Development",
-  detailedDescription: "EDDINET builds high-performance generative AI platforms that enable enterprises to create content, automate complex reasoning, and derive deep value from unstructured operational data. As a leading generative AI solutions company in India, we combine advanced Large Language Model (LLM) engineering with enterprise security to deliver scalable GenAI applications tailored to your business goals.\n\nEDDINET builds custom generative AI tools, domain-specific foundation models, and intelligent content-generation platforms. As a dedicated generative AI solutions company in India, we transform complex data streams into automated, contextually aware creative and analytical workflows.\n\nOur engineering team combines proprietary model fine-tuning with enterprise-grade security protocols. Consequently, we help forward-thinking organizations automate content creation, extract deep business insights, and accelerate innovation across departments.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "EDDINET builds high-performance generative AI platforms that enable enterprises to create content, automate complex reasoning, and derive deep value from unstructured operational data. As a leading generative AI solutions company in India, we combine advanced Large Language Model (LLM) engineering with enterprise security to deliver scalable GenAI applications tailored to your business goals.",
+  detailedDescription: "EDDINET builds custom generative AI tools, domain-specific foundation models, and intelligent content-generation platforms. As a dedicated generative AI solutions company in India, we transform complex data streams into automated, contextually aware creative and analytical workflows.\n\nOur engineering team combines proprietary model fine-tuning with enterprise-grade security protocols. Consequently, we help forward-thinking organizations automate content creation, extract deep business insights, and accelerate innovation across departments.",
   features: [
     {
       title: "Generative AI Development Services in India",
@@ -46,10 +54,13 @@ export const child = {
       description: "We provide ongoing monitoring of model output quality, latency tuning, cost management, and periodic model re-training to maintain optimal performance over time.",
     },
   ],
+  featuresHeading: "Our Generative AI Development Services in India",
+  featuresDescription: "We offer comprehensive engineering services to design, fine-tune, and deploy custom GenAI capabilities across your enterprise software ecosystem.",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for Enterprise Generative AI Solutions?",
+    description: "We combine frontier machine learning expertise with enterprise software engineering to deliver GenAI solutions that drive measurable business ROI.",
     points: [
       "Complete Data Ownership & Privacy: We enforce private cloud deployments, token encryption, and zero-data-retention practices to ensure your sensitive business data is never exposed or used to train public models.",
       "Hallucination-Free Output Precision: We combine custom RAG architectures with strict output validation layers, ensuring generated responses remain grounded entirely in your verified enterprise documentation.",
@@ -57,10 +68,10 @@ export const child = {
       "Full Process Visibility: We share live development environments, prompt test suites, and transparent sprint updates throughout the build cycle to keep your team completely informed.",
       "Dedicated Post-Launch Support: We offer comprehensive SLA-backed maintenance to manage model version upgrades, vector database optimization, and ongoing system scalability.",
     ],
-    description: "We combine frontier machine learning expertise with enterprise software engineering to deliver GenAI solutions that drive measurable business ROI.",
   },
   process: {
     heading: "Our Generative AI Development Process in India",
+    description: "We follow a systematic agile methodology to build, evaluate, and deploy enterprise-grade generative AI applications safely and efficiently.",
     steps: [
       {
         num: "01",
@@ -98,7 +109,6 @@ export const child = {
         description: "We establish continuous feedback loops to analyze user interactions, refine prompt structures, and periodically update fine-tuned weights as new data arrives.",
       },
     ],
-    description: "We follow a systematic agile methodology to build, evaluate, and deploy enterprise-grade generative AI applications safely and efficiently.",
   },
   testimonials: sharedTestimonials,
   faqs: [
@@ -131,9 +141,12 @@ export const child = {
       a: "We deploy models within private, encrypted cloud environments and implement strict data governance protocols so your proprietary data never leaves your enterprise boundary.",
     },
   ],
+  cta: {
+    heading: "Build Your Custom Generative AI Platform With EDDINET",
+    sub: "Discuss Your Generative AI Requirements",
+    description: "Ready to transform your business workflows with secure, enterprise-grade generative AI solutions? Contact the engineering team at EDDINET today to schedule a technical consultation and receive a clear project estimate.",
+  },
   crossLinks: crossLinksFor("software-ai"),
-  featuresHeading: "Our Generative AI Development Services in India",
-  featuresDescription: "We offer comprehensive engineering services to design, fine-tune, and deploy custom GenAI capabilities across your enterprise software ecosystem.",
   docxHeadings: {
     about: "About Us: Generative AI Solutions Company in India",
     process: "Our Generative AI Development Process in India",

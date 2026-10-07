@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/ads-ppc/youtube-ads.ts
-//  PAGE: /services/ads-ppc/youtube-ads
+//  PAGE: /services/ads-ppc/youtube-ads-agency-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
@@ -9,7 +9,7 @@
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/ads-ppc";
 export const child = {
-  slug: "youtube-ads",
+  slug: "youtube-ads-agency-in-india",
   title: "YouTube Ads",
   metaTitle: "YouTube Ads Services in India | Eddinet",
   metaDescription: "YouTube Ads Agency At Eddinet, we help businesses across India transform YouTube ad spend into high-intent leads, measurable conversions, and direct pipeline",

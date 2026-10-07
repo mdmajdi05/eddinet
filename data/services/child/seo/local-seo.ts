@@ -1,13 +1,13 @@
 // ============================================================================
 //  FILE: data/services/child/seo/local-seo.ts
-//  PAGE: /services/seo/local-seo
+//  PAGE: /services/seo/local-seo-services-in-delhi-ncr
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
 
 export const child = {
-  slug: "local-seo",
+  slug: "local-seo-services-in-delhi-ncr",
   title: "Local SEO",
   metaTitle: "Local SEO Services in India That Bring Customers | Eddinet",
   metaDescription: "Eddinet specializes in local SEO services in India that help businesses get found by people searching nearby and ready to buy — on Google Search, Google Maps and the local pack. Get a free local SEO consultation.",

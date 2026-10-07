@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/mobile-app-development/app-deployment.ts
-//  PAGE: /services/mobile-app-development/app-deployment
+//  PAGE: /services/mobile-app-development/mobile-app-deployment-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/mobile-app-development";
 export const child = {
-  slug: "app-deployment",
+  slug: "mobile-app-deployment-services-in-india",
   title: "App Deployment",
   metaTitle: "App Deployment Services in India | Eddinet",
   metaDescription: "Publishing your app on major app stores requires complete technical compliance. At Eddinet, a leading provider of Mobile App Deployment Services in India, we",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Google Play | Apple App Store | Enterprise App Distribution",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Mobile App Deployment Services in India",
-  heroSubheading: "Google Play | Apple App Store | Enterprise App Distribution",
-  detailedDescription: "Publishing your app on major app stores requires complete technical compliance. At Eddinet, a leading provider of Mobile App Deployment Services in India, we manage your complete publishing workflow.\n\nFrom store listing setup to guideline approval, we help your business launch software smoothly on both iOS and Android platforms without delay.\n\nAt Eddinet, we help businesses publish mobile applications on the Apple App Store and Google Play Store seamlessly. As a trusted app deployment company in India, we handle everything from developer console setup to enterprise distribution, ensuring your software reaches users quickly, securely, and without policy delays.\n\nHere is how we streamline your mobile app publishing:\n\nAndroid & iOS App Deployment: We manage build configurations, store graphics, and regulatory data for a successful release.\n\nEnd-to-End App Store Submission: We prepare developer consoles, upload builds, and complete store metadata to speed up approvals.\n\nSecure & Reliable Publishing: We protect your source code using signing certificates, secure keys, and protected distribution channels.\n\nEnterprise App Distribution: We configure private distribution setups to deliver internal business apps directly to employee devices.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "Publishing your app on major app stores requires complete technical compliance. At Eddinet, a leading provider of Mobile App Deployment Services in India, we manage your complete publishing workflow. From store listing setup to guideline approval, we help your business launch software smoothly on both iOS and Android platforms without delay.",
+  detailedDescription: "At Eddinet, we help businesses publish mobile applications on the Apple App Store and Google Play Store seamlessly. As a trusted app deployment company in India, we handle everything from developer console setup to enterprise distribution, ensuring your software reaches users quickly, securely, and without policy delays.\n\nHere is how we streamline your mobile app publishing:\n\nAndroid & iOS App Deployment: We manage build configurations, store graphics, and regulatory data for a successful release.\n\nEnd-to-End App Store Submission: We prepare developer consoles, upload builds, and complete store metadata to speed up approvals.\n\nSecure & Reliable Publishing: We protect your source code using signing certificates, secure keys, and protected distribution channels.\n\nEnterprise App Distribution: We configure private distribution setups to deliver internal business apps directly to employee devices.",
   features: [
     {
       title: "Google Play Store Publishing",
@@ -42,6 +50,7 @@ export const child = {
       description: "We design clean store graphics and craft keyword-optimized titles, subtitles, and descriptions. This boosts your app's store visibility and drives higher organic downloads from day one.",
     },
   ],
+  featuresHeading: "Our Mobile App Deployment Services",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -54,6 +63,13 @@ export const child = {
       "Smooth & Reliable App Releases: We follow proven deployment checklists to minimize store rejections and ensure predictable launch dates.",
       "Enterprise Distribution Expertise: We bring specialized technical skills in managing private enterprise app releases, MDM setups, and custom provisioning.",
       "Ongoing Release & Update Support: Our support continues after launch, helping you deploy regular feature updates and bug fixes without friction.",
+      "Mobile App Deployment for Different Business Needs: ",
+      "Startups & New Apps: We help early-stage startups navigate their very first store releases cleanly and quickly.",
+      "E-Commerce Applications: We deploy high-volume shopping applications complete with secure merchant setup, deep linking, and payment gateways.",
+      "Enterprise Mobile Applications: We configure private corporate distribution flows to deliver business apps directly to internal staff.",
+      "Customer-Facing Apps: We publish high-performance consumer applications with eye-catching store listings designed to drive downloads.",
+      "Internal Business Applications: We deploy field-team apps, inventory management tools, and reporting dashboards using secure ad-hoc distribution.",
+      "SaaS & Digital Product Apps: We manage continuous deployment pipelines for SaaS platforms that require frequent, smooth software updates.",
     ],
   },
   process: {
@@ -97,7 +113,7 @@ export const child = {
       {
         num: "08",
         title: "Publishing & Deployment",
-        description: "We execute your chosen release strategy-publishing the application instantly or setting a manual launch date.",
+        description: "We execute your chosen release strategy—publishing the application instantly or setting a manual launch date.",
       },
       {
         num: "09",
@@ -149,8 +165,12 @@ export const child = {
       a: "Yes, we audit your app to prevent rejections and help resolve policy warnings or rejection notices directly with Google and Apple review teams.",
     },
   ],
+  cta: {
+    heading: "DEPLOY YOUR MOBILE APP WITH EDDINET",
+    sub: "Get Your App Ready for Launch",
+    description: "Ready to publish your mobile app without stress or delays? Partner with Eddinet to ensure a smooth, secure, and fully compliant app store release. Contact our deployment team today to schedule your launch consultation!",
+  },
   crossLinks: crossLinksFor("mobile-app-development"),
-  featuresHeading: "Our Mobile App Deployment Services",
   docxHeadings: {
     about: "About Our Mobile App Deployment Company in India",
     process: "Our Mobile App Deployment Process",

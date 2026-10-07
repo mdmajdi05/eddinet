@@ -1,19 +1,27 @@
 // ============================================================================
 //  FILE: data/services/child/mobile-app-development/react-native-development.ts
-//  PAGE: /services/mobile-app-development/react-native-development
+//  PAGE: /services/mobile-app-development/react-native-app-development-company-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/mobile-app-development";
 export const child = {
-  slug: "react-native-development",
+  slug: "react-native-app-development-company-in-india",
   title: "React Native Development",
   metaTitle: "React Native Development Services in India | Eddinet",
   metaDescription: "We help businesses grow by building custom cross-platform applications that deliver smooth user experiences. Our team writes clean JavaScript and TypeScript",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Custom React Native App Development | Cross-Platform App Development | React Native UI/UX Design",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "React Native App Development Company in India",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
   heroSubheading: "Eddinet is a leading React Native App Development Company in India that builds fast, high-quality mobile applications using a single codebase. We combine native performance with cross-platform efficiency to help your business launch quickly, save costs, and reach users on both iOS and Android.",
   detailedDescription: "We help businesses grow by building custom cross-platform applications that deliver smooth user experiences. Our team writes clean JavaScript and TypeScript code to create reliable apps for iOS and Android. By using secure cloud connections and high-capacity server architectures, we ensure your app scales safely as your user base expands.",
   features: [
@@ -50,6 +58,7 @@ export const child = {
       description: "We offer continuous monitoring, rapid bug fixes, security patches, and updates to keep your app running smoothly on new OS versions.",
     },
   ],
+  featuresHeading: "Our React Native App Development Services",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -57,13 +66,13 @@ export const child = {
     points: [
       "Experienced React Native Developers: Our developers have deep experience building cross-platform products using JavaScript, React, and native hardware bridges.",
       "Cross-Platform Development Expertise: We help you reach both iOS and Android users without doubling your budget or doubling your project timeline.",
-      "Custom-Built Mobile Applications: We build software strictly from scratch around your specific operations-never using restrictive, pre-made templates.",
+      "Custom-Built Mobile Applications: We build software strictly from scratch around your specific operations—never using restrictive, pre-made templates.",
       "Faster Development & Deployment: By using reusable code components and fast reload tools, we speed up development and get your app to market faster.",
       "Scalable & Secure Apps: We use strong data encryption and auto-scaling cloud servers to protect sensitive user information as your brand grows.",
       "User-Focused App Experiences: We make sure every button tap, screen transition, and feature works smoothly without lag or long loading screens.",
       "Transparent Development Process: We send regular progress reports, host weekly live updates, and give you direct access to your project team.",
       "Long-Term Support & Maintenance: Our work does not end at launch. We provide ongoing support, bug fixes, and feature upgrades to protect your investment.",
-      "Hire React Native Developers",
+      "Hire React Native Developers: ",
       "Dedicated React Native Developers: Hire dedicated engineers who work as an extension of your in-house team to build and maintain your products.",
       "Flexible Development Models: Choose between fixed-price contracts, dedicated monthly hires, or task-based hours to match your project budget.",
       "Skilled Cross-Platform Development Team: Get access to skilled developers who understand app architecture, state management, security, and native device tools.",
@@ -150,8 +159,12 @@ export const child = {
       a: "Yes, we provide ongoing maintenance plans that include security updates, bug fixes, server monitoring, and updates for new mobile OS versions.",
     },
   ],
+  cta: {
+    heading: "BUILD YOUR REACT NATIVE APP WITH EDDINET",
+    sub: "Discuss Your React Native App Development Requirements",
+    description: "Ready to build a fast, cost-effective mobile app? Partner with Eddinet to build a high-performing React Native app that engages users and grows your revenue. Contact our development team today to schedule your consultation!",
+  },
   crossLinks: crossLinksFor("mobile-app-development"),
-  featuresHeading: "Our React Native App Development Services",
   docxHeadings: {
     about: "About Our React Native App Development",
     process: "Our React Native App Development Process",

@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/cloud-devops/server-security.ts
-//  PAGE: /services/cloud-devops/server-security
+//  PAGE: /services/cloud-devops/server-security-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/cloud-devops";
 export const child = {
-  slug: "server-security",
+  slug: "server-security-services-in-india",
   title: "Server Security",
   metaTitle: "Server Security Services in India | Eddinet",
   metaDescription: "Eddinet delivers server security services in India that protect your data, applications, and uptime. We find weak points, close them, and watch for threats",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Cloud Server Security | Linux Hardening | Managed Threat Protection",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Server Security Services in India",
-  heroSubheading: "Cloud Server Security | Linux Hardening | Managed Threat Protection",
-  detailedDescription: "Eddinet delivers server security services in India that protect your data, applications, and uptime. We find weak points, close them, and watch for threats around the clock. As a result, attackers meet a hardened system instead of an easy target.\n\nOne breach can cost you customers, money, and trust. Our security setups block common attacks and alert you the moment something looks wrong. Therefore, you stay in control of your infrastructure.\n\nEddinet is a cloud server security company in India built around certified sysadmins and DevOps engineers. We help businesses replace scattered, reactive fixes with one clear security plan.\n\nWe listen first, then assess your risks before changing anything. Our reports use plain language, so technical and non-technical teams can act on them. At the end of each project, we hand over full documentation.\n\nGood security works quietly in the background. It stops threats without slowing your business. That is the standard we follow on every project.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "Eddinet delivers server security services in India that protect your data, applications, and uptime. We find weak points, close them, and watch for threats around the clock. As a result, attackers meet a hardened system instead of an easy target. One breach can cost you customers, money, and trust. Our security setups block common attacks and alert you the moment something looks wrong. Therefore, you stay in control of your infrastructure.",
+  detailedDescription: "Eddinet is a cloud server security company in India built around certified sysadmins and DevOps engineers. We help businesses replace scattered, reactive fixes with one clear security plan.\n\nWe listen first, then assess your risks before changing anything. Our reports use plain language, so technical and non-technical teams can act on them. At the end of each project, we hand over full documentation.\n\nGood security works quietly in the background. It stops threats without slowing your business. That is the standard we follow on every project.",
   features: [
     {
       title: "Linux Server Security Services in India",
@@ -34,6 +42,8 @@ export const child = {
       description: "Our managed server security service gives you an expert team without the cost of hiring one. We monitor threats, apply patches, and respond to incidents. You also get regular reports that show what we found and fixed.",
     },
   ],
+  featuresHeading: "Our Server Security Services in India",
+  featuresDescription: "We focus on four core service areas. Each one is built around your servers, budget, and risk level.",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -49,6 +59,7 @@ export const child = {
   },
   process: {
     heading: "Our Process for Server Security Setup in India",
+    description: "Every Eddinet project follows a clear path, from the first audit to ongoing protection.",
     steps: [
       {
         num: "01",
@@ -81,7 +92,6 @@ export const child = {
         description: "Finally, we train your team and schedule regular security reviews to keep protection current. You also receive full documentation of the setup. As threats change, we update your defenses to match.",
       },
     ],
-    description: "Every Eddinet project follows a clear path, from the first audit to ongoing protection.",
   },
   testimonials: sharedTestimonials,
   faqs: [
@@ -115,8 +125,6 @@ export const child = {
     },
   ],
   crossLinks: crossLinksFor("cloud-devops"),
-  featuresHeading: "Our Server Security Services in India",
-  featuresDescription: "We focus on four core service areas. Each one is built around your servers, budget, and risk level.",
   docxHeadings: {
     about: "About Us: Cloud Server Security Company in India",
     process: "Our Process for Server Security Setup in India",

@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/mobile-app-development/app-ui-ux-design.ts
-//  PAGE: /services/mobile-app-development/app-ui-ux-design
+//  PAGE: /services/mobile-app-development/mobile-app-ui-ux-design-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/mobile-app-development";
 export const child = {
-  slug: "app-ui-ux-design",
+  slug: "mobile-app-ui-ux-design-services-in-india",
   title: "App UI/UX Design",
   metaTitle: "App UI/UX Design Services in India | Eddinet",
   metaDescription: "Eddinet provides leading Mobile App UI UX Design Services in India to create simple, clean, and engaging digital experiences.",
-  heroHeading: "Mobile App UI/UX Design Services in India",
-  heroSubheading: "App Interface Design | User Experience | Wireframing & Prototyping",
-  detailedDescription: "Eddinet provides leading Mobile App UI UX Design Services in India to create simple, clean, and engaging digital experiences. We place users at the center of our design process to lower bounce rates, boost engagement, and convert visitors into loyal customers.\n\nAt Eddinet, we design intuitive and engaging digital interfaces that elevate user satisfaction and drive business growth. As a leading UI/UX design agency in India, we blend user research, functional wireframing, and visual design to deliver seamless, high-converting mobile app experiences.\n\nHere is how we streamline your mobile user experience design:\n\nMobile User Experience Design: We structure logical screen flows and simplified navigation patterns to help users achieve their goals effortlessly.\n\nUser-Centered App Interface Design: We analyze real user habits to build modern, intuitive screen layouts tailored specifically to your target audience.\n\nWireframing & Prototyping Services: We build clickable wireframes and prototypes early to validate user journeys before writing a single line of code.\n\nConversion-Focused App Experiences: We combine visual hierarchy with clear calls to action to guide users seamlessly toward sign-ups and checkouts.",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "App Interface Design | User Experience | Wireframing & Prototyping",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
+  heroHeading: "Mobile App UI UX Design Services in India",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "Eddinet provides leading Mobile App UI UX Design Services in India to create simple, clean, and engaging digital experiences. We place users at the center of our design process to lower bounce rates, boost engagement, and convert visitors into loyal customers.",
+  detailedDescription: "At Eddinet, we design intuitive and engaging digital interfaces that elevate user satisfaction and drive business growth. As a leading UI/UX design agency in India, we blend user research, functional wireframing, and visual design to deliver seamless, high-converting mobile app experiences.\n\nHere is how we streamline your mobile user experience design:\n\nMobile User Experience Design: We structure logical screen flows and simplified navigation patterns to help users achieve their goals effortlessly.\n\nUser-Centered App Interface Design: We analyze real user habits to build modern, intuitive screen layouts tailored specifically to your target audience.\n\nWireframing & Prototyping Services: We build clickable wireframes and prototypes early to validate user journeys before writing a single line of code.\n\nConversion-Focused App Experiences: We combine visual hierarchy with clear calls to action to guide users seamlessly toward sign-ups and checkouts.",
   features: [
     {
       title: "Mobile App UI Design",
@@ -58,6 +66,7 @@ export const child = {
       description: "We audit aging applications to refresh visual layouts, fix navigation bottlenecks, and modernize the complete user experience.",
     },
   ],
+  featuresHeading: "Our Mobile App UI UX Design Services",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -71,6 +80,13 @@ export const child = {
       "Designs Built for Conversion & Engagement: We use clear call-to-action placement and visual hierarchy to guide users toward key conversion steps.",
       "Collaborative Design Process: We involve your team with frequent design reviews, interactive demos, and open communication channels.",
       "Developer-Friendly Design Handoff: We deliver organized Figma files, asset exports, and precise specifications for smooth frontend engineering.",
+      "Mobile App UI UX Design for Different Business Needs: ",
+      "Startup & New Product Design: We help early-stage startups transform app ideas into polished, market-ready digital prototypes quickly.",
+      "E-Commerce App Design: We craft high-converting mobile shopping layouts with clean product displays and effortless multi-step checkouts.",
+      "Enterprise App Design: We simplify complex corporate software tools into user-friendly mobile interfaces that boost staff productivity.",
+      "Customer-Facing Mobile Apps: We build engaging consumer apps focused on fast onboarding, clean communication, and effortless daily usage.",
+      "Business & Internal Applications: We design internal workforce software that streamlines task assignment, data collection, and team reporting.",
+      "Existing App UI UX Redesign: We revamp legacy software interfaces to improve user retention, fix navigation issues, and modernize visuals.",
     ],
   },
   process: {
@@ -158,8 +174,12 @@ export const child = {
       a: "Yes, we deliver organized Figma files, asset packages, font styles, and complete design specs ready for frontend integration.",
     },
   ],
+  cta: {
+    heading: "DESIGN A BETTER MOBILE APP EXPERIENCE WITH EDDINET",
+    sub: "Discuss Your UI UX Design Requirements",
+    description: "Ready to elevate your app user experience? Partner with Eddinet to build intuitive, high-converting mobile UI UX designs that engage users and drive business growth. Contact our creative team today to schedule your consultation!",
+  },
   crossLinks: crossLinksFor("mobile-app-development"),
-  featuresHeading: "Our Mobile App UI UX Design Services",
   docxHeadings: {
     about: "About Our App Interface Design Agency",
     process: "Our Mobile App UI UX Design Process",

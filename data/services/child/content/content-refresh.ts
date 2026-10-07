@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/content/content-refresh.ts
-//  PAGE: /services/content/content-refresh
+//  PAGE: /services/content/content-refresh-services-in-delhi-ncr
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
@@ -9,7 +9,7 @@
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { features, benefits, whyChooseUs, process, faqs } from "../_category/content";
 export const child = {
-  slug: "content-refresh",
+  slug: "content-refresh-services-in-delhi-ncr",
   title: "Content Refresh",
   metaTitle: "Content Refresh Services in Delhi NCR | Eddinet",
   metaDescription: "Updating and strengthening existing content to extend its life and rankings. Old pages revived instead of abandoned. Eddinet delivers dependable content refresh services in Delhi NCR for India and global clients. Get a free proposal today.",

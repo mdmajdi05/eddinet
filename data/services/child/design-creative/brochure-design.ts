@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/design-creative/brochure-design.ts
-//  PAGE: /services/design-creative/brochure-design
+//  PAGE: /services/design-creative/brochure-design-services-in-delhi
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/design-creative";
 export const child = {
-  slug: "brochure-design",
+  slug: "brochure-design-services-in-delhi",
   title: "Brochure Design",
   metaTitle: "Brochure Design Services in India | Eddinet",
   metaDescription: "EDDINET provides brochure design services in Delhi that give your business a printed and digital voice worth keeping.",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Custom Corporate & Tri-Fold Brochures | Company Profiles | Print & Digital Sales Collateral",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Brochure Design Services in Delhi",
-  heroSubheading: "Custom Corporate & Tri-Fold Brochures | Company Profiles | Print & Digital Sales Collateral",
-  detailedDescription: "EDDINET provides brochure design services in Delhi that give your business a printed and digital voice worth keeping. We shape clear layouts and tight, persuasive copy into brochures that win attention at meetings, exhibitions, and online. Every page is custom-built around your brand, so prospects see a business they can trust.\n\nAt EDDINET, we transform static company details into compelling print and digital brand assets. Unorganized information, weak visual hierarchy, and low-resolution graphics directly harm brand credibility and cost you high-value B2B opportunities. As a top-rated brochure design company in Delhi, we engineer precision-crafted brochures designed to leave a lasting professional mark.\n\nOur creative design team manages your entire collateral ecosystem end-to-end. We develop elegant corporate brochure design solutions and structured company brochure design assets including classic tri-fold brochure design layouts and multi-page business brochure design catalogs optimized for crisp physical printing and instant digital sharing.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "EDDINET provides brochure design services in Delhi that give your business a printed and digital voice worth keeping. We shape clear layouts and tight, persuasive copy into brochures that win attention at meetings, exhibitions, and online. Every page is custom-built around your brand, so prospects see a business they can trust.",
+  detailedDescription: "At EDDINET, we transform static company details into compelling print and digital brand assets. Unorganized information, weak visual hierarchy, and low-resolution graphics directly harm brand credibility and cost you high-value B2B opportunities. As a top-rated brochure design company in Delhi, we engineer precision-crafted brochures designed to leave a lasting professional mark.\n\nOur creative design team manages your entire collateral ecosystem end-to-end. We develop elegant corporate brochure design solutions and structured company brochure design assets including classic tri-fold brochure design layouts and multi-page business brochure design catalogs optimized for crisp physical printing and instant digital sharing.",
   features: [
     {
       title: "Custom Corporate Brochure Design",
@@ -42,6 +50,7 @@ export const child = {
       description: "We convert traditional print layouts into interactive digital PDF brochures complete with clickable links, embedded media tags, and compressed file sizes for swift email delivery.",
     },
   ],
+  featuresHeading: "Our Brochure Design Services in Delhi",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -88,7 +97,7 @@ export const child = {
   faqs: [
     {
       q: "What are brochure design services?",
-      a: "Brochure design services cover the creation of custom print and digital marketing collateral-such as corporate company profiles, tri-fold brochures, product catalogs, and sales booklets-engineered to showcase products or services to prospective clients.",
+      a: "Brochure design services cover the creation of custom print and digital marketing collateral—such as corporate company profiles, tri-fold brochures, product catalogs, and sales booklets—engineered to showcase products or services to prospective clients.",
     },
     {
       q: "What fold formats do you provide for brochure design in Delhi?",
@@ -111,8 +120,12 @@ export const child = {
       a: "Yes. Upon full project settlement, we deliver complete editable open source files (Adobe InDesign / Illustrator) along with all fonts and linked image assets.",
     },
   ],
+  cta: {
+    heading: "Elevate Your Business Collateral With EDDINET",
+    sub: "Discuss Your Brochure Design Requirements",
+    description: "Ready to impress your clients with high-converting, professionally crafted corporate brochures? Partner with EDDINET for custom, impactful brochure design services in Delhi. Contact our creative design team today to schedule your consultation!",
+  },
   crossLinks: crossLinksFor("design-creative"),
-  featuresHeading: "Our Brochure Design Services in Delhi",
   docxHeadings: {
     about: "About EDDINET: Brochure Designing Agency",
     process: "Our Brochure Design Process",

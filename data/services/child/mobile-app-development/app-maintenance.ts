@@ -1,131 +1,48 @@
 // ============================================================================
 //  FILE: data/services/child/mobile-app-development/app-maintenance.ts
-//  PAGE: /services/mobile-app-development/app-maintenance
+//  PAGE: /services/mobile-app-development/mobile-app-maintenance-and-support-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/mobile-app-development";
 export const child = {
-  slug: "app-maintenance",
+  slug: "mobile-app-maintenance-and-support-services-in-india",
   title: "App Maintenance",
   metaTitle: "App Maintenance Services in India | Eddinet",
   metaDescription: "Launching an app is only the first step. The real challenge is keeping it fast, secure, and bug-free over time.",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Post-Launch Support | Bug Fixing | Performance Optimization | SLA-Backed Maintenance",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Mobile App Maintenance & Support Services in India",
-  heroSubheading: "Post-Launch Support | Bug Fixing | Performance Optimization | SLA-Backed Maintenance",
-  detailedDescription: "Launching an app is only the first step. The real challenge is keeping it fast, secure, and bug-free over time. Eddinet provides comprehensive mobile app maintenance & support services in India. Our goal is simple: fewer crashes, better app store ratings, and a reduced support workload for your team.\n\nEddinet is a dedicated mobile app maintenance agency in India serving startups, SMEs, and established businesses with live applications. We ensure your mobile apps remain stable, secure, and high-performing long after launch.\n\nCross-Platform Expertise: Hands-on experience with native iOS, Android, Flutter, and React Native applications.\n\nSLA-Backed Model: Structured maintenance built around clear response and resolution timelines.\n\nProactive Monitoring: Active deployment of crash monitoring tools and real-device testing protocols.\n\nPredictable Outcomes: Fewer urgent issues, smoother release cycles, and reliable app stability.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "Launching an app is only the first step. The real challenge is keeping it fast, secure, and bug-free over time. Eddinet provides comprehensive mobile app maintenance & support services in India. Our goal is simple: fewer crashes, better app store ratings, and a reduced support workload for your team.",
+  detailedDescription: "Eddinet is a dedicated mobile app maintenance agency in India serving startups, SMEs, and established businesses with live applications. We ensure your mobile apps remain stable, secure, and high-performing long after launch.\n\nCross-Platform Expertise: Hands-on experience with native iOS, Android, Flutter, and React Native applications.\n\nSLA-Backed Model: Structured maintenance built around clear response and resolution timelines.\n\nProactive Monitoring: Active deployment of crash monitoring tools and real-device testing protocols.\n\nPredictable Outcomes: Fewer urgent issues, smoother release cycles, and reliable app stability.",
   features: [
     {
       title: "Post-Launch App Support Services in India",
-      description: "App challenges do not end after deployment. Operating system updates, server changes, and unexpected bugs can impact daily usage. Eddinet provides reliable post-launch app support in India to keep your application operational and up to date.",
-    },
-    {
-      title: "24/7 Monitoring",
-      description: "Continuous oversight of crashes, server errors, and API slowdowns.",
-    },
-    {
-      title: "Bug Resolution",
-      description: "Fast fixes for user-reported bugs and backend integration failures.",
-    },
-    {
-      title: "Dependency Updates",
-      description: "Regular updates for third-party SDKs, frameworks, and system libraries.",
-    },
-    {
-      title: "OS Compatibility",
-      description: "Timely alignment with new iOS and Android operating system releases.",
-    },
-    {
-      title: "Feature Enhancements",
-      description: "Minor feature adjustments, UI tweaks, and content updates.",
-    },
-    {
-      title: "Store Compliance",
-      description: "Ongoing adherence to Apple App Store and Google Play Store policies.",
-    },
-    {
-      title: "Health Reports",
-      description: "Regular system status updates and performance health reports.",
+      description: "App challenges do not end after deployment. Operating system updates, server changes, and unexpected bugs can impact daily usage. Eddinet provides reliable post-launch app support in India to keep your application operational and up to date. 24/7 Monitoring: Continuous oversight of crashes, server errors, and API slowdowns. Bug Resolution: Fast fixes for user-reported bugs and backend integration failures. Dependency Updates: Regular updates for third-party SDKs, frameworks, and system libraries. OS Compatibility: Timely alignment with new iOS and Android operating system releases. Feature Enhancements: Minor feature adjustments, UI tweaks, and content updates. Store Compliance: Ongoing adherence to Apple App Store and Google Play Store policies. Health Reports: Regular system status updates and performance health reports.",
     },
     {
       title: "App Bug Fixing Services in India",
-      description: "Functional errors, broken workflows, and unexpected app behavior damage user trust. As a dedicated app bug fixing agency in India, Eddinet isolates root causes and ships stable, verified code fixes.",
-    },
-    {
-      title: "Crash & Error Resolution",
-      description: "In-depth debugging and tested fixes for application crashes.",
-    },
-    {
-      title: "Functional Fixes",
-      description: "Resolving broken buttons, navigation errors, and failed checkout steps.",
-    },
-    {
-      title: "UI & Layout Corrections",
-      description: "Fixing visual overlaps, font rendering issues, and element alignment across devices.",
-    },
-    {
-      title: "Backend & API Debugging",
-      description: "Resolving integration issues between your mobile app and web servers.",
-    },
-    {
-      title: "Third-Party Link Repair",
-      description: "Restoring broken payment gateways, messaging tools, or CRM integrations.",
+      description: "Functional errors, broken workflows, and unexpected app behavior damage user trust. As a dedicated app bug fixing agency in India, Eddinet isolates root causes and ships stable, verified code fixes. Crash & Error Resolution: In-depth debugging and tested fixes for application crashes. Functional Fixes: Resolving broken buttons, navigation errors, and failed checkout steps. UI & Layout Corrections: Fixing visual overlaps, font rendering issues, and element alignment across devices. Backend & API Debugging: Resolving integration issues between your mobile app and web servers. Third-Party Link Repair: Restoring broken payment gateways, messaging tools, or CRM integrations.",
     },
     {
       title: "App Performance Optimization Services in India",
-      description: "Slow load times, unresponsive screens, and heavy battery consumption push users away. Our app performance optimization services focus on fine-tuning your app's codebase and architecture for maximum speed.",
-    },
-    {
-      title: "Speed & Load-Time Tuning",
-      description: "Accelerating screen rendering times and user interaction responses.",
-    },
-    {
-      title: "Resource Optimization",
-      description: "Reducing battery drain and excessive mobile data usage.",
-    },
-    {
-      title: "Memory & Stability Management",
-      description: "Fixing memory leaks, screen freezes, and janky scrolling.",
-    },
-    {
-      title: "Query & Network Streamlining",
-      description: "Optimizing backend database queries, network requests, and image caching.",
-    },
-    {
-      title: "ANR & Lag Fixes",
-      description: "Eliminating \"Application Not Responding\" errors and frame rate drops.",
+      description: "Slow load times, unresponsive screens, and heavy battery consumption push users away. Our app performance optimization services focus on fine-tuning your app's codebase and architecture for maximum speed. Speed & Load-Time Tuning: Accelerating screen rendering times and user interaction responses. Resource Optimization: Reducing battery drain and excessive mobile data usage. Memory & Stability Management: Fixing memory leaks, screen freezes, and janky scrolling. Query & Network Streamlining: Optimizing backend database queries, network requests, and image caching. ANR & Lag Fixes: Eliminating \"Application Not Responding\" errors and frame rate drops.",
     },
     {
       title: "SLA-Based Mobile App Maintenance Services in India",
-      description: "Software maintenance requires guaranteed response times rather than vague commitments. Eddinet delivers SLA-based mobile app maintenance in India, enforcing strict timelines based on issue severity.",
-    },
-    {
-      title: "Guaranteed Response",
-      description: "Clear SLA response targets for critical, high, and medium severity issues.",
-    },
-    {
-      title: "Targeted Resolutions",
-      description: "Defined resolution timeframes tailored to the urgency of the problem.",
-    },
-    {
-      title: "Scheduled Windows",
-      description: "Planned maintenance periods to prevent operational disruptions for users.",
-    },
-    {
-      title: "Monthly Audit Reports",
-      description: "Detailed reports covering crashes, performance stats, and resolved bugs.",
-    },
-    {
-      title: "Priority Escalation",
-      description: "Dedicated communication pipelines for emergency production breakdowns.",
-    },
-    {
-      title: "Flexible Coverage",
-      description: "Options for standard business-hours support or 24/7 emergency coverage.",
+      description: "Software maintenance requires guaranteed response times rather than vague commitments. Eddinet delivers SLA-based mobile app maintenance in India, enforcing strict timelines based on issue severity. Guaranteed Response: Clear SLA response targets for critical, high, and medium severity issues. Targeted Resolutions: Defined resolution timeframes tailored to the urgency of the problem. Scheduled Windows: Planned maintenance periods to prevent operational disruptions for users. Monthly Audit Reports: Detailed reports covering crashes, performance stats, and resolved bugs. Priority Escalation: Dedicated communication pipelines for emergency production breakdowns. Flexible Coverage: Options for standard business-hours support or 24/7 emergency coverage.",
     },
   ],
+  featuresHeading: "Our Mobile App Maintenance Services",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -136,7 +53,7 @@ export const child = {
       "Reliable & Tested Deployments: Every fix is rigorously verified on real physical devices before going live.",
       "2X Faster Fix Delivery: Streamlined processes to ensure rapid resolution of critical issues.",
       "100% Client Satisfaction Focus: Clear communication, regular status reports, and transparent updates.",
-      "Pay Only What's Agreed: Transparent pricing models with zero hidden fees.",
+      "Pay Only What’s Agreed: Transparent pricing models with zero hidden fees.",
     ],
   },
   process: {
@@ -207,9 +124,8 @@ export const child = {
     },
   ],
   crossLinks: crossLinksFor("mobile-app-development"),
-  featuresHeading: "Our Mobile App Maintenance Services",
   docxHeadings: {
-    about: "About Eddinet - App Maintenance Agency",
+    about: "About Eddinet – App Maintenance Agency",
     process: "Our Process",
     faqs: "FAQs",
   },

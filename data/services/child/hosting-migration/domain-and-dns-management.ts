@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/hosting-migration/domain-and-dns-management.ts
-//  PAGE: /services/hosting-migration/domain-and-dns-management
+//  PAGE: /services/hosting-migration/domain-and-dns-management-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/hosting-migration";
 export const child = {
-  slug: "domain-and-dns-management",
+  slug: "domain-and-dns-management-services-in-india",
   title: "Domain & DNS Management",
   metaTitle: "Domain & DNS Management in India | Eddinet",
   metaDescription: "One wrong DNS record or expired domain can take your business offline in seconds. Eddinet provides end-to-end domain and DNS management services in India",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Managed DNS Services | DNS Setup & Configuration | High Uptime DNS Hosting",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Domain and DNS Management Services in India",
-  heroSubheading: "Managed DNS Services | DNS Setup & Configuration | High Uptime DNS Hosting",
-  detailedDescription: "One wrong DNS record or expired domain can take your business offline in seconds. Eddinet provides end-to-end domain and DNS management services in India configuring, securing, and monitoring your records 24/7. We handle complex backend settings so your websites, custom emails, and web apps stay 100% online, fast, and completely reachable.\n\nHas your website vanished because of a DNS mistake? Are your emails landing in spam or not arriving at all? If yes, Eddinet is the solution to your problem.\n\nAs a provider of managed DNS services in India, we give you an experienced sysadmin team to look after your domains and records. We review how your domain, website, and email connect, then fix what is broken and protect what works. You also receive plain-language updates, so you always know what changed and why.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "One wrong DNS record or expired domain can take your business offline in seconds. Eddinet provides end-to-end domain and DNS management services in India configuring, securing, and monitoring your records 24/7. We handle complex backend settings so your websites, custom emails, and web apps stay 100% online, fast, and completely reachable.",
+  detailedDescription: "Has your website vanished because of a DNS mistake? Are your emails landing in spam or not arriving at all? If yes, Eddinet is the solution to your problem.\n\nAs a provider of managed DNS services in India, we give you an experienced sysadmin team to look after your domains and records. We review how your domain, website, and email connect, then fix what is broken and protect what works. You also receive plain-language updates, so you always know what changed and why.",
   features: [
     {
       title: "Managed DNS Services in India",
@@ -34,6 +42,8 @@ export const child = {
       description: "Our DNS hosting with high uptime places your records on fast, resilient name servers. Multiple servers answer queries, so one failure does not break your site. We also monitor responses, so problems are caught early.",
     },
   ],
+  featuresHeading: "Our Domain and DNS Management Services in India",
+  featuresDescription: "We focus on four areas that decide whether your domain works reliably.",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -44,12 +54,12 @@ export const child = {
       "Careful changes, easy rollback: We record every DNS change and keep a copy of the old setup. If something goes wrong, we can restore it quickly. Your site stays reachable throughout.",
       "Domains stay in your name: You remain the registered owner of every domain. We work through access you control. This keeps your business safe if you ever change providers.",
       "Protection against hijacking: Registrar locks, two-factor access, and clean permissions are standard. Attackers find fewer ways in. Your domain stays under your control.",
-      "Support in Indian business hours: Our team is online when your working day begins. Urgent DNS problems reach people who already know your setup. Therefore, you spend less time explaining and more time fixing.",
+      "Support in Indian business hours: Our team is online when your working day begins. Urgent DNS problems reach people who already know your setup. Therefore, you spend less time explaining and more time fixing. We measure success by steady uptime, correct email delivery, and zero missed renewals. Ready to stop worrying about your domain? Contact Eddinet today for a free consultation and a DNS plan built around your website and email.",
     ],
-    description: "We measure success by steady uptime, correct email delivery, and zero missed renewals.",
   },
   process: {
     heading: "Our Process for Domain and DNS Setup in India",
+    description: "Here is how we bring your domain and DNS under safe, clear management.",
     steps: [
       {
         num: "01",
@@ -82,7 +92,6 @@ export const child = {
         description: "Finally, we watch DNS responses and track expiry dates. You get alerts well before a domain or certificate runs out. Your setup stays healthy without regular manual checks.",
       },
     ],
-    description: "Here is how we bring your domain and DNS under safe, clear management.",
   },
   testimonials: sharedTestimonials,
   faqs: [
@@ -108,8 +117,6 @@ export const child = {
     },
   ],
   crossLinks: crossLinksFor("hosting-migration"),
-  featuresHeading: "Our Domain and DNS Management Services in India",
-  featuresDescription: "We focus on four areas that decide whether your domain works reliably.",
   docxHeadings: {
     about: "About Us: Managed DNS Services Provider in India",
     process: "Our Process for Domain and DNS Setup in India",

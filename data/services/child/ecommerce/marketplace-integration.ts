@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/ecommerce/marketplace-integration.ts
-//  PAGE: /services/ecommerce/marketplace-integration
+//  PAGE: /services/ecommerce/marketplace-integration-services-in-delhi-ncr
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
@@ -9,7 +9,7 @@
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { features, benefits2, whyChooseUs, process, faqs } from "../_category/ecommerce";
 export const child = {
-  slug: "marketplace-integration",
+  slug: "marketplace-integration-services-in-delhi-ncr",
   title: "Marketplace Integration",
   metaTitle: "Marketplace Integration Services in Delhi NCR | Eddinet",
   metaDescription: "Amazon, Flipkart and marketplace connector builds that manage listings centrally. Sell everywhere from one system instead of five spreadsheets. Eddinet delivers dependable marketplace integration services in Delhi NCR for India and global clients. Get a free proposal today.",

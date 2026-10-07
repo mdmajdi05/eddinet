@@ -1,19 +1,27 @@
 // ============================================================================
 //  FILE: data/services/child/mobile-app-development/flutter-app-development.ts
-//  PAGE: /services/mobile-app-development/flutter-app-development
+//  PAGE: /services/mobile-app-development/flutter-app-development-company-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/mobile-app-development";
 export const child = {
-  slug: "flutter-app-development",
+  slug: "flutter-app-development-company-in-india",
   title: "Flutter App Development",
   metaTitle: "Flutter App Development Services in India | Eddinet",
   metaDescription: "We specialize in cross-platform engineering, building custom Flutter solutions designed to meet your specific business requirements, brand identity, and",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Custom Flutter App Development | Cross-Platform Flutter App Development | Flutter UI/UX Design",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Flutter App Development Company in India",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
   heroSubheading: "Eddinet is a leading Flutter App Development Company in India that builds high-performance, single-codebase mobile applications for iOS and Android. We combine native-like performance with rapid development to help your brand launch faster, scale efficiently, and save costs without separate development cycles.",
   detailedDescription: "We specialize in cross-platform engineering, building custom Flutter solutions designed to meet your specific business requirements, brand identity, and operational goals.\n\nOur development team writes clean, modular Dart code optimized for high performance, smooth animations, and fast load times across every device.\n\nBacked by resilient backend setups and secure cloud architectures, we ensure your application handles increasing traffic seamlessly without compromising speed or security.",
   features: [
@@ -54,6 +62,7 @@ export const child = {
       description: "We provide continuous post-launch SLA monitoring, bug fixes, performance tuning, and updates for new operating system releases.",
     },
   ],
+  featuresHeading: "Our Flutter App Development Services",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -67,7 +76,7 @@ export const child = {
       "User-Focused App Experiences: Every touch interaction, layout transition, and interface component is optimized for speed, clarity, and intuitive navigation.",
       "Transparent Development Process: We maintain clear visibility through regular sprint demos, progress reports, and direct communication channels with your project leads.",
       "Long-Term Support & Maintenance: Our partnership continues long after launch with proactive performance tuning, bug fixing, and platform updates.",
-      "Hire Flutter Developers in India",
+      "Hire Flutter Developers in India: ",
       "Dedicated Flutter Developers: Scale your team quickly with dedicated engineers who integrate directly into your internal workflows and development pipelines.",
       "Flexible Development Models: Choose from dedicated developer retainers, fixed-price project contracts, or milestone-based models tailored to your operational budget.",
       "Skilled Flutter & Dart Developers: Gain access to senior engineers proficient in state management, native plugin development, performance tuning, and secure API architecture.",
@@ -163,8 +172,12 @@ export const child = {
       a: "Yes, we offer ongoing SLA maintenance packages that cover server monitoring, bug fixes, security updates, and compatibility adjustments for new OS versions.",
     },
   ],
+  cta: {
+    heading: "BUILD YOUR FLUTTER APP WITH EDDINET",
+    sub: "Discuss Your Flutter App Development Requirements",
+    description: "Ready to launch a high-performing cross-platform app? Partner with Eddinet to build a secure, scalable Flutter application engineered to engage users and accelerate business growth. Contact our engineering team today to schedule your strategy session!",
+  },
   crossLinks: crossLinksFor("mobile-app-development"),
-  featuresHeading: "Our Flutter App Development Services",
   docxHeadings: {
     about: "About Our Flutter App Development Company in India",
     process: "Our Flutter App Development Process",

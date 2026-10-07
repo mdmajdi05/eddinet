@@ -1,24 +1,32 @@
 // ============================================================================
 //  FILE: data/services/child/cloud-devops/linux-server-management.ts
-//  PAGE: /services/cloud-devops/linux-server-management
+//  PAGE: /services/cloud-devops/linux-server-management-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/cloud-devops";
 export const child = {
-  slug: "linux-server-management",
+  slug: "linux-server-management-services-in-india",
   title: "Linux Server Management",
   metaTitle: "Linux Server Management in India | Eddinet",
   metaDescription: "Tired of unpatched security vulnerabilities, sudden server downtime, and slow loading speeds? Eddinet delivers top-rated Linux server management services in",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Linux Server Administration | 24/7 Managed Server Support | Enterprise Solutions",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Linux Server Management Services in India",
-  heroSubheading: "Linux Server Administration | 24/7 Managed Server Support | Enterprise Solutions",
-  detailedDescription: "Tired of unpatched security vulnerabilities, sudden server downtime, and slow loading speeds? Eddinet delivers top-rated Linux server management services in India.\n\nWe build, optimize, and maintain high-speed Linux server environments tailored to your workload demands reducing management headaches, preventing outages, and driving continuous digital growth.\n\nEddinet provides top-rated Linux server management services in India. We build, optimize, and maintain secure, high-speed Linux server environments tailored to your workload demands reducing management headaches, preventing outages, and driving digital growth.\n\nAt Eddinet, we provide comprehensive Linux server administration India services. We manage your complete infrastructure across major Linux distributions, handling OS deployment, security hardening, database tuning, and automated backups to ensure continuous uptime and low-latency performance without disrupting your live operations.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "Tired of unpatched security vulnerabilities, sudden server downtime, and slow loading speeds? Eddinet delivers top-rated Linux server management services in India. We build, optimize, and maintain high-speed Linux server environments tailored to your workload demands reducing management headaches, preventing outages, and driving continuous digital growth.",
+  detailedDescription: "Eddinet provides top-rated Linux server management services in India. We build, optimize, and maintain secure, high-speed Linux server environments tailored to your workload demands reducing management headaches, preventing outages, and driving digital growth.\n\nAt Eddinet, we provide comprehensive Linux server administration India services. We manage your complete infrastructure across major Linux distributions, handling OS deployment, security hardening, database tuning, and automated backups to ensure continuous uptime and low-latency performance without disrupting your live operations.",
   features: [
     {
-      title: "/7 Linux Server Management Services in India",
+      title: "24/7 Linux Server Management Services in India",
       description: "We provide round-the-clock server health monitoring, automatic patch updates, and rapid issue resolution. Our dedicated engineers work non-stop to resolve server bottlenecks and keep your web applications running smoothly without interruption.",
     },
     {
@@ -42,6 +50,7 @@ export const child = {
       description: "We set up automated, encrypted backup routines for your system configurations, files, and databases. In case of hardware failures or data corruption, our rapid recovery protocols restore your active operations with zero data loss.",
     },
   ],
+  featuresHeading: "Our Linux Server Management Services in India",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -75,7 +84,7 @@ export const child = {
       },
       {
         num: "04",
-        title: "/7 Health & Performance Monitoring Setup",
+        title: "24/7 Health & Performance Monitoring Setup",
         description: "We install real-time tracking agents to monitor CPU load, memory consumption, disk I/O, and network traffic, triggering alerts before failures happen.",
       },
       {
@@ -113,8 +122,12 @@ export const child = {
       a: "Yes, we conduct a initial security and performance audit, harden the operating system, fix existing configurations, and transition your server into fully managed SLA support.",
     },
   ],
+  cta: {
+    heading: "Scale Your Business With Reliable Linux Server Management",
+    sub: "Discuss Your Linux Server Requirements",
+    description: "Ready to boost server performance, eliminate downtime, and secure your digital infrastructure? Partner with Eddinet to build, harden, and maintain your server environment. Contact our sysadmin engineering team today to schedule your technical consultation!",
+  },
   crossLinks: crossLinksFor("cloud-devops"),
-  featuresHeading: "Our Linux Server Management Services in India",
   docxHeadings: {
     about: "About Us: Linux Server Management Agency in India",
     process: "Our Linux Server Management Process in India",

@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/ecommerce/ecommerce-migration.ts
-//  PAGE: /services/ecommerce/ecommerce-migration
+//  PAGE: /services/ecommerce/ecommerce-migration-services-in-delhi-ncr
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
@@ -9,7 +9,7 @@
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { features, benefits2, whyChooseUs, process, faqs } from "../_category/ecommerce";
 export const child = {
-  slug: "ecommerce-migration",
+  slug: "ecommerce-migration-services-in-delhi-ncr",
   title: "eCommerce Migration",
   metaTitle: "eCommerce Migration Services in Delhi NCR | Eddinet",
   metaDescription: "Platform migrations moved safely with products, data, URLs and rankings preserved. Switch platforms without losing an order or a ranking. Eddinet delivers dependable ecommerce migration services in Delhi NCR for India and global clients. Get a free proposal today.",

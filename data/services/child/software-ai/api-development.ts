@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/software-ai/api-development.ts
-//  PAGE: /services/software-ai/api-development
+//  PAGE: /services/software-ai/api-development-company-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/software-ai";
 export const child = {
-  slug: "api-development",
+  slug: "api-development-company-in-india",
   title: "API Development",
   metaTitle: "API Development Services in India | Eddinet",
   metaDescription: "EDDINET builds secure, high-speed API architectures that connect software applications and facilitate automated data exchange.",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Custom API Engineering | RESTful & GraphQL Solutions | Enterprise Integrations",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "API Development Company in India",
-  heroSubheading: "Custom API Engineering | RESTful & GraphQL Solutions | Enterprise Integrations",
-  detailedDescription: "EDDINET builds secure, high-speed API architectures that connect software applications and facilitate automated data exchange. As a premier API development company in India, we combine robust backend engineering with strict security protocols to deliver scalable interfaces tailored to your digital ecosystem.\n\nEDDINET helps startups, SMEs, and large enterprises design, build, and deploy high-converting digital applications. As a leading API development company in India, we turn complex technical workflows into fast, secure, and reliable integration channels engineered to streamline system communication and accelerate bottom-line revenue.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "EDDINET builds secure, high-speed API architectures that connect software applications and facilitate automated data exchange. As a premier API development company in India, we combine robust backend engineering with strict security protocols to deliver scalable interfaces tailored to your digital ecosystem.",
+  detailedDescription: "EDDINET helps startups, SMEs, and large enterprises design, build, and deploy high-converting digital applications. As a leading API development company in India, we turn complex technical workflows into fast, secure, and reliable integration channels engineered to streamline system communication and accelerate bottom-line revenue.",
   features: [
     {
       title: "Backend API Development Company India",
@@ -46,10 +54,13 @@ export const child = {
       description: "We provide continuous endpoint monitoring, automated load testing, security patch management, and rate-limit tuning to guarantee high uptime.",
     },
   ],
+  featuresHeading: "Our API Development Services",
+  featuresDescription: "We offer end-to-end engineering services to connect disconnected systems and expand your digital platform's capabilities.",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
     heading: "Why Choose EDDINET for Enterprise API Development in India?",
+    description: "We combine deep technical expertise with security-first engineering to deliver API solutions that power reliable software ecosystems.",
     points: [
       "High-Throughput Performance: We engineer optimized endpoints and database queries to ensure low latency and high-speed data delivery across all connected applications.",
       "Enterprise-Grade Security: We implement strict OAuth2, JWT, rate-limiting, and end-to-end encryption protocols to safeguard sensitive data transfers against unauthorized access.",
@@ -57,10 +68,10 @@ export const child = {
       "Full Process Transparency: We share regular sprint updates, staging environments, and API test collections throughout the development lifecycle to keep you fully informed.",
       "Dedicated Technical Support: We offer continuous SLA-backed maintenance to manage endpoint updates, system scalability adjustments, and security patches over the long term.",
     ],
-    description: "We combine deep technical expertise with security-first engineering to deliver API solutions that power reliable software ecosystems.",
   },
   process: {
     heading: "Our API Development Process in India",
+    description: "We follow a transparent agile methodology to deliver high-performance integrations on schedule and within budget.",
     steps: [
       {
         num: "01",
@@ -98,7 +109,6 @@ export const child = {
         description: "We track response times, system health, and call volumes continuously, applying security updates and optimizing infrastructure as traffic expands.",
       },
     ],
-    description: "We follow a transparent agile methodology to deliver high-performance integrations on schedule and within budget.",
   },
   testimonials: sharedTestimonials,
   faqs: [
@@ -131,9 +141,12 @@ export const child = {
       a: "We implement strict authentication protocols (OAuth2, JWT), end-to-end SSL/TLS encryption, request throttling, IP whitelisting, and regular security audits to prevent data exposure.",
     },
   ],
+  cta: {
+    heading: "Build Your Scalable API Infrastructure With EDDINET",
+    sub: "Discuss Your API Requirements",
+    description: "Ready to power your software ecosystem with fast, secure, and custom API solutions? Contact the engineering team at EDDINET today to schedule a technical consultation and receive a clear project estimate.",
+  },
   crossLinks: crossLinksFor("software-ai"),
-  featuresHeading: "Our API Development Services",
-  featuresDescription: "We offer end-to-end engineering services to connect disconnected systems and expand your digital platform's capabilities.",
   docxHeadings: {
     about: "About Us: API Development Company in India",
     process: "Our API Development Process in India",

@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/hosting-migration/website-hosting.ts
-//  PAGE: /services/hosting-migration/website-hosting
+//  PAGE: /services/hosting-migration/website-hosting-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/hosting-migration";
 export const child = {
-  slug: "website-hosting",
+  slug: "website-hosting-services-in-india",
   title: "Website Hosting",
   metaTitle: "Website Hosting Services in India | Eddinet",
   metaDescription: "Eddinet provides website hosting services in India that keep your website fast, secure, and always available. We manage the server, backups, and security, so",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Business Website Hosting | Secure Servers & Backups | 24/7 Monitoring",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Website Hosting Services in India",
-  heroSubheading: "Business Website Hosting | Secure Servers & Backups | 24/7 Monitoring",
-  detailedDescription: "Eddinet provides website hosting services in India that keep your website fast, secure, and always available. We manage the server, backups, and security, so you never have to. As a result, your visitors get quick pages and you get a website that simply works.\n\nEddinet is a web hosting company in India built around certified sysadmins and DevOps engineers. We help businesses replace unreliable hosting with one well-managed, dependable setup.\n\nWe listen first, then review your website, traffic, and goals before recommending a plan. Our reports use plain language, so everyone on your team can understand them. At the end of each project, we hand over clear documentation.\n\nGood hosting should feel invisible. It works quietly and never surprises you. That is the standard we follow on every project.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "Eddinet provides website hosting services in India that keep your website fast, secure, and always available. We manage the server, backups, and security, so you never have to. As a result, your visitors get quick pages and you get a website that simply works.",
+  detailedDescription: "Eddinet is a web hosting company in India built around certified sysadmins and DevOps engineers. We help businesses replace unreliable hosting with one well-managed, dependable setup.\n\nWe listen first, then review your website, traffic, and goals before recommending a plan. Our reports use plain language, so everyone on your team can understand them. At the end of each project, we hand over clear documentation.\n\nGood hosting should feel invisible. It works quietly and never surprises you. That is the standard we follow on every project.",
   features: [
     {
       title: "Business Website Hosting in India",
@@ -34,6 +42,8 @@ export const child = {
       description: "We set up your new hosting and move your existing website with care. Every migration is planned, backed up, and tested first. Your files, databases, and emails arrive complete and ready to use.",
     },
   ],
+  featuresHeading: "Our Website Hosting Services in India",
+  featuresDescription: "We focus on four core service areas. Each one is built around your traffic, budget, and growth plans.",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -44,12 +54,12 @@ export const child = {
       "Security from day one: Every server is hardened, patched, and monitored from launch. Suspicious activity is flagged early. Your visitors also see the trusted padlock of a valid SSL certificate.",
       "Speed-focused setup: We tune caching, server settings, and resources for fast page loads. Faster sites keep visitors longer. They also support better search performance.",
       "Room to grow: Your plan scales when traffic increases. You never face a forced rebuild. We simply upgrade what you already use.",
-      "Indian business hours support: Our team understands local time zones and responds when your day starts. Therefore, urgent issues get attention when you need it most. You always know who is handling your site.",
+      "Indian business hours support: Our team understands local time zones and responds when your day starts. Therefore, urgent issues get attention when you need it most. You always know who is handling your site. We measure success by faster load times, stronger uptime, and fewer support headaches. Ready to move to hosting you can rely on? Contact Eddinet today for a free consultation and a clear hosting recommendation.",
     ],
-    description: "We measure success by faster load times, stronger uptime, and fewer support headaches.",
   },
   process: {
     heading: "Our Process for Website Hosting Setup in India",
+    description: "Every Eddinet project follows a clear path, from the first review to ongoing support.",
     steps: [
       {
         num: "01",
@@ -82,7 +92,6 @@ export const child = {
         description: "Finally, we share documentation and answer your team's questions. You also get regular health checks. As your traffic grows, we adjust your hosting to match.",
       },
     ],
-    description: "Every Eddinet project follows a clear path, from the first review to ongoing support.",
   },
   testimonials: sharedTestimonials,
   faqs: [
@@ -120,8 +129,6 @@ export const child = {
     },
   ],
   crossLinks: crossLinksFor("hosting-migration"),
-  featuresHeading: "Our Website Hosting Services in India",
-  featuresDescription: "We focus on four core service areas. Each one is built around your traffic, budget, and growth plans.",
   docxHeadings: {
     about: "About Us: Web Hosting Company in India",
     process: "Our Process for Website Hosting Setup in India",

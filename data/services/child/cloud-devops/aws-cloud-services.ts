@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/cloud-devops/aws-cloud-services.ts
-//  PAGE: /services/cloud-devops/aws-cloud-services
+//  PAGE: /services/cloud-devops/aws-cloud-services-company-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/cloud-devops";
 export const child = {
-  slug: "aws-cloud-services",
+  slug: "aws-cloud-services-company-in-india",
   title: "AWS Cloud Services",
   metaTitle: "AWS Cloud Services in India | Eddinet",
   metaDescription: "Businesses need flexible cloud setups to stay competitive and secure. At EDDINET, a premier AWS Cloud Services Company in India, we build and manage cloud",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "AWS Cloud | Cloud Consulting | Migration & Managed Services",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "AWS Cloud Services Company in India",
-  heroSubheading: "AWS Cloud | Cloud Consulting | Migration & Managed Services",
-  detailedDescription: "Businesses need flexible cloud setups to stay competitive and secure. At EDDINET, a premier AWS Cloud Services Company in India, we build and manage cloud environments for modern businesses.\n\nWe combine expert cloud consulting with cloud-native migration strategies. As a result, our team helps you reduce infrastructure costs, prevent downtime, and scale digital operations smoothly.\n\nAre you looking for cloud engineering services that not only optimize your infrastructure but actively grow your bottom line? At EDDINET, we specialize in building high-performance AWS cloud architectures and migration strategies that align directly with your revenue targets.\n\nDigital growth is more than just cloud visibility, it is the core engine of your business designed to protect critical workloads, ensure system uptime, and convert operational efficiency into long-term profit.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "Businesses need flexible cloud setups to stay competitive and secure. At EDDINET, a premier AWS Cloud Services Company in India, we build and manage cloud environments for modern businesses. We combine expert cloud consulting with cloud-native migration strategies. As a result, our team helps you reduce infrastructure costs, prevent downtime, and scale digital operations smoothly.",
+  detailedDescription: "Are you looking for cloud engineering services that not only optimize your infrastructure but actively grow your bottom line? At EDDINET, we specialize in building high-performance AWS cloud architectures and migration strategies that align directly with your revenue targets.\n\nDigital growth is more than just cloud visibility, it is the core engine of your business designed to protect critical workloads, ensure system uptime, and convert operational efficiency into long-term profit.",
   features: [
     {
       title: "AWS Cloud Consulting",
@@ -115,6 +123,11 @@ export const child = {
       a: "Yes, we offer ongoing SLA-backed managed services that cover round-the-clock server monitoring, automated system backups, regular software patching, and immediate technical troubleshooting.",
     },
   ],
+  cta: {
+    heading: "Scale Your Business With AWS Cloud",
+    sub: "Discuss Your AWS Cloud Requirements",
+    description: "Ready to optimize your business performance with secure AWS cloud infrastructure? Partner with EDDINET to plan, build, and manage your cloud setup. Contact our technical team today to schedule your cloud consultation!",
+  },
   crossLinks: crossLinksFor("cloud-devops"),
   docxHeadings: {
     about: "About EDDINET",

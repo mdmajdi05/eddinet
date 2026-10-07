@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/content/content-strategy.ts
-//  PAGE: /services/content/content-strategy
+//  PAGE: /services/content/content-strategy-services-in-delhi-ncr
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
@@ -9,7 +9,7 @@
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { features, benefits, whyChooseUs, process, faqs } from "../_category/content";
 export const child = {
-  slug: "content-strategy",
+  slug: "content-strategy-services-in-delhi-ncr",
   title: "Content Strategy",
   metaTitle: "Content Strategy Services in Delhi NCR | Eddinet",
   metaDescription: "A plan for what content to create, for whom, and how it supports revenue. Content planned with intent — not produced on a whim. Eddinet delivers dependable content strategy services in Delhi NCR for India and global clients. Get a free proposal today.",

@@ -1,21 +1,29 @@
 // ============================================================================
 //  FILE: data/services/child/mobile-app-development/cross-platform-apps.ts
-//  PAGE: /services/mobile-app-development/cross-platform-apps
+//  PAGE: /services/mobile-app-development/cross-platform-app-development-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/mobile-app-development";
 export const child = {
-  slug: "cross-platform-apps",
+  slug: "cross-platform-app-development-services-in-india",
   title: "Cross-Platform Apps",
   metaTitle: "Cross-Platform Apps Services in India | Eddinet",
   metaDescription: "Eddinet delivers premier Cross-Platform App Development Services in India with a single codebase. We build fast, native-performing iOS and Android apps that",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Multi-Platform | Hybrid | Single-Codebase App Development",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
   heroHeading: "Cross-Platform App Development Services in India",
-  heroSubheading: "Multi-Platform | Hybrid | Single-Codebase App Development",
-  detailedDescription: "Eddinet delivers premier Cross-Platform App Development Services in India with a single codebase. We build fast, native-performing iOS and Android apps that save costs, launch faster, and reach users across both mobile ecosystems.\n\nAt Eddinet, we build multi-platform apps that perform seamlessly on Android and iOS. We help businesses cut maintenance costs and speed up product launches using single codebase development.\n\nHere is how we streamline your multi-platform app development:\n\nMulti-Platform Development: We build fast, engaging apps for both Android and iOS.\n\nHybrid App Services: We deliver cost-effective solutions that run smoothly across all devices.\n\nSingle Codebase Setup: We write code once to shorten launch times and simplify updates.\n\nScalable Performance: We engineer secure backends that handle heavy traffic effortlessly.",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "Eddinet delivers premier Cross-Platform App Development Services in India with a single codebase. We build fast, native-performing iOS and Android apps that save costs, launch faster, and reach users across both mobile ecosystems.",
+  detailedDescription: "At Eddinet, we build multi-platform apps that perform seamlessly on Android and iOS. We help businesses cut maintenance costs and speed up product launches using single codebase development.\n\nHere is how we streamline your multi-platform app development:\n\nMulti-Platform Development: We build fast, engaging apps for both Android and iOS.\n\nHybrid App Services: We deliver cost-effective solutions that run smoothly across all devices.\n\nSingle Codebase Setup: We write code once to shorten launch times and simplify updates.\n\nScalable Performance: We engineer secure backends that handle heavy traffic effortlessly.",
   features: [
     {
       title: "Custom Cross-Platform App Development",
@@ -58,6 +66,7 @@ export const child = {
       description: "We provide ongoing monitoring, quick bug fixes, security patches, and system updates to keep your software running properly.",
     },
   ],
+  featuresHeading: "Our Cross-Platform App Development Services",
   benefits,
   metrics: sharedMetrics,
   whyChooseUs: {
@@ -157,8 +166,12 @@ export const child = {
       a: "Yes, we offer ongoing SLA support plans covering server management, bug fixes, security updates, and compatibility upgrades for new OS versions.",
     },
   ],
+  cta: {
+    heading: "BUILD YOUR CROSS-PLATFORM APP WITH EDDINET",
+    sub: "Discuss Your App Development Requirements",
+    description: "Ready to reach users on both iOS and Android without spending double the budget? Partner with Eddinet to build a high-converting, single-codebase app engineered for speed and revenue growth. Contact our engineering team today to schedule your consultation!",
+  },
   crossLinks: crossLinksFor("mobile-app-development"),
-  featuresHeading: "Our Cross-Platform App Development Services",
   docxHeadings: {
     about: "About Our Cross-Platform App Development Company",
     process: "Our Cross-Platform App Development Process",

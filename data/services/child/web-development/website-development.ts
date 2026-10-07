@@ -1,51 +1,55 @@
 // ============================================================================
 //  FILE: data/services/child/web-development/website-development.ts
-//  PAGE: /services/web-development/website-development
+//  PAGE: /services/web-development/website-development-services-in-delhi
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
+// ── HERO FIELDS (top of the page) ─────────────────────────────────────
+//   heroEyebrow    = badge chip shown ABOVE the <h1>
+//   heroHeading    = the <h1> heading itself
+//   heroSubheading = paragraph shown BELOW the <h1>
 
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
-  slug: "website-development",
-
-
-
-
+  slug: "website-development-services-in-delhi",
   title: "Website Development",
   metaTitle: "Development Services in Delhi | Eddinet",
   metaDescription: "Looking for reliable development services in Delhi? Eddinet builds websites, web apps and custom software on time, tested properly, and built to keep working long after you've paid the invoice.",
-  heroHeading: "Website Development Services in Delhi NCR",
-  heroSubheading: "Searching for development services in Delhi? You've probably noticed the same pattern — big promises, missed deadlines, and websites that still have bugs at launch. Eddinet builds things differently: on time, tested properly, and built to keep working long after you've paid the invoice. We're a Delhi-based team building websites, web apps, and custom software for businesses that want results, not excuses.",
-
-  detailedDescription: "Eddinet started with a simple frustration — watching clients get burned by agencies that oversold and underdelivered. So we built something different: a team where the person coding your project is someone you can actually talk to.\n\nToday, we're one of the more trusted names offering development services in Delhi, and we still work by the same rule — fewer clients, better work. We take on projects we know we can genuinely deliver on, not everything that walks through the door.",
+  // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
+  heroEyebrow: "Full-Stack Custom Web Development | Enterprise B2B Systems | High-Performance Platforms",
+  // the <h1> itself — doc line "Main hero H1 headline:-"
+  heroHeading: "Website Development Services in Delhi",
+  // paragraph BELOW the <h1> — the doc's hero paragraph
+  heroSubheading: "EDDINET provides high-performance website development services in Delhi. We engineer robust, scalable, and secure web applications built to support heavy traffic, integrate complex backend workflows, and drive measurable business growth.",
+  detailedDescription: "At EDDINET, we turn complex business logic into reliable, fast, and scalable web solutions. Legacy software bottlenecks, poor database architecture, and unoptimized server setups directly slow down business operations and degrade user experience. Therefore, our web development team engineers custom, future-proof web platforms built for high concurrency and speed.\n\nOur engineering team manages your web platform end-to-end. We deliver custom website development in India across modern technology stacks, offer professional web development services in Delhi for growing enterprises, and build specialized B2B website development in India solutions designed to automate client portals, lead funnels, and enterprise workflows.",
   features: [
     {
-      title: "Website Development",
-      description: "Fast, clean, SEO-friendly sites that look sharp on every device.",
+      title: "Custom Website Development in India",
+      description: "We build tailored, modular web applications using modern stacks (React, Node.js, Python, PHP, Next.js) engineered specifically around your unique business workflows.",
     },
     {
-      title: "Web Application Development",
-      description: "Custom dashboards, booking systems, and portals built with React, Next.js, and Node.js.",
+      title: "B2B Website Development in India",
+      description: "We develop high-security B2B corporate portals, client dashboards, wholesale order systems, and multi-tier user access platforms built to streamline complex enterprise deals.",
     },
     {
-      title: "E-Commerce Development",
-      description: "Shopify, WooCommerce, or fully custom stores, from product setup to payment integration.",
+      title: "Full-Stack Web Application Development",
+      description: "We engineer secure front-end interfaces and scalable back-end server architectures with custom database schemas (MySQL, PostgreSQL, MongoDB) optimized for high transaction speed.",
     },
     {
-      title: "WordPress Development",
-      description: "Clean, custom builds without the plugin clutter.",
+      title: "E-Commerce Platform Development",
+      description: "We build custom online stores and headless e-commerce platforms featuring custom checkout flows, inventory management synchronization, and secure payment gateway integrations.",
     },
     {
-      title: "Custom Software Development",
-      description: "Internal tools and automation built around how your business actually runs.",
+      title: "CMS & Headless Web Development",
+      description: "We deploy scalable, flexible Content Management Systems (WordPress, Webflow, Strapi, Sanity) that give your content marketing teams complete publishing control without developer dependency.",
     },
     {
-      title: "Maintenance & Support",
-      description: "Ongoing updates, security, and fixes so your site stays fast and stable.",
+      title: "API Development & System Integration",
+      description: "We build robust RESTful and GraphQL APIs to connect your web platform seamlessly with third-party CRMs, ERPs, payment providers, and marketing automation tools.",
     },
   ],
+  featuresHeading: "Our Website Development Services in Delhi",
   benefits: [
     {
       title: "One Team, Not a Freelancer Chain",
@@ -70,77 +74,86 @@ export const child = {
   ],
   metrics: sharedMetrics,
   whyChooseUs: {
-    heading: "Why Choose Us for Development Services in Delhi",
+    heading: "Why Choose EDDINET as Your Website Development Company in Delhi?",
     points: [
-      "Plenty of agencies offer development services in Delhi. Fewer treat your project like it actually matters. At Eddinet, we say no to work we can't do well, communicate in plain language, and build for the long term with clean, documented code.",
-      "If you're looking for the best development services in Delhi and want a team that sticks around after launch, let's talk about what you're building.",
+      "100% Bespoke Code Architecture: Zero reliance on pre-made bloated templates or vulnerable NULLED plugins; every module is coded custom for performance.",
+      "Enterprise Security Standards: Built-in safeguards including data encryption, SQL injection protection, XSS prevention, and strict role-based access controls.",
+      "Core Web Vitals & Speed Optimization: Sub-second page rendering through server-side caching, database query optimization, and CDN delivery setup.",
+      "Scalable Cloud Backends: Architected to handle exponential traffic surges and database expansion without service interruptions or speed lag.",
+      "Full Source Code Ownership: Complete transfer of full intellectual property, repository access (GitHub/GitLab), and technical documentation upon deployment.",
     ],
   },
   process: {
-    heading: "How We Deliver Development Services in Delhi",
+    heading: "Our Website Development Process",
     steps: [
       {
         num: "01",
-        title: "Discovery & Consultation",
-        description: "We understand your business goals before we plan anything.",
+        title: "Technical Discovery & System Architecture",
+        description: "We evaluate your operational workflows, technical dependencies, database requirements, and integration needs to design a bulletproof development blueprint.",
       },
       {
         num: "02",
-        title: "Planning & Strategy",
-        description: "Right tech stack, clear timeline, no surprises later.",
+        title: "Database Schema & API Specs",
+        description: "Our back-end architects design clean, normalized database structures and map API endpoints to ensure ultra-fast data retrieval and absolute data integrity.",
       },
       {
         num: "03",
-        title: "Design & Development",
-        description: "Built in visible stages, not one big reveal at the end.",
+        title: "Front-End & Back-End Sprint Development",
+        description: "Our full-stack engineers write clean, modular, and maintainable code—building responsive user interfaces alongside scalable server-side business logic.",
       },
       {
         num: "04",
-        title: "Testing & QA",
-        description: "Checked across devices and edge cases before anything goes live.",
+        title: "API Integration & Third-Party Connectors",
+        description: "We establish secure connections with external APIs, payment gateways, authentication servers, and enterprise tools like Salesforce, HubSpot, or SAP.",
       },
       {
         num: "05",
-        title: "Launch",
-        description: "Careful deployment with a rollback plan just in case.",
+        title: "Rigorous QA, Security & Load Testing",
+        description: "We conduct extensive automated and manual testing—including vulnerability scanning, cross-browser compatibility checks, and server load testing before launch.",
       },
       {
         num: "06",
-        title: "Ongoing Support",
-        description: "We stay involved after launch — fixes, updates, and future features.",
+        title: "Deployment, Server Setup & Continuous Maintenance",
+        description: "We provision secure cloud environments (AWS, Cloudflare, DigitalOcean), configure SSL/TLS certificates, execute DNS cutovers, and provide continuous SLA-backed maintenance.",
       },
     ],
   },
   testimonials: sharedTestimonials,
   faqs: [
     {
-      q: "What kind of development services does Eddinet offer in Delhi?",
-      a: "We offer website development, web application development, e-commerce development, WordPress development, custom software, and ongoing maintenance — all handled by one in-house team based in Delhi.",
+      q: "What is included in your website development services in Delhi?",
+      a: "Our full-stack services cover requirement discovery, database architecture design, front-end and back-end coding, API integration, CMS configuration, QA testing, cloud deployment, and post-launch maintenance.",
     },
     {
-      q: "How much do development services cost in Delhi?",
-      a: "It depends on scope — a simple business website costs far less than a custom web app or e-commerce platform. We give you a clear, itemized quote after understanding your requirements, with no hidden charges later.",
+      q: "What technology stacks do you use for custom website development in India?",
+      a: "We build across modern stacks depending on project needs, including React, Next.js, Vue.js, Node.js, Python/Django, PHP/Laravel, and WordPress/WooCommerce.",
     },
     {
-      q: "How long does a typical project take?",
-      a: "Most business websites take 2–4 weeks, while custom web apps or e-commerce builds usually take 6–10 weeks depending on features. We share a realistic timeline upfront during the planning stage.",
+      q: "How do you handle B2B website development in India with custom integrations?",
+      a: "We map out your business processes and develop custom REST/GraphQL APIs to connect your web portal with internal ERPs, CRMs (Salesforce/HubSpot), warehouse management systems, and payment gateways.",
     },
     {
-      q: "Do you only work with businesses in Delhi?",
-      a: "No. While we're based in Delhi and love meeting clients in person when possible, we also work with businesses across India and internationally, fully remote if needed.",
+      q: "Will my custom website be secure against cyber threats?",
+      a: "Yes. We follow strict OWASP security guidelines, implement SSL/TLS encryption, parameterize database queries to prevent SQL injections, enforce HTTPS, and configure secure API authentication protocols.",
     },
     {
-      q: "Will I own the code and design once the project is delivered?",
-      a: "Yes. There's no vendor lock-in — once the project is complete, the code, design files, and access are fully yours.",
+      q: "How long does a website development company in Delhi take to build a custom platform?",
+      a: "Timeline depends on scope: standard business websites take 3 to 5 weeks, while complex custom web applications, B2B portals, or enterprise SaaS systems take 6 to 12 weeks across structured development sprints.",
     },
     {
-      q: "Do you provide support after the website or app goes live?",
-      a: "Yes. We offer ongoing maintenance packages covering updates, security, bug fixes, and new features, so your project keeps running smoothly long after launch.",
-    },
-    {
-      q: "Why should I choose Eddinet over other agencies offering development services in Delhi?",
-      a: "Because we say no to projects we can't do justice to, communicate in plain language, stick to realistic timelines, and build with clean, well-documented code that's easy to maintain or hand off in the future.",
+      q: "Do I get full ownership of the source code?",
+      a: "Yes. Upon final project settlement, 100% source code ownership, repository access, licenses, and technical documentation are fully transferred to your company.",
     },
   ],
+  cta: {
+    heading: "Scale Your Business With Custom Engineering",
+    sub: "Discuss Your Web Development Requirements",
+    description: "Ready to build a secure, fast, and scalable web platform that propels your business forward? Partner with EDDINET for expert website development services in Delhi. Contact our web engineering team today to schedule your technical consultation!",
+  },
   crossLinks: crossLinksFor("web-development"),
+  docxHeadings: {
+    about: "About EDDINET: Web Engineering & Full-Stack Experts",
+    process: "Our Website Development Process",
+    faqs: "Frequently Asked Questions",
+  },
 };

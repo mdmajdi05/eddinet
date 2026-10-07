@@ -1,0 +1,832 @@
+{
+  "generatedAt": "2026-10-07T06:19:27.384Z",
+  "baseUrl": "http://localhost:3999",
+  "summary": {
+    "error": 33,
+    "warning": 86,
+    "info": 0,
+    "byRule": {
+      "broken-links": {
+        "title": "Broken links (internal links + assets)",
+        "error": 31,
+        "warning": 0,
+        "info": 0,
+        "total": 31
+      },
+      "not-found": {
+        "title": "404 / soft-404 detection",
+        "error": 0,
+        "warning": 0,
+        "info": 0,
+        "total": 0
+      },
+      "thin-content": {
+        "title": "Thin content (kam content wale pages)",
+        "error": 0,
+        "warning": 11,
+        "info": 0,
+        "total": 11
+      },
+      "sitemap": {
+        "title": "Sitemap updated & valid",
+        "error": 1,
+        "warning": 0,
+        "info": 0,
+        "total": 1
+      },
+      "llms-txt": {
+        "title": "llms.txt updated & valid",
+        "error": 1,
+        "warning": 0,
+        "info": 0,
+        "total": 1
+      },
+      "breadcrumbs": {
+        "title": "Breadcrumbs valid & present",
+        "error": 0,
+        "warning": 0,
+        "info": 0,
+        "total": 0
+      },
+      "page-issues": {
+        "title": "Page-level issues (title/meta/H1/canonical)",
+        "error": 0,
+        "warning": 75,
+        "info": 0,
+        "total": 75
+      }
+    }
+  },
+  "results": [
+    {
+      "rule": "broken-links",
+      "title": "Broken links (internal links + assets)",
+      "description": "Har crawled page ke internal <a href> links aur assets (img/js/css) resolve hone chahiye — 4xx/5xx/timeout = broken.",
+      "issues": [
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "Broken asset 400: /_next/static/chunks/4bd1b696-c023c6e3521b1417.js",
+          "path": "/_next/static/chunks/4bd1b696-c023c6e3521b1417.js"
+        },
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "Broken asset 400: /_next/static/chunks/255-87552e6e05b8e3aa.js",
+          "path": "/_next/static/chunks/255-87552e6e05b8e3aa.js"
+        },
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "Broken asset 400: /_next/static/chunks/main-app-869bca4d93db2440.js",
+          "path": "/_next/static/chunks/main-app-869bca4d93db2440.js"
+        },
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "Broken asset 400: /_next/static/chunks/619-f9b36909c80793db.js",
+          "path": "/_next/static/chunks/619-f9b36909c80793db.js"
+        },
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "Broken asset 400: /_next/static/chunks/356-f3991dca7fcc0629.js",
+          "path": "/_next/static/chunks/356-f3991dca7fcc0629.js"
+        },
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "Broken asset 400: /_next/static/chunks/401-33c29d9ab7495338.js",
+          "path": "/_next/static/chunks/401-33c29d9ab7495338.js"
+        },
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "Broken asset 400: /_next/static/chunks/351-23f2d46f38d77388.js",
+          "path": "/_next/static/chunks/351-23f2d46f38d77388.js"
+        },
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "Broken asset 500: /_next/image",
+          "path": "/_next/image"
+        },
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "Broken asset 500: /_next/image",
+          "path": "/_next/image"
+        },
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "Broken asset 500: /_next/image",
+          "path": "/_next/image"
+        },
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "Broken asset 500: /_next/image",
+          "path": "/_next/image"
+        },
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "Broken asset 500: /_next/image",
+          "path": "/_next/image"
+        },
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "Broken asset 400: /_next/static/chunks/42-d012106a1d382bda.js",
+          "path": "/_next/static/chunks/42-d012106a1d382bda.js"
+        },
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "Broken asset 400: /_next/static/chunks/app/page-59294c44a88b89e9.js",
+          "path": "/_next/static/chunks/app/page-59294c44a88b89e9.js"
+        },
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "Broken asset 400: /_next/static/chunks/app/layout-d04a7c8066fdface.js",
+          "path": "/_next/static/chunks/app/layout-d04a7c8066fdface.js"
+        },
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "Broken asset 500: /_next/image",
+          "path": "/_next/image"
+        },
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "Broken asset 500: /_next/image",
+          "path": "/_next/image"
+        },
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "Broken asset 500: /_next/image",
+          "path": "/_next/image"
+        },
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "Broken asset 500: /_next/image",
+          "path": "/_next/image"
+        },
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "Broken asset 500: /_next/image",
+          "path": "/_next/image"
+        },
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "Broken asset 500: /_next/image",
+          "path": "/_next/image"
+        },
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "Broken asset 500: /_next/image",
+          "path": "/_next/image"
+        },
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "Broken asset 500: /_next/image",
+          "path": "/_next/image"
+        },
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "Broken asset 500: /_next/image",
+          "path": "/_next/image"
+        },
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "Broken asset 500: /_next/image",
+          "path": "/_next/image"
+        },
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "Broken asset 500: /_next/image",
+          "path": "/_next/image"
+        },
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "Broken asset 400: /_next/static/chunks/polyfills-42372ed130431b0a.js",
+          "path": "/_next/static/chunks/polyfills-42372ed130431b0a.js"
+        },
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "Broken asset 500: /_next/image",
+          "path": "/_next/image"
+        },
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "Broken asset 500: /_next/image",
+          "path": "/_next/image"
+        },
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "Broken asset 500: /_next/image",
+          "path": "/_next/image"
+        },
+        {
+          "rule": "broken-links",
+          "severity": "error",
+          "message": "…and 1002 more broken assets"
+        }
+      ]
+    },
+    {
+      "rule": "not-found",
+      "title": "404 / soft-404 detection",
+      "description": "Sitemap/crawl me jo URLs hain unhe 404 nahi hona chahiye. Ek random bogus URL 404 dena chahiye — 200 aaya to soft-404 hai (bad for SEO). 5xx bhi error.",
+      "issues": []
+    },
+    {
+      "rule": "thin-content",
+      "title": "Thin content (kam content wale pages)",
+      "description": "<main>/<article>/<body> se nikala gaya visible text word-count threshold se neeche ho to thin content warning. Near-duplicate pages bhi flag hote hain.",
+      "issues": [
+        {
+          "rule": "thin-content",
+          "severity": "warning",
+          "message": "Thin content: \"Case Studies - Real Work, Real Outcomes\" has only 78 words (min 250)",
+          "path": "/case-studies",
+          "words": 78
+        },
+        {
+          "rule": "thin-content",
+          "severity": "warning",
+          "message": "Thin content: \"Websites & Portals Portfolio | Eddinet\" has only 64 words (min 250)",
+          "path": "/portfolio/websites",
+          "words": 64
+        },
+        {
+          "rule": "thin-content",
+          "severity": "warning",
+          "message": "Thin content: \"eCommerce & D2C Portfolio | Eddinet\" has only 40 words (min 250)",
+          "path": "/portfolio/ecommerce",
+          "words": 40
+        },
+        {
+          "rule": "thin-content",
+          "severity": "warning",
+          "message": "Thin content: \"Software & SaaS Portfolio | Eddinet\" has only 40 words (min 250)",
+          "path": "/portfolio/software-saas",
+          "words": 40
+        },
+        {
+          "rule": "thin-content",
+          "severity": "warning",
+          "message": "Thin content: \"Mobile Apps Portfolio | Eddinet\" has only 23 words (min 250)",
+          "path": "/portfolio/mobile-apps",
+          "words": 23
+        },
+        {
+          "rule": "thin-content",
+          "severity": "warning",
+          "message": "Thin content: \"AI & Automation Portfolio | Eddinet\" has only 34 words (min 250)",
+          "path": "/portfolio/ai-automation",
+          "words": 34
+        },
+        {
+          "rule": "thin-content",
+          "severity": "warning",
+          "message": "Thin content: \"SEO Portfolio | Eddinet\" has only 39 words (min 250)",
+          "path": "/portfolio/seo",
+          "words": 39
+        },
+        {
+          "rule": "thin-content",
+          "severity": "warning",
+          "message": "Thin content: \"Paid Media & Social Portfolio | Eddinet\" has only 46 words (min 250)",
+          "path": "/portfolio/paid-media",
+          "words": 46
+        },
+        {
+          "rule": "thin-content",
+          "severity": "warning",
+          "message": "Thin content: \"Content & Design Portfolio | Eddinet\" has only 43 words (min 250)",
+          "path": "/portfolio/content-design",
+          "words": 43
+        },
+        {
+          "rule": "thin-content",
+          "severity": "warning",
+          "message": "Thin content: \"Cloud, Hosting & DevOps Portfolio | Eddinet\" has only 28 words (min 250)",
+          "path": "/portfolio/cloud-devops",
+          "words": 28
+        },
+        {
+          "rule": "thin-content",
+          "severity": "warning",
+          "message": "Thin content: \"Maintenance & Reputation Portfolio | Eddinet\" has only 33 words (min 250)",
+          "path": "/portfolio/support-reputation",
+          "words": 33
+        }
+      ]
+    },
+    {
+      "rule": "sitemap",
+      "title": "Sitemap updated & valid",
+      "description": "/sitemap.xml (ya configured path) parse hota hai, har URL 200 deta hai, koi 404 nahi, crawl ke important pages sitemap me hain, aur lastmod stale nahi.",
+      "issues": [
+        {
+          "rule": "sitemap",
+          "severity": "error",
+          "message": "Rule crashed: Cannot read properties of undefined (reading 'length')"
+        }
+      ]
+    },
+    {
+      "rule": "llms-txt",
+      "title": "llms.txt updated & valid",
+      "description": "/llms.txt available hai, kam se kam configured size ka hai, required paths cover karta hai, aur andar ke internal links 200 dete hain.",
+      "issues": [
+        {
+          "rule": "llms-txt",
+          "severity": "error",
+          "message": "10 sitemap URLs missing from llms.txt (max 0): /portfolio/websites, /portfolio/ecommerce, /portfolio/software-saas, /portfolio/ai-automation, /portfolio/mobile-apps, /portfolio/seo, /portfolio/paid-media, /portfolio/content-design, /portfolio/cloud-devops, /portfolio/support-reputation",
+          "path": "/llms.txt"
+        }
+      ]
+    },
+    {
+      "rule": "breadcrumbs",
+      "title": "Breadcrumbs valid & present",
+      "description": "Depth ≥ 2 ke pages par BreadcrumbList JSON-LD required hai (config se), positions sequential honi chahiye, first item Home ho, aur breadcrumb links 200 dein.",
+      "issues": []
+    },
+    {
+      "rule": "page-issues",
+      "title": "Page-level issues (title/meta/H1/canonical)",
+      "description": "Har 200 page par: unique title (length band me), meta description (band me), exactly one H1, canonical present + self-referencing, html lang, no noindex, OG tags.",
+      "issues": [
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (192ch, max 170) on /services",
+          "path": "/services"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Title too long (75ch, max 70): \"About Eddinet | Digital Marketing, Software, AI & Cloud Agency in Delhi NCR…\" on /about",
+          "path": "/about"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (203ch, max 170) on /about",
+          "path": "/about"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (246ch, max 170) on /services/seo",
+          "path": "/services/seo"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (203ch, max 170) on /services/social-media-marketing",
+          "path": "/services/social-media-marketing"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (205ch, max 170) on /services/ads-ppc",
+          "path": "/services/ads-ppc"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (194ch, max 170) on /services/web-development",
+          "path": "/services/web-development"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (190ch, max 170) on /services/ecommerce",
+          "path": "/services/ecommerce"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (224ch, max 170) on /services/design-creative",
+          "path": "/services/design-creative"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (201ch, max 170) on /services/software-ai",
+          "path": "/services/software-ai"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (180ch, max 170) on /services/hosting-migration",
+          "path": "/services/hosting-migration"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (208ch, max 170) on /services/maintenance-support",
+          "path": "/services/maintenance-support"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (188ch, max 170) on /services/reputation-management",
+          "path": "/services/reputation-management"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (212ch, max 170) on /services/seo/ai-seo-generative-seo-service-in-delhi-ncr",
+          "path": "/services/seo/ai-seo-generative-seo-service-in-delhi-ncr"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (184ch, max 170) on /services/content",
+          "path": "/services/content"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (196ch, max 170) on /services/seo/amazon-seo-services-in-delhi-ncr",
+          "path": "/services/seo/amazon-seo-services-in-delhi-ncr"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (206ch, max 170) on /services/seo/b2b-seo-services-in-delhi-ncr",
+          "path": "/services/seo/b2b-seo-services-in-delhi-ncr"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (172ch, max 170) on /services/seo/ecommerce-seo-services-in-delhi-ncr",
+          "path": "/services/seo/ecommerce-seo-services-in-delhi-ncr"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (213ch, max 170) on /services/seo/international-seo-services-in-delhi-ncr",
+          "path": "/services/seo/international-seo-services-in-delhi-ncr"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (216ch, max 170) on /services/seo/enterprise-seo-services-in-delhi-ncr",
+          "path": "/services/seo/enterprise-seo-services-in-delhi-ncr"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (220ch, max 170) on /services/seo/lead-generation-seo-services-in-india",
+          "path": "/services/seo/lead-generation-seo-services-in-india"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (212ch, max 170) on /services/seo/local-seo-services-in-delhi-ncr",
+          "path": "/services/seo/local-seo-services-in-delhi-ncr"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (203ch, max 170) on /services/seo/programmatic-seo-services-in-delhi-ncr",
+          "path": "/services/seo/programmatic-seo-services-in-delhi-ncr"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (174ch, max 170) on /services/seo/shopify-seo-services-in-delhi-ncr",
+          "path": "/services/seo/shopify-seo-services-in-delhi-ncr"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (204ch, max 170) on /services/seo/technical-seo-services-in-delhi-ncr",
+          "path": "/services/seo/technical-seo-services-in-delhi-ncr"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (236ch, max 170) on /services/content/blog-content-services-in-delhi-ncr",
+          "path": "/services/content/blog-content-services-in-delhi-ncr"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (258ch, max 170) on /services/content/campaign-content-services-in-delhi-ncr",
+          "path": "/services/content/campaign-content-services-in-delhi-ncr"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (250ch, max 170) on /services/content/case-study-writing-services-in-delhi-ncr",
+          "path": "/services/content/case-study-writing-services-in-delhi-ncr"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (259ch, max 170) on /services/content/content-audit-services-in-delhi-ncr",
+          "path": "/services/content/content-audit-services-in-delhi-ncr"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (261ch, max 170) on /services/content/content-marketing-services-in-delhi-ncr",
+          "path": "/services/content/content-marketing-services-in-delhi-ncr"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (239ch, max 170) on /services/content/content-refresh-services-in-delhi-ncr",
+          "path": "/services/content/content-refresh-services-in-delhi-ncr"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (251ch, max 170) on /services/content/content-strategy-services-in-delhi-ncr",
+          "path": "/services/content/content-strategy-services-in-delhi-ncr"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (234ch, max 170) on /services/content/landing-page-copy-services-in-delhi-ncr",
+          "path": "/services/content/landing-page-copy-services-in-delhi-ncr"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (241ch, max 170) on /services/content/email-content-services-in-delhi-ncr",
+          "path": "/services/content/email-content-services-in-delhi-ncr"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (239ch, max 170) on /services/content/seo-content-services-in-delhi-ncr",
+          "path": "/services/content/seo-content-services-in-delhi-ncr"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (253ch, max 170) on /services/content/social-content-services-in-delhi-ncr",
+          "path": "/services/content/social-content-services-in-delhi-ncr"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (238ch, max 170) on /services/content/website-content-services-in-delhi-ncr",
+          "path": "/services/content/website-content-services-in-delhi-ncr"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (193ch, max 170) on /services/design-creative/graphic-design-services-in-delhi-ncr",
+          "path": "/services/design-creative/graphic-design-services-in-delhi-ncr"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (224ch, max 170) on /services/design-creative/presentation-design-services-in-delhi-ncr",
+          "path": "/services/design-creative/presentation-design-services-in-delhi-ncr"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (288ch, max 170) on /services/ecommerce/amazon-store-development-services-in-delhi-ncr",
+          "path": "/services/ecommerce/amazon-store-development-services-in-delhi-ncr"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (264ch, max 170) on /services/ecommerce/ecommerce-migration-services-in-delhi-ncr",
+          "path": "/services/ecommerce/ecommerce-migration-services-in-delhi-ncr"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (274ch, max 170) on /services/ecommerce/marketplace-integration-services-in-delhi-ncr",
+          "path": "/services/ecommerce/marketplace-integration-services-in-delhi-ncr"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (258ch, max 170) on /services/maintenance-support/application-maintenance-services-in-india",
+          "path": "/services/maintenance-support/application-maintenance-services-in-india"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (261ch, max 170) on /services/maintenance-support/website-bug-fixing-services-in-india",
+          "path": "/services/maintenance-support/website-bug-fixing-services-in-india"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (254ch, max 170) on /services/maintenance-support/emergency-website-support-services-in-india",
+          "path": "/services/maintenance-support/emergency-website-support-services-in-india"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (255ch, max 170) on /services/maintenance-support/website-disaster-recovery-services-in-india",
+          "path": "/services/maintenance-support/website-disaster-recovery-services-in-india"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (260ch, max 170) on /services/maintenance-support/website-performance-monitoring-and-optimization-in-india",
+          "path": "/services/maintenance-support/website-performance-monitoring-and-optimization-in-india"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (271ch, max 170) on /services/maintenance-support/website-security-monitoring-services-in-india",
+          "path": "/services/maintenance-support/website-security-monitoring-services-in-india"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (251ch, max 170) on /services/maintenance-support/website-security-update-services-in-india",
+          "path": "/services/maintenance-support/website-security-update-services-in-india"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (258ch, max 170) on /services/maintenance-support/server-maintenance-services-in-india",
+          "path": "/services/maintenance-support/server-maintenance-services-in-india"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (254ch, max 170) on /services/maintenance-support/website-technical-support-services-in-india",
+          "path": "/services/maintenance-support/website-technical-support-services-in-india"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (246ch, max 170) on /services/maintenance-support/website-uptime-monitoring-services-in-india",
+          "path": "/services/maintenance-support/website-uptime-monitoring-services-in-india"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (254ch, max 170) on /services/maintenance-support/website-backup-services-company-in-delhi",
+          "path": "/services/maintenance-support/website-backup-services-company-in-delhi"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (258ch, max 170) on /services/maintenance-support/website-maintenance-services-in-india",
+          "path": "/services/maintenance-support/website-maintenance-services-in-india"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (241ch, max 170) on /services/reputation-management/brand-reputation-management-services-in-india",
+          "path": "/services/reputation-management/brand-reputation-management-services-in-india"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (284ch, max 170) on /services/reputation-management/business-listing-management-services-in-india",
+          "path": "/services/reputation-management/business-listing-management-services-in-india"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (283ch, max 170) on /services/reputation-management/customer-feedback-management-services-in-india",
+          "path": "/services/reputation-management/customer-feedback-management-services-in-india"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (262ch, max 170) on /services/reputation-management/digital-presence-management-services-in-india",
+          "path": "/services/reputation-management/digital-presence-management-services-in-india"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (269ch, max 170) on /services/reputation-management/google-business-profile-management-services-in-india",
+          "path": "/services/reputation-management/google-business-profile-management-services-in-india"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (259ch, max 170) on /services/reputation-management/google-review-management-services-in-india",
+          "path": "/services/reputation-management/google-review-management-services-in-india"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (274ch, max 170) on /services/reputation-management/online-reputation-management-services-in-india",
+          "path": "/services/reputation-management/online-reputation-management-services-in-india"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (247ch, max 170) on /services/reputation-management/online-review-monitoring-services-in-india",
+          "path": "/services/reputation-management/online-review-monitoring-services-in-india"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (286ch, max 170) on /services/reputation-management/review-generation-services-in-india",
+          "path": "/services/reputation-management/review-generation-services-in-india"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (309ch, max 170) on /services/social-media-marketing/linkedin-management-services-in-delhi-ncr",
+          "path": "/services/social-media-marketing/linkedin-management-services-in-delhi-ncr"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (308ch, max 170) on /services/social-media-marketing/social-media-strategy-services-in-delhi-ncr",
+          "path": "/services/social-media-marketing/social-media-strategy-services-in-delhi-ncr"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (308ch, max 170) on /services/web-development/custom-web-application-development-company-in-delhi",
+          "path": "/services/web-development/custom-web-application-development-company-in-delhi"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (200ch, max 170) on /services/web-development/custom-website-design-services-in-delhi",
+          "path": "/services/web-development/custom-website-design-services-in-delhi"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (292ch, max 170) on /services/web-development/landing-page-design-services-in-india",
+          "path": "/services/web-development/landing-page-design-services-in-india"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (207ch, max 170) on /services/web-development/shopify-development-company-in-delhi",
+          "path": "/services/web-development/shopify-development-company-in-delhi"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (278ch, max 170) on /services/web-development/website-optimization-services-company-in-delhi",
+          "path": "/services/web-development/website-optimization-services-company-in-delhi"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (193ch, max 170) on /services/web-development/website-development-services-in-delhi",
+          "path": "/services/web-development/website-development-services-in-delhi"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (280ch, max 170) on /services/web-development/website-redesign-services-in-india",
+          "path": "/services/web-development/website-redesign-services-in-india"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (212ch, max 170) on /services/web-development/wordpress-development-company-in-delhi",
+          "path": "/services/web-development/wordpress-development-company-in-delhi"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too short (49ch, min 50) on /portfolio/mobile-apps",
+          "path": "/portfolio/mobile-apps"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too short (41ch, min 50) on /portfolio/seo",
+          "path": "/portfolio/seo"
+        }
+      ]
+    }
+  ]
+}

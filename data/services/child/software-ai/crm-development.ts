@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/software-ai/crm-development.ts
-//  PAGE: /services/software-ai/crm-development
+//  PAGE: /services/software-ai/custom-crm-development-company-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
@@ -9,7 +9,7 @@
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits } from "../_category/software-ai";
 export const child = {
-  slug: "crm-development",
+  slug: "custom-crm-development-company-in-india",
   title: "CRM Development",
   metaTitle: "CRM Development Services in India | Eddinet",
   metaDescription: "We build scalable customer relationship management systems engineered to optimize sales pipelines and automate client operations.",

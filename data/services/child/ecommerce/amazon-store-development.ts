@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/ecommerce/amazon-store-development.ts
-//  PAGE: /services/ecommerce/amazon-store-development
+//  PAGE: /services/ecommerce/amazon-store-development-services-in-delhi-ncr
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
@@ -9,7 +9,7 @@
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { features, benefits2, whyChooseUs, process, faqs } from "../_category/ecommerce";
 export const child = {
-  slug: "amazon-store-development",
+  slug: "amazon-store-development-services-in-delhi-ncr",
   title: "Amazon Store Development",
   metaTitle: "Amazon Store Development Services in Delhi NCR | Eddinet",
   metaDescription: "Amazon storefront design and A+ content that turns browsers into buyers on Amazon. A brand home on Amazon that actually supports your listings' performance. Eddinet delivers dependable amazon store development services in Delhi NCR for India and global clients. Get a free proposal today.",

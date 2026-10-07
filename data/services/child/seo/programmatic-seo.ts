@@ -1,13 +1,13 @@
 // ============================================================================
 //  FILE: data/services/child/seo/programmatic-seo.ts
-//  PAGE: /services/seo/programmatic-seo
+//  PAGE: /services/seo/programmatic-seo-services-in-delhi-ncr
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
 // ============================================================================
 
 export const child = {
-  slug: "programmatic-seo",
+  slug: "programmatic-seo-services-in-delhi-ncr",
   title: "Programmatic SEO",
   metaTitle: "Programmatic SEO Services in India | Eddinet",
   metaDescription: "Eddinet provides specialized programmatic SEO services in India for businesses that need thousands of pages — location, product variation and comparison pages built on real data. Get a free consultation.",

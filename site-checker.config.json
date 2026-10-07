@@ -1,0 +1,82 @@
+{
+  "baseUrl": "http://localhost:3999",
+
+  "server": {
+    "startCommand": "node scripts/serve-standalone.mjs",
+    "port": 3999,
+    "readyTimeoutMs": 30000
+  },
+
+  "crawl": {
+    "seeds": ["/"],
+    "exclude": [
+      "/sitemap.xml",
+      "/robots.txt",
+      "/llms.txt",
+      "/api/",
+      "/_next/",
+      "/404",
+      "/favicon.ico",
+      "/site.webmanifest",
+      "/opengraph-image",
+      "/icon",
+      "/apple-icon"
+    ],
+    "maxPages": 500,
+    "concurrency": 8,
+    "timeout": 15000,
+    "checkAssets": true,
+    "maxAssets": 2000
+  },
+
+  "rules": {
+    "broken-links": { "checkRedirects": true },
+    "not-found": { "probeBogusUrl": true, "probePaths": [] },
+
+    "thin-content": {
+      "minWords": 250,
+      "severity": "warning",
+      "exclude": ["/privacy-policy", "/terms"]
+    },
+
+    "sitemap": {
+      "path": "/sitemap.xml",
+      "minUrls": 174,
+      "maxLastmodAgeDays": null,
+      "checkCoverage": true,
+      "mustBeListed": ["/services/", "/blog/", "/case-studies/", "/portfolio/"],
+      "exclude": ["/sitemap", "/llms.txt", "/robots.txt", "/404", "/api/", "/_next/"]
+    },
+
+    "llms-txt": {
+      "path": "/llms.txt",
+      "minBytes": 3000,
+      "requiredPaths": ["/services", "/blog", "/case-studies", "/contact"],
+      "checkSitemapCoverage": true,
+      "maxMissing": 0
+    },
+
+    "breadcrumbs": {
+      "minDepth": 2,
+      "requireVisibleNav": false,
+      "exclude": ["/sitemap", "/robots.txt", "/llms.txt"]
+    },
+
+    "page-issues": {
+      "titleMin": 10,
+      "titleMax": 70,
+      "descMin": 50,
+      "descMax": 170,
+      "exclude": []
+    }
+  },
+
+  "report": {
+    "dir": "site-checker-report",
+    "json": true,
+    "markdown": true,
+    "console": true
+  },
+
+  "failOn": "error"
+}

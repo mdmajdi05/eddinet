@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/social-media-marketing/social-media-management.ts
-//  PAGE: /services/social-media-marketing/social-media-management
+//  PAGE: /services/social-media-marketing/social-media-management-agency-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
@@ -9,7 +9,7 @@
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits1 } from "../_category/social-media-marketing";
 export const child = {
-  slug: "social-media-management",
+  slug: "social-media-management-agency-in-india",
   title: "Social Media Management",
   metaTitle: "Social Media Management in India | Eddinet",
   metaDescription: "We optimize your brand profile for active discovery, meaningful audience interaction, and high-converting performance marketing.",

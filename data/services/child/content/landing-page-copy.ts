@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/content/landing-page-copy.ts
-//  PAGE: /services/content/landing-page-copy
+//  PAGE: /services/content/landing-page-copy-services-in-delhi-ncr
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
@@ -9,7 +9,7 @@
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { features, benefits, whyChooseUs, process, faqs } from "../_category/content";
 export const child = {
-  slug: "landing-page-copy",
+  slug: "landing-page-copy-services-in-delhi-ncr",
   title: "Landing Page Copy",
   metaTitle: "Landing Page Copy Services in Delhi NCR | Eddinet",
   metaDescription: "Conversion-focused copy designed around offers and campaigns. The page that makes the ad's promise come true. Eddinet delivers dependable landing page copy services in Delhi NCR for India and global clients. Get a free proposal today.",

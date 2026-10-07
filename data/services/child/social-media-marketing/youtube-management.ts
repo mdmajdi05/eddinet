@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/social-media-marketing/youtube-management.ts
-//  PAGE: /services/social-media-marketing/youtube-management
+//  PAGE: /services/social-media-marketing/youtube-management-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
@@ -9,7 +9,7 @@
 import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 import { benefits1 } from "../_category/social-media-marketing";
 export const child = {
-  slug: "youtube-management",
+  slug: "youtube-management-services-in-india",
   title: "YouTube Management",
   metaTitle: "YouTube Management in India | Eddinet",
   metaDescription: "At Eddinet, we are a full-service digital marketing and growth agency built on a single premise: digital success shouldn't be based on guesswork.",

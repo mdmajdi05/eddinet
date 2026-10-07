@@ -40,20 +40,37 @@ export interface CategoryPageContent {
   title: string;
   metaTitle: string;
   metaDescription: string;
+  /** Badge chip rendered ABOVE the <h1> (doc line "Hero eyebrow badge:-"). */
+  heroEyebrow?: string;
   heroHeading: string;
   heroLead: string;
   heroGradient: string | null;
+  /** Paragraph rendered BELOW the <h1> (doc's hero paragraph). */
   heroSubheading: string;
   about: string[];
+  aboutHeading?: string;
   services: CategoryServicesItem[];
+  /** Heading the document used for the services section, when authored. */
+  servicesHeading?: string;
+  /** Intro line the document wrote under the services heading. */
+  servicesDescription?: string;
+  /** Grouped service summaries authored in the document (category pages). */
+  serviceGroups?: { heading: string; items: { title: string; description: string }[] };
   process: {
     heading: string;
+    description?: string;
     steps: { num: string; title: string; desc: string }[];
   };
+  /** Heading the document used for the process section, when authored. */
+  processHeading?: string;
   benefits: { title: string; description: string }[];
   whyChooseUs: { heading: string; points: string[] };
   testimonials: { name: string; designation: string; review: string }[];
   faqs: { q: string; a: string }[];
+  /** "…for Multi-Industry Needs" block authored in the document, when present. */
+  industries?: { heading: string; items: { title: string; description: string }[] };
+  /** Closing CTA authored in the document, when present. */
+  cta?: { heading: string; sub?: string; description?: string };
   related: Service[];
   allItemsCount: number;
 }
@@ -102,6 +119,11 @@ function listItems(items: string[], n: number): string {
   return `${head.join(", ")} and more`;
 }
 
+/** Compare service names loosely so document copy can line up with site items. */
+function normaliseTitle(title: string): string {
+  return title.toLowerCase().replace(/[^a-z0-9]+/g, "");
+}
+
 export function getCategoryPageContent(
   slug: string,
 ): CategoryPageContent | null {
@@ -134,11 +156,21 @@ export function getCategoryPageContent(
         ? [...authoredAbout, ...aboutParagraphs]
         : [aboutIntro, ...aboutParagraphs];
 
+  // Document-authored descriptions win over the shared `itemDetails` copy
+  // whenever the service names line up (maintenance & reputation pages).
+  const docDescriptions = new Map(
+    (dx?.servicesTypes ?? []).map((t) => [
+      normaliseTitle(t.title),
+      t.description,
+    ]),
+  );
+
   const services = s.allItems.map((item) => {
     const childSlug = getChildSlug(s.slug, item);
     return {
       title: item,
       description:
+        docDescriptions.get(normaliseTitle(item)) ??
         itemDetails[item] ??
         `End-to-end ${item.toLowerCase()} service delivered as part of a connected growth system.`,
       href: childSlug ? `/services/${s.slug}/${childSlug}` : null,
@@ -149,6 +181,7 @@ export function getCategoryPageContent(
   const process = dx?.process
     ? {
         heading: dx.process.heading,
+        description: dx.process.description,
         steps: dx.process.steps.map((step) => ({
           num: step.num,
           title: step.title,
@@ -175,17 +208,25 @@ export function getCategoryPageContent(
     title: s.title,
     metaTitle: dx?.metaTitle ?? `${s.title} Services in Delhi NCR`,
     metaDescription: dx?.metaDescription ?? s.desc,
+    heroEyebrow: dx?.heroEyebrow,
     heroHeading: heroText,
     heroLead,
     heroGradient,
     heroSubheading: dx?.heroSubheading ?? s.desc,
     about,
+    aboutHeading: dx?.aboutHeading,
+    servicesHeading: dx?.featuresHeading,
+    servicesDescription: dx?.featuresDescription,
+    serviceGroups: dx?.serviceGroups,
     services,
     process,
+    processHeading: dx?.process?.heading,
     benefits,
     whyChooseUs,
     testimonials: sharedTestimonials,
-    faqs: faqsByService[s.slug] ?? [],
+    faqs: dx?.faqs?.length ? dx.faqs : faqsByService[s.slug] ?? [],
+    industries: dx?.industries,
+    cta: dx?.cta,
     related: (relatedServices[s.slug] ?? [])
       .map(getServiceBySlug)
       .filter((x): x is Service => Boolean(x)),
