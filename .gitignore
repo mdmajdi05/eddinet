@@ -33,3 +33,4 @@ _unused-assets/
 # local notes / build output (repo me nahi chahiye)
 structure.md
 build.log
+build-out.txt

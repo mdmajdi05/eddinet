@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { site } from "@/data/site/contact";
 
 export const viewport: Viewport = {
@@ -130,6 +131,19 @@ export default function RootLayout({
     <html lang="en" data-theme="red" suppressHydrationWarning>
       <head>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        {/* Google tag (gtag.js) — GA4, page source me seedha yahi dikhta hai */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-DPMM8PP3ZB"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-DPMM8PP3ZB');`,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
@@ -163,6 +177,7 @@ export default function RootLayout({
           data-website-id="dfid_v6xdyebpgTQWzxC5pXdiH"
           data-domain="eddinet.com"
         />
+        <GoogleAnalytics />
         <ThemeProvider>
           <Header />
           <main>{children}</main>
