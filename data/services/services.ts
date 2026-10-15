@@ -78,7 +78,7 @@ export const services: Service[] = [
     link: "performance marketing services",
     tabLabel: "Ads / PPC",
     footerLabel: "Google & Meta PPC Ads",
-    allItems: ["Google Ads", "Meta Ads", "YouTube Ads", "Amazon Ads", "LinkedIn Ads", "Lead Generation Ads", "Remarketing / Retargeting"],
+    allItems: ["Google Ads", "Meta Ads", "ChatGPT Ads", "YouTube Ads", "Amazon Ads", "LinkedIn Ads", "Lead Generation Ads", "Remarketing / Retargeting"],
   },
   {
     cat: "design",
@@ -115,7 +115,8 @@ export const services: Service[] = [
     tabLabel: "eCommerce",
     footerLabel: "eCommerce Solutions",
     //  NOTE: "eCommerce SEO" ish category me NAHI hai — wo "SEO" category
-    //  (line 51) me already listed hai aur uska page /services/seo/ecommerce-seo
+    //  (line 51) me already listed hai aur uska page
+    //  /services/seo/ecommerce-seo-services-in-delhi-ncr
     //  hai. Pehle dono category me item tha, dono URLs same metaTitle/H1 serve
     //  karte the → duplicate page. eCommerce category ka page 301 se SEO wale
     //  page par consolidate kar diya gaya hai (next.config.ts redirects).
@@ -231,6 +232,7 @@ export const itemDetails: Record<string, string> = {
   "LinkedIn Management": "LinkedIn presence, thought-leadership content and lead-focused engagement for a professional audience. The channel where B2B buyers decide — handled with credibility and consistency.",
   "Social Media Strategy": "Platform-specific strategy aligned to audience, brand goals and the broader customer journey. We decide what to post where, why, and how it connects to the rest of your marketing.",
   "Meta Ads": "Facebook and Instagram paid campaigns built around audience targeting, creative testing and conversion. We turn your ad budget into measurable enquiries, not just impressions.",
+  "ChatGPT Ads": "Paid placements inside ChatGPT and conversational AI assistants, targeted by intent and context. We help your brand appear in buying conversations early and measure what those placements return, not just impressions.",
   "LinkedIn Ads": "Sponsored content, message ads and lead-gen campaigns built for professional and B2B audiences. Reaching the decision-makers on the platform where they actually work.",
   "YouTube Ads": "In-stream, discovery and short-form video ads engineered for awareness and conversion on YouTube. We help you own attention where your audience intentionally watches content.",
   "Google Ads": "Search, Performance Max and Shopping campaigns structured around targeting, budget efficiency and measurable outcomes. Every rupee accounted for against leads and cost per acquisition.",

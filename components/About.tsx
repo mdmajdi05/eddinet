@@ -82,7 +82,7 @@ export default function About() {
                   src={IMG.about.aboutSection.src}
                   alt="Eddinet team collaborating in office"
                   width={1000}
-                  height={200}
+                  height={667}
                   className="
   w-full
   h-[480px]

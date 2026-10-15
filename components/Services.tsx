@@ -394,7 +394,7 @@ export default function Services() {
                       alt={s.title}
                       fill
                       className="
-                        object-fill
+                        object-cover
                         transition-transform
                         duration-700
                         group-hover:scale-110

@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import {
   generatedChildServices,
   getGeneratedChildByCategoryAndSlug,
   getCategoryBySlug,
 } from "@/data/services/child/generated-child-services";
 import ServiceChildPage from "@/components/ServiceChildPage";
+import { resolveServiceChildRedirect } from "@/lib/service-fallback";
 
 export function generateStaticParams() {
   return generatedChildServices.map((c) => ({
@@ -42,7 +43,11 @@ export default async function GeneratedChildPage({
 }) {
   const { slug, childSlug } = await params;
   const child = getGeneratedChildByCategoryAndSlug(slug, childSlug);
-  if (!child) notFound();
+  if (!child) {
+    const fallback = resolveServiceChildRedirect(slug, childSlug);
+    if (fallback) permanentRedirect(fallback);
+    notFound();
+  }
 
   const category = getCategoryBySlug(slug);
 

@@ -12,6 +12,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://eddinet.com/contact" },
 };
 
+const socialLinks = [
+  { label: "Instagram", href: site.social.instagram },
+  { label: "Facebook", href: site.social.facebook },
+  { label: "LinkedIn", href: site.social.linkedin },
+].filter((s): s is { label: string; href: string } => s.href !== "");
+
 const channels = [
   {
     icon: "📱",
@@ -25,7 +31,7 @@ const channels = [
         {p}
       </a>
     )),
-    note: "Mon - Sat: 10:00 AM - 7:00 PM",
+    note: site.hours,
   },
   {
     icon: "💬",
@@ -66,6 +72,30 @@ const channels = [
     ],
     note: "Near ESI Hospital, Okhla Phase I",
   },
+  ...(socialLinks.length
+    ? [
+        {
+          icon: "🌐",
+          title: "Follow Us",
+          lines: [
+            <div key="soc" className="flex flex-wrap gap-2 pt-0.5">
+              {socialLinks.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[var(--border-color)] text-[0.82rem] font-semibold text-[var(--text-main)] hover:text-[var(--main-accent)] hover:border-[rgba(var(--accent-rgb),0.5)] transition-colors duration-300 no-underline"
+                >
+                  {s.label} ↗
+                </a>
+              ))}
+            </div>,
+          ],
+          note: "Follow our work and growth playbooks",
+        },
+      ]
+    : []),
 ];
 
 const steps = [

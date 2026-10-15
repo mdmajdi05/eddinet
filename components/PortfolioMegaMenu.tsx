@@ -2,9 +2,16 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { projectCategories } from "@/data/portfolio/portfolio";
+import type { PortfolioMenuCategory } from "@/data/services/nav-menu-types";
 
-export default function PortfolioMegaMenu() {
+// NOTE (performance): pehle `projectCategories` (jo poora portfolio data
+// import karta hai) yahan CLIENT me aa raha tha. Ab data SERVER par banta hai
+// (data/services/nav-menu.ts) aur props me sirf {key, label} aate hain.
+export default function PortfolioMegaMenu({
+  categories,
+}: {
+  categories: PortfolioMenuCategory[];
+}) {
   const [open, setOpen] = useState(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -189,7 +196,7 @@ export default function PortfolioMegaMenu() {
                   max-[600px]:gap-6
                 "
               >
-                {projectCategories.map((cat) => (
+                {categories.map((cat) => (
                   <div key={cat.key}>
                     {/* CATEGORY TITLE */}
 

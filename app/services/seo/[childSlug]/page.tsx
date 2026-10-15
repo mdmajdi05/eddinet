@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { seoChildServices, getSeoChildBySlug } from "@/data/services/child/seo-child-services";
 import ServiceChildPage from "@/components/ServiceChildPage";
+import { resolveSeoChildRedirect } from "@/lib/service-fallback";
 
 export function generateStaticParams() {
   return seoChildServices.map((c) => ({ childSlug: c.slug }));
@@ -35,7 +36,11 @@ export default async function SeoChildPage({
 }) {
   const { childSlug } = await params;
   const child = getSeoChildBySlug(childSlug);
-  if (!child) notFound();
+  if (!child) {
+    const fallback = resolveSeoChildRedirect(childSlug);
+    if (fallback) permanentRedirect(fallback);
+    notFound();
+  }
 
   return (
     <ServiceChildPage

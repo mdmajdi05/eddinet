@@ -1,33 +1,18 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { services } from "@/data/services/services";
-import { getChildSlug } from "@/data/services/child/generated-child-services";
+import type { MegaMenuCategory } from "@/data/services/nav-menu-types";
 
-type MegaMenuCategory = {
-  slug: string;
-  icon: string;
-  title: string;
-  groups: { label: string; items: string[] }[] | null;
-  items: string[] | null;
-  extraHeading?: { icon: string; title: string; items: string[] };
-};
-
-const categories: MegaMenuCategory[] = services.map((s) => ({
-  slug: s.slug,
-  icon: s.icon,
-  title: s.title.toUpperCase(),
-  groups: s.groups ?? null,
-  items: s.groups ? null : s.allItems,
-  extraHeading: s.extraHeading,
-}));
-
-function itemHref(catSlug: string, item: string) {
-  const childSlug = getChildSlug(catSlug, item);
-  return childSlug ? `/services/${catSlug}/${childSlug}` : `/services/${catSlug}`;
-}
-
-export default function MegaMenu() {
+// NOTE (performance): pehle yeh component `services` + `getChildSlug` import
+// karta tha, jisse 139 child-page content files CLIENT bundle me chale jaate
+// the (~1 MB har page par). Ab data SERVER par banta hai
+// (data/services/nav-menu.ts) aur props me sirf halke {label, href} links
+// aate hain.
+export default function MegaMenu({
+  categories,
+}: {
+  categories: MegaMenuCategory[];
+}) {
   const [open, setOpen] = useState(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -129,7 +114,7 @@ export default function MegaMenu() {
                           {grp.items.map((item, ii) => (
                             <li key={ii} className="mb-2.5 last:mb-0">
                               <Link
-                                href={itemHref(cat.slug, item)}
+                                href={item.href}
                                 className="text-[0.85rem] leading-[1.35] flex items-start no-underline transition-all duration-150 hover:translate-x-[3px]"
                                 style={{ color: "var(--text-muted)" }}
                                 onMouseEnter={(e) => (e.currentTarget.style.color = "var(--main-accent)")}
@@ -137,7 +122,7 @@ export default function MegaMenu() {
                                 onClick={() => setOpen(false)}
                               >
                                 <span className="mr-2 mt-0.5 text-[12px] font-bold shrink-0" style={{ color: "var(--main-accent)" }}>✓</span>
-                                {item}
+                                {item.label}
                               </Link>
                             </li>
                           ))}
@@ -150,7 +135,7 @@ export default function MegaMenu() {
                         {cat.items!.map((item, ii) => (
                           <li key={ii} className="mb-2.5 last:mb-0">
                             <Link
-                              href={itemHref(cat.slug, item)}
+                              href={item.href}
                               className="text-[0.85rem] leading-[1.35] flex items-start no-underline transition-all duration-150 hover:translate-x-[3px]"
                               style={{ color: "var(--text-muted)" }}
                               onMouseEnter={(e) => (e.currentTarget.style.color = "var(--main-accent)")}
@@ -158,7 +143,7 @@ export default function MegaMenu() {
                               onClick={() => setOpen(false)}
                             >
                               <span className="mr-2 mt-0.5 text-[12px] font-bold shrink-0" style={{ color: "var(--main-accent)" }}>✓</span>
-                              {item}
+                              {item.label}
                             </Link>
                           </li>
                         ))}
@@ -176,7 +161,7 @@ export default function MegaMenu() {
                             {cat.extraHeading.items.map((item, ii) => (
                               <li key={ii} className="mb-2.5 last:mb-0">
                                 <Link
-                                  href={itemHref(cat.slug, item)}
+                                  href={item.href}
                                   className="text-[0.85rem] leading-[1.35] flex items-start no-underline transition-all duration-150 hover:translate-x-[3px]"
                                   style={{ color: "var(--text-muted)" }}
                                   onMouseEnter={(e) => (e.currentTarget.style.color = "var(--main-accent)")}
@@ -184,7 +169,7 @@ export default function MegaMenu() {
                                   onClick={() => setOpen(false)}
                                 >
                                   <span className="mr-2 mt-0.5 text-[12px] font-bold shrink-0" style={{ color: "var(--main-accent)" }}>✓</span>
-                                  {item}
+                                  {item.label}
                                 </Link>
                               </li>
                             ))}

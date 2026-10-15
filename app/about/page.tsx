@@ -244,7 +244,7 @@ const faqs = [
   },
   {
     q: "Where is Eddinet located and how can we contact you?",
-    a: "We are based in Okhla Industrial Estate, Phase I, New Delhi - 110020. You can reach us at " + site.email + " or " + site.phones[0] + ". We usually respond within two business hours to new enquiries.",
+    a: "We are based in " + site.address + ". You can reach us at " + site.email + " or " + site.phones[0] + ". We usually respond within two business hours to new enquiries.",
   },
   {
     q: "How do we get started with Eddinet?",
@@ -338,10 +338,7 @@ const organizationSchema = {
   telephone: site.phone,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Okhla Industrial Estate, Phase I",
-    addressLocality: "New Delhi",
-    postalCode: "110020",
-    addressCountry: "IN",
+    ...site.postalAddress,
   },
 };
 

@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { caseStudies, getCaseStudyBySlug } from "@/data/portfolio/case-studies";
 import { site } from "@/data/site/contact";
 import AdaptiveLines from "@/components/AdaptiveLines";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { resolveCaseStudyRedirect } from "@/lib/content-fallback";
 
 export function generateStaticParams() {
   return caseStudies.map((c) => ({ slug: c.slug }));
@@ -41,7 +42,11 @@ const blocks: { key: string; label: string }[] = [
 export default async function CaseStudyPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const c = getCaseStudyBySlug(slug);
-  if (!c) notFound();
+  if (!c) {
+    const fallback = resolveCaseStudyRedirect(slug);
+    if (fallback) permanentRedirect(fallback);
+    notFound();
+  }
 
   const content: Record<string, string> = {
     challenge: c.challenge,

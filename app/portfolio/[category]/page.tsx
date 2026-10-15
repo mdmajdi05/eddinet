@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import PortfolioGrid from "@/components/PortfolioGrid";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { projectCategories } from "@/data/portfolio/portfolio";
+import { resolvePortfolioRedirect } from "@/lib/content-fallback";
 
 type Props = {
   params: Promise<{
@@ -44,7 +45,9 @@ export default async function PortfolioCategoryPage({
   );
 
   if (!cat) {
-    return notFound();
+    const fallback = resolvePortfolioRedirect(category);
+    if (fallback) permanentRedirect(fallback);
+    notFound();
   }
 
   return (

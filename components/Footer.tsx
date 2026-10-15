@@ -19,12 +19,13 @@ const companyLinks = [
 ];
 
 const socials = [
-  { label: "X", handle: "Twitter", href: site.social.twitter },
   { label: "LinkedIn", handle: "LinkedIn", href: site.social.linkedin },
   { label: "Facebook", handle: "Facebook", href: site.social.facebook },
   { label: "Instagram", handle: "Instagram", href: site.social.instagram },
+  { label: "X", handle: "Twitter", href: site.social.twitter },
   { label: "YouTube", handle: "YouTube", href: site.social.youtube },
-];
+  // Jo link set nahi hai (empty) wo render hi mat karo - warna href="#" dead link banega
+].filter((s) => Boolean(s.href));
 
 const icons: Record<string, string> = {
   X: "𝕏",

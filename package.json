@@ -13,6 +13,8 @@
     "images:download": "node scripts/download-remote-images.mjs",
     "images:check": "node scripts/check-images.mjs",
     "images:optimize": "node scripts/optimize-images.mjs",
+    "redirects:check": "node scripts/sync-slug-redirects.mjs",
+    "redirects:sync": "node scripts/sync-slug-redirects.mjs --apply",
     "check": "npm run typecheck && npm run images:check"
   },
   "dependencies": {

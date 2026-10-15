@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { servicePages, getServiceBySlug } from "@/data/services/services";
@@ -10,6 +10,7 @@ import AboutSection from "@/components/AboutSection";
 import LineClampedText from "@/components/LineClampedText";
 import AdaptiveLines from "@/components/AdaptiveLines";
 import SectionHeader from "@/components/SectionHeader";
+import { resolveServiceCategoryRedirect } from "@/lib/service-fallback";
 
 export function generateStaticParams() {
   return servicePages.map((s) => ({ slug: s.slug }));
@@ -46,7 +47,11 @@ function slugify(text: string) {
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const s = getServiceBySlug(slug);
-  if (!s) notFound();
+  if (!s) {
+    const fallback = resolveServiceCategoryRedirect(slug);
+    if (fallback) permanentRedirect(fallback);
+    notFound();
+  }
   const content = getCategoryPageContent(slug);
   if (!content) notFound();
 

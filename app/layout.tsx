@@ -1,10 +1,26 @@
 import type { Metadata, Viewport } from "next";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FloatingContactWidget from "@/components/FloatingContactWidget";
 import { site } from "@/data/site/contact";
+import {
+  megaMenuCategories,
+  mobileServiceLinks,
+  portfolioMenuCategories,
+} from "@/data/services/nav-menu";
+
+// Self-hosted font (next/font) — Google Fonts ka render-blocking external
+// stylesheet hata diya, font ab build-time par self-host hota hai (preload +
+// display: swap), jo LCP improve karta hai aur layout shift (CLS) zero karta hai.
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-jakarta",
+});
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -89,18 +105,19 @@ const organizationSchema = {
   name: "Eddinet",
   url: "https://eddinet.com/",
   logo: "https://eddinet.com/images/brand/eddinet-logo.webp",
-  email: "contact@eddinet.com",
+  email: site.email,
   telephone: site.phone,
+  sameAs: [
+    site.social.linkedin,
+    site.social.facebook,
+    site.social.instagram,
+  ].filter(Boolean),
   priceRange: "$$",
   areaServed: ["Delhi NCR", "India"],
   openingHours: "Mo-Sa 10:00-19:00",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Okhla Industrial Estate, Phase I",
-    addressLocality: "New Delhi",
-    addressRegion: "Delhi",
-    postalCode: "110020",
-    addressCountry: "IN",
+    ...site.postalAddress,
   },
 };
 
@@ -127,19 +144,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" data-theme="red" suppressHydrationWarning>
+    <html lang="en" data-theme="red" suppressHydrationWarning className={jakarta.variable}>
       <head>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        {/* Google Tag Manager (container: GTM-TVHR352P) — head wala loader */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TVHR352P');`,
-          }}
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
@@ -153,16 +160,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             __html: `(function(){try{var m=localStorage.getItem("du-mode")||"dark";document.documentElement.setAttribute("data-theme",m==="dark"?"red":"red-light");}catch(e){}})();`,
           }}
         />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet"
-        />
         <link rel="preconnect" href="https://datafa.st" />
       </head>
       <body>
@@ -175,6 +172,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+        {/* Google Tag Manager (container: GTM-TVHR352P)
+            afterInteractive => pehle page ko interactive hone deta hai, phir GTM
+            load hota hai. Isse LCP/TBT par koi asar nahi padta (head me blocking
+            loader se behtar). */}
+        <Script
+          id="gtm"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TVHR352P');`,
+          }}
+        />
         <Script
           id="datafast"
           src="https://datafa.st/js/script.js"
@@ -183,9 +195,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           data-domain="eddinet.com"
         />
         <ThemeProvider>
-          <Header />
+          <Header
+            megaMenuCategories={megaMenuCategories}
+            mobileServiceLinks={mobileServiceLinks}
+            portfolioMenuCategories={portfolioMenuCategories}
+          />
           <main>{children}</main>
           <Footer />
+          <FloatingContactWidget />
         </ThemeProvider>
       </body>
     </html>

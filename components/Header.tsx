@@ -8,7 +8,11 @@ import ConsultModal from "./ConsultModal";
 import MegaMenu from "./MegaMenu";
 import PortfolioMegaMenu from "./PortfolioMegaMenu";
 import Image from "next/image";
-import { services } from "@/data/services/services";
+import type {
+  MegaMenuCategory,
+  MobileServiceLink,
+  PortfolioMenuCategory,
+} from "@/data/services/nav-menu-types";
 import { site } from "@/data/site/contact";
 import { IMG } from "@/data/site/images";
 
@@ -27,7 +31,17 @@ const mobileLinks = [
   { label: "Contact Us", href: "/contact" },
 ];
 
-export default function Header() {
+// NOTE (performance): nav data `app/layout.tsx` (server) se props me aata hai,
+// taaki poora services/child content client bundle me na jaaye.
+export default function Header({
+  megaMenuCategories,
+  mobileServiceLinks,
+  portfolioMenuCategories,
+}: {
+  megaMenuCategories: MegaMenuCategory[];
+  mobileServiceLinks: MobileServiceLink[];
+  portfolioMenuCategories: PortfolioMenuCategory[];
+}) {
   const { mode, toggleMode } = useTheme();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -73,8 +87,8 @@ export default function Header() {
               >
                 Home
               </Link>
-              <MegaMenu />
-              <PortfolioMegaMenu />
+              <MegaMenu categories={megaMenuCategories} />
+              <PortfolioMegaMenu categories={portfolioMenuCategories} />
               {navLinks.slice(1).map((l) => (
                 <Link
                   key={l.href}
@@ -89,6 +103,15 @@ export default function Header() {
             </nav>
 
             <div className="flex items-center gap-3.5 max-[560px]:gap-2">
+              <a
+                href={site.phoneHref}
+                className="hidden xl:inline-flex items-center gap-2 text-[0.92rem] font-semibold no-underline text-[var(--chrome-text)] transition-colors duration-300 hover:text-[var(--main-accent)]"
+                aria-label={`Call Eddinet at ${site.phone}`}
+              >
+                <span aria-hidden="true">📞</span>
+                {site.phone}
+              </a>
+
               <button
                 className="hidden lg:inline-flex items-center justify-center gap-2.5 py-3.5 px-7 rounded-full font-bold text-[0.95rem] cursor-pointer transition-all duration-300 border-none outline-none text-[var(--on-primary)] shadow-[0_10px_25px_-5px_rgba(var(--accent-rgb),0.4)] hover:-translate-y-[3px] hover:shadow-[0_15px_30px_-5px_rgba(var(--accent-rgb),0.6)]"
                 style={{ background: "var(--primary-gradient)" }}
@@ -138,7 +161,7 @@ export default function Header() {
             <div className="mt-2 mb-1 pl-3 text-[0.68rem] font-bold uppercase tracking-widest text-[var(--text-dim)]">
               Popular Services
             </div>
-            {services.slice(0, 6).map((s) => (
+            {mobileServiceLinks.map((s) => (
               <Link
                 key={s.slug}
                 href={`/services/${s.slug}`}
@@ -164,6 +187,12 @@ export default function Header() {
                 className="inline-flex items-center justify-center gap-2 py-3 px-5 rounded-full font-bold text-[0.88rem] no-underline bg-[#25D366] text-white hover:bg-[#20ba5a] transition-colors duration-200"
               >
                 Chat on WhatsApp
+              </a>
+              <a
+                href={site.phoneHref}
+                className="inline-flex items-center justify-center gap-2 py-3 px-5 rounded-full font-bold text-[0.88rem] no-underline border border-[var(--hairline)] bg-white/[0.04] text-[var(--chrome-text)] hover:border-[rgba(var(--accent-rgb),0.5)] transition-colors duration-200"
+              >
+                📞 Call {site.phone}
               </a>
             </div>
           </div>

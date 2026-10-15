@@ -48,7 +48,7 @@ const sections: { h: string; p: string[] }[] = [
   {
     h: "7. Contact Us",
     p: [
-      `For any privacy-related questions, contact us at ${site.email} or call ${site.phone}. Our office is located at Okhla Industrial Estate, Phase I, New Delhi - 110020.`,
+      `For any privacy-related questions, contact us at ${site.email} or call ${site.phone}. Our office is located at ${site.address}.`,
     ],
   },
 ];

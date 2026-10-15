@@ -119,12 +119,18 @@
   4. Google Analytics / GA4 ya Plausible + Google Tag Manager add karo for lead tracking.
 - **Reference:** `components/ContactForm.tsx`, `components/footer-extras.tsx`, `components/QuotePopup.tsx`, `components/ConsultModal.tsx`
 
-### 4.3 Blog page client-side render
-- **Problem:** Blog article body (`app/blog/[slug]/page-client.tsx`) client-rendered hai → crawl slow + SEO weak.
-- **Solution:** Server Component me render karo (content `data/blog/blog.ts` se directly).
+### 4.3 Blog page client-side render — ✅ FIXED
+- ~~**Problem:** Blog article body (`app/blog/[slug]/page-client.tsx`) client-rendered hai → crawl slow + SEO weak.~~
+- **Fix:** Poora article ab Server Component (`app/blog/[slug]/page.tsx`) me render hota hai; sirf chhote interactive leaves client hain (`reading-progress.tsx`, `share.tsx`, `sidebar-message-form.tsx`). `page-client.tsx` delete.
+- **Related perf fixes (bade wins):**
+  - Header mega-menus ka bhaari data (139 child pages) client se hata kar server par (`data/services/nav-menu.ts`) — layout chunk **1073 KB → 28.6 KB**.
+  - Google Fonts external link → `next/font` self-host (render-blocking request khatam, CLS zero).
+  - GTM head-blocking loader → `next/script` `afterInteractive`.
+  - Logo/nav images ke `sizes`/aspect fixes.
 
-### 4.4 GZIP/Brotli + caching headers
-- **Problem:** `next.config.ts` me abhi sirf X-Robots-Tag hai.
+### 4.4 GZIP/Brotli + caching headers — ✅ DONE
+- ~~**Problem:** `next.config.ts` me abhi sirf X-Robots-Tag hai.~~
+- **Fix:** Static assets (images/fonts) ke liye `Cache-Control: public, max-age=2592000, stale-while-revalidate=86400` add ho gaya. Next.js core JS/CSS par hashed-immutable caching already hoti hai.
 - **Solution files:**
   - static assets me `Cache-Control: public, max-age=31536000, immutable` (hashed files).
   - HTML ya `/` response pe `Cache-Control: public, s-maxage=3600` (ISR/cache).

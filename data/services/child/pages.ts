@@ -9,6 +9,7 @@ import type { SeoChildService } from "./seo-child-services";
 import { services } from "@/data/services/services";
 
 import { child as ads_ppc_amazon_ads } from "./ads-ppc/amazon-ads";
+import { child as ads_ppc_chatgpt_ads } from "./ads-ppc/chatgpt-ads";
 import { child as ads_ppc_google_ads } from "./ads-ppc/google-ads";
 import { child as ads_ppc_lead_generation_ads } from "./ads-ppc/lead-generation-ads";
 import { child as ads_ppc_linkedin_ads } from "./ads-ppc/linkedin-ads";
@@ -184,6 +185,7 @@ export const childPages: Record<string, GeneratedChildService> = {
   "ads-ppc/lead-generation-services-in-india": withCategory("ads-ppc", ads_ppc_lead_generation_ads),
   "ads-ppc/linkedin-ads-agency-in-india": withCategory("ads-ppc", ads_ppc_linkedin_ads),
   "ads-ppc/meta-ads-services-in-india": withCategory("ads-ppc", ads_ppc_meta_ads),
+  "ads-ppc/chatgpt-ads-services-in-india": withCategory("ads-ppc", ads_ppc_chatgpt_ads),
   "ads-ppc/remarketing-and-retargeting-ads-services-in-india": withCategory("ads-ppc", ads_ppc_remarketing_retargeting),
   "ads-ppc/youtube-ads-agency-in-india": withCategory("ads-ppc", ads_ppc_youtube_ads),
   "cloud-devops/aws-cloud-services-company-in-india": withCategory("cloud-devops", cloud_devops_aws_cloud_services),
