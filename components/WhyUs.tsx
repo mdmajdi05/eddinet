@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { whyFeatures } from "@/data/home/home";
+import { balancedGrid } from "@/lib/process-grid";
 
 export default function WhyUs() {
   return (
@@ -19,7 +20,7 @@ export default function WhyUs() {
             Six principles guide how we plan, build and operate digital growth — so marketing and technology pull in the same direction.
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-[30px] mt-[50px] max-[1024px]:grid-cols-1">
+        <div className={balancedGrid(whyFeatures.length, { base: 2, gapClass: "cgrid-gap-30", stages: [{ bp: 1024, maxCols: 1 }], extra: "mt-[50px]" })}>
           {whyFeatures.map((f, i) => (
             <div
               key={i}

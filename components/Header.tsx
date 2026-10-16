@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useTheme } from "./ThemeProvider";
-import ConsultModal from "./ConsultModal";
 import MegaMenu from "./MegaMenu";
 import PortfolioMegaMenu from "./PortfolioMegaMenu";
 import Image from "next/image";
@@ -45,7 +44,6 @@ export default function Header({
   const { mode, toggleMode } = useTheme();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [modalOpen, setModalOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -105,19 +103,12 @@ export default function Header({
             <div className="flex items-center gap-3.5 max-[560px]:gap-2">
               <a
                 href={site.phoneHref}
-                className="hidden xl:inline-flex items-center gap-2 whitespace-nowrap text-[0.92rem] font-semibold no-underline text-[var(--chrome-text)] transition-colors duration-300 hover:text-[var(--main-accent)]"
+                className="hidden lg:inline-flex items-center justify-center gap-2.5 py-3.5 px-5 whitespace-nowrap rounded-full font-bold text-[0.92rem] no-underline transition-all duration-300 text-[var(--on-primary)] shadow-[0_10px_25px_-5px_rgba(var(--accent-rgb),0.4)] hover:-translate-y-[3px] hover:shadow-[0_15px_30px_-5px_rgba(var(--accent-rgb),0.6)]"
+                style={{ background: "var(--primary-gradient)" }}
                 aria-label={`Call Eddinet at ${site.phone}`}
               >
-                {site.phone}
+                <span aria-hidden>📞</span> {site.phone}
               </a>
-
-              <button
-                className="hidden lg:inline-flex items-center justify-center gap-2.5 py-3.5 px-5 whitespace-nowrap rounded-full font-bold text-[0.92rem] cursor-pointer transition-all duration-300 border-none outline-none text-[var(--on-primary)] shadow-[0_10px_25px_-5px_rgba(var(--accent-rgb),0.4)] hover:-translate-y-[3px] hover:shadow-[0_15px_30px_-5px_rgba(var(--accent-rgb),0.6)]"
-                style={{ background: "var(--primary-gradient)" }}
-                onClick={() => setModalOpen(true)}
-              >
-                Get Free Consultation
-              </button>
 
               <button
                 className="w-[42px] h-[42px] rounded-full bg-white/[0.08] border border-white/[0.18] text-[var(--chrome-text)] text-[1.15rem] cursor-pointer flex items-center justify-center transition-all duration-300 hover:bg-white/[0.16] hover:border-[rgba(var(--accent-rgb),0.5)] hover:-translate-y-0.5 active:scale-[0.94] max-[560px]:w-[36px] max-[560px]:h-[36px]"
@@ -172,13 +163,6 @@ export default function Header({
             ))}
 
             <div className="flex flex-col gap-3 mt-4 pt-5 border-t border-[var(--hairline)]">
-              <button
-                className="inline-flex items-center justify-center gap-2.5 py-3.5 px-5 rounded-full font-bold text-[0.95rem] cursor-pointer transition-all duration-300 border-none outline-none text-[var(--on-primary)]"
-                style={{ background: "var(--primary-gradient)" }}
-                onClick={() => { setModalOpen(true); setMobileOpen(false); }}
-              >
-                Get Free Consultation
-              </button>
               <a
                 href={site.whatsapp}
                 target="_blank"
@@ -197,7 +181,6 @@ export default function Header({
           </div>
         </div>
       </header>
-      <ConsultModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
     </>
   );
 }

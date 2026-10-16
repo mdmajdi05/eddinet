@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { services, serviceTabs } from "@/data/services/services";
+import { balancedGrid } from "@/lib/process-grid";
 
 const SHOW_COUNT = 5;
 
@@ -334,7 +335,7 @@ export default function Services() {
             SERVICES GRID
             UNCHANGED
         ========================================================= */}
-        <div className="grid grid-cols-3 gap-6 max-[1024px]:grid-cols-2 max-[768px]:grid-cols-1">
+        <div className={balancedGrid(filteredServices.length, { base: 3, gapClass: "cgrid-gap-6", stages: [{ bp: 1024, maxCols: 2 }, { bp: 768, maxCols: 1 }] })}>
           {filteredServices.map((s, i) => {
             const visible = s.allItems.slice(
               0,

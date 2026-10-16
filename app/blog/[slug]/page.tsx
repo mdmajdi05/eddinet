@@ -6,6 +6,7 @@ import { insights, getInsightBySlug } from "@/data/blog/blog";
 import { site } from "@/data/site/contact";
 import { services, type Service } from "@/data/services/services";
 import { resolveBlogRedirect } from "@/lib/content-fallback";
+import { balancedGrid } from "@/lib/process-grid";
 import ReadingProgress from "./reading-progress";
 import SidebarMessageForm from "./sidebar-message-form";
 import {
@@ -343,7 +344,7 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
                         Related Articles
                       </h2>
                     </div>
-                    <div className="grid md:grid-cols-3 gap-6">
+                    <div className={balancedGrid(relatedPosts.length, { base: 3, gapClass: "cgrid-gap-6", stages: [{ bp: 768, maxCols: 1 }] })}>
                       {relatedPosts.map((rp) => (
                         <Link key={rp.slug} href={`/blog/${rp.slug}`}>
                           <div className="group p-5 rounded-xl border border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[rgba(var(--accent-rgb),0.4)] transition-all duration-300 hover:-translate-y-1">

@@ -7,6 +7,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { servicePages } from "@/data/services/services";
 import { processSteps } from "@/data/home/home";
 import { site } from "@/data/site/contact";
+import { balancedGrid } from "@/lib/process-grid";
 
 export const metadata: Metadata = {
   title: "Digital Growth, Marketing & Technology Services in Delhi NCR",
@@ -73,6 +74,16 @@ const howToStart = [
 ];
 
 export default function ServicesIndexPage() {
+  const processGridLayout = balancedGrid(processSteps.length, {
+    base: 3,
+    gapClass: "cgrid-gap-6",
+    stages: [
+      { bp: 900, maxCols: 2 },
+      { bp: 600, maxCols: 1 },
+    ],
+    extra: "relative",
+  });
+
   return (
     <>
       {/* ================= HERO ================= */}
@@ -162,7 +173,7 @@ export default function ServicesIndexPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-4 gap-5 max-[1050px]:grid-cols-2 max-[600px]:grid-cols-1">
+          <div className={balancedGrid(systemLayers.length, { base: 4, gapClass: "cgrid-gap-5", stages: [{ bp: 1050, maxCols: 2 }, { bp: 600, maxCols: 1 }] })}>
             {systemLayers.map((layer, i) => (
               <div
                 key={layer.title}
@@ -230,7 +241,7 @@ export default function ServicesIndexPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-3 gap-6 max-[768px]:grid-cols-1">
+          <div className={balancedGrid(howToStart.length, { base: 3, gapClass: "cgrid-gap-6", stages: [{ bp: 768, maxCols: 1 }] })}>
             {howToStart.map((f) => (
               <div
                 key={f.num}
@@ -269,7 +280,7 @@ export default function ServicesIndexPage() {
             </p>
           </div>
 
-          <div className="relative grid grid-cols-3 gap-6 max-[900px]:grid-cols-2 max-[600px]:grid-cols-1">
+          <div className={processGridLayout}>
             <div className="absolute top-9 left-[16%] right-[16%] h-px bg-gradient-to-r from-transparent via-[rgba(var(--accent-rgb),0.35)] to-transparent hidden max-[900px]:hidden" />
             {processSteps.map((step) => (
               <div

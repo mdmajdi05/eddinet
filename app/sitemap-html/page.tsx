@@ -6,6 +6,7 @@ import {
   htmlSitemapTotal,
   type HtmlSitemapLink,
 } from "@/data/site/html-sitemap";
+import { balancedGrid } from "@/lib/process-grid";
 
 /** Ek page par kitne links — speed + readability ke liye. */
 const PAGE_SIZE = 200;
@@ -109,7 +110,7 @@ export default async function HtmlSitemapPage({
 
       <section className="pb-[60px]">
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
-          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 list-none p-0 m-0">
+          <ul className={balancedGrid(pageLinks.length, { base: 3, gapClass: "cgrid-gap-3", stages: [{ bp: 1024, maxCols: 2 }, { bp: 640, maxCols: 1 }], extra: "list-none p-0 m-0" })}>
             {pageLinks.map((link) => (
               <li key={link.href}>
                 <Link

@@ -1,3 +1,5 @@
+import { balancedGrid } from "@/lib/process-grid";
+
 const commitments = [
   {
     icon: "🎯",
@@ -36,7 +38,7 @@ export default function Testimonials() {
             Long-term partnerships are built on transparency, execution and honest reporting — not inflated promises. Here is what every Eddinet partnership is held to.
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-6 max-[1024px]:grid-cols-2 max-[768px]:grid-cols-1">
+        <div className={balancedGrid(commitments.length, { base: 2, gapClass: "cgrid-gap-6", stages: [{ bp: 768, maxCols: 1 }] })}>
           {commitments.map((c, i) => (
             <div
               key={i}

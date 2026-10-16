@@ -1,3 +1,5 @@
+import { balancedGrid } from "@/lib/process-grid";
+
 const industries = [
   { icon: "🏗️", name: "Real Estate & Property", slug: "real-estate-and-property" },
   { icon: "🏥", name: "Healthcare & Wellness", slug: "healthcare-and-wellness" },
@@ -26,7 +28,7 @@ export default function Industries() {
             Every industry has its own buying journey. We align marketing, technology and conversion around the way each sector actually searches and buys.
           </p>
         </div>
-        <div className="grid grid-cols-5 gap-4 max-[1024px]:grid-cols-3 max-[600px]:grid-cols-2 max-[400px]:grid-cols-1">
+        <div className={balancedGrid(industries.length, { base: 5, gapClass: "cgrid-gap-4", stages: [{ bp: 1024, maxCols: 3 }, { bp: 600, maxCols: 2 }, { bp: 400, maxCols: 1 }] })}>
           {industries.map((ind, i) => (
             //  Sirf DISPLAY tile — iska koi destination page nahi hai
             //  (/industries/* routes delete ho chuke hain), isliye Link ki

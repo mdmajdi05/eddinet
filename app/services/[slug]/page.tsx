@@ -11,6 +11,7 @@ import LineClampedText from "@/components/LineClampedText";
 import AdaptiveLines from "@/components/AdaptiveLines";
 import SectionHeader from "@/components/SectionHeader";
 import { resolveServiceCategoryRedirect } from "@/lib/service-fallback";
+import { balancedGrid } from "@/lib/process-grid";
 
 export function generateStaticParams() {
   return servicePages.map((s) => ({ slug: s.slug }));
@@ -54,6 +55,15 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   }
   const content = getCategoryPageContent(slug);
   if (!content) notFound();
+
+  const processGridLayout = balancedGrid(content.process.steps.length, {
+    base: 4,
+    gapClass: "cgrid-gap-6",
+    stages: [
+      { bp: 1024, maxCols: 2 },
+      { bp: 640, maxCols: 1 },
+    ],
+  });
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -337,7 +347,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <div className="absolute left-0 right-0 top-[28px] h-[2px] bg-gradient-to-r from-transparent via-[rgba(var(--accent-rgb),0.5)] to-transparent" />
           </div>
 
-          <div className="grid grid-cols-4 gap-6 max-[1024px]:grid-cols-2 max-[640px]:grid-cols-1">
+          <div className={processGridLayout}>
             {content.process.steps.map((step, i) => (
               <div key={i} className="group relative pt-16 max-[1024px]:pt-0">
                 <div className="absolute top-0 left-0 max-[1024px]:static max-[1024px]:mb-4">
@@ -366,7 +376,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             title={<>Key <span className="gradient-text">Benefits</span></>}
             description={`The compounding advantages of a properly engineered ${content.title.toLowerCase()} channel.`}
           />
-          <div className="grid grid-cols-3 gap-6 max-[1024px]:grid-cols-2 max-[640px]:grid-cols-1">
+          <div className={balancedGrid(content.benefits.length, { base: 3, gapClass: "cgrid-gap-6", stages: [{ bp: 1024, maxCols: 2 }, { bp: 640, maxCols: 1 }] })}>
             {content.benefits.map((benefit, i) => (
               <div key={i} className="group relative rounded-2xl p-7 overflow-hidden transition-all duration-500 hover:-translate-y-2 bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-transparent hover:shadow-[0_20px_50px_rgba(var(--accent-rgb),0.15)]">
                 <div className="relative z-10">
@@ -492,7 +502,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               chip="Industries We Serve"
               title={content.industries.heading}
             />
-            <div className="grid grid-cols-4 gap-6 max-[1024px]:grid-cols-2 max-[640px]:grid-cols-1">
+            <div className={balancedGrid(content.industries.items.length, { base: 4, gapClass: "cgrid-gap-6", stages: [{ bp: 1024, maxCols: 2 }, { bp: 640, maxCols: 1 }] })}>
               {content.industries.items.map((ind, i) => (
                 <div key={i} className="group relative rounded-2xl p-7 overflow-hidden transition-all duration-500 hover:-translate-y-2 bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-transparent hover:shadow-[0_20px_50px_rgba(var(--accent-rgb),0.15)]">
                   <div className="absolute -top-3 -right-1 text-[3.4rem] font-extrabold leading-none opacity-[0.05] select-none">{String(i + 1).padStart(2, "0")}</div>
@@ -542,7 +552,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               title={<>Related <span className="gradient-text">Services</span></>}
               description={`These services work best alongside ${content.title.toLowerCase()} as part of one system.`}
             />
-            <div className="grid grid-cols-3 gap-6 max-[1024px]:grid-cols-2 max-[768px]:grid-cols-1">
+            <div className={balancedGrid(content.related.length, { base: 3, gapClass: "cgrid-gap-6", stages: [{ bp: 1024, maxCols: 2 }, { bp: 768, maxCols: 1 }] })}>
               {content.related.map((r) => (
                 <Link
                   key={r.slug}

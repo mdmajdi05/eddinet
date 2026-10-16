@@ -4,6 +4,7 @@ import ContactForm from "@/components/ContactForm";
 import AdaptiveLines from "@/components/AdaptiveLines";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { site } from "@/data/site/contact";
+import { balancedGrid } from "@/lib/process-grid";
 
 export const metadata: Metadata = {
   title: "Contact Us - Talk to a Digital Growth Expert",
@@ -105,6 +106,12 @@ const steps = [
 ];
 
 export default function ContactPage() {
+  const stepsGrid = balancedGrid(steps.length, {
+    base: 3,
+    gapClass: "cgrid-gap-6",
+    stages: [{ bp: 768, maxCols: 1 }],
+  });
+
   return (
     <>
       <section className="relative pt-[150px] pb-[60px] overflow-hidden">
@@ -219,7 +226,7 @@ export default function ContactPage() {
               How the <span className="gradient-text">Consultation</span> Works
             </h2>
           </div>
-          <div className="grid grid-cols-3 gap-6 max-[768px]:grid-cols-1">
+          <div className={stepsGrid}>
             {steps.map(([t, d], i) => (
               <div
                 key={i}

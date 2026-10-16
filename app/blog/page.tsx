@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { insights } from "@/data/blog/blog";
+import { balancedGrid } from "@/lib/process-grid";
 import AdaptiveLines from "@/components/AdaptiveLines";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
@@ -38,7 +39,7 @@ export default function BlogPage() {
       </section>
 
       <section className="pb-[100px]">
-        <div className="w-full max-w-[var(--container-max)] mx-auto px-5 grid grid-cols-3 gap-6 max-[1024px]:grid-cols-2 max-[768px]:grid-cols-1">
+        <div className={balancedGrid(insights.length, { base: 3, gapClass: "cgrid-gap-6", stages: [{ bp: 1024, maxCols: 2 }, { bp: 768, maxCols: 1 }], extra: "w-full max-w-[var(--container-max)] mx-auto px-5" })}>
           {insights.map((b) => (
             <Link
               key={b.slug}

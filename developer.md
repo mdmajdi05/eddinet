@@ -117,7 +117,7 @@
   2. WhatsApp par chhoot bhi chahiye, to dual: API submit + WhatsApp fallback.
   3. Newsletter ko bhi API se store karo (ya Brevo/Mailchimp API).
   4. Google Analytics / GA4 ya Plausible + Google Tag Manager add karo for lead tracking.
-- **Reference:** `components/ContactForm.tsx`, `components/footer-extras.tsx`, `components/QuotePopup.tsx`, `components/ConsultModal.tsx`
+- **Reference:** `components/ContactForm.tsx`, `components/footer-extras.tsx`, `components/QuotePopup.tsx`
 
 ### 4.3 Blog page client-side render — ✅ FIXED
 - ~~**Problem:** Blog article body (`app/blog/[slug]/page-client.tsx`) client-rendered hai → crawl slow + SEO weak.~~

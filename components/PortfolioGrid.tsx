@@ -14,6 +14,8 @@ import {
   type PortfolioProject,
 } from "@/data/portfolio/portfolio";
 
+import { balancedGrid } from "@/lib/process-grid";
+
 function getIcon(label: string) {
   switch (label) {
     case "Websites & Portals":
@@ -720,17 +722,15 @@ export default function PortfolioGrid({
       {filteredProjects.length > 0 ? (
 
         <div
-          className="
-            grid
-            grid-cols-3
-            gap-x-6
-            gap-y-12
-
-            max-[1050px]:grid-cols-2
-
-            max-[650px]:grid-cols-1
-            max-[650px]:gap-y-10
-          "
+          className={balancedGrid(filteredProjects.length, {
+            base: 3,
+            gapClass: "cgrid-gap-6",
+            stages: [
+              { bp: 1050, maxCols: 2 },
+              { bp: 650, maxCols: 1 },
+            ],
+            extra: "cgrid-row-12",
+          })}
         >
 
           {filteredProjects.map(

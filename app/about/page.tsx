@@ -8,6 +8,7 @@ import { site } from "@/data/site/contact";
 import { processSteps } from "@/data/home/home";
 import { industries } from "@/data/industries/industries";
 import { IMG } from "@/data/site/images";
+import { balancedGrid } from "@/lib/process-grid";
 
 export const metadata: Metadata = {
   title: "About Eddinet | Digital Marketing, Software, AI & Cloud Agency in Delhi NCR",
@@ -353,6 +354,15 @@ const faqSchema = {
 };
 
 export default function AboutPage() {
+  const processGridLayout = balancedGrid(processSteps.length, {
+    base: 3,
+    gapClass: "cgrid-gap-30",
+    stages: [
+      { bp: 1024, maxCols: 2 },
+      { bp: 768, maxCols: 1 },
+    ],
+  });
+
   return (
     <>
       {/* ===================== HERO ===================== */}
@@ -472,7 +482,7 @@ export default function AboutPage() {
       {/* ===================== STATS ===================== */}
       <section className="pt-[90px] pb-[70px]">
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
-          <div className="grid grid-cols-4 gap-6 max-[768px]:grid-cols-2 max-[480px]:grid-cols-1">
+          <div className={balancedGrid(companyStats.length, { base: 4, gapClass: "cgrid-gap-6", stages: [{ bp: 768, maxCols: 2 }, { bp: 480, maxCols: 1 }] })}>
             {companyStats.map((s, i) => (
               <Reveal key={i} delay={i * 90}>
                 <div className="text-center bg-[var(--bg-card)] border border-[var(--border-color)] rounded-[var(--radius-md)] py-8 px-5 transition-all duration-300 hover:border-[var(--border-hover)] hover:-translate-y-1">
@@ -617,7 +627,7 @@ export default function AboutPage() {
             }
             sub="Most agencies stop at the campaign. Eddinet also builds and runs the software and infrastructure behind it — which changes what a marketing plan can promise."
           />
-          <div className="grid grid-cols-2 gap-6 max-[1024px]:grid-cols-1">
+          <div className={balancedGrid(2, { base: 2, gapClass: "cgrid-gap-6", stages: [{ bp: 1024, maxCols: 1 }] })}>
             {[
               {
                 title: "The Traditional Way — Fragmented",
@@ -690,7 +700,7 @@ export default function AboutPage() {
           />
           <div className="relative">
             <div className="hidden lg:block absolute top-[46px] left-[6%] right-[6%] h-[2px] bg-[var(--border-color)]" />
-            <div className="grid grid-cols-3 gap-[30px] max-[1024px]:grid-cols-2 max-[768px]:grid-cols-1">
+            <div className={processGridLayout}>
               {processSteps.map((s, i) => (
                 <Reveal key={i} delay={(i % 3) * 100}>
                   <div className="relative p-7 bg-[var(--bg-card)] border border-[var(--border-color)] rounded-[var(--radius-lg)] transition-all duration-300 hover:border-[var(--border-hover)] hover:-translate-y-1 overflow-hidden">
@@ -725,7 +735,7 @@ export default function AboutPage() {
             }
             sub="The same engineering standards you'd expect from a product company — applied to every website, store, app and platform we run."
           />
-          <div className="grid grid-cols-4 gap-6 max-[1024px]:grid-cols-2 max-[600px]:grid-cols-1">
+          <div className={balancedGrid(Object.values(techStack).length, { base: 4, gapClass: "cgrid-gap-6", stages: [{ bp: 1024, maxCols: 2 }, { bp: 600, maxCols: 1 }] })}>
             {Object.values(techStack).map((group, i) => (
               <Reveal key={i} delay={i * 90}>
                 <div className="h-full bg-[var(--bg-card)] border border-[var(--border-color)] rounded-[var(--radius-lg)] p-6 transition-all duration-300 hover:border-[var(--border-hover)] hover:-translate-y-1">
@@ -762,7 +772,7 @@ export default function AboutPage() {
             }
             sub="Not because we do everything — but because everything we do works toward the same outcome."
           />
-          <div className="grid grid-cols-3 gap-6 max-[1024px]:grid-cols-2 max-[768px]:grid-cols-1">
+          <div className={balancedGrid(reasons.length, { base: 3, gapClass: "cgrid-gap-6", stages: [{ bp: 1024, maxCols: 2 }, { bp: 768, maxCols: 1 }] })}>
             {reasons.map((r, i) => (
               <Reveal key={i} delay={(i % 3) * 90}>
                 <div className="relative h-full p-7 bg-[var(--bg-card)] border border-[var(--border-color)] rounded-[var(--radius-lg)] overflow-hidden transition-all duration-300 hover:border-[var(--border-hover)] hover:-translate-y-1">
@@ -841,7 +851,7 @@ export default function AboutPage() {
             }
             sub="Strategists and engineers who plan as one team — because the system only works when the people behind it share the same objective."
           />
-          <div className="grid grid-cols-3 gap-6 max-[1024px]:grid-cols-2 max-[600px]:grid-cols-1">
+          <div className={balancedGrid(team.length, { base: 3, gapClass: "cgrid-gap-6", stages: [{ bp: 1024, maxCols: 2 }, { bp: 600, maxCols: 1 }] })}>
             {team.map((t, i) => (
               <Reveal key={i} delay={(i % 3) * 90}>
                 <div className="h-full bg-[var(--bg-card)] border border-[var(--border-color)] rounded-[var(--radius-md)] p-6 transition-all duration-300 hover:border-[var(--border-hover)] hover:-translate-y-1">
@@ -903,7 +913,7 @@ export default function AboutPage() {
               </>
             }
           />
-          <div className="grid grid-cols-2 gap-6 max-[768px]:grid-cols-1">
+          <div className={balancedGrid(values.length, { base: 2, gapClass: "cgrid-gap-6", stages: [{ bp: 768, maxCols: 1 }] })}>
             {values.map((v, i) => (
               <Reveal key={i} delay={(i % 2) * 100}>
                 <div className="testimonial-quotes h-full bg-[var(--bg-card)] border border-[var(--border-color)] rounded-[var(--radius-lg)] p-8 relative transition-all duration-300 hover:border-[var(--hover-line)] hover:-translate-y-1">

@@ -487,3 +487,95 @@ html[data-theme="red-light"] {
 .insight-row:hover::before {
   opacity: 1;
 }
+
+/* ==========================================================================
+   BALANCED CARD GRIDS
+   Kisi bhi card grid me aakhri row me ek akela card nahi bachna chahiye, aur
+   agar aakhri row adhoori ho (jaise 3 upar, 2 niche) to wo apne aap center
+   me aa jaani chahiye. Isliye grid ki jagah flex + justify-center use karte
+   hain, aur item ki width `--cg-cols` (columns) se calculate hoti hai.
+
+   Usage:
+     <div class="cgrid cgrid-gap-6 cgrid-cols-3 cgrid-at-1024-2 cgrid-at-768-1">
+       ...cards...
+     </div>
+
+   - .cgrid           : flex container (last row centers automatically)
+   - .cgrid-gap-N     : sets --cg (gap) — width calc isi se hota hai
+   - .cgrid-cols-N    : base (desktop) column count
+   - .cgrid-at-<bp>-N : responsive column count at max-width <bp>px
+   ========================================================================== */
+.cgrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--cg, 1.5rem);
+}
+.cgrid > * {
+  /* `- 0.1px` = sub-pixel rounding se bachne ke liye, warna full row kabhi
+     kabhi overflow hoke aakhri card agli line par chala jaata hai. */
+  width: calc(
+    (100% - (var(--cg-cols, 1) - 1) * var(--cg, 1.5rem)) / var(--cg-cols, 1) -
+      0.1px
+  );
+}
+/* Decorative absolutely-positioned children (e.g. a spine line) flex items
+   nahi hain — unhe normal width wapas de do. */
+.cgrid > .absolute {
+  width: auto;
+}
+
+.cgrid-gap-3 { --cg: 0.75rem; }
+.cgrid-gap-35 { --cg: 0.875rem; }
+.cgrid-gap-4 { --cg: 1rem; }
+.cgrid-gap-5 { --cg: 1.25rem; }
+.cgrid-gap-6 { --cg: 1.5rem; }
+.cgrid-gap-30 { --cg: 1.875rem; }
+.cgrid-row-12 { row-gap: 3rem; }
+
+.cgrid-cols-1 { --cg-cols: 1; }
+.cgrid-cols-2 { --cg-cols: 2; }
+.cgrid-cols-3 { --cg-cols: 3; }
+.cgrid-cols-4 { --cg-cols: 4; }
+.cgrid-cols-5 { --cg-cols: 5; }
+
+@media (max-width: 1050px) {
+  .cgrid-at-1050-1 { --cg-cols: 1; }
+  .cgrid-at-1050-2 { --cg-cols: 2; }
+  .cgrid-at-1050-3 { --cg-cols: 3; }
+}
+@media (max-width: 1024px) {
+  .cgrid-at-1024-1 { --cg-cols: 1; }
+  .cgrid-at-1024-2 { --cg-cols: 2; }
+  .cgrid-at-1024-3 { --cg-cols: 3; }
+  .cgrid-at-1024-4 { --cg-cols: 4; }
+}
+@media (max-width: 900px) {
+  .cgrid-at-900-1 { --cg-cols: 1; }
+  .cgrid-at-900-2 { --cg-cols: 2; }
+  .cgrid-at-900-3 { --cg-cols: 3; }
+}
+@media (max-width: 768px) {
+  .cgrid-at-768-1 { --cg-cols: 1; }
+  .cgrid-at-768-2 { --cg-cols: 2; }
+  .cgrid-at-768-3 { --cg-cols: 3; }
+}
+@media (max-width: 650px) {
+  .cgrid-at-650-1 { --cg-cols: 1; }
+  .cgrid-at-650-2 { --cg-cols: 2; }
+}
+@media (max-width: 640px) {
+  .cgrid-at-640-1 { --cg-cols: 1; }
+  .cgrid-at-640-2 { --cg-cols: 2; }
+}
+@media (max-width: 600px) {
+  .cgrid-at-600-1 { --cg-cols: 1; }
+  .cgrid-at-600-2 { --cg-cols: 2; }
+}
+@media (max-width: 480px) {
+  .cgrid-at-480-1 { --cg-cols: 1; }
+  .cgrid-at-480-2 { --cg-cols: 2; }
+}
+@media (max-width: 400px) {
+  .cgrid-at-400-1 { --cg-cols: 1; }
+}

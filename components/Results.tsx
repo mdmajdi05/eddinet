@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { stockImageSrc } from "@/data/site/stock-images";
+import { balancedGrid } from "@/lib/process-grid";
 
 const outcomes = [
   {
@@ -38,7 +39,7 @@ export default function Results() {
             Every engagement defines the outcome it needs to produce up front. We report on the leads, transactions, retention, efficiency and brand growth that marketing and technology actually create — and we publish only verified results.
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-6 max-[1024px]:grid-cols-2 max-[768px]:grid-cols-1">
+        <div className={balancedGrid(outcomes.length, { base: 3, gapClass: "cgrid-gap-6", stages: [{ bp: 1024, maxCols: 2 }, { bp: 768, maxCols: 1 }] })}>
           {outcomes.map((r, i) => (
             <div
               key={i}

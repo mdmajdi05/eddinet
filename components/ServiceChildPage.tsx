@@ -8,6 +8,7 @@ import GetQuoteButton from "@/components/GetQuoteButton";
 import SectionHeader from "@/components/SectionHeader";
 import AdaptiveLines from "@/components/AdaptiveLines";
 import ViewportCollapse from "@/components/ViewportCollapse";
+import { balancedGrid } from "@/lib/process-grid";
 import { services } from "@/data/services/services";
 import { site } from "@/data/site/contact";
 
@@ -95,6 +96,15 @@ export default function ServiceChildPage({
     !/^(faqs?|frequently asked questions)[.!]?$/i.test(docxHeadings.faqs.trim())
       ? docxHeadings.faqs
       : undefined;
+
+  const processGridLayout = balancedGrid(child.process.steps.length, {
+    base: 4,
+    gapClass: "cgrid-gap-6",
+    stages: [
+      { bp: 1024, maxCols: 2 },
+      { bp: 640, maxCols: 1 },
+    ],
+  });
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -261,7 +271,7 @@ export default function ServiceChildPage({
             description={child.featuresDescription ?? `Everything our ${serviceName.toLowerCase()} services cover — engineered to work as one connected system.`}
           />
 
-          <div className="grid grid-cols-2 gap-6 max-[1024px]:grid-cols-1">
+          <div className={balancedGrid(child.features.length, { base: 2, gapClass: "cgrid-gap-6", stages: [{ bp: 1024, maxCols: 1 }] })}>
             {child.features.map((feature, i) => (
               <div key={i} className="group relative grid grid-cols-[minmax(0,0.42fr)_minmax(0,0.58fr)] rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-transparent hover:shadow-[0_20px_50px_rgba(var(--accent-rgb),0.15)]">
                 <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{
@@ -317,7 +327,7 @@ export default function ServiceChildPage({
           <div className="relative">
             <div className="absolute left-0 right-0 top-[28px] h-[2px] bg-gradient-to-r from-transparent via-[rgba(var(--accent-rgb),0.5)] to-transparent max-[1024px]:hidden" />
 
-            <div className="grid grid-cols-4 gap-6 max-[1024px]:grid-cols-2 max-[640px]:grid-cols-1">
+            <div className={processGridLayout}>
               {child.process.steps.map((step, i) => (
                 <div key={i} className="group relative pt-16 max-[1024px]:pt-0">
                   <div className="absolute top-0 left-0 max-[1024px]:static max-[1024px]:mb-4">
@@ -357,7 +367,7 @@ export default function ServiceChildPage({
             description={child.benefitsDescription ?? "A clear roadmap with accountability at every stage — so expectations and reality stay aligned."}
           />
 
-          <div className="grid grid-cols-3 gap-5 mb-12 max-[768px]:grid-cols-1">
+          <div className={balancedGrid(3, { base: 3, gapClass: "cgrid-gap-5", stages: [{ bp: 768, maxCols: 1 }], extra: "mb-12" })}>
             {[
               { phase: "Month 1–2", title: "Foundation", desc: "Full audit, critical fixes and strategy locked in — blockers cleared fast.", icon: "🔍" },
               { phase: "Month 3–4", title: "Momentum", desc: "First ranking lifts and qualified traffic movement become visible.", icon: "📈" },
@@ -376,7 +386,7 @@ export default function ServiceChildPage({
             ))}
           </div>
 
-          <div className="grid grid-cols-3 gap-6 max-[1024px]:grid-cols-2 max-[640px]:grid-cols-1">
+          <div className={balancedGrid(child.benefits.length, { base: 3, gapClass: "cgrid-gap-6", stages: [{ bp: 1024, maxCols: 2 }, { bp: 640, maxCols: 1 }] })}>
             {child.benefits.map((benefit, i) => (
               <div key={i} className="group relative rounded-2xl p-7 overflow-hidden transition-all duration-500 hover:-translate-y-2 bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-transparent hover:shadow-[0_20px_50px_rgba(var(--accent-rgb),0.15)]">
                 <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{
@@ -434,7 +444,7 @@ export default function ServiceChildPage({
                   </h3>
                   <LineClampedText text={introParas[1] ?? introParas[0]} lines={6} />
 
-                  <div className="grid grid-cols-2 gap-3 mb-7 max-[480px]:grid-cols-1">
+                  <div className={balancedGrid(child.metrics.length, { base: 2, gapClass: "cgrid-gap-3", stages: [{ bp: 480, maxCols: 1 }], extra: "mb-7" })}>
                     {child.metrics.map((m, i) => (
                       <div key={i} className="group relative rounded-2xl p-4 text-center overflow-hidden bg-[var(--panel-bg)] border border-[var(--border-color)] transition-all duration-500 hover:-translate-y-1 hover:border-[rgba(var(--accent-rgb),0.3)]">
                         <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[var(--main-accent)] via-transparent to-purple-500 opacity-40 group-hover:opacity-100 transition-opacity duration-500" />
@@ -455,7 +465,7 @@ export default function ServiceChildPage({
                   <span className="w-1.5 h-1.5 rounded-full bg-[var(--green-accent)] animate-pulse-dot" />
                   Why businesses stay with Eddinet
                 </span>
-                <div className="grid grid-cols-2 gap-3.5 max-[640px]:grid-cols-1">
+                <div className={balancedGrid(whyPoints.length, { base: 2, gapClass: "cgrid-gap-35", stages: [{ bp: 640, maxCols: 1 }] })}>
                   {whyPoints.map((point, i) => (
                     <div key={i} className="group relative rounded-2xl p-5 overflow-hidden bg-[var(--bg-card)] border border-[var(--border-color)] transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(var(--accent-rgb),0.3)]">
                       <div className="absolute -top-3 -right-1 text-[2.6rem] font-extrabold leading-none opacity-[0.05] select-none">{String(i + 1).padStart(2, "0")}</div>
@@ -495,7 +505,7 @@ export default function ServiceChildPage({
             title={<>What Our <span className="gradient-text">Clients Say</span></>}
           />
 
-          <div className="grid grid-cols-2 gap-6 max-[900px]:grid-cols-1">
+          <div className={balancedGrid(child.testimonials.length, { base: 2, gapClass: "cgrid-gap-6", stages: [{ bp: 900, maxCols: 1 }] })}>
             {child.testimonials.map((t, i) => (
               <div key={i} className="relative p-8 rounded-2xl bg-[var(--panel-bg)] border border-[var(--border-color)] overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:border-[rgba(var(--accent-rgb),0.3)]">
                 <div className="absolute top-5 right-7 text-[4rem] font-extrabold leading-none text-[var(--main-accent)] opacity-10 select-none">&ldquo;</div>
@@ -534,7 +544,7 @@ export default function ServiceChildPage({
             description={docIndustries.description}
           />
 
-          <div className="grid grid-cols-4 gap-6 max-[1024px]:grid-cols-2 max-[640px]:grid-cols-1">
+          <div className={balancedGrid(docIndustries.items.length, { base: 4, gapClass: "cgrid-gap-6", stages: [{ bp: 1024, maxCols: 2 }, { bp: 640, maxCols: 1 }] })}>
             {docIndustries.items.map((ind, i) => (
               <div key={i} className="group relative p-7 rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-transparent hover:shadow-[0_20px_50px_rgba(var(--accent-rgb),0.15)]">
                 <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{
@@ -606,7 +616,7 @@ export default function ServiceChildPage({
             description={`${serviceName.toLowerCase()} works best as part of an integrated growth strategy. Explore how these services connect.`}
           />
 
-          <div className="grid grid-cols-3 gap-6 max-[1024px]:grid-cols-2 max-[768px]:grid-cols-1">
+          <div className={balancedGrid(child.crossLinks.length, { base: 3, gapClass: "cgrid-gap-6", stages: [{ bp: 1024, maxCols: 2 }, { bp: 768, maxCols: 1 }] })}>
             {child.crossLinks.map((link, i) => (
               <Link key={i} href={link.slug} className="group relative rounded-[var(--radius-lg)] bg-[var(--bg-card)] border border-[var(--border-color)] overflow-hidden no-underline transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(var(--accent-rgb),0.15)]">
                 <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[var(--main-accent)] via-transparent to-purple-500 opacity-40 group-hover:opacity-100 transition-opacity duration-500 z-10" />

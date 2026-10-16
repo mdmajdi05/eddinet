@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { servicePages } from "@/data/services/services";
+import { balancedGrid } from "@/lib/process-grid";
 
 const pillars = [
   { key: "all", label: "All Services", cats: null as string[] | null, icon: "✦" },
@@ -66,7 +67,7 @@ export default function ServicesExplorer() {
         </span>
       </div>
 
-      <div className="grid grid-cols-3 gap-6 max-[1024px]:grid-cols-2 max-[768px]:grid-cols-1">
+      <div className={balancedGrid(visible.length, { base: 3, gapClass: "cgrid-gap-6", stages: [{ bp: 1024, maxCols: 2 }, { bp: 768, maxCols: 1 }] })}>
         {visible.map((s, i) => (
           <Link
             key={s.slug}

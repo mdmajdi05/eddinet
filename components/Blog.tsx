@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { insights } from "@/data/blog/blog";
+import { balancedGrid } from "@/lib/process-grid";
 
 export default function Blog() {
   return (
@@ -17,7 +18,7 @@ export default function Blog() {
             We publish on SEO and AI search, paid media, social, content, web development, eCommerce, AI, cloud, DevOps and digital growth — written to answer real questions, not to fill pages.
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-6 max-[1024px]:grid-cols-2 max-[768px]:grid-cols-1">
+        <div className={balancedGrid(insights.slice(0, 3).length, { base: 3, gapClass: "cgrid-gap-6", stages: [{ bp: 1024, maxCols: 2 }, { bp: 768, maxCols: 1 }] })}>
           {insights.slice(0, 3).map((b, i) => (
             <div
               key={i}
