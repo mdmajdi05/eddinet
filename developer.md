@@ -215,6 +215,49 @@ npm run check:site
 
 ---
 
+## 🤖 5.1 Chatbot — Eddi (site-wide AI assistant)
+
+Site par floating chatbot (`components/chat/ChatLauncher.tsx`) har page par
+layout se render hota hai. Ye **rule-based** hai (intents + knowledge base) —
+koi backend/API key nahi chahiye, sab client-side chalta hai.
+
+**Folder structure (best practice):**
+
+| Layer | Kahan | Kya |
+|---|---|---|
+| Data (content) | `data/chat/bot.ts` | bot ka naam, greeting, quick replies, notification messages |
+| Data (content) | `data/chat/intents.ts` | intent patterns (regex) + canned jawab |
+| Data (training) | `data/chat/knowledge.ts` | poora knowledge base (Q/A + keywords + links) |
+| Logic | `lib/chat/intent.ts` | `detectIntent()` — kaunsa intent match hua |
+| Logic | `lib/chat/knowledge.ts` | `searchKnowledgeBase()` — best Q/A dhundta hai |
+| Logic | `lib/chat/engine.ts` | `getBotReply()` — intent → KB → fallback |
+| Logic | `lib/chat/text.ts` | text/keyword helpers (stop-words) |
+| UI | `components/chat/*` | launcher, widget, messages, input, suggestions, 3D logo |
+
+**"Training" kaise hoti hai (important):**
+`data/chat/knowledge.ts` khud ka content nahi likhta — ye site ke asli data se
+Q/A **generate** karta hai:
+- `data/services/services.ts` → 13 service categories + 200 child services + 65 FAQs
+- `data/home/home.ts` → home FAQs
+- `data/industries/industries.ts` → industry Q/A
+- `data/site/contact.ts` → phone/email/address/hours
+
+Isliye jab bhi koi service ya FAQ edit karte ho, chatbot **apne aap re-train**
+ho jaata hai. Sirf company/pricing/process jaise general jawab `knowledge.ts`
+ke `MANUAL` array me hand-written hain.
+
+**Naya general jawab add karna:** `data/chat/knowledge.ts` → `MANUAL` me entry.
+**Naya intent add karna:** `lib/chat/types.ts` me `IntentId` add karo + `data/chat/intents.ts` me entry.
+
+**Performance:** chat UI aur knowledge base **lazy** load hote hain — widget
+sirf kholne par, aur engine/KB sirf pehla message bhejne par. Jo user chat use
+nahi karta, uska main bundle bhaari nahi hota.
+
+**Jawab me formatting:** `**bold**`, `- bullets`, aur `[label](/href)` links
+(`components/chat/RichText.tsx` render karta hai).
+
+---
+
 ## 📋 6. Master TODO Checklist (Priority Wise)
 
 ### 🔴 Week 1 — SEO Crunch

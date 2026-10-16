@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContactWidget from "@/components/FloatingContactWidget";
+import ChatLauncher from "@/components/chat/ChatLauncher";
 import { site } from "@/data/site/contact";
 import {
   megaMenuCategories,
@@ -203,6 +204,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <main>{children}</main>
           <Footer />
           <FloatingContactWidget />
+          <ChatLauncher />
         </ThemeProvider>
       </body>
     </html>

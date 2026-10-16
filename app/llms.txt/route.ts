@@ -33,6 +33,7 @@ export async function GET() {
     ["/case-studies", "Published case studies"],
     ["/blog", "Blog — insights and guides"],
     ["/contact", "Contact and consultation booking"],
+    ["/sitemap-html", "HTML sitemap — every page listed on one page"],
     ["/privacy-policy", "Privacy policy"],
     ["/terms", "Terms and conditions"],
   ];

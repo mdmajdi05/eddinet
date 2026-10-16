@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T06:57:12.639Z",
+  "generatedAt": "2026-10-16T21:10:29.320Z",
   "baseUrl": "http://localhost:3999",
   "summary": {
     "error": 0,
@@ -85,9 +85,9 @@
         {
           "rule": "thin-content",
           "severity": "warning",
-          "message": "Thin content: \"Software & SaaS Portfolio | Eddinet\" has only 40 words (min 250)",
-          "path": "/portfolio/software-saas",
-          "words": 40
+          "message": "Thin content: \"Websites & Portals Portfolio | Eddinet\" has only 64 words (min 250)",
+          "path": "/portfolio/websites",
+          "words": 64
         },
         {
           "rule": "thin-content",
@@ -99,9 +99,9 @@
         {
           "rule": "thin-content",
           "severity": "warning",
-          "message": "Thin content: \"Websites & Portals Portfolio | Eddinet\" has only 64 words (min 250)",
-          "path": "/portfolio/websites",
-          "words": 64
+          "message": "Thin content: \"Software & SaaS Portfolio | Eddinet\" has only 40 words (min 250)",
+          "path": "/portfolio/software-saas",
+          "words": 40
         },
         {
           "rule": "thin-content",
@@ -141,16 +141,16 @@
         {
           "rule": "thin-content",
           "severity": "warning",
-          "message": "Thin content: \"Maintenance & Reputation Portfolio | Eddinet\" has only 33 words (min 250)",
-          "path": "/portfolio/support-reputation",
-          "words": 33
+          "message": "Thin content: \"Cloud, Hosting & DevOps Portfolio | Eddinet\" has only 28 words (min 250)",
+          "path": "/portfolio/cloud-devops",
+          "words": 28
         },
         {
           "rule": "thin-content",
           "severity": "warning",
-          "message": "Thin content: \"Cloud, Hosting & DevOps Portfolio | Eddinet\" has only 28 words (min 250)",
-          "path": "/portfolio/cloud-devops",
-          "words": 28
+          "message": "Thin content: \"Maintenance & Reputation Portfolio | Eddinet\" has only 33 words (min 250)",
+          "path": "/portfolio/support-reputation",
+          "words": 33
         }
       ]
     },
@@ -198,8 +198,8 @@
         {
           "rule": "page-issues",
           "severity": "warning",
-          "message": "Meta description too long (246ch, max 170) on /services/seo",
-          "path": "/services/seo"
+          "message": "Meta description too long (205ch, max 170) on /services/ads-ppc",
+          "path": "/services/ads-ppc"
         },
         {
           "rule": "page-issues",
@@ -210,20 +210,8 @@
         {
           "rule": "page-issues",
           "severity": "warning",
-          "message": "Meta description too long (205ch, max 170) on /services/ads-ppc",
-          "path": "/services/ads-ppc"
-        },
-        {
-          "rule": "page-issues",
-          "severity": "warning",
-          "message": "Meta description too long (224ch, max 170) on /services/design-creative",
-          "path": "/services/design-creative"
-        },
-        {
-          "rule": "page-issues",
-          "severity": "warning",
-          "message": "Meta description too long (194ch, max 170) on /services/web-development",
-          "path": "/services/web-development"
+          "message": "Meta description too long (246ch, max 170) on /services/seo",
+          "path": "/services/seo"
         },
         {
           "rule": "page-issues",
@@ -234,20 +222,32 @@
         {
           "rule": "page-issues",
           "severity": "warning",
+          "message": "Meta description too long (194ch, max 170) on /services/web-development",
+          "path": "/services/web-development"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (224ch, max 170) on /services/design-creative",
+          "path": "/services/design-creative"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
           "message": "Meta description too long (201ch, max 170) on /services/software-ai",
           "path": "/services/software-ai"
         },
         {
           "rule": "page-issues",
           "severity": "warning",
-          "message": "Meta description too long (208ch, max 170) on /services/maintenance-support",
-          "path": "/services/maintenance-support"
+          "message": "Meta description too long (180ch, max 170) on /services/hosting-migration",
+          "path": "/services/hosting-migration"
         },
         {
           "rule": "page-issues",
           "severity": "warning",
-          "message": "Meta description too long (180ch, max 170) on /services/hosting-migration",
-          "path": "/services/hosting-migration"
+          "message": "Meta description too long (208ch, max 170) on /services/maintenance-support",
+          "path": "/services/maintenance-support"
         },
         {
           "rule": "page-issues",
@@ -384,14 +384,14 @@
         {
           "rule": "page-issues",
           "severity": "warning",
-          "message": "Meta description too long (239ch, max 170) on /services/content/seo-content-services-in-delhi-ncr",
-          "path": "/services/content/seo-content-services-in-delhi-ncr"
+          "message": "Meta description too long (253ch, max 170) on /services/content/social-content-services-in-delhi-ncr",
+          "path": "/services/content/social-content-services-in-delhi-ncr"
         },
         {
           "rule": "page-issues",
           "severity": "warning",
-          "message": "Meta description too long (253ch, max 170) on /services/content/social-content-services-in-delhi-ncr",
-          "path": "/services/content/social-content-services-in-delhi-ncr"
+          "message": "Meta description too long (239ch, max 170) on /services/content/seo-content-services-in-delhi-ncr",
+          "path": "/services/content/seo-content-services-in-delhi-ncr"
         },
         {
           "rule": "page-issues",
@@ -414,14 +414,14 @@
         {
           "rule": "page-issues",
           "severity": "warning",
-          "message": "Meta description too long (264ch, max 170) on /services/ecommerce/ecommerce-migration-services-in-delhi-ncr",
-          "path": "/services/ecommerce/ecommerce-migration-services-in-delhi-ncr"
+          "message": "Meta description too long (288ch, max 170) on /services/ecommerce/amazon-store-development-services-in-delhi-ncr",
+          "path": "/services/ecommerce/amazon-store-development-services-in-delhi-ncr"
         },
         {
           "rule": "page-issues",
           "severity": "warning",
-          "message": "Meta description too long (288ch, max 170) on /services/ecommerce/amazon-store-development-services-in-delhi-ncr",
-          "path": "/services/ecommerce/amazon-store-development-services-in-delhi-ncr"
+          "message": "Meta description too long (264ch, max 170) on /services/ecommerce/ecommerce-migration-services-in-delhi-ncr",
+          "path": "/services/ecommerce/ecommerce-migration-services-in-delhi-ncr"
         },
         {
           "rule": "page-issues",
@@ -444,8 +444,20 @@
         {
           "rule": "page-issues",
           "severity": "warning",
+          "message": "Meta description too long (255ch, max 170) on /services/maintenance-support/website-disaster-recovery-services-in-india",
+          "path": "/services/maintenance-support/website-disaster-recovery-services-in-india"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
           "message": "Meta description too long (254ch, max 170) on /services/maintenance-support/emergency-website-support-services-in-india",
           "path": "/services/maintenance-support/emergency-website-support-services-in-india"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (271ch, max 170) on /services/maintenance-support/website-security-monitoring-services-in-india",
+          "path": "/services/maintenance-support/website-security-monitoring-services-in-india"
         },
         {
           "rule": "page-issues",
@@ -456,20 +468,8 @@
         {
           "rule": "page-issues",
           "severity": "warning",
-          "message": "Meta description too long (255ch, max 170) on /services/maintenance-support/website-disaster-recovery-services-in-india",
-          "path": "/services/maintenance-support/website-disaster-recovery-services-in-india"
-        },
-        {
-          "rule": "page-issues",
-          "severity": "warning",
           "message": "Meta description too long (251ch, max 170) on /services/maintenance-support/website-security-update-services-in-india",
           "path": "/services/maintenance-support/website-security-update-services-in-india"
-        },
-        {
-          "rule": "page-issues",
-          "severity": "warning",
-          "message": "Meta description too long (271ch, max 170) on /services/maintenance-support/website-security-monitoring-services-in-india",
-          "path": "/services/maintenance-support/website-security-monitoring-services-in-india"
         },
         {
           "rule": "page-issues",
@@ -540,14 +540,14 @@
         {
           "rule": "page-issues",
           "severity": "warning",
-          "message": "Meta description too long (286ch, max 170) on /services/reputation-management/review-generation-services-in-india",
-          "path": "/services/reputation-management/review-generation-services-in-india"
+          "message": "Meta description too long (274ch, max 170) on /services/reputation-management/online-reputation-management-services-in-india",
+          "path": "/services/reputation-management/online-reputation-management-services-in-india"
         },
         {
           "rule": "page-issues",
           "severity": "warning",
-          "message": "Meta description too long (274ch, max 170) on /services/reputation-management/online-reputation-management-services-in-india",
-          "path": "/services/reputation-management/online-reputation-management-services-in-india"
+          "message": "Meta description too long (286ch, max 170) on /services/reputation-management/review-generation-services-in-india",
+          "path": "/services/reputation-management/review-generation-services-in-india"
         },
         {
           "rule": "page-issues",
@@ -576,6 +576,12 @@
         {
           "rule": "page-issues",
           "severity": "warning",
+          "message": "Meta description too long (207ch, max 170) on /services/web-development/shopify-development-company-in-delhi",
+          "path": "/services/web-development/shopify-development-company-in-delhi"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
           "message": "Meta description too long (200ch, max 170) on /services/web-development/custom-website-design-services-in-delhi",
           "path": "/services/web-development/custom-website-design-services-in-delhi"
         },
@@ -588,20 +594,14 @@
         {
           "rule": "page-issues",
           "severity": "warning",
-          "message": "Meta description too long (193ch, max 170) on /services/web-development/website-development-services-in-delhi",
-          "path": "/services/web-development/website-development-services-in-delhi"
-        },
-        {
-          "rule": "page-issues",
-          "severity": "warning",
-          "message": "Meta description too long (207ch, max 170) on /services/web-development/shopify-development-company-in-delhi",
-          "path": "/services/web-development/shopify-development-company-in-delhi"
-        },
-        {
-          "rule": "page-issues",
-          "severity": "warning",
           "message": "Meta description too long (278ch, max 170) on /services/web-development/website-optimization-services-company-in-delhi",
           "path": "/services/web-development/website-optimization-services-company-in-delhi"
+        },
+        {
+          "rule": "page-issues",
+          "severity": "warning",
+          "message": "Meta description too long (193ch, max 170) on /services/web-development/website-development-services-in-delhi",
+          "path": "/services/web-development/website-development-services-in-delhi"
         },
         {
           "rule": "page-issues",

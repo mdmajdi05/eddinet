@@ -58,6 +58,10 @@
 //  │ Case Studies                    │ portfolio/case-studies.ts              │
 //  │ Blog                            │ blog/blog.ts (posts). NAYA BLOG YAHIN  │
 //  │ Industries                      │ industries/industries.ts (sectors)     │
+//  │ Chatbot (data + Q/A training)   │ chat/  (bot.ts identity, intents.ts    │
+//  │                                 │        patterns, knowledge.ts Q/A —    │
+//  │                                 │        services/FAQ/industry data se   │
+//  │                                 │        auto-generate hota hai)         │
 //  │ Contact / company info          │ site/contact.ts (phone, email, address,│
 //  │                                 │           hours, whatsapp — header/     │
 //  │                                 │           footer bhi yahin se)          │
