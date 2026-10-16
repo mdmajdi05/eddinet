@@ -66,17 +66,25 @@ export interface BalancedGridOptions {
   stages?: GridStage[];
   /** Container par extra classes (jaise "relative"). */
   extra?: string;
+  /**
+   * `true` = card ka size FIX rahega (columns exactly base/stage ke, count se
+   * badlenge nahi) — sirf kam cards center ho jaayenge. Filter wale grids ke
+   * liye (jaise "13 Core Expertise Areas"): filter lagane par 1 hi card bache
+   * to wo full-width stretch na ho, apne size me hi rahe.
+   */
+  fixed?: boolean;
 }
 
 /** Container ke liye poora className return karta hai. */
 export function balancedGrid(count: number, opts: BalancedGridOptions): string {
+  const cols = (max: number) => (opts.fixed ? max : balancedColumns(count, max));
   const parts = [
     "cgrid",
     opts.gapClass ?? "cgrid-gap-6",
-    `cgrid-cols-${balancedColumns(count, opts.base)}`,
+    `cgrid-cols-${cols(opts.base)}`,
   ];
   for (const s of opts.stages ?? []) {
-    parts.push(`cgrid-at-${s.bp}-${balancedColumns(count, s.maxCols)}`);
+    parts.push(`cgrid-at-${s.bp}-${cols(s.maxCols)}`);
   }
   if (opts.extra) parts.push(opts.extra);
   return parts.join(" ");

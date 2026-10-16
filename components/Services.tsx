@@ -335,7 +335,7 @@ export default function Services() {
             SERVICES GRID
             UNCHANGED
         ========================================================= */}
-        <div className={balancedGrid(filteredServices.length, { base: 3, gapClass: "cgrid-gap-6", stages: [{ bp: 1024, maxCols: 2 }, { bp: 768, maxCols: 1 }] })}>
+        <div className={balancedGrid(filteredServices.length, { base: 3, gapClass: "cgrid-gap-6", stages: [{ bp: 1024, maxCols: 2 }, { bp: 768, maxCols: 1 }], fixed: true })}>
           {filteredServices.map((s, i) => {
             const visible = s.allItems.slice(
               0,

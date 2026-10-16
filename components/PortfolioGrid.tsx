@@ -730,6 +730,7 @@ export default function PortfolioGrid({
               { bp: 650, maxCols: 1 },
             ],
             extra: "cgrid-row-12",
+            fixed: true,
           })}
         >
 
