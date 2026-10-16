@@ -16,6 +16,7 @@ const companyLinks = [
   { label: "Blog & Insights", href: "/blog" },
   { label: "Privacy Policy", href: "/privacy-policy" },
   { label: "Terms", href: "/terms" },
+  { label: "Sitemap", href: "/sitemap-html" },
 ];
 
 const socials = [
