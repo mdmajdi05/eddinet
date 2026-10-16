@@ -75,13 +75,13 @@ export default function Header({
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center shrink-0" onClick={() => setMobileOpen(false)}>
-              <Image src={IMG.brand.eddinetLogo.src} alt="Eddinet" width={320} height={88} className="h-[88px] w-auto max-[560px]:h-[40px]" priority />
+              <Image src={IMG.brand.eddinetLogo.src} alt="Eddinet" width={320} height={88} className="h-[64px] xl:h-[88px] w-auto max-[560px]:h-[40px]" priority />
             </Link>
 
-            <nav className="hidden lg:flex items-center gap-8">
+            <nav className="hidden lg:flex items-center gap-6">
               <Link
                 href="/"
-                className={`text-[0.95rem] font-medium transition-all duration-300 hover:text-[var(--main-accent)] no-underline ${
+                className={`text-[0.95rem] font-medium whitespace-nowrap transition-all duration-300 hover:text-[var(--main-accent)] no-underline ${
                   isActive("/") && !mobileOpen ? "text-[var(--main-accent)]" : "text-[var(--chrome-text-muted)]"
                 }`}
               >
@@ -93,7 +93,7 @@ export default function Header({
                 <Link
                   key={l.href}
                   href={l.href}
-                  className={`text-[0.95rem] font-medium transition-all duration-300 hover:text-[var(--main-accent)] no-underline ${
+                  className={`text-[0.95rem] font-medium whitespace-nowrap transition-all duration-300 hover:text-[var(--main-accent)] no-underline ${
                     isActive(l.href) ? "text-[var(--main-accent)]" : "text-[var(--chrome-text-muted)]"
                   }`}
                 >
@@ -105,7 +105,7 @@ export default function Header({
             <div className="flex items-center gap-3.5 max-[560px]:gap-2">
               <a
                 href={site.phoneHref}
-                className="hidden xl:inline-flex items-center gap-2 text-[0.92rem] font-semibold no-underline text-[var(--chrome-text)] transition-colors duration-300 hover:text-[var(--main-accent)]"
+                className="hidden xl:inline-flex items-center gap-2 whitespace-nowrap text-[0.92rem] font-semibold no-underline text-[var(--chrome-text)] transition-colors duration-300 hover:text-[var(--main-accent)]"
                 aria-label={`Call Eddinet at ${site.phone}`}
               >
                 <span aria-hidden="true">📞</span>
@@ -113,7 +113,7 @@ export default function Header({
               </a>
 
               <button
-                className="hidden lg:inline-flex items-center justify-center gap-2.5 py-3.5 px-7 rounded-full font-bold text-[0.95rem] cursor-pointer transition-all duration-300 border-none outline-none text-[var(--on-primary)] shadow-[0_10px_25px_-5px_rgba(var(--accent-rgb),0.4)] hover:-translate-y-[3px] hover:shadow-[0_15px_30px_-5px_rgba(var(--accent-rgb),0.6)]"
+                className="hidden lg:inline-flex items-center justify-center gap-2.5 py-3.5 px-6 whitespace-nowrap rounded-full font-bold text-[0.92rem] cursor-pointer transition-all duration-300 border-none outline-none text-[var(--on-primary)] shadow-[0_10px_25px_-5px_rgba(var(--accent-rgb),0.4)] hover:-translate-y-[3px] hover:shadow-[0_15px_30px_-5px_rgba(var(--accent-rgb),0.6)]"
                 style={{ background: "var(--primary-gradient)" }}
                 onClick={() => setModalOpen(true)}
               >
