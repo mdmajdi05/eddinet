@@ -507,12 +507,17 @@ html[data-theme="red-light"] {
    - .cgrid-gap-N     : sets --cg (gap) — width calc isi se hota hai
    - .cgrid-cols-N    : base (desktop) column count = us section ka card size
    - .cgrid-at-<bp>-N : responsive column count at max-width <bp>px
+   - .cgrid-last2     : aakhri row me akela card bachne wale case ka fix
    ========================================================================== */
 .cgrid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--cg, 1.5rem);
+  /* Card ki exact width (bina sub-pixel fudge ke) — margins ke liye. */
+  --cg-card: calc(
+    (100% - (var(--cg-cols, 1) - 1) * var(--cg, 1.5rem)) / var(--cg-cols, 1)
+  );
 }
 .cgrid > * {
   /* `- 0.1px` = sub-pixel rounding se bachne ke liye, warna full row kabhi
@@ -526,6 +531,36 @@ html[data-theme="red-light"] {
    nahi hain — unhe normal width wapas de do. */
 .cgrid > .absolute {
   width: auto;
+}
+
+/* --------------------------------------------------------------------------
+   `cgrid-last2` — jab koi column count orphan card nahi hata sakta.
+   Misal: 13 cards. 3 columns -> 3+3+3+3+1, 2 columns -> 2*6+1. Do options
+   me se koi bhi aakhri row ke akela card ko nahi hataata. Isliye columns
+   same rakhte hain aur aakhri do cards ko symmetric margin dete hain:
+   margin itna bada hai ki "upar wali row" ka aakhri card wahan fit na ho —
+   wo niche chala jaata hai, aur aakhri row ke 2 cards perfect center me
+   aate hain. Card ka size (columns) bilkul nahi badalta.
+     cols 3, 13 cards -> 3+3+3+2+2      7 cards -> 3+2+2      4 -> 2+2
+   Margin `--cg-cols` se banta hai, isliye har breakpoint par apne aap sahi
+   rehta hai; 2 ya 1 column par `max(0px, …)` ki wajah se 0 ho jaata hai
+   (wahan akela card nikalna possible hi nahi hai).
+   -------------------------------------------------------------------------- */
+.cgrid-last2 > :nth-last-child(2 of :not(.absolute)) {
+  margin-left: max(
+    0px,
+    calc(
+      (var(--cg-cols, 1) - 2) * (var(--cg-card) + var(--cg, 1.5rem)) / 2
+    )
+  );
+}
+.cgrid-last2 > :nth-last-child(1 of :not(.absolute)) {
+  margin-right: max(
+    0px,
+    calc(
+      (var(--cg-cols, 1) - 2) * (var(--cg-card) + var(--cg, 1.5rem)) / 2
+    )
+  );
 }
 
 .cgrid-gap-3 { --cg: 0.75rem; }
