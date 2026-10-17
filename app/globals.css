@@ -225,6 +225,25 @@ html[data-theme="red-light"] {
   transform: rotate(45deg);
 }
 
+/* --------------------------------------------------------------------------
+   Header ka number button — 3D "corner tilt".
+   Top-right corner viewer ki taraf jhuka hua (aage) aur bottom-right thora
+   pichhe. Isliye: rotateX() NEGATIVE (top aage aata hai) aur rotateY() NEGATIVE
+   (right side aage aati hai). Perspective chhota rakha hai kyunki button chhota
+   hai — bada perspective rakhne par tilt dikhta hi nahi.
+   Hard shade (box-shadow) bhi element ke saath hi tilt hota hai.
+   Tune karne ke liye bas angles badlo: zyada tilt = bada number.
+   -------------------------------------------------------------------------- */
+.tile-tilt {
+  transform: perspective(300px) rotateX(-16deg) rotateY(-5deg);
+}
+.tile-tilt:hover {
+  transform: perspective(300px) rotateX(-7deg) rotateY(-2deg);
+}
+.tile-tilt:active {
+  transform: perspective(300px) rotateX(0deg) rotateY(0deg);
+}
+
 /* Hero background animations */
 @keyframes float-slow {
   0%, 100% { transform: translateY(0px) translateX(0px); }
