@@ -67,7 +67,7 @@ export default function ServicesExplorer() {
         </span>
       </div>
 
-      <div className={balancedGrid(visible.length, { base: 3, gapClass: "cgrid-gap-6", stages: [{ bp: 1024, maxCols: 2 }, { bp: 768, maxCols: 1 }], fixed: true })}>
+      <div className={balancedGrid(visible.length, { base: 3, gapClass: "cgrid-gap-6", stages: [{ bp: 1024, maxCols: 2 }, { bp: 768, maxCols: 1 }] })}>
         {visible.map((s, i) => (
           <Link
             key={s.slug}
