@@ -513,32 +513,27 @@ html[data-theme="red-light"] {
    section ke apne columns (`--cg-cols`: base + responsive stages) se. Count ke
    hisaab se columns kabhi nahi badalte, isliye card ka size jaisa hai waisa hi
    rehta hai. Rows upar se bhar jaati hain (barabar nahi baanti: 4 columns par
-   6 cards -> 4+2), aur aakhri (bottom) row me akela card nahi bachta (kam se
-   kam 2). Adhoori last row center me aati hai — isliye grid ki jagah flex +
-   justify-center use karte hain, aur item ki width `--cg-cols` se calculate
-   hoti hai (partial row stretch nahi hoti).
+   6 cards -> 4+2), aur adhoori last row center me aa jaati hai — akela card
+   bhi theek hai. Isliye grid ki jagah flex + justify-center use karte hain, aur
+   item ki width `--cg-cols` se calculate hoti hai (partial row stretch nahi
+   hoti).
 
    Usage:
      <div class="cgrid cgrid-gap-6 cgrid-cols-3 cgrid-at-1024-2 cgrid-at-768-1">
        ...cards...
      </div>
 
-   - .cgrid              : flex container (adhoori last row centers automatically)
+   - .cgrid              : flex container (adhoori last row — akela card bhi —
+                           centers automatically)
    - .cgrid-gap-N        : sets --cg (gap) — width calc isi se hota hai
    - .cgrid-cols-N       : base (desktop) column count = us section ka card size
    - .cgrid-at-<bp>-N    : responsive column count at max-width <bp>px
-   - .cgrid-last2*       : aakhri row me akela card bachne wale case ka fix
-                           (per-range classes — neeche detail me)
    ========================================================================== */
 .cgrid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--cg, 1.5rem);
-  /* Card ki exact width (bina sub-pixel fudge ke) — margins ke liye. */
-  --cg-card: calc(
-    (100% - (var(--cg-cols, 1) - 1) * var(--cg, 1.5rem)) / var(--cg-cols, 1)
-  );
 }
 .cgrid > * {
   /* `- 0.1px` = sub-pixel rounding se bachne ke liye, warna full row kabhi
@@ -552,60 +547,6 @@ html[data-theme="red-light"] {
    nahi hain — unhe normal width wapas de do. */
 .cgrid > .absolute {
   width: auto;
-}
-
-/* --------------------------------------------------------------------------
-   `cgrid-last2*` — aakhri row me akela card bachne wale case ka smart fix.
-   Columns SAME rakhte hain (card size nahi badalta) aur aakhri do cards ko
-   symmetric margin dete hain: margin itna bada hota hai ki "upar wali row" ka
-   aakhri card wahan fit na ho — wo niche wrap ho jaata hai, aur aakhri row ke
-   2 cards perfect center me aate hain.
-     cols 3, 13 cards -> 3+3+3+2+2      7 cards -> 3+2+2      4 -> 2+2
-   Margin `--cg-cols` se banta hai, isliye har range me apne aap sahi rehta hai;
-   2 ya 1 column par `max(0px, …)` ki wajah se 0 ho jaata hai (wahan akela card
-   nikalna possible hi nahi hai).
-
-   Ye margin har range me nuksan nahi karta, isliye fix sirf usi range me ON
-   kiya jaata hai jahan asli need ho (lib/process-grid.ts wahi class deta hai).
-   On karne ka matlab: `--cg-last2-m` ko value par set karna.
-     .cgrid-last2            -> har width        (jab koi stage nahi ho)
-     .cgrid-last2-gt-<bp>    -> width > bp       (base/desktop range)
-     .cgrid-last2-<lo>-<hi>  -> lo < width <= hi (beech ki range)
-     .cgrid-last2-lt-<bp>    -> width <= bp      (sabse chhoti range)
-   Naya breakpoint/stage jodte waqt yahan us range ki line bhi add karo.
-   -------------------------------------------------------------------------- */
-.cgrid {
-  /* Fix ka margin (value har range me us waqt ke cols se banti hai)... */
-  --cg-last2-mv: max(
-    0px,
-    calc((var(--cg-cols, 1) - 2) * (var(--cg-card) + var(--cg, 1.5rem)) / 2)
-  );
-  /* ...apply sirf tab hota hai jab koi range class ise ON kare (default 0). */
-  --cg-last2-m: 0px;
-}
-.cgrid[class*="cgrid-last2"] > :nth-last-child(2 of :not(.absolute)) {
-  margin-left: var(--cg-last2-m);
-}
-.cgrid[class*="cgrid-last2"] > :nth-last-child(1 of :not(.absolute)) {
-  margin-right: var(--cg-last2-m);
-}
-
-/* Range classes — fix sirf apni range me ON hota hai. */
-.cgrid-last2 { --cg-last2-m: var(--cg-last2-mv); }
-@media (min-width: 1050.02px) { .cgrid-last2-gt-1050 { --cg-last2-m: var(--cg-last2-mv); } }
-@media (min-width: 1024.02px) { .cgrid-last2-gt-1024 { --cg-last2-m: var(--cg-last2-mv); } }
-@media (min-width: 900.02px) { .cgrid-last2-gt-900 { --cg-last2-m: var(--cg-last2-mv); } }
-@media (min-width: 768.02px) { .cgrid-last2-gt-768 { --cg-last2-m: var(--cg-last2-mv); } }
-@media (min-width: 650.02px) { .cgrid-last2-gt-650 { --cg-last2-m: var(--cg-last2-mv); } }
-@media (min-width: 640.02px) { .cgrid-last2-gt-640 { --cg-last2-m: var(--cg-last2-mv); } }
-@media (min-width: 600.02px) { .cgrid-last2-gt-600 { --cg-last2-m: var(--cg-last2-mv); } }
-@media (min-width: 480.02px) { .cgrid-last2-gt-480 { --cg-last2-m: var(--cg-last2-mv); } }
-@media (min-width: 400.02px) { .cgrid-last2-gt-400 { --cg-last2-m: var(--cg-last2-mv); } }
-/* Base range ka min-width har stage bp se 0.02px zyada hai, kyunki stage us bp
-   par bhi active hota hai (max-width: <bp>px) — 0.02 se dono range jud jaati
-   hain aur koi gap nahi bachta. */
-@media (min-width: 600.02px) and (max-width: 1024px) {
-  .cgrid-last2-600-1024 { --cg-last2-m: var(--cg-last2-mv); }
 }
 
 .cgrid-gap-3 { --cg: 0.75rem; }
