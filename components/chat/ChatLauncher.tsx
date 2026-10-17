@@ -19,7 +19,6 @@ import dynamic from "next/dynamic";
 import { Sparkles, X } from "lucide-react";
 import ChatButton from "./ChatButton";
 import ChatBotLogo from "./ChatBotLogo";
-import { useTheme } from "@/components/ThemeProvider";
 import { site } from "@/data/site/contact";
 import {
   BOT_NAME,
@@ -47,9 +46,6 @@ function nextId() {
 }
 
 export default function ChatLauncher() {
-  const { mode } = useTheme();
-  const light = mode === "light";
-
   const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [closing, setClosing] = useState(false);
@@ -209,12 +205,11 @@ export default function ChatLauncher() {
   const whatsappHref = `${site.whatsapp}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
   return (
-    <div className={`${s.launcher} ${light ? s.light : ""}`}>
+    <div className={s.launcher}>
       {isOpen && (
         <ChatWidget
           messages={messages}
           isTyping={isTyping}
-          light={light}
           closing={closing}
           onSend={handleSend}
           onClose={closeChat}

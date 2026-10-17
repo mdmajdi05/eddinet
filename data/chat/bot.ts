@@ -15,7 +15,7 @@ import { site } from "@/data/site/contact";
 import type { QuickReply } from "@/lib/chat/types";
 
 /** Header + footer me dikhne wala naam. */
-export const BOT_NAME = "Eddi";
+export const BOT_NAME = "Eddy";
 
 /** Header ki chhoti status line. */
 export const BOT_TAGLINE = "Growth Assistant";
@@ -58,7 +58,7 @@ export const NOTIFICATIONS: { text: string; action: string }[] = [
   },
   {
     text: `Looking to grow on Google and AI search? Ask me about SEO, AI SEO and content.`,
-    action: "Ask Eddi",
+    action: "Ask Eddy",
   },
   {
     text: `Planning a website, app or custom software? I can share timelines, process and next steps.`,

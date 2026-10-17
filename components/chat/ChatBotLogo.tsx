@@ -9,6 +9,8 @@
 //  Usage:
 //    <ChatBotLogo size="md" onClick={toggle} />   // clickable (launcher)
 //    <ChatBotLogo size="sm" animated={false} />   // header/message me static
+//
+//  Colors site ke red brand par set hain (teal/indigo accents hata diye).
 // ============================================================================
 
 import { useEffect, useRef } from "react";
@@ -23,9 +25,9 @@ interface ChatBotLogoProps {
 
 const sizeScales = {
   xl: 0.5,
-  lg: 0.4,
-  md: 0.3,
-  sm: 0.15,
+  lg: 0.34,
+  md: 0.24,
+  sm: 0.13,
 };
 
 const BASE_W = 220;
@@ -46,6 +48,9 @@ export default function ChatBotLogo({
 
   const visualW = BASE_W * scale;
   const visualH = BASE_H * scale;
+  // Glow ko logo ke saath chhota karo, warna chhote button par bahut bada
+  // halo ban jaata hai (aur aas-paas ke widgets ko tint kar deta hai).
+  const glowScale = scale * 1.6;
 
   useEffect(() => {
     const container = containerRef.current;
@@ -62,11 +67,11 @@ export default function ChatBotLogo({
 
       scan.style.transition = "box-shadow 0.3s ease, background 0.3s ease";
       scan.style.boxShadow =
-        "0 0 60px rgba(100, 255, 218, 0.9), 0 0 120px rgba(100, 255, 218, 0.4)";
+        "0 0 60px rgba(255, 77, 77, 0.9), 0 0 120px rgba(230, 0, 0, 0.4)";
 
       ball.style.transition = "box-shadow 0.3s ease";
       ball.style.boxShadow =
-        "0 0 70px rgba(100, 255, 218, 0.9), 0 0 140px rgba(100, 255, 218, 0.3)";
+        "0 0 70px rgba(255, 77, 77, 0.9), 0 0 140px rgba(230, 0, 0, 0.3)";
 
       head.style.transition = "transform 0.12s cubic-bezier(0.4, 0, 0.2, 1)";
       head.style.transform = "translateZ(20px) scale(0.88)";
@@ -79,9 +84,9 @@ export default function ChatBotLogo({
         group.style.animationDuration = "5s";
         head.style.animationDuration = "5s";
         scan.style.boxShadow =
-          "0 0 25px rgba(100, 255, 218, 0.5), 0 0 60px rgba(100, 255, 218, 0.15)";
+          "0 0 25px rgba(255, 77, 77, 0.5), 0 0 60px rgba(230, 0, 0, 0.15)";
         ball.style.boxShadow =
-          "0 0 40px rgba(100, 255, 218, 0.4), 0 0 80px rgba(100, 255, 218, 0.15)";
+          "0 0 40px rgba(255, 77, 77, 0.4), 0 0 80px rgba(230, 0, 0, 0.15)";
       }, 600);
     };
 
@@ -120,7 +125,7 @@ export default function ChatBotLogo({
             position: "absolute",
             top: "50%",
             left: "50%",
-            transform: "translate(-50%, -50%)",
+            transform: `translate(-50%, -50%) scale(${glowScale})`,
             width: BASE_W,
             height: BASE_H,
             overflow: "visible",

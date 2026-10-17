@@ -19,7 +19,6 @@ import type { ChatMessage as ChatMessageType } from "@/lib/chat/types";
 interface ChatWidgetProps {
   messages: ChatMessageType[];
   isTyping: boolean;
-  light: boolean;
   closing?: boolean;
   onSend: (text: string) => void;
   onClose: () => void;
@@ -28,7 +27,6 @@ interface ChatWidgetProps {
 export default function ChatWidget({
   messages,
   isTyping,
-  light,
   closing,
   onSend,
   onClose,
@@ -41,9 +39,7 @@ export default function ChatWidget({
 
   return (
     <div
-      className={`${s.panel} ${light ? s.light : ""} ${
-        closing ? s.panelClosing : ""
-      }`}
+      className={`${s.panel} ${closing ? s.panelClosing : ""}`}
     >
       <div className={s.glowOuter} />
       <div className={s.borderWrap}>

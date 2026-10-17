@@ -215,7 +215,7 @@ npm run check:site
 
 ---
 
-## 🤖 5.1 Chatbot — Eddi (site-wide AI assistant)
+## 🤖 5.1 Chatbot — Eddy (site-wide AI assistant)
 
 Site par floating chatbot (`components/chat/ChatLauncher.tsx`) har page par
 layout se render hota hai. Ye **rule-based** hai (intents + knowledge base) —
@@ -255,6 +255,18 @@ nahi karta, uska main bundle bhaari nahi hota.
 
 **Jawab me formatting:** `**bold**`, `- bullets`, aur `[label](/href)` links
 (`components/chat/RichText.tsx` render karta hai).
+
+**Look & theme (site jaisa):** poora chat UI site ke CSS variables se themed
+hai — `--panel-bg`, `--bg-card-hover`, `--border-color`, `--text-main`,
+`--text-muted`, `--text-dim`, `--main-accent`, `--accent-rgb`,
+`--primary-gradient`, `--tag-bg`, `--input-bg`, `--shadow-xl`. Isliye dark aur
+`red-light` (`html[data-theme="red-light"]`) dono me chat **automatically**
+website jaisa dikhta hai — koi alag `.light` class ya hardcoded palette nahi.
+Palette brand **red** hai (pehle indigo/purple tha). 3D robot logo
+(`components/chat/ChatbotLogo.tsx` + `ChatbotLogo.module.css`) ka design aur
+animations bilkul same hain, sirf uska accent color teal se red kar diya gaya
+hai. Logo ke size scales `ChatBotLogo.tsx` ke `sizeScales` me hain
+(`md` = launcher button, `sm` = header/message/notification avatar).
 
 ---
 
