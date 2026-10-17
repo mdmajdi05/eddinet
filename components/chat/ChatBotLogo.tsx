@@ -23,10 +23,16 @@ interface ChatBotLogoProps {
   onClick?: () => void;
 }
 
+// Launcher (floating button = `md` logo) ka tuning knob. Owner ne kaha tha
+// "thoda bada" — isliye ek hi factor se button ka logo + uska glow dono
+// proportionally bade hote hain (glowScale bhi isi `scale` se banta hai).
+// 1.2 = ~20% bada. Yahan number badal kar poora button tune kar sakte ho.
+const LAUNCHER_BUMP = 1.2;
+
 const sizeScales = {
   xl: 0.5,
   lg: 0.34,
-  md: 0.24,
+  md: 0.24 * LAUNCHER_BUMP,
   sm: 0.13,
 };
 

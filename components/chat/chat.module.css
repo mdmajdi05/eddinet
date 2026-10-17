@@ -19,7 +19,7 @@
 
 .panel {
   position: relative;
-  width: 340px;
+  width: var(--chat-panel-w);
   max-width: calc(100vw - 2rem);
   transform-origin: bottom right;
   animation: chat-pop-in 0.26s cubic-bezier(0.22, 1, 0.36, 1) both;
@@ -72,8 +72,10 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 460px;
-  height: min(460px, calc(100dvh - 11rem));
+  height: var(--chat-panel-h);
+  /* Launcher ka button + gap bada hua hai, isliye neeche se itni jagah chhod
+     rahe hain ki chhoti screen par bhi panel top se bahar na jaaye. */
+  height: min(var(--chat-panel-h), calc(100dvh - 12rem));
   border-radius: 1rem;
   overflow: hidden;
   background: var(--panel-bg);
@@ -256,7 +258,7 @@
   max-width: 84%;
   border-radius: 0.875rem;
   padding: 0.5rem 0.75rem;
-  font-size: 0.8125rem;
+  font-size: var(--chat-text);
   line-height: 1.55;
 }
 
@@ -482,7 +484,7 @@
   width: 100%;
   padding: 0.5rem 0.8125rem;
   border-radius: 0.625rem;
-  font-size: 0.8125rem;
+  font-size: var(--chat-text);
   outline: none;
   border: 1px solid var(--border-color);
   background: var(--input-bg);
@@ -560,6 +562,13 @@
 /* ─── LAUNCHER (floating button) ───────────────────────────────────────── */
 
 .launcher {
+  /* Chat ka overall size ek hi jagah se tune hota hai: panel ki width/height
+     aur message/input ka text. (Ye vars `.panel` aur uske children tak
+     inherit hote hain.) Launcher button ka size `ChatBotLogo.tsx` ke
+     LAUNCHER_BUMP se aata hai. */
+  --chat-panel-w: 380px;
+  --chat-panel-h: 520px;
+  --chat-text: 0.875rem;
   position: fixed;
   right: 1.5rem;
   bottom: 6rem;
