@@ -107,7 +107,7 @@ export default function Header({
                 style={{ background: "var(--primary-gradient)" }}
                 aria-label={`Call Eddinet at ${site.phone}`}
               >
-                <span aria-hidden>📞</span> {site.phone}
+                {site.phone}
               </a>
 
               <button
