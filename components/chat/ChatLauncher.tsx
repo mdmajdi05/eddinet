@@ -199,8 +199,10 @@ export default function ChatLauncher() {
     [isTyping, loadEngine],
   );
 
-  if (!mounted) return null;
-
+  // NOTE: yahan `mounted` par return null NAHI karte. Pehle aisa tha, isliye
+  // agar client hydration kisi wajah se na chale to bot poori tarah gaayab ho
+  // jaata tha. Ab launcher/button server par bhi render hota hai (turant dikhta
+  // hai) — sirf notification popup client par (localStorage + rotation) chalta hai.
   const activeNotif = NOTIFICATIONS[notifIndex % NOTIFICATIONS.length];
   const whatsappHref = `${site.whatsapp}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 

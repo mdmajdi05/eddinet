@@ -2,13 +2,32 @@
 //  FILE: lib/process-grid.ts
 //  Balanced card grids — "Our Process" jaise step cards aur baaki card grids.
 //
-//  Problem: count badalne par (4, 5, 6 …) simple CSS grid me aakhri row me ek
-//  akela card bach jaata hai (jaise grid-cols-4 + 5 items = 4 upar + 1 niche).
+//  Rule (site owner ka final rule):
+//    1. Har section ka card size uske apne `base`/`maxCols` columns se decide
+//       hota hai. Card size kabhi kam ya zyada NAHI hota — isliye koi section
+//       apne base se ZYADA columns use nahi karta (warna cards chhote ho
+//       jaate). Agar kisi section ke cards bade hain aur sirf 3 ek row me
+//       aate hain, to 3 hi rahenge — 4 ke liye chhota nahi karenge.
+//    2. `count <= max` -> saare cards ek hi row me (adhoori row center me).
+//    3. `count > max` -> rows UPAR se bhar jaati hain (max tak) — rows ko
+//       barabar nahi baanta jaata. Jaise max 4 par 6 cards = 4+2
+//       (purana behaviour 3+3 tha, aur wo cards ko chhota kar deta tha).
+//    4. Aakhri (bottom) row me kabhi akela card nahi bachta — uske liye
+//       thode kam columns liye jaate hain. Jaise max 4 par 5 cards = 3+2.
+//    5. Adhoori bottom row center me rehti hai aur har card apne size me
+//       rehta hai (partial row stretch nahi hoti).
 //
-//  Solution:
+//  Mapping (max = 4, yaani 4-per-row card size):
+//    1 -> 1        2 -> 2        3 -> 3        4 -> 4
+//    5 -> 3+2      6 -> 4+2      7 -> 4+3      8 -> 4+4
+//    9 -> 3+3+3    10 -> 4+4+2   11 -> 4+4+3   12 -> 4+4+4
+//    (9 -> 3+3+3 kyunki 4 columns 4+4+1 de deta, yaani akela orphan card.)
+//  Mapping (max = 5, jaise home ka "Industries" — 18 cards):
+//    5 -> 5        9 -> 5+4      10 -> 5+5     18 -> 5+5+5+3
+//
+//  Kaise:
 //    1. balancedColumns() — itne columns chunta hai ki aakhri row me akela
-//       card na bache aur rows balanced rahein:
-//            4 -> 4 (ek line)   5 -> 3+2   6 -> 3+3   7 -> 4+3   9 -> 3+3+3
+//       card na bache.
 //    2. balancedGrid() — `cgrid` classes deta hai (globals.css me defined).
 //       Flex + justify-center hone ki wajah se jo aakhri row adhoori ho
 //       (jaise 3 upar, 2 niche) wo APNE AAP center me aa jaati hai — har
@@ -24,30 +43,22 @@
 // ============================================================================
 
 /**
- * Columns chuno taaki aakhri row me single "orphan" card na bache aur rows
- * balanced rahein. Tie par zyada columns prefer hote hain.
+ * Columns chuno taaki aakhri row me single "orphan" card na bache. `max` us
+ * section ke cards ka size hai (design columns) — isse zyada columns kabhi
+ * nahi lete, warna cards chhote ho jaayenge. Rows upar se bhar jaati hain
+ * (barabar nahi baanti jaati) — max 4 par 6 -> 4 (4+2), 5 -> 3 (3+2).
  */
 export function balancedColumns(count: number, max: number): number {
   if (count <= 1) return 1;
-  if (count <= max) return count; // ek hi row me sab
+  if (count <= max) return count; // saare cards ek hi row me
 
-  let best = max;
-  let bestScore = Infinity;
-
+  // Sabse zyada columns chuno jo aakhri row me akela card na chhode
+  // (remainder 1 = orphan). 6 -> 4 (4+2 hi milega, 3+3 nahi).
   for (let c = max; c >= 2; c--) {
-    const rows = Math.ceil(count / c);
-    const lastRow = count - (rows - 1) * c;
-    const emptySlots = rows * c - count;
-    // Aakhri row me ek akela card = bad; khaali slots aur zyada rows bhi bad.
-    const orphan = lastRow === 1 ? 1000 : 0;
-    const score = orphan + emptySlots * 2 + (rows - 1) * 3;
-    if (score < bestScore) {
-      bestScore = score;
-      best = c;
-    }
+    if (count % c !== 1) return c;
   }
-
-  return best;
+  // Koi bhi option orphan banata hai (jaise 13 cards, max 4) -> max hi rakho.
+  return max;
 }
 
 export interface GridStage {

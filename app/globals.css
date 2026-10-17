@@ -490,19 +490,22 @@ html[data-theme="red-light"] {
 
 /* ==========================================================================
    BALANCED CARD GRIDS
-   Kisi bhi card grid me aakhri row me ek akela card nahi bachna chahiye, aur
-   agar aakhri row adhoori ho (jaise 3 upar, 2 niche) to wo apne aap center
-   me aa jaani chahiye. Isliye grid ki jagah flex + justify-center use karte
-   hain, aur item ki width `--cg-cols` (columns) se calculate hoti hai.
+   Rule: har section ka card size uske apne columns (`--cg-cols`) se aata hai aur
+   kabhi badalta nahi — isliye koi section apne base se ZYADA columns use nahi
+   karta (warna cards chhote ho jaayenge). Rows upar se bhar jaati hain (barabar
+   nahi baanti: 4 columns par 6 cards -> 4+2), aur aakhri (bottom) row me kabhi
+   akela card nahi bachta (kam se kam 2). Adhoori last row center me aati hai.
+   Isliye grid ki jagah flex + justify-center use karte hain, aur item ki width
+   `--cg-cols` (columns) se calculate hoti hai — partial row stretch nahi hoti.
 
    Usage:
      <div class="cgrid cgrid-gap-6 cgrid-cols-3 cgrid-at-1024-2 cgrid-at-768-1">
        ...cards...
      </div>
 
-   - .cgrid           : flex container (last row centers automatically)
+   - .cgrid           : flex container (adhoori last row centers automatically)
    - .cgrid-gap-N     : sets --cg (gap) — width calc isi se hota hai
-   - .cgrid-cols-N    : base (desktop) column count
+   - .cgrid-cols-N    : base (desktop) column count = us section ka card size
    - .cgrid-at-<bp>-N : responsive column count at max-width <bp>px
    ========================================================================== */
 .cgrid {
