@@ -75,12 +75,10 @@ export default function Header({
             <Image src={IMG.brand.eddinetLogo.src} alt="Eddinet" width={320} height={88} className="h-[64px] xl:h-[88px] w-auto max-[560px]:h-[40px]" priority />
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-5">
+          <nav className="navPill hidden lg:flex">
             <Link
               href="/"
-              className={`text-[0.95rem] font-medium whitespace-nowrap transition-all duration-300 hover:text-[var(--main-accent)] no-underline ${
-                isActive("/") && !mobileOpen ? "text-[var(--main-accent)]" : "text-[var(--chrome-text-muted)]"
-              }`}
+              className={`navChip${isActive("/") && !mobileOpen ? " is-active" : ""}`}
             >
               Home
             </Link>
@@ -90,9 +88,7 @@ export default function Header({
               <Link
                 key={l.href}
                 href={l.href}
-                className={`text-[0.95rem] font-medium whitespace-nowrap transition-all duration-300 hover:text-[var(--main-accent)] no-underline ${
-                  isActive(l.href) ? "text-[var(--main-accent)]" : "text-[var(--chrome-text-muted)]"
-                }`}
+                className={`navChip${isActive(l.href) ? " is-active" : ""}`}
               >
                 {l.label}
               </Link>
@@ -102,7 +98,7 @@ export default function Header({
           <div className="flex items-center gap-3.5 max-[560px]:gap-2">
             <a
               href={site.phoneHref}
-              className="tile-skew hidden lg:inline-flex items-center justify-center gap-2 py-2.5 px-4 whitespace-nowrap rounded-[var(--radius-sm)] font-bold text-[0.82rem] no-underline transition-all duration-300 text-[var(--on-primary)] shadow-[4px_4px_0_0_var(--chrome-text)] hover:-translate-y-[2px] hover:shadow-[5px_5px_0_0_var(--chrome-text)] active:translate-x-[3px] active:translate-y-[3px] active:shadow-[1px_1px_0_0_var(--chrome-text)]"
+              className="hdrPhone tile-skew hidden lg:inline-flex items-center justify-center gap-2 py-2.5 px-4 whitespace-nowrap rounded-[var(--radius-sm)] font-bold text-[0.82rem] no-underline transition-all duration-300 text-[var(--on-primary)] shadow-[4px_4px_0_0_var(--chrome-text)] hover:-translate-y-[2px] hover:shadow-[5px_5px_0_0_var(--chrome-text)] active:translate-x-[3px] active:translate-y-[3px] active:shadow-[1px_1px_0_0_var(--chrome-text)]"
               style={{ background: "var(--primary-gradient)" }}
               aria-label={`Call Eddinet at ${site.phone}`}
             >

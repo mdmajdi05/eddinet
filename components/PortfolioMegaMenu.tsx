@@ -93,25 +93,7 @@ export default function PortfolioMegaMenu({
       <button
         type="button"
         onClick={handleButtonClick}
-        className="
-          flex
-          items-center
-          gap-1
-          py-0
-          bg-transparent
-          border-none
-          cursor-pointer
-          text-[0.95rem]
-          font-medium
-          transition-all
-          duration-300
-          hover:text-[var(--main-accent)]
-        "
-        style={{
-          color: open
-            ? "var(--main-accent)"
-            : "var(--chrome-text-muted)",
-        }}
+        className={`navChip${open ? " is-active" : ""}`}
       >
         Portfolio
 
@@ -135,7 +117,7 @@ export default function PortfolioMegaMenu({
         className="z-[999]"
         style={{
           position: "fixed",
-          top: "72px",
+          top: "calc(var(--hdr-top, 12px) + var(--hdr-h, 64px) + 14px)",
           left: "50%",
           width: "min(1370px, 92vw)",
           transform: `translateX(-50%) translateY(${

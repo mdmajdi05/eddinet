@@ -49,12 +49,11 @@ export default function MegaMenu({
       onMouseLeave={handleMouseLeave}
     >
       <button
-        className="flex items-center gap-1 text-[0.95rem] font-medium transition-all duration-300 hover:text-[var(--main-accent)] bg-transparent border-none cursor-pointer py-0"
-        style={{ color: open ? "var(--main-accent)" : "var(--chrome-text-muted)" }}
+        className={`navChip${open ? " is-active" : ""}`}
         onClick={handleButtonClick}
       >
         Services
-        <span className={`text-[10px] transition-transform duration-200 inline-block ${open ? "rotate-180" : ""}`}>
+        <span className={`text-[10px] leading-none transition-transform duration-200 inline-block ${open ? "rotate-180" : ""}`}>
           ▼
         </span>
       </button>
@@ -63,7 +62,7 @@ export default function MegaMenu({
         className="z-[999] pointer-events-auto"
         style={{
           position: "fixed",
-          top: "72px",
+          top: "calc(var(--hdr-top, 12px) + var(--hdr-h, 64px) + 14px)",
           left: "50%",
           transform: `translateX(-50%) translateY(${open ? "0" : "-12px"})`,
           width: "min(1370px, 92vw)",

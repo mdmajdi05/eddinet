@@ -233,10 +233,23 @@ html[data-theme="red-light"] {
    — flex row ke space-between se teeno alag alag dikhte hain.
    Tune: .hdrShell me top/left/width aur glass values badlo.
    -------------------------------------------------------------------------- */
+/* Pill ki geometry — mega-menu panels isi se apna `top` nikalte hain
+   (warna wo pill ke peeche chhup jaate). Logo ki height badlo to --hdr-h bhi. */
+:root {
+  --hdr-top: 12px;
+  --hdr-h: 64px;
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --hdr-h: 88px;
+  }
+}
+
 .hdrShell {
   position: fixed;
   z-index: 1000;
-  top: 12px;
+  top: var(--hdr-top);
   left: 4vw;
   width: 92%;
   border-radius: 999px;
@@ -249,7 +262,8 @@ html[data-theme="red-light"] {
 }
 
 .hdrShell.is-stuck {
-  top: 8px;
+  --hdr-top: 8px;
+  top: var(--hdr-top);
   left: 5%;
   width: 90%;
   background: rgba(7, 7, 9, 0.9);
@@ -278,6 +292,68 @@ html[data-theme="red-light"] {
   border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
   overflow-y: auto;
+}
+
+/* Nav — har link apna rounded chip (negbuy-n jaisa), andar ek glass pill.
+   Har item apne aap me rounded + separate dikhta hai; hover par halka surface,
+   active par soft red pill. `display` jaan-boojh kar nahi likha — Tailwind ke
+   `hidden lg:flex` utilities hi decide karte hain (mobile par nav chhupi rehti hai). */
+.navPill {
+  align-items: center;
+  gap: 2px;
+  padding: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.navChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--chrome-text-muted);
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+.navChip:hover {
+  color: var(--chrome-text);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.navChip.is-active {
+  color: var(--chrome-text);
+  background: rgba(var(--accent-rgb), 0.16);
+  box-shadow: inset 0 0 0 1px rgba(var(--accent-rgb), 0.4);
+}
+
+/* ≤1279px (lg se xl tak): logo + 6 chips + number tile sab ek pill me — isliye
+   nav chips aur phone tile thoda compact, warna header ke andar jagah kam padti. */
+@media (max-width: 1279px) {
+  .hdrInner {
+    gap: 14px;
+  }
+  .navPill {
+    gap: 1px;
+  }
+  .navChip {
+    gap: 4px;
+    padding: 8px 10px;
+    font-size: 0.85rem;
+  }
+  .hdrPhone {
+    padding: 8px 12px;
+    font-size: 0.78rem;
+  }
 }
 
 @media (max-width: 700px) {
