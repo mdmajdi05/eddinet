@@ -72,7 +72,7 @@ export default function Header({
       >
         <div className="hdrInner">
           <Link href="/" className="flex items-center shrink-0" onClick={() => setMobileOpen(false)}>
-            <Image src={IMG.brand.eddinetLogo.src} alt="Eddinet" width={320} height={88} className="h-[64px] xl:h-[88px] w-auto max-[560px]:h-[40px]" priority />
+            <Image src={IMG.brand.eddinetLogo.src} alt="Eddinet" width={320} height={88} className="h-[48px] xl:h-[64px] w-auto max-[560px]:h-[34px]" priority />
           </Link>
 
           <nav className="navPill hidden lg:flex">

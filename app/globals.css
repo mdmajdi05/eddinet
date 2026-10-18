@@ -234,15 +234,16 @@ html[data-theme="red-light"] {
    Tune: .hdrShell me top/left/width aur glass values badlo.
    -------------------------------------------------------------------------- */
 /* Pill ki geometry — mega-menu panels isi se apna `top` nikalte hain
-   (warna wo pill ke peeche chhup jaate). Logo ki height badlo to --hdr-h bhi. */
+   (warna wo pill ke peeche chhup jaate). Pill ki height = logo height + 12px
+   vertical padding; logo ki size badlo to --hdr-h bhi badlo. */
 :root {
   --hdr-top: 12px;
-  --hdr-h: 64px;
+  --hdr-h: 60px;
 }
 
 @media (min-width: 1280px) {
   :root {
-    --hdr-h: 88px;
+    --hdr-h: 76px;
   }
 }
 
@@ -276,7 +277,7 @@ html[data-theme="red-light"] {
   align-items: center;
   justify-content: space-between;
   gap: clamp(12px, 2vw, 26px);
-  padding: 0 clamp(16px, 2.4vw, 34px);
+  padding: 6px clamp(16px, 2.4vw, 34px);
 }
 
 /* Mobile menu — pill ke neeche wali rounded glass sheet. */
@@ -365,7 +366,7 @@ html[data-theme="red-light"] {
   }
   .hdrInner {
     gap: 10px;
-    padding: 0 14px;
+    padding: 4px 14px;
   }
 }
 
