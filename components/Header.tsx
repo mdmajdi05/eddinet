@@ -65,73 +65,71 @@ export default function Header({
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full z-[1000] transition-all duration-300 ease-in-out border-b border-[var(--hairline)] ${
-          scrolled ? "py-0 bg-[var(--header-bg)]" : "py-0 bg-[var(--header-bg)]"
+        className={`hdrShell transition-all duration-300 ease-in-out${
+          scrolled ? " is-stuck" : ""
         }`}
         style={{ color: "var(--chrome-text)" }}
       >
-        <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center shrink-0" onClick={() => setMobileOpen(false)}>
-              <Image src={IMG.brand.eddinetLogo.src} alt="Eddinet" width={320} height={88} className="h-[64px] xl:h-[88px] w-auto max-[560px]:h-[40px]" priority />
-            </Link>
+        <div className="hdrInner">
+          <Link href="/" className="flex items-center shrink-0" onClick={() => setMobileOpen(false)}>
+            <Image src={IMG.brand.eddinetLogo.src} alt="Eddinet" width={320} height={88} className="h-[64px] xl:h-[88px] w-auto max-[560px]:h-[40px]" priority />
+          </Link>
 
-            <nav className="hidden lg:flex items-center gap-5">
+          <nav className="hidden lg:flex items-center gap-5">
+            <Link
+              href="/"
+              className={`text-[0.95rem] font-medium whitespace-nowrap transition-all duration-300 hover:text-[var(--main-accent)] no-underline ${
+                isActive("/") && !mobileOpen ? "text-[var(--main-accent)]" : "text-[var(--chrome-text-muted)]"
+              }`}
+            >
+              Home
+            </Link>
+            <MegaMenu categories={megaMenuCategories} />
+            <PortfolioMegaMenu categories={portfolioMenuCategories} />
+            {navLinks.slice(1).map((l) => (
               <Link
-                href="/"
+                key={l.href}
+                href={l.href}
                 className={`text-[0.95rem] font-medium whitespace-nowrap transition-all duration-300 hover:text-[var(--main-accent)] no-underline ${
-                  isActive("/") && !mobileOpen ? "text-[var(--main-accent)]" : "text-[var(--chrome-text-muted)]"
+                  isActive(l.href) ? "text-[var(--main-accent)]" : "text-[var(--chrome-text-muted)]"
                 }`}
               >
-                Home
+                {l.label}
               </Link>
-              <MegaMenu categories={megaMenuCategories} />
-              <PortfolioMegaMenu categories={portfolioMenuCategories} />
-              {navLinks.slice(1).map((l) => (
-                <Link
-                  key={l.href}
-                  href={l.href}
-                  className={`text-[0.95rem] font-medium whitespace-nowrap transition-all duration-300 hover:text-[var(--main-accent)] no-underline ${
-                    isActive(l.href) ? "text-[var(--main-accent)]" : "text-[var(--chrome-text-muted)]"
-                  }`}
-                >
-                  {l.label}
-                </Link>
-              ))}
-            </nav>
+            ))}
+          </nav>
 
-            <div className="flex items-center gap-3.5 max-[560px]:gap-2">
-              <a
-                href={site.phoneHref}
-                className="tile-skew hidden lg:inline-flex items-center justify-center gap-2 py-2.5 px-4 whitespace-nowrap rounded-[var(--radius-sm)] font-bold text-[0.82rem] no-underline transition-all duration-300 text-[var(--on-primary)] shadow-[4px_4px_0_0_var(--chrome-text)] hover:-translate-y-[2px] hover:shadow-[5px_5px_0_0_var(--chrome-text)] active:translate-x-[3px] active:translate-y-[3px] active:shadow-[1px_1px_0_0_var(--chrome-text)]"
-                style={{ background: "var(--primary-gradient)" }}
-                aria-label={`Call Eddinet at ${site.phone}`}
-              >
-                {site.phone}
-              </a>
+          <div className="flex items-center gap-3.5 max-[560px]:gap-2">
+            <a
+              href={site.phoneHref}
+              className="tile-skew hidden lg:inline-flex items-center justify-center gap-2 py-2.5 px-4 whitespace-nowrap rounded-[var(--radius-sm)] font-bold text-[0.82rem] no-underline transition-all duration-300 text-[var(--on-primary)] shadow-[4px_4px_0_0_var(--chrome-text)] hover:-translate-y-[2px] hover:shadow-[5px_5px_0_0_var(--chrome-text)] active:translate-x-[3px] active:translate-y-[3px] active:shadow-[1px_1px_0_0_var(--chrome-text)]"
+              style={{ background: "var(--primary-gradient)" }}
+              aria-label={`Call Eddinet at ${site.phone}`}
+            >
+              {site.phone}
+            </a>
 
-              <button
-                className="w-[42px] h-[42px] rounded-full bg-white/[0.08] border border-white/[0.18] text-[var(--chrome-text)] text-[1.15rem] cursor-pointer flex items-center justify-center transition-all duration-300 hover:bg-white/[0.16] hover:border-[rgba(var(--accent-rgb),0.5)] hover:-translate-y-0.5 active:scale-[0.94] max-[560px]:w-[36px] max-[560px]:h-[36px]"
-                onClick={toggleMode}
-                title="Dark / Light Mode"
-              >
-                {mode === "dark" ? "☀️" : "🌙"}
-              </button>
+            <button
+              className="w-[42px] h-[42px] rounded-full bg-white/[0.08] border border-white/[0.18] text-[var(--chrome-text)] text-[1.15rem] cursor-pointer flex items-center justify-center transition-all duration-300 hover:bg-white/[0.16] hover:border-[rgba(var(--accent-rgb),0.5)] hover:-translate-y-0.5 active:scale-[0.94] max-[560px]:w-[36px] max-[560px]:h-[36px]"
+              onClick={toggleMode}
+              title="Dark / Light Mode"
+            >
+              {mode === "dark" ? "☀️" : "🌙"}
+            </button>
 
-              <button
-                className="lg:hidden w-[42px] h-[42px] rounded-full bg-white/[0.08] border border-white/[0.18] text-[var(--chrome-text)] text-[1.3rem] cursor-pointer flex items-center justify-center transition-all duration-300 hover:bg-white/[0.16] max-[560px]:w-[36px] max-[560px]:h-[36px]"
-                onClick={() => setMobileOpen(!mobileOpen)}
-                aria-label="Toggle navigation menu"
-                aria-expanded={mobileOpen}
-              >
-                {mobileOpen ? "✕" : "☰"}
-              </button>
-            </div>
+            <button
+              className="lg:hidden w-[42px] h-[42px] rounded-full bg-white/[0.08] border border-white/[0.18] text-[var(--chrome-text)] text-[1.3rem] cursor-pointer flex items-center justify-center transition-all duration-300 hover:bg-white/[0.16] max-[560px]:w-[36px] max-[560px]:h-[36px]"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Toggle navigation menu"
+              aria-expanded={mobileOpen}
+            >
+              {mobileOpen ? "✕" : "☰"}
+            </button>
           </div>
         </div>
 
         <div
-          className={`lg:hidden absolute top-full left-0 right-0 bg-[var(--header-bg)] border-b border-[var(--hairline)] shadow-[var(--shadow-menu)] transition-all duration-300 overflow-y-auto max-h-[calc(100vh-90px)] ${
+          className={`hdrPanel lg:hidden transition-all duration-300 max-h-[calc(100vh-120px)] ${
             mobileOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2 pointer-events-none"
           }`}
         >
