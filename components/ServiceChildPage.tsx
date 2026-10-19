@@ -226,7 +226,7 @@ export default function ServiceChildPage({
                     alt={child.title}
                     width={1200}
                     height={675}
-                    className="w-full h-full object-cover object-top transition-transform duration-700 ease-out hover:scale-[1.05]"
+                    className="w-full h-full object-contain transition-transform duration-700 ease-out hover:scale-[1.05]"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <div className="absolute bottom-4 left-5 inline-flex items-center gap-2 py-1.5 px-3.5 rounded-full bg-[rgba(11,15,25,0.6)] backdrop-blur-md border border-white/15 text-[0.72rem] font-bold text-white">

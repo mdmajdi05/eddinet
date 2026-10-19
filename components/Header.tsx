@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useTheme } from "./ThemeProvider";
@@ -15,21 +15,6 @@ import type {
 import { site } from "@/data/site/contact";
 import { IMG } from "@/data/site/images";
 
-const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "Blog", href: "/blog" },
-  { label: "About", href: "/about" },
-  { label: "Contact Us", href: "/contact" },
-];
-
-const mobileLinks = [
-  { label: "Home", href: "/" },
-  { label: "Services", href: "/services" },
-  { label: "Blog", href: "/blog" },
-  { label: "About", href: "/about" },
-  { label: "Contact Us", href: "/contact" },
-];
-
 // NOTE (performance): nav data `app/layout.tsx` (server) se props me aata hai,
 // taaki poora services/child content client bundle me na jaaye.
 export default function Header({
@@ -42,138 +27,220 @@ export default function Header({
   portfolioMenuCategories: PortfolioMenuCategory[];
 }) {
   const { mode, toggleMode } = useTheme();
+  const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [progress, setProgress] = useState(0);
   const pathname = usePathname();
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
+  // Compact glass bar + viewport-top progress line while scrolling.
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", onScroll);
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 24);
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      setProgress(h > 0 ? Math.min(100, (y / h) * 100) : 0);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Close the mobile menu on Escape and return focus to the toggle.
   useEffect(() => {
-    setMobileOpen(false);
+    if (!open) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+        buttonRef.current?.focus();
+      }
+    };
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [open]);
+
+  useEffect(() => {
+    setOpen(false);
   }, [pathname]);
 
+  // Desktop par aa jaane par mobile panel band kar do.
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth > 1024) setOpen(false);
+    };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   const isActive = (href: string) => {
-    if (href.startsWith("/#")) return pathname === "/";
-    if (href === "/") return pathname === "/";
-    return pathname.startsWith(href);
+    const base = href.split("#")[0];
+    if (base === "/") return pathname === "/";
+    return pathname === base || pathname.startsWith(base + "/");
   };
 
   return (
     <>
-      <header
-        className={`hdrShell transition-all duration-300 ease-in-out${
-          scrolled ? " is-stuck" : ""
-        }`}
-        style={{ color: "var(--chrome-text)" }}
-      >
-        <div className="hdrInner">
-          <Link href="/" className="flex items-center shrink-0" onClick={() => setMobileOpen(false)}>
-            <Image src={IMG.brand.eddinetLogo.src} alt="Eddinet" width={320} height={88} className="h-[48px] xl:h-[64px] w-auto max-[560px]:h-[34px]" priority />
+      <i
+        className="scrollProgress"
+        style={{ width: `${progress}%` }}
+        aria-hidden="true"
+      />
+
+      <header className={`siteHeader${scrolled ? " is-scrolled" : ""}`}>
+        <Link className="logo" href="/" aria-label="Eddinet home">
+          <Image
+            src={IMG.brand.eddinetLogo.src}
+            alt="Eddinet"
+            width={320}
+            height={88}
+            sizes="200px"
+            priority
+          />
+        </Link>
+
+        <nav
+          id="primary-navigation"
+          className={`nav${open ? " open" : ""}`}
+          aria-label="Primary"
+        >
+          <Link
+            href="/"
+            className={`navItem${isActive("/") ? " active" : ""}`}
+            onClick={() => setOpen(false)}
+          >
+            <span className="navLabel">Home</span>
+            <i className="navUnder" aria-hidden="true" />
+            <i className="navDot" aria-hidden="true" />
           </Link>
 
-          <nav className="navPill hidden lg:flex">
-            <Link
-              href="/"
-              className={`navChip${isActive("/") && !mobileOpen ? " is-active" : ""}`}
-            >
-              Home
-            </Link>
-            <MegaMenu categories={megaMenuCategories} />
-            <PortfolioMegaMenu categories={portfolioMenuCategories} />
-            {navLinks.slice(1).map((l) => (
-              <Link
-                key={l.href}
-                href={l.href}
-                className={`navChip${isActive(l.href) ? " is-active" : ""}`}
-              >
-                {l.label}
-              </Link>
-            ))}
-          </nav>
+          <MegaMenu categories={megaMenuCategories} />
 
-          <div className="flex items-center gap-3.5 max-[560px]:gap-2">
-            <a
-              href={site.phoneHref}
-              className="hdrPhone tile-skew hidden lg:inline-flex items-center justify-center gap-2 py-2.5 px-4 whitespace-nowrap rounded-[var(--radius-sm)] font-bold text-[0.82rem] no-underline transition-all duration-300 text-[var(--on-primary)] shadow-[4px_4px_0_0_var(--chrome-text)] hover:-translate-y-[2px] hover:shadow-[5px_5px_0_0_var(--chrome-text)] active:translate-x-[3px] active:translate-y-[3px] active:shadow-[1px_1px_0_0_var(--chrome-text)]"
-              style={{ background: "var(--primary-gradient)" }}
-              aria-label={`Call Eddinet at ${site.phone}`}
-            >
-              {site.phone}
-            </a>
+          <PortfolioMegaMenu categories={portfolioMenuCategories} />
 
-            <button
-              className="w-[42px] h-[42px] rounded-full bg-white/[0.08] border border-white/[0.18] text-[var(--chrome-text)] text-[1.15rem] cursor-pointer flex items-center justify-center transition-all duration-300 hover:bg-white/[0.16] hover:border-[rgba(var(--accent-rgb),0.5)] hover:-translate-y-0.5 active:scale-[0.94] max-[560px]:w-[36px] max-[560px]:h-[36px]"
-              onClick={toggleMode}
-              title="Dark / Light Mode"
-            >
-              {mode === "dark" ? "☀️" : "🌙"}
-            </button>
+          {/* Mobile panel me mega menus ki jagah simple links. */}
+          <Link
+            href="/services"
+            className="navItem navMobileOnly"
+            onClick={() => setOpen(false)}
+          >
+            <span className="navLabel">Services</span>
+          </Link>
+          <Link
+            href="/portfolio"
+            className="navItem navMobileOnly"
+            onClick={() => setOpen(false)}
+          >
+            <span className="navLabel">Portfolio</span>
+          </Link>
 
-            <button
-              className="lg:hidden w-[42px] h-[42px] rounded-full bg-white/[0.08] border border-white/[0.18] text-[var(--chrome-text)] text-[1.3rem] cursor-pointer flex items-center justify-center transition-all duration-300 hover:bg-white/[0.16] max-[560px]:w-[36px] max-[560px]:h-[36px]"
-              onClick={() => setMobileOpen(!mobileOpen)}
-              aria-label="Toggle navigation menu"
-              aria-expanded={mobileOpen}
-            >
-              {mobileOpen ? "✕" : "☰"}
-            </button>
-          </div>
-        </div>
+          <Link
+            href="/blog"
+            className={`navItem${isActive("/blog") ? " active" : ""}`}
+            onClick={() => setOpen(false)}
+          >
+            <span className="navLabel">Blog</span>
+            <i className="navUnder" aria-hidden="true" />
+            <i className="navDot" aria-hidden="true" />
+          </Link>
 
-        <div
-          className={`hdrPanel lg:hidden transition-all duration-300 max-h-[calc(100vh-120px)] ${
-            mobileOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2 pointer-events-none"
-          }`}
-        >
-          <div className="max-w-[var(--container-max)] mx-auto px-5 py-6 flex flex-col gap-1">
-            {mobileLinks.map((l) => (
-              <Link
-                key={l.href}
-                href={l.href}
-                onClick={() => setMobileOpen(false)}
-                className="py-3 text-[1rem] font-semibold no-underline rounded-xl px-3 transition-colors duration-200"
-                style={isActive(l.href) && l.href !== "/services" ? { color: "var(--main-accent)", background: "var(--soft-hover)" } : { color: "var(--chrome-text-muted)" }}
-              >
-                {l.label}
-              </Link>
-            ))}
+          <Link
+            href="/about"
+            className={`navItem${isActive("/about") ? " active" : ""}`}
+            onClick={() => setOpen(false)}
+          >
+            <span className="navLabel">About</span>
+            <i className="navUnder" aria-hidden="true" />
+            <i className="navDot" aria-hidden="true" />
+          </Link>
 
-            <div className="mt-2 mb-1 pl-3 text-[0.68rem] font-bold uppercase tracking-widest text-[var(--text-dim)]">
-              Popular Services
-            </div>
-            {mobileServiceLinks.map((s) => (
+          <Link
+            href="/contact"
+            className={`navItem${isActive("/contact") ? " active" : ""}`}
+            onClick={() => setOpen(false)}
+          >
+            <span className="navLabel">Contact Us</span>
+            <i className="navUnder" aria-hidden="true" />
+            <i className="navDot" aria-hidden="true" />
+          </Link>
+
+          <a
+            className="navContact"
+            href={site.phoneHref}
+            aria-label={`Call Eddinet at ${site.phone}`}
+            onClick={() => setOpen(false)}
+          >
+            <svg className="ctaArrow" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <span className="ctaText">{site.phone}</span>
+            <i className="ctaShine" aria-hidden="true" />
+          </a>
+
+          {/* Mobile panel extras: popular services + contact. */}
+          <div className="navMobileOnly navMobileExtra">
+            <span className="navMobileExtraLabel">Popular Services</span>
+            {mobileServiceLinks.slice(0, 8).map((s) => (
               <Link
                 key={s.slug}
                 href={`/services/${s.slug}`}
-                onClick={() => setMobileOpen(false)}
-                className="py-2.5 pl-6 text-[0.92rem] font-medium no-underline rounded-xl text-[var(--chrome-text-muted)] hover:text-[var(--main-accent)] transition-colors duration-200"
+                onClick={() => setOpen(false)}
+                className="navMobileExtraLink"
               >
                 {s.title}
               </Link>
             ))}
-
-            <div className="flex flex-col gap-3 mt-4 pt-5 border-t border-[var(--hairline)]">
-              <a
-                href={site.whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 py-3 px-5 rounded-full font-bold text-[0.88rem] no-underline bg-[#25D366] text-white hover:bg-[#20ba5a] transition-colors duration-200"
-              >
-                Chat on WhatsApp
-              </a>
-              <a
-                href={site.phoneHref}
-                className="inline-flex items-center justify-center gap-2 py-3 px-5 rounded-full font-bold text-[0.88rem] no-underline border border-[var(--hairline)] bg-white/[0.04] text-[var(--chrome-text)] hover:border-[rgba(var(--accent-rgb),0.5)] transition-colors duration-200"
-              >
-                Call {site.phone}
-              </a>
-            </div>
+            <a
+              href={site.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+              className="navMobileExtraLink"
+              style={{ color: "#25D366", fontWeight: 700 }}
+            >
+              Chat on WhatsApp
+            </a>
+            <a
+              href={site.phoneHref}
+              onClick={() => setOpen(false)}
+              className="navMobileExtraLink"
+            >
+              Call {site.phone}
+            </a>
           </div>
-        </div>
+        </nav>
+
+        {/* Theme toggle — nav aur burger se alag, header ke andar. */}
+        <button
+          type="button"
+          className="themeBtn"
+          onClick={toggleMode}
+          title="Dark / Light mode"
+          aria-label="Toggle dark / light mode"
+        >
+          {mode === "dark" ? "☀️" : "🌙"}
+        </button>
+
+        <button
+          type="button"
+          className={`menuBtn${open ? " open" : ""}`}
+          ref={buttonRef}
+          aria-expanded={open}
+          aria-controls="primary-navigation"
+          aria-label={open ? "Close menu" : "Open menu"}
+          onClick={() => setOpen((value) => !value)}
+        >
+          <span className="menuLines" aria-hidden="true">
+            <i />
+            <i />
+          </span>
+        </button>
       </header>
     </>
   );

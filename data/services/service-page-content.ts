@@ -25,6 +25,7 @@ import {
   getChildSlug,
   getCategoryTemplate,
 } from "@/data/services/child/generated-child-services";
+import { childHeroImages } from "@/data/services/child/child-images.generated";
 import { sharedTestimonials } from "@/data/services/child/_shared";
 import { processSteps } from "@/data/home/home";
 import { docxCategoryPages } from "@/data/services/child/docx-content";
@@ -174,7 +175,11 @@ export function getCategoryPageContent(
         itemDetails[item] ??
         `End-to-end ${item.toLowerCase()} service delivered as part of a connected growth system.`,
       href: childSlug ? `/services/${s.slug}/${childSlug}` : null,
-      image: childServiceImages[s.slug]?.[item] ?? s.image,
+      // 1) childServiceImages map (SEO) → 2) per-child hero image → 3) category image
+      image:
+        childServiceImages[s.slug]?.[item] ??
+        (childSlug ? childHeroImages[`${s.slug}/${childSlug}`] : undefined) ??
+        s.image,
     };
   });
 

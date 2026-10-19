@@ -7,6 +7,10 @@
 import type { GeneratedChildService } from "./generated-child-services";
 import type { SeoChildService } from "./seo-child-services";
 import { services } from "@/data/services/services";
+import {
+  childHeroImages,
+  childFeatureImages,
+} from "./child-images.generated";
 
 import { child as ads_ppc_amazon_ads } from "./ads-ppc/amazon-ads";
 import { child as ads_ppc_chatgpt_ads } from "./ads-ppc/chatgpt-ads";
@@ -167,13 +171,25 @@ function withCategory(
   > & { image?: string },
 ): GeneratedChildService {
   const meta = services.find((s) => s.slug === categorySlug);
+  const pageKey = `${categorySlug}/${page.slug}`;
+  const featureImages = childFeatureImages[pageKey];
   return {
     ...page,
     categorySlug,
     categoryTitle: meta?.title ?? categorySlug,
     categoryIcon: meta?.icon ?? "",
     item: page.title,
-    image: page.image ?? meta?.image ?? "",
+    image:
+      page.image ??
+      childHeroImages[pageKey] ??
+      meta?.image ??
+      "",
+    // Feature cards ko unki apni images milti hain (child-images.generated.ts).
+    features: page.features?.map((feature) =>
+      featureImages?.[feature.title]
+        ? { ...feature, image: featureImages[feature.title] }
+        : feature,
+    ) ?? [],
   };
 }
 

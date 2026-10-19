@@ -4,7 +4,7 @@
   "private": true,
   "description": "Eddinet digital marketing and software agency website.",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "serve": "node scripts/serve-standalone.mjs",

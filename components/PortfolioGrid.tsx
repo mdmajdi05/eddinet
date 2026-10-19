@@ -7,6 +7,7 @@ import {
 } from "react";
 
 import Link from "next/link";
+import Image from "next/image";
 
 import {
   portfolioProjects,
@@ -296,6 +297,21 @@ function ProjectCard({ p }: { p: PortfolioProject }) {
             />
 
           </div>
+        ) : p.image ? (
+
+          /* =================================================
+             LOCAL SCREENSHOT PREVIEW (no live URL)
+             Poora screenshot bina crop ke fit hota hai
+             (object-contain — kuch bhi cut nahi hota).
+             ================================================= */
+
+          <Image
+            src={p.image}
+            alt={`${p.title} website preview`}
+            fill
+            sizes="(max-width: 650px) 100vw, (max-width: 1050px) 50vw, 33vw"
+            className="object-contain"
+          />
         ) : (
 
           /* =================================================

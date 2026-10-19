@@ -8,6 +8,8 @@ import { childPages, seoChildPages } from "./pages";
 export interface GeneratedChildFeature {
   title: string;
   description: string;
+  /** Feature card image — child-images.generated.ts se inject hoti hai. */
+  image?: string;
 }
 
 export interface GeneratedChildStep {

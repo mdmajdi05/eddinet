@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import type { PortfolioMenuCategory } from "@/data/services/nav-menu-types";
 
 // NOTE (performance): pehle `projectCategories` (jo poora portfolio data
@@ -13,8 +14,11 @@ export default function PortfolioMegaMenu({
   categories: PortfolioMenuCategory[];
 }) {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
   const wrapperRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const isActive =
+    pathname === "/portfolio" || pathname.startsWith("/portfolio/");
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
@@ -84,7 +88,7 @@ export default function PortfolioMegaMenu({
   return (
     <div
       ref={wrapperRef}
-      className="relative"
+      className="megaWrap"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -93,21 +97,17 @@ export default function PortfolioMegaMenu({
       <button
         type="button"
         onClick={handleButtonClick}
-        className={`navChip${open ? " is-active" : ""}`}
+        aria-expanded={open}
+        className={`navItem${open || isActive ? " active" : ""}${
+          open ? " open" : ""
+        }`}
       >
-        Portfolio
-
-        <span
-          className={`
-            inline-block
-            text-[10px]
-            transition-transform
-            duration-200
-            ${open ? "rotate-180" : ""}
-          `}
-        >
+        <span className="navLabel">Portfolio</span>
+        <span className="navCaret" aria-hidden="true">
           ▼
         </span>
+        <i className="navUnder" aria-hidden="true" />
+        <i className="navDot" aria-hidden="true" />
       </button>
 
 

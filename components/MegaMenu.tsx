@@ -1,6 +1,7 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import type { MegaMenuCategory } from "@/data/services/nav-menu-types";
 
 // NOTE (performance): pehle yeh component `services` + `getChildSlug` import
@@ -14,8 +15,11 @@ export default function MegaMenu({
   categories: MegaMenuCategory[];
 }) {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
   const wrapperRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const isActive =
+    pathname === "/services" || pathname.startsWith("/services/");
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
@@ -44,18 +48,24 @@ export default function MegaMenu({
   return (
     <div
       ref={wrapperRef}
-      className="relative"
+      className="megaWrap"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       <button
-        className={`navChip${open ? " is-active" : ""}`}
+        type="button"
+        className={`navItem${open || isActive ? " active" : ""}${
+          open ? " open" : ""
+        }`}
+        aria-expanded={open}
         onClick={handleButtonClick}
       >
-        Services
-        <span className={`text-[10px] leading-none transition-transform duration-200 inline-block ${open ? "rotate-180" : ""}`}>
+        <span className="navLabel">Services</span>
+        <span className="navCaret" aria-hidden="true">
           ▼
         </span>
+        <i className="navUnder" aria-hidden="true" />
+        <i className="navDot" aria-hidden="true" />
       </button>
 
       <div
