@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import type { MegaMenuCategory } from "@/data/services/nav-menu-types";
 
 // NOTE (performance): pehle yeh component `services` + `getChildSlug` import
-// karta tha, jisse 139 child-page content files CLIENT bundle me chale jaate
+// karta tha, jisse 138 child-page content files CLIENT bundle me chale jaate
 // the (~1 MB har page par). Ab data SERVER par banta hai
 // (data/services/nav-menu.ts) aur props me sirf halke {label, href} links
 // aate hain.

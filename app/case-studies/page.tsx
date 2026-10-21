@@ -5,17 +5,85 @@ import { caseStudies } from "@/data/portfolio/case-studies";
 import { balancedGrid } from "@/lib/process-grid";
 import AdaptiveLines from "@/components/AdaptiveLines";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { socialMetadata } from "@/lib/social-metadata";
 
 export const metadata: Metadata = {
   title: "Case Studies - Real Work, Real Outcomes",
   description:
     "Eddinet case studies across SEO, AI SEO, paid media, local search and web - showing the challenge, strategy, execution and measurable outcome behind each engagement.",
   alternates: { canonical: "https://eddinet.com/case-studies" },
+  ...socialMetadata({
+    title: "Case Studies - Real Work, Real Outcomes",
+    description:
+      "Eddinet case studies across SEO, AI SEO, paid media, local search and web - showing the challenge, strategy, execution and measurable outcome behind each engagement.",
+    url: "https://eddinet.com/case-studies",
+  }),
 };
+
+// COLLECTIONPAGE + ITEMLIST SCHEMA
+// Case studies page ek collection hai - har case study apni detail page se
+// linked hai. List abhi khaali bhi ho sakti hai (jab tak verified case
+// studies publish nahi hote), isliye itemListElement map se banti hai:
+// empty list par bhi valid JSON banta hai, crash nahi hota.
+const caseStudiesCollectionSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://eddinet.com/case-studies#page",
+  name: "Eddinet Case Studies",
+  url: "https://eddinet.com/case-studies",
+  description:
+    "Eddinet case studies across SEO, AI SEO, paid media, local search and web - showing the challenge, strategy, execution and measurable outcome behind each engagement.",
+  mainEntity: { "@id": "https://eddinet.com/case-studies#list" },
+};
+
+const caseStudiesItemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": "https://eddinet.com/case-studies#list",
+  name: "Eddinet Case Studies",
+  itemListElement: caseStudies.map((c, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: `${c.client} Case Study`,
+    description: c.summary,
+    url: `https://eddinet.com/case-studies/${c.slug}`,
+  })),
+};
+
+// Har case study ke andar kya hota hai - ye 4 blocks same order me
+// publish hote hain, taaki reader ko pata ho ki kya expect karna hai.
+const caseStudyIncludes = [
+  {
+    title: "Challenge",
+    desc: "The specific business problem we were hired to remove, with the baseline numbers that made it urgent - where demand was leaking, which competitors held the ranking, and what the client had already tried without a result.",
+  },
+  {
+    title: "Strategy",
+    desc: "The plan we agreed before starting work: the channel mix, the positioning, the pages, campaigns or product changes we intended to make, and the one metric we committed to moving.",
+  },
+  {
+    title: "Execution",
+    desc: "The build itself - pages shipped, campaigns launched, content published, code deployed, integrations connected - written so a non-technical reader can follow what actually changed in the business.",
+  },
+  {
+    title: "Outcome",
+    desc: "The measured result after the agreed period, with the reporting window stated clearly - plus the trade-offs we hit and what we would do differently if we ran the same engagement again.",
+  },
+];
 
 export default function CaseStudiesPage() {
   return (
     <>
+      {/* JSON-LD: case studies collection + uski list */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudiesCollectionSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudiesItemListSchema) }}
+      />
+
       <section className="pt-[170px] pb-[70px]">
         <div className="w-full max-w-[var(--container-max)] mx-auto px-5 text-center">
           <Breadcrumbs
@@ -35,6 +103,63 @@ export default function CaseStudiesPage() {
             className="text-[var(--text-muted)] text-[1.15rem] max-w-[680px] mx-auto"
             text="How strategy performs against a real budget, a real market and a real competitor set - documented challenge to outcome."
           />
+        </div>
+      </section>
+
+      {/* ================= INTRO ================= */}
+      <section className="pb-[80px]">
+        <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
+          <div className="max-w-[860px] mx-auto text-center mb-14">
+            <h2 className="text-[2.1rem] font-extrabold leading-[1.15] mb-5 text-[var(--text-main)] max-[768px]:text-[1.6rem]">
+              What We Document, <span className="gradient-text">Every Time</span>
+            </h2>
+            <p className="text-[var(--text-muted)] text-[1.05rem] leading-relaxed mb-4">
+              Every case study here is written for one reader: a business owner
+              deciding whether Eddinet can deliver. Each one starts with the
+              constraint we were hired to remove - the flat pipeline, the lost
+              page-one rankings, the store that stopped converting - and then
+              follows the same four steps from there.
+            </p>
+            <p className="text-[var(--text-muted)] text-[1.05rem] leading-relaxed">
+              We publish with client permission only, and every number on this
+              page has been checked by the client before it went live. Where a
+              result depends on a market, a budget range or a reporting window,
+              we state that instead of rounding it up. It makes the page slower
+              to fill, and it is the only version we are willing to publish.
+            </p>
+          </div>
+
+          <div className={balancedGrid(caseStudyIncludes.length, { base: 2, gapClass: "cgrid-gap-6", stages: [{ bp: 768, maxCols: 1 }] })}>
+            {caseStudyIncludes.map((item, i) => (
+              <div
+                key={item.title}
+                className="p-7 bg-[var(--bg-card)] border border-[var(--border-color)] rounded-[var(--radius-lg)] h-full"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="w-9 h-9 rounded-xl bg-[rgba(var(--accent-rgb),0.12)] flex items-center justify-center text-[var(--main-accent)] font-extrabold text-[0.82rem] shrink-0">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="text-[1.1rem] font-extrabold text-[var(--text-main)]">
+                    {item.title}
+                  </h3>
+                </div>
+                <p className="text-[var(--text-muted)] text-[0.92rem] leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="max-w-[860px] mx-auto mt-12 text-center">
+            <p className="text-[var(--text-muted)] text-[0.98rem] leading-relaxed">
+              Not every project becomes a case study. To publish one we need a
+              baseline to compare against, a result the client is comfortable
+              having attributed to the work, and enough detail to be useful to
+              someone running a similar business. Work that is still in progress,
+              or where the client needs the numbers kept private, stays in a
+              client report instead.
+            </p>
+          </div>
         </div>
       </section>
 

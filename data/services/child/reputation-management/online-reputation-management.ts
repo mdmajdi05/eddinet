@@ -15,8 +15,8 @@ import { benefits } from "../_category/reputation-management";
 export const child = {
   slug: "online-reputation-management-services-in-india",
   title: "Online Reputation Management",
-  metaTitle: "Online Reputation Management Services in Delhi NCR | Eddinet",
-  metaDescription: "Protecting and strengthening how your brand is perceived across the web. Monitoring, response and growth handled as one continuous system. Eddinet delivers dependable online reputation management services in Delhi NCR for India and global clients. Get a free proposal today.",
+  metaTitle: "Online Reputation Management Services in India | Eddinet",
+  metaDescription: "Protecting and strengthening how your brand is perceived across the web. Monitoring, response and growth handled as one continuous system. Eddinet delivers dependable online reputation management services across India and globally. Get a free proposal today.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "Search Result Management | Reputation Repair | Negative Content Removal | Personal ORM | Corporate ORM",
   // the <h1> itself — doc line "Main hero H1 headline:-"

@@ -5,12 +5,19 @@ import AdaptiveLines from "@/components/AdaptiveLines";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { site } from "@/data/site/contact";
 import { balancedGrid } from "@/lib/process-grid";
+import { socialMetadata } from "@/lib/social-metadata";
 
 export const metadata: Metadata = {
   title: "Contact Us - Talk to a Digital Growth Expert",
   description:
     "Contact Eddinet in Okhla, New Delhi for a free 30-minute growth consultation. Call, WhatsApp or submit the form - we respond within 2 business hours.",
   alternates: { canonical: "https://eddinet.com/contact" },
+  ...socialMetadata({
+    title: "Contact Us - Talk to a Digital Growth Expert",
+    description:
+      "Contact Eddinet in Okhla, New Delhi for a free 30-minute growth consultation. Call, WhatsApp or submit the form - we respond within 2 business hours.",
+    url: "https://eddinet.com/contact",
+  }),
 };
 
 const socialLinks = [
@@ -105,6 +112,66 @@ const steps = [
   ["You get a clear plan", "A recommended combination of services, priorities and expected outcomes - no jargon."],
 ];
 
+//  Contact page ka schema — pehle ye page par KOI JSON-LD nahi tha.
+//  Local SEO / "Delhi NCR" map pack ke liye ContactPoint + ContactPage
+//  + ProfessionalService zaroori hota hai.
+const contactSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  name: "Contact Eddinet",
+  description:
+    "Talk to Eddinet for a free 30-minute growth consultation - SEO, AI SEO, paid media, web, software, AI and cloud services from Delhi NCR.",
+  url: "https://eddinet.com/contact",
+  mainEntity: {
+    "@type": "ProfessionalService",
+    "@id": `${site.url}#organization`,
+    name: site.name,
+    description: site.tagline,
+    url: site.url,
+    logo: "https://eddinet.com/images/brand/eddinet-logo.webp",
+    image: "https://eddinet.com/opengraph-image.webp",
+    telephone: site.phone,
+    email: site.email,
+    priceRange: "$$",
+    address: {
+      "@type": "PostalAddress",
+      ...site.postalAddress,
+    },
+    areaServed: [
+      { "@type": "AdministrativeArea", name: "Delhi NCR" },
+      { "@type": "Country", name: "India" },
+    ],
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ],
+      opens: "10:00",
+      closes: "19:00",
+    },
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: site.phone,
+        email: site.email,
+        contactType: "sales",
+        areaServed: ["Delhi NCR", "India"],
+        availableLanguage: ["en", "hi"],
+      },
+    ],
+    sameAs: [
+      site.social.linkedin,
+      site.social.facebook,
+      site.social.instagram,
+    ].filter(Boolean),
+  },
+};
+
 export default function ContactPage() {
   const stepsGrid = balancedGrid(steps.length, {
     base: 3,
@@ -114,6 +181,10 @@ export default function ContactPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
+      />
       <section className="relative pt-[150px] pb-[60px] overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-[-25%] right-[-10%] w-[500px] h-[500px] rounded-full bg-[var(--main-accent)]/8 blur-3xl" />

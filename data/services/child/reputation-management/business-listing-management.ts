@@ -15,8 +15,8 @@ import { benefits } from "../_category/reputation-management";
 export const child = {
   slug: "business-listing-management-services-in-india",
   title: "Business Listing Management",
-  metaTitle: "Business Listing Management Services in Delhi NCR | Eddinet",
-  metaDescription: "Accurate, consistent listings across directories that boost local credibility. NAP consistency everywhere — the boring foundation of local dominance. Eddinet delivers dependable business listing management services in Delhi NCR for India and global clients. Get a free proposal today.",
+  metaTitle: "Business Listing Management Services in India | Eddinet",
+  metaDescription: "Accurate, consistent listings across directories that boost local credibility. NAP consistency everywhere — the boring foundation of local dominance. Eddinet delivers dependable business listing management services across India and globally. Get a free proposal today.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "Local SEO Optimization | Multi-Directory Citation Building | NAP Consistency",
   // the <h1> itself — doc line "Main hero H1 headline:-"

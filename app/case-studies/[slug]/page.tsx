@@ -7,6 +7,7 @@ import { site } from "@/data/site/contact";
 import AdaptiveLines from "@/components/AdaptiveLines";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { resolveCaseStudyRedirect } from "@/lib/content-fallback";
+import { socialMetadata } from "@/lib/social-metadata";
 
 export function generateStaticParams() {
   return caseStudies.map((c) => ({ slug: c.slug }));
@@ -24,11 +25,11 @@ export async function generateMetadata({
     title: `${c.client} Case Study - ${c.tag}`,
     description: c.summary,
     alternates: { canonical: `https://eddinet.com/case-studies/${c.slug}` },
-    openGraph: {
+    ...socialMetadata({
       title: `${c.client} Case Study | Eddinet`,
       description: c.summary,
       url: `https://eddinet.com/case-studies/${c.slug}`,
-    },
+    }),
   };
 }
 

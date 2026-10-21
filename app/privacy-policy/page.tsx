@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { site } from "@/data/site/contact";
+import { socialMetadata } from "@/lib/social-metadata";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "How Eddinet collects, uses and protects your personal information.",
   alternates: { canonical: "https://eddinet.com/privacy-policy" },
+  ...socialMetadata({
+    title: "Privacy Policy",
+    description: "How Eddinet collects, uses and protects your personal information.",
+    url: "https://eddinet.com/privacy-policy",
+  }),
 };
 
 const sections: { h: string; p: string[] }[] = [

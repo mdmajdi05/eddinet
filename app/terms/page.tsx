@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { site } from "@/data/site/contact";
+import { socialMetadata } from "@/lib/social-metadata";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
   description: "The terms that govern your use of the Eddinet website and services.",
   alternates: { canonical: "https://eddinet.com/terms" },
+  ...socialMetadata({
+    title: "Terms of Service",
+    description: "The terms that govern your use of the Eddinet website and services.",
+    url: "https://eddinet.com/terms",
+  }),
 };
 
 const sections: { h: string; p: string[] }[] = [

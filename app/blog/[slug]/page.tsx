@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { notFound, permanentRedirect } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Clock, Tag, User, Mail } from "lucide-react";
@@ -7,6 +8,7 @@ import { site } from "@/data/site/contact";
 import { services, type Service } from "@/data/services/services";
 import { resolveBlogRedirect } from "@/lib/content-fallback";
 import { balancedGrid } from "@/lib/process-grid";
+import { socialMetadata } from "@/lib/social-metadata";
 import ReadingProgress from "./reading-progress";
 import SidebarMessageForm from "./sidebar-message-form";
 import {
@@ -21,7 +23,98 @@ const RELATED_SERVICES: Record<string, string[]> = {
   "Search Engine Optimization": ["seo", "content", "web-development"],
   "Paid Ads & CRO": ["ads-ppc", "content", "seo"],
   "Tech & Development": ["web-development", "cloud-devops", "software-ai"],
+  "Digital Marketing": ["ads-ppc", "seo", "content"],
 };
+
+/** Brand logo — JSON-LD (publisher/author logo) me absolute URL chahiye. */
+const LOGO_URL = "https://eddinet.com/images/brand/eddinet-logo.webp";
+
+// ----------------------------------------------------------------------------
+//  Inline content renderer (server-side)
+//  WHY: kuch blog posts dusre articles ko cross-link karti hain. Data me link
+//  plain markdown syntax me hai — "[label](/blog/slug)" — taaki content file
+//  safe rahe (koi raw HTML nahi). Ye chhota parser usko real <Link> me badal
+//  deta hai. Chat wala RichText component client-side hai, isliye article body
+//  ko RSC (server component) hi rakhte hain — crawl performance ke liye.
+// ----------------------------------------------------------------------------
+const INLINE_LINK_RE = /\[([^\]]+)\]\(([^)]+)\)/g;
+/** Paragraph ke start me "- " → wo line ek bullet list item hai. */
+const LIST_ITEM_RE = /^[-•*]\s+/;
+
+function renderInline(text: string, keyPrefix: string): ReactNode[] {
+  const nodes: ReactNode[] = [];
+  let last = 0;
+  let match: RegExpExecArray | null;
+  let i = 0;
+
+  INLINE_LINK_RE.lastIndex = 0;
+  while ((match = INLINE_LINK_RE.exec(text)) !== null) {
+    if (match.index > last) nodes.push(text.slice(last, match.index));
+
+    const label = match[1];
+    const href = match[2];
+    nodes.push(
+      <Link
+        key={`${keyPrefix}-l-${i}`}
+        href={href}
+        className="text-[var(--main-accent)] hover:underline font-medium"
+      >
+        {label}
+      </Link>,
+    );
+
+    last = INLINE_LINK_RE.lastIndex;
+    i++;
+  }
+
+  if (last < text.length) nodes.push(text.slice(last));
+  return nodes;
+}
+
+/**
+ * Section paragraphs → HTML. Consecutive "- " paragraphs ek <ul> banate hain,
+ * baaki normal <p> rehte hain (purane posts bina bullet ke bilkul same rehte hain).
+ */
+function renderParagraphs(paragraphs: string[], keyPrefix: string): ReactNode[] {
+  const blocks: ReactNode[] = [];
+  let bullets: string[] = [];
+
+  const flushBullets = () => {
+    if (!bullets.length) return;
+    const key = `${keyPrefix}-ul-${blocks.length}`;
+    blocks.push(
+      <ul
+        key={key}
+        className="list-disc pl-6 mb-5 space-y-2 text-[var(--text-muted)] leading-relaxed text-[1.05rem]"
+      >
+        {bullets.map((b, i) => (
+          <li key={`${key}-${i}`}>{renderInline(b, `${key}-${i}`)}</li>
+        ))}
+      </ul>,
+    );
+    bullets = [];
+  };
+
+  paragraphs.forEach((p, idx) => {
+    const trimmed = p.trim();
+    if (LIST_ITEM_RE.test(trimmed)) {
+      bullets.push(trimmed.replace(LIST_ITEM_RE, ""));
+      return;
+    }
+    flushBullets();
+    blocks.push(
+      <p
+        key={`${keyPrefix}-p-${idx}`}
+        className="text-[var(--text-muted)] leading-relaxed mb-4 text-[1.05rem]"
+      >
+        {renderInline(p, `${keyPrefix}-p-${idx}`)}
+      </p>,
+    );
+  });
+
+  flushBullets();
+  return blocks;
+}
 
 export function generateStaticParams() {
   return insights.map((i) => ({ slug: i.slug }));
@@ -36,34 +129,28 @@ export async function generateMetadata({
   const post = getInsightBySlug(slug);
   if (!post) return {};
   const publishedTime = new Date(post.date).toISOString();
+  // SEO title/description post ke apne override se aata hai (keyword-focused chhota
+  // title chahiye to `metaTitle`/`metaDescription` set karo) — warna article title/excerpt.
+  const metaTitle = post.metaTitle ?? post.title;
+  const metaDescription = post.metaDescription ?? post.excerpt;
   return {
-    title: post.title,
-    description: post.excerpt,
+    title: metaTitle,
+    description: metaDescription,
     robots: {
       index: true,
       follow: true,
     },
     authors: [{ name: site.name }],
     alternates: { canonical: `https://eddinet.com/blog/${post.slug}` },
-    openGraph: {
-      title: post.title,
-      description: post.excerpt,
+    ...socialMetadata({
+      title: metaTitle,
+      description: metaDescription,
       url: `https://eddinet.com/blog/${post.slug}`,
       type: "article",
-      locale: "en_IN",
-      siteName: site.name,
       publishedTime,
       modifiedTime: publishedTime,
       authors: [site.name],
-      images: [
-        {
-          url: "https://eddinet.com/opengraph-image.webp",
-          width: 1200,
-          height: 630,
-          alt: "Eddinet - Digital Marketing & Software Agency",
-        },
-      ],
-    },
+    }),
   };
 }
 
@@ -221,14 +308,48 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
     ],
   };
 
+  // Schema.org ko ISO 8601 chahiye — data me human-readable date ("October 21, 2026") hai.
+  const publishedTime = new Date(post.date).toISOString();
+  // Image local path hota hai ("/images/stock/...") — schema me absolute URL chahiye.
+  const imageUrl = post.image.startsWith("http")
+    ? post.image
+    : `https://eddinet.com${post.image}`;
+  // Approximate word count — headings + saare section paragraphs ke words.
+  const wordCount = post.sections.reduce(
+    (total, sec) =>
+      total +
+      (sec.heading ? sec.heading.split(/\s+/).filter(Boolean).length : 0) +
+      sec.paragraphs.reduce(
+        (sum, p) => sum + p.split(/\s+/).filter(Boolean).length,
+        0,
+      ),
+    0,
+  );
+
   const schema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
     description: post.excerpt,
-    datePublished: post.date,
-    author: { "@type": "Organization", name: site.name, url: site.url },
-    publisher: { "@type": "Organization", name: site.name, url: site.url },
+    image: imageUrl,
+    datePublished: publishedTime,
+    dateModified: publishedTime,
+    wordCount,
+    articleSection: post.category,
+    keywords: [post.category, post.label].join(", "),
+    inLanguage: "en-IN",
+    author: {
+      "@type": "Organization",
+      name: site.name,
+      url: site.url,
+      logo: LOGO_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: site.name,
+      url: site.url,
+      logo: LOGO_URL,
+    },
     mainEntityOfPage: `https://eddinet.com/blog/${post.slug}`,
   };
 
@@ -307,14 +428,7 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
                           {sec.heading}
                         </h2>
                       )}
-                      {sec.paragraphs.map((p, j) => (
-                        <p
-                          key={j}
-                          className="text-[var(--text-muted)] leading-relaxed mb-4 text-[1.05rem]"
-                        >
-                          {p}
-                        </p>
-                      ))}
+                      {renderParagraphs(sec.paragraphs, `sec-${i}`)}
                     </div>
                   ))}
                 </div>

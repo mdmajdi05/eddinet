@@ -15,8 +15,8 @@ import { benefits } from "../_category/reputation-management";
 export const child = {
   slug: "online-review-monitoring-services-in-india",
   title: "Review Monitoring",
-  metaTitle: "Review Monitoring Services in Delhi NCR | Eddinet",
-  metaDescription: "Tracking and alerting on reviews across Google and other platforms. You'll know the moment anything new is said about you. Eddinet delivers dependable review monitoring services in Delhi NCR for India and global clients. Get a free proposal today.",
+  metaTitle: "Review Monitoring Services in India | Eddinet",
+  metaDescription: "Tracking and alerting on reviews across Google and other platforms. You'll know the moment anything new is said about you. Eddinet delivers dependable review monitoring services across India and globally. Get a free proposal today.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "Multi-Platform Tracking | Instant Review Alerts | Brand Mention Monitoring",
   // the <h1> itself — doc line "Main hero H1 headline:-"

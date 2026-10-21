@@ -388,50 +388,89 @@ export default function Services() {
 
                 <div className="relative">
 
-                  {/* IMAGE */}
-                  <div className="h-[260px] relative overflow-hidden">
-                    <Image
-                      src={s.image}
-                      alt={s.title}
-                      fill
-                      className="
-                        object-contain
-                        transition-transform
-                        duration-700
-                        group-hover:scale-110
-                      "
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
+                  {/* =========================================================
+                      IMAGE — curved white canvas
+                      Illustrations 650x523 hain (ratio 1.243). Pehle ye seedha
+                      dark card ke upar ek HARD-EDGED white rectangle ban
+                      jaata tha — aur 260px ki box me "object-contain" hone ki
+                      wajah se dono taraf ka bada khaali black area bhi
+                      dikhta tha.
 
-                    <div className="absolute inset-0 to-transparent" />
+                      Ab:
+                      - Canvas ka apna aspect-ratio 650/523 hai, aur image
+                        `object-contain` hai — matlab illustration EXACTLY
+                        fit hoti hai. Na crop, na letterbox, na khaali jagah.
+                      - Canvas white hai + bade rounded corners (28px) —
+                        illustration ka apna white background canvas me
+                        blend ho jaata hai, to dikhta ek clean CURVED panel.
+                      - Image ke andar 10px ka white margin (inset-2.5) hai,
+                        isliye hover zoom bhi artwork ko touch nahi karta.
+                      - Badge bottom-right me hai — illustrations ke bottom-
+                        right corner me koi content nahi hota, to overlap
+                        bhi clean lagta hai.
+                      ========================================================= */}
+                  <div className="relative p-3.5 pb-0.5">
+                    <div
+                      className="
+                        relative
+                        overflow-hidden
+                        rounded-[28px]
+                        bg-white
+                        ring-1
+                        ring-black/[0.06]
+                        shadow-[0_20px_45px_-24px_rgba(0,0,0,0.55)]
+                      "
+                    >
+                      <div className="relative w-full aspect-[650/523]">
+                        <div className="absolute inset-2.5">
+                          <Image
+                            src={s.image}
+                            alt={s.title}
+                            fill
+                            className="
+                              object-contain
+                              transition-transform
+                              duration-700
+                              ease-out
+                              group-hover:scale-[1.05]
+                            "
+                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          />
+                        </div>
+                      </div>
+                    </div>
 
                     <div
                       className="
                         absolute
-                        top-4
-                        right-4
+                        bottom-4
+                        right-6
                         py-1
                         px-3
                         rounded-full
-                        bg-[rgba(0,0,0,0.5)]
+                        bg-[rgba(11,15,25,0.78)]
                         backdrop-blur-md
                         border
-                        border-[rgba(255,255,255,0.1)]
+                        border-white/10
                         text-[0.7rem]
                         font-bold
-                        text-white/80
+                        text-white
+                        shadow-[0_6px_16px_-8px_rgba(0,0,0,0.6)]
                       "
                     >
                       {s.allItems.length}+ Services
-                    </div>
-
-                    <div className="absolute bottom-4 left-5 right-5 flex items-center gap-3">
-                      {/* Icon intentionally hidden */}
                     </div>
                   </div>
 
                   {/* CARD CONTENT */}
                   <div className="p-5 pt-4">
+
+                    {/* Service name as a real heading — pehle card me koi
+                        H3 nahi tha, sirf illustration me likha tha. Ab page
+                        outline me har service ka apna heading hai (SEO + a11y). */}
+                    <h3 className="text-[1.12rem] font-extrabold leading-snug text-[var(--text-main)] mb-2.5">
+                      {s.title}
+                    </h3>
 
                     <p
                       className="

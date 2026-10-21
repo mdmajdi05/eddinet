@@ -95,7 +95,7 @@ export const child = {
     ],
   },
   caseStudy: {
-    title: "SaaS Platform â€” AI Overview Visibility",
+    title: "SaaS Platform — AI Overview Visibility",
     metric: "Featured in 40+ AI Overviews in 3 Months",
     description: "A B2B SaaS company was invisible in Google's AI Overviews despite strong traditional rankings. Through schema engineering, entity optimisation and content restructuring, we achieved featured placement in over 40 AI-generated answers, increasing brand mention-driven traffic by 220%.",
   },
@@ -103,7 +103,7 @@ export const child = {
     {
       name: "Arjun Nair",
       designation: "CEO, CloudStack Solutions",
-      review: "Eddinet helped us understand that SEO is no longer just about page one rankings. Their AI SEO strategy got our brand mentioned in Google's AI Overviews â€” a channel we did not even know existed.",
+      review: "Eddinet helped us understand that SEO is no longer just about page one rankings. Their AI SEO strategy got our brand mentioned in Google's AI Overviews — a channel we did not even know existed.",
     },
     {
       name: "Sneha Reddy",
@@ -191,11 +191,11 @@ export const child = {
   faqs: [
     {
       q: "What is AI SEO and how is it different from traditional SEO?",
-      a: "AI SEO (also called Generative SEO) optimises your content and online presence so your brand gets cited, recommended and surfaced in AI-generated search answers â€” Google AI Overviews, ChatGPT Search, Perplexity and Bing Copilot. Traditional SEO focuses on ranking in classic blue-link results. AI SEO builds for the next generation of search where answers are generated, not just listed.",
+      a: "AI SEO (also called Generative SEO) optimises your content and online presence so your brand gets cited, recommended and surfaced in AI-generated search answers — Google AI Overviews, ChatGPT Search, Perplexity and Bing Copilot. Traditional SEO focuses on ranking in classic blue-link results. AI SEO builds for the next generation of search where answers are generated, not just listed.",
     },
     {
       q: "Will AI SEO replace traditional SEO?",
-      a: "AI SEO does not replace traditional SEO â€” it builds on top of it. Technical health, content quality and authority signals remain foundational. AI SEO adds a new layer of structured data, entity optimisation and content formatting that helps AI models extract and cite your content in generated answers.",
+      a: "AI SEO does not replace traditional SEO — it builds on top of it. Technical health, content quality and authority signals remain foundational. AI SEO adds a new layer of structured data, entity optimisation and content formatting that helps AI models extract and cite your content in generated answers.",
     },
     {
       q: "How do you track AI SEO performance?",

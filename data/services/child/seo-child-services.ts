@@ -1,4 +1,5 @@
 import { seoChildPages } from "./pages";
+import { buildMetaDescription } from "@/lib/meta-description";
 
 export interface SeoChildFeature {
   title: string;
@@ -88,11 +89,22 @@ export interface SeoChildService {
 
 // Content ab per-page files se aata hai:
 //   data/services/child/seo/<childSlug>.ts
+//
+// Meta description 160 char me fit hoti hai (SERP me ~155-160 char ke baad
+// truncate hota hai) — poore sentences bacha kar.
+const trimmedSeoChildPages: Record<string, SeoChildService> =
+  Object.fromEntries(
+    Object.entries(seoChildPages).map(([key, page]) => [
+      key,
+      { ...page, metaDescription: buildMetaDescription(page.metaDescription) },
+    ]),
+  );
+
 export const seoChildServices: SeoChildService[] =
-  Object.values(seoChildPages);
+  Object.values(trimmedSeoChildPages);
 
 export function getSeoChildBySlug(slug: string): SeoChildService | undefined {
-  return seoChildPages[slug];
+  return trimmedSeoChildPages[slug];
 }
 
 export const seoItemToSlug: Record<string, string> = {

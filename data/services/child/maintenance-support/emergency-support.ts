@@ -15,8 +15,8 @@ import { benefits } from "../_category/maintenance-support";
 export const child = {
   slug: "emergency-website-support-services-in-india",
   title: "Emergency Support",
-  metaTitle: "Emergency Support Services in Delhi NCR | Eddinet",
-  metaDescription: "Priority assistance that gets critical issues fixed fast when something breaks. Because a down checkout doesn't wait till Monday. Eddinet delivers dependable emergency support services in Delhi NCR for India and global clients. Get a free proposal today.",
+  metaTitle: "Emergency Support Services in India | Eddinet",
+  metaDescription: "Priority assistance that gets critical issues fixed fast when something breaks. Because a down checkout doesn't wait till Monday. Eddinet delivers dependable emergency support services across India and globally. Get a free proposal today.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "Rapid Incident Containment | Immediate Technical Remediation | 24/7 Zero-Downtime Incident Response",
   // the <h1> itself — doc line "Main hero H1 headline:-"

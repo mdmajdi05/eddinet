@@ -13,6 +13,7 @@
       "/sitemap.xml",
       "/robots.txt",
       "/llms.txt",
+      "/llms-full.txt",
       "/api/",
       "/_next/",
       "/404",
@@ -59,7 +60,7 @@
     "breadcrumbs": {
       "minDepth": 2,
       "requireVisibleNav": false,
-      "exclude": ["/sitemap", "/robots.txt", "/llms.txt"]
+      "exclude": ["/sitemap", "/robots.txt", "/llms.txt", "/llms-full.txt"]
     },
 
     "page-issues": {

@@ -14,7 +14,7 @@ export const child = {
   heroHeading: "Programmatic SEO Services in Delhi NCR",
   heroSubheading: "Eddinet provides specialized Programmatic SEO Services in India for businesses that need thousands of pages, not ten — city pages, product variations, comparison pages — without flooding their site with thin, repetitive content. Scale is easy to get wrong; done right, it's one of the fastest ways to capture search demand you're currently missing entirely.",
   image: "/images/services/seo/seo/programmatic-seo.webp",
-  problemStatement: "Manually creating individual pages for every product, location, feature or use-case is impossible at scale. Businesses with large inventories, multiple locations or extensive service offerings leave thousands of long-tail search queries unanswered â€” queries that individually drive small traffic but collectively represent massive organic potential. Without programmatic SEO, you are ignoring the long tail where competition is low and conversion intent is high.",
+  problemStatement: "Manually creating individual pages for every product, location, feature or use-case is impossible at scale. Businesses with large inventories, multiple locations or extensive service offerings leave thousands of long-tail search queries unanswered — queries that individually drive small traffic but collectively represent massive organic potential. Without programmatic SEO, you are ignoring the long tail where competition is low and conversion intent is high.",
   features: [
     {
       title: "Opportunity Research",
@@ -88,26 +88,26 @@ export const child = {
     ],
   },
   caseStudy: {
-    title: "eCommerce Marketplace â€” Long-Tail Traffic Explosion",
+    title: "eCommerce Marketplace — Long-Tail Traffic Explosion",
     metric: "12,000+ Pages Indexed, +500% Organic Traffic",
-    description: "An eCommerce marketplace had 500 product pages but was missing thousands of category, feature and comparison queries. We built programmatic templates for product categories, brand comparisons and use-case pages â€” generating 12,000+ unique indexed pages and growing organic traffic by 500% in 8 months.",
+    description: "An eCommerce marketplace had 500 product pages but was missing thousands of category, feature and comparison queries. We built programmatic templates for product categories, brand comparisons and use-case pages — generating 12,000+ unique indexed pages and growing organic traffic by 500% in 8 months.",
   },
   testimonials: [
     {
       name: "Tarun Malhotra",
       designation: "Founder, ShopNest Marketplace",
-      review: "Programmatic SEO seemed too good to be true â€” until Eddinet built it for us. 12,000 pages indexed, all driving qualified traffic. Our organic channel went from an afterthought to our biggest growth driver.",
+      review: "Programmatic SEO seemed too good to be true — until Eddinet built it for us. 12,000 pages indexed, all driving qualified traffic. Our organic channel went from an afterthought to our biggest growth driver.",
     },
     {
       name: "Shruti Verma",
       designation: "Head of SEO, TravelHUB India",
-      review: "Eddinet built programmatic templates for every city, route and travel package we offer. The scale of organic growth was beyond anything we expected â€” all from pages that target specific, high-intent search queries.",
+      review: "Eddinet built programmatic templates for every city, route and travel package we offer. The scale of organic growth was beyond anything we expected — all from pages that target specific, high-intent search queries.",
     },
   ],
   detailedDescription: "Programmatic SEO gets misunderstood as simply generating pages in bulk. Done properly, it's a careful balance of real data, meaningful variation, and templates built around genuine search intent. As a SEO company in India that's built exactly this kind of system, Eddinet focuses on scale that actually holds up — pages that rank because they're useful, not just numerous.\n\nWe've helped businesses avoid the common trap of generic, duplicate-feeling pages by anchoring every template in real data and clear user value, so growth in page count doesn't come at the cost of quality or rankings.",
   whoNeedsThis: {
     heading: "Who Needs Programmatic SEO?",
-    description: "Businesses with large structured datasets â€” product catalogues, location networks, service offerings or feature sets â€” that map to thousands of individual search queries.",
+    description: "Businesses with large structured datasets — product catalogues, location networks, service offerings or feature sets — that map to thousands of individual search queries.",
     points: [
       "E-commerce platforms with thousands of products, categories and comparison opportunities",
       "Multi-location businesses needing pages for every branch or service area",

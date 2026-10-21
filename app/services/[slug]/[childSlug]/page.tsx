@@ -7,6 +7,7 @@ import {
 } from "@/data/services/child/generated-child-services";
 import ServiceChildPage from "@/components/ServiceChildPage";
 import { resolveServiceChildRedirect } from "@/lib/service-fallback";
+import { socialMetadata } from "@/lib/social-metadata";
 
 export function generateStaticParams() {
   return generatedChildServices.map((c) => ({
@@ -28,11 +29,11 @@ export async function generateMetadata({
     title: child.metaTitle,
     description: child.metaDescription,
     alternates: { canonical },
-    openGraph: {
+    ...socialMetadata({
       title: child.metaTitle,
       description: child.metaDescription,
       url: canonical,
-    },
+    }),
   };
 }
 

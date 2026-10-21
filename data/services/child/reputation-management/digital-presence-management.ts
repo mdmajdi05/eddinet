@@ -15,8 +15,8 @@ import { benefits } from "../_category/reputation-management";
 export const child = {
   slug: "digital-presence-management-services-in-india",
   title: "Digital Presence Management",
-  metaTitle: "Digital Presence Management Services in Delhi NCR | Eddinet",
-  metaDescription: "Consistent brand presence across search, social and listings. One brand, one voice, showing up right everywhere customers look. Eddinet delivers dependable digital presence management services in Delhi NCR for India and global clients. Get a free proposal today.",
+  metaTitle: "Digital Presence Management Services in India | Eddinet",
+  metaDescription: "Consistent brand presence across search, social and listings. One brand, one voice, showing up right everywhere customers look. Eddinet delivers dependable digital presence management services across India and globally. Get a free proposal today.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "Digital Presence Audit | Search Visibility | Social & Profile Management | Brand Consistency",
   // the <h1> itself — doc line "Main hero H1 headline:-"

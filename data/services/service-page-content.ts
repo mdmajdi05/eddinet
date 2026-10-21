@@ -13,6 +13,7 @@
 //    This guarantees no category page is ever missing a section.
 // ============================================================================
 
+import { buildMetaDescription } from "@/lib/meta-description";
 import {
   getServiceBySlug,
   itemDetails,
@@ -212,7 +213,7 @@ export function getCategoryPageContent(
   return {
     title: s.title,
     metaTitle: dx?.metaTitle ?? `${s.title} Services in Delhi NCR`,
-    metaDescription: dx?.metaDescription ?? s.desc,
+    metaDescription: buildMetaDescription(dx?.metaDescription ?? s.desc),
     heroEyebrow: dx?.heroEyebrow,
     heroHeading: heroText,
     heroLead,

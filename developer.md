@@ -2,7 +2,7 @@
 
 > File: `developer.md` — यह document बताता है कि website में क्या है, क्या missing है,
 > क्या करना चाहिए, errors/problems क्या हैं aur solutions क्या हैं।
-> Last updated: 18 Sep 2026
+> Last updated: 21 Oct 2026
 
 ---
 
@@ -20,9 +20,9 @@
 | Geo tags, language, referrer, PWA/apple metas | ✅ Done | `app/layout.tsx` |
 | **X-Robots-Tag header** | ✅ **Abhi add kiya** | `next.config.ts` (headers) |
 | llms.txt | ✅ Done | `app/llms.txt/route.ts` |
-| sitemap.xml (190 pages) | ✅ Done | `app/sitemap.ts` |
+| sitemap.xml (176 pages) | ✅ Done | `app/sitemap.ts` |
 | robots.txt | ✅ Done | `app/robots.ts` |
-| 203 child service pages | ✅ Done | `data/services/child/generated-child-services.ts` |
+| 138 child service pages | ✅ Done | `data/services/child/generated-child-services.ts` |
 | JSON-LD: Organization, Service, FAQ, Breadcrumb, BlogPosting | ✅ Done | layout + pages |
 | Docker/standalone build | ✅ Done | `next.config.ts` |
 | Google Search Console verification | ✅ Done | `app/layout.tsx` |
@@ -43,8 +43,8 @@
 - **Ab:** sirf `en-in` + `x-default` active hai.
 - **Baad me:** Hindi site banate waqt hreflang `hi-in` wapas add karna.
 
-### 2.3 Blog — sirf 3 posts + koई categories/tags/pagination nahi
-- **Problem:** `data/blog/blog.ts` me sirf 3 articles. Blog SEO ke liye kamzoor.
+### 2.3 Blog — sirf 5 posts + koई categories/tags/pagination nahi
+- **Problem:** `data/blog/blog.ts` me sirf 5 articles. Blog SEO ke liye kamzoor.
 - **Todo:**
   - Minimum 10–15 quality posts likhna (1 post per week target).
   - `category`, `tags`, `readingTime` fields add karo `data/blog/blog.ts`.
@@ -52,34 +52,37 @@
   - Pagination/sort banao blog index pe.
 - **Reference:** `app/blog/page.tsx`, `app/blog/[slug]/page.tsx`, `data/blog/blog.ts`
 
-### 2.4 RSS Feed — ❌ Missing
-- Blog content ko RSS/Atom feed chahiye (news aggregators + SEO signal).
-- **Solution:** `app/feed.xml/route.ts` banao jo latest 20 posts ka XML banaye.
-- **Ding:** `<link rel="alternate" type="application/rss+xml" href="/feed.xml">` layout me.
+### 2.4 RSS Feed — ✅ Done
+- `app/feed.xml/route.ts` ban gaya — RSS 2.0, `data/blog/blog.ts` se 1:1 aata hai.
+- Layout ke `<head>` me `<link rel="alternate" type="application/rss+xml" href="/feed.xml">` bhi add hai.
+- News aggregators (Google News, Flipboard, Feedly) + feed readers dono discover kar lete hain.
 
 ### 2.5 Blog OG images — generic
 - **Problem:** har blog post generic `opengraph-image.png` use karta hai (`app/blog/[slug]/page.tsx`).
 - **Solution:** per-post `baseURL/og-blog-{slug}.png` banao (ya post ke image ka og:image set karo).
+- **Note:** BlogPosting JSON-LD me `image` ab post ki apni image hai (2.6 done) — sirf social card image generic hai.
 
-### 2.6 Blog JSON-LD me `image` aur `mainEntity` fields
-- **Problem:** BlogPosting schema me `image` nahi hai.
-- **Solution:** `data/blog/blog.ts` ke post images ko schema me add karo; `publisher.logo` bhi.
+### 2.6 Blog JSON-LD me `image` aur `mainEntity` fields — ✅ Done
+- `app/blog/[slug]/page.tsx` ke BlogPosting schema me ab: `image`, `datePublished` (ISO 8601), `dateModified`,
+  `wordCount`, `articleSection`, `keywords`, `inLanguage`, `publisher.logo` + `author.logo`.
+- Blog index (`/blog`) pe `Blog` + `CollectionPage` + `ItemList` JSON-LD bhi add hai.
 
-### 2.7 Local SEO Schema — ❌ Missing
-- `/contact` pe `LocalBusiness`/`ProfessionalService` (Organization already hai layout me).
-- **Solution:** `app/contact/page.tsx` me JSON-LD add karo — `@type: ProfessionalService`, name, address (Okhla Phase I, New Delhi 110020), geo 28.6139,77.2090, telephone, openingHours, sameAs.
+### 2.7 Local SEO Schema — ✅ Done
+- `app/contact/page.tsx` me `ContactPage` + `ProfessionalService` JSON-LD add hai —
+  address (Okhla Phase I, New Delhi 110020), telephone, email, `openingHoursSpecification`,
+  `areaServed` (Delhi NCR + India), `contactPoint` (sales), `sameAs`.
 - Ye geo tags (`geo.region`, `geo.position`) ke saath milkar "Delhi NCR" local pack me help karega.
 
-### 2.8 WebSite SearchAction schema
-- **Solution:** layout ke Organization schema ke saath `WebSite` schema add karo iske saath:
-  `"potentialAction": { "@type": "SearchAction", "target": "https://eddinet.com/?s={search_term_string}", "query-input": "required name=search_term_string" }`
+### 2.8 WebSite SearchAction schema — ✅ Done (layout me add ho gaya)
+- **Fix:** `app/layout.tsx` ke `websiteSchema` me `potentialAction` add kiya:
+  `"potentialAction": { "@type": "SearchAction", "target": { "@type": "EntryPoint", "urlTemplate": "https://eddinet.com/blog?q={search_term_string}" }, "query-input": "required name=search_term_string" }`
 
 ### 2.9 Portfolio/Case-study images — remote Unsplash
-- **Problem:** `data/portfolio/portfolio.ts` ke 40 projects saari Unsplash remote images hain. Google/Pagespeed pe weight + slow.
+- **Problem:** `data/portfolio/portfolio.ts` ke 62 projects saari Unsplash remote images hain. Google/Pagespeed pe weight + slow.
 - **Solution:** local `public/images/portfolio/` me thumbnails banao aur `data/site/images.ts` registry se connect karo.
 
 ### 2.10 Website speed / Core Web Vitals
-- **Problem:** saare `<Image>` pe `unoptimized` hai (18 files) → Next image optimizer off hai, koi WebP/AVIF/resize nahi.
+- ~~**Problem:** saare `<Image>` pe `unoptimized` hai (18 files) → Next image optimizer off hai, koi WebP/AVIF/resize nahi.~~ — ✅ FIXED (ab koi `unoptimized` prop nahi; `next.config.ts` me avif/webp formats on)
 - **Solution:** `unoptimized` hatao, `sizes` attribute do, `format` detect karo. „next/image” apne aap WebP/AVIF banata hai.
 - **Todo:** Lighthouse run karo (desktop + mobile), FCP/LCP/CLS optimize karo.
 
@@ -90,10 +93,10 @@
 | Cheez | Status | Reference | Kya karna |
 |---|---|---|---|
 | **Case studies** | ❌ Empty | `data/portfolio/case-studies.ts` | 3–5 real case studies add karo (permission ke baad). Abhi `/case-studies` blank page hai aur saare CTA usi pe le jaate hain. |
-| **Testimonials** | ❌ Empty | `data/home/home.ts` (line 148) | Client reviews add karo (screenshot/verified). Homepage pe testimonial section abhi nahi dikhta. |
+| **Testimonials** | ❌ Empty | `data/home/home.ts` (line 150) | Client reviews add karo (screenshot/verified). Homepage pe testimonial section abhi nahi dikhta. |
 | **Social links** | ❌ Empty | `data/site/contact.ts` | LinkedIn/Facebook/Instagram/X/YouTube URLs daalo — Footer me abhi blank hain. |
 | **Portfolio URLs** | ⚠️ Placeholder | `data/portfolio/portfolio.ts` | Bahut saare project URLs recycled placeholder domains hain → asli client websites daalo (ya section aise show karo jo fix ho). |
-| **Blog** | ⚠️ 3 posts | `data/blog/blog.ts` | 15+ posts (badha kar 30+). |
+| **Blog** | ⚠️ 5 posts | `data/blog/blog.ts` | 15+ posts (badha kar 30+). |
 | Hindi version | ❌ Missing | — | `/hi/` ya i18n. |
 
 ---
@@ -123,7 +126,7 @@
 - ~~**Problem:** Blog article body (`app/blog/[slug]/page-client.tsx`) client-rendered hai → crawl slow + SEO weak.~~
 - **Fix:** Poora article ab Server Component (`app/blog/[slug]/page.tsx`) me render hota hai; sirf chhote interactive leaves client hain (`reading-progress.tsx`, `share.tsx`, `sidebar-message-form.tsx`). `page-client.tsx` delete.
 - **Related perf fixes (bade wins):**
-  - Header mega-menus ka bhaari data (139 child pages) client se hata kar server par (`data/services/nav-menu.ts`) — layout chunk **1073 KB → 28.6 KB**.
+  - Header mega-menus ka bhaari data (138 child pages) client se hata kar server par (`data/services/nav-menu.ts`) — layout chunk **1073 KB → 28.6 KB**.
   - Google Fonts external link → `next/font` self-host (render-blocking request khatam, CLS zero).
   - GTM head-blocking loader → `next/script` `afterInteractive`.
   - Logo/nav images ke `sizes`/aspect fixes.
@@ -165,7 +168,7 @@
 - **Problem:** `caseStudies` array empty hai → har `/case-studies/:slug` 404, sitemap me nahi.
 - **Solution:** ya to case studies content banao (2.1 project), ya CTA buttons ko pehle blog/services links pe bhejo.
 
-### 4.8 About page 989 lines inline
+### 4.8 About page 999 lines inline
 - `app/about/page.tsx` bahut bada hai - koi problem nahi, lekin maintain ke liye `data/about/about.ts` ka use karo.
 
 ---
@@ -237,8 +240,8 @@ koi backend/API key nahi chahiye, sab client-side chalta hai.
 **"Training" kaise hoti hai (important):**
 `data/chat/knowledge.ts` khud ka content nahi likhta — ye site ke asli data se
 Q/A **generate** karta hai:
-- `data/services/services.ts` → 13 service categories + 200 child services + 65 FAQs
-- `data/home/home.ts` → home FAQs
+- `data/services/services.ts` → 13 service categories + 138 child services + 65 FAQs
+- `data/home/home.ts` → home FAQs + process steps
 - `data/industries/industries.ts` → industry Q/A
 - `data/site/contact.ts` → phone/email/address/hours
 
@@ -276,9 +279,9 @@ hai. Logo ke size scales `ChatBotLogo.tsx` ke `sizeScales` me hain
 - [ ] X-Robots-Tag verify (deploy ke baad) — `next.config.ts` ✅ done, deploy karo
 - [ ] /hi/ hreflang — ✅ remove kiya (Hindi site aane pe wapas lagaana)
 - [ ] Google Search Console: submit sitemap.xml + llms.txt ko fetch karo
-- [ ] LocalBusiness schema /contact pe add karo
-- [ ] Blog: har post ka own OG image + JSON-LD image
-- [ ] RSS feed.xml banao
+- [x] LocalBusiness schema /contact pe add karo — ✅ `ContactPage` + `ProfessionalService` JSON-LD
+- [x] Blog: har post ka own OG image + JSON-LD image — ✅ JSON-LD `image` done (social card image generic hai)
+- [x] RSS feed.xml banao — ✅ `app/feed.xml/route.ts` + layout me `<link rel="alternate">`
 - [ ] Suspicious 404 check: /hi/, /case-studies/*
 - [ ] `npm run check:site` → 0 errors (site-checker, har build ke baad run karo)
 

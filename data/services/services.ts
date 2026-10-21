@@ -1,7 +1,7 @@
 // ============================================================================
 //  FILE: data/services/services.ts
 // WHAT'S IN THIS FILE:  (SERVICES)
-//   services[]     - 10 core service categories (icon, title, desc, image, allItems)
+//   services[]     - 13 core service categories (icon, title, desc, image, allItems)
 //   serviceTabs    - home "services tabs" (All / Web / SEO ...)
 //   servicePages   - list used by /services + sitemap
 //   itemDetails    - one-line desc per child service (for generated pages)
@@ -316,6 +316,7 @@ export const itemDetails: Record<string, string> = {
   "Database Hosting": "Managed database hosting with backups, tuning and high availability. Your data safe, tuned and reachable — always.",
   "Domain & DNS Management": "Domain, DNS and email configuration kept correct and reliable. The boring plumbing that breaks sites when ignored — handled properly.",
   "Hosting Migration": "Host-to-host migrations planned and executed with zero downtime and preserved performance. Switch providers without your customers or Google noticing.",
+  "Website Migration": "End-to-end website moves - content, URLs, redirects, metadata and rankings carried across safely. A new platform or domain without losing the traffic you already earned.",
   "Database Migration": "Database moves handled safely with backup, validation and zero data loss. Schemas, data and integrity verified on both sides of the move.",
   "WordPress Migration": "WordPress site migrations that preserve content, plugins, URLs and SEO. A cleaner host, same rankings — nothing lost along the way.",
   "Shopify Migration": "Shopify store migrations with products, customers and orders moved intact. Change platforms without breaking the store that's earning.",

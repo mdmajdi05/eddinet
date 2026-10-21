@@ -15,8 +15,8 @@ import { benefits } from "../_category/maintenance-support";
 export const child = {
   slug: "website-maintenance-services-in-india",
   title: "Website Maintenance",
-  metaTitle: "Website Maintenance Services in Delhi NCR | Eddinet",
-  metaDescription: "Ongoing updates, fixes and care that keep websites secure, fast and current. The service that stops your site from quietly rotting. Eddinet delivers dependable website maintenance services in Delhi NCR for India and global clients. Get a free proposal today.",
+  metaTitle: "Website Maintenance Services in India | Eddinet",
+  metaDescription: "Ongoing updates, fixes and care that keep websites secure, fast and current. The service that stops your site from quietly rotting. Eddinet delivers dependable website maintenance services across India and globally. Get a free proposal today.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "Monthly Maintenance Plans | CMS & Plugin Updates | Backups | WordPress Care",
   // the <h1> itself — doc line "Main hero H1 headline:-"

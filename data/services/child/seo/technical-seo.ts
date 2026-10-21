@@ -14,7 +14,7 @@ export const child = {
   heroHeading: "Technical SEO Services in Delhi NCR",
   heroSubheading: "Eddinet provides professional technical SEO services in India to take complete responsibility for your website's technical health, fixing backend bottlenecks so search engines can rank your pages effortlessly and drive qualified buyers directly to your business.",
   image: "/images/services/seo/seo/technical-seo.webp",
-  problemStatement: "You can have the best content and the strongest backlink profile, but if Google cannot crawl your pages efficiently, render your JavaScript, or if your site takes 8 seconds to load, none of it matters. Technical SEO issues are invisible to most businesses â€” silently killing rankings, suppressing indexation and destroying user experience. Without a technically sound foundation, every other SEO investment underperforms.",
+  problemStatement: "You can have the best content and the strongest backlink profile, but if Google cannot crawl your pages efficiently, render your JavaScript, or if your site takes 8 seconds to load, none of it matters. Technical SEO issues are invisible to most businesses — silently killing rankings, suppressing indexation and destroying user experience. Without a technically sound foundation, every other SEO investment underperforms.",
   features: [
     {
       title: "In-Depth Technical Audits",
@@ -82,9 +82,9 @@ export const child = {
     ],
   },
   caseStudy: {
-    title: "Next.js E-Commerce â€” Core Web Vitals Recovery",
+    title: "Next.js E-Commerce — Core Web Vitals Recovery",
     metric: "LCP Improved from 8.2s to 1.8s",
-    description: "A Next.js e-commerce platform had severe Core Web Vitals issues â€” LCP at 8.2 seconds, high CLS and poor INP scores. Through image optimisation, code splitting, server-side rendering fixes and caching strategy, we brought LCP to 1.8 seconds, eliminated CLS and improved INP to under 200ms â€” resulting in a 45% improvement in organic rankings.",
+    description: "A Next.js e-commerce platform had severe Core Web Vitals issues — LCP at 8.2 seconds, high CLS and poor INP scores. Through image optimisation, code splitting, server-side rendering fixes and caching strategy, we brought LCP to 1.8 seconds, eliminated CLS and improved INP to under 200ms — resulting in a 45% improvement in organic rankings.",
   },
   testimonials: [
     {
@@ -95,13 +95,13 @@ export const child = {
     {
       name: "Pooja Bhatia",
       designation: "Head of Digital, MediCare Plus",
-      review: "We had been told our website was 'fine' by two other agencies. Eddinet's technical audit found 47 critical issues we had no idea existed. After fixing them, our organic traffic grew 60% in three months â€” from technical fixes alone.",
+      review: "We had been told our website was 'fine' by two other agencies. Eddinet's technical audit found 47 critical issues we had no idea existed. After fixing them, our organic traffic grew 60% in three months — from technical fixes alone.",
     },
   ],
   detailedDescription: "We aren't a traditional digital marketing agency that bombards you with generic automated reports or surface-level fixes. Eddinet functions as your dedicated technical SEO execution partner, bridging the gap between complex web development and real organic revenue growth.\n\nAs a results-oriented SEO company in India, we help you solve the exact structural, server-side, and indexing challenges holding your domain back. We look beyond vanity metrics like impressions and focus on what directly impacts your bottom line: crawl efficiency, site speed, clean indexation, and frictionless client conversions.",
   whoNeedsThis: {
     heading: "Who Needs Technical SEO?",
-    description: "Any website that underperforms in search due to technical issues â€” slow loading, poor crawlability, indexation problems or JavaScript rendering failures â€” needs Technical SEO.",
+    description: "Any website that underperforms in search due to technical issues — slow loading, poor crawlability, indexation problems or JavaScript rendering failures — needs Technical SEO.",
     points: [
       "Websites with pages not appearing on Google despite being published months ago",
       "Businesses experiencing sudden traffic drops after site changes or redesigns",

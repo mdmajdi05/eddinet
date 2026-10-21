@@ -12,13 +12,13 @@ export const child = {
   metaTitle: "eCommerce SEO Services in Delhi NCR | Eddinet",
   metaDescription: "Drive qualified shopping traffic to your store. Eddinet's eCommerce SEO covers product, category & collection page optimisation for Shopify, WooCommerce & more. Free audit.",
   heroHeading: "eCommerce SEO Services in Delhi NCR",
-  heroSubheading: "Product-focused SEO that connects high-intent shoppers with your catalogue â€” category pages, product pages, filters and collections engineered for search visibility and conversion.",
+  heroSubheading: "Product-focused SEO that connects high-intent shoppers with your catalogue — category pages, product pages, filters and collections engineered for search visibility and conversion.",
   image: "/images/services/seo/seo/ecommerce-seo.webp",
-  problemStatement: "eCommerce websites face unique SEO challenges â€” thousands of product pages, faceted navigation creating crawl waste, thin product descriptions, duplicate content across variants and category structures that fight each other for rankings. Without eCommerce-specific SEO strategy, your most valuable product and category pages remain buried while competitors capture the shopping traffic that should be yours.",
+  problemStatement: "eCommerce websites face unique SEO challenges — thousands of product pages, faceted navigation creating crawl waste, thin product descriptions, duplicate content across variants and category structures that fight each other for rankings. Without eCommerce-specific SEO strategy, your most valuable product and category pages remain buried while competitors capture the shopping traffic that should be yours.",
   features: [
     {
       title: "Category & Collection Page Optimisation",
-      description: "Strategic optimisation of category and collection pages â€” the highest-impact eCommerce SEO lever â€” with keyword targeting, content depth and internal linking.",
+      description: "Strategic optimisation of category and collection pages — the highest-impact eCommerce SEO lever — with keyword targeting, content depth and internal linking.",
       image: "/images/services/seo/ecommerce-seo/category-and-collection-page-optimisation-self-gen.webp",
     },
     {
@@ -33,7 +33,7 @@ export const child = {
     },
     {
       title: "eCommerce Schema Markup",
-      description: "Product, offer, review and availability schema that qualifies for rich results â€” price displays, star ratings and availability in search.",
+      description: "Product, offer, review and availability schema that qualifies for rich results — price displays, star ratings and availability in search.",
       image: "/images/services/seo/ecommerce-seo/ecommerce-schema-markup-self-gen.webp",
     },
     {
@@ -48,7 +48,7 @@ export const child = {
     },
     {
       title: "Technical eCommerce SEO",
-      description: "Platform-specific technical optimisation for Shopify, WooCommerce, Magento and custom builds â€” including speed, crawlability and indexation management.",
+      description: "Platform-specific technical optimisation for Shopify, WooCommerce, Magento and custom builds — including speed, crawlability and indexation management.",
       image: "/images/services/seo/ecommerce-seo/technical-ecommerce-seo-self-gen.webp",
     },
   ],
@@ -99,9 +99,9 @@ export const child = {
     ],
   },
   caseStudy: {
-    title: "Fashion eCommerce â€” Organic Revenue Growth",
+    title: "Fashion eCommerce — Organic Revenue Growth",
     metric: "+450% Organic Revenue in 10 Months",
-    description: "A fashion eCommerce store had strong products but weak category and product page SEO. We restructured category hierarchy, rewrote product descriptions, implemented product schema and fixed faceted navigation â€” growing organic revenue by 450% in 10 months.",
+    description: "A fashion eCommerce store had strong products but weak category and product page SEO. We restructured category hierarchy, rewrote product descriptions, implemented product schema and fixed faceted navigation — growing organic revenue by 450% in 10 months.",
   },
   testimonials: [
     {
@@ -112,10 +112,10 @@ export const child = {
     {
       name: "Rahul Mehra",
       designation: "E-Commerce Director, HomeKart",
-      review: "The faceted navigation fix alone saved us from a crawl budget disaster. Eddinet's eCommerce SEO expertise is not generic â€” they understand the unique challenges of online stores.",
+      review: "The faceted navigation fix alone saved us from a crawl budget disaster. Eddinet's eCommerce SEO expertise is not generic — they understand the unique challenges of online stores.",
     },
   ],
-  detailedDescription: "eCommerce SEO is search engine optimisation tailored specifically to online stores, addressing the unique challenges of product catalogues, category hierarchies, faceted navigation and shopping-intent searches. At Eddinet, our eCommerce SEO services in Delhi NCR help online retailers rank for the transactional queries that drive real revenue.\n\neCommerce websites face challenges that content sites never encounter â€” thousands of product pages, faceted navigation creating crawl waste, thin manufacturer descriptions, duplicate content across variants and category structures that compete with each other. Our eCommerce SEO strategy starts with the highest-impact lever: category and collection page optimisation. These pages target the most valuable shopping keywords and drive the majority of organic eCommerce revenue.\n\nProduct page SEO ensures each listing is unique, informative and conversion-ready â€” with keyword-rich descriptions, structured data, image optimisation and review integration that help individual products rank and convert. Faceted navigation management prevents filter and sort combinations from creating crawl waste and duplicate content, channelling authority to the pages that matter.\n\neCommerce schema markup is essential for rich result eligibility. We implement Product, Offer, Review and Availability schema that qualifies your listings for price displays, star ratings and availability information directly in Google search results. Internal linking between categories, subcategories, related products and supporting content distributes authority and guides shoppers through your catalogue.\n\nTechnical eCommerce SEO â€” platform-specific optimisation for Shopify, WooCommerce, Magento and custom builds â€” completes the framework, ensuring speed, crawlability and indexation health across your entire store. For online retailers in Delhi NCR, our eCommerce SEO services connect high-intent shoppers directly to your products and categories.",
+  detailedDescription: "eCommerce SEO is search engine optimisation tailored specifically to online stores, addressing the unique challenges of product catalogues, category hierarchies, faceted navigation and shopping-intent searches. At Eddinet, our eCommerce SEO services in Delhi NCR help online retailers rank for the transactional queries that drive real revenue.\n\neCommerce websites face challenges that content sites never encounter — thousands of product pages, faceted navigation creating crawl waste, thin manufacturer descriptions, duplicate content across variants and category structures that compete with each other. Our eCommerce SEO strategy starts with the highest-impact lever: category and collection page optimisation. These pages target the most valuable shopping keywords and drive the majority of organic eCommerce revenue.\n\nProduct page SEO ensures each listing is unique, informative and conversion-ready — with keyword-rich descriptions, structured data, image optimisation and review integration that help individual products rank and convert. Faceted navigation management prevents filter and sort combinations from creating crawl waste and duplicate content, channelling authority to the pages that matter.\n\neCommerce schema markup is essential for rich result eligibility. We implement Product, Offer, Review and Availability schema that qualifies your listings for price displays, star ratings and availability information directly in Google search results. Internal linking between categories, subcategories, related products and supporting content distributes authority and guides shoppers through your catalogue.\n\nTechnical eCommerce SEO — platform-specific optimisation for Shopify, WooCommerce, Magento and custom builds — completes the framework, ensuring speed, crawlability and indexation health across your entire store. For online retailers in Delhi NCR, our eCommerce SEO services connect high-intent shoppers directly to your products and categories.",
   whoNeedsThis: {
     heading: "Who Needs eCommerce SEO?",
     description: "Online retailers whose product and category pages are not ranking for the shopping queries that drive revenue need eCommerce-specific SEO.",
@@ -131,7 +131,7 @@ export const child = {
   benefits: [
     {
       title: "Category Page Domination",
-      description: "Strategic optimisation of the highest-impact pages in eCommerce â€” categories and collections targeting the most valuable shopping keywords.",
+      description: "Strategic optimisation of the highest-impact pages in eCommerce — categories and collections targeting the most valuable shopping keywords.",
     },
     {
       title: "Faceted Navigation Control",
@@ -151,7 +151,7 @@ export const child = {
     },
     {
       title: "Organic Revenue Growth",
-      description: "A complete e-commerce search strategy measured by organic revenue attribution â€” not traffic vanity metrics that do not reflect sales.",
+      description: "A complete e-commerce search strategy measured by organic revenue attribution — not traffic vanity metrics that do not reflect sales.",
     },
   ],
   industries: [

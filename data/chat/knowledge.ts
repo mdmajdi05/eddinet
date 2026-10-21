@@ -5,20 +5,21 @@
 //
 //  Ye file site ke ASLI data se generate hoti hai (single source of truth):
 //    - services + faqsByService + itemDetails  -> data/services/services.ts
-//    - homeFaqs                                -> data/home/home.ts
+//    - homeFaqs + processSteps                 -> data/home/home.ts
 //    - industries                              -> data/industries/industries.ts
 //    - site (phone/email/address/hours)        -> data/site/contact.ts
 //
-//  Isliye jab bhi service/FAQ/industry data badalta hai, chatbot apne aap
-//  "re-train" ho jaata hai — yahan duplicate content maintain karne ki zarurat
-//  nahi. Sirf company/pricing/process jaise general jawab neeche MANUAL me
-//  hand-written hain.
+//  Isliye jab bhi service/FAQ/industry/process data badalta hai, chatbot apne
+//  aap "re-train" ho jaata hai — yahan duplicate content maintain karne ki
+//  zarurat nahi. MANUAL me sirf company/pricing jaise general jawab
+//  hand-written hain, aur unke andar bhi service/industry lists data se
+//  derive hoti hain (hardcoded copy nahi).
 //
 //  Naya general Q/A add karna ho -> neeche MANUAL array me ek entry daalo.
 // ============================================================================
 
 import { services, faqsByService, itemDetails } from "@/data/services/services";
-import { homeFaqs } from "@/data/home/home";
+import { homeFaqs, processSteps } from "@/data/home/home";
 import { industries } from "@/data/industries/industries";
 import { site } from "@/data/site/contact";
 import type { KnowledgeBaseItem } from "@/lib/chat/types";
@@ -137,6 +138,15 @@ function industryEntries(): KnowledgeBaseItem[] {
 
 // ─── 5. HAND-WRITTEN GENERAL ENTRIES ────────────────────────────────────────
 
+//  MANUAL answers me bhi koi list hardcoded nahi — sab apne asli data se
+//  aati hai, warna services/industries change hone par chatbot ka jawab
+//  stale ho jaata hai (audit me yahi drift mila tha).
+/** Service category names — services.ts se (sabhi 13 categories). */
+const serviceNames = services.map((s) => s.title).join(", ");
+
+/** Industry names — industries.ts se (sabhi 18 sectors). */
+const industryNames = industries.map((i) => i.name).join(", ");
+
 const MANUAL: KnowledgeBaseItem[] = [
   {
     id: "manual-company",
@@ -148,9 +158,20 @@ const MANUAL: KnowledgeBaseItem[] = [
       `- 🧠 Marketing + technology planned as one connected system\n` +
       `- 📈 Focused on leads, transactions, retention and efficiency\n` +
       `- 🌍 Delhi NCR base, clients across India and internationally\n\n` +
-      `We cover SEO, ads, content, design, web, eCommerce, apps, software & ` +
-      `AI, cloud, hosting, maintenance and reputation management.`,
-    keywords: ["company", "about", "eddinet", "agency", "who are you", "what do you do"],
+      `We cover ${serviceNames}.\n\n` +
+      `👉 [Explore all services](/services)`,
+    keywords: [
+      "company",
+      "about",
+      "eddinet",
+      "agency",
+      "who are you",
+      "what do you do",
+      // Service ke slug + cat bhi keyword — raw slug (jaise "ads-ppc")
+      // puchhe jaye to bhi ye entry match ho.
+      ...services.map((s) => s.slug),
+      ...services.map((s) => s.cat),
+    ],
     link: { label: "About Eddinet", href: "/about" },
     priority: 8,
   },
@@ -215,13 +236,10 @@ const MANUAL: KnowledgeBaseItem[] = [
     category: "process",
     question: "What is Eddinet's process?",
     answer:
-      `We follow a six-step process:\n\n` +
-      `- **01 Understand the Business** — business model, audience and buying journey\n` +
-      `- **02 Identify the Growth Constraint** — the single biggest limiting factor\n` +
-      `- **03 Select the Right Services** — only what solves the constraint\n` +
-      `- **04 Build the Required Systems** — marketing, web, apps and infrastructure\n` +
-      `- **05 Measure Performance** — tied to leads, transactions and efficiency\n` +
-      `- **06 Continuously Improve** — optimisation that compounds over time`,
+      `We follow a ${processSteps.length}-step process:\n\n` +
+      processSteps
+        .map((p) => `- **${p.num} ${p.title}** — ${p.desc}`)
+        .join("\n"),
     keywords: ["process", "workflow", "steps", "methodology", "how you work", "approach"],
     priority: 8,
   },
@@ -294,9 +312,7 @@ const MANUAL: KnowledgeBaseItem[] = [
     category: "industries",
     question: "Which industries does Eddinet serve?",
     answer:
-      `We work across many sectors — finance, healthcare, eCommerce & D2C, real ` +
-      `estate, education, technology & SaaS, hospitality, automotive, legal, ` +
-      `manufacturing, retail, media, telecom, insurance and more.\n\n` +
+      `We work across many sectors — ${industryNames}.\n\n` +
       `👉 [Learn more about Eddinet](/about)\n\n` +
       `Tell me your industry and I'll share what typically works.`,
     keywords: ["industries", "industry", "sectors", "verticals", "serve"],

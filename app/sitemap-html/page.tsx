@@ -7,6 +7,7 @@ import {
   type HtmlSitemapLink,
 } from "@/data/site/html-sitemap";
 import { balancedGrid } from "@/lib/process-grid";
+import { socialMetadata } from "@/lib/social-metadata";
 
 /** Ek page par kitne links — speed + readability ke liye. */
 const PAGE_SIZE = 200;
@@ -16,6 +17,12 @@ export const metadata: Metadata = {
   description:
     "Browse every page on Eddinet - services, service sub-pages, blog articles, portfolio categories and company pages - in one organised, paginated HTML sitemap.",
   alternates: { canonical: "https://eddinet.com/sitemap-html" },
+  ...socialMetadata({
+    title: "HTML Sitemap - All Pages",
+    description:
+      "Browse every page on Eddinet - services, service sub-pages, blog articles, portfolio categories and company pages - in one organised, paginated HTML sitemap.",
+    url: "https://eddinet.com/sitemap-html",
+  }),
 };
 
 /** Page-number window: 1 … 4 5 6 … 20 (ellipsis ke saath). */

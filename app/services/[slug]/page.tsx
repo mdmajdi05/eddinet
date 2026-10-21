@@ -12,6 +12,7 @@ import AdaptiveLines from "@/components/AdaptiveLines";
 import SectionHeader from "@/components/SectionHeader";
 import { resolveServiceCategoryRedirect } from "@/lib/service-fallback";
 import { balancedGrid } from "@/lib/process-grid";
+import { socialMetadata } from "@/lib/social-metadata";
 
 export function generateStaticParams() {
   return servicePages.map((s) => ({ slug: s.slug }));
@@ -29,11 +30,11 @@ export async function generateMetadata({
     title: content.metaTitle,
     description: content.metaDescription,
     alternates: { canonical: `https://eddinet.com/services/${slug}` },
-    openGraph: {
+    ...socialMetadata({
       title: content.metaTitle,
       description: content.metaDescription,
       url: `https://eddinet.com/services/${slug}`,
-    },
+    }),
   };
 }
 
@@ -84,8 +85,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     url: `https://eddinet.com/services/${s.slug}`,
     provider: {
       "@type": "Organization",
-      name: "Eddinet",
-      url: "https://eddinet.com/",
+      name: site.name,
+      url: site.url,
       logo: "https://eddinet.com/images/brand/eddinet-logo.webp",
     },
     areaServed: { "@type": "AdministrativeArea", name: "Delhi NCR" },
@@ -416,7 +417,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 <LineClampedText text={content.about[1] ?? content.about[0] ?? ""} lines={6} />
 
                 <div className="grid grid-cols-2 gap-3 mb-7 max-[480px]:grid-cols-1">
-                  {[{ value: "12+", label: "Service Categories" }, { value: "1,000+", label: "Projects Delivered" }, { value: "5+", label: "Years Experience" }, { value: "98%", label: "Client Retention" }].map((m, i) => (
+                  {[{ value: "13", label: "Service Categories" }, { value: "1,000+", label: "Projects Delivered" }, { value: "5+", label: "Years Experience" }, { value: "98%", label: "Client Retention" }].map((m, i) => (
                     <div key={i} className="group relative rounded-2xl p-4 text-center overflow-hidden bg-[var(--panel-bg)] border border-[var(--border-color)] transition-all duration-500 hover:-translate-y-1 hover:border-[rgba(var(--accent-rgb),0.3)]">
                       <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[var(--main-accent)] via-transparent to-purple-500 opacity-40 group-hover:opacity-100 transition-opacity duration-500" />
                       <div className="relative z-10 text-[1.4rem] font-extrabold leading-none gradient-text animate-gradient-x mb-1.5 max-[768px]:text-[1.2rem]">{m.value}</div>

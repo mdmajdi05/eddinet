@@ -15,8 +15,8 @@ import { benefits } from "../_category/reputation-management";
 export const child = {
   slug: "google-review-management-services-in-india",
   title: "Google Review Management",
-  metaTitle: "Google Review Management Services in Delhi NCR | Eddinet",
-  metaDescription: "Systematic review responses and management that build trust and search presence. Every review answered, every rating protected. Eddinet delivers dependable google review management services in Delhi NCR for India and global clients. Get a free proposal today.",
+  metaTitle: "Google Review Management Services in India | Eddinet",
+  metaDescription: "Systematic review responses and management that build trust and search presence. Every review answered, every rating protected. Eddinet delivers dependable google review management services across India and globally. Get a free proposal today.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "Review Replies | Policy-Based Flagging | Rating Recovery | Sentiment Insights | Local Business Care",
   // the <h1> itself — doc line "Main hero H1 headline:-"

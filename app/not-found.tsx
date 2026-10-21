@@ -1,4 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+// 404 page ko index na ho (soft-404 protection) aur root layout ka
+// canonical (homepage wala) inherit na ho — isliye canonical: null.
+export const metadata: Metadata = {
+  title: "Page Not Found (404) | Eddinet",
+  description:
+    "The page you are looking for does not exist or has moved. Explore Eddinet's services, insights and case studies, or get back on track with a free growth consultation.",
+  robots: { index: false, follow: true },
+  alternates: { canonical: null },
+};
 
 export default function NotFound() {
   return (

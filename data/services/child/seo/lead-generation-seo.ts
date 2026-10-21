@@ -95,7 +95,7 @@ export const child = {
     ],
   },
   caseStudy: {
-    title: "B2B SaaS â€” Lead Pipeline Growth",
+    title: "B2B SaaS — Lead Pipeline Growth",
     metric: "+320% Qualified Leads from Organic Search",
     description: "A B2B SaaS company was generating organic traffic but zero pipeline. By restructuring their content around high-intent keywords, building dedicated landing pages and optimising lead capture flows, we increased their qualified organic leads by 320% and reduced cost-per-lead by 55%.",
   },
@@ -103,12 +103,12 @@ export const child = {
     {
       name: "Rohit Sharma",
       designation: "Head of Marketing, DataFlow Analytics",
-      review: "Before Eddinet, our SEO was generating traffic that looked great in reports but never turned into pipeline. Their lead generation SEO approach changed everything â€” organic is now our second-biggest source of qualified leads.",
+      review: "Before Eddinet, our SEO was generating traffic that looked great in reports but never turned into pipeline. Their lead generation SEO approach changed everything — organic is now our second-biggest source of qualified leads.",
     },
     {
       name: "Kavita Joshi",
       designation: "Founder, LegalEdge Consulting",
-      review: "Eddinet does not just drive traffic â€” they drive business. Every recommendation, every page, every keyword was chosen because it would generate leads, not just rankings. That focus made all the difference.",
+      review: "Eddinet does not just drive traffic — they drive business. Every recommendation, every page, every keyword was chosen because it would generate leads, not just rankings. That focus made all the difference.",
     },
   ],
   detailedDescription: "Traffic is optional, pipeline growth is non-negotiable.\n\nAt Eddinet, we operate as growth partners, not just another search agency. Most SEO strategies fail because they measure success by website visits rather than closed deals. We bridge that gap by mapping organic search directly to revenue.\n\nLeveraging proven performance frameworks across competitive markets, Eddinet combines technical precision, buyer psychology, and generative AI search strategies to establish your search dominance and scale a predictable inbound sales pipeline.",
@@ -193,7 +193,7 @@ export const child = {
   faqs: [
     {
       q: "How is lead generation SEO different from regular SEO?",
-      a: "Regular SEO focuses on rankings and traffic growth. Lead generation SEO is engineered around a specific outcome â€” turning search visibility into qualified enquiries. Every keyword, landing page and content asset is designed to capture intent and convert visitors into leads that feed your sales pipeline.",
+      a: "Regular SEO focuses on rankings and traffic growth. Lead generation SEO is engineered around a specific outcome — turning search visibility into qualified enquiries. Every keyword, landing page and content asset is designed to capture intent and convert visitors into leads that feed your sales pipeline.",
     },
     {
       q: "How quickly can lead generation SEO produce leads?",
@@ -201,7 +201,7 @@ export const child = {
     },
     {
       q: "Do you also build the landing pages?",
-      a: "Yes. Landing page design, copywriting and CRO are part of our lead generation SEO service. We build conversion-optimised pages that are engineered for a single action â€” turning organic visitors into qualified leads.",
+      a: "Yes. Landing page design, copywriting and CRO are part of our lead generation SEO service. We build conversion-optimised pages that are engineered for a single action — turning organic visitors into qualified leads.",
     },
     {
       q: "Can you integrate leads with our CRM?",

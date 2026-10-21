@@ -15,8 +15,8 @@ import { benefits } from "../_category/reputation-management";
 export const child = {
   slug: "review-generation-services-in-india",
   title: "Review Generation",
-  metaTitle: "Review Generation Services in Delhi NCR | Eddinet",
-  metaDescription: "Ethical review-generation flows that steadily grow your rating and review volume. More genuine reviews, at a pace and volume that helps rankings — the right way. Eddinet delivers dependable review generation services in Delhi NCR for India and global clients. Get a free proposal today.",
+  metaTitle: "Review Generation Services in India | Eddinet",
+  metaDescription: "Ethical review-generation flows that steadily grow your rating and review volume. More genuine reviews, at a pace and volume that helps rankings — the right way. Eddinet delivers dependable review generation services across India and globally. Get a free proposal today.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "Genuine Google Reviews | QR Code Campaigns | WhatsApp & SMS Requests",
   // the <h1> itself — doc line "Main hero H1 headline:-"

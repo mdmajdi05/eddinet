@@ -7,6 +7,7 @@
 import type { GeneratedChildService } from "./generated-child-services";
 import type { SeoChildService } from "./seo-child-services";
 import { services } from "@/data/services/services";
+import { buildMetaDescription } from "@/lib/meta-description";
 import {
   childHeroImages,
   childFeatureImages,
@@ -172,13 +173,15 @@ function withCategory(
 ): GeneratedChildService {
   const meta = services.find((s) => s.slug === categorySlug);
   const pageKey = `${categorySlug}/${page.slug}`;
-  const featureImages = childFeatureImages[pageKey];
-  return {
+  const featureImages = childFeatureImages[pageKey];  return {
     ...page,
     categorySlug,
     categoryTitle: meta?.title ?? categorySlug,
     categoryIcon: meta?.icon ?? "",
     item: page.title,
+    // Meta description ko SERP-safe 160 char me fit karo (poore sentences
+    // bacha kar) — 127 generated child pages ka ek hi choke point.
+    metaDescription: buildMetaDescription(page.metaDescription),
     image:
       page.image ??
       childHeroImages[pageKey] ??

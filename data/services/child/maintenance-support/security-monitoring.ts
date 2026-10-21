@@ -15,8 +15,8 @@ import { benefits } from "../_category/maintenance-support";
 export const child = {
   slug: "website-security-monitoring-services-in-india",
   title: "Security Monitoring",
-  metaTitle: "Security Monitoring Services in Delhi NCR | Eddinet",
-  metaDescription: "Continuous threat monitoring and alerts to keep your systems safe. Attacks caught early, responses coordinated, breaches prevented or contained. Eddinet delivers dependable security monitoring services in Delhi NCR for India and global clients. Get a free proposal today.",
+  metaTitle: "Security Monitoring Services in India | Eddinet",
+  metaDescription: "Continuous threat monitoring and alerts to keep your systems safe. Attacks caught early, responses coordinated, breaches prevented or contained. Eddinet delivers dependable security monitoring services across India and globally. Get a free proposal today.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "24/7 Threat Detection | Malware Scanning & Removal | Managed Website Security",
   // the <h1> itself — doc line "Main hero H1 headline:-"

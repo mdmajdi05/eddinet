@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import FloatingContactWidget from "@/components/FloatingContactWidget";
 import ChatLauncher from "@/components/chat/ChatLauncher";
 import { site } from "@/data/site/contact";
+import { socialMetadata } from "@/lib/social-metadata";
 import {
   megaMenuCategories,
   mobileServiceLinks,
@@ -38,7 +39,11 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  authors: [{ name: "Eddinet" }],
+  authors: [{ name: site.name, url: site.url }],
+  // Publisher / creator signals — brand name ek hi jagah se (site.name),
+  // taaki har page par "Eddinet" hi publisher dikhe (koi alag spelling nahi).
+  creator: site.name,
+  publisher: site.name,
   alternates: {
     canonical: "https://eddinet.com/",
     languages: {
@@ -66,30 +71,12 @@ export const metadata: Metadata = {
     ],
     apple: [{ url: "/ENDINET_EN_Favicons/apple-touch-icon.png" }],
   },
-  openGraph: {
+  ...socialMetadata({
     title: "Digital Marketing & Software Agency Delhi NCR | Eddinet",
     description:
       "Eddinet is a leading digital marketing & software agency in Delhi NCR, offering SEO, web & app development, and branding. Get a free consultation today.",
     url: "https://eddinet.com/",
-    siteName: "Eddinet",
-    type: "website",
-    locale: "en_IN",
-    images: [
-      {
-        url: "https://eddinet.com/opengraph-image.webp",
-        width: 1200,
-        height: 630,
-        alt: "Eddinet - Digital Marketing & Software Agency",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Digital Marketing & Software Agency Delhi NCR | Eddinet",
-    description:
-      "Eddinet is a leading digital marketing & software agency in Delhi NCR, offering SEO, web & app development, and branding. Get a free consultation today.",
-    images: ["https://eddinet.com/opengraph-image.webp"],
-  },
+  }),
   other: {
     language: "English",
     "content-language": "en-IN",
@@ -97,7 +84,7 @@ export const metadata: Metadata = {
     "mobile-web-app-capable": "yes",
     "apple-mobile-web-app-capable": "yes",
     "apple-mobile-web-app-status-bar-style": "black-translucent",
-    "apple-mobile-web-app-title": "Eddinet",
+    "apple-mobile-web-app-title": site.name,
     "geo.region": "IN-DL",
     "geo.placename": "Delhi NCR",
     "geo.position": "28.6139;77.2090",
@@ -108,18 +95,31 @@ export const metadata: Metadata = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": ["Organization", "LocalBusiness"],
-  name: "Eddinet",
-  url: "https://eddinet.com/",
+  name: site.name,
+  url: site.url,
   logo: "https://eddinet.com/images/brand/eddinet-logo.webp",
   email: site.email,
   telephone: site.phone,
+  // Social profiles — khali link ho to JSON-LD me nahi aana chahiye,
+  // warna Google "invalid profile URL" flag kar deta hai.
   sameAs: [
     site.social.linkedin,
     site.social.facebook,
     site.social.instagram,
-  ].filter(Boolean),
+  ].filter((url) => url.trim() !== ""),
   priceRange: "$$",
-  areaServed: ["Delhi NCR", "India"],
+  areaServed: {
+    "@type": "AdministrativeArea",
+    name: "Delhi NCR",
+  },
+  // Sales contact — phone/email + service area (Delhi NCR + poora India).
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: site.phone,
+    email: site.email,
+    contactType: "sales",
+    areaServed: ["Delhi NCR", "India"],
+  },
   openingHours: "Mo-Sa 10:00-19:00",
   address: {
     "@type": "PostalAddress",
@@ -130,16 +130,26 @@ const organizationSchema = {
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "Eddinet",
-  alternateName: "Eddinet - Digital Marketing & Software Agency",
+  name: site.name,
+  alternateName: `${site.name} - Digital Marketing & Software Agency`,
   url: "https://eddinet.com/",
   description:
     "Digital marketing & software agency in Delhi NCR - SEO, AI SEO, ads, content, web, apps, software, AI, cloud and reputation management.",
   inLanguage: "en-IN",
+  // Site search — Google ko batata hai ki users yahin search kar sakte hain
+  // (blog me ?q= query support hai).
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://eddinet.com/blog?q={search_term_string}",
+    },
+    "query-input": "required name=search_term_string",
+  },
   publisher: {
     "@type": "Organization",
-    name: "Eddinet",
-    url: "https://eddinet.com/",
+    name: site.name,
+    url: site.url,
     logo: "https://eddinet.com/images/brand/eddinet-logo.webp",
   },
 };
@@ -167,6 +177,26 @@ export default function RootLayout({
           }}
         />
         <link rel="preconnect" href="https://datafa.st" />
+        {/* RSS feed — news aggregators + feed readers ke liye discovery. */}
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Eddinet Blog — Marketing, SEO & Technology Insights"
+          href="https://eddinet.com/feed.xml"
+        />
+        {/* AI crawlers / answer engines ke liye llms.txt (index + full copy). */}
+        <link
+          rel="alternate"
+          type="text/markdown"
+          title="Eddinet — llms.txt"
+          href="https://eddinet.com/llms.txt"
+        />
+        <link
+          rel="alternate"
+          type="text/markdown"
+          title="Eddinet — llms-full.txt"
+          href="https://eddinet.com/llms-full.txt"
+        />
       </head>
       <body>
         {/* Google Tag Manager (noscript) — body ke theek baad, JS band users ke liye */}

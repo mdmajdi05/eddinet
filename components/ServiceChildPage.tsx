@@ -25,6 +25,24 @@ export interface ChildServiceView {
   heroSubheading: string;
   image: string;
   detailedDescription: string;
+  /**
+   * Authored "the problem this solves" statement (11 SEO pages me likha hua
+   * hai). Pehle ye data file me pada rehta tha aur KABHI render nahi hota tha
+   * — ab hero ke turant baad answer-first block me dikhta hai.
+   */
+  problemStatement?: string;
+  /** "Who needs this" block — rendered as a checklist of buyer situations. */
+  whoNeedsThis?: {
+    heading: string;
+    description?: string;
+    points: string[];
+  };
+  /** Featured proof point for this service (metric + outcome). */
+  caseStudy?: {
+    title: string;
+    metric: string;
+    description: string;
+  };
   features: { title: string; description: string; image?: string }[];
   featuresHeading?: string;
   featuresDescription?: string;
@@ -48,8 +66,13 @@ export interface ChildServiceView {
    * the pages where the document wrote it — those pages show this list instead
    * of the shared <Industries /> homepage section.
    *
-   * SEO child pages declare a bare `{ name, description }[]` here; that data has
-   * never been rendered and still isn't — only the documented object form is.
+   * Do rooske hote hain:
+   *   - object form  : { heading, description, items[] }  (document pages)
+   *   - bare array   : { name, description }[]             (11 SEO child pages)
+   *
+   * Bare array pehle CHHUP kar diya gaya tha (data pada rehta tha, render
+   * nahi hota tha). Ab dono form render hote hain — bare array ko object form
+   * me convert karke.
    */
   industries?:
     | {
@@ -84,10 +107,18 @@ export default function ServiceChildPage({
     : child.heroHeading;
   const heroSuffix = heroSuffixMatch ? heroSuffixMatch[1] : "";
   const docxHeadings = child.docxHeadings;
-  // Documented industry list. SEO child pages carry a bare array here, which
-  // is not rendered — only the object form written by the source document is.
+  // Documented industry list. SEO child pages carry a bare {name,description}[]
+  // array — use the BARE array too (pehle ye data chhup kar diya gaya tha).
   const docIndustries = Array.isArray(child.industries)
-    ? undefined
+    ? {
+        heading: "Industries We Serve",
+        description:
+          "Every industry below faces the same visibility problem in a different way. Here is how this service applies to each of them.",
+        items: child.industries.map((i) => ({
+          title: i.name,
+          description: i.description,
+        })),
+      }
     : child.industries;
   // The document's own FAQ heading is only used when it names the service; a
   // bare "FAQs" adds nothing over the template, which already names it.
@@ -117,20 +148,55 @@ export default function ServiceChildPage({
     ],
   };
 
+  // Service schema ka geo page ke APNE target se aana chahiye (URL + H1),
+  // warna "Delhi NCR" har India-target page par galat signal ban jata hai.
+  const geoMatch = child.heroHeading.match(
+    /\bin (Delhi NCR|Delhi|India|[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)\s*$/,
+  );
+  const serviceArea = geoMatch?.[1] ?? (
+    child.slug.endsWith("-in-india") ? "India" : "Delhi NCR"
+  );
+  const serviceAreaName =
+    serviceArea === "Delhi" ? "Delhi NCR" : serviceArea;
+
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
     serviceType: child.title,
-    name: `${child.title} Services in Delhi NCR`,
-    description: child.detailedDescription,
+    name: `${child.title} Services in ${serviceAreaName}`,
+    description: (child.detailedDescription.split("\n\n")[0] ?? child.detailedDescription).slice(0, 300),
     url: canonicalUrl,
+    image: `https://eddinet.com${child.image}`,
     provider: {
       "@type": "Organization",
-      name: "Eddinet",
-      url: "https://eddinet.com/",
+      name: site.name,
+      url: site.url,
       logo: "https://eddinet.com/images/brand/eddinet-logo.webp",
+      sameAs: [
+        site.social.linkedin,
+        site.social.facebook,
+        site.social.instagram,
+      ].filter(Boolean),
     },
-    areaServed: { "@type": "AdministrativeArea", name: "Delhi NCR" },
+    areaServed: [
+      { "@type": "AdministrativeArea", name: serviceAreaName },
+      { "@type": "Country", name: "India" },
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: child.title,
+      itemListElement: child.features.map((feature) => ({
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: feature.title },
+      })),
+    },
+    // Client reviews — page par dikhne wale testimonials yahin se aate hain.
+    review: child.testimonials.map((t) => ({
+      "@type": "Review",
+      author: { "@type": "Person", name: t.name },
+      reviewBody: t.review,
+      reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
+    })),
   };
 
   const faqSchema = {
@@ -139,7 +205,15 @@ export default function ServiceChildPage({
     mainEntity: child.faqs.map((f) => ({
       "@type": "Question",
       name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: f.a,
+        // Voice / AI answer engines ke liye speakable signal.
+        speakable: {
+          "@type": "SpeakableSpecification",
+          cssSelector: ".faq-answer",
+        },
+      },
     })),
   };
 
@@ -245,6 +319,30 @@ export default function ServiceChildPage({
           </div>
         </div>
       </section>
+
+      {/* =========================================================
+          1b. THE PROBLEM — answer-first block
+          Hero ke turant baad — AI/voice answer engines isko "direct answer"
+          ke roop me pick karte hain. Pehle ye data file me likha hua pada
+          rehta tha aur kabhi render nahi hota tha.
+          ========================================================= */}
+      {child.problemStatement && (
+      <section className="py-[70px]">
+        <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
+          <div className="relative rounded-3xl border border-[rgba(var(--accent-rgb),0.22)] bg-[var(--panel-bg)] overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-[var(--main-accent)]/8 via-transparent to-transparent" />
+            <div className="relative z-10 p-8 max-[768px]:p-6">
+              <span className="inline-flex items-center gap-2 py-1.5 px-4 bg-[rgba(var(--accent-rgb),0.1)] border border-[rgba(var(--accent-rgb),0.22)] rounded-3xl text-[var(--main-accent)] text-[0.78rem] font-bold uppercase tracking-wider mb-5">
+                ⚠️ The Problem
+              </span>
+              <p className="text-[var(--text-main)] text-[1.12rem] leading-relaxed max-w-[900px]">
+                {child.problemStatement}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      )}
 
       {/* =========================================================
           2. ABOUT — from detailedDescription / docx about copy
@@ -415,6 +513,32 @@ export default function ServiceChildPage({
       )}
 
       {/* =========================================================
+          5b. WHO NEEDS THIS — buyer-fit checklist
+          ========================================================= */}
+      {child.whoNeedsThis && child.whoNeedsThis.points.length > 0 && (
+      <section className="py-[90px]">
+        <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
+          <SectionHeader
+            chip="Who Needs This"
+            title={child.whoNeedsThis.heading}
+            description={child.whoNeedsThis.description}
+          />
+
+          <div className={balancedGrid(child.whoNeedsThis.points.length, { base: 2, gapClass: "cgrid-gap-4", stages: [{ bp: 900, maxCols: 1 }] })}>
+            {child.whoNeedsThis.points.map((point, i) => (
+              <div key={i} className="group flex items-start gap-3.5 rounded-2xl p-5 bg-[var(--bg-card)] border border-[var(--border-color)] transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(var(--accent-rgb),0.3)]">
+                <span className="shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-[0.8rem] font-extrabold text-[var(--on-primary)] shadow-[0_6px_16px_rgba(var(--accent-rgb),0.25)]" style={{ background: "var(--primary-gradient)" }}>
+                  ✓
+                </span>
+                <span className="text-[var(--text-main)] text-[0.95rem] leading-relaxed">{point}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      )}
+
+      {/* =========================================================
           6. WHY CHOOSE US — The Eddinet Edge card
           Hidden when the page has no why-choose-us points.
       ========================================================= */}
@@ -531,6 +655,35 @@ export default function ServiceChildPage({
       </section>
 
       {/* =========================================================
+          7b. FEATURED CASE STUDY — the proof point for this service
+          Pehle ye data me likha hua pada rehta tha, render nahi hota tha.
+          ========================================================= */}
+      {child.caseStudy && (
+      <section className="py-[90px] bg-[var(--strip-bg)] border-y border-[var(--border-color)]">
+        <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
+          <div className="relative rounded-3xl overflow-hidden border border-[rgba(var(--accent-rgb),0.25)] bg-[var(--panel-bg)] shadow-[var(--shadow-lg)]">
+            <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[var(--main-accent)] via-transparent to-purple-500" />
+            <div className="absolute top-0 right-0 w-56 h-56 bg-[var(--main-accent)]/12 rounded-full blur-3xl" />
+            <div className="relative z-10 p-9 max-[768px]:p-6 max-w-[900px]">
+              <span className="inline-flex items-center gap-2 py-1.5 px-4 bg-[rgba(var(--accent-rgb),0.1)] border border-[rgba(var(--accent-rgb),0.22)] rounded-3xl text-[var(--main-accent)] text-[0.78rem] font-bold uppercase tracking-wider mb-5">
+                📈 Featured Case Study
+              </span>
+              <h3 className="text-[1.7rem] font-extrabold leading-snug mb-3 text-[var(--text-main)] max-[768px]:text-[1.35rem]">
+                {child.caseStudy.title}
+              </h3>
+              <p className="text-[1.05rem] font-bold text-[var(--main-accent)] mb-4">
+                {child.caseStudy.metric}
+              </p>
+              <p className="text-[var(--text-muted)] text-[0.95rem] leading-relaxed">
+                {child.caseStudy.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      )}
+
+      {/* =========================================================
           8. INDUSTRIES WE SERVE — reused homepage section.
           Pages whose source document carries its own industry list
           ("…for Multi-Industry Needs") render that list instead.
@@ -597,7 +750,7 @@ export default function ServiceChildPage({
                   </span>
                   <span className="w-8 h-8 shrink-0 rounded-full border border-[var(--border-color)] text-[var(--main-accent)] flex items-center justify-center text-[1.1rem] transition-transform duration-300 group-open:rotate-45">+</span>
                 </summary>
-                <div className="px-7 pb-[22px] text-[var(--text-muted)] text-[0.95rem] leading-relaxed">{f.a}</div>
+                <div className="faq-answer px-7 pb-[22px] text-[var(--text-muted)] text-[0.95rem] leading-relaxed">{f.a}</div>
               </details>
             ))}
           </div>

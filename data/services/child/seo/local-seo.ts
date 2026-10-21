@@ -14,7 +14,7 @@ export const child = {
   heroHeading: "Local SEO Services in Delhi NCR",
   heroSubheading: "If someone in your city searches for what you sell right now, does your business show up? At Eddinet, we specialize in local SEO services in India that help businesses like yours get found by people who are searching nearby and ready to buy. We get your business seen on Google Search, Google Maps, and the local pack — the results that show up right when someone types \"near me\".",
   image: "/images/services/seo/seo/local-seo.webp",
-  problemStatement: "If your business does not appear in the Google Maps 3-pack or local search results when customers search for services nearby, you are handing revenue to competitors who do. Many businesses have inconsistent listings, unoptimised Google Business Profiles, weak review strategies and zero local content strategy â€” making them invisible to the most valuable search traffic: local customers ready to buy right now.",
+  problemStatement: "If your business does not appear in the Google Maps 3-pack or local search results when customers search for services nearby, you are handing revenue to competitors who do. Many businesses have inconsistent listings, unoptimised Google Business Profiles, weak review strategies and zero local content strategy — making them invisible to the most valuable search traffic: local customers ready to buy right now.",
   features: [
     {
       title: "Google My Business SEO Services",
@@ -88,15 +88,15 @@ export const child = {
     ],
   },
   caseStudy: {
-    title: "Multi-Location Healthcare â€” Local Visibility Growth",
+    title: "Multi-Location Healthcare — Local Visibility Growth",
     metric: "+250% Google Maps Impressions in 4 Months",
-    description: "A multi-location healthcare chain had inconsistent listings and zero review strategy. We optimised all Google Business Profiles, fixed 200+ citation inconsistencies and built a review generation system that grew their average rating from 3.8 to 4.6 stars â€” driving a 250% increase in Maps impressions and 180% increase in direction requests.",
+    description: "A multi-location healthcare chain had inconsistent listings and zero review strategy. We optimised all Google Business Profiles, fixed 200+ citation inconsistencies and built a review generation system that grew their average rating from 3.8 to 4.6 stars — driving a 250% increase in Maps impressions and 180% increase in direction requests.",
   },
   testimonials: [
     {
       name: "Amit Verma",
       designation: "Owner, QuickFix Home Services",
-      review: "Before Eddinet, we were invisible on Google Maps. Now we appear in the top 3 for every service we offer in our area. The phone rings three times more than before â€” all from local customers finding us on Google.",
+      review: "Before Eddinet, we were invisible on Google Maps. Now we appear in the top 3 for every service we offer in our area. The phone rings three times more than before — all from local customers finding us on Google.",
     },
     {
       name: "Deepika Singh",
@@ -111,7 +111,7 @@ export const child = {
     points: [
       "Restaurants, cafes and food businesses competing for nearby dining searches",
       "Healthcare clinics and dental practices needing patient appointments from local searches",
-      "Home service providers â€” plumbers, electricians, HVAC â€” targeting 'near me' service queries",
+      "Home service providers — plumbers, electricians, HVAC — targeting 'near me' service queries",
       "Retail stores and showrooms where foot traffic directly drives revenue",
       "Multi-location businesses needing consistent visibility across all branches",
       "Law firms and professional services competing in local market searches",

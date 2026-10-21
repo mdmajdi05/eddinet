@@ -15,8 +15,8 @@ import { benefits } from "../_category/maintenance-support";
 export const child = {
   slug: "website-security-update-services-in-india",
   title: "Security Updates",
-  metaTitle: "Security Updates Services in Delhi NCR | Eddinet",
-  metaDescription: "Patching and hardening that keep your platform protected against new threats. Update cycles that run on schedule, not on panic. Eddinet delivers dependable security updates services in Delhi NCR for India and global clients. Get a free proposal today.",
+  metaTitle: "Security Updates Services in India | Eddinet",
+  metaDescription: "Patching and hardening that keep your platform protected against new threats. Update cycles that run on schedule, not on panic. Eddinet delivers dependable security updates services across India and globally. Get a free proposal today.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "Fortified Cyber Defense | Proactive Vulnerability Patching | Automated Core & CMS Maintenance",
   // the <h1> itself — doc line "Main hero H1 headline:-"

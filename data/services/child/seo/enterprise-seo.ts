@@ -14,7 +14,7 @@ export const child = {
   heroHeading: "Enterprise SEO Services in Delhi NCR",
   heroSubheading: "Enterprise SEO isn't small-business SEO scaled up — it's hundreds of pages, multiple stakeholders, legacy tech, and a brand that can't afford experiments. Eddinet's enterprise SEO services in India are built for exactly this: complex, cross-functional work that moves the needle across your whole organization, not one landing page.",
   image: "/images/services/seo/seo/enterprise-seo.webp",
-  problemStatement: "Enterprise websites face a fundamentally different set of SEO challenges â€” thousands of pages, complex site architectures, multiple stakeholders, legacy systems and aggressive competition. Standard SEO checklists do not scale. Without enterprise-grade technical governance, content architecture and reporting frameworks, large sites bleed organic potential across duplicate content, crawl waste, indexation issues and fragmented keyword strategies.",
+  problemStatement: "Enterprise websites face a fundamentally different set of SEO challenges — thousands of pages, complex site architectures, multiple stakeholders, legacy systems and aggressive competition. Standard SEO checklists do not scale. Without enterprise-grade technical governance, content architecture and reporting frameworks, large sites bleed organic potential across duplicate content, crawl waste, indexation issues and fragmented keyword strategies.",
   features: [
     {
       title: "Enterprise Technical SEO Audits",
@@ -88,9 +88,9 @@ export const child = {
     ],
   },
   caseStudy: {
-    title: "E-Commerce Enterprise â€” Organic Revenue Recovery",
+    title: "E-Commerce Enterprise — Organic Revenue Recovery",
     metric: "+420% Organic Sessions After Platform Migration",
-    description: "A large e-commerce platform lost 60% of organic traffic during a platform migration. Our enterprise SEO team managed the full migration â€” URL mapping, redirect strategy, technical QA and content preservation â€” recovering all lost traffic and growing organic sessions by 420% within 12 months.",
+    description: "A large e-commerce platform lost 60% of organic traffic during a platform migration. Our enterprise SEO team managed the full migration — URL mapping, redirect strategy, technical QA and content preservation — recovering all lost traffic and growing organic sessions by 420% within 12 months.",
   },
   testimonials: [
     {

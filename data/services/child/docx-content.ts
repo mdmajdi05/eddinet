@@ -487,8 +487,8 @@ export const docxMobileAppDevelopmentCategory: DocxCategoryContent = {
   title: "Mobile App Development",
   metaTitle: "Mobile App Development Services in India | Eddinet",
   metaDescription:
-    "We build complete mobile ecosystems, not just standalone applications. As a " +
-    "Full-Stack App Development Agency, Eddinet handles every single layer of your",
+    "We build complete mobile ecosystems, not just standalone apps. As a full-stack " +
+    "mobile app development agency in India, Eddinet handles every layer for you.",
   heroEyebrow: "Android App Development | iOS App Development | Flutter App Development",
   heroHeading: "Mobile App Development Company in India",
   heroSubheading: "At Eddinet, we transform ideas into high-performing, scalable mobile applications that drive real business growth. As a leading mobile app development company in India, we engineer intuitive, high-speed iOS and Android applications tailored to your business needs ensuring smooth performance, bulletproof security, and engaging user experiences from day one.",

@@ -10,11 +10,11 @@ export const child = {
   slug: "shopify-seo-services-in-delhi-ncr",
   title: "Shopify SEO",
   metaTitle: "Shopify SEO Services in Delhi NCR | Eddinet",
-  metaDescription: "Rank your Shopify store higher on Google. Eddinet's Shopify SEO tackles platform-specific challenges â€” theme speed, URL structure & technical limitations. Get a free audit.",
+  metaDescription: "Rank your Shopify store higher on Google. Eddinet's Shopify SEO tackles platform-specific challenges — theme speed, URL structure & technical limitations. Get a free audit.",
   heroHeading: "Shopify SEO Services in Delhi NCR",
   heroSubheading: "Shopify-specific SEO expertise that navigates platform constraints, optimises theme performance and builds organic growth strategies around Shopify's unique technical architecture.",
   image: "/images/services/seo/seo/shopify-seo.webp",
-  problemStatement: "Shopify is powerful for launching quickly, but its SEO limitations are real â€” rigid URL structures, forced duplicate content from /collections and /products paths, limited access to robots.txt, theme bloat affecting speed and app dependencies adding unnecessary code. Most Shopify stores suffer from these technical constraints without even realising they are suppressing rankings. Without Shopify-specific SEO expertise, these platform limitations quietly cap your organic potential.",
+  problemStatement: "Shopify is powerful for launching quickly, but its SEO limitations are real — rigid URL structures, forced duplicate content from /collections and /products paths, limited access to robots.txt, theme bloat affecting speed and app dependencies adding unnecessary code. Most Shopify stores suffer from these technical constraints without even realising they are suppressing rankings. Without Shopify-specific SEO expertise, these platform limitations quietly cap your organic potential.",
   features: [
     {
       title: "Shopify Theme Speed Optimisation",
@@ -23,12 +23,12 @@ export const child = {
     },
     {
       title: "URL Structure Workarounds",
-      description: "Strategic handling of Shopify's rigid URL architecture â€” /collections/, /products/ paths, canonical tags and redirects that prevent duplicate content issues.",
+      description: "Strategic handling of Shopify's rigid URL architecture — /collections/, /products/ paths, canonical tags and redirects that prevent duplicate content issues.",
       image: "/images/services/seo/shopify-seo/url-structure-workarounds-self-gen.webp",
     },
     {
       title: "Shopify App SEO Audit",
-      description: "Review every installed app for SEO impact â€” identifying apps that inject unnecessary scripts, create duplicate content or slow down your storefront.",
+      description: "Review every installed app for SEO impact — identifying apps that inject unnecessary scripts, create duplicate content or slow down your storefront.",
       image: "/images/services/seo/shopify-seo/shopify-app-seo-audit-self-gen.webp",
     },
     {
@@ -55,7 +55,7 @@ export const child = {
   whyChooseUs: {
     heading: "Why Choose Eddinet for Shopify SEO",
     points: [
-      "Deep Shopify Expertise: Deep Shopify platform expertise â€” we know every limitation and every workaround.",
+      "Deep Shopify Expertise: Deep Shopify platform expertise — we know every limitation and every workaround.",
       "Theme-Specific Speed Optimisation: Theme-specific speed optimisation that addresses Shopify's unique performance challenges.",
       "App Audit Capability: App audit capability that identifies and eliminates hidden SEO problems from apps.",
       "Collection-First Strategy: Collection-first strategy that maximises Shopify's highest-impact SEO pages.",
@@ -74,7 +74,7 @@ export const child = {
       {
         num: "02",
         title: "Audit the Core Constraint",
-        description: "Full Shopify audit â€” theme performance, app impact, URL structure, collection hierarchy, product page quality and technical configuration.",
+        description: "Full Shopify audit — theme performance, app impact, URL structure, collection hierarchy, product page quality and technical configuration.",
       },
       {
         num: "03",
@@ -99,9 +99,9 @@ export const child = {
     ],
   },
   caseStudy: {
-    title: "Shopify Fashion Store â€” Speed & Rankings Recovery",
+    title: "Shopify Fashion Store — Speed & Rankings Recovery",
     metric: "Page Speed Score: 34 to 92, +200% Organic Traffic",
-    description: "A Shopify fashion store had a page speed score of 34 due to 15 unnecessary apps and an unoptimised theme. We audited and removed redundant apps, optimised the theme code, compressed all images and restructured collections â€” achieving a 92 speed score and 200% organic traffic growth.",
+    description: "A Shopify fashion store had a page speed score of 34 due to 15 unnecessary apps and an unoptimised theme. We audited and removed redundant apps, optimised the theme code, compressed all images and restructured collections — achieving a 92 speed score and 200% organic traffic growth.",
   },
   testimonials: [
     {
@@ -115,7 +115,7 @@ export const child = {
       review: "Most SEO agencies do not understand Shopify's unique constraints. Eddinet knew exactly which workarounds to apply for URL structure, which apps to remove and how to optimise collections. The results speak for themselves.",
     },
   ],
-  detailedDescription: "Shopify SEO is the specialist practice of optimising Shopify stores within the platform's unique technical constraints, navigating its rigid URL architecture while maximising the built-in SEO features Shopify provides. At Eddinet, our Shopify SEO services in Delhi NCR help Shopify merchants turn their platform limitations into a competitive advantage.\n\nShopify is powerful for launching stores quickly, but its SEO constraints are real â€” rigid URL structures, forced duplicate content paths, limited robots.txt access, theme bloat affecting page speed and apps injecting unnecessary code. Most Shopify merchants never realise these constraints are quietly suppressing their rankings. Our Shopify SEO services are built around deep knowledge of every platform limitation and every workaround.\n\nTheme speed optimisation is often the highest-impact fix. We clean up theme code, audit every installed app for performance impact, optimise images and implement lazy loading to improve Core Web Vitals scores that directly influence rankings. App audits identify and eliminate hidden SEO problems â€” scripts that slow your storefront or create duplicate content.\n\nShopify URL structure workarounds address the platform's /collections/ and /products/ path constraints. We implement canonical tags, strategic redirects and content differentiation strategies that prevent duplicate content from diluting rankings. Collection page optimisation targets Shopify's highest-impact SEO pages, with strategic collection structure, descriptions, keyword targeting and internal linking.\n\nProduct page enhancement â€” unique descriptions, structured data, image alt tags and above-the-fold content â€” differentiates your listings. Complete Shopify technical configuration, including sitemap management, canonical implementation and hreflang setup, ensures maximum crawl efficiency. For Shopify merchants in Delhi NCR, our Shopify SEO services deliver platform-specific expertise that generic agencies simply do not possess.",
+  detailedDescription: "Shopify SEO is the specialist practice of optimising Shopify stores within the platform's unique technical constraints, navigating its rigid URL architecture while maximising the built-in SEO features Shopify provides. At Eddinet, our Shopify SEO services in Delhi NCR help Shopify merchants turn their platform limitations into a competitive advantage.\n\nShopify is powerful for launching stores quickly, but its SEO constraints are real — rigid URL structures, forced duplicate content paths, limited robots.txt access, theme bloat affecting page speed and apps injecting unnecessary code. Most Shopify merchants never realise these constraints are quietly suppressing their rankings. Our Shopify SEO services are built around deep knowledge of every platform limitation and every workaround.\n\nTheme speed optimisation is often the highest-impact fix. We clean up theme code, audit every installed app for performance impact, optimise images and implement lazy loading to improve Core Web Vitals scores that directly influence rankings. App audits identify and eliminate hidden SEO problems — scripts that slow your storefront or create duplicate content.\n\nShopify URL structure workarounds address the platform's /collections/ and /products/ path constraints. We implement canonical tags, strategic redirects and content differentiation strategies that prevent duplicate content from diluting rankings. Collection page optimisation targets Shopify's highest-impact SEO pages, with strategic collection structure, descriptions, keyword targeting and internal linking.\n\nProduct page enhancement — unique descriptions, structured data, image alt tags and above-the-fold content — differentiates your listings. Complete Shopify technical configuration, including sitemap management, canonical implementation and hreflang setup, ensures maximum crawl efficiency. For Shopify merchants in Delhi NCR, our Shopify SEO services deliver platform-specific expertise that generic agencies simply do not possess.",
   whoNeedsThis: {
     heading: "Who Needs Shopify SEO?",
     description: "Shopify merchants whose stores underperform in search due to platform constraints, theme performance issues or app-related SEO problems.",
@@ -131,7 +131,7 @@ export const child = {
   benefits: [
     {
       title: "Platform-Specific Expertise",
-      description: "Deep knowledge of every Shopify limitation and workaround â€” expertise generic agencies do not have and cannot fake.",
+      description: "Deep knowledge of every Shopify limitation and workaround — expertise generic agencies do not have and cannot fake.",
     },
     {
       title: "Theme Speed Transformation",
@@ -147,7 +147,7 @@ export const child = {
     },
     {
       title: "Collection-First Strategy",
-      description: "Optimising Shopify's highest-impact SEO pages â€” collections â€” with structure, content and internal linking engineered for rankings.",
+      description: "Optimising Shopify's highest-impact SEO pages — collections — with structure, content and internal linking engineered for rankings.",
     },
     {
       title: "Technical Configuration Mastery",
@@ -201,7 +201,7 @@ export const child = {
   faqs: [
     {
       q: "What makes Shopify SEO different from other eCommerce SEO?",
-      a: "Shopify has unique technical constraints â€” rigid URL structures (/collections/, /products/), limited robots.txt access, forced duplicate content paths and app dependencies that affect performance. Shopify-specific SEO requires expertise in navigating these platform limitations while maximising the built-in SEO features Shopify provides.",
+      a: "Shopify has unique technical constraints — rigid URL structures (/collections/, /products/), limited robots.txt access, forced duplicate content paths and app dependencies that affect performance. Shopify-specific SEO requires expertise in navigating these platform limitations while maximising the built-in SEO features Shopify provides.",
     },
     {
       q: "Can you improve my Shopify store speed?",

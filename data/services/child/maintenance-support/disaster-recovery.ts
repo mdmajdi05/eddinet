@@ -15,8 +15,8 @@ import { benefits } from "../_category/maintenance-support";
 export const child = {
   slug: "website-disaster-recovery-services-in-india",
   title: "Disaster Recovery",
-  metaTitle: "Disaster Recovery Services in Delhi NCR | Eddinet",
-  metaDescription: "Recovery plans and drills that restore services quickly after any failure. The plan you pray you never need — ready and rehearsed. Eddinet delivers dependable disaster recovery services in Delhi NCR for India and global clients. Get a free proposal today.",
+  metaTitle: "Disaster Recovery Services in India | Eddinet",
+  metaDescription: "Recovery plans and drills that restore services quickly after any failure. The plan you pray you never need — ready and rehearsed. Eddinet delivers dependable disaster recovery services across India and globally. Get a free proposal today.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "Hacked Website Recovery | Data Restoration | Disaster Recovery as a Service",
   // the <h1> itself — doc line "Main hero H1 headline:-"

@@ -15,8 +15,8 @@ import { benefits } from "../_category/maintenance-support";
 export const child = {
   slug: "server-maintenance-services-in-india",
   title: "Server Maintenance",
-  metaTitle: "Server Maintenance Services in Delhi NCR | Eddinet",
-  metaDescription: "Server patching, health checks and optimisation for stable uptime. Infrastructure that's serviced on a schedule, not on an incident. Eddinet delivers dependable server maintenance services in Delhi NCR for India and global clients. Get a free proposal today.",
+  metaTitle: "Server Maintenance Services in India | Eddinet",
+  metaDescription: "Server patching, health checks and optimisation for stable uptime. Infrastructure that's serviced on a schedule, not on an incident. Eddinet delivers dependable server maintenance services across India and globally. Get a free proposal today.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "Server Monitoring & Alerting | OS Patching & Updates | Linux Server Administration",
   // the <h1> itself — doc line "Main hero H1 headline:-"

@@ -14,7 +14,7 @@ export const child = {
   heroHeading: "Amazon SEO Services in Delhi NCR",
   heroSubheading: "Eddinet helps sellers stop losing sales to page-three listings. On Amazon, ranking has nothing to do with Google — it's about A9/A10 and what actually gets your product in front of a shopper who's ready to buy right now.",
   image: "/images/services/seo/seo/amazon-seo.webp",
-  problemStatement: "Amazon is the first place consumers search when they want to buy. But ranking on Amazon requires a fundamentally different SEO approach than Google. Backend keywords, listing copy, image strategy, review velocity, conversion rate and fulfilment method all influence A9/A10 ranking. Most sellers either apply Google SEO thinking to Amazon or ignore optimisation entirely â€” losing visibility to competitors who understand Amazon's unique ranking ecosystem.",
+  problemStatement: "Amazon is the first place consumers search when they want to buy. But ranking on Amazon requires a fundamentally different SEO approach than Google. Backend keywords, listing copy, image strategy, review velocity, conversion rate and fulfilment method all influence A9/A10 ranking. Most sellers either apply Google SEO thinking to Amazon or ignore optimisation entirely — losing visibility to competitors who understand Amazon's unique ranking ecosystem.",
   features: [
     {
       title: "Amazon Keyword Research",
@@ -88,9 +88,9 @@ export const child = {
     ],
   },
   caseStudy: {
-    title: "Home Electronics Brand â€” Amazon Ranking Growth",
+    title: "Home Electronics Brand — Amazon Ranking Growth",
     metric: "From Page 5 to Page 1 for 15 Core Keywords",
-    description: "A home electronics brand was buried on page 5 for their main keywords. Through comprehensive listing optimisation, backend keyword restructuring, A+ Content creation and review generation, we moved 15 core keywords to page 1 within 4 months â€” increasing organic sales by 340%.",
+    description: "A home electronics brand was buried on page 5 for their main keywords. Through comprehensive listing optimisation, backend keyword restructuring, A+ Content creation and review generation, we moved 15 core keywords to page 1 within 4 months — increasing organic sales by 340%.",
   },
   testimonials: [
     {
@@ -101,7 +101,7 @@ export const child = {
     {
       name: "Ritu Saxena",
       designation: "E-Commerce Manager, HomeStyle Brands",
-      review: "The A+ Content Eddinet created for us not only improved our rankings but also our conversion rate. We went from 8% to 15% conversion on optimised listings â€” a direct impact on our bottom line.",
+      review: "The A+ Content Eddinet created for us not only improved our rankings but also our conversion rate. We went from 8% to 15% conversion on optimised listings — a direct impact on our bottom line.",
     },
   ],
   detailedDescription: "Amazon runs on its own rules — relevance, conversion rate, and customer satisfaction signals, not backlinks or domain authority. As a SEO company in India working with sellers and brands, Eddinet focuses specifically on what moves the needle inside Amazon's marketplace, not generic SEO principles applied where they don't fit.\n\nWe've helped listings move from buried and ignored to consistently visible, by treating keywords, content, images, and reviews as one connected system instead of separate tasks. Ranking without conversion doesn't grow a business — so we optimize for both at once.",

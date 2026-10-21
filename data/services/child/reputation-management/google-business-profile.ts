@@ -15,8 +15,8 @@ import { benefits } from "../_category/reputation-management";
 export const child = {
   slug: "google-business-profile-management-services-in-india",
   title: "Google Business Profile",
-  metaTitle: "Google Business Profile Services in Delhi NCR | Eddinet",
-  metaDescription: "Profile setup, optimisation and updates that power local search visibility. Your business found, accurate and appealing in the local pack. Eddinet delivers dependable google business profile services in Delhi NCR for India and global clients. Get a free proposal today.",
+  metaTitle: "Google Business Profile Services in India | Eddinet",
+  metaDescription: "Profile setup, optimisation and updates that power local search visibility. Your business found, accurate and appealing in the local pack. Eddinet delivers dependable google business profile services across India and globally. Get a free proposal today.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "Profile Setup & Verification | GBP Optimisation | Google Maps Visibility | Monthly Insights",
   // the <h1> itself — doc line "Main hero H1 headline:-"

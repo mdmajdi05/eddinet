@@ -2,15 +2,52 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { insights } from "@/data/blog/blog";
+import { site } from "@/data/site/contact";
 import { balancedGrid } from "@/lib/process-grid";
 import AdaptiveLines from "@/components/AdaptiveLines";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { socialMetadata } from "@/lib/social-metadata";
+
+const BLOG_DESCRIPTION =
+  "Eddinet blog on SEO, AI search, Google and Meta ads, social media, content, web development, eCommerce, AI, cloud and digital growth.";
 
 export const metadata: Metadata = {
   title: "Blog - Practical Thinking on Marketing and Technology",
-  description:
-    "Eddinet blog on SEO, AI search, Google and Meta ads, social media, content, web development, eCommerce, AI, cloud and digital growth.",
+  description: BLOG_DESCRIPTION,
   alternates: { canonical: "https://eddinet.com/blog" },
+  ...socialMetadata({
+    title: "Blog - Practical Thinking on Marketing and Technology",
+    description: BLOG_DESCRIPTION,
+    url: "https://eddinet.com/blog",
+  }),
+};
+
+// Blog index ka JSON-LD — Google ko batata hai ki ye ek collection page hai aur
+// usme kaunse posts hain (position order me). Har post ka URL + ISO date.
+const blogSchema = {
+  "@context": "https://schema.org",
+  "@type": ["Blog", "CollectionPage"],
+  name: "Eddinet Blog - Practical Thinking on Marketing and Technology",
+  description: BLOG_DESCRIPTION,
+  url: "https://eddinet.com/blog",
+  inLanguage: "en-IN",
+  publisher: {
+    "@type": "Organization",
+    name: site.name,
+    url: site.url,
+    logo: "https://eddinet.com/images/brand/eddinet-logo.webp",
+  },
+  mainEntity: {
+    "@type": "ItemList",
+    itemListElement: insights.map((post, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: post.title,
+      url: `https://eddinet.com/blog/${post.slug}`,
+      item: `https://eddinet.com/blog/${post.slug}`,
+      datePublished: new Date(post.date).toISOString(),
+    })),
+  },
 };
 
 export default function BlogPage() {
@@ -74,6 +111,11 @@ export default function BlogPage() {
           ))}
         </div>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
     </>
   );
 }

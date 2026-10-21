@@ -9,7 +9,7 @@
 //  ├── site/          company info + saari images
 //  ├── home/          homepage copy
 //  ├── about/         about page copy
-//  ├── services/      parent (10 core services + category page copy)
+//  ├── services/      parent (13 core services + category page copy)
 //  │   └── child/     ← har service child page = APNI ALAG FILE
 //  ├── industries/    sectors
 //  ├── portfolio/     client sites + case studies
@@ -34,7 +34,7 @@
 //  │ About                           │ about/about.ts  (chhota — page ka      │
 //  │                                 │           content app/about/page.tsx   │
 //  │                                 │           me hai)                      │
-//  │ Services (PARENT)               │ services/services.ts (10 core services,│
+//  │ Services (PARENT)               │ services/services.ts (13 core services,│
 //  │  /services  +  /services/[slug]  │           tabs, per-service FAQs,      │
 //  │                                 │           cross-links + child images)  │
 //  │                                 │ services/service-page-content.ts       │

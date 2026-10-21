@@ -9,27 +9,19 @@ import { processSteps } from "@/data/home/home";
 import { industries } from "@/data/industries/industries";
 import { IMG } from "@/data/site/images";
 import { balancedGrid } from "@/lib/process-grid";
+import { socialMetadata } from "@/lib/social-metadata";
 
 export const metadata: Metadata = {
-  title: "About Eddinet | Digital Marketing, Software, AI & Cloud Agency in Delhi NCR",
+  title: "About Eddinet | Digital Marketing & Software Agency in Delhi NCR",
   description:
-    "Eddinet is a digital marketing & software agency in Delhi NCR - one connected growth system spanning SEO, AI SEO, paid media, creative, web, software, AI automation and Cloud & DevOps. Learn how we work.",
+    "Eddinet is a digital marketing & software agency in Delhi NCR - one connected growth system spanning SEO, AI SEO, paid media, creative, web, software and AI.",
   alternates: { canonical: "https://eddinet.com/about" },
-  openGraph: {
-    title: "About Eddinet | Digital Marketing, Software, AI & Cloud Agency in Delhi NCR",
+  ...socialMetadata({
+    title: "About Eddinet | Digital Marketing & Software Agency in Delhi NCR",
     description:
-      "Eddinet is a digital marketing & software agency in Delhi NCR - one connected growth system spanning SEO, AI SEO, paid media, creative, web, software, AI automation and Cloud & DevOps.",
+      "Eddinet is a digital marketing & software agency in Delhi NCR - one connected growth system spanning SEO, AI SEO, paid media, creative, web, software and AI.",
     url: "https://eddinet.com/about",
-    siteName: "Eddinet",
-    type: "website",
-    locale: "en_IN",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "About Eddinet | Digital Marketing, Software, AI & Cloud Agency in Delhi NCR",
-    description:
-      "Eddinet is a digital marketing & software agency in Delhi NCR - one connected growth system spanning SEO, AI SEO, paid media, creative, web, software, AI automation and Cloud & DevOps.",
-  },
+  }),
 };
 
 const companyStats = [
@@ -331,7 +323,7 @@ function Marquee() {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Eddinet",
+  name: site.name,
   url: site.url,
   logo: "https://eddinet.com/images/brand/eddinet-logo.webp",
   description: site.tagline,

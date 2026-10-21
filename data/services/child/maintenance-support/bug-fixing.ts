@@ -15,8 +15,8 @@ import { benefits } from "../_category/maintenance-support";
 export const child = {
   slug: "website-bug-fixing-services-in-india",
   title: "Bug Fixing",
-  metaTitle: "Bug Fixing Services in Delhi NCR | Eddinet",
-  metaDescription: "Rapid diagnosis and resolution of bugs across front-end, back-end and integrations. Issues found, fixed and documented — with prevention notes. Eddinet delivers dependable bug fixing services in Delhi NCR for India and global clients. Get a free proposal today.",
+  metaTitle: "Bug Fixing Services in India | Eddinet",
+  metaDescription: "Rapid diagnosis and resolution of bugs across front-end, back-end and integrations. Issues found, fixed and documented — with prevention notes. Eddinet delivers dependable bug fixing services across India and globally. Get a free proposal today.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "Error Resolution | Debugging & Troubleshooting | Web Application Fixes",
   // the <h1> itself — doc line "Main hero H1 headline:-"

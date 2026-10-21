@@ -15,8 +15,8 @@ import { benefits } from "../_category/reputation-management";
 export const child = {
   slug: "customer-feedback-management-services-in-india",
   title: "Customer Feedback Management",
-  metaTitle: "Customer Feedback Management Services in Delhi NCR | Eddinet",
-  metaDescription: "Collecting and actioning customer feedback to improve service and perception. Fewer negative reviews, because issues get fixed inside the business. Eddinet delivers dependable customer feedback management services in Delhi NCR for India and global clients. Get a free proposal today.",
+  metaTitle: "Customer Feedback Management Services in India | Eddinet",
+  metaDescription: "Collecting and actioning customer feedback to improve service and perception. Fewer negative reviews, because issues get fixed inside the business. Eddinet delivers dependable customer feedback management services across India and globally. Get a free proposal today.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "Feedback Collection | NPS & CSAT Surveys | Insight Analysis",
   // the <h1> itself — doc line "Main hero H1 headline:-"

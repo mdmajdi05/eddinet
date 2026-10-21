@@ -8,12 +8,36 @@ import { servicePages } from "@/data/services/services";
 import { processSteps } from "@/data/home/home";
 import { site } from "@/data/site/contact";
 import { balancedGrid } from "@/lib/process-grid";
+import { socialMetadata } from "@/lib/social-metadata";
 
 export const metadata: Metadata = {
   title: "Digital Growth, Marketing & Technology Services in Delhi NCR",
   description:
-    "Explore Eddinet's services - SEO & AI SEO, social media, ads & PPC, content, design, web, eCommerce, mobile apps, software & AI, cloud & DevOps, hosting, maintenance and reputation management.",
+    "Explore Eddinet's services - SEO & AI SEO, social media, ads & PPC, content, design, web, eCommerce, mobile apps, software & AI, cloud & DevOps and more.",
   alternates: { canonical: "https://eddinet.com/services" },
+  ...socialMetadata({
+    title: "Digital Growth, Marketing & Technology Services in Delhi NCR",
+    description:
+      "Explore Eddinet's services - SEO & AI SEO, social media, ads & PPC, content, design, web, eCommerce, mobile apps, software & AI, cloud & DevOps and more.",
+    url: "https://eddinet.com/services",
+  }),
+};
+
+// ITEMLIST SCHEMA
+// Services hub ek flat list nahi, 13 capability areas ka index hai.
+// Isliye Google ko har area ki apni service page ke saath list form me
+// dikhate hain - search me "Eddinet services" dikhta hai aur users ko
+// seedha sahi page par le jaata hai.
+const servicesItemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Eddinet Services",
+  itemListElement: servicePages.map((s, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: s.title,
+    url: `https://eddinet.com/services/${s.slug}`,
+  })),
 };
 
 const totalCapabilities = servicePages.reduce((n, s) => n + s.allItems.length, 0);
@@ -86,6 +110,12 @@ export default function ServicesIndexPage() {
 
   return (
     <>
+      {/* JSON-LD: services ka ItemList (har capability area + uski page) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesItemListSchema) }}
+      />
+
       {/* ================= HERO ================= */}
       <section className="relative pt-[150px] pb-[70px] overflow-hidden">
         {/* background */}

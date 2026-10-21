@@ -14,7 +14,7 @@ export const child = {
   heroHeading: "International SEO Services in Delhi NCR",
   heroSubheading: "Eddinet helps businesses expand across countries and languages without losing the rankings they've already earned at home. International SEO services aren't just translating — it's structure, and getting that structure wrong is what usually goes unnoticed until traffic starts dropping.",
   image: "/images/services/seo/seo/international-seo.webp",
-  problemStatement: "Expanding into international markets without proper SEO creates a mess â€” duplicate content across country versions, wrong language pages showing in wrong countries, hreflang errors that confuse Google and wasted crawl budget on content that should not rank in certain regions. Most businesses either ignore international SEO entirely or implement it incorrectly, leaving global search potential untapped and technical debt accumulating.",
+  problemStatement: "Expanding into international markets without proper SEO creates a mess — duplicate content across country versions, wrong language pages showing in wrong countries, hreflang errors that confuse Google and wasted crawl budget on content that should not rank in certain regions. Most businesses either ignore international SEO entirely or implement it incorrectly, leaving global search potential untapped and technical debt accumulating.",
   features: [
     {
       title: "Site Structure & Domain Strategy",
@@ -88,9 +88,9 @@ export const child = {
     ],
   },
   caseStudy: {
-    title: "SaaS Platform â€” 5-Country Expansion",
+    title: "SaaS Platform — 5-Country Expansion",
     metric: "Organic Traffic Across 5 Countries in 6 Months",
-    description: "A SaaS platform expanding from India to US, UK, UAE, Australia and Canada needed international SEO from scratch. We implemented hreflang architecture, created localised content for each market and built regional backlink profiles â€” achieving page-one rankings in all 5 countries within 6 months.",
+    description: "A SaaS platform expanding from India to US, UK, UAE, Australia and Canada needed international SEO from scratch. We implemented hreflang architecture, created localised content for each market and built regional backlink profiles — achieving page-one rankings in all 5 countries within 6 months.",
   },
   testimonials: [
     {

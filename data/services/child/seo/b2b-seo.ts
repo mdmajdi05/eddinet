@@ -14,7 +14,7 @@ export const child = {
   heroHeading: "B2B SEO Services in Delhi NCR",
   heroSubheading: "Getting traffic to your website is easy. Getting inquiries from CTOs, Founders, and Procurement Heads who have actual budgets is the hard part. If your website brings in clicks but zero sales calls, you don't have a traffic problem — you have an intent problem. At Eddinet, our B2B SEO Services in India are built to put your business in front of real decision-makers right when they are ready to buy.",
   image: "/images/services/seo/seo/b2b-seo.webp",
-  problemStatement: "B2B search operates on a fundamentally different timeline than B2C. Decision-makers research for weeks or months, compare multiple vendors, involve technical evaluators and need substantial proof before engaging. Most SEO agencies apply consumer tactics to B2B â€” driving irrelevant traffic, targeting the wrong keywords and producing content that impresses nobody in the buying committee. Without B2B-specific SEO strategy, your organic presence fails to influence the complex buying process.",
+  problemStatement: "B2B search operates on a fundamentally different timeline than B2C. Decision-makers research for weeks or months, compare multiple vendors, involve technical evaluators and need substantial proof before engaging. Most SEO agencies apply consumer tactics to B2B — driving irrelevant traffic, targeting the wrong keywords and producing content that impresses nobody in the buying committee. Without B2B-specific SEO strategy, your organic presence fails to influence the complex buying process.",
   features: [
     {
       title: "Intent-Based Keyword Research",
@@ -93,20 +93,20 @@ export const child = {
     ],
   },
   caseStudy: {
-    title: "Industrial Equipment Manufacturer â€” Pipeline Growth",
+    title: "Industrial Equipment Manufacturer — Pipeline Growth",
     metric: "+280% Marketing Qualified Leads in 9 Months",
-    description: "A B2B industrial equipment manufacturer was getting traffic but no pipeline. We restructured their content around buyer journey stages, created technical evaluation content and built authority through industry-specific publications â€” driving a 280% increase in marketing qualified leads and directly influencing $2.4M in pipeline.",
+    description: "A B2B industrial equipment manufacturer was getting traffic but no pipeline. We restructured their content around buyer journey stages, created technical evaluation content and built authority through industry-specific publications — driving a 280% increase in marketing qualified leads and directly influencing $2.4M in pipeline.",
   },
   testimonials: [
     {
       name: "Rajesh Khanna",
       designation: "CMO, PrecisionTech Industries",
-      review: "Eddinet understood that B2B SEO is not about traffic volume â€” it is about attracting the right buyers at the right stage. Their strategy brought us exactly the kind of leads our sales team actually wants to work with.",
+      review: "Eddinet understood that B2B SEO is not about traffic volume — it is about attracting the right buyers at the right stage. Their strategy brought us exactly the kind of leads our sales team actually wants to work with.",
     },
     {
       name: "Neha Agarwal",
       designation: "Head of Growth, SaaSBridge Solutions",
-      review: "The content Eddinet created for us does not just rank â€” it converts. Their understanding of B2B buying committees and technical evaluation processes is what separates them from every other SEO agency we have worked with.",
+      review: "The content Eddinet created for us does not just rank — it converts. Their understanding of B2B buying committees and technical evaluation processes is what separates them from every other SEO agency we have worked with.",
     },
   ],
   detailedDescription: "Eddinet is a performance-led digital growth agency dedicated to closing the gap between technical search visibility and measurable pipeline growth.\n\nWe do not measure success through arbitrary keyword rankings or traffic spikes. Instead, we track metrics that align with business growth: qualified inbound leads, scheduled consultations, reduced customer acquisition costs (CAC), and pipeline revenue.\n\nOur team combines deep expertise in B2B search intent, technical architecture, content marketing, and conversion rate optimization (CRO) to provide your business with a clear competitive advantage.",
