@@ -141,6 +141,13 @@ const contactSchema = {
       { "@type": "AdministrativeArea", name: "Delhi NCR" },
       { "@type": "Country", name: "India" },
     ],
+    // Geo coordinates map pin se match karte hain (Okhla Phase I, New Delhi).
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 28.531672,
+      longitude: 77.274183,
+    },
+    hasMap: "https://www.google.com/maps/search/?api=1&query=Okhla+Industrial+Estate+Phase+1%2C+New+Delhi%2C+Delhi+110020",
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: [
@@ -283,6 +290,56 @@ export default function ContactPage() {
                 </Link>
               </div>
             </aside>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================
+          MAP — Google Maps embed (Eddinet, Okhla, New Delhi)
+          Local SEO ke liye important: page ka apna physical location
+          visible hona chahiye + "Get directions" link.
+          Coordinates layout ke `geo.position` meta se match karti hain.
+          ========================================================= */}
+      <section className="pb-[90px]">
+        <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
+          <div className="grid grid-cols-[0.85fr_1.15fr] gap-8 items-center max-[1024px]:grid-cols-1">
+            <div>
+              <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[var(--tag-bg)] border border-[var(--tag-border)] rounded-3xl text-[var(--main-accent)] text-[0.8rem] font-semibold uppercase tracking-wider mb-4">
+                Find Us
+              </div>
+              <h2 className="text-[2.1rem] font-extrabold leading-[1.2] mb-4 text-[var(--text-main)] max-[768px]:text-[1.7rem]">
+                Visit Our <span className="gradient-text">Okhla Office</span>
+              </h2>
+              <p className="text-[var(--text-muted)] text-[1rem] leading-relaxed mb-5">
+                {site.address}
+              </p>
+              <p className="text-[var(--text-dim)] text-[0.88rem] mb-6">
+                {site.addressNote} · {site.hours}
+              </p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Okhla+Industrial+Estate+Phase+1%2C+New+Delhi%2C+Delhi+110020"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2.5 py-3.5 px-7 rounded-full font-bold text-[0.92rem] no-underline transition-all duration-300 text-[var(--on-primary)] shadow-[0_10px_25px_-5px_rgba(var(--accent-rgb),0.4)] hover:-translate-y-[3px]"
+                style={{ background: "var(--primary-gradient)" }}
+              >
+                🗺️ Get Directions
+              </a>
+            </div>
+
+            <div className="relative rounded-2xl overflow-hidden border border-[var(--border-color)] bg-[var(--bg-card)] shadow-[0_20px_50px_-25px_rgba(0,0,0,0.45)]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3541.9027761721527!2d77.27418345935152!3d28.531672483757887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce179b9bda92f%3A0x4b88e3485182808!2sEddinet%20%7C%20Digital%20Marketing%20Agency%20in%20Delhi!5e0!3m2!1sen!2sin!4v1792579234819!5m2!1sen!2sin"
+                width="600"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                title="Eddinet office location on Google Maps - Okhla Industrial Estate Phase 1, New Delhi"
+                className="w-full h-full min-h-[320px] max-[768px]:min-h-[260px] block"
+              />
+            </div>
           </div>
         </div>
       </section>

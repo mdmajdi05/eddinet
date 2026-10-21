@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     "apple-mobile-web-app-title": site.name,
     "geo.region": "IN-DL",
     "geo.placename": "Delhi NCR",
-    "geo.position": "28.6139;77.2090",
+    "geo.position": "28.531672;77.274183",
     ICBM: "28.6139, 77.2090",
   },
 };

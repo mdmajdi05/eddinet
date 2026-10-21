@@ -33,7 +33,7 @@ export interface Insight {
   sections: InsightSection[];
 }
 
-export const insights: Insight[] = [
+const allInsights: Insight[] = [
   {
     slug: "how-generative-ai-is-reshaping-seo",
     title: "How Generative AI Is Reshaping SEO in 2026",
@@ -418,6 +418,29 @@ export const insights: Insight[] = [
     ],
   },
 ];
+
+// ============================================================================
+//  ORDER — LATEST FIRST
+//
+//  Naya post kabhi array ke END me append hota tha, isliye /blog list, homepage
+//  "Latest" section aur related articles me wo SABSE NEECHE aa jata tha.
+//  Ab order yahin se decide hota hai: latest date pehle.
+//
+//  Isse har naya post — jaise hi `date` likha jaata hai — apne aap sabse upar
+//  aa jata hai. Koi manually "upar shift" karne ki zaroorat nahi.
+//
+//  Date string "October 21, 2026" hai — `new Date()` isko parse kar leta hai.
+//  Agar kabhi parse na ho to `0` maankar wo post sabse neeche chali jayegi
+//  (koi crash nahi).
+// ============================================================================
+function postTime(post: Insight): number {
+  const t = new Date(post.date).getTime();
+  return Number.isNaN(t) ? 0 : t;
+}
+
+export const insights: Insight[] = [...allInsights].sort(
+  (a, b) => postTime(b) - postTime(a),
+);
 
 export function getInsightBySlug(slug: string): Insight | undefined {
   return insights.find((i) => i.slug === slug);

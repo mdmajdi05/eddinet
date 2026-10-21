@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
 import { insights } from "@/data/blog/blog";
 import { site } from "@/data/site/contact";
-import { balancedGrid } from "@/lib/process-grid";
 import AdaptiveLines from "@/components/AdaptiveLines";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import BlogExplorer, { type BlogCardPost } from "@/components/blog/BlogExplorer";
 import { socialMetadata } from "@/lib/social-metadata";
 
 const BLOG_DESCRIPTION =
@@ -51,6 +49,20 @@ const blogSchema = {
 };
 
 export default function BlogPage() {
+  // Sirf card ke liye zarooti fields client component ko bhejte hain —
+  // pura article content (sections/paragraphs) RSC payload me nahi jaata.
+  const blogCards: BlogCardPost[] = insights.map((p) => ({
+    slug: p.slug,
+    title: p.title,
+    category: p.category,
+    categoryColor: p.categoryColor,
+    label: p.label,
+    excerpt: p.excerpt,
+    image: p.image,
+    date: p.date,
+    readTime: p.readTime,
+  }));
+
   return (
     <>
       <section className="pt-[170px] pb-[70px]">
@@ -76,40 +88,7 @@ export default function BlogPage() {
       </section>
 
       <section className="pb-[100px]">
-        <div className={balancedGrid(insights.length, { base: 3, gapClass: "cgrid-gap-6", stages: [{ bp: 1024, maxCols: 2 }, { bp: 768, maxCols: 1 }], extra: "w-full max-w-[var(--container-max)] mx-auto px-5" })}>
-          {insights.map((b) => (
-            <Link
-              key={b.slug}
-              href={`/blog/${b.slug}`}
-              className="group bg-[var(--bg-card)] border border-[var(--border-color)] rounded-[var(--radius-lg)] overflow-hidden transition-all duration-300 hover:border-[var(--border-hover)] hover:-translate-y-[6px] hover:shadow-[0_15px_35px_rgba(var(--accent-rgb),0.1)] no-underline flex flex-col"
-            >
-              <div className="h-48 relative overflow-hidden">
-                <Image
-                  src={b.image}
-                  alt={b.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-                <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 py-1 px-3 bg-[rgba(0,0,0,0.6)] backdrop-blur-sm rounded-2xl text-[0.75rem] font-semibold text-[var(--main-accent)]">
-                  {b.label}
-                </div>
-              </div>
-              <div className="p-6 flex-1 flex flex-col">
-                <div className="flex items-center justify-between mb-2">
-                  <div className={`text-[0.7rem] uppercase tracking-[1.5px] font-bold ${b.categoryColor}`}>{b.category}</div>
-                  <div className="text-[0.72rem] text-[var(--text-dim)]">{b.readTime}</div>
-                </div>
-                <h2 className="text-[1.15rem] font-bold mb-2.5 leading-[1.3] text-[var(--text-main)]">{b.title}</h2>
-                <p className="text-[var(--text-muted)] text-[0.85rem] leading-relaxed mb-4 line-clamp-3">{b.excerpt}</p>
-                <div className="mt-auto flex items-center justify-between">
-                  <span className="text-[var(--main-accent)] font-bold text-[0.85rem]">Read Article →</span>
-                  <span className="text-[0.75rem] text-[var(--text-dim)]">{b.date}</span>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
+        <BlogExplorer posts={blogCards} />
       </section>
 
       <script
