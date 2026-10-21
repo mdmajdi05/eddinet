@@ -48,6 +48,11 @@ export const metadata: Metadata = {
   },
   verification: {
     google: "xCtFiK_TY-W1mnzQIx0XxwK_CdgtRyu6NP9TgpUS8LU",
+    // Bing Webmaster Tools verification (pehle wala bing code hata diya gaya,
+    // sirf yeh active hai abhi).
+    other: {
+      "msvalidate.01": "F6407E43872C87E0DD90E700E4DDEC40",
+    },
   },
   manifest: "/ENDINET_EN_Favicons/site.webmanifest",
   icons: {
