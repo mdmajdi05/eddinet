@@ -177,12 +177,18 @@
 
 ```bash
 npm install
-npm run dev        # http://localhost:3000
-npm run build      # production build
+npm run dev        # http://localhost:3000  (Turbopack)
+npm run build      # production build (Turbopack — 177 pages ~48s)
+npm run build:webpack   # pure webpack fallback (agar Turbopack issue ho)
 npx tsc --noEmit   # type check
 npm start          # production serve (after build)
 npm run serve      # standalone serve (Dockerfile-style, copies static+public)
 ```
+
+> **Build speed:** `next build` (webpack) 177 pages me ~14 min leta tha.
+> `next build --turbopack` same output ~48s me banata hai (verified — 177/177
+> pages, site-checker 0 errors / 0 warnings). `npm run build` ab Turbopack use
+> karta hai; Dockerfile me `npm run build || npm run build:webpack` fallback hai.
 
 ### 🛡️ Site Checker — mandatory build-time check
 

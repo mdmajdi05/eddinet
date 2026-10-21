@@ -27,7 +27,12 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 # non-root user build me bhi use karein (best practice)
-RUN npm run build
+#
+# `npm run build` Turbopack use karta hai (webpack se ~18x fast — 48s vs 14min).
+# Agar alpine/musl pe Turbopack ka native binding load na ho paya, to
+# `build:webpack` (pure webpack) pe fall back ho jata hai — deploy kabhi
+# fail nahi hoga.
+RUN npm run build || npm run build:webpack
 
 # ---------- STAGE 3: runner (final, lightweight) ----------
 FROM node:22-alpine AS runner

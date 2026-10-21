@@ -5,7 +5,8 @@
   "description": "Eddinet digital marketing and software agency website.",
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "next build --turbopack",
+    "build:webpack": "next build",
     "start": "next start",
     "serve": "node scripts/serve-standalone.mjs",
     "check:site": "node ../site-checker/bin/check.mjs --config site-checker.config.json",
