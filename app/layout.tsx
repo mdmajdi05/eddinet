@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContactWidget from "@/components/FloatingContactWidget";
 import ChatLauncher from "@/components/chat/ChatLauncher";
+import FacebookPageView from "@/components/FacebookPageView";
 import { site } from "@/data/site/contact";
 import { socialMetadata } from "@/lib/social-metadata";
 import {
@@ -259,6 +260,9 @@ fbq('track', 'PageView');`,
             src="https://www.facebook.com/tr?id=1648474986812826&ev=PageView&noscript=1"
           />
         </noscript>
+        {/* SPA route change par PageView (base snippet sirf first load par bhejta
+            hai). Pehla pathname skip hota hai — koi double count nahi. */}
+        <FacebookPageView />
         <ThemeProvider>
           <Header
             megaMenuCategories={megaMenuCategories}
