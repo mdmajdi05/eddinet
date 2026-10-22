@@ -58,6 +58,9 @@ export const metadata: Metadata = {
     // sirf yeh active hai abhi).
     other: {
       "msvalidate.01": "F6407E43872C87E0DD90E700E4DDEC40",
+      // Meta (Facebook) domain verification — Business Settings → Brand safety
+      // → Domains. Meta-tag method yahi meta tag render karta hai.
+      "facebook-domain-verification": "z0rm57x3trm6kq0vn4z415icthsmre",
     },
   },
   manifest: "/ENDINET_EN_Favicons/site.webmanifest",
