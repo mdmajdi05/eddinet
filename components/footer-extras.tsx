@@ -11,6 +11,8 @@ export function NewsletterForm() {
         e.preventDefault();
         if (/^\S+@\S+\.\S+$/.test(email)) setDone(true);
       }}
+      data-fb-event="Subscribe"
+      data-fb-form="newsletter"
       className="w-full"
     >
       {done ? (

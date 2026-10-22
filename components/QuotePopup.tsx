@@ -72,7 +72,7 @@ export default function QuotePopup({ service, onClose }: QuotePopupProps) {
             Service selected: <span className="font-bold text-[var(--main-accent)]">{service}</span>
           </p>
 
-          <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          <form onSubmit={handleSubmit} data-fb-event="Lead" data-fb-form="quote-popup" className="flex flex-col gap-4">
             <input
               type="text"
               value={name}

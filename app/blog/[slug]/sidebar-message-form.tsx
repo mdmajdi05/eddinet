@@ -67,6 +67,8 @@ export default function SidebarMessageForm() {
   return (
     <form
       onSubmit={onSubmit}
+      data-fb-event="Lead"
+      data-fb-form="blog-sidebar"
       className="rounded-2xl border border-[var(--border-color)] bg-[var(--bg-card)] overflow-hidden"
     >
       <div className="w-full bg-gradient-to-r from-red-600 to-red-500 px-5 py-4">

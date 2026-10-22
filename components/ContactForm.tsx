@@ -74,7 +74,7 @@ export default function ContactForm({
 
   if (compact) {
     return (
-      <form onSubmit={openWhatsApp} className="flex flex-col pt-3.5">
+      <form onSubmit={openWhatsApp} data-fb-event="Lead" data-fb-form="contact-compact" className="flex flex-col pt-3.5">
         <div className="space-y-2.5">
           <div className="grid grid-cols-2 gap-2.5 max-[600px]:grid-cols-1">
             <div>
@@ -152,6 +152,8 @@ export default function ContactForm({
   return (
     <form
       onSubmit={openWhatsApp}
+      data-fb-event="Lead"
+      data-fb-form="contact"
       className="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl p-9"
     >
       <h3 className="text-[1.4rem] font-extrabold mb-1 text-[var(--text-main)]">Tell Us About Your Business</h3>
