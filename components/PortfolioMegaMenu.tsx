@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import type { PortfolioMenuCategory } from "@/data/services/nav-menu-types";
 
 // NOTE (performance): pehle `projectCategories` (jo poora portfolio data
@@ -15,6 +15,7 @@ export default function PortfolioMegaMenu({
 }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
   const wrapperRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const isActive =
@@ -184,7 +185,9 @@ export default function PortfolioMegaMenu({
 
                     <Link
                       href={`/portfolio/${cat.key}`}
+                      prefetch={false}
                       onClick={() => setOpen(false)}
+                      onMouseEnter={() => router.prefetch(`/portfolio/${cat.key}`)}
                       className="
                         flex
                         items-start
@@ -212,6 +215,7 @@ export default function PortfolioMegaMenu({
 
                     <Link
                       href={`/portfolio/${cat.key}`}
+                      prefetch={false}
                       onClick={() => setOpen(false)}
                       className="
                         flex
@@ -229,6 +233,7 @@ export default function PortfolioMegaMenu({
                       onMouseEnter={(e) => {
                         e.currentTarget.style.color =
                           "var(--main-accent)";
+                        router.prefetch(`/portfolio/${cat.key}`);
                       }}
                       onMouseLeave={(e) => {
                         e.currentTarget.style.color =
@@ -294,7 +299,9 @@ export default function PortfolioMegaMenu({
 
             <Link
               href="/portfolio"
+              prefetch={false}
               onClick={() => setOpen(false)}
+              onMouseEnter={() => router.prefetch("/portfolio")}
               className="
                 shrink-0
                 py-3

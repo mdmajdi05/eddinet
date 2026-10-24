@@ -1,7 +1,7 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import type { MegaMenuCategory } from "@/data/services/nav-menu-types";
 
 // NOTE (performance): pehle yeh component `services` + `getChildSlug` import
@@ -16,6 +16,7 @@ export default function MegaMenu({
 }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
   const wrapperRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const isActive =
@@ -100,7 +101,9 @@ export default function MegaMenu({
                   >
                     <Link
                       href={`/services/${cat.slug}`}
+                      prefetch={false}
                       onClick={() => setOpen(false)}
+                      onMouseEnter={() => router.prefetch(`/services/${cat.slug}`)}
                       className="text-[1.15rem] font-bold leading-[1.25] flex items-start gap-2 no-underline transition-colors duration-150 hover:opacity-85"
                       style={{ color: "var(--main-accent)" }}
                     >
@@ -124,9 +127,13 @@ export default function MegaMenu({
                             <li key={ii} className="mb-2.5 last:mb-0">
                               <Link
                                 href={item.href}
+                                prefetch={false}
                                 className="text-[0.85rem] leading-[1.35] flex items-start no-underline transition-all duration-150 hover:translate-x-[3px]"
                                 style={{ color: "var(--text-muted)" }}
-                                onMouseEnter={(e) => (e.currentTarget.style.color = "var(--main-accent)")}
+                                onMouseEnter={(e) => {
+                                  e.currentTarget.style.color = "var(--main-accent)";
+                                  router.prefetch(item.href);
+                                }}
                                 onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
                                 onClick={() => setOpen(false)}
                               >
@@ -145,9 +152,13 @@ export default function MegaMenu({
                           <li key={ii} className="mb-2.5 last:mb-0">
                             <Link
                               href={item.href}
+                              prefetch={false}
                               className="text-[0.85rem] leading-[1.35] flex items-start no-underline transition-all duration-150 hover:translate-x-[3px]"
                               style={{ color: "var(--text-muted)" }}
-                              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--main-accent)")}
+                              onMouseEnter={(e) => {
+                                e.currentTarget.style.color = "var(--main-accent)";
+                                router.prefetch(item.href);
+                              }}
                               onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
                               onClick={() => setOpen(false)}
                             >
@@ -171,9 +182,13 @@ export default function MegaMenu({
                               <li key={ii} className="mb-2.5 last:mb-0">
                                 <Link
                                   href={item.href}
+                                  prefetch={false}
                                   className="text-[0.85rem] leading-[1.35] flex items-start no-underline transition-all duration-150 hover:translate-x-[3px]"
                                   style={{ color: "var(--text-muted)" }}
-                                  onMouseEnter={(e) => (e.currentTarget.style.color = "var(--main-accent)")}
+                                  onMouseEnter={(e) => {
+                                    e.currentTarget.style.color = "var(--main-accent)";
+                                    router.prefetch(item.href);
+                                  }}
                                   onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
                                   onClick={() => setOpen(false)}
                                 >
@@ -203,9 +218,11 @@ export default function MegaMenu({
             </div>
             <Link
               href="/services"
+              prefetch={false}
               className="shrink-0 py-3 px-5 rounded-lg text-[0.8rem] font-bold no-underline text-white transition-all duration-300 hover:-translate-y-0.5"
               style={{ background: "var(--primary-gradient)" }}
               onClick={() => setOpen(false)}
+              onMouseEnter={() => router.prefetch("/services")}
             >
               VIEW ALL SERVICES →
             </Link>

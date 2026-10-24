@@ -122,6 +122,7 @@ export default async function HtmlSitemapPage({
               <li key={link.href}>
                 <Link
                   href={link.href}
+                  prefetch={false}
                   className="group flex h-full flex-col gap-2 rounded-xl border border-[var(--border-color)] bg-[var(--bg-card)] p-4 no-underline transition-all duration-300 hover:border-[var(--border-hover)] hover:bg-[var(--bg-card-hover)] hover:-translate-y-[2px]"
                 >
                   <span className="inline-flex w-fit items-center rounded-full border border-[var(--tag-border)] bg-[var(--tag-bg)] px-2.5 py-0.5 text-[0.66rem] font-semibold uppercase tracking-wider text-[var(--main-accent)]">

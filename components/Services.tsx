@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { services, serviceTabs } from "@/data/services/services";
 import { balancedGrid } from "@/lib/process-grid";
 
@@ -12,6 +13,10 @@ export default function Services() {
   const [tab, setTab] = useState("all");
   const [showAllFilters, setShowAllFilters] = useState(false);
   const stripRef = useRef<HTMLDivElement>(null);
+  // PERF: grid ke 13 cards viewport me aate hi Next.js unke RSC payloads
+  // (~150 kB each) prefetch kar deta tha. Ab sirf us card ka prefetch hota
+  // hai jispar mouse aaye — load par 0, hover par 1.
+  const router = useRouter();
 
   const filteredServices = services.filter(
     (s) => tab === "all" || s.cat === tab
@@ -348,6 +353,7 @@ export default function Services() {
             return (
               <div
                 key={i}
+                onMouseEnter={() => router.prefetch(`/services/${s.slug}`)}
                 className="
                   group
                   relative
@@ -520,6 +526,7 @@ export default function Services() {
                       {hiddenCount > 0 && (
                         <Link
                           href={`/services/${s.slug}`}
+                          prefetch={false}
                           className="
                             flex
                             items-center
@@ -561,6 +568,7 @@ export default function Services() {
                     >
                       <Link
                         href={`/services/${s.slug}`}
+                        prefetch={false}
                         className="
                           inline-flex
                           items-center
