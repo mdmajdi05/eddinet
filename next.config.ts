@@ -6,32 +6,18 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
 
   // ── Redirects ────────────────────────────────────────────────────────────
-  //  Slug-migration (old → new) redirects hata diye gaye hain: site fresh hai,
-  //  koi external backlink/legacy URL nahi, aur sabhi internal links, sitemap
-  //  + canonical already NEW slugs use karte hain. Isliye purane slug kisi bhi
-  //  link graph me nahi hain aur unke liye redirect ki zarurat nahi.
+  //  IMPORTANT: purane service child slugs (jo Google me already indexed the)
+  //  ko naye slugs par permanent redirect karna zaroori hai. Warna purane URLs
+  //  404 ho jaate hain aur Google ke paas naye URLs tak pahunchne ka koi
+  //  signal nahi rehta => "Discovered - currently not indexed".
   //
-  //  Sirf host canonicalisation bacha hai:
-  //  www → apex. Nginx sirf HTTP → HTTPS karta hai (`$host` ki wajah se www
-  //  reh jaata hai), isliye https://www.eddinet.com/* ek hi content do URL pe
-  //  live reh jaata tha. Ye redirect (middleware/proxy se bhi pehle chalta hai)
-  //  ek hi baar me sab variants ko apex pe consolidate karta hai.
+  //  Saare old -> new service redirects `data/service-redirects.ts` me hain
+  //  (`npm run redirects:check` / `npm run redirects:sync` se maintain hote
+  //  hain). Inhe kabhi delete na karo.
+  //
+  //  Plus host canonicalisation: www → apex.
   async redirects() {
     return [
-
-      // GSC legacy child slugs -> new heroHeading-based slugs (minimal)
-      { source: "/services/ecommerce/amazon-store-development", destination: "/services/ecommerce/amazon-store-development-services-in-delhi-ncr", permanent: true },
-      { source: "/services/maintenance-support/security-monitoring", destination: "/services/maintenance-support/website-security-monitoring-services-in-india", permanent: true },
-      { source: "/services/content/content-strategy", destination: "/services/content/content-strategy-services-in-delhi-ncr", permanent: true },
-      { source: "/services/content/blog-content", destination: "/services/content/blog-content-services-in-delhi-ncr", permanent: true },
-      { source: "/services/content/seo-content", destination: "/services/content/seo-content-services-in-delhi-ncr", permanent: true },
-      { source: "/services/ads-ppc/youtube-ads", destination: "/services/ads-ppc/youtube-ads-agency-in-india", permanent: true },
-      { source: "/services/maintenance-support/technical-support", destination: "/services/maintenance-support/website-technical-support-services-in-india", permanent: true },
-      { source: "/services/content/website-content", destination: "/services/content/website-content-services-in-delhi-ncr", permanent: true },
-      { source: "/services/ecommerce/ecommerce-seo", destination: "/services/seo/ecommerce-seo-services-in-delhi-ncr", permanent: true },
-      { source: "/services/content/social-content", destination: "/services/content/social-content-services-in-delhi-ncr", permanent: true },
-      // Auto-generated slug-migration redirects (old service URL -> new URL).
-      // `npm run redirects:sync` se maintain hote hain.
       ...serviceRedirects,
       {
         source: "/:path*",
