@@ -1,5 +1,5 @@
 // ============================================================================
-//  FILE: data/services/child/hosting-migration/managed-hosting.ts
+//  FILE: data/services/child/hosting-migration-services-in-india/managed-hosting.ts
 //  PAGE: /services/hosting-migration/managed-hosting-services-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me

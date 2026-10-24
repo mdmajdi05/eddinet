@@ -19,32 +19,32 @@ export const child = {
     {
       title: "Intent-Based Keyword Research",
       description: "We target the exact search terms decision-makers use when evaluating or buying solutions. By prioritizing commercial intent over generic traffic, we connect your brand with buyers actively seeking your services.",
-      image: "/images/services/seo/b2b-seo/intent-based-keyword-research-self-gen.webp",
+      image: "/images/services/seo/b2b-seo-services-in-delhi-ncr/intent-based-keyword-research-self-gen.webp",
     },
     {
       title: "Website Optimization for B2B",
       description: "We refine your site layout and messaging to meet enterprise standards. A clean, professional structure builds immediate credibility with executive decision-makers from their first click.",
-      image: "/images/services/seo/b2b-seo/website-optimization-for-b2b-self-gen.webp",
+      image: "/images/services/seo/b2b-seo-services-in-delhi-ncr/website-optimization-for-b2b-self-gen.webp",
     },
     {
       title: "Decision-Focused Content",
       description: "We craft clear, authoritative content that answers key buying questions and addresses stakeholder pain points, guiding prospects smoothly through complex B2B buying cycles.",
-      image: "/images/services/seo/b2b-seo/decision-focused-content-self-gen.webp",
+      image: "/images/services/seo/b2b-seo-services-in-delhi-ncr/decision-focused-content-self-gen.webp",
     },
     {
       title: "Technical & On-Page SEO",
       description: "We optimize your site architecture, page speed, and backend setup for flawless search indexation and effortless user navigation across every page.",
-      image: "/images/services/seo/b2b-seo/technical-and-on-page-seo-self-gen.webp",
+      image: "/images/services/seo/b2b-seo-services-in-delhi-ncr/technical-and-on-page-seo-self-gen.webp",
     },
     {
       title: "Lead-Focused Strategy",
       description: "Our entire search strategy revolves around pipeline growth. We align organic visibility directly with your sales funnel to attract high-value, qualified business inquiries.",
-      image: "/images/services/seo/b2b-seo/lead-focused-strategy-self-gen.webp",
+      image: "/images/services/seo/b2b-seo-services-in-delhi-ncr/lead-focused-strategy-self-gen.webp",
     },
     {
       title: "Conversion Rate Optimization",
       description: "We strategically refine calls-to-action, form structures, and trust signals across your landing pages to turn casual visitors into booked consultation calls.",
-      image: "/images/services/seo/b2b-seo/conversion-rate-optimization-self-gen.webp",
+      image: "/images/services/seo/b2b-seo-services-in-delhi-ncr/conversion-rate-optimization-self-gen.webp",
     },
   ],
   whyChooseUs: {

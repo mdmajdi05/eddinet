@@ -17,9 +17,9 @@
 //      /images/about/…                    About page
 //      /images/services/…                 services (13 core service categories)
 //      /images/services/seo/seo/…         SEO ke child pages (12)
-//      /images/services/seo/ai-seo/…      AI SEO page sections
+//      /images/services/seo/ai-seo-generative-seo-service-in-delhi-ncr/…      AI SEO page sections
 //      /images/services/seo/lead-generation/… Lead Generation page sections
-//      /images/services/seo/local-seo/…   Local SEO page sections
+//      /images/services/seo/local-seo-services-in-delhi-ncr/…   Local SEO page sections
 //      /images/services/seo-page/…        Main SEO page sections
 //      /images/stock/…                    downloaded stock images used by blog,
 //                                         portfolio and marketing sections
@@ -353,31 +353,31 @@ export const IMG = {
   servicesAiSeo: {
     authorityTrustBuilding: {
       key: "authority-trust-building",
-      src: "/images/services/seo/ai-seo/authority-trust-building.webp",
+      src: "/images/services/seo/ai-seo-generative-seo-service-in-delhi-ncr/authority-trust-building.webp",
       alt: "Authority & trust building for AI search",
       page: "services-ai-seo",
     },
     contentOptimizationAi: {
       key: "content-optimization-ai-search-engines",
-      src: "/images/services/seo/ai-seo/content-optimization-ai-search-engines.webp",
+      src: "/images/services/seo/ai-seo-generative-seo-service-in-delhi-ncr/content-optimization-ai-search-engines.webp",
       alt: "Content optimization for AI & search engines",
       page: "services-ai-seo",
     },
     geo: {
       key: "geo",
-      src: "/images/services/seo/ai-seo/geo.webp",
+      src: "/images/services/seo/ai-seo-generative-seo-service-in-delhi-ncr/geo.webp",
       alt: "Generative engine optimization (GEO) visual",
       page: "services-ai-seo",
     },
     intentKeywordResearch: {
       key: "intent-based-keyword-research",
-      src: "/images/services/seo/ai-seo/intent-based-keyword-research.webp",
+      src: "/images/services/seo/ai-seo-generative-seo-service-in-delhi-ncr/intent-based-keyword-research.webp",
       alt: "Intent based keyword research visual",
       page: "services-ai-seo",
     },
     structuredDataTechnicalSeo: {
       key: "structured-data-technical-seo",
-      src: "/images/services/seo/ai-seo/structured-data-technical-seo.webp",
+      src: "/images/services/seo/ai-seo-generative-seo-service-in-delhi-ncr/structured-data-technical-seo.webp",
       alt: "Structured data & technical SEO visual",
       page: "services-ai-seo",
     },
@@ -431,37 +431,37 @@ export const IMG = {
   servicesLocalSeo: {
     googleMyBusiness: {
       key: "google-my-business-seo",
-      src: "/images/services/seo/local-seo/google-my-business-seo.webp",
+      src: "/images/services/seo/local-seo-services-in-delhi-ncr/google-my-business-seo.webp",
       alt: "Google My Business SEO visual",
       page: "services-local-seo",
     },
     citationNap: {
       key: "local-citation-nap-building",
-      src: "/images/services/seo/local-seo/local-citation-nap-building.webp",
+      src: "/images/services/seo/local-seo-services-in-delhi-ncr/local-citation-nap-building.webp",
       alt: "Local citation & NAP building visual",
       page: "services-local-seo",
     },
     keywordResearchContent: {
       key: "local-keyword-research-content",
-      src: "/images/services/seo/local-seo/local-keyword-research-content.webp",
+      src: "/images/services/seo/local-seo-services-in-delhi-ncr/local-keyword-research-content.webp",
       alt: "Local keyword research & content visual",
       page: "services-local-seo",
     },
     linkBuilding: {
       key: "local-link-building",
-      src: "/images/services/seo/local-seo/local-link-building.webp",
+      src: "/images/services/seo/local-seo-services-in-delhi-ncr/local-link-building.webp",
       alt: "Local link building visual",
       page: "services-local-seo",
     },
     onPageTechnical: {
       key: "on-page-technical-local-seo",
-      src: "/images/services/seo/local-seo/on-page-technical-local-seo.webp",
+      src: "/images/services/seo/local-seo-services-in-delhi-ncr/on-page-technical-local-seo.webp",
       alt: "On-page & technical local SEO visual",
       page: "services-local-seo",
     },
     reviewReputation: {
       key: "review-reputation-management",
-      src: "/images/services/seo/local-seo/review-reputation-management.webp",
+      src: "/images/services/seo/local-seo-services-in-delhi-ncr/review-reputation-management.webp",
       alt: "Review & reputation management visual",
       page: "services-local-seo",
     },
@@ -473,13 +473,13 @@ export const IMG = {
   servicesSeoPage: {
     ecommerceSeo: {
       key: "ecommerce-seo-page",
-      src: "/images/services/seo-page/ecommerce-seo.webp",
+      src: "/images/services/seo-page/ecommerce-seo-services-in-delhi-ncr.webp",
       alt: "eCommerce SEO visual",
       page: "services-seo-page",
     },
     localSeo: {
       key: "local-seo-page",
-      src: "/images/services/seo-page/local-seo.webp",
+      src: "/images/services/seo-page/local-seo-services-in-delhi-ncr.webp",
       alt: "Local SEO visual",
       page: "services-seo-page",
     },

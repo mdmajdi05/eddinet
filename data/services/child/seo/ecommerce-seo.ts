@@ -19,37 +19,37 @@ export const child = {
     {
       title: "Category & Collection Page Optimisation",
       description: "Strategic optimisation of category and collection pages — the highest-impact eCommerce SEO lever — with keyword targeting, content depth and internal linking.",
-      image: "/images/services/seo/ecommerce-seo/category-and-collection-page-optimisation-self-gen.webp",
+      image: "/images/services/seo/ecommerce-seo-services-in-delhi-ncr/category-and-collection-page-optimisation-self-gen.webp",
     },
     {
       title: "Product Page SEO",
       description: "Unique product descriptions, structured data, image optimisation and review integration that make individual product pages rank and convert.",
-      image: "/images/services/seo/ecommerce-seo/product-page-seo-self-gen.webp",
+      image: "/images/services/seo/ecommerce-seo-services-in-delhi-ncr/product-page-seo-self-gen.webp",
     },
     {
       title: "Faceted Navigation Management",
       description: "Filter and sort URL management that prevents crawl waste, avoids duplicate content and channels authority to the most valuable pages.",
-      image: "/images/services/seo/ecommerce-seo/faceted-navigation-management-self-gen.webp",
+      image: "/images/services/seo/ecommerce-seo-services-in-delhi-ncr/faceted-navigation-management-self-gen.webp",
     },
     {
       title: "eCommerce Schema Markup",
       description: "Product, offer, review and availability schema that qualifies for rich results — price displays, star ratings and availability in search.",
-      image: "/images/services/seo/ecommerce-seo/ecommerce-schema-markup-self-gen.webp",
+      image: "/images/services/seo/ecommerce-seo-services-in-delhi-ncr/ecommerce-schema-markup-self-gen.webp",
     },
     {
       title: "Internal Linking for Product Discovery",
       description: "Strategic internal linking between categories, subcategories, related products and blog content that distributes authority and guides product discovery.",
-      image: "/images/services/seo/ecommerce-seo/internal-linking-for-product-discovery-self-gen.webp",
+      image: "/images/services/seo/ecommerce-seo-services-in-delhi-ncr/internal-linking-for-product-discovery-self-gen.webp",
     },
     {
       title: "eCommerce Content Strategy",
       description: "Buying guides, comparison content, category landing pages and blog articles that capture research-stage shoppers and build topical authority.",
-      image: "/images/services/seo/ecommerce-seo/ecommerce-content-strategy-self-gen.webp",
+      image: "/images/services/seo/ecommerce-seo-services-in-delhi-ncr/ecommerce-content-strategy-self-gen.webp",
     },
     {
       title: "Technical eCommerce SEO",
       description: "Platform-specific technical optimisation for Shopify, WooCommerce, Magento and custom builds — including speed, crawlability and indexation management.",
-      image: "/images/services/seo/ecommerce-seo/technical-ecommerce-seo-self-gen.webp",
+      image: "/images/services/seo/ecommerce-seo-services-in-delhi-ncr/technical-ecommerce-seo-self-gen.webp",
     },
   ],
   whyChooseUs: {

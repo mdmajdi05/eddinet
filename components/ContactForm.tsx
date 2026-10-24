@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { site } from "@/data/site/contact";
 
 const inputCls =
@@ -28,6 +29,7 @@ export default function ContactForm({
   compact?: boolean;
   serviceLabel?: string;
 }) {
+  const router = useRouter();
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [name, setName] = useState("");
@@ -56,8 +58,13 @@ export default function ContactForm({
     ].filter(Boolean);
 
     const url = `${site.whatsapp}?text=${encodeURIComponent(lines.join("\n"))}`;
+
+    // WhatsApp naye tab me khulta hai, current tab /thank-you par jaata hai.
+    // `submitted` isliye set karte hain ki navigation ke beech form dobara
+    // submit na ho jaaye (double Lead event).
     window.open(url, "_blank");
     setSubmitted(true);
+    router.push("/thank-you");
   }
 
   if (submitted) {

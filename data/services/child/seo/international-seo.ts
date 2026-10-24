@@ -19,32 +19,32 @@ export const child = {
     {
       title: "Site Structure & Domain Strategy",
       description: "We help you choose the right international structure — subdirectories, subdomains, or ccTLDs — based on your resources, markets, and long-term expansion goals.",
-      image: "/images/services/seo/international-seo/site-structure-and-domain-strategy-self-gen.webp",
+      image: "/images/services/seo/international-seo-services-in-delhi-ncr/site-structure-and-domain-strategy-self-gen.webp",
     },
     {
       title: "Hreflang Implementation & Auditing",
       description: "We implement and audit hreflang tags so search engines show the correct language and regional version of your pages to the right users, every time.",
-      image: "/images/services/seo/international-seo/hreflang-implementation-and-auditing-self-gen.webp",
+      image: "/images/services/seo/international-seo-services-in-delhi-ncr/hreflang-implementation-and-auditing-self-gen.webp",
     },
     {
       title: "Native Keyword Research by Market",
       description: "We research keywords directly within each target language and region, since search behavior often looks nothing like a direct translation of your existing terms.",
-      image: "/images/services/seo/international-seo/native-keyword-research-by-market-self-gen.webp",
+      image: "/images/services/seo/international-seo-services-in-delhi-ncr/native-keyword-research-by-market-self-gen.webp",
     },
     {
       title: "Localized Content Strategy",
       description: "We guide content localization built around cultural context and local intent, not just translated copy, so your message actually connects in each market.",
-      image: "/images/services/seo/international-seo/localized-content-strategy-self-gen.webp",
+      image: "/images/services/seo/international-seo-services-in-delhi-ncr/localized-content-strategy-self-gen.webp",
     },
     {
       title: "Geo-Targeting & Search Console Setup",
       description: "We configure geo-targeting and international properties correctly, helping search engines understand exactly which regions each part of your site is meant to serve.",
-      image: "/images/services/seo/international-seo/geo-targeting-and-search-console-setup-self-gen.webp",
+      image: "/images/services/seo/international-seo-services-in-delhi-ncr/geo-targeting-and-search-console-setup-self-gen.webp",
     },
     {
       title: "Cross-Market Technical Audits",
       description: "We audit for issues specific to global sites — duplicate content across regions, incorrect canonicals, and crawl inefficiencies across multiple site versions.",
-      image: "/images/services/seo/international-seo/cross-market-technical-audits-self-gen.webp",
+      image: "/images/services/seo/international-seo-services-in-delhi-ncr/cross-market-technical-audits-self-gen.webp",
     },
   ],
   whyChooseUs: {

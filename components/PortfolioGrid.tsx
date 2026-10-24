@@ -301,8 +301,9 @@ function ProjectCard({ p }: { p: PortfolioProject }) {
 
           /* =================================================
              LOCAL SCREENSHOT PREVIEW (no live URL)
-             Poora screenshot bina crop ke fit hota hai
-             (object-contain — kuch bhi cut nahi hota).
+             Full-page screenshot hover par top (header) se
+             bottom (footer) tak scroll hota hai - bilkul
+             live website scroll jaisa.
              ================================================= */
 
           <Image
@@ -310,7 +311,30 @@ function ProjectCard({ p }: { p: PortfolioProject }) {
             alt={`${p.title} website preview`}
             fill
             sizes="(max-width: 650px) 100vw, (max-width: 1050px) 50vw, 33vw"
-            className="object-contain"
+            className="object-cover"
+            style={{
+              /*
+               * object-cover tall screenshot ko card ki width
+               * par fit karta hai, aur object-position vertical
+               * scroll control karta hai.
+               *
+               * Default: top (website header)
+               * Hover: bottom (website footer)
+               */
+              objectPosition: hovered
+                ? "center bottom"
+                : "center top",
+
+              transitionProperty: "object-position",
+
+              transitionDuration: hovered
+                ? "7000ms"
+                : "700ms",
+
+              transitionTimingFunction: hovered
+                ? "linear"
+                : "ease-out",
+            }}
           />
         ) : (
 

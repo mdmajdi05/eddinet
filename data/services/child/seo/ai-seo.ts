@@ -21,32 +21,32 @@ export const child = {
     {
       title: "AI SEO Audit & Strategy",
       description: "We run deep technical and semantic audits to analyze your current search standing and evaluate how effectively AI platforms crawl and understand your brand.",
-      image: "/images/services/seo/ai-seo/ai-seo-audit-and-strategy-self-gen.webp",
+      image: "/images/services/seo/ai-seo-generative-seo-service-in-delhi-ncr/ai-seo-audit-and-strategy-self-gen.webp",
     },
     {
       title: "Generative Engine Optimization (GEO)",
       description: "We optimize and structure your web content so generative tools like ChatGPT, Gemini, and Perplexity pick up your brand as an authoritative source for user queries.",
-      image: "/images/services/seo/ai-seo/geo.webp",
+      image: "/images/services/seo/ai-seo-generative-seo-service-in-delhi-ncr/geo.webp",
     },
     {
       title: "Intent-Based Keyword & Topic Research",
       description: "Moving beyond basic keywords, we target deep user search intent, semantic query clusters, and natural language questions to capture high-value organic traffic.",
-      image: "/images/services/seo/ai-seo/intent-based-keyword-research.webp",
+      image: "/images/services/seo/ai-seo-generative-seo-service-in-delhi-ncr/intent-based-keyword-research.webp",
     },
     {
       title: "Content Optimization for AI & Search Engines",
       description: "Our team writes clear, high-depth content structured specifically for readability, context, and semantic value for both human visitors and search algorithms.",
-      image: "/images/services/seo/ai-seo/content-optimization-ai-search-engines.webp",
+      image: "/images/services/seo/ai-seo-generative-seo-service-in-delhi-ncr/content-optimization-ai-search-engines.webp",
     },
     {
       title: "Structured Data & Technical SEO",
       description: "We implement schema markup, enhance crawlability, and eliminate technical barriers so AI engines can effortlessly interpret and index your business data.",
-      image: "/images/services/seo/ai-seo/structured-data-technical-seo.webp",
+      image: "/images/services/seo/ai-seo-generative-seo-service-in-delhi-ncr/structured-data-technical-seo.webp",
     },
     {
       title: "Authority & Trust Building",
       description: "We increase your digital footprint through authoritative citations, entity associations, and high-quality link strategies that establish strong domain trust.",
-      image: "/images/services/seo/ai-seo/authority-trust-building.webp",
+      image: "/images/services/seo/ai-seo-generative-seo-service-in-delhi-ncr/authority-trust-building.webp",
     },
   ],
   whyChooseUs: {

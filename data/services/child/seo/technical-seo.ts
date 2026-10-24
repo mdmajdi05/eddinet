@@ -19,27 +19,27 @@ export const child = {
     {
       title: "In-Depth Technical Audits",
       description: "We perform deep code audits to find crawl blocks, rendering errors, and indexing leaks, providing a clear, revenue-prioritized action plan instead of bloated automated reports.",
-      image: "/images/services/seo/technical-seo/in-depth-technical-audits-self-gen.webp",
+      image: "/images/services/seo/technical-seo-services-in-delhi-ncr/in-depth-technical-audits-self-gen.webp",
     },
     {
       title: "Core Web Vitals & Speed Optimization",
       description: "We eliminate page speed delays by optimizing heavy scripts, server response times (TTFB), images, and mobile rendering paths to maximize user retention.",
-      image: "/images/services/seo/technical-seo/core-web-vitals-and-speed-optimization-self-gen.webp",
+      image: "/images/services/seo/technical-seo-services-in-delhi-ncr/core-web-vitals-and-speed-optimization-self-gen.webp",
     },
     {
       title: "Site Architecture & Internal Linking",
       description: "We re-engineer your site hierarchy and internal link flow so search engines can easily discover, crawl, and rank your highest-converting pages.",
-      image: "/images/services/seo/technical-seo/site-architecture-and-internal-linking-self-gen.webp",
+      image: "/images/services/seo/technical-seo-services-in-delhi-ncr/site-architecture-and-internal-linking-self-gen.webp",
     },
     {
       title: "Crawling, Indexing & Rendering Fixes",
       description: "Whether on JavaScript frameworks like React/Angular or custom platforms, we fix rendering bugs, robots.txt directives, XML sitemaps, and canonical errors.",
-      image: "/images/services/seo/technical-seo/crawling-indexing-and-rendering-fixes-self-gen.webp",
+      image: "/images/services/seo/technical-seo-services-in-delhi-ncr/crawling-indexing-and-rendering-fixes-self-gen.webp",
     },
     {
       title: "Seamless Website Migrations",
       description: "We manage complex CMS switches and URL restructuring with precise 301 redirection mapping to protect existing search authority and prevent traffic drops.",
-      image: "/images/services/seo/technical-seo/seamless-website-migrations-self-gen.webp",
+      image: "/images/services/seo/technical-seo-services-in-delhi-ncr/seamless-website-migrations-self-gen.webp",
     },
   ],
   whyChooseUs: {

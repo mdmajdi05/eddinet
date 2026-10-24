@@ -19,37 +19,37 @@ export const child = {
     {
       title: "Shopify Theme Speed Optimisation",
       description: "Theme code cleanup, app dependency audit, image optimisation, lazy loading and speed-specific fixes for Shopify themes that improve Core Web Vitals.",
-      image: "/images/services/seo/shopify-seo/shopify-theme-speed-optimisation-self-gen.webp",
+      image: "/images/services/seo/shopify-seo-services-in-delhi-ncr/shopify-theme-speed-optimisation-self-gen.webp",
     },
     {
       title: "URL Structure Workarounds",
       description: "Strategic handling of Shopify's rigid URL architecture — /collections/, /products/ paths, canonical tags and redirects that prevent duplicate content issues.",
-      image: "/images/services/seo/shopify-seo/url-structure-workarounds-self-gen.webp",
+      image: "/images/services/seo/shopify-seo-services-in-delhi-ncr/url-structure-workarounds-self-gen.webp",
     },
     {
       title: "Shopify App SEO Audit",
       description: "Review every installed app for SEO impact — identifying apps that inject unnecessary scripts, create duplicate content or slow down your storefront.",
-      image: "/images/services/seo/shopify-seo/shopify-app-seo-audit-self-gen.webp",
+      image: "/images/services/seo/shopify-seo-services-in-delhi-ncr/shopify-app-seo-audit-self-gen.webp",
     },
     {
       title: "Collection Page Optimisation",
       description: "Strategic collection structure, collection descriptions, keyword targeting and internal linking that maximise Shopify's highest-impact SEO pages.",
-      image: "/images/services/seo/shopify-seo/collection-page-optimisation-self-gen.webp",
+      image: "/images/services/seo/shopify-seo-services-in-delhi-ncr/collection-page-optimisation-self-gen.webp",
     },
     {
       title: "Product Page Enhancement",
       description: "Unique product descriptions, structured data, image alt tags and content above the fold that differentiate your product pages from competitors.",
-      image: "/images/services/seo/shopify-seo/product-page-enhancement-self-gen.webp",
+      image: "/images/services/seo/shopify-seo-services-in-delhi-ncr/product-page-enhancement-self-gen.webp",
     },
     {
       title: "Shopify Blog & Content SEO",
       description: "Leveraging Shopify's blog feature for content marketing, topical authority building and long-tail keyword capture that supports product visibility.",
-      image: "/images/services/seo/shopify-seo/shopify-blog-and-content-seo-self-gen.webp",
+      image: "/images/services/seo/shopify-seo-services-in-delhi-ncr/shopify-blog-and-content-seo-self-gen.webp",
     },
     {
       title: "Shopify Technical Configuration",
       description: "Checkout optimisation, sitemap management, canonical implementation, hreflang setup and Shopify-specific technical configurations for maximum crawl efficiency.",
-      image: "/images/services/seo/shopify-seo/shopify-technical-configuration-self-gen.webp",
+      image: "/images/services/seo/shopify-seo-services-in-delhi-ncr/shopify-technical-configuration-self-gen.webp",
     },
   ],
   whyChooseUs: {

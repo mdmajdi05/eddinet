@@ -19,32 +19,32 @@ export const child = {
     {
       title: "Opportunity Research",
       description: "We identify where programmatic SEO genuinely makes sense for your business — locations, comparisons, product variations — based on real search volume and business relevance.",
-      image: "/images/services/seo/programmatic-seo/opportunity-research-self-gen.webp",
+      image: "/images/services/seo/programmatic-seo-services-in-delhi-ncr/opportunity-research-self-gen.webp",
     },
     {
       title: "Data Structuring & Template Design",
       description: "We structure the data behind your pages and design templates that pull unique, relevant information into each one, avoiding repetitive, generic content.",
-      image: "/images/services/seo/programmatic-seo/data-structuring-and-template-design-self-gen.webp",
+      image: "/images/services/seo/programmatic-seo-services-in-delhi-ncr/data-structuring-and-template-design-self-gen.webp",
     },
     {
       title: "On-Page Optimization at Scale",
       description: "We build titles, headers, internal linking, and schema directly into your templates, so every generated page follows SEO best practices from the start.",
-      image: "/images/services/seo/programmatic-seo/on-page-optimization-at-scale-self-gen.webp",
+      image: "/images/services/seo/programmatic-seo-services-in-delhi-ncr/on-page-optimization-at-scale-self-gen.webp",
     },
     {
       title: "Internal Linking Architecture",
       description: "We design linking structures that help search engines discover and understand relationships between your programmatic pages efficiently.",
-      image: "/images/services/seo/programmatic-seo/internal-linking-architecture-client.webp",
+      image: "/images/services/seo/programmatic-seo-services-in-delhi-ncr/internal-linking-architecture-client.webp",
     },
     {
       title: "Quality Control & Enrichment",
       description: "We build quality checks and enrichment strategies into the process, ensuring pages provide real value instead of feeling automated or thin.",
-      image: "/images/services/seo/programmatic-seo/quality-control-and-enrichment-self-gen.webp",
+      image: "/images/services/seo/programmatic-seo-services-in-delhi-ncr/quality-control-and-enrichment-self-gen.webp",
     },
     {
       title: "Performance Monitoring by Page Category",
       description: "We track performance across entire page sets, not just individual URLs, spotting patterns that help refine templates over time.",
-      image: "/images/services/seo/programmatic-seo/performance-monitoring-by-page-category-self-gen.webp",
+      image: "/images/services/seo/programmatic-seo-services-in-delhi-ncr/performance-monitoring-by-page-category-self-gen.webp",
     },
   ],
   whyChooseUs: {

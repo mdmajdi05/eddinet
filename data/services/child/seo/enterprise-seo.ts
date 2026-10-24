@@ -19,32 +19,32 @@ export const child = {
     {
       title: "Enterprise Technical SEO Audits",
       description: "We conduct in-depth technical audits across your entire site architecture, identifying crawl budget issues, indexation problems, duplicate content, site speed bottlenecks, and structural issues that quietly limit rankings at scale.",
-      image: "/images/services/seo/enterprise-seo/enterprise-technical-seo-audits-self-gen.webp",
+      image: "/images/services/seo/enterprise-seo-services-in-delhi-ncr/enterprise-technical-seo-audits-self-gen.webp",
     },
     {
       title: "Large-Scale Content Strategy & Optimization",
       description: "For businesses with thousands of pages, we build scalable content frameworks, optimize existing content in batches, and create governance guidelines so every department producing content stays aligned with SEO best practices.",
-      image: "/images/services/seo/enterprise-seo/large-scale-content-strategy-and-optimization-self-gen.webp",
+      image: "/images/services/seo/enterprise-seo-services-in-delhi-ncr/large-scale-content-strategy-and-optimization-self-gen.webp",
     },
     {
       title: "Multi-Location & Multi-Domain SEO",
       description: "If your business operates across cities, states, or countries, we manage location-specific optimization, hreflang implementation, and domain structure strategy so each market performs on its own merit without cannibalizing others.",
-      image: "/images/services/seo/enterprise-seo/multi-location-and-multi-domain-seo-self-gen.webp",
+      image: "/images/services/seo/enterprise-seo-services-in-delhi-ncr/multi-location-and-multi-domain-seo-self-gen.webp",
     },
     {
       title: "Enterprise Link Building & Digital PR",
       description: "We build authoritative backlinks through digital PR, strategic partnerships, and content-driven outreach — the kind of link profile that matches the authority a large brand should already have.",
-      image: "/images/services/seo/enterprise-seo/enterprise-link-building-and-digital-pr-self-gen.webp",
+      image: "/images/services/seo/enterprise-seo-services-in-delhi-ncr/enterprise-link-building-and-digital-pr-self-gen.webp",
     },
     {
       title: "SEO Migration & Platform Support",
       description: "Replatforming, rebranding, or restructuring your site? We manage SEO through migrations to prevent the ranking and traffic drops that so often come with large-scale technical changes.",
-      image: "/images/services/seo/enterprise-seo/seo-migration-and-platform-support-self-gen.webp",
+      image: "/images/services/seo/enterprise-seo-services-in-delhi-ncr/seo-migration-and-platform-support-self-gen.webp",
     },
     {
       title: "Corporate SEO Services & Reporting",
       description: "As part of our corporate SEO services in India, we deliver reporting dashboards tailored to different stakeholders — technical detail for your dev team, performance summaries for marketing, and ROI-focused insights for leadership.",
-      image: "/images/services/seo/enterprise-seo/corporate-seo-services-and-reporting-self-gen.webp",
+      image: "/images/services/seo/enterprise-seo-services-in-delhi-ncr/corporate-seo-services-and-reporting-self-gen.webp",
     },
   ],
   whyChooseUs: {

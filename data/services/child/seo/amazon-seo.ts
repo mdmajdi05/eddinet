@@ -19,32 +19,32 @@ export const child = {
     {
       title: "Amazon Keyword Research",
       description: "We identify the exact terms your customers search for on Amazon, including high-intent, long-tail keywords competitors often miss entirely.",
-      image: "/images/services/seo/amazon-seo/amazon-keyword-research.webp",
+      image: "/images/services/seo/amazon-seo-services-in-delhi-ncr/amazon-keyword-research.webp",
     },
     {
       title: "Listing Optimization",
       description: "We rewrite titles, bullet points, descriptions, and backend search terms to satisfy both Amazon's algorithm and the shopper deciding whether to click \"Buy Now\".",
-      image: "/images/services/seo/amazon-seo/amazon-listing-optimization.webp",
+      image: "/images/services/seo/amazon-seo-services-in-delhi-ncr/amazon-listing-optimization.webp",
     },
     {
       title: "A+ Content & Enhanced Brand Content",
       description: "We help design A+ Content that strengthens brand presentation and lifts conversion rates directly on your product pages.",
-      image: "/images/services/seo/amazon-seo/a-plus-content-enhanced-brand-content.webp",
+      image: "/images/services/seo/amazon-seo-services-in-delhi-ncr/a-plus-content-enhanced-brand-content.webp",
     },
     {
       title: "Image & Visual Strategy Guidance",
       description: "We advise on image sequencing and visual content, since click-through and conversion rate are direct ranking signals on Amazon.",
-      image: "/images/services/seo/amazon-seo/image-and-visual-strategy-guidance-self-gen.webp",
+      image: "/images/services/seo/amazon-seo-services-in-delhi-ncr/image-and-visual-strategy-guidance-self-gen.webp",
     },
     {
       title: "Review & Rating Strategy",
       description: "We guide approaches to build genuine reviews, since both volume and rating quality influence rankings and buyer trust simultaneously.",
-      image: "/images/services/seo/amazon-seo/review-and-rating-strategy-self-gen.webp",
+      image: "/images/services/seo/amazon-seo-services-in-delhi-ncr/review-and-rating-strategy-self-gen.webp",
     },
     {
       title: "Amazon Audits & Competitor Benchmarking",
       description: "We audit your listings against top competitors, identifying specific gaps in keywords, content, and conversion elements.",
-      image: "/images/services/seo/amazon-seo/amazon-audits-and-competitor-benchmarking-self-gen.webp",
+      image: "/images/services/seo/amazon-seo-services-in-delhi-ncr/amazon-audits-and-competitor-benchmarking-self-gen.webp",
     },
   ],
   whyChooseUs: {

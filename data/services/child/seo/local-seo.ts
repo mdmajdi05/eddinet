@@ -19,32 +19,32 @@ export const child = {
     {
       title: "Google My Business SEO Services",
       description: "Your Google Business Profile is often the first thing a potential customer sees before your website, before your reviews, sometimes before they even know your brand name. We fully optimize your profile with the right categories, service areas, photos, posts, and keyword-rich descriptions so you have a real shot at appearing in the Google Map Pack.",
-      image: "/images/services/seo/local-seo/google-my-business-seo.webp",
+      image: "/images/services/seo/local-seo-services-in-delhi-ncr/google-my-business-seo.webp",
     },
     {
       title: "On-Page & Technical Local SEO",
       description: "We optimize your website's title tags, meta descriptions, headers, and content around the searches your local customers are actually typing. We also fix technical issues, slow loading speed, broken links, and mobile usability that quietly hold rankings back.",
-      image: "/images/services/seo/local-seo/on-page-technical-local-seo.webp",
+      image: "/images/services/seo/local-seo-services-in-delhi-ncr/on-page-technical-local-seo.webp",
     },
     {
       title: "Local Citation & NAP Building",
       description: "We list your business consistently across relevant directories and platforms, making sure your Name, Address, and Phone number match everywhere. Inconsistent listings confuse Google and cost you trust — we clean that up and build it right.",
-      image: "/images/services/seo/local-seo/local-citation-nap-building.webp",
+      image: "/images/services/seo/local-seo-services-in-delhi-ncr/local-citation-nap-building.webp",
     },
     {
       title: "Review & Reputation Management",
       description: "Reviews influence both rankings and buying decisions. We help you build a steady flow of genuine customer reviews and respond to them in a way that builds trust.",
-      image: "/images/services/seo/local-seo/review-reputation-management.webp",
+      image: "/images/services/seo/local-seo-services-in-delhi-ncr/review-reputation-management.webp",
     },
     {
       title: "Local Keyword Research & Content",
       description: "We find out exactly how your customers search — by neighborhood, by service, by intent — and build content around those terms so your site speaks their language.",
-      image: "/images/services/seo/local-seo/local-keyword-research-content.webp",
+      image: "/images/services/seo/local-seo-services-in-delhi-ncr/local-keyword-research-content.webp",
     },
     {
       title: "Local Link Building",
       description: "We earn backlinks from relevant, local, and industry-specific sources to strengthen your site's authority in your area.",
-      image: "/images/services/seo/local-seo/local-link-building.webp",
+      image: "/images/services/seo/local-seo-services-in-delhi-ncr/local-link-building.webp",
     },
   ],
   whyChooseUs: {
