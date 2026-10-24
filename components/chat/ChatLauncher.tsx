@@ -22,6 +22,7 @@ import ChatBotLogo from "./ChatBotLogo";
 import { site } from "@/data/site/contact";
 import {
   BOT_NAME,
+  CHAT_SESSION_KEY,
   GREETING_MESSAGE,
   NOTIFICATIONS,
   NOTIF_DISMISSED_KEY,
@@ -31,7 +32,7 @@ import {
   WHATSAPP_MESSAGE,
 } from "@/data/chat/bot";
 import s from "./chat.module.css";
-import type { BotReply, ChatMessage } from "@/lib/chat/types";
+import type { BotReply, ChatContext, ChatMessage } from "@/lib/chat/types";
 
 const ChatWidget = dynamic(() => import("./ChatWidget"), { ssr: false });
 
@@ -39,6 +40,57 @@ const NOTIF_FIRST_DELAY = 5000;
 const NOTIF_DISPLAY_DURATION = 8000;
 const NOTIF_CYCLE_INTERVAL = 60000;
 const CLOSE_ANIM_MS = 160;
+/** Session 2 ghante tak restore hoti hai — uske baad fresh chat. */
+const SESSION_TTL_MS = 2 * 60 * 60 * 1000;
+
+function createEmptyContext(): ChatContext {
+  return { lead: {}, leadStage: "none", lang: "en", turn: 0 };
+}
+
+interface StoredSession {
+  messages: ChatMessage[];
+  context: ChatContext;
+  savedAt: number;
+}
+
+function loadSession(): StoredSession | null {
+  try {
+    const raw = sessionStorage.getItem(CHAT_SESSION_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw) as StoredSession;
+    if (
+      !parsed ||
+      !Array.isArray(parsed.messages) ||
+      !parsed.messages.length ||
+      !parsed.context ||
+      Date.now() - parsed.savedAt > SESSION_TTL_MS
+    ) {
+      return null;
+    }
+    return parsed;
+  } catch {
+    return null;
+  }
+}
+
+function saveSession(messages: ChatMessage[], context: ChatContext) {
+  try {
+    sessionStorage.setItem(
+      CHAT_SESSION_KEY,
+      JSON.stringify({ messages, context, savedAt: Date.now() }),
+    );
+  } catch {
+    /* storage full / disabled — chat still works */
+  }
+}
+
+function clearSession() {
+  try {
+    sessionStorage.removeItem(CHAT_SESSION_KEY);
+  } catch {
+    /* ignore */
+  }
+}
 
 let msgCounter = 0;
 function nextId() {
@@ -50,6 +102,7 @@ export default function ChatLauncher() {
   const [isOpen, setIsOpen] = useState(false);
   const [closing, setClosing] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [context, setContext] = useState<ChatContext>(createEmptyContext);
   const [isTyping, setIsTyping] = useState(false);
 
   const [notifVisible, setNotifVisible] = useState(false);
@@ -59,10 +112,26 @@ export default function ChatLauncher() {
   const engineRef = useRef<typeof import("@/lib/chat/engine") | null>(null);
   const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const notifIndexRef = useRef(0);
+  const contextRef = useRef<ChatContext>(createEmptyContext());
+  const savedSessionRef = useRef<StoredSession | null>(null);
 
   useEffect(() => {
     setMounted(true);
+
+    // Same tab ki purani chat (agar ho) restore kar lo.
+    const saved = loadSession();
+    if (saved) {
+      savedSessionRef.current = saved;
+      contextRef.current = saved.context;
+      setContext(saved.context);
+    }
   }, []);
+
+  // Session persist — tab band hone tak chat + context bacha rehta hai.
+  useEffect(() => {
+    if (!mounted || !messages.length) return;
+    saveSession(messages, context);
+  }, [mounted, messages, context]);
 
   // ─── Rotating notification popup ──────────────────────────────────────────
   useEffect(() => {
@@ -114,19 +183,23 @@ export default function ChatLauncher() {
     setNotifVisible(false);
     setClosing(false);
     setIsOpen(true);
-    setMessages((prev) =>
-      prev.length
-        ? prev
-        : [
-            {
-              id: nextId(),
-              role: "bot",
-              text: GREETING_MESSAGE,
-              quickReplies: QUICK_SUGGESTIONS,
-              createdAt: Date.now(),
-            },
-          ],
-    );
+
+    setMessages((prev) => {
+      if (prev.length) return prev;
+
+      const saved = savedSessionRef.current;
+      if (saved) return saved.messages;
+
+      return [
+        {
+          id: nextId(),
+          role: "bot",
+          text: GREETING_MESSAGE,
+          quickReplies: QUICK_SUGGESTIONS,
+          createdAt: Date.now(),
+        },
+      ];
+    });
   }, []);
 
   const closeChat = useCallback(() => {
@@ -166,12 +239,13 @@ export default function ChatLauncher() {
       ]);
       setIsTyping(true);
 
-      const delay = TYPING_MIN_MS + Math.random() * (TYPING_MAX_MS - TYPING_MIN_MS);
-
       let reply: BotReply;
+      let nextContext = contextRef.current;
       try {
         const engine = await loadEngine();
-        reply = engine.getBotReply(trimmed);
+        const result = engine.getBotReply(trimmed, contextRef.current);
+        reply = result.reply;
+        nextContext = result.context;
       } catch {
         reply = {
           text:
@@ -181,7 +255,18 @@ export default function ChatLauncher() {
         };
       }
 
+      // Real chatbot jaisa feel: jawab jitna lamba, typing utni der.
+      const delay = Math.min(
+        1500,
+        TYPING_MIN_MS +
+          reply.text.length * 3 +
+          Math.random() * (TYPING_MAX_MS - TYPING_MIN_MS),
+      );
+
       await new Promise((resolve) => setTimeout(resolve, delay));
+
+      contextRef.current = nextContext;
+      setContext(nextContext);
 
       setMessages((prev) => [
         ...prev,
@@ -191,6 +276,7 @@ export default function ChatLauncher() {
           text: reply.text,
           quickReplies: reply.quickReplies,
           link: reply.link,
+          whatsapp: reply.whatsapp,
           createdAt: Date.now(),
         },
       ]);
@@ -198,6 +284,24 @@ export default function ChatLauncher() {
     },
     [isTyping, loadEngine],
   );
+
+  // ─── New chat ─────────────────────────────────────────────────────────────
+  const resetChat = useCallback(() => {
+    clearSession();
+    savedSessionRef.current = null;
+    const fresh = createEmptyContext();
+    contextRef.current = fresh;
+    setContext(fresh);
+    setMessages([
+      {
+        id: nextId(),
+        role: "bot",
+        text: GREETING_MESSAGE,
+        quickReplies: QUICK_SUGGESTIONS,
+        createdAt: Date.now(),
+      },
+    ]);
+  }, []);
 
   // NOTE: yahan `mounted` par return null NAHI karte. Pehle aisa tha, isliye
   // agar client hydration kisi wajah se na chale to bot poori tarah gaayab ho
@@ -215,6 +319,7 @@ export default function ChatLauncher() {
           closing={closing}
           onSend={handleSend}
           onClose={closeChat}
+          onReset={resetChat}
         />
       )}
 
