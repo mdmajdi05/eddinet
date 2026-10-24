@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/ads-ppc/youtube-ads.ts
-//  PAGE: /services/ads-ppc/youtube-ads-agency-in-india
+//  PAGE: /services/ads-ppc/youtube-ads-agency-in-india-agency-in-india
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.

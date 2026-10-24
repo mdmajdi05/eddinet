@@ -1,6 +1,6 @@
 // ============================================================================
 //  FILE: data/services/child/content/social-content.ts
-//  PAGE: /services/content/social-content-services-in-delhi-ncr
+//  PAGE: /services/content/social-content-services-in-delhi-ncr-services-in-delhi-ncr
 //  Is page ka POORA content isi file me hai — yahi single source hai.
 //  Naya child page: ye file copy karo, content badlo, phir pages.ts me
 //  ek import + ek entry add karo.
