@@ -18,6 +18,18 @@ const nextConfig: NextConfig = {
   //  ek hi baar me sab variants ko apex pe consolidate karta hai.
   async redirects() {
     return [
+
+      // GSC legacy child slugs -> new heroHeading-based slugs (minimal)
+      { source: "/services/ecommerce/amazon-store-development", destination: "/services/ecommerce/amazon-store-development-services-in-delhi-ncr", permanent: true },
+      { source: "/services/maintenance-support/security-monitoring", destination: "/services/maintenance-support/website-security-monitoring-services-in-india", permanent: true },
+      { source: "/services/content/content-strategy", destination: "/services/content/content-strategy-services-in-delhi-ncr", permanent: true },
+      { source: "/services/content/blog-content", destination: "/services/content/blog-content-services-in-delhi-ncr", permanent: true },
+      { source: "/services/content/seo-content", destination: "/services/content/seo-content-services-in-delhi-ncr", permanent: true },
+      { source: "/services/ads-ppc/youtube-ads", destination: "/services/ads-ppc/youtube-ads-agency-in-india", permanent: true },
+      { source: "/services/maintenance-support/technical-support", destination: "/services/maintenance-support/website-technical-support-services-in-india", permanent: true },
+      { source: "/services/content/website-content", destination: "/services/content/website-content-services-in-delhi-ncr", permanent: true },
+      { source: "/services/ecommerce/ecommerce-seo", destination: "/services/seo/ecommerce-seo-services-in-delhi-ncr", permanent: true },
+      { source: "/services/content/social-content", destination: "/services/content/social-content-services-in-delhi-ncr", permanent: true },
       // Auto-generated slug-migration redirects (old service URL -> new URL).
       // `npm run redirects:sync` se maintain hote hain.
       ...serviceRedirects,
