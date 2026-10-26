@@ -3,7 +3,7 @@ import { stockImageSrc } from "@/data/site/stock-images";
 // ============================================================================
 //  FILE: data/portfolio/portfolio.ts  (PORTFOLIO PAGE)
 // WHAT'S IN THIS FILE:  (PORTFOLIO)
-//   portfolioProjects[] - all 62 client sites. NAYA CLIENT ADD KARNA HOTO
+//   portfolioProjects[] - all 31 client sites. NAYA CLIENT ADD KARNA HOTO
 //                         YAHIN SE karo. Har entry: title, slug, url,
 //                         image, category, gradient, client, year, tags.
 //   projectCategories    - filter categories for portfolio grids
@@ -57,21 +57,6 @@ export const projectCategories = [
 export const portfolioProjects: PortfolioProject[] = [
   // ---------------- Websites & Portals ----------------
   {
-    id: "web-07",
-    title: "StudyBracket Learning Platform",
-    client: "StudyBracket",
-    url: "https://studybracket.com",
-    category: "websites",
-    service: "Web Development",
-    industry: "Education",
-    image: stockImageSrc("photo-1523240795612-9a054b0db644"),
-    summary: "Education platform website built for course discovery, program pages and student enquiries.",
-    highlight: "Live",
-    highlightLabel: "scrolling preview on hover",
-    status: "Live & Running",
-    tags: ["Custom Website", "SEO-Ready", "Enquiry Flow"],
-  },
-  {
     id: "web-08",
     title: "GainRealEstate Property Portal",
     client: "Gain Real Estate",
@@ -101,55 +86,7 @@ export const portfolioProjects: PortfolioProject[] = [
     status: "Live & Running",
     tags: ["Custom Website", "Catalogue", "RFQ Flow"],
   },
-  
-  
-  {
-    id: "web-01",
-    title: "Multi-Location Restaurant Group Website",
-    client: "Hospitality brand, Delhi NCR",
-    url: "https://studybracket.com",
-    category: "websites",
-    service: "Web Development",
-    industry: "Hospitality",
-    image: stockImageSrc("photo-1514933651103-005eec06c04b"),
-    summary: "Brand website with menu, table reservations, branch pages and online ordering built for speed and conversions.",
-    highlight: "2.4x",
-    highlightLabel: "faster load time after rebuild",
-    status: "Live & Running",
-    tags: ["Custom Website", "UI/UX", "Performance"],
-  },
-  {
-    id: "web-02",
-    title: "Hospital & Multispeciality Clinic Website",
-    client: "Healthcare group, New Delhi",
-    url: "https://gainrealestate.in",
-    category: "websites",
-    service: "Web Development",
-    industry: "Healthcare",
-    image: stockImageSrc("photo-1504439468489-c8920d796a29"),
-    summary: "Doctor profiles, department pages, appointment forms and SEO-ready structure for a multispeciality healthcare brand.",
-    highlight: "3x",
-    highlightLabel: "more appointment enquiries",
-    status: "Live & Running",
-    tags: ["Custom Website", "Appointment Booking", "SEO-Ready"],
-  },
-  {
-    id: "web-03",
-    title: "Real-Estate Developer Project Site",
-    client: "Property developer, Noida",
-    url: "https://zentryo.in",
-    category: "websites",
-    service: "Web Development",
-    industry: "Real Estate",
-    image: stockImageSrc("photo-1560518883-ce09059eeffa"),
-    summary: "Project microsite with floor plans, location highlights, EMI calculators and lead-capture landing flows.",
-    highlight: "1,200+",
-    highlightLabel: "qualified leads per quarter",
-    status: "Live & Running",
-    tags: ["Project Microsite", "Lead Generation", "CRM Integration"],
-  },
-  
-  
+
   // ---------------- eCommerce & D2C ----------------
   
   {
