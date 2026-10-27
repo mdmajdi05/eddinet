@@ -143,6 +143,16 @@ export function getCategoryPageContent(
   const heroGradient = gradMatch ? gradMatch[0].trim() : null;
 
   const authoredAbout = dx?.about ? dx.about.split("\n\n") : [];
+  // Per-category authored approach copy already exists in `CategoryTemplate`.
+  // Use it for pages without a full document-authored About section, instead of
+  // the shared boilerplate below. This keeps every category page's main body
+  // unique (important for SEO / avoiding near-duplicate category pages).
+  const templateAbout = tpl?.approach
+    ? tpl.approach
+        .split(/\n{2,}/)
+        .map((paragraph) => paragraph.trim())
+        .filter(Boolean)
+    : [];
   const aboutIntro = `${s.desc} Since launching our ${s.title.toLowerCase()} practice, Eddinet has helped businesses across Delhi NCR and beyond turn visibility into measurable revenue — pairing senior strategy with hands-on execution under one roof.`;
   const aboutParagraphs = [
     `We built Eddinet around one belief: growth work fails most often because it is fragmented. Strategy, execution, design and reporting get split across different vendors and nothing ends up accountable. So we run ${s.title.toLowerCase()} engagements as a single connected system — a named team, shared goals, and transparent milestones from the first audit to ongoing optimisation.`,
@@ -154,9 +164,11 @@ export function getCategoryPageContent(
   const about =
     authoredAbout.length >= 5
       ? authoredAbout
-      : authoredAbout.length > 0
-        ? [...authoredAbout, ...aboutParagraphs]
-        : [aboutIntro, ...aboutParagraphs];
+      : templateAbout.length > 0
+        ? [...authoredAbout, ...templateAbout]
+        : authoredAbout.length > 0
+          ? authoredAbout
+          : [aboutIntro, ...aboutParagraphs];
 
   // Document-authored descriptions win over the shared `itemDetails` copy
   // whenever the service names line up (maintenance & reputation pages).

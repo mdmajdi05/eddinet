@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound, permanentRedirect } from "next/navigation";
 import PortfolioGrid from "@/components/PortfolioGrid";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -6,6 +7,7 @@ import {
   portfolioProjects,
   projectCategories,
 } from "@/data/portfolio/portfolio";
+import { portfolioCategoryContent } from "@/data/portfolio/category-content";
 import { resolvePortfolioRedirect } from "@/lib/content-fallback";
 import { socialMetadata } from "@/lib/social-metadata";
 
@@ -67,6 +69,7 @@ export default async function PortfolioCategoryPage({
   }
 
   const categoryUrl = `https://eddinet.com/portfolio/${cat.key}`;
+  const categoryContent = portfolioCategoryContent[cat.key];
 
   // Category ke projects hi list banate hain - list khud data se aati
   // hai, isliye koi category bina projects ke bhi valid JSON deta hai
@@ -133,6 +136,58 @@ export default async function PortfolioCategoryPage({
             hideControls
           />
         </div>
+
+        {categoryContent && (
+          <section className="mt-16 pt-12 border-t border-[var(--border-color)]">
+            <div className="max-w-[920px]">
+              <span className="inline-flex items-center py-1.5 px-4 rounded-full bg-[var(--tag-bg)] border border-[var(--tag-border)] text-[var(--main-accent)] text-[0.75rem] font-bold uppercase tracking-wider mb-4">
+                About this work
+              </span>
+              <h2 className="text-[2rem] font-extrabold leading-[1.15] text-[var(--text-main)] mb-5 max-[768px]:text-[1.6rem]">
+                {categoryContent.introHeading}
+              </h2>
+              <div className="space-y-4">
+                {categoryContent.paragraphs.map((paragraph, i) => (
+                  <p
+                    key={i}
+                    className="text-[var(--text-muted)] text-[1rem] leading-relaxed"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+
+              <div className="mt-8">
+                <h3 className="text-[var(--text-main)] text-[1.05rem] font-bold mb-3">
+                  What this work typically includes
+                </h3>
+                <ul className="grid grid-cols-2 gap-x-6 gap-y-2 max-[640px]:grid-cols-1">
+                  {categoryContent.deliverables.map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-2.5 text-[var(--text-muted)] text-[0.92rem] leading-relaxed"
+                    >
+                      <span
+                        aria-hidden
+                        className="mt-[0.42rem] w-1.5 h-1.5 rounded-full bg-[var(--main-accent)] shrink-0"
+                      />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <Link
+                href={categoryContent.serviceHref}
+                className="mt-8 inline-flex items-center gap-2 py-3 px-6 rounded-full font-bold text-[0.9rem] no-underline text-[var(--on-primary)] shadow-[0_10px_25px_-5px_rgba(var(--accent-rgb),0.4)] transition-all duration-300 hover:-translate-y-[2px]"
+                style={{ background: "var(--primary-gradient)" }}
+              >
+                {categoryContent.serviceLabel}
+                <span aria-hidden>→</span>
+              </Link>
+            </div>
+          </section>
+        )}
 
       </div>
 
