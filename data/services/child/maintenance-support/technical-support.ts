@@ -15,8 +15,8 @@ import { benefits } from "../_category/maintenance-support";
 export const child = {
   slug: "website-technical-support-services-in-india",
   title: "Technical Support",
-  metaTitle: "Technical Support Services in India | Eddinet",
-  metaDescription: "Responsive, expert support for your website, app and infrastructure issues. A real engineer on the other end, not a ticket queue. Eddinet delivers dependable technical support services across India and globally. Get a free proposal today.",
+  metaTitle: "Website Technical Support Services in India | Eddinet",
+  metaDescription: "On-call website fixes, updates and troubleshooting for businesses across India. Eddinet keeps your site running. Contact our support team.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "Dedicated Helpdesk | Developer Support | Routine Website Changes",
   // the <h1> itself — doc line "Main hero H1 headline:-"

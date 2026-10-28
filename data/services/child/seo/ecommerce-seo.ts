@@ -9,8 +9,8 @@
 export const child = {
   slug: "ecommerce-seo-services-in-delhi-ncr",
   title: "eCommerce SEO",
-  metaTitle: "eCommerce SEO Services in Delhi NCR | Eddinet",
-  metaDescription: "Drive qualified shopping traffic to your store. Eddinet's eCommerce SEO covers product, category & collection page optimisation for Shopify, WooCommerce & more. Free audit.",
+  metaTitle: "Ecommerce SEO Services in Delhi NCR | Eddinet",
+  metaDescription: "Ecommerce SEO for Delhi NCR stores: category, product and technical optimization that lifts organic sales. Request a proposal.",
   heroHeading: "eCommerce SEO Services in Delhi NCR",
   heroSubheading: "Product-focused SEO that connects high-intent shoppers with your catalogue — category pages, product pages, filters and collections engineered for search visibility and conversion.",
   image: "/images/services/seo/seo/ecommerce-seo.webp",

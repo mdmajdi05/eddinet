@@ -15,8 +15,8 @@ import { benefits } from "../_category/cloud-devops";
 export const child = {
   slug: "cloud-infrastructure-services-company-in-india",
   title: "Cloud Infrastructure",
-  metaTitle: "Cloud Infrastructure Services in India | Eddinet",
-  metaDescription: "Eddinet provides premier cloud infrastructure services in India. We build, deploy, and manage scalable cloud setups to reduce capital costs, prevent system",
+  metaTitle: "Cloud Infrastructure Services Company in India | Eddinet",
+  metaDescription: "Design, migrate and manage secure, scalable cloud infrastructure. Eddinet helps Indian businesses run reliably without the complexity.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "Enterprise Cloud Infrastructure | Managed Infrastructure | Multi-Cloud Solutions",
   // the <h1> itself — doc line "Main hero H1 headline:-"

@@ -15,8 +15,8 @@ import { benefits } from "../_category/maintenance-support";
 export const child = {
   slug: "website-uptime-monitoring-services-in-india",
   title: "Uptime Monitoring",
-  metaTitle: "Uptime Monitoring Services in India | Eddinet",
-  metaDescription: "24/7 monitoring that catches downtime and performance dips before users do. Alerts that reach a human, not a spam folder. Eddinet delivers dependable uptime monitoring services across India and globally. Get a free proposal today.",
+  metaTitle: "Website Uptime Monitoring Services | Eddinet",
+  metaDescription: "Get alerted the moment your site goes down. Eddinet's uptime monitoring helps you cut downtime and protect revenue. Contact us.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "Real-Time Availability Tracking | Server Telemetry | Instant Multi-Channel Alerts",
   // the <h1> itself — doc line "Main hero H1 headline:-"

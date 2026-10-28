@@ -15,8 +15,8 @@ import { benefits } from "../_category/maintenance-support";
 export const child = {
   slug: "website-performance-monitoring-and-optimization-in-india",
   title: "Performance Optimization",
-  metaTitle: "Performance Optimization Services in India | Eddinet",
-  metaDescription: "Speed and stability tuning across code, assets, caching and infrastructure. A faster site that ranks better and converts better. Eddinet delivers dependable performance optimization services across India and globally. Get a free proposal today.",
+  metaTitle: "Website Performance Monitoring & Optimization in India",
+  metaDescription: "Track speed, uptime and Core Web Vitals, then fix what hurts. Eddinet monitors and optimizes your site's performance. Talk to our team.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "Continuous Monitoring | Monthly Speed Maintenance | Performance Tuning | Core Web Vitals Tracking",
   // the <h1> itself — doc line "Main hero H1 headline:-"

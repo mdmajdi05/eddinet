@@ -16,7 +16,7 @@ export const child = {
   slug: "website-redesign-services-in-india",
   title: "Website Redesign",
   metaTitle: "Website Redesign Services in India | Eddinet",
-  metaDescription: "Full redesigns that refresh brand, structure, UX and performance without losing SEO value. A new look and new results — with rankings, URLs and data intact. Eddinet delivers dependable website redesign services across India and globally. Get a free proposal today.",
+  metaDescription: "Outdated site losing leads? Eddinet redesigns websites built for speed, SEO and conversions. Share your goals and get a redesign quote today.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "Website Revamping | UI/UX Redesign | Ecommerce Redesign | Speed & SEO Optimisation",
   // the <h1> itself — doc line "Main hero H1 headline:-"

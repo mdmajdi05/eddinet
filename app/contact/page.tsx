@@ -8,14 +8,14 @@ import { balancedGrid } from "@/lib/process-grid";
 import { socialMetadata } from "@/lib/social-metadata";
 
 export const metadata: Metadata = {
-  title: "Contact Us - Talk to a Digital Growth Expert",
+  title: "Contact Eddinet | Talk to Our Digital Marketing Team",
   description:
-    "Contact Eddinet in Okhla, New Delhi for a free 30-minute growth consultation. Call, WhatsApp or submit the form - we respond within 2 business hours.",
+    "Have a project in mind? Contact Eddinet for SEO, PPC, web and app development. Share your goals and our team will get back to you shortly.",
   alternates: { canonical: "https://eddinet.com/contact" },
   ...socialMetadata({
-    title: "Contact Us - Talk to a Digital Growth Expert",
+    title: "Contact Eddinet | Talk to Our Digital Marketing Team",
     description:
-      "Contact Eddinet in Okhla, New Delhi for a free 30-minute growth consultation. Call, WhatsApp or submit the form - we respond within 2 business hours.",
+      "Have a project in mind? Contact Eddinet for SEO, PPC, web and app development. Share your goals and our team will get back to you shortly.",
     url: "https://eddinet.com/contact",
   }),
 };

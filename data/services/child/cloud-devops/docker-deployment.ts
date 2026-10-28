@@ -16,7 +16,7 @@ export const child = {
   slug: "docker-deployment-services-company-in-india",
   title: "Docker Deployment",
   metaTitle: "Docker Deployment Services in India | Eddinet",
-  metaDescription: "Eddinet provides premier Docker deployment services in India. We containerize, optimize, and manage high-speed server environments to eliminate dependency",
+  metaDescription: "Containerize and deploy your apps with Docker for consistent, scalable releases. Eddinet handles setup and automation. Get a quote.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "Docker Container Deployment | Containerized Application Deployment | Docker DevOps Services",
   // the <h1> itself — doc line "Main hero H1 headline:-"

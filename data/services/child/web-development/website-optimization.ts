@@ -15,8 +15,8 @@ import { benefits } from "../_category/web-development";
 export const child = {
   slug: "website-optimization-services-company-in-delhi",
   title: "Website Optimization",
-  metaTitle: "Website Optimization Services in Delhi NCR | Eddinet",
-  metaDescription: "Speed, conversion and UX optimisation that improves rankings, engagement and results. Small changes across the site that add up to real business lift. Eddinet delivers dependable website optimization services in Delhi NCR for India and global clients. Get a free proposal today.",
+  metaTitle: "Website Optimization Services in Delhi | Eddinet",
+  metaDescription: "Slow site or low conversions? Eddinet improves speed, Core Web Vitals and UX for Delhi businesses. Talk to our team about a faster website.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "Page Speed Acceleration | Core Web Vitals Optimization | Technical SEO & Conversion",
   // the <h1> itself — doc line "Main hero H1 headline:-"

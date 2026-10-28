@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { notFound, permanentRedirect } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Clock, Tag, User, Mail } from "lucide-react";
-import { insights, getInsightBySlug } from "@/data/blog/blog";
+import { insights, getInsightBySlug, type Insight } from "@/data/blog/blog";
 import { site } from "@/data/site/contact";
 import { services, type Service } from "@/data/services/services";
 import { resolveBlogRedirect } from "@/lib/content-fallback";
@@ -114,6 +114,58 @@ function renderParagraphs(paragraphs: string[], keyPrefix: string): ReactNode[] 
 
   flushBullets();
   return blocks;
+}
+
+/**
+ * Optional data table (e.g. CPC benchmarks). Mobile pe horizontal scroll,
+ * taaki narrow screens par columns squeeze na hon.
+ */
+function renderTable(table: Insight["sections"][number]["table"], keyPrefix: string): ReactNode {
+  if (!table) return null;
+  return (
+    <figure key={keyPrefix} className="mb-6">
+      <div className="overflow-x-auto rounded-xl border border-[var(--border-color)]">
+        <table className="w-full min-w-[560px] border-collapse text-left text-sm">
+          <thead>
+            <tr className="bg-[var(--bg-card)]">
+              {table.headers.map((h, i) => (
+                <th
+                  key={`${keyPrefix}-h-${i}`}
+                  scope="col"
+                  className="px-4 py-3 text-[0.7rem] font-bold uppercase tracking-wider text-[var(--main-accent)] border-b border-[var(--border-color)]"
+                >
+                  {h}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {table.rows.map((row, r) => (
+              <tr key={`${keyPrefix}-r-${r}`} className="border-b border-[var(--border-color)] last:border-b-0">
+                {row.map((cell, c) => (
+                  <td
+                    key={`${keyPrefix}-r-${r}-c-${c}`}
+                    className={
+                      c === 0
+                        ? "px-4 py-3 align-top font-semibold text-[var(--text-main)]"
+                        : "px-4 py-3 align-top text-[var(--text-muted)]"
+                    }
+                  >
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {table.caption && (
+        <figcaption className="mt-2 text-xs text-[var(--text-dim)]">
+          {table.caption}
+        </figcaption>
+      )}
+    </figure>
+  );
 }
 
 export function generateStaticParams() {
@@ -322,7 +374,13 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
       sec.paragraphs.reduce(
         (sum, p) => sum + p.split(/\s+/).filter(Boolean).length,
         0,
-      ),
+      ) +
+      (sec.table
+        ? [...sec.table.headers, ...sec.table.rows.flat()].reduce(
+            (sum, cell) => sum + cell.split(/\s+/).filter(Boolean).length,
+            0,
+          )
+        : 0),
     0,
   );
 
@@ -429,6 +487,7 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
                         </h2>
                       )}
                       {renderParagraphs(sec.paragraphs, `sec-${i}`)}
+                      {renderTable(sec.table, `sec-${i}-table`)}
                     </div>
                   ))}
                 </div>

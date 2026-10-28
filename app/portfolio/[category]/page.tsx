@@ -37,8 +37,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const title = `${cat.label} Portfolio | Eddinet`;
-  const description = `Browse ${cat.label} projects delivered by Eddinet in Delhi NCR - real websites, apps, software and campaigns built to convert.`;
+  // Category-specific SEO overrides. Baaki categories generic template use karti hain.
+  const metaOverrides: Record<string, { title: string; description: string }> = {
+    websites: {
+      title: "Website Design Portfolio | Eddinet",
+      description:
+        "Browse websites Eddinet has designed and built for brands across industries. See our work and start a conversation about yours.",
+    },
+    seo: {
+      title: "SEO Portfolio & Results | Eddinet",
+      description:
+        "See SEO work delivered by Eddinet: audits, content and technical fixes behind better visibility. Explore our projects.",
+    },
+  };
+  const override = metaOverrides[cat.key];
+  const title = override?.title ?? `${cat.label} Portfolio | Eddinet`;
+  const description =
+    override?.description ??
+    `Browse ${cat.label} projects delivered by Eddinet in Delhi NCR - real websites, apps, software and campaigns built to convert.`;
 
   return {
     title,

@@ -16,7 +16,7 @@ export const child = {
   slug: "monitoring-and-logging-services-in-india",
   title: "Monitoring & Logging",
   metaTitle: "Monitoring & Logging Services in India | Eddinet",
-  metaDescription: "Eddinet delivers monitoring and logging services in India that give you full visibility into your infrastructure.",
+  metaDescription: "Spot issues before users do. Eddinet sets up application and infrastructure monitoring, logging and alerts to keep your systems reliable.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "Server Monitoring | Application Logging | DevOps Monitoring Solutions",
   // the <h1> itself — doc line "Main hero H1 headline:-"

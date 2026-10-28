@@ -33,9 +33,9 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://eddinet.com/"),
-  title: "Digital Marketing & Software Agency Delhi NCR | Eddinet",
+  title: "Eddinet | Digital Marketing & Web Development, Delhi NCR",
   description:
-    "Eddinet is a leading digital marketing & software agency in Delhi NCR, offering SEO, web & app development, and branding. Get a free consultation today.",
+    "Eddinet is a Delhi NCR agency for SEO, Google Ads, social media, web and app development. See our work and talk to our team about your growth goals.",
   robots: {
     index: true,
     follow: true,
@@ -76,9 +76,9 @@ export const metadata: Metadata = {
     apple: [{ url: "/ENDINET_EN_Favicons/apple-touch-icon.png" }],
   },
   ...socialMetadata({
-    title: "Digital Marketing & Software Agency Delhi NCR | Eddinet",
+    title: "Eddinet | Digital Marketing & Web Development, Delhi NCR",
     description:
-      "Eddinet is a leading digital marketing & software agency in Delhi NCR, offering SEO, web & app development, and branding. Get a free consultation today.",
+      "Eddinet is a Delhi NCR agency for SEO, Google Ads, social media, web and app development. See our work and talk to our team about your growth goals.",
     url: "https://eddinet.com/",
   }),
   other: {

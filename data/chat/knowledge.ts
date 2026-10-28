@@ -308,6 +308,35 @@ const MANUAL: KnowledgeBaseItem[] = [
     priority: 4,
   },
   {
+    id: "manual-google-ads-cost",
+    category: "blog",
+    question: "How much does Google Ads cost in India?",
+    answer:
+      `In 2026, Google Ads CPC in India typically runs from about **₹10 to ₹80**, ` +
+      `but it depends heavily on industry:\n\n` +
+      `- 🛒 E-commerce & D2C: ₹10–₹80\n` +
+      `- 🎓 Education & coaching: ₹15–₹120\n` +
+      `- 🏠 Real estate: ₹40–₹300\n` +
+      `- ⚖️ Legal & finance: ₹60–₹600+\n` +
+      `- 💇 Local services: ₹10–₹60\n` +
+      `- 💻 B2B SaaS & IT: ₹50–₹200\n\n` +
+      `👉 [See the full 2026 CPC benchmarks by industry](/blog/google-ads-cost-in-india-cpc-benchmarks-by-industry)`,
+    keywords: [
+      "google ads cost",
+      "google ads price",
+      "cpc",
+      "cost per click",
+      "ppc cost",
+      "ad budget",
+      "google ads budget",
+    ],
+    link: {
+      label: "Google Ads CPC benchmarks",
+      href: "/blog/google-ads-cost-in-india-cpc-benchmarks-by-industry",
+    },
+    priority: 5,
+  },
+  {
     id: "manual-industries",
     category: "industries",
     question: "Which industries does Eddinet serve?",

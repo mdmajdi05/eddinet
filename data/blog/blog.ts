@@ -7,9 +7,17 @@ import { stockImageSrc } from "@/data/site/stock-images";
 //                title, slug, category, image, date, summary, body[]
 // ============================================================================
 
+export interface InsightTable {
+  caption?: string;
+  headers: string[];
+  rows: string[][];
+}
+
 export interface InsightSection {
   heading?: string;
   paragraphs: string[];
+  /** Optional data table. Article page me <table> ke roop me render hota hai. */
+  table?: InsightTable;
 }
 
 export interface Insight {
@@ -79,6 +87,8 @@ const allInsights: Insight[] = [
   {
     slug: "lowering-google-ads-cpa-a-practical-framework",
     title: "Lowering Your Google Ads CPA: A Practical Framework",
+    metaTitle: "How to Lower CPA in Google Ads: A Practical Framework",
+    metaDescription: "Wasting ad spend? Learn how to reduce CPA in Google Ads by fixing tracking, bidding, targeting and landing pages. A practical framework from Eddinet.",
     category: "Paid Ads & CRO",
     categoryColor: "text-[var(--purple-accent)]",
     label: "Performance Marketing",
@@ -99,7 +109,7 @@ const allInsights: Insight[] = [
         heading: "Structure the account around intent",
         paragraphs: [
           "The fastest, most durable CPA improvements come from separating intent inside the account. Branded search, high-intent non-brand and category-level or discovery queries behave differently and should not share the same ad group, budget logic or optimisation objective.",
-          "A disciplined structure lets each part of the account be optimised for what it does best, and prevents broad-confusion spending from masking the performance of genuinely profitable pockets.",
+          "A disciplined structure lets each part of the account be optimised for what it does best, and prevents broad-confusion spending from masking the performance of genuinely profitable pockets. If you are still calibrating what a click should cost in your category, start with our [2026 Google Ads CPC benchmarks by industry](/blog/google-ads-cost-in-india-cpc-benchmarks-by-industry).",
         ],
       },
       {
@@ -121,6 +131,8 @@ const allInsights: Insight[] = [
   {
     slug: "building-fast-websites-that-convert",
     title: "Building Fast Websites That Actually Convert",
+    metaTitle: "Building Fast Websites That Convert: What Matters",
+    metaDescription: "Speed alone will not sell. Learn what makes a website both fast and conversion-ready, from design choices to technical basics.",
     category: "Tech & Development",
     categoryColor: "text-[var(--green-accent)]",
     label: "Web Development",
@@ -342,9 +354,8 @@ const allInsights: Insight[] = [
     label: "Digital Marketing Agency",
     excerpt:
       "Looking for a digital marketing agency in Delhi NCR? Learn what the top agencies do, how to choose one, and how Eddinet drives measurable growth.",
-    metaTitle: "Digital Marketing Agency in Delhi NCR | Eddinet",
-    metaDescription:
-      "Looking for a digital marketing agency in Delhi NCR? Learn what the top agencies do, how to choose one, and how Eddinet drives measurable growth.",
+    metaTitle: "How to Choose a Digital Marketing Agency in Delhi NCR",
+    metaDescription: "Hiring a digital marketing agency in Delhi NCR? Here is what to check before you sign: services, reporting, pricing and fit for your business.",
     image: stockImageSrc("photo-1460925895917-afdab827c52f"),
     date: "October 21, 2026",
     readTime: "8 min read",
@@ -367,7 +378,7 @@ const allInsights: Insight[] = [
         paragraphs: [
           "Search for the top digital marketing agency in Delhi NCR and every result promises the same thing: more traffic, more leads, faster growth. The real difference is how an agency ties its services to your revenue. So instead of asking who is \"top\", ask what the agency fixes first.",
           "It usually starts with visibility. Most Delhi NCR buyers compare two or three options on Google before they call anyone, which makes SEO the base of long-term growth. If you are still weighing the return, our guide on [Is SEO worth it for small businesses in India](/blog/is-seo-worth-it-for-small-businesses-in-india) breaks down the cost, timeline and scope. That now includes showing up in AI-generated answers, a shift we explain in [how generative AI is reshaping SEO](/blog/how-generative-ai-is-reshaping-seo). If your customers are nearby, local SEO captures the \"near me\" searches that convert fastest.",
-          "Paid media fills the gap while organic rankings build. A well-run Google Ads account can bring enquiries within days, but only if the budget protects your margins. Our framework for [lowering your Google Ads CPA](/blog/lowering-google-ads-cpa-a-practical-framework) shows how account structure and testing do most of that work.",
+          "Paid media fills the gap while organic rankings build. A well-run Google Ads account can bring enquiries within days, but only if the budget protects your margins. Our framework for [lowering your Google Ads CPA](/blog/lowering-google-ads-cpa-a-practical-framework) shows how account structure and testing do most of that work, and our [2026 CPC benchmarks by industry](/blog/google-ads-cost-in-india-cpc-benchmarks-by-industry) show what a click should cost before you commit a budget.",
           "Next comes trust. People who click your ad still check reviews before they contact you. Online reputation management and steady content marketing answer that doubt before a sales call does, while social media marketing keeps your brand visible in between.",
           "None of this works if your site is the weak link. A slow or confusing page wastes the traffic you paid for, so website optimisation belongs in the plan from day one.",
           "When these channels are planned together, each one makes the others cheaper. Strong reviews lift ad conversion rates, better content strengthens rankings, and a faster site lowers your cost per lead.",
@@ -413,6 +424,155 @@ const allInsights: Insight[] = [
         paragraphs: [
           "The right digital marketing agency in Delhi NCR acts as an extension of your team. It should explain its work, share its data, and take responsibility for results. Take your time, ask direct questions, and pick the partner who answers them honestly.",
           "Ready to grow your business online? Contact Eddinet today for a free consultation. We will review your current marketing, point out the biggest opportunities, and show you a practical plan to get started. You can also browse all our services first.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "google-ads-cost-in-india-cpc-benchmarks-by-industry",
+    title: "Google Ads Cost in India: CPC Benchmarks by Industry (2026)",
+    metaTitle: "Google Ads Cost in India 2026: CPC Benchmarks by Industry",
+    metaDescription:
+      "Google Ads cost in India ranges from ₹5 to ₹600+ per click. See 2026 CPC benchmarks by industry, why costs vary, and how to plan your monthly budget.",
+    category: "Paid Ads & CRO",
+    categoryColor: "text-[var(--purple-accent)]",
+    label: "Google Ads & Budgeting",
+    excerpt:
+      "Google Ads in India can cost ₹5 or ₹600 a click depending entirely on your industry. Here are 2026 CPC benchmarks by industry, why the gap exists, and how to turn CPC into a monthly budget.",
+    image: stockImageSrc("photo-1551288049-bebda4e38f71"),
+    date: "October 28, 2026",
+    readTime: "7 min read",
+    sections: [
+      {
+        paragraphs: [
+          "If you're advertising in India in 2026, expect to pay anywhere from ₹5 for a low-competition local click to ₹150 or more for a high-stakes legal or insurance keyword, with some finance terms going far beyond that.",
+          "The exact number depends almost entirely on your industry, so here's the Google Ads cost in India broken down with CPC benchmarks by industry, plus how to turn those numbers into a budget you can actually plan around.",
+          "One caveat before we start. These are ranges based on what we see across Indian accounts, not a price list. Google doesn't publish one, and anyone who quotes you a fixed CPC without looking at your keywords is guessing.",
+        ],
+      },
+      {
+        heading: "The Short Answer: What Does Google Ads Actually Cost in India in 2026?",
+        paragraphs: [
+          "There's no fixed fee. Every time someone searches, Google runs a quick auction among the advertisers who want to show up. You pay only when someone clicks, and the price of that click is set by the auction.",
+          "The auction runs on something called Ad Rank. In plain English: Ad Rank is roughly your bid multiplied by your quality (Google calls it Quality Score, which covers your expected click-through rate, ad relevance, and landing page experience). Whoever has the highest Ad Rank wins the top spot.",
+          "Here's the part most business owners miss. You don't pay your maximum bid. You pay just enough to beat the advertiser below you. So a better-quality ad can win a higher position and still pay less per click than a sloppy competitor with a bigger bid. If you want the official explanation, Google's own documentation covers it: [Google Ads Help – About Ad Rank](https://support.google.com/google-ads/answer/1722122).",
+        ],
+      },
+      {
+        heading: "What Is the Average CPC in India for Google Ads in 2026?",
+        paragraphs: [
+          "The average CPC in India for Google Ads in 2026 sits between roughly ₹10 and ₹80 for most industries. Local services and e-commerce land at the lower end, while real estate, finance, and legal keywords can cross ₹300 to ₹600. Your actual CPC depends on competition, intent, and Quality Score.",
+          "That's the average CPC in India 2026 in one breath. The industry table below is where it gets useful.",
+        ],
+      },
+      {
+        heading: "CPC Benchmarks by Industry (2026 India Data)",
+        paragraphs: [
+          "These ranges are approximate and based on Indian market observations across search campaigns. Treat them as a planning range, not a promise.",
+        ],
+        table: {
+          caption: "Typical Google Ads CPC ranges in India by industry, 2026",
+          headers: ["Industry", "Typical CPC Range (India)", "What Pushes It Up or Down"],
+          rows: [
+            [
+              "E-commerce & D2C (fashion, beauty, electronics)",
+              "₹10 – ₹80",
+              "Broad category terms cost more; long-tail product terms and branded searches cost less",
+            ],
+            [
+              "Education & Coaching (EdTech, test prep)",
+              "₹15 – ₹120",
+              "Metro targeting and high-intent course keywords push toward the top",
+            ],
+            [
+              "Real Estate",
+              "₹40 – ₹300",
+              "Big ticket size justifies high bids, but lead quality swings wildly",
+            ],
+            [
+              "Legal & Finance (loans, insurance, CA services)",
+              "₹60 – ₹600",
+              "Most expensive vertical; lifetime value has to justify the click",
+            ],
+            [
+              "Local Services (salons, clinics, home repair)",
+              "₹10 – ₹60",
+              "Tight geographic targeting keeps costs low",
+            ],
+            [
+              "B2B SaaS & IT Services",
+              "₹50 – ₹200",
+              "Moderate-to-high competition; Quality Score makes a big difference",
+            ],
+          ],
+        },
+      },
+      {
+        heading: "What These CPC Ranges Mean in Practice",
+        paragraphs: [
+          "A few notes from what we see in real accounts.",
+          "- E-commerce and D2C: The mistake most advertisers make here is bidding on broad terms like \"women's kurta\" or \"wireless earbuds\" and then wondering why the CPC is painful. Product-specific, long-tail searches usually cost far less and convert better because the person already knows what they want. Branded searches are the cheapest clicks you'll ever buy. If you aren't protecting your own brand name, a competitor might be.",
+          "- Education and coaching: Costs climb fast when you target Delhi, Mumbai, Bengaluru, or Kota-style coaching hubs with high-intent keywords like \"CAT coaching fees\" or \"best NEET online course.\" Open the targeting up to tier-2 and tier-3 cities and your CPC often drops noticeably. Whether those leads convert as well is something you have to test, not assume.",
+          "- Real estate: A single sale can be worth lakhs or crores, so developers bid aggressively. That's why you'll see ₹150+ clicks on project-specific keywords in good micro-markets. The catch is lead quality, which is why setup matters as much as spend in [lead generation ads](/services/ads-ppc/lead-generation-services-in-india). Plenty of clicks come from people browsing, comparing, or collecting brochures. Cheap clicks here are rarely the goal. Qualified site visits are.",
+          "- Legal and finance: This is the most expensive corner of Google Ads in India. Terms around personal loans, business loans, health and term insurance, and credit cards can run well above ₹300. If you're a CA firm or a legal practice, you'll sit at the lower end of this range, but it's still pricey. The question isn't \"is the CPC high?\" It's \"what is a customer worth over five years?\" If that number is big enough, the click price is just a cost of doing business.",
+          "- Local services: Salons, clinics, dentists, and home repair businesses get the friendliest numbers. Competition is thinner and you're only targeting a few kilometres around you. For these businesses, CPC is almost a vanity number. Cost per lead (CPL) tells you far more. A ₹40 click that produces a phone call is better than a ₹15 click that doesn't.",
+          "- B2B SaaS and IT services: Moderate-to-high competition, and this is where Quality Score separates the pros from everyone else. Two agencies bidding on \"CRM software India\" can pay noticeably different amounts for the same click, purely because one has a tighter ad and a better landing page. If your buyers are decision-makers, it's also worth testing [LinkedIn Ads](/services/ads-ppc/linkedin-ads-agency-in-india) alongside search.",
+          "If your CPC feels too high, the same account structure and testing levers that reduce CPA also bring down CPC. Our guide to [lowering your Google Ads CPA](/blog/lowering-google-ads-cpa-a-practical-framework) covers them in detail.",
+        ],
+      },
+      {
+        heading: "Why the Same Platform Charges ₹10 for One Click and ₹500 for Another",
+        paragraphs: [
+          "It's the same Google, the same auction. The gap comes down to three things.",
+        ],
+      },
+      {
+        heading: "1. Customer Lifetime Value (LTV)",
+        paragraphs: [
+          "Advertisers will pay what a customer is worth to them. A loan agent who earns ₹8,000 commission per approved customer can happily bid ₹200 per click. A cafe selling a ₹250 coffee can't. When several advertisers in one category all have high LTV, the auction gets bid up, and everyone pays more. That's the whole story behind finance and legal pricing.",
+        ],
+      },
+      {
+        heading: "2. Search Intent",
+        paragraphs: [
+          "Someone typing \"how does a home loan work\" is learning. Someone typing \"home loan interest rate SBI vs HDFC apply online\" is ready to act. Bottom-funnel searches cost more because they're closer to money. Top-funnel searches are cheaper but convert poorly, so you shouldn't judge them by the same yardstick. Most budget leaks we find in audits come from paying for the wrong intent.",
+        ],
+      },
+      {
+        heading: "3. Quality Score",
+        paragraphs: [
+          "This is the one you control directly. A strong Quality Score, meaning relevant ads, a landing page that matches the search, and a healthy click-through rate, can cut your effective CPC by 30 to 50 percent compared with a poorly built account bidding on the same keyword. You haven't changed your bid. You've just made Google's job easier, and Google rewards that.",
+          "A simple example: if your landing page talks about \"all our services\" and the person searched for \"emergency AC repair Gurgaon,\" your Quality Score takes a hit. Fix the match and the same keyword gets cheaper.",
+          "Want to understand how this connects to the rest of your paid strategy? See how we build [Google Ads campaigns in India](/services/ads-ppc/best-google-ads-services-in-india).",
+        ],
+      },
+      {
+        heading: "What Monthly Budget Do You Actually Need? (Beyond CPC)",
+        paragraphs: [
+          "CPC alone doesn't tell you what Google Ads pricing in India will look like for your business. You need the conversion rate too. Here's the formula:",
+          "Monthly Budget = (Target Conversions × CPC) ÷ Conversion Rate",
+          "Let's make that real. If you want 15 leads a month, your CPC is ₹50, and your landing page converts at 4%, you need roughly ₹18,750. Here's the math: 15 leads at 4% means you need about 375 clicks, and 375 clicks at ₹50 comes to ₹18,750. And that's a floor, before you spend a rupee on testing.",
+          "That last point matters. New accounts need room to learn. Budget for experiments, because your first set of keywords and ads won't be your best.",
+          "As a rough guide:",
+          "- Starter (₹15,000 – ₹30,000 per month): Works for local services and low-CPC niches. Keep campaigns tight, focus on high-intent keywords, and don't try to run five campaigns at once.",
+          "- Growth (₹40,000 – ₹1 lakh per month): The sweet spot for most e-commerce, education, and B2B businesses. You have enough data to test properly and scale what works, including [remarketing](/services/ads-ppc/remarketing-and-retargeting-ads-services-in-india) to past visitors.",
+          "- Competitive (₹1 lakh+ per month): Realistic for real estate, finance, insurance, and anyone fighting well-funded rivals in metro markets.",
+          "Before you commit a budget, check that your [conversion tracking setup](/services/seo/technical-seo) is done properly. Otherwise you're measuring guesses.",
+        ],
+      },
+      {
+        heading: "A Final Reality Check",
+        paragraphs: [
+          "CPC benchmarks are a starting point, not a quote. The ranges above will help you budget, but they won't tell you what you'll pay. That depends on how well your account is built: your keyword choices, your ad relevance, your landing pages, and whether you're tracking real leads or just clicks.",
+          "So here's the practical takeaway. Pick the industry range closest to yours, plug it into the budget formula, and run a small test for 30 days. Then look at your actual CPC, your cost per lead, and your lead quality. That's your real Google Ads cost in India. Everything else is an estimate.",
+          "If you'd like a second pair of eyes on your numbers, we're happy to look at your account and tell you honestly whether your CPC is where it should be. See our [Google Ads services in India](/services/ads-ppc/best-google-ads-services-in-india), or [get in touch](/contact).",
+        ],
+      },
+      {
+        heading: "Google Ads Is One Piece of the Puzzle",
+        paragraphs: [
+          "Google Ads works best when it runs alongside the other paid channels your buyers actually use. Our [Ads / PPC services](/services/ads-ppc) also cover [Meta Ads](/services/ads-ppc/meta-ads-services-in-india), [YouTube Ads](/services/ads-ppc/youtube-ads-agency-in-india), [Amazon Ads](/services/ads-ppc/amazon-ads-agency-in-india), [LinkedIn Ads](/services/ads-ppc/linkedin-ads-agency-in-india), [ChatGPT Ads](/services/ads-ppc/chatgpt-ads-services-in-india), and [remarketing and retargeting](/services/ads-ppc/remarketing-and-retargeting-ads-services-in-india), so you can plan your paid media budget in one place.",
+          "Not sure where to start? [Talk to our team](/contact) and we'll tell you which channel deserves your first rupee, and which one can wait.",
         ],
       },
     ],

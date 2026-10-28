@@ -15,8 +15,8 @@ import { benefits } from "../_category/mobile-app-development";
 export const child = {
   slug: "flutter-app-development-company-in-india",
   title: "Flutter App Development",
-  metaTitle: "Flutter App Development Services in India | Eddinet",
-  metaDescription: "We specialize in cross-platform engineering, building custom Flutter solutions designed to meet your specific business requirements, brand identity, and",
+  metaTitle: "Flutter App Development Company in India | Eddinet",
+  metaDescription: "Cross-platform Flutter apps for Android and iOS from one codebase. Eddinet designs, builds and supports. Share your idea for a quote.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "Custom Flutter App Development | Cross-Platform Flutter App Development | Flutter UI/UX Design",
   // the <h1> itself — doc line "Main hero H1 headline:-"

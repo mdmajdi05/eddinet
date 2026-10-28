@@ -11,8 +11,8 @@ import { benefits } from "../_category/ads-ppc";
 export const child = {
   slug: "remarketing-and-retargeting-ads-services-in-india",
   title: "Remarketing / Retargeting",
-  metaTitle: "Remarketing / Retargeting Services in India | Eddinet",
-  metaDescription: "By combining automated dynamic product ads, conversion-based audience segmentation, and strict frequency caps across Google, Meta, and LinkedIn, we drive",
+  metaTitle: "Remarketing & Retargeting Ads Services in India | Eddinet",
+  metaDescription: "Bring back visitors who did not convert. Eddinet runs remarketing campaigns across Google and Meta to lift conversions and lower CPA.",
   heroHeading: "Remarketing & Retargeting Ads Services in India",
   heroSubheading: "At Eddinet, we fix conversion drop-offs by bringing high-intent website visitors back to complete their purchase. As a performance-focused retargeting agency in India, we eliminate wasted ad spend by re-engaging users who left your site or app without taking action.",
   detailedDescription: "By combining automated dynamic product ads, conversion-based audience segmentation, and strict frequency caps across Google, Meta, and LinkedIn, we drive down your customer acquisition costs and turn lost traffic into direct revenue.\n\nAt Eddinet, we solve lost conversions by bringing warm visitors back into your sales funnel to complete their purchase. As a specialized retargeting agency in India, we eliminate wasted ad spend by re-engaging users who left your website or app without taking action. By deploying custom audience triggers, dynamic product ads, and precise frequency caps across Google, Meta, and LinkedIn, we drive down your customer acquisition costs and turn bounced traffic into direct revenue.",

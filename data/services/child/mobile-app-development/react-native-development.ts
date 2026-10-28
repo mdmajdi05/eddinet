@@ -15,8 +15,8 @@ import { benefits } from "../_category/mobile-app-development";
 export const child = {
   slug: "react-native-app-development-company-in-india",
   title: "React Native Development",
-  metaTitle: "React Native Development Services in India | Eddinet",
-  metaDescription: "We help businesses grow by building custom cross-platform applications that deliver smooth user experiences. Our team writes clean JavaScript and TypeScript",
+  metaTitle: "React Native App Development Company in India | Eddinet",
+  metaDescription: "Build iOS and Android apps from one codebase. Eddinet is a React Native app development company in India. Share your brief for a quote.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "Custom React Native App Development | Cross-Platform App Development | React Native UI/UX Design",
   // the <h1> itself — doc line "Main hero H1 headline:-"

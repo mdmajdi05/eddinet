@@ -695,6 +695,9 @@ export const docxMobileAppDevelopmentCategory: DocxCategoryContent = {
 
 export const docxMaintenanceCategory: DocxCategoryContent = {
   title: "Maintenance & Support",
+  metaTitle: "Website Maintenance & Support Services | Eddinet",
+  metaDescription:
+    "Keep your website secure, fast and up to date. Eddinet offers website maintenance, monitoring and support plans. Get in touch for a plan.",
   heroEyebrow: "Website Maintenance | Security & Backups | Uptime Monitoring",
   heroHeading: "Website Maintenance and Support Services in India",
   heroSubheading: "EDDINET delivers website maintenance and support services in India for enterprises that treat uptime as non-negotiable. Through vigilant monitoring, disciplined updates, and swift expert intervention, we keep your digital infrastructure resilient, secure, and consistently available.",

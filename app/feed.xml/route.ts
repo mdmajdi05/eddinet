@@ -54,7 +54,17 @@ export async function GET() {
         const paragraphs = section.paragraphs
           .map((p) => `<p>${mdLinks(esc(p))}</p>`)
           .join("\n");
-        return `${heading}\n${paragraphs}`;
+        const table = section.table
+          ? `<table><caption>${esc(section.table.caption ?? "")}</caption><thead><tr>${section.table.headers
+              .map((h) => `<th>${esc(h)}</th>`)
+              .join("")}</tr></thead><tbody>${section.table.rows
+              .map(
+                (row) =>
+                  `<tr>${row.map((cell) => `<td>${esc(cell)}</td>`).join("")}</tr>`,
+              )
+              .join("")}</tbody></table>`
+          : "";
+        return `${heading}\n${paragraphs}\n${table}`;
       })
       .join("\n");
 
@@ -65,9 +75,7 @@ export async function GET() {
       <pubDate>${pubDate}</pubDate>
       <category>${esc(post.category)}</category>
       <description>${esc(post.excerpt)}</description>
-      <content:encoded><![CDATA[${post.sections
-        .map((s) => s.paragraphs.join("\n\n"))
-        .join("\n\n")}]]></content:encoded>
+      <content:encoded><![CDATA[${body}]]></content:encoded>
     </item>`;
   });
 

@@ -193,6 +193,15 @@ export async function GET() {
         out.push(para);
         out.push("");
       }
+      if (sec.table) {
+        if (sec.table.caption) out.push(`${sec.table.caption}\n`);
+        out.push(`| ${sec.table.headers.join(" | ")} |`);
+        out.push(`| ${sec.table.headers.map(() => "---").join(" | ")} |`);
+        for (const row of sec.table.rows) {
+          out.push(`| ${row.join(" | ")} |`);
+        }
+        out.push("");
+      }
     }
   }
 

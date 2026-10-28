@@ -15,8 +15,8 @@ import { benefits } from "../_category/mobile-app-development";
 export const child = {
   slug: "ios-app-development-company-in-india",
   title: "iOS App Development",
-  metaTitle: "iOS App Development Services in India | Eddinet",
-  metaDescription: "We craft bespoke iOS software tailored precisely to your business workflows, brand identity, and customer preferences never relying on rigid, off-the-shelf",
+  metaTitle: "iOS App Development Company in India | Eddinet",
+  metaDescription: "Native iOS apps designed for performance and a smooth user experience. Eddinet takes you from idea to App Store launch. Get a quote.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "Custom iPhone App Development | Native iOS App Development | iPad App Development",
   // the <h1> itself — doc line "Main hero H1 headline:-"

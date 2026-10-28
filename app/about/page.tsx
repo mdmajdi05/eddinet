@@ -12,14 +12,14 @@ import { balancedGrid } from "@/lib/process-grid";
 import { socialMetadata } from "@/lib/social-metadata";
 
 export const metadata: Metadata = {
-  title: "About Eddinet | Digital Marketing & Software Agency in Delhi NCR",
+  title: "About Eddinet | Digital Marketing & Tech Agency, Delhi",
   description:
-    "Eddinet is a digital marketing & software agency in Delhi NCR - one connected growth system spanning SEO, AI SEO, paid media, creative, web, software and AI.",
+    "Meet the team behind Eddinet. We combine marketing, content and technology to help brands grow online. Learn how we work.",
   alternates: { canonical: "https://eddinet.com/about" },
   ...socialMetadata({
-    title: "About Eddinet | Digital Marketing & Software Agency in Delhi NCR",
+    title: "About Eddinet | Digital Marketing & Tech Agency, Delhi",
     description:
-      "Eddinet is a digital marketing & software agency in Delhi NCR - one connected growth system spanning SEO, AI SEO, paid media, creative, web, software and AI.",
+      "Meet the team behind Eddinet. We combine marketing, content and technology to help brands grow online. Learn how we work.",
     url: "https://eddinet.com/about",
   }),
 };

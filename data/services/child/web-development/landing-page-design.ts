@@ -16,7 +16,7 @@ export const child = {
   slug: "landing-page-design-services-in-india",
   title: "Landing Page Design",
   metaTitle: "Landing Page Design Services in India | Eddinet",
-  metaDescription: "Focused, high-converting landing pages designed for specific campaigns and offers. One page, one goal — engineered to turn paid and organic traffic into conversions. Eddinet delivers dependable landing page design services across India and globally. Get a free proposal today.",
+  metaDescription: "Landing pages designed to turn ad and SEO traffic into leads. Eddinet builds fast, conversion-focused pages for your campaigns. Get a quote.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "PPC Landing Pages | Lead Generation Pages | Landing Page Redesign",
   // the <h1> itself — doc line "Main hero H1 headline:-"

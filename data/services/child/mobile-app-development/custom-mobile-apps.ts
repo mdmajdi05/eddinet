@@ -15,8 +15,8 @@ import { benefits } from "../_category/mobile-app-development";
 export const child = {
   slug: "custom-mobile-app-development-services-in-india",
   title: "Custom Mobile Apps",
-  metaTitle: "Custom Mobile Apps Services in India | Eddinet",
-  metaDescription: "Eddinet delivers top-tier Custom Mobile App Development Services in India tailored strictly to your unique workflows and business needs.",
+  metaTitle: "Custom Mobile App Development Services in India | Eddinet",
+  metaDescription: "Build a custom Android and iOS app around your business. Eddinet handles design, development, launch and support. Share your idea for a quote.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "Custom | Enterprise | Mobile App Solutions",
   // the <h1> itself — doc line "Main hero H1 headline:-"

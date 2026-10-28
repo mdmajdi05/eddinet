@@ -15,7 +15,7 @@ export const child = {
 
   title: "Meta Ads",
   metaTitle: "Meta Ads Services in India | Eddinet",
-  metaDescription: "Performance-Driven Meta Ads Agency in India Running successful Meta ads requires far more than just boosting a post and hoping for clicks.",
+  metaDescription: "Facebook and Instagram ads built for leads and sales. Eddinet manages creative, targeting and optimization to lower your cost per result.",
   heroHeading: "Meta Ads Services in India",
   heroSubheading: "At Eddinet, we turn your ad spend into measurable profit. As a specialized Meta Ads Agency in India, we build, run, and scale high-converting Facebook & Instagram campaigns designed to capture customer attention, drive sales, and grow your bottom line. We pair creative ad assets with precise audience targeting to lower your acquisition costs and maximize your return on ad spend (ROAS).",
 

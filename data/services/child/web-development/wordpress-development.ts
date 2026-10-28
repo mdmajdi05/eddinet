@@ -14,8 +14,8 @@ import { crossLinksFor, sharedMetrics, sharedTestimonials } from "../_shared";
 export const child = {
   slug: "wordpress-development-company-in-delhi",
   title: "WordPress Development",
-  metaTitle: "WordPress Development Services in India | Eddinet",
-  metaDescription: "Your website is your business's first impression — and if it's slow, outdated, or breaks on mobile, customers leave in a single click. Eddinet builds WordPress websites that load fast, rank on Google and convert.",
+  metaTitle: "WordPress Development Company in Delhi | Eddinet",
+  metaDescription: "Custom WordPress themes, plugins and enterprise builds. Eddinet is a Delhi WordPress development company focused on speed and SEO. Get a quote.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "Custom Theme & Plugin Engineering | Enterprise WordPress Solutions | Speed & Security Optimization",
   // the <h1> itself — doc line "Main hero H1 headline:-"

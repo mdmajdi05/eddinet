@@ -15,8 +15,8 @@ import { benefits } from "../_category/cloud-devops";
 export const child = {
   slug: "ci-cd-pipeline-services-company-in-india",
   title: "CI/CD Pipeline",
-  metaTitle: "CI/CD Pipeline Services in India | Eddinet",
-  metaDescription: "Eddinet provides premier CI/CD pipeline services in India. We design, automate, and manage end-to-end integration and deployment workflows eliminating",
+  metaTitle: "CI/CD Pipeline Services Company in India | Eddinet",
+  metaDescription: "Ship faster with automated build, test and deployment pipelines. Eddinet sets up CI/CD for reliable releases. Talk to our DevOps team.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "DevOps CI/CD Services | Automated Build & Deploy | Jenkins, GitLab CI & GitHub Actions Setup",
   // the <h1> itself — doc line "Main hero H1 headline:-"

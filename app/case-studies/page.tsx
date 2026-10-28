@@ -8,14 +8,14 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { socialMetadata } from "@/lib/social-metadata";
 
 export const metadata: Metadata = {
-  title: "Case Studies - Real Work, Real Outcomes",
+  title: "Case Studies | Eddinet Digital Marketing Results",
   description:
-    "Eddinet case studies across SEO, AI SEO, paid media, local search and web - showing the challenge, strategy, execution and measurable outcome behind each engagement.",
+    "See how Eddinet helps brands grow through SEO, paid media, content and web. Read our case studies and what we did for each client.",
   alternates: { canonical: "https://eddinet.com/case-studies" },
   ...socialMetadata({
-    title: "Case Studies - Real Work, Real Outcomes",
+    title: "Case Studies | Eddinet Digital Marketing Results",
     description:
-      "Eddinet case studies across SEO, AI SEO, paid media, local search and web - showing the challenge, strategy, execution and measurable outcome behind each engagement.",
+      "See how Eddinet helps brands grow through SEO, paid media, content and web. Read our case studies and what we did for each client.",
     url: "https://eddinet.com/case-studies",
   }),
 };
@@ -32,7 +32,7 @@ const caseStudiesCollectionSchema = {
   name: "Eddinet Case Studies",
   url: "https://eddinet.com/case-studies",
   description:
-    "Eddinet case studies across SEO, AI SEO, paid media, local search and web - showing the challenge, strategy, execution and measurable outcome behind each engagement.",
+    "See how Eddinet helps brands grow through SEO, paid media, content and web. Read our case studies and what we did for each client.",
   mainEntity: { "@id": "https://eddinet.com/case-studies#list" },
 };
 

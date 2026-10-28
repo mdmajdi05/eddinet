@@ -15,8 +15,8 @@ import { benefits } from "../_category/cloud-devops";
 export const child = {
   slug: "kubernetes-services-company-in-india",
   title: "Kubernetes",
-  metaTitle: "Kubernetes Services in India | Eddinet",
-  metaDescription: "Struggling with multi-container orchestration, microservice bottlenecks, or cloud infrastructure complexity? Eddinet provides premier Kubernetes services in",
+  metaTitle: "Kubernetes Services Company in India | Eddinet",
+  metaDescription: "Kubernetes setup, deployment and management by Eddinet. Scale containerized apps with confidence. Share your requirements for a quote.",
   // badge ABOVE the <h1> — doc line "Hero eyebrow badge:-"
   heroEyebrow: "Kubernetes Consulting Services | EKS, AKS & GKE Management | Enterprise Solutions",
   // the <h1> itself — doc line "Main hero H1 headline:-"
