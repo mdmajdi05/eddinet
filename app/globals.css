@@ -79,6 +79,10 @@
   /* Text-safe purple: dark backgrounds par 4.5:1 contrast ke liye. */
   --purple-accent-text: #B36BFF;
   --green-accent: #10B981;
+  /* WhatsApp brand-green surfaces par dark text (7:1+ contrast). */
+  --whatsapp-on-green: #0B2E1A;
+  /* WhatsApp green text tinted/light surfaces par. */
+  --whatsapp-accent-text: #25D366;
   --on-primary: #FFFFFF;
 
   --tag-bg: rgba(255, 45, 45, 0.12);
@@ -130,6 +134,8 @@ html[data-theme="red-light"] {
   --chrome-text-muted: #CBD5E1;
 
   --green-accent: #059669;
+  /* Light theme me green text ko dark kiya, 4.5:1 se upar contrast ke liye. */
+  --whatsapp-accent-text: #0F7A56;
   /* Light theme me original purple already text-safe hai. */
   --purple-accent-text: #7928CA;
 

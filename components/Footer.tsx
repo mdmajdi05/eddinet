@@ -198,7 +198,7 @@ export default function Footer() {
               href={site.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex w-full items-center justify-center gap-2.5 py-3 px-5 rounded-full font-bold text-[0.9rem] no-underline transition-all duration-300 bg-[#25D366] text-white hover:bg-[#20ba5a] hover:-translate-y-[2px] shadow-[0_10px_30px_rgba(37,211,102,0.25)]"
+              className="inline-flex w-full items-center justify-center gap-2.5 py-3 px-5 rounded-full font-bold text-[0.9rem] no-underline transition-all duration-300 bg-[#25D366] text-[var(--whatsapp-on-green)] hover:bg-[#20ba5a] hover:-translate-y-[2px] shadow-[0_10px_30px_rgba(37,211,102,0.25)]"
             >
               <span className="text-[1.05rem]">WhatsApp</span> →
             </a>

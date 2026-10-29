@@ -47,7 +47,7 @@ export default function FloatingContactWidget() {
               href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 w-full px-4 py-2.5 rounded-xl bg-[#25D366]/10 border border-[#25D366]/20 text-[#25D366] hover:bg-[#25D366]/20 transition-transform duration-200 hover:scale-[1.02]"
+              className="flex items-center gap-3 w-full px-4 py-2.5 rounded-xl bg-[#25D366]/10 border border-[#25D366]/20 text-[var(--whatsapp-accent-text)] hover:bg-[#25D366]/20 transition-transform duration-200 hover:scale-[1.02]"
             >
               <MessageCircle className="w-4 h-4 shrink-0" />
               <div>

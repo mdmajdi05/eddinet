@@ -426,7 +426,7 @@
   border-radius: 0.625rem;
   font-size: 0.8125rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--whatsapp-on-green);
   text-decoration: none;
   background: linear-gradient(135deg, #25d366 0%, #16a34a 100%);
   box-shadow: 0 8px 20px rgba(22, 163, 74, 0.32);
@@ -513,7 +513,7 @@
   font-size: 0.5625rem;
   font-weight: 700;
   letter-spacing: 0.01em;
-  color: var(--green-accent);
+  color: var(--whatsapp-accent-text);
   text-decoration: none;
   padding: 0.1875rem 0.4375rem;
   border-radius: 999px;
@@ -822,7 +822,7 @@
   margin-left: auto;
   font-size: 0.5625rem;
   font-weight: 600;
-  color: var(--green-accent);
+  color: var(--whatsapp-accent-text);
 }
 
 .notifText {
@@ -870,7 +870,7 @@
   border-radius: 0.625rem;
   font-size: 0.6875rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--whatsapp-on-green);
   background: #16a34a;
   box-shadow: 0 6px 16px rgba(22, 163, 74, 0.25);
   transition: filter 0.2s ease;

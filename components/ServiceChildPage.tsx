@@ -871,7 +871,7 @@ export default function ServiceChildPage({
                   </li>
                 </ul>
 
-                <a href={site.whatsapp} target="_blank" className="inline-flex items-center justify-center gap-2.5 w-full py-3.5 px-6 rounded-full font-bold text-[0.92rem] no-underline transition-all duration-300 bg-[#25D366] text-white shadow-[0_8px_20px_rgba(37,211,102,0.3)] hover:bg-[#20ba5a] hover:-translate-y-[3px]">
+                <a href={site.whatsapp} target="_blank" className="inline-flex items-center justify-center gap-2.5 w-full py-3.5 px-6 rounded-full font-bold text-[0.92rem] no-underline transition-all duration-300 bg-[#25D366] text-[var(--whatsapp-on-green)] shadow-[0_8px_20px_rgba(37,211,102,0.3)] hover:bg-[#20ba5a] hover:-translate-y-[3px]">
                   💬 Chat on WhatsApp
                 </a>
               </div>
@@ -909,7 +909,7 @@ export default function ServiceChildPage({
                 <Link href="/contact" className="inline-flex items-center justify-center gap-2.5 py-3.5 px-7 rounded-full font-bold text-[0.95rem] no-underline transition-all duration-300 text-[var(--on-primary)] shadow-[0_10px_25px_-5px_rgba(var(--accent-rgb),0.4)] hover:-translate-y-[3px] hover:shadow-[0_15px_30px_-5px_rgba(var(--accent-rgb),0.6)]" style={{ background: "var(--primary-gradient)" }}>
                   Talk to a Digital Growth Expert
                 </Link>
-                <a href={site.whatsapp} target="_blank" className="inline-flex items-center justify-center gap-2.5 py-3.5 px-7 rounded-full font-bold text-[0.95rem] no-underline transition-all duration-300 bg-[#25D366] text-white shadow-[0_8px_20px_rgba(37,211,102,0.3)] hover:bg-[#20ba5a] hover:-translate-y-[3px]">
+                <a href={site.whatsapp} target="_blank" className="inline-flex items-center justify-center gap-2.5 py-3.5 px-7 rounded-full font-bold text-[0.95rem] no-underline transition-all duration-300 bg-[#25D366] text-[var(--whatsapp-on-green)] shadow-[0_8px_20px_rgba(37,211,102,0.3)] hover:bg-[#20ba5a] hover:-translate-y-[3px]">
                   Chat on WhatsApp
                 </a>
               </div>
