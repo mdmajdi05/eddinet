@@ -3,7 +3,7 @@ import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 import AdaptiveLines from "@/components/AdaptiveLines";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { site } from "@/data/site/contact";
+import { site, ORGANIZATION_ID } from "@/data/site/contact";
 import { balancedGrid } from "@/lib/process-grid";
 import { socialMetadata } from "@/lib/social-metadata";
 
@@ -112,9 +112,9 @@ const steps = [
   ["You get a clear plan", "A recommended combination of services, priorities and expected outcomes - no jargon."],
 ];
 
-//  Contact page ka schema — pehle ye page par KOI JSON-LD nahi tha.
-//  Local SEO / "Delhi NCR" map pack ke liye ContactPoint + ContactPage
-//  + ProfessionalService zaroori hota hai.
+//  Contact page ka schema — ContactPage jo site-wide ProfessionalService
+//  entity (layout ka @id) ko reference karta hai. Business ki details ek hi
+//  jagah (app/layout.tsx) rehti hain, yahan duplicate nahi hotin.
 const contactSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
@@ -122,60 +122,10 @@ const contactSchema = {
   description:
     "Talk to Eddinet for a free 30-minute growth consultation - SEO, AI SEO, paid media, web, software, AI and cloud services from Delhi NCR.",
   url: "https://eddinet.com/contact",
+  //  Business details ka single source layout ka ProfessionalService hai.
+  //  Yahan sirf usi entity ka reference rakhte hain — duplicate schema nahi.
   mainEntity: {
-    "@type": "ProfessionalService",
-    "@id": `${site.url}#organization`,
-    name: site.name,
-    description: site.tagline,
-    url: site.url,
-    logo: "https://eddinet.com/images/brand/eddinet-logo.webp",
-    image: "https://eddinet.com/opengraph-image.webp",
-    telephone: site.phone,
-    email: site.email,
-    priceRange: "$$",
-    address: {
-      "@type": "PostalAddress",
-      ...site.postalAddress,
-    },
-    areaServed: [
-      { "@type": "AdministrativeArea", name: "Delhi NCR" },
-      { "@type": "Country", name: "India" },
-    ],
-    // Geo coordinates map pin se match karte hain (Okhla Phase I, New Delhi).
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 28.531672,
-      longitude: 77.274183,
-    },
-    hasMap: "https://www.google.com/maps/search/?api=1&query=Okhla+Industrial+Estate+Phase+1%2C+New+Delhi%2C+Delhi+110020",
-    openingHoursSpecification: {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-      ],
-      opens: "10:00",
-      closes: "19:00",
-    },
-    contactPoint: [
-      {
-        "@type": "ContactPoint",
-        telephone: site.phone,
-        email: site.email,
-        contactType: "sales",
-        areaServed: ["Delhi NCR", "India"],
-        availableLanguage: ["en", "hi"],
-      },
-    ],
-    sameAs: [
-      site.social.linkedin,
-      site.social.facebook,
-      site.social.instagram,
-    ].filter(Boolean),
+    "@id": ORGANIZATION_ID,
   },
 };
 

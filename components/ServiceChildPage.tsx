@@ -10,7 +10,7 @@ import AdaptiveLines from "@/components/AdaptiveLines";
 import ViewportCollapse from "@/components/ViewportCollapse";
 import { balancedGrid } from "@/lib/process-grid";
 import { services } from "@/data/services/services";
-import { site } from "@/data/site/contact";
+import { site, ORGANIZATION_ID } from "@/data/site/contact";
 
 // Normalised content view shared by every service child page
 // (/services/seo/<slug> and /services/<category>/<slug>).
@@ -169,6 +169,7 @@ export default function ServiceChildPage({
     image: `https://eddinet.com${child.image}`,
     provider: {
       "@type": "Organization",
+      "@id": ORGANIZATION_ID,
       name: site.name,
       url: site.url,
       logo: "https://eddinet.com/images/brand/eddinet-logo.webp",

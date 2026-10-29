@@ -320,20 +320,7 @@ function Marquee() {
   );
 }
 
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: site.name,
-  url: site.url,
-  logo: "https://eddinet.com/images/brand/eddinet-logo.webp",
-  description: site.tagline,
-  email: site.email,
-  telephone: site.phone,
-  address: {
-    "@type": "PostalAddress",
-    ...site.postalAddress,
-  },
-};
+//  Organization schema layout me site-wide already hai — yahan duplicate nahi.
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -992,7 +979,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
     </>
   );

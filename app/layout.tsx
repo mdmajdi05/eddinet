@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import FloatingContactWidget from "@/components/FloatingContactWidget";
 import ChatLauncher from "@/components/chat/ChatLauncher";
 import FacebookEvents from "@/components/FacebookEvents";
-import { site } from "@/data/site/contact";
+import { site, ORGANIZATION_ID } from "@/data/site/contact";
 import { socialMetadata } from "@/lib/social-metadata";
 import {
   megaMenuCategories,
@@ -96,12 +96,17 @@ export const metadata: Metadata = {
   },
 };
 
+//  Ek hi business entity poore site par. /contact ka ProfessionalService
+//  isi @id ko reference karta hai — duplicate/conflicting entities nahi bante.
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": ["Organization", "LocalBusiness"],
+  "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
+  "@id": ORGANIZATION_ID,
   name: site.name,
+  description: site.tagline,
   url: site.url,
   logo: "https://eddinet.com/images/brand/eddinet-logo.webp",
+  image: "https://eddinet.com/opengraph-image.webp",
   email: site.email,
   telephone: site.phone,
   // Social profiles — khali link ho to JSON-LD me nahi aana chahiye,
@@ -111,11 +116,11 @@ const organizationSchema = {
     site.social.facebook,
     site.social.instagram,
   ].filter((url) => url.trim() !== ""),
-  priceRange: "$$",
-  areaServed: {
-    "@type": "AdministrativeArea",
-    name: "Delhi NCR",
-  },
+  priceRange: "₹₹",
+  areaServed: [
+    { "@type": "AdministrativeArea", name: "Delhi NCR" },
+    { "@type": "Country", name: "India" },
+  ],
   // Sales contact — phone/email + service area (Delhi NCR + poora India).
   contactPoint: {
     "@type": "ContactPoint",
@@ -123,12 +128,34 @@ const organizationSchema = {
     email: site.email,
     contactType: "sales",
     areaServed: ["Delhi NCR", "India"],
+    availableLanguage: ["en", "hi"],
   },
   openingHours: "Mo-Sa 10:00-19:00",
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ],
+    opens: "10:00",
+    closes: "19:00",
+  },
   address: {
     "@type": "PostalAddress",
     ...site.postalAddress,
   },
+  // Map pin / GBP se match karta hua location.
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 28.531672,
+    longitude: 77.274183,
+  },
+  hasMap:
+    "https://www.google.com/maps/search/?api=1&query=Okhla+Industrial+Estate+Phase+1%2C+New+Delhi%2C+Delhi+110020",
 };
 
 const websiteSchema = {

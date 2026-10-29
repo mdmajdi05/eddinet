@@ -57,6 +57,13 @@ const HOURS = "Mon - Sat: 10:00 AM - 7:00 PM";
 /** "+91 93196 97442" -> "919319697442"  (tel: aur wa.me dono isi se bante hain) */
 const phoneDigits = PHONE_NUMBER.replace(/\D/g, "");
 
+/**
+ * Business entity ka single, stable @id. Har page par yahi Organization /
+ * ProfessionalService node use hota hai, taaki Google duplicate businesses
+ * na samjhe. (# ke baad slash URL canonical form ke hisaab se hai.)
+ */
+export const ORGANIZATION_ID = "https://eddinet.com/#organization";
+
 export const site = {
   name: "Eddinet",
   url: "https://eddinet.com/",

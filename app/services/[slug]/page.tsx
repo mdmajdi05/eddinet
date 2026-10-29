@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { servicePages, getServiceBySlug } from "@/data/services/services";
 import { getCategoryPageContent } from "@/data/services/service-page-content";
-import { site } from "@/data/site/contact";
+import { site, ORGANIZATION_ID } from "@/data/site/contact";
 import ContactForm from "@/components/ContactForm";
 import AboutSection from "@/components/AboutSection";
 import LineClampedText from "@/components/LineClampedText";
@@ -85,6 +85,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     url: `https://eddinet.com/services/${s.slug}`,
     provider: {
       "@type": "Organization",
+      "@id": ORGANIZATION_ID,
       name: site.name,
       url: site.url,
       logo: "https://eddinet.com/images/brand/eddinet-logo.webp",

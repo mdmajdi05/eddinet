@@ -4,7 +4,7 @@ import { notFound, permanentRedirect } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Clock, Tag, User, Mail } from "lucide-react";
 import { insights, getInsightBySlug, type Insight } from "@/data/blog/blog";
-import { site } from "@/data/site/contact";
+import { site, ORGANIZATION_ID } from "@/data/site/contact";
 import { services, type Service } from "@/data/services/services";
 import { resolveBlogRedirect } from "@/lib/content-fallback";
 import { balancedGrid } from "@/lib/process-grid";
@@ -398,12 +398,14 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
     inLanguage: "en-IN",
     author: {
       "@type": "Organization",
+      "@id": ORGANIZATION_ID,
       name: site.name,
       url: site.url,
       logo: LOGO_URL,
     },
     publisher: {
       "@type": "Organization",
+      "@id": ORGANIZATION_ID,
       name: site.name,
       url: site.url,
       logo: LOGO_URL,

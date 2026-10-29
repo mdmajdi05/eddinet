@@ -3,7 +3,7 @@ import { notFound, permanentRedirect } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { caseStudies, getCaseStudyBySlug } from "@/data/portfolio/case-studies";
-import { site } from "@/data/site/contact";
+import { site, ORGANIZATION_ID } from "@/data/site/contact";
 import AdaptiveLines from "@/components/AdaptiveLines";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { resolveCaseStudyRedirect } from "@/lib/content-fallback";
@@ -61,7 +61,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
     "@type": "Article",
     headline: `${c.client} Case Study`,
     description: c.summary,
-    publisher: { "@type": "Organization", name: site.name, url: site.url },
+    publisher: { "@type": "Organization", "@id": ORGANIZATION_ID, name: site.name, url: site.url },
     mainEntityOfPage: `https://eddinet.com/case-studies/${c.slug}`,
   };
 

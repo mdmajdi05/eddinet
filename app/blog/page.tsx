@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { insights } from "@/data/blog/blog";
-import { site } from "@/data/site/contact";
+import { site, ORGANIZATION_ID } from "@/data/site/contact";
 import AdaptiveLines from "@/components/AdaptiveLines";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import BlogExplorer, { type BlogCardPost } from "@/components/blog/BlogExplorer";
@@ -31,6 +31,7 @@ const blogSchema = {
   inLanguage: "en-IN",
   publisher: {
     "@type": "Organization",
+    "@id": ORGANIZATION_ID,
     name: site.name,
     url: site.url,
     logo: "https://eddinet.com/images/brand/eddinet-logo.webp",
