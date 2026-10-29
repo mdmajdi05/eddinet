@@ -12,7 +12,7 @@ import AdaptiveLines from "@/components/AdaptiveLines";
 import SectionHeader from "@/components/SectionHeader";
 import { resolveServiceCategoryRedirect } from "@/lib/service-fallback";
 import { balancedGrid } from "@/lib/process-grid";
-import { socialMetadata } from "@/lib/social-metadata";
+import { seoAlternates, socialMetadata } from "@/lib/social-metadata";
 
 export function generateStaticParams() {
   return servicePages.map((s) => ({ slug: s.slug }));
@@ -29,7 +29,7 @@ export async function generateMetadata({
   return {
     title: content.metaTitle,
     description: content.metaDescription,
-    alternates: { canonical: `https://eddinet.com/services/${slug}` },
+    ...seoAlternates(`https://eddinet.com/services/${slug}`),
     ...socialMetadata({
       title: content.metaTitle,
       description: content.metaDescription,
@@ -360,7 +360,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 </div>
 
                 <div className="relative p-6 rounded-2xl h-full bg-[var(--bg-card)] border border-[var(--border-color)] transition-all duration-300 group-hover:border-[var(--border-hover)] group-hover:-translate-y-1 overflow-hidden">
-                  <div className="absolute -top-3 -right-2 text-[4rem] font-extrabold leading-none opacity-[0.06] select-none">{step.num}</div>
+                  <div aria-hidden="true" className="absolute -top-3 -right-2 text-[4rem] font-extrabold leading-none opacity-[0.06] select-none decorative-number" data-number={step.num} />
                   <h3 className="relative z-10 text-[1.1rem] font-extrabold text-[var(--text-main)] mb-2.5">{step.title}</h3>
                   <p className="relative z-10 text-[var(--text-muted)] text-[0.88rem] leading-relaxed">{step.desc}</p>
                 </div>
@@ -440,15 +440,15 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 <div className="grid grid-cols-2 gap-3.5 max-[640px]:grid-cols-1">
                   {content.whyChooseUs.points.map((point, i) => (
                     <div key={i} className="group relative rounded-2xl p-5 overflow-hidden bg-[var(--bg-card)] border border-[var(--border-color)] transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(var(--accent-rgb),0.3)]">
-                      <div className="absolute -top-3 -right-1 text-[2.6rem] font-extrabold leading-none opacity-[0.05] select-none">{String(i + 1).padStart(2, "0")}</div>
+                      <div aria-hidden="true" className="absolute -top-3 -right-1 text-[2.6rem] font-extrabold leading-none opacity-[0.05] select-none decorative-number" data-number={String(i + 1).padStart(2, "0")} />
                       <div className="relative z-10">
                         <div className="flex items-start gap-3 mb-3">
                           <span className="w-9 h-9 rounded-xl flex items-center justify-center text-[1rem] shrink-0 text-[var(--on-primary)] shadow-[0_6px_16px_rgba(var(--accent-rgb),0.25)] transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6" style={{ background: "var(--primary-gradient)" }}>
                             {["🎯", "🧩", "📊", "🏆", "🧠", "🤝"][i % 6]}
                           </span>
-                          <h4 className="text-[var(--text-main)] text-[0.95rem] font-bold leading-snug pt-0.5">
+                          <h3 className="text-[var(--text-main)] text-[0.95rem] font-bold leading-snug pt-0.5">
                             {point.split(":")[0]}
-                          </h4>
+                          </h3>
                           <span className="ml-auto text-[0.62rem] font-extrabold text-[var(--main-accent)] uppercase tracking-wider">{`0${i + 1}`}</span>
                         </div>
                         <p className="text-[var(--text-muted)] text-[0.85rem] leading-relaxed">
@@ -507,7 +507,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <div className={balancedGrid(content.industries.items.length, { base: 4, gapClass: "cgrid-gap-6", stages: [{ bp: 1024, maxCols: 2 }, { bp: 640, maxCols: 1 }] })}>
               {content.industries.items.map((ind, i) => (
                 <div key={i} className="group relative rounded-2xl p-7 overflow-hidden transition-all duration-500 hover:-translate-y-2 bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-transparent hover:shadow-[0_20px_50px_rgba(var(--accent-rgb),0.15)]">
-                  <div className="absolute -top-3 -right-1 text-[3.4rem] font-extrabold leading-none opacity-[0.05] select-none">{String(i + 1).padStart(2, "0")}</div>
+                  <div aria-hidden="true" className="absolute -top-3 -right-1 text-[3.4rem] font-extrabold leading-none opacity-[0.05] select-none decorative-number" data-number={String(i + 1).padStart(2, "0")} />
                   <div className="relative z-10">
                     <div className="w-12 h-12 mb-5 flex items-center justify-center text-[1.4rem] rounded-xl bg-gradient-to-br from-[var(--main-accent)] to-[rgba(var(--accent-rgb),0.5)] shadow-[0_8px_25px_rgba(var(--accent-rgb),0.35)] transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
                       {["🏗️", "🛍️", "🏥", "💼", "🎓", "🏭"][i % 6]}

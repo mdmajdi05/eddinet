@@ -137,9 +137,7 @@ export default function GrowthSystem() {
         aria-labelledby={`gs-tab-${active}`}
         className="relative bg-[var(--bg-card)] border border-[var(--border-color)] rounded-3xl p-8 overflow-hidden animate-[aboutPanelIn_0.35s_ease] max-[768px]:p-6"
       >
-        <div className="absolute -top-10 -right-6 text-[7rem] font-extrabold leading-none opacity-[0.05] select-none">
-          {current.num}
-        </div>
+        <div aria-hidden="true" className="absolute -top-10 -right-6 text-[7rem] font-extrabold leading-none opacity-[0.05] select-none decorative-number" data-number={current.num} />
 
         <div className="relative">
           <div className="inline-flex items-center gap-2 py-1.5 px-3.5 bg-[var(--tag-bg)] border border-[var(--tag-border)] rounded-full text-[var(--main-accent)] text-[0.72rem] font-bold uppercase tracking-wider">

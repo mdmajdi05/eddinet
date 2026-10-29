@@ -38,7 +38,7 @@ export default function WhyUs() {
               <div>
                 <div className="flex items-center gap-3 mb-2">
                   <span className="text-[1.5rem] font-extrabold text-[var(--main-accent)] opacity-80">{f.num}</span>
-                  <h4 className="text-[1.15rem] font-bold text-[var(--text-main)]">{f.title}</h4>
+                  <h3 className="text-[1.15rem] font-bold text-[var(--text-main)]">{f.title}</h3>
                 </div>
                 <p className="text-[var(--text-muted)] text-[0.95rem]">{f.desc}</p>
               </div>

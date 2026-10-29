@@ -99,7 +99,7 @@ export default function Footer() {
             <div className="flex items-center gap-2 mt-6">
               <span className="text-[#FACC15] text-[0.9rem] tracking-tight">★</span>
               <span className="text-white/70 text-[0.85rem] font-semibold">Outcome-led digital growth partner</span>
-              <span className="text-white/35 text-[0.8rem]">· Delhi NCR</span>
+              <span className="text-white/60 text-[0.8rem]">· Delhi NCR</span>
             </div>
 
             <div className="flex items-center gap-2.5 mt-6">
@@ -213,9 +213,9 @@ export default function Footer() {
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#34D399]" />
               </span>
               <span className="text-[0.85rem] font-bold text-white/80">Digital growth partner</span>
-              <span className="text-white/30 text-[0.8rem]">· marketing · technology · infrastructure</span>
+              <span className="text-white/60 text-[0.8rem]">· marketing · technology · infrastructure</span>
             </div>
-            <div className="flex items-center gap-3 text-white/35 text-[0.8rem]">
+            <div className="flex items-center gap-3 text-white/60 text-[0.8rem]">
               <span>New Delhi, IN</span>
               <span className="w-1 h-1 rounded-full bg-white/25" />
               <span>Mon – Sat</span>
@@ -224,12 +224,12 @@ export default function Footer() {
             </div>
           </div>
           <div className="flex flex-col items-end gap-2 max-[768px]:items-start">
-            <div className="text-white/35 text-[0.82rem]">© 2026 {site.name}. All rights reserved.</div>
-            <div className="flex items-center gap-5 text-white/35 text-[0.82rem]">
-              <Link href="/privacy-policy" className="no-underline text-white/35 hover:text-[var(--main-accent)] transition-colors duration-300">
+            <div className="text-white/60 text-[0.82rem]">© 2026 {site.name}. All rights reserved.</div>
+            <div className="flex items-center gap-5 text-white/60 text-[0.82rem]">
+              <Link href="/privacy-policy" className="no-underline text-white/60 hover:text-[var(--main-accent)] transition-colors duration-300">
                 Privacy
               </Link>
-              <Link href="/terms" className="no-underline text-white/35 hover:text-[var(--main-accent)] transition-colors duration-300">
+              <Link href="/terms" className="no-underline text-white/60 hover:text-[var(--main-accent)] transition-colors duration-300">
                 Terms
               </Link>
               <span className="flex items-center gap-1.5">

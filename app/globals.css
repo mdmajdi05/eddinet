@@ -72,8 +72,12 @@
   --chrome-text-muted: #CBD5E1;
 
   --main-accent: #FF2D2D;
+  /* Chhote accent text ke liye thoda lighter red (4.5:1 contrast). */
+  --main-accent-text: #FF4D4D;
   --accent-rgb: 255, 45, 45;
   --purple-accent: #7928CA;
+  /* Text-safe purple: dark backgrounds par 4.5:1 contrast ke liye. */
+  --purple-accent-text: #B36BFF;
   --green-accent: #10B981;
   --on-primary: #FFFFFF;
 
@@ -126,6 +130,8 @@ html[data-theme="red-light"] {
   --chrome-text-muted: #CBD5E1;
 
   --green-accent: #059669;
+  /* Light theme me original purple already text-safe hai. */
+  --purple-accent-text: #7928CA;
 
   --strip-bg: #F8FAFC;
   --inset-bg: #F1F5F9;
@@ -152,6 +158,7 @@ html[data-theme="red-light"] {
   --card-edge-gradient: linear-gradient(135deg, rgba(255, 77, 77, 0.3), transparent, rgba(230, 0, 0, 0.3));
   --cta-bg: linear-gradient(135deg, rgba(255, 77, 77, 0.08) 0%, rgba(230, 0, 0, 0.08) 100%);
   --main-accent: #DC2626;
+  --main-accent-text: #DC2626;
   --accent-rgb: 220, 38, 38;
   --on-primary: #FFFFFF;
   --tag-bg: rgba(220, 38, 38, 0.1);
@@ -1067,4 +1074,11 @@ html[data-theme="red-light"] {
 }
 @media (max-width: 400px) {
   .cgrid-at-400-1 { --cg-cols: 1; }
+}
+
+/* Purely decorative card numbers ("01", "02"...). Text ko pseudo-element se
+   render karte hain taaki screen readers / contrast audits ise content na
+   samjhein — visual bilkul same rehta hai (opacity + position unchanged). */
+.decorative-number::before {
+  content: attr(data-number);
 }

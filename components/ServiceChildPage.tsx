@@ -191,13 +191,10 @@ export default function ServiceChildPage({
         itemOffered: { "@type": "Service", name: feature.title },
       })),
     },
-    // Client reviews — page par dikhne wale testimonials yahin se aate hain.
-    review: child.testimonials.map((t) => ({
-      "@type": "Review",
-      author: { "@type": "Person", name: t.name },
-      reviewBody: t.review,
-      reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
-    })),
+    // NOTE: `review` schema deliberately omitted.
+    // Ye reviews site ke apne client testimonials hain — self-serving reviews
+    // Google rich results ke liye eligible nahi hote aur spam signal ban sakte
+    // hain. Visible testimonials page par waise hi render hote hain.
   };
 
   const faqSchema = {
@@ -380,7 +377,7 @@ export default function ServiceChildPage({
                   WebkitMaskComposite: "xor",
                   maskComposite: "exclude",
                 }} />
-                <div className="absolute -top-4 -right-1 text-[3.6rem] font-extrabold leading-none opacity-[0.05] select-none">{String(i + 1).padStart(2, "0")}</div>
+                <div aria-hidden="true" className="absolute -top-4 -right-1 text-[3.6rem] font-extrabold leading-none opacity-[0.05] select-none decorative-number" data-number={String(i + 1).padStart(2, "0")} />
                 <div className="p-4 sm:p-5 flex items-center bg-[var(--bg-card)]">
                   <div className="relative w-full rounded-2xl overflow-hidden border border-[var(--border-color)] shadow-[0_15px_40px_-15px_rgba(0,0,0,0.5)]">
                     <Image
@@ -437,7 +434,7 @@ export default function ServiceChildPage({
                   </div>
 
                   <div className="relative p-6 rounded-2xl h-full bg-[var(--bg-card)] border border-[var(--border-color)] transition-all duration-300 group-hover:border-[var(--border-hover)] group-hover:-translate-y-1 overflow-hidden">
-                    <div className="absolute -top-3 -right-2 text-[4rem] font-extrabold leading-none opacity-[0.06] select-none">{step.num}</div>
+                    <div aria-hidden="true" className="absolute -top-3 -right-2 text-[4rem] font-extrabold leading-none opacity-[0.06] select-none decorative-number" data-number={step.num} />
                     <h3 className="relative z-10 text-[1.1rem] font-extrabold text-[var(--text-main)] mb-2.5">{step.title}</h3>
                     <p className="relative z-10 text-[var(--text-muted)] text-[0.88rem] leading-relaxed">{step.description}</p>
                   </div>
@@ -561,7 +558,7 @@ export default function ServiceChildPage({
                   pin itself while the points on the right scroll past. */}
               <div className="relative p-9 max-[1024px]:pb-0 border-r border-[var(--border-color)] max-[1024px]:border-r-0 bg-[var(--bg-card)]">
                 <div className="lg:sticky lg:top-[100px]">
-                  <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[rgba(var(--accent-rgb),0.08)] border border-[rgba(var(--accent-rgb),0.2)] rounded-3xl text-[var(--main-accent)] text-[0.78rem] font-bold uppercase tracking-wider mb-5">
+                  <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[rgba(var(--accent-rgb),0.08)] border border-[rgba(var(--accent-rgb),0.2)] rounded-3xl text-[var(--main-accent-text)] text-[0.78rem] font-bold uppercase tracking-wider mb-5">
                     ✦ The Eddinet Edge
                   </div>
                   <h3 className="text-[1.5rem] font-extrabold leading-snug mb-4 text-[var(--text-main)] tracking-[-0.3px] max-[768px]:text-[1.3rem]">
@@ -593,16 +590,16 @@ export default function ServiceChildPage({
                 <div className={balancedGrid(whyPoints.length, { base: 2, gapClass: "cgrid-gap-35", stages: [{ bp: 640, maxCols: 1 }] })}>
                   {whyPoints.map((point, i) => (
                     <div key={i} className="group relative rounded-2xl p-5 overflow-hidden bg-[var(--bg-card)] border border-[var(--border-color)] transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(var(--accent-rgb),0.3)]">
-                      <div className="absolute -top-3 -right-1 text-[2.6rem] font-extrabold leading-none opacity-[0.05] select-none">{String(i + 1).padStart(2, "0")}</div>
+                      <div aria-hidden="true" className="absolute -top-3 -right-1 text-[2.6rem] font-extrabold leading-none opacity-[0.05] select-none decorative-number" data-number={String(i + 1).padStart(2, "0")} />
                       <div className="relative z-10">
                         <div className="flex items-start gap-3 mb-3">
                           <span className="w-9 h-9 rounded-xl flex items-center justify-center text-[1rem] shrink-0 text-[var(--on-primary)] shadow-[0_6px_16px_rgba(var(--accent-rgb),0.25)] transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6" style={{ background: "var(--primary-gradient)" }}>
                             {["🎯", "🧩", "📊", "🏆", "🧠", "🤝"][i % 6]}
                           </span>
-                          <h4 className="text-[var(--text-main)] text-[0.95rem] font-bold leading-snug pt-0.5">
+                          <h3 className="text-[var(--text-main)] text-[0.95rem] font-bold leading-snug pt-0.5">
                             {point.title}
-                          </h4>
-                          <span className="ml-auto text-[0.62rem] font-extrabold text-[var(--main-accent)] uppercase tracking-wider">{`0${i + 1}`}</span>
+                          </h3>
+                          <span className="ml-auto text-[0.62rem] font-extrabold text-[var(--main-accent-text)] uppercase tracking-wider">{`0${i + 1}`}</span>
                         </div>
                         {point.description && (
                           <p className="text-[var(--text-muted)] text-[0.85rem] leading-relaxed">
@@ -708,7 +705,7 @@ export default function ServiceChildPage({
                   WebkitMaskComposite: "xor",
                   maskComposite: "exclude",
                 }} />
-                <div className="absolute -top-3 -right-1 text-[3.4rem] font-extrabold leading-none opacity-[0.05] select-none">{String(i + 1).padStart(2, "0")}</div>
+                <div aria-hidden="true" className="absolute -top-3 -right-1 text-[3.4rem] font-extrabold leading-none opacity-[0.05] select-none decorative-number" data-number={String(i + 1).padStart(2, "0")} />
                 <div className="relative z-10">
                   <div className="w-12 h-12 mb-5 flex items-center justify-center text-[1.4rem] rounded-xl bg-gradient-to-br from-[var(--main-accent)] to-[rgba(var(--accent-rgb),0.5)] shadow-[0_8px_25px_rgba(var(--accent-rgb),0.35)] transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
                     {["🏗️", "🛍️", "🏥", "💼", "🎓", "🏭"][i % 6]}

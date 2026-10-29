@@ -2,15 +2,13 @@ import type { Metadata } from "next";
 import PortfolioGrid from "@/components/PortfolioGrid";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { projectCategories } from "@/data/portfolio/portfolio";
-import { socialMetadata } from "@/lib/social-metadata";
+import { seoAlternates, socialMetadata } from "@/lib/social-metadata";
 
 export const metadata: Metadata = {
   title: "Portfolio - Websites, Software & Digital Projects | Eddinet",
   description:
     "Explore Eddinet's portfolio of websites, eCommerce stores, software, SaaS, AI, mobile apps, SEO and digital growth projects.",
-  alternates: {
-    canonical: "https://eddinet.com/portfolio",
-  },
+  ...seoAlternates("https://eddinet.com/portfolio"),
   ...socialMetadata({
     title: "Portfolio - Websites, Software & Digital Projects | Eddinet",
     description:

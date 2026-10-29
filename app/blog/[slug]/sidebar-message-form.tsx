@@ -72,9 +72,9 @@ export default function SidebarMessageForm() {
       className="rounded-2xl border border-[var(--border-color)] bg-[var(--bg-card)] overflow-hidden"
     >
       <div className="w-full bg-gradient-to-r from-red-600 to-red-500 px-5 py-4">
-        <h4 className="text-base font-extrabold text-white">
+        <h2 className="text-base font-extrabold text-white">
           Contact Us
-        </h4>
+        </h2>
       </div>
       <div className="p-5 space-y-4">
         <div className="grid grid-cols-2 gap-3">
@@ -82,6 +82,8 @@ export default function SidebarMessageForm() {
             <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--text-dim)] pointer-events-none" />
             <input
               type="text"
+              aria-label="Name"
+              autoComplete="name"
               placeholder="Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -92,6 +94,8 @@ export default function SidebarMessageForm() {
             <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--text-dim)] pointer-events-none" />
             <input
               type="tel"
+              aria-label="Mobile number"
+              autoComplete="tel"
               placeholder="Mobile"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
@@ -104,6 +108,8 @@ export default function SidebarMessageForm() {
           <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--text-dim)] pointer-events-none" />
           <input
             type="email"
+            aria-label="Email address"
+            autoComplete="email"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -114,6 +120,7 @@ export default function SidebarMessageForm() {
         <div>
           <textarea
             rows={2}
+            aria-label="Your message"
             placeholder="Your message..."
             value={message}
             onChange={(e) => setMessage(e.target.value)}

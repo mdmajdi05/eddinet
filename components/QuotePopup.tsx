@@ -75,6 +75,8 @@ export default function QuotePopup({ service, onClose }: QuotePopupProps) {
           <form onSubmit={handleSubmit} data-fb-event="Lead" data-fb-form="quote-popup" className="flex flex-col gap-4">
             <input
               type="text"
+              aria-label="Your name"
+              autoComplete="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Your Name *"
@@ -82,6 +84,8 @@ export default function QuotePopup({ service, onClose }: QuotePopupProps) {
             />
             <input
               type="tel"
+              aria-label="Phone or WhatsApp number"
+              autoComplete="tel"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               placeholder="Phone / WhatsApp Number *"
@@ -89,12 +93,15 @@ export default function QuotePopup({ service, onClose }: QuotePopupProps) {
             />
             <input
               type="email"
+              aria-label="Email (optional)"
+              autoComplete="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Email (optional)"
               className={inputCls}
             />
             <textarea
+              aria-label="Tell us briefly about your project (optional)"
               value={details}
               onChange={(e) => setDetails(e.target.value)}
               rows={4}

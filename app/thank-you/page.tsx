@@ -115,9 +115,7 @@ export default function ThankYouPage() {
                 key={step.title}
                 className="relative p-7 bg-[var(--bg-card)] border border-[var(--border-color)] rounded-[var(--radius-lg)] transition-all duration-300 hover:border-[var(--border-hover)] hover:-translate-y-1"
               >
-                <div className="absolute -top-3 -right-2 text-[4rem] font-extrabold leading-none opacity-[0.06] select-none">
-                  0{i + 1}
-                </div>
+                <div aria-hidden="true" className="absolute -top-3 -right-2 text-[4rem] font-extrabold leading-none opacity-[0.06] select-none decorative-number" data-number={`0${i + 1}`} />
                 <div
                   className="w-11 h-11 rounded-lg flex items-center justify-center text-[1.05rem] font-extrabold mb-4 text-[var(--on-primary)]"
                   style={{ background: "var(--primary-gradient)" }}

@@ -7,7 +7,7 @@ import {
 } from "@/data/services/child/generated-child-services";
 import ServiceChildPage from "@/components/ServiceChildPage";
 import { resolveServiceChildRedirect } from "@/lib/service-fallback";
-import { socialMetadata } from "@/lib/social-metadata";
+import { seoAlternates, socialMetadata } from "@/lib/social-metadata";
 
 export function generateStaticParams() {
   return generatedChildServices.map((c) => ({
@@ -28,7 +28,7 @@ export async function generateMetadata({
   return {
     title: child.metaTitle,
     description: child.metaDescription,
-    alternates: { canonical },
+    ...seoAlternates(canonical),
     ...socialMetadata({
       title: child.metaTitle,
       description: child.metaDescription,

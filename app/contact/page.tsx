@@ -5,13 +5,13 @@ import AdaptiveLines from "@/components/AdaptiveLines";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { site, ORGANIZATION_ID } from "@/data/site/contact";
 import { balancedGrid } from "@/lib/process-grid";
-import { socialMetadata } from "@/lib/social-metadata";
+import { seoAlternates, socialMetadata } from "@/lib/social-metadata";
 
 export const metadata: Metadata = {
   title: "Contact Eddinet | Talk to Our Digital Marketing Team",
   description:
     "Have a project in mind? Contact Eddinet for SEO, PPC, web and app development. Share your goals and our team will get back to you shortly.",
-  alternates: { canonical: "https://eddinet.com/contact" },
+  ...seoAlternates("https://eddinet.com/contact"),
   ...socialMetadata({
     title: "Contact Eddinet | Talk to Our Digital Marketing Team",
     description:
@@ -310,9 +310,7 @@ export default function ContactPage() {
                 key={i}
                 className="relative p-7 bg-[var(--bg-card)] border border-[var(--border-color)] rounded-[var(--radius-lg)] transition-all duration-300 hover:border-[var(--border-hover)] hover:-translate-y-1"
               >
-                <div className="absolute -top-3 -right-2 text-[4rem] font-extrabold leading-none opacity-[0.06] select-none">
-                  0{i + 1}
-                </div>
+                <div aria-hidden="true" className="absolute -top-3 -right-2 text-[4rem] font-extrabold leading-none opacity-[0.06] select-none decorative-number" data-number={`0${i + 1}`} />
                 <div
                   className="w-11 h-11 rounded-lg flex items-center justify-center text-[1.05rem] font-extrabold mb-4 text-[var(--on-primary)]"
                   style={{ background: "var(--primary-gradient)" }}

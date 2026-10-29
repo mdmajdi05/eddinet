@@ -8,13 +8,13 @@ import { servicePages } from "@/data/services/services";
 import { processSteps } from "@/data/home/home";
 import { site } from "@/data/site/contact";
 import { balancedGrid } from "@/lib/process-grid";
-import { socialMetadata } from "@/lib/social-metadata";
+import { seoAlternates, socialMetadata } from "@/lib/social-metadata";
 
 export const metadata: Metadata = {
   title: "Digital Growth, Marketing & Technology Services in Delhi NCR",
   description:
     "Explore Eddinet's services - SEO & AI SEO, social media, ads & PPC, content, design, web, eCommerce, mobile apps, software & AI, cloud & DevOps and more.",
-  alternates: { canonical: "https://eddinet.com/services" },
+  ...seoAlternates("https://eddinet.com/services"),
   ...socialMetadata({
     title: "Digital Growth, Marketing & Technology Services in Delhi NCR",
     description:

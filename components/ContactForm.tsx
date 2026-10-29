@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useId, useState } from "react";
 import { useRouter } from "next/navigation";
 import { site } from "@/data/site/contact";
 
@@ -30,6 +30,7 @@ export default function ContactForm({
   serviceLabel?: string;
 }) {
   const router = useRouter();
+  const uid = useId();
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [name, setName] = useState("");
@@ -85,9 +86,12 @@ export default function ContactForm({
         <div className="space-y-2.5">
           <div className="grid grid-cols-2 gap-2.5 max-[600px]:grid-cols-1">
             <div>
-              <label className="block text-[0.78rem] font-semibold mb-1.5 text-[var(--text-muted)]">Full Name *</label>
+              <label htmlFor={`${uid}-compact-name`} className="block text-[0.78rem] font-semibold mb-1.5 text-[var(--text-muted)]">Full Name *</label>
               <input
+                id={`${uid}-compact-name`}
+                name="name"
                 type="text"
+                autoComplete="name"
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -96,9 +100,12 @@ export default function ContactForm({
               />
             </div>
             <div>
-              <label className="block text-[0.78rem] font-semibold mb-1.5 text-[var(--text-muted)]">Phone / WhatsApp *</label>
+              <label htmlFor={`${uid}-compact-phone`} className="block text-[0.78rem] font-semibold mb-1.5 text-[var(--text-muted)]">Phone / WhatsApp *</label>
               <input
+                id={`${uid}-compact-phone`}
+                name="phone"
                 type="tel"
+                autoComplete="tel"
                 required
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
@@ -109,9 +116,12 @@ export default function ContactForm({
           </div>
 
           <div>
-            <label className="block text-[0.78rem] font-semibold mb-1.5 text-[var(--text-muted)]">Email Address *</label>
+            <label htmlFor={`${uid}-compact-email`} className="block text-[0.78rem] font-semibold mb-1.5 text-[var(--text-muted)]">Email Address *</label>
             <input
+              id={`${uid}-compact-email`}
+              name="email"
               type="email"
+              autoComplete="email"
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -121,8 +131,10 @@ export default function ContactForm({
           </div>
 
           <div>
-            <label className="block text-[0.78rem] font-semibold mb-1.5 text-[var(--text-muted)]">{serviceLabel}</label>
+            <label htmlFor={`${uid}-compact-service`} className="block text-[0.78rem] font-semibold mb-1.5 text-[var(--text-muted)]">{serviceLabel}</label>
             <select
+              id={`${uid}-compact-service`}
+              name="service"
               value={service}
               onChange={(e) => setService(e.target.value)}
               className={inputCls}
@@ -170,9 +182,12 @@ export default function ContactForm({
 
       <div className="grid grid-cols-2 gap-5 max-[600px]:grid-cols-1 mb-5">
         <div>
-          <label className="block text-[0.85rem] font-semibold mb-2 text-[var(--text-muted)]">Full Name *</label>
+          <label htmlFor={`${uid}-full-name`} className="block text-[0.85rem] font-semibold mb-2 text-[var(--text-muted)]">Full Name *</label>
           <input
+            id={`${uid}-full-name`}
+            name="name"
             type="text"
+            autoComplete="name"
             required
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -181,9 +196,12 @@ export default function ContactForm({
           />
         </div>
         <div>
-          <label className="block text-[0.85rem] font-semibold mb-2 text-[var(--text-muted)]">Phone / WhatsApp *</label>
+          <label htmlFor={`${uid}-full-phone`} className="block text-[0.85rem] font-semibold mb-2 text-[var(--text-muted)]">Phone / WhatsApp *</label>
           <input
+            id={`${uid}-full-phone`}
+            name="phone"
             type="tel"
+            autoComplete="tel"
             required
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
@@ -194,9 +212,12 @@ export default function ContactForm({
       </div>
 
       <div className="mb-5">
-        <label className="block text-[0.85rem] font-semibold mb-2 text-[var(--text-muted)]">Email Address *</label>
+        <label htmlFor={`${uid}-full-email`} className="block text-[0.85rem] font-semibold mb-2 text-[var(--text-muted)]">Email Address *</label>
         <input
+          id={`${uid}-full-email`}
+          name="email"
           type="email"
+          autoComplete="email"
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -206,9 +227,12 @@ export default function ContactForm({
       </div>
 
       <div className="mb-5">
-        <label className="block text-[0.85rem] font-semibold mb-2 text-[var(--text-muted)]">Company Name</label>
+        <label htmlFor={`${uid}-full-company`} className="block text-[0.85rem] font-semibold mb-2 text-[var(--text-muted)]">Company Name</label>
         <input
+          id={`${uid}-full-company`}
+          name="company"
           type="text"
+          autoComplete="organization"
           value={company}
           onChange={(e) => setCompany(e.target.value)}
           placeholder="e.g. Your Brand Pvt. Ltd."
@@ -217,8 +241,10 @@ export default function ContactForm({
       </div>
 
       <div className="mb-5">
-        <label className="block text-[0.85rem] font-semibold mb-2 text-[var(--text-muted)]">{serviceLabel}</label>
+        <label htmlFor={`${uid}-full-service`} className="block text-[0.85rem] font-semibold mb-2 text-[var(--text-muted)]">{serviceLabel}</label>
         <select
+          id={`${uid}-full-service`}
+          name="service"
           value={service}
           onChange={(e) => setService(e.target.value)}
           className={fullInputCls}
@@ -230,8 +256,10 @@ export default function ContactForm({
       </div>
 
       <div className="mb-7">
-        <label className="block text-[0.85rem] font-semibold mb-2 text-[var(--text-muted)]">Message / Website URL</label>
+        <label htmlFor={`${uid}-full-message`} className="block text-[0.85rem] font-semibold mb-2 text-[var(--text-muted)]">Message / Website URL</label>
         <textarea
+          id={`${uid}-full-message`}
+          name="message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           className={`${fullInputCls} min-h-[110px]`}

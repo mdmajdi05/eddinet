@@ -32,16 +32,14 @@ export default function Process() {
               key={i}
               className="relative p-7 bg-[var(--bg-card)] border border-[var(--border-color)] rounded-[var(--radius-lg)] transition-all duration-300 hover:border-[var(--border-hover)] hover:-translate-y-1 overflow-hidden"
             >
-              <div className="absolute -top-3 -right-2 text-[4.5rem] font-extrabold leading-none opacity-[0.06] select-none">
-                {s.num}
-              </div>
+              <div aria-hidden="true" className="absolute -top-3 -right-2 text-[4.5rem] font-extrabold leading-none opacity-[0.06] select-none decorative-number" data-number={s.num} />
               <div
                 className="w-11 h-11 rounded-lg flex items-center justify-center text-[1.05rem] font-extrabold mb-4 text-[var(--on-primary)] shadow-[0_8px_25px_rgba(var(--accent-rgb),0.25)]"
                 style={{ background: "var(--primary-gradient)" }}
               >
                 {s.num}
               </div>
-              <h4 className="text-[1.15rem] font-bold text-[var(--text-main)] mb-2.5">{s.title}</h4>
+              <h3 className="text-[1.15rem] font-bold text-[var(--text-main)] mb-2.5">{s.title}</h3>
               <p className="text-[var(--text-muted)] text-[0.92rem] leading-relaxed">{s.desc}</p>
             </div>
           ))}

@@ -52,6 +52,26 @@ export interface SocialMetadataInput {
 }
 
 /**
+ * Canonical + hreflang block — har page ke liye.
+ *
+ * Root layout me `languages` set hai, lekin Next.js metadata ko field-by-field
+ * merge karta hai: jis page ne apna `alternates` likha, uske `languages`
+ * hat jaate the. Result — hreflang sirf homepage par render hota tha.
+ * Ye helper canonical ke saath hreflang bhi har page par rakhta hai.
+ */
+export function seoAlternates(url: string): Pick<Metadata, "alternates"> {
+  return {
+    alternates: {
+      canonical: url,
+      languages: {
+        "en-in": url,
+        "x-default": url,
+      },
+    },
+  };
+}
+
+/**
  * Open Graph + Twitter card block — har page ke liye consistent.
  * `url` har page ka apna hota hai, isliye `og:url` galat nahi hota.
  */

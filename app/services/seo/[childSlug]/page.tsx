@@ -3,7 +3,7 @@ import { notFound, permanentRedirect } from "next/navigation";
 import { seoChildServices, getSeoChildBySlug } from "@/data/services/child/seo-child-services";
 import ServiceChildPage from "@/components/ServiceChildPage";
 import { resolveSeoChildRedirect } from "@/lib/service-fallback";
-import { socialMetadata } from "@/lib/social-metadata";
+import { seoAlternates, socialMetadata } from "@/lib/social-metadata";
 
 export function generateStaticParams() {
   return seoChildServices.map((c) => ({ childSlug: c.slug }));
@@ -21,7 +21,7 @@ export async function generateMetadata({
   return {
     title: child.metaTitle,
     description: child.metaDescription,
-    alternates: { canonical },
+    ...seoAlternates(canonical),
     ...socialMetadata({
       title: child.metaTitle,
       description: child.metaDescription,

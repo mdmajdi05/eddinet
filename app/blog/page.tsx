@@ -4,7 +4,7 @@ import { site, ORGANIZATION_ID } from "@/data/site/contact";
 import AdaptiveLines from "@/components/AdaptiveLines";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import BlogExplorer, { type BlogCardPost } from "@/components/blog/BlogExplorer";
-import { socialMetadata } from "@/lib/social-metadata";
+import { seoAlternates, socialMetadata } from "@/lib/social-metadata";
 
 const BLOG_DESCRIPTION =
   "Eddinet blog on SEO, AI search, Google and Meta ads, social media, content, web development, eCommerce, AI, cloud and digital growth.";
@@ -12,7 +12,7 @@ const BLOG_DESCRIPTION =
 export const metadata: Metadata = {
   title: "Blog - Practical Thinking on Marketing and Technology",
   description: BLOG_DESCRIPTION,
-  alternates: { canonical: "https://eddinet.com/blog" },
+  ...seoAlternates("https://eddinet.com/blog"),
   ...socialMetadata({
     title: "Blog - Practical Thinking on Marketing and Technology",
     description: BLOG_DESCRIPTION,

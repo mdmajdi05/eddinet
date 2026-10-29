@@ -213,7 +213,7 @@ export default function ChatBotLogo({
     return (
       <button
         type="button"
-        aria-label="Open chat"
+        aria-label="Open chat with Bot"
         className={styles.wrapper}
         style={style}
         onClick={onClick}

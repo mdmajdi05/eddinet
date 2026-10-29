@@ -7,7 +7,7 @@ import {
   type HtmlSitemapLink,
 } from "@/data/site/html-sitemap";
 import { balancedGrid } from "@/lib/process-grid";
-import { socialMetadata } from "@/lib/social-metadata";
+import { seoAlternates, socialMetadata } from "@/lib/social-metadata";
 
 /** Ek page par kitne links — speed + readability ke liye. */
 const PAGE_SIZE = 200;
@@ -16,7 +16,10 @@ export const metadata: Metadata = {
   title: "HTML Sitemap - All Pages",
   description:
     "Browse every page on Eddinet - services, service sub-pages, blog articles, portfolio categories and company pages - in one organised, paginated HTML sitemap.",
-  alternates: { canonical: "https://eddinet.com/sitemap-html" },
+  ...seoAlternates("https://eddinet.com/sitemap-html"),
+  // Ye HTML-only helper page hai (XML sitemap ka duplicate). Index karne ki
+  // zaroorat nahi — crawl follow rehne do taaki internal links discover hon.
+  robots: { index: false, follow: true },
   ...socialMetadata({
     title: "HTML Sitemap - All Pages",
     description:

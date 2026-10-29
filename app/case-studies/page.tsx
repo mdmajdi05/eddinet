@@ -5,13 +5,19 @@ import { caseStudies } from "@/data/portfolio/case-studies";
 import { balancedGrid } from "@/lib/process-grid";
 import AdaptiveLines from "@/components/AdaptiveLines";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { socialMetadata } from "@/lib/social-metadata";
+import { seoAlternates, socialMetadata } from "@/lib/social-metadata";
 
 export const metadata: Metadata = {
   title: "Case Studies | Eddinet Digital Marketing Results",
   description:
     "See how Eddinet helps brands grow through SEO, paid media, content and web. Read our case studies and what we did for each client.",
-  alternates: { canonical: "https://eddinet.com/case-studies" },
+  ...seoAlternates("https://eddinet.com/case-studies"),
+  // Koi verified case study publish nahi hone tak page ko index nahi karwana —
+  // khaali collection page thin/empty signal deta hai. Publish hote hi automatic
+  // indexable ho jayega.
+  ...(caseStudies.length === 0
+    ? { robots: { index: false, follow: true } }
+    : {}),
   ...socialMetadata({
     title: "Case Studies | Eddinet Digital Marketing Results",
     description:

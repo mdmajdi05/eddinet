@@ -8,7 +8,7 @@ import { site, ORGANIZATION_ID } from "@/data/site/contact";
 import { services, type Service } from "@/data/services/services";
 import { resolveBlogRedirect } from "@/lib/content-fallback";
 import { balancedGrid } from "@/lib/process-grid";
-import { socialMetadata } from "@/lib/social-metadata";
+import { seoAlternates, socialMetadata } from "@/lib/social-metadata";
 import ReadingProgress from "./reading-progress";
 import SidebarMessageForm from "./sidebar-message-form";
 import {
@@ -192,8 +192,8 @@ export async function generateMetadata({
       index: true,
       follow: true,
     },
-    authors: [{ name: site.name }],
-    alternates: { canonical: `https://eddinet.com/blog/${post.slug}` },
+    authors: [{ name: `${site.name} Team`, url: "https://eddinet.com/about" }],
+    ...seoAlternates(`https://eddinet.com/blog/${post.slug}`),
     ...socialMetadata({
       title: metaTitle,
       description: metaDescription,
@@ -201,7 +201,7 @@ export async function generateMetadata({
       type: "article",
       publishedTime,
       modifiedTime: publishedTime,
-      authors: [site.name],
+      authors: [`${site.name} Team`],
     }),
   };
 }
@@ -242,9 +242,9 @@ function RightSidebar({
 
         {relatedServices.length > 0 && (
           <div>
-            <h4 className="text-[11px] font-semibold uppercase tracking-[0.15em] text-[var(--text-dim)] mb-4">
+            <h3 className="text-[11px] font-semibold uppercase tracking-[0.15em] text-[var(--text-dim)] mb-4">
               Related Services
-            </h4>
+            </h3>
             <div className="space-y-3">
               {relatedServices.map((s) => (
                 <Link
@@ -272,9 +272,9 @@ function RightSidebar({
 
         {relatedPosts.length > 0 && (
           <div>
-            <h4 className="text-[11px] font-semibold uppercase tracking-[0.15em] text-[var(--text-dim)] mb-4">
+            <h3 className="text-[11px] font-semibold uppercase tracking-[0.15em] text-[var(--text-dim)] mb-4">
               Related Articles
-            </h4>
+            </h3>
             <div className="space-y-4">
               {relatedPosts.map((rp) => (
                 <Link key={rp.slug} href={`/blog/${rp.slug}`} className="block group">
@@ -293,9 +293,9 @@ function RightSidebar({
         )}
 
         <div className="rounded-xl bg-gradient-to-br from-[rgba(var(--accent-rgb),0.08)] to-transparent border border-[rgba(var(--accent-rgb),0.2)] p-5">
-          <h4 className="text-sm font-semibold text-[var(--text-main)] mb-1.5">
+          <h3 className="text-sm font-semibold text-[var(--text-main)] mb-1.5">
             Stay ahead in digital growth
-          </h4>
+          </h3>
           <p className="text-[11px] text-[var(--text-muted)] leading-relaxed mb-4">
             Get weekly insights on SEO, AI search, ads and web strategy.
           </p>
@@ -396,12 +396,19 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
     articleSection: post.category,
     keywords: [post.category, post.label].join(", "),
     inLanguage: "en-IN",
+    // Byline page par "Eddinet Team" dikhta hai — schema me bhi wahi named
+    // Person author rakhte hain (Organization ke bajaye), taaki E-E-A-T signal
+    // visible byline se match kare. worksFor brand se link karta hai.
     author: {
-      "@type": "Organization",
-      "@id": ORGANIZATION_ID,
-      name: site.name,
-      url: site.url,
-      logo: LOGO_URL,
+      "@type": "Person",
+      name: `${site.name} Team`,
+      url: "https://eddinet.com/about",
+      worksFor: {
+        "@type": "Organization",
+        "@id": ORGANIZATION_ID,
+        name: site.name,
+        url: site.url,
+      },
     },
     publisher: {
       "@type": "Organization",

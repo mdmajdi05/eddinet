@@ -47,7 +47,7 @@ export default function Testimonials() {
               <div className="w-12 h-12 rounded-xl bg-[var(--tag-bg)] border border-[var(--tag-border)] flex items-center justify-center text-[1.4rem] mb-5">
                 {c.icon}
               </div>
-              <h4 className="text-[1.1rem] font-bold text-[var(--text-main)] mb-3">{c.title}</h4>
+              <h3 className="text-[1.1rem] font-bold text-[var(--text-main)] mb-3">{c.title}</h3>
               <p className="text-[var(--text-muted)] text-[0.95rem] leading-[1.7]">
                 {c.desc}
               </p>

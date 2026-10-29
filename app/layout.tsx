@@ -208,6 +208,12 @@ export default function RootLayout({
           }}
         />
         <link rel="preconnect" href="https://datafa.st" />
+        {/* GTM aur Meta Pixel third-party scripts hain — connection setup pehle
+            ho jaye taaki network waterfall chhota rahe (LCP/TBT par asar). */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://connect.facebook.net" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://connect.facebook.net" />
         {/* RSS feed — news aggregators + feed readers ke liye discovery. */}
         <link
           rel="alternate"

@@ -40,7 +40,7 @@ export default function LineClampedText({ text, lines = 6 }: LineClampedTextProp
       {overflowing && (
         <button
           onClick={() => setExpanded((v) => !v)}
-          className="inline-flex items-center gap-1.5 ml-2 font-bold no-underline text-[var(--main-accent)] hover:underline transition-colors duration-300 cursor-pointer bg-transparent border-0 p-0"
+          className="inline-flex items-center gap-1.5 ml-2 font-bold no-underline text-[var(--main-accent-text)] hover:underline transition-colors duration-300 cursor-pointer bg-transparent border-0 p-0"
         >
           {expanded ? "Show Less" : "Show More"}
           <svg className={`w-3.5 h-3.5 ${expanded ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>

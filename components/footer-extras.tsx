@@ -63,7 +63,7 @@ export function LiveStatus() {
         <span className={`relative inline-flex rounded-full h-2 w-2 ${open ? "bg-[#34D399]" : "bg-slate-400"}`} />
       </span>
       <span className={open ? "text-[#86EFAC]" : "text-slate-400"}>{open ? "Open now" : "Closed now"}</span>
-      <span className="text-white/40 font-semibold">10:00 – 19:00 IST</span>
+      <span className="text-white/60 font-semibold">10:00 – 19:00 IST</span>
     </span>
   );
 }

@@ -90,7 +90,7 @@ const allInsights: Insight[] = [
     metaTitle: "How to Lower CPA in Google Ads: A Practical Framework",
     metaDescription: "Wasting ad spend? Learn how to reduce CPA in Google Ads by fixing tracking, bidding, targeting and landing pages. A practical framework from Eddinet.",
     category: "Paid Ads & CRO",
-    categoryColor: "text-[var(--purple-accent)]",
+    categoryColor: "text-[var(--purple-accent-text)]",
     label: "Performance Marketing",
     excerpt:
       "A repeatable approach to reducing cost per acquisition - through account structure, signal quality and testing - without cutting profitable spend.",
@@ -435,7 +435,7 @@ const allInsights: Insight[] = [
     metaDescription:
       "Google Ads cost in India ranges from ₹5 to ₹600+ per click. See 2026 CPC benchmarks by industry, why costs vary, and how to plan your monthly budget.",
     category: "Paid Ads & CRO",
-    categoryColor: "text-[var(--purple-accent)]",
+    categoryColor: "text-[var(--purple-accent-text)]",
     label: "Google Ads & Budgeting",
     excerpt:
       "Google Ads in India can cost ₹5 or ₹600 a click depending entirely on your industry. Here are 2026 CPC benchmarks by industry, why the gap exists, and how to turn CPC into a monthly budget.",
@@ -557,7 +557,7 @@ const allInsights: Insight[] = [
           "- Starter (₹15,000 – ₹30,000 per month): Works for local services and low-CPC niches. Keep campaigns tight, focus on high-intent keywords, and don't try to run five campaigns at once.",
           "- Growth (₹40,000 – ₹1 lakh per month): The sweet spot for most e-commerce, education, and B2B businesses. You have enough data to test properly and scale what works, including [remarketing](/services/ads-ppc/remarketing-and-retargeting-ads-services-in-india) to past visitors.",
           "- Competitive (₹1 lakh+ per month): Realistic for real estate, finance, insurance, and anyone fighting well-funded rivals in metro markets.",
-          "Before you commit a budget, check that your [conversion tracking setup](/services/seo/technical-seo) is done properly. Otherwise you're measuring guesses.",
+          "Before you commit a budget, check that your [conversion tracking setup](/services/seo/technical-seo-services-in-delhi-ncr) is done properly. Otherwise you're measuring guesses.",
         ],
       },
       {

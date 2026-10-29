@@ -9,13 +9,13 @@ import { processSteps } from "@/data/home/home";
 import { industries } from "@/data/industries/industries";
 import { IMG } from "@/data/site/images";
 import { balancedGrid } from "@/lib/process-grid";
-import { socialMetadata } from "@/lib/social-metadata";
+import { seoAlternates, socialMetadata } from "@/lib/social-metadata";
 
 export const metadata: Metadata = {
   title: "About Eddinet | Digital Marketing & Tech Agency, Delhi",
   description:
     "Meet the team behind Eddinet. We combine marketing, content and technology to help brands grow online. Learn how we work.",
-  alternates: { canonical: "https://eddinet.com/about" },
+  ...seoAlternates("https://eddinet.com/about"),
   ...socialMetadata({
     title: "About Eddinet | Digital Marketing & Tech Agency, Delhi",
     description:
@@ -502,7 +502,7 @@ export default function AboutPage() {
             <Reveal delay={150}>
               <div className="space-y-4">
                 <div className="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-[var(--radius-lg)] p-7 relative overflow-hidden">
-                  <div className="absolute -top-4 -right-2 text-[3.5rem] opacity-[0.05] select-none">🎯</div>
+                  <div aria-hidden="true" className="absolute -top-4 -right-2 text-[3.5rem] opacity-[0.05] select-none decorative-number" data-number="🎯" />
                   <div className="text-[0.75rem] uppercase tracking-wider text-[var(--main-accent)] font-bold mb-2">
                     Our Mission
                   </div>
@@ -512,7 +512,7 @@ export default function AboutPage() {
                   </p>
                 </div>
                 <div className="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-[var(--radius-lg)] p-7 relative overflow-hidden">
-                  <div className="absolute -top-4 -right-2 text-[3.5rem] opacity-[0.05] select-none">🔭</div>
+                  <div aria-hidden="true" className="absolute -top-4 -right-2 text-[3.5rem] opacity-[0.05] select-none decorative-number" data-number="🔭" />
                   <div className="text-[0.75rem] uppercase tracking-wider text-[var(--main-accent)] font-bold mb-2">
                     Our Vision
                   </div>
@@ -522,7 +522,7 @@ export default function AboutPage() {
                   </p>
                 </div>
                 <div className="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-[var(--radius-lg)] p-7 relative overflow-hidden">
-                  <div className="absolute -top-4 -right-2 text-[3.5rem] opacity-[0.05] select-none">📍</div>
+                  <div aria-hidden="true" className="absolute -top-4 -right-2 text-[3.5rem] opacity-[0.05] select-none decorative-number" data-number="📍" />
                   <div className="text-[0.75rem] uppercase tracking-wider text-[var(--main-accent)] font-bold mb-2">
                     Where We Work
                   </div>
@@ -683,7 +683,7 @@ export default function AboutPage() {
               {processSteps.map((s, i) => (
                 <Reveal key={i} delay={(i % 3) * 100}>
                   <div className="relative p-7 bg-[var(--bg-card)] border border-[var(--border-color)] rounded-[var(--radius-lg)] transition-all duration-300 hover:border-[var(--border-hover)] hover:-translate-y-1 overflow-hidden">
-                    <div className="absolute -top-3 -right-2 text-[4.5rem] font-extrabold leading-none opacity-[0.06] select-none">
+                    <div aria-hidden="true" className="absolute -top-3 -right-2 text-[4.5rem] font-extrabold leading-none opacity-[0.06] select-none">
                       {s.num}
                     </div>
                     <div
@@ -899,7 +899,7 @@ export default function AboutPage() {
                   <div className="w-12 h-12 rounded-xl bg-[var(--tag-bg)] border border-[var(--tag-border)] flex items-center justify-center text-[1.4rem] mb-5">
                     {v.icon}
                   </div>
-                  <h4 className="text-[1.1rem] font-bold text-[var(--text-main)] mb-3">{v.title}</h4>
+                  <h3 className="text-[1.1rem] font-bold text-[var(--text-main)] mb-3">{v.title}</h3>
                   <p className="text-[var(--text-muted)] text-[0.95rem] leading-[1.7]">{v.desc}</p>
                 </div>
               </Reveal>

@@ -9,7 +9,7 @@ import {
 } from "@/data/portfolio/portfolio";
 import { portfolioCategoryContent } from "@/data/portfolio/category-content";
 import { resolvePortfolioRedirect } from "@/lib/content-fallback";
-import { socialMetadata } from "@/lib/social-metadata";
+import { seoAlternates, socialMetadata } from "@/lib/social-metadata";
 
 type Props = {
   params: Promise<{
@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: "Portfolio | Eddinet",
       description:
         "Browse Eddinet's portfolio of websites, eCommerce stores, software, SaaS, AI, mobile apps, SEO and digital growth projects.",
-      alternates: { canonical: "https://eddinet.com/portfolio" },
+      ...seoAlternates("https://eddinet.com/portfolio"),
       robots: { index: false, follow: false },
     };
   }
@@ -59,9 +59,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title,
     description,
-    alternates: {
-      canonical: `https://eddinet.com/portfolio/${cat.key}`,
-    },
+    ...seoAlternates(`https://eddinet.com/portfolio/${cat.key}`),
     ...socialMetadata({
       title,
       description,
