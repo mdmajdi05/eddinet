@@ -33,9 +33,9 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://eddinet.com/"),
-  title: "Eddinet | Digital Marketing & Web Development, Delhi NCR",
+  title: "Digital Marketing Agency in Delhi | Eddinet",
   description:
-    "Eddinet is a Delhi NCR agency for SEO, Google Ads, social media, web and app development. See our work and talk to our team about your growth goals.",
+    "Looking for a digital marketing agency in Delhi? Explore Eddinet’s SEO, Google Ads and social media services. Discuss your business goals with our team.",
   robots: {
     index: true,
     follow: true,
