@@ -6,6 +6,9 @@ import { seoAlternates, socialMetadata } from "@/lib/social-metadata";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "How Eddinet collects, uses and protects your personal information.",
+  // Legal boilerplate: no search demand, so keep it out of the index. It stays
+  // crawlable/follow so footer link equity still flows to the rest of the site.
+  robots: { index: false, follow: true },
   ...seoAlternates("https://eddinet.com/privacy-policy"),
   ...socialMetadata({
     title: "Privacy Policy",

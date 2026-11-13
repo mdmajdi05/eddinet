@@ -6,6 +6,7 @@ import AboutSection from "@/components/AboutSection";
 import LineClampedText from "@/components/LineClampedText";
 import GetQuoteButton from "@/components/GetQuoteButton";
 import SectionHeader from "@/components/SectionHeader";
+import InternalLinks from "@/components/InternalLinks";
 import AdaptiveLines from "@/components/AdaptiveLines";
 import ViewportCollapse from "@/components/ViewportCollapse";
 import { balancedGrid } from "@/lib/process-grid";
@@ -107,6 +108,8 @@ export default function ServiceChildPage({
     : child.heroHeading;
   const heroSuffix = heroSuffixMatch ? heroSuffixMatch[1] : "";
   const docxHeadings = child.docxHeadings;
+  // Internal linking plan is keyed by path (no host).
+  const sourcePath = canonicalUrl.replace("https://eddinet.com", "");
   // Documented industry list. SEO child pages carry a bare {name,description}[]
   // array — use the BARE array too (pehle ye data chhup kar diya gaya tha).
   const docIndustries = Array.isArray(child.industries)
@@ -802,8 +805,9 @@ export default function ServiceChildPage({
       </section>
 
       {/* =========================================================
-          11. CONTACT — talk to a specialist
+          11. CONTACT - talk to a specialist
       ========================================================= */}
+      <InternalLinks source={sourcePath} />
       <section className="py-[90px] bg-[var(--strip-bg)] border-y border-[var(--border-color)] relative overflow-hidden">
         <div className="absolute top-[-30%] right-[-10%] w-[420px] h-[420px] rounded-full bg-[var(--main-accent)]/8 blur-3xl pointer-events-none" />
         <div className="absolute bottom-[-35%] left-[-10%] w-[380px] h-[380px] rounded-full bg-purple-500/8 blur-3xl pointer-events-none" />

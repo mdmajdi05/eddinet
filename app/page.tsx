@@ -9,6 +9,7 @@ import Testimonials from "@/components/Testimonials";
 import Blog from "@/components/Blog";
 import CTA from "@/components/CTA";
 import FAQ from "@/components/FAQ";
+import InternalLinks from "@/components/InternalLinks";
 import { homeFaqs } from "@/data/home/home";
 
 const faqSchema = {
@@ -40,6 +41,11 @@ export default function Home() {
       <Industries />
       <Testimonials />
       <Blog />
+      <InternalLinks
+        source="/"
+        title="Explore Eddinet"
+        description="Jump into the work, services and thinking behind what we do."
+      />
       <CTA />
       <FAQ />
     </>

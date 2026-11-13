@@ -5,6 +5,8 @@ import ContactForm from "@/components/ContactForm";
 import AdaptiveLines from "@/components/AdaptiveLines";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { servicePages } from "@/data/services/services";
+import { generatedChildServices } from "@/data/services/child/generated-child-services";
+import { seoChildServices } from "@/data/services/child/seo-child-services";
 import { processSteps } from "@/data/home/home";
 import { site } from "@/data/site/contact";
 import { balancedGrid } from "@/lib/process-grid";
@@ -41,6 +43,37 @@ const servicesItemListSchema = {
 };
 
 const totalCapabilities = servicePages.reduce((n, s) => n + s.allItems.length, 0);
+
+/**
+ * Every service sub-page, grouped by its parent capability area.
+ *
+ * The mega menu already links these, but it renders inside a hidden dropdown,
+ * so the links carry little crawl weight. This visible A-Z index gives Google
+ * a direct, above-the-fold-free path from the /services hub (one of the
+ * strongest pages on the site) to every child URL - the single biggest lever
+ * against "Discovered - currently not indexed".
+ */
+const serviceChildIndex = servicePages.map((s) => {
+  const children =
+    s.slug === "seo"
+      ? seoChildServices.map((c) => ({
+          title: c.title,
+          href: `/services/seo/${c.slug}`,
+        }))
+      : generatedChildServices
+          .filter((c) => c.categorySlug === s.slug)
+          .map((c) => ({
+            title: c.title,
+            href: `/services/${s.slug}/${c.slug}`,
+          }));
+
+  return {
+    slug: s.slug,
+    title: s.title,
+    children: children.sort((a, b) => a.title.localeCompare(b.title)),
+  };
+});
+
 
 const catLabel = (cat: string) =>
   servicePages.find((s) => s.cat === cat)?.tabLabel ?? cat;
@@ -256,6 +289,51 @@ export default function ServicesIndexPage() {
             </p>
           </div>
           <ServicesExplorer />
+        </div>
+      </section>
+
+      {/* ================= ALL SERVICES A-Z ================= */}
+      <section id="all-services" className="pb-[90px] scroll-mt-20">
+        <div className="w-full max-w-[var(--container-max)] mx-auto px-5">
+          <div className="max-w-[720px] mb-10">
+            <div className="inline-flex items-center gap-2 py-1.5 px-4 bg-[var(--tag-bg)] border border-[var(--tag-border)] rounded-3xl text-[var(--main-accent)] text-[0.8rem] font-semibold uppercase tracking-wider mb-5">
+              Full Service Index
+            </div>
+            <h2 className="text-[2.1rem] font-extrabold leading-[1.12] mb-3 text-[var(--text-main)] max-[768px]:text-[1.7rem]">
+              All Services, <span className="gradient-text">A to Z</span>
+            </h2>
+            <p className="text-[var(--text-muted)] text-[1rem] leading-relaxed">
+              Every capability and sub-service we deliver, in one place. Use this
+              index to jump straight to the exact service page you need.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-3 gap-x-8 gap-y-9 max-[1024px]:grid-cols-2 max-[640px]:grid-cols-1">
+            {serviceChildIndex.map((group) => (
+              <div key={group.slug}>
+                <h3 className="text-[1.02rem] font-extrabold text-[var(--text-main)] mb-3 pb-2 border-b border-[var(--border-color)]">
+                  <Link
+                    href={`/services/${group.slug}`}
+                    className="no-underline text-[var(--text-main)] hover:text-[var(--main-accent)] transition-colors"
+                  >
+                    {group.title}
+                  </Link>
+                </h3>
+                <ul className="space-y-2 list-none p-0 m-0">
+                  {group.children.map((child) => (
+                    <li key={child.href}>
+                      <Link
+                        href={child.href}
+                        className="text-[var(--text-muted)] text-[0.85rem] leading-snug no-underline hover:text-[var(--main-accent)] transition-colors"
+                      >
+                        {child.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

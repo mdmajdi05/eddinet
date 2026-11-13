@@ -9,6 +9,12 @@ import { projectCategories } from "@/data/portfolio/portfolio";
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://eddinet.com";
 
+  // A fresh, honest lastmod. Google uses lastmod to decide which "Discovered"
+  // URLs are worth re-crawling after a deploy; leaving it out gives it nothing
+  // to work with. This date marks the internal-linking + indexing fix release,
+  // so it is accurate for every page below. Bump it when page copy changes.
+  const lastContentUpdate = new Date("2026-11-13");
+
   /** Sitemap image entries ko absolute URL chahiye. */
   const absolute = (path: string) =>
     path.startsWith("http") ? path : `${base}${path}`;
@@ -36,8 +42,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       : []),
     { url: `${base}/about`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/contact`, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${base}/privacy-policy`, changeFrequency: "yearly", priority: 0.2 },
-    { url: `${base}/terms`, changeFrequency: "yearly", priority: 0.2 },
+    // /privacy-policy and /terms are noindex (legal boilerplate). Keeping them
+    // out of the sitemap keeps the indexable-URL count honest.
   ];
 
   const serviceRoutes: MetadataRoute.Sitemap = servicePages.map((s) => ({
@@ -90,5 +96,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...blogRoutes,
     ...caseStudyRoutes,
     ...portfolioCategoryRoutes,
-  ];
+  ].map((route) => ({ lastModified: lastContentUpdate, ...route }));
 }

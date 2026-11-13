@@ -4,6 +4,7 @@ import Link from "next/link";
 import GrowthSystem from "@/components/about/GrowthSystem";
 import Reveal from "@/components/about/Reveal";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import InternalLinks from "@/components/InternalLinks";
 import { site } from "@/data/site/contact";
 import { processSteps } from "@/data/home/home";
 import { industries } from "@/data/industries/industries";
@@ -943,6 +944,11 @@ export default function AboutPage() {
       </section>
 
       {/* ===================== CTA ===================== */}
+      <InternalLinks
+        source="/about"
+        title="Explore our work"
+        description="See the services and projects behind the team you just read about."
+      />
       <section className="pb-[100px]">
         <div className="max-w-[var(--container-max)] mx-auto px-5">
           <Reveal>

@@ -9,6 +9,7 @@ import { services, type Service } from "@/data/services/services";
 import { resolveBlogRedirect } from "@/lib/content-fallback";
 import { balancedGrid } from "@/lib/process-grid";
 import { seoAlternates, socialMetadata } from "@/lib/social-metadata";
+import InternalLinks from "@/components/InternalLinks";
 import ReadingProgress from "./reading-progress";
 import SidebarMessageForm from "./sidebar-message-form";
 import {
@@ -549,6 +550,12 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
                     </div>
                   </div>
                 )}
+
+                <InternalLinks
+                  source={`/blog/${post.slug}`}
+                  title="Continue exploring"
+                  description="Services and guides that go deeper on the topic of this article."
+                />
 
                 <div className="mt-16 p-8 rounded-xl border border-[rgba(var(--accent-rgb),0.3)] bg-gradient-to-br from-[rgba(var(--accent-rgb),0.05)] to-transparent text-center">
                   <h2 className="text-xl font-bold text-[var(--text-main)] mb-3">

@@ -10,6 +10,7 @@ import AboutSection from "@/components/AboutSection";
 import LineClampedText from "@/components/LineClampedText";
 import AdaptiveLines from "@/components/AdaptiveLines";
 import SectionHeader from "@/components/SectionHeader";
+import InternalLinks from "@/components/InternalLinks";
 import { resolveServiceCategoryRedirect } from "@/lib/service-fallback";
 import { balancedGrid } from "@/lib/process-grid";
 import { seoAlternates, socialMetadata } from "@/lib/social-metadata";
@@ -547,6 +548,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       )}
 
       {/* 9. RELATED SERVICES */}
+      <InternalLinks source={`/services/${slug}`} />
       {content.related.length > 0 && (
         <section className="py-[80px] bg-[var(--strip-bg)] border-t border-[var(--border-color)]">
           <div className="w-full max-w-[var(--container-max)] mx-auto px-5">

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound, permanentRedirect } from "next/navigation";
 import PortfolioGrid from "@/components/PortfolioGrid";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import InternalLinks from "@/components/InternalLinks";
 import {
   portfolioProjects,
   projectCategories,
@@ -202,6 +203,8 @@ export default async function PortfolioCategoryPage({
             </div>
           </section>
         )}
+
+        <InternalLinks source={`/portfolio/${cat.key}`} title="Related pages" />
 
       </div>
 

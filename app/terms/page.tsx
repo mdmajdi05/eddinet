@@ -6,6 +6,9 @@ import { seoAlternates, socialMetadata } from "@/lib/social-metadata";
 export const metadata: Metadata = {
   title: "Terms of Service",
   description: "The terms that govern your use of the Eddinet website and services.",
+  // Legal boilerplate: no search demand, so keep it out of the index. It stays
+  // crawlable/follow so footer link equity still flows to the rest of the site.
+  robots: { index: false, follow: true },
   ...seoAlternates("https://eddinet.com/terms"),
   ...socialMetadata({
     title: "Terms of Service",
