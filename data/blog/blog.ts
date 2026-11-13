@@ -43,6 +43,266 @@ export interface Insight {
 
 const allInsights: Insight[] = [
   {
+    slug: "technical-seo-checklist-2027",
+    title: "Technical SEO Checklist for 2027: 25 Fixes That Still Move Rankings",
+    metaTitle: "Technical SEO Checklist 2027: 25 Fixes That Still Work",
+    metaDescription:
+      "A practical 2027 technical SEO checklist: 25 fixes for crawling, indexing, speed, rendering and structured data, with how to check each one.",
+    category: "Search Engine Optimization",
+    categoryColor: "text-[var(--main-accent)]",
+    label: "Technical SEO",
+    excerpt:
+      "A practical 25-point technical SEO checklist for 2027 - covering crawlability, indexing, site architecture, Core Web Vitals, rendering, structured data and monitoring.",
+    image: stockImageSrc("photo-1526374965328-7f61d4dc18c5"),
+    date: "November 13, 2026",
+    readTime: "11 min read",
+    sections: [
+      {
+        paragraphs: [
+          "Most websites do not lose rankings because of one dramatic mistake. They lose them slowly: a sitemap full of redirected URLs, a staging noindex that never got removed, a template that pushes key pages six clicks deep, a script that delays the largest element on the page. Each issue looks small. Together they decide whether Google crawls your pages, understands them and trusts them enough to index them.",
+          "This checklist covers 25 technical fixes that still matter in 2027, grouped into five areas. For each one you get what to check, why it matters and what to do about it. You can run most of the checks with free tools: Google Search Console, PageSpeed Insights and a crawler such as Screaming Frog.",
+          "If you would rather have an expert audit your site, our [technical SEO services in Delhi NCR](/services/seo/technical-seo-services-in-delhi-ncr) cover exactly these checks and a prioritised fix list.",
+        ],
+      },
+      {
+        heading: "How to use this checklist",
+        paragraphs: [
+          "Do not try to fix all 25 in one sprint. Work in this order:",
+          "- Crawling and indexing first. If Google cannot reach or index a page, nothing else about that page matters.",
+          "- Architecture and duplicates second. These decide which pages get Google's attention.",
+          "- Speed, rendering and structured data third. These improve how pages perform and display once they are indexed.",
+          "- Monitoring last, but set it up early. It stops old problems from coming back.",
+        ],
+      },
+      {
+        heading: "Part 1: Crawlability and indexation (fixes 1 to 5)",
+        paragraphs: [
+          "Before anything else, make sure Google can reach your important pages and is allowed to index them. These five checks catch the most common blocks.",
+        ],
+      },
+      {
+        heading: "1. Audit your robots.txt",
+        paragraphs: [
+          "Open your site's /robots.txt and read it line by line. Look for broad Disallow rules that block folders you want ranked, blocked CSS or JavaScript files, and rules left over from a redesign. Remember that robots.txt controls crawling, not indexing. A blocked URL can still appear in results if other pages link to it, and Google cannot see a noindex tag on a page it is not allowed to crawl.",
+        ],
+      },
+      {
+        heading: "2. Clean up your XML sitemap",
+        paragraphs: [
+          "Your sitemap should list only canonical, indexable pages that return a 200 status. Remove redirected URLs, 404s, noindex pages, parameter URLs and duplicates. Submit the sitemap in Search Console and compare the number of submitted URLs with the number indexed. A large gap tells you where to look next.",
+        ],
+      },
+      {
+        heading: "3. Find and fix orphan pages",
+        paragraphs: [
+          "An orphan page has no internal links pointing to it, so Google can only find it through the sitemap, if at all. Crawl your site, then compare the crawl with your sitemap and Search Console data. Any important URL that the crawl did not reach needs links from relevant pages. Our guide on [whether SEO is worth it for small businesses in India](/blog/is-seo-worth-it-for-small-businesses-in-india) explains why fixing basics like this usually pays off before you spend on anything advanced.",
+        ],
+      },
+      {
+        heading: "4. Fix status codes and redirect chains",
+        paragraphs: [
+          "Crawl for 404s, 5xx errors, 302s that should be 301s, and chains where URL A redirects to B and then to C. Each extra hop wastes crawl effort and slows users down. Update internal links to point directly to the final URL, and keep redirects as single hops.",
+        ],
+      },
+      {
+        heading: "5. Read the page indexing report properly",
+        paragraphs: [
+          "In Search Console, open the Page indexing report and group the excluded pages by reason. Two statuses matter most for service websites:",
+          "- Crawled, currently not indexed: Google visited but chose not to index. This usually points to thin, duplicate or low-value content.",
+          "- Discovered, currently not indexed: Google knows the URL but has not crawled it yet. This often points to weak internal linking, low perceived priority, or a site with many similar pages.",
+          "The fix depends on the status. For discovered pages, add contextual internal links from pages that are already indexed. For crawled pages, improve or consolidate the content.",
+        ],
+      },
+      {
+        heading: "Part 2: Site architecture and URL signals (fixes 6 to 10)",
+        paragraphs: [
+          "Once crawling is healthy, structure decides which pages get attention - and which compete with each other.",
+        ],
+      },
+      {
+        heading: "6. Keep important pages within three clicks of the homepage",
+        paragraphs: [
+          "Click depth is a rough signal of importance. Pages buried deep in the structure get crawled less often. Check crawl depth in your crawler and bring revenue-driving pages closer to the surface through hub pages, navigation and in-content links.",
+        ],
+      },
+      {
+        heading: "7. Use clean, consistent URL structures",
+        paragraphs: [
+          "Use lowercase, hyphen-separated, descriptive URLs that mirror your site hierarchy, for example /services/seo/technical-seo-services-in-delhi-ncr. Avoid session IDs, unnecessary parameters and changing URL patterns between sections. Once a URL is live and ranking, change it only with a good reason and a 301 redirect.",
+        ],
+      },
+      {
+        heading: "8. Set self-referencing canonical tags",
+        paragraphs: [
+          "Every indexable page should declare its own preferred URL with a canonical tag. Check that canonicals are absolute, point to a 200 page and are not accidentally pointing to the homepage or to a different page. Conflicting signals, such as a canonical to one URL and a sitemap entry for another, make Google choose for you.",
+        ],
+      },
+      {
+        heading: "9. Deal with near-duplicate pages",
+        paragraphs: [
+          "Service businesses often publish many similar pages that differ only by city or keyword wording. If two pages target the same intent, Google may index one and ignore the other. Merge them with a 301 redirect, differentiate them with genuinely unique content, or canonicalise one to the other. Do not leave near-twins competing.",
+        ],
+      },
+      {
+        heading: "10. Control pagination and faceted navigation",
+        paragraphs: [
+          "Filters, sorting and tag combinations can generate thousands of low-value URLs. Decide which combinations deserve to rank and keep the rest out of the crawl path with robots.txt rules, noindex or canonicals, whichever fits your setup. Make sure paginated pages are reachable through normal links, not only through scripts.",
+        ],
+      },
+      {
+        heading: "Part 3: Speed and Core Web Vitals (fixes 11 to 15)",
+        paragraphs: [
+          "Speed is both a ranking input and a conversion factor. Our article on [building fast websites that convert](/blog/building-fast-websites-that-convert) goes deeper on the business side. Here is the technical checklist.",
+        ],
+      },
+      {
+        heading: "11. Improve Largest Contentful Paint (LCP)",
+        paragraphs: [
+          "The target is 2.5 seconds or less at the 75th percentile. Find your LCP element, usually a hero image or heading block, and make it load first. Preload the hero image, serve it in a modern format, and remove render-blocking CSS and scripts above the fold.",
+        ],
+      },
+      {
+        heading: "12. Improve Interaction to Next Paint (INP)",
+        paragraphs: [
+          "INP replaced First Input Delay as the responsiveness metric, with a target of 200 milliseconds or less. Long JavaScript tasks are the usual cause. Break up heavy scripts, defer third-party tags such as chat widgets and trackers, and remove plugins you no longer use.",
+        ],
+      },
+      {
+        heading: "13. Eliminate layout shift (CLS)",
+        paragraphs: [
+          "Aim for a Cumulative Layout Shift of 0.1 or less. Set explicit width and height on images, videos and ad slots, reserve space for banners and cookie notices, and avoid inserting content above existing content after load.",
+        ],
+      },
+      {
+        heading: "14. Speed up server response and caching",
+        paragraphs: [
+          "A slow server response drags down every other metric. Use a CDN, enable full-page caching where it is safe, keep your hosting stack current, and compress text assets with Brotli or Gzip. If your pages are slow before any front-end work, look at hosting and database performance first.",
+        ],
+      },
+      {
+        heading: "15. Optimise images the right way",
+        paragraphs: [
+          "Compress images, serve WebP or AVIF with fallbacks, and use responsive sizes so mobile users do not download desktop-sized files. Lazy-load images below the fold, but never lazy-load the LCP image, since that delays the very element Google measures.",
+        ],
+      },
+      {
+        heading: "Part 4: Rendering, mobile and security (fixes 16 to 20)",
+        paragraphs: [
+          "These checks decide whether Google sees the same page your visitors see - and whether that page is safe and correctly targeted.",
+        ],
+      },
+      {
+        heading: "16. Check the rendered HTML, not just the source",
+        paragraphs: [
+          "If your site relies on JavaScript to show content, links or metadata, test what Google actually sees. Use the URL Inspection tool's rendered HTML and compare it with the raw source. Content that only appears after user interaction, or links that are not real clickable anchor elements, may never be discovered. Server-side rendering or pre-rendering is the safest option for important pages.",
+        ],
+      },
+      {
+        heading: "17. Make sure mobile and desktop content match",
+        paragraphs: [
+          "Google indexes the mobile version of your pages. If your mobile template hides text, removes internal links or drops structured data that desktop has, you are indexing the weaker version. Compare both versions and keep content, links and markup equivalent.",
+        ],
+      },
+      {
+        heading: "18. Enforce HTTPS and remove mixed content",
+        paragraphs: [
+          "Redirect every HTTP URL to HTTPS in one hop, choose one hostname version (with or without www), and fix any resources still loading over HTTP. Mixed content triggers browser warnings and erodes trust. Renew certificates before they expire and monitor them.",
+        ],
+      },
+      {
+        heading: "19. Hunt for leftover noindex and staging rules",
+        paragraphs: [
+          "This one causes more panic than almost any other issue. After a launch or migration, check that no noindex meta tags, X-Robots-Tag headers, password protection or blanket Disallow: / rules from staging have carried over to production. Also confirm staging itself is blocked from indexing.",
+        ],
+      },
+      {
+        heading: "20. Implement hreflang correctly if you serve several regions",
+        paragraphs: [
+          "If you publish versions for different languages or countries, each version needs reciprocal hreflang annotations with correct language and region codes. Errors here cause the wrong version to show in the wrong market. If you serve only one region and language, you can skip this fix.",
+        ],
+      },
+      {
+        heading: "Part 5: Structured data, AI access and monitoring (fixes 21 to 25)",
+        paragraphs: [
+          "The final group covers how your pages are described, who is allowed to read them, and how you keep the fixes from quietly undoing themselves.",
+        ],
+      },
+      {
+        heading: "21. Add accurate structured data",
+        paragraphs: [
+          "Use schema markup that matches what is on the page: Organization and LocalBusiness for your company details, Article for blog posts, BreadcrumbList for navigation, Product for ecommerce. Validate it with Google's Rich Results Test and Schema Markup Validator. Do not mark up content that users cannot see, and do not add FAQ markup expecting rich results, since Google now shows those for only a limited set of sites.",
+        ],
+      },
+      {
+        heading: "22. Decide your policy for AI crawlers",
+        paragraphs: [
+          "Search is no longer only blue links. AI search features and assistants fetch your content too, and some use their own crawlers. Decide deliberately which bots you allow in robots.txt, and check your server logs to see who is actually visiting. If you want to be cited in AI answers, make sure key pages are crawlable, fast and clearly written. Our post on [how generative AI is reshaping SEO](/blog/how-generative-ai-is-reshaping-seo) covers the strategy side.",
+        ],
+      },
+      {
+        heading: "23. Fix title tags, meta descriptions and heading structure",
+        paragraphs: [
+          "Crawl for missing, duplicate and overlong titles, and for pages with no H1 or several competing H1s. Write each title for one page and one intent, put the main keyword near the front, and use headings to give the page a logical outline. Templates that generate identical titles across hundreds of pages are a common quiet problem.",
+        ],
+      },
+      {
+        heading: "24. Analyse your server logs",
+        paragraphs: [
+          "Log files show what Googlebot really does: which URLs it requests, how often, and what responses it gets. Look for crawl budget wasted on parameters and redirects, important pages that are rarely requested, and spikes of errors. For large or complex sites this is the most honest data you will find.",
+        ],
+      },
+      {
+        heading: "25. Set up ongoing monitoring",
+        paragraphs: [
+          "Technical SEO is not a one-time project. Schedule a monthly crawl, set Search Console email alerts, track Core Web Vitals trends, and re-check indexing after every release, redesign or migration. A simple checklist before each deployment prevents most of the problems above.",
+        ],
+      },
+      {
+        heading: "Quick priority guide",
+        paragraphs: [
+          "If you run an online store, several of these fixes carry extra weight because of filters, variants and product feeds. Our [ecommerce SEO services in Delhi NCR](/services/seo/ecommerce-seo-services-in-delhi-ncr) page explains how we handle that. For the full range of what we offer, see our [SEO services](/services/seo).",
+          "Not sure where to start? Find the symptom closest to yours in the table below.",
+        ],
+        table: {
+          caption: "Which technical SEO fixes to start with, by symptom",
+          headers: ["If your problem is...", "Start with fixes"],
+          rows: [
+            ["Pages not indexed", "1, 2, 3, 5, 19"],
+            ["Traffic dropped after a redesign or migration", "4, 8, 18, 19"],
+            ["Slow or janky pages", "11, 12, 13, 14, 15"],
+            ["Many near-identical service or location pages", "8, 9, 3, 5"],
+            ["Ecommerce site with faceted navigation", "10, 8, 21"],
+            ["JavaScript-heavy site", "16, 17, 24"],
+          ],
+        },
+      },
+      {
+        heading: "Frequently asked questions",
+        paragraphs: [
+          "How often should I run a technical SEO audit? Run a light crawl monthly and a full audit at least once or twice a year, and always after a redesign, CMS change or migration.",
+          "Which technical SEO fix has the biggest impact? It depends on your site, but problems that stop pages from being crawled or indexed come first. A stray noindex, a blocked folder or a broken sitemap can outweigh every speed improvement combined.",
+          "Can I do technical SEO without a developer? You can diagnose most issues yourself with Search Console and a crawler. Fixing them, especially speed, rendering and server issues, usually needs developer support.",
+          "Why are my pages stuck at \"Discovered, currently not indexed\"? Usually because Google has little reason to prioritise them. Add contextual internal links from indexed pages, make sure the content is unique and useful, remove near-duplicates and keep your sitemap clean. Then monitor the report over the following weeks.",
+        ],
+      },
+      {
+        heading: "Final thoughts",
+        paragraphs: [
+          "A technical SEO checklist will not replace good content or a strong offer, but it removes the obstacles that stop good content from performing. Start with crawling and indexing, fix what is blocking your most valuable pages, and build monitoring so the fixes stick.",
+        ],
+      },
+      {
+        heading: "What to do next",
+        paragraphs: [
+          "Where you go from here depends on how far along you are:",
+          "- Just starting: Work through Part 1 this week. Start with robots.txt, your sitemap and the Page indexing report.",
+          "- Comparing agencies: If you are thinking about outside help, read our guide to the [7 critical questions to ask an SEO agency](/blog/7-critical-questions-to-ask-an-seo-agency) before you shortlist anyone.",
+          "- Ready for expert help: Our [technical SEO services in Delhi NCR](/services/seo/technical-seo-services-in-delhi-ncr) cover every check in this list, and you get a prioritised action plan at the end.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "how-generative-ai-is-reshaping-seo",
     title: "How Generative AI Is Reshaping SEO in 2026",
     category: "Search Engine Optimization",
